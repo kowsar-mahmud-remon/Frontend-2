@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Tailwind Classes */
+@import url("./cunstomTailwindClsses.css");
+
+
+/* Globals Styles */
+@import url("./GlobalsStyles/root.css");
+
+/* Carosel Styles */
+@import url("./componentsStyles/Carosel.module.css");
+
+
