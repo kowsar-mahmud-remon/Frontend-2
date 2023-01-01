@@ -80,10 +80,83 @@ const index = () => {
                         </div>
                     </div>
                 </div>
-                <div className="divider text-[#686868] text-lg"></div> 
+                <div className="divider text-[#686868] text-lg"></div>
                 <div className="">
-
+                    <h5 className="text-[24px] font-semibold">Customer Product Ratings & Reviews</h5>
+                    <div className="flex justify-between">
+                        <div className="">
+                            <p className="text-[84px]">4.0 <span className="text-[44px]">(24)</span></p>
+                            <div className="flex gap-5">
+                                <div className="flex items-center text-3xl gap-1">
+                                    <BsFillStarFill className="text-[#FB641B]" />
+                                    <BsFillStarFill className="text-[#FB641B]" />
+                                    <BsFillStarFill className="text-[#FB641B]" />
+                                    <BsFillStarFill className="text-[#FB641B]" />
+                                    <BsStar className="text-[#FB641B]" />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="">
+                            <div className="flex gap-2 justify-center items-center">
+                                <div className="flex items-center gap-1">
+                                    <BsFillStarFill className="text-[#FB641B]" />
+                                    <BsFillStarFill className="text-[#FB641B]" />
+                                    <BsFillStarFill className="text-[#FB641B]" />
+                                    <BsFillStarFill className="text-[#FB641B]" />
+                                    <BsFillStarFill className="text-[#FB641B]" />
+                                </div>
+                                <progress className="progress progress-success w-56" value="100" max="100"></progress>
+                                <span>(11)</span>
+                            </div>
+                            <div className="flex gap-2 justify-center items-center">
+                                <div className="flex items-center gap-1">
+                                    <BsFillStarFill className="text-[#FB641B]" />
+                                    <BsFillStarFill className="text-[#FB641B]" />
+                                    <BsFillStarFill className="text-[#FB641B]" />
+                                    <BsFillStarFill className="text-[#FB641B]" />
+                                    <BsStar className="text-[#FB641B]" />
+                                </div>
+                                <progress className="progress progress-success w-56" value="100" max="100"></progress>
+                                <span>(04)</span>
+                            </div>
+                            <div className="flex gap-2 justify-center items-center">
+                                <div className="flex items-center gap-1">
+                                    <BsFillStarFill className="text-[#FB641B]" />
+                                    <BsFillStarFill className="text-[#FB641B]" />
+                                    <BsFillStarFill className="text-[#FB641B]" />
+                                    <BsStar className="text-[#FB641B]" />
+                                    <BsStar className="text-[#FB641B]" />
+                                </div>
+                                <progress className="progress progress-warning w-56" value="100" max="100"></progress>
+                                <span>(05)</span>
+                            </div>
+                            <div className="flex gap-2 justify-center items-center">
+                                <div className="flex items-center gap-1">
+                                    <BsFillStarFill className="text-[#FB641B]" />
+                                    <BsFillStarFill className="text-[#FB641B]" />
+                                    <BsStar className="text-[#FB641B]" />
+                                    <BsStar className="text-[#FB641B]" />
+                                    <BsStar className="text-[#FB641B]" />
+                                </div>
+                                <progress className="progress progress-warning w-56" value="50" max="100"></progress>
+                                <span>(03)</span>
+                            </div>
+                            <div className="flex gap-2 justify-center items-center">
+                                <div className="flex items-center gap-1">
+                                    <BsFillStarFill className="text-[#FB641B]" />
+                                    <BsStar className="text-[#FB641B]" />
+                                    <BsStar className="text-[#FB641B]" />
+                                    <BsStar className="text-[#FB641B]" />
+                                    <BsStar className="text-[#FB641B]" />
+                                </div>
+                                <progress className="progress progress-error w-56" value="100" max="100"></progress>
+                                <span>(01)</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <div className="divider text-[#686868] text-lg"></div>
+                
             </NavicationWithSideNavLayout>
 
             {/* </NavicationLayout> */}
