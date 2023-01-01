@@ -13,7 +13,7 @@ const manageMyAccount = () => {
                 <div>
                     <ManageAccoutSideBar></ManageAccoutSideBar>
                 </div>
-                <div>
+                <div className="">
                     <div>
                         <div>
                             <h1 className="text-[#FB641B] text-[24px] font-semibold">Manage My Account</h1>

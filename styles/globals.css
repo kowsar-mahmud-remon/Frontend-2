@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 /* Custom Tailwind Classes */
 @import url("./cunstomTailwindClsses.css");
 
