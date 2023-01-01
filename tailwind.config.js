@@ -9,13 +9,15 @@ module.exports = {
     themes: [
       {
         light: {
-          primary: "#1b2857fb",
+          primary: "#FB641B",
+          // primary: "#1b2857fb",
           secondary: "#FFC000",
           accent: "#FFEDD5",
           neutral: "#F3F4F6",
           "base-100": "#FFFFFF",
 
-          info: "#98A8DD",
+          // info: "#98A8DD",
+          info: "#F4F4F4",
           success: "#1BBB70",
           warning: "#DF7E07",
           error: "#FA5C5C",
