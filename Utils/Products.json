@@ -1,0 +1,116 @@
+[
+    {
+        "id": 1,
+        "title": "Kacha Morich (Green Chili) 250 ±15 gm",
+        "offerPrice": "18",
+        "price": "20",
+        "off": "2",
+        "rating": "3.9",
+        "ratingAndReview": "24 Ratings & 5 Reviews",
+        "seller": "Assurted"
+    },
+    {
+        "id": 2,
+        "title": "Tomato (Local) 500 ±30 gm",
+        "offerPrice": "160",
+        "price": "80",
+        "off": "2",
+        "rating": "1.9",
+        "ratingAndReview": "24 Ratings & 5 Reviews"
+    },
+    {
+        "id": 3,
+        "title": "Misti Kumra Fali (Sweet Pumpkin Fali)",
+        "offerPrice": "1014",
+        "rating": "4.9",
+        "ratingAndReview": "24 Ratings & 5 Reviews",
+        "seller": "Verified"
+    },
+    {
+        "id": 4,
+        "title": "Potol (Pointed Gourd ) 500 ±30 gm",
+        "offerPrice": "10018",
+        "price": "1025",
+        "off": "27",
+        "rating": "4.9",
+        "ratingAndReview": "24 Ratings & 5 Reviews",
+        "seller": "Assurted"
+    },
+    {
+        "id": 5,
+        "title": "Dherosh (Lady’s Finger) 500±30 gm",
+        "offerPrice": "100000",
+        "price": "1025",
+        "off": "10",
+        "rating": "4.9",
+        "ratingAndReview": "24 Ratings & 5 Reviews",
+        "seller": "Verified"
+    },
+    {
+        "id": 6,
+        "title": "Kacha Kola (Green Banana) 4 pcs",
+        "offerPrice": "20",
+        "price": "30",
+        "off": "10",
+        "rating": "4.9",
+        "ratingAndReview": "24 Ratings & 5 Reviews",
+        "seller": "Verified"
+    },
+    {
+        "id": 7,
+        "title": "Kacha Morich (Green Chili) 250 ±15 gm",
+        "offerPrice": "18",
+        "price": "20",
+        "off": "2",
+        "rating": "3.9",
+        "ratingAndReview": "24 Ratings & 5 Reviews",
+        "seller": "Assurted"
+    },
+    {
+        "id": 8,
+        "title": "Tomato (Local) 500 ±30 gm",
+        "offerPrice": "160",
+        "price": "80",
+        "off": "2",
+        "rating": "1.9",
+        "ratingAndReview": "24 Ratings & 5 Reviews"
+    },
+    {
+        "id": 9,
+        "title": "Misti Kumra Fali (Sweet Pumpkin Fali)",
+        "offerPrice": "1014",
+        "rating": "4.9",
+        "ratingAndReview": "24 Ratings & 5 Reviews",
+        "seller": "Verified"
+    },
+    {
+        "id": 10,
+        "title": "Potol (Pointed Gourd ) 500 ±30 gm",
+        "offerPrice": "10018",
+        "price": "1025",
+        "off": "27",
+        "rating": "4.9",
+        "ratingAndReview": "24 Ratings & 5 Reviews",
+        "seller": "Assurted"
+    },
+    {
+        "id": 11,
+        "title": "Dherosh (Lady’s Finger) 500±30 gm",
+        "offerPrice": "100000",
+        "price": "1025",
+        "off": "10",
+        "rating": "4.9",
+        "ratingAndReview": "24 Ratings & 5 Reviews",
+        "seller": "Verified"
+    },
+    {
+        "id": 12,
+        "title": "Kacha Kola (Green Banana) 4 pcs",
+        "offerPrice": "20",
+        "price": "30",
+        "off": "10",
+        "rating": "4.9",
+        "ratingAndReview": "24 Ratings & 5 Reviews",
+        "seller": "Verified"
+    }
+]
