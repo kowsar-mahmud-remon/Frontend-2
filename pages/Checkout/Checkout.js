@@ -109,7 +109,7 @@ const Checkout = () => {
                         </div>
                         <div className='flex justify-between  mb-10'>
                             <h3>Total</h3>
-                            <p className='text-[#FB641B]'>TK 0</p>
+                            <p className='text-[#FB641B]'>TK 0</p>  
                         </div>
                         <div>
                             <button className='bg-[#FB641B] px-2 w-full h-[48px] text-white font rounded text-base font-medium hover:bg-[#c74c0e]'>PROCEED TO CHECKOUT (0)</button>
