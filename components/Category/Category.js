@@ -20,6 +20,9 @@ const Category = () => {
                     >{category.name}</button>)
                 }
             </div>
+            <div>
+
+            </div>
         </div>
     );
 };
