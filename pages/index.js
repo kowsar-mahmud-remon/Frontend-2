@@ -12,6 +12,7 @@ import { FaArrowAltCircleRight } from 'react-icons/fa';
 import logo from '../assets/images/logo/main_logo.png';
 import logoDic from '../assets/images/logo/logo_dic.png';
 import NavicationWithSideNavLayout from '../layouts/NavicationWithSideNavLayout';
+import OrderPlace from '../components/OrderPlace/OrderPlace';
 
 export const getStaticProps = async () => {
   try {
@@ -106,6 +107,7 @@ export default function Home({ items }) {
           </div>
         </div>
       </div> */}
+      <OrderPlace></OrderPlace>
     </>
   );
 }
