@@ -13,44 +13,46 @@ import Image from 'next/image'
 const Header = () => {
     return (
         <div className="w-full shadow-lg">
-            <div className='flex mb-10 h-[112px] gap-8  items-center w-11/12 mx-auto'>
-                <h2 className="text-[#FB641B] text-[42px]">Instant Home Delivery</h2>
+            <div className='flex mb-10 lg:h-[112px] gap-3 md:gap-8  items-center w-11/12 mx-auto'>
+                <h2 className="text-[#FB641B] text-[1rem] md:text-[2rem]">Instant Home Delivery</h2>
                 <Image src={arow} width="62" height="42" alt="arrow"></Image>
-                <div className="">
-                    <Image src={grocery} width="62" height="42" alt="arrow"></Image>
-                    <p className="">Grocery</p>
-                </div>
-                <div className="">
-                    <Image src={meatfish} width="62" height="42" alt="arrow"></Image>
-                    <p className="">Grocery</p>
-                </div>
-                <div className="">
-                    <Image src={fooddelivery} width="62" height="42" alt="arrow"></Image>
-                    <p className="">Grocery</p>
-                </div>
-                <div className="">
-                    <Image src={pharmacy} width="62" height="42" alt="arrow"></Image>
-                    <p className="">Grocery</p>
-                </div>
-                <div className="">
-                    <Image src={LPG} width="62" height="42" alt="arrow"></Image>
-                    <p className="">Grocery</p>
-                </div>
-                <div className="">
-                    <Image src={organic} width="62" height="42" alt="arrow"></Image>
-                    <p className="">Grocery</p>
-                </div>
-                <div className="">
-                    <Image src={laundry} width="62" height="42" alt="arrow"></Image>
-                    <p className="">Grocery</p>
-                </div>
-                <div className="">
-                    <Image src={parcel} width="62" height="42" alt="arrow"></Image>
-                    <p className="">Grocery</p>
-                </div>
-                <div className="">
-                    <Image src={service} width="62" height="42" alt="arrow"></Image>
-                    <p className="">Grocery</p>
+                <div className="grid grid-cols-3 lg:grid-cols-9 gap-8">
+                    <div className="">
+                        <Image src={grocery} width="62" height="42" alt="arrow"></Image>
+                        <p className="text-[10px] md:text-[16px]">Grocery</p>
+                    </div>
+                    <div className="">
+                        <Image src={meatfish} width="62" height="42" alt="arrow"></Image>
+                        <p className="text-[10px] md:text-[16px]">Grocery</p>
+                    </div>
+                    <div className="">
+                        <Image src={fooddelivery} width="62" height="42" alt="arrow"></Image>
+                        <p className="text-[10px] md:text-[16px]">Grocery</p>
+                    </div>
+                    <div className="text-[10px] md:text-[16px]">
+                        <Image src={pharmacy} width="62" height="42" alt="arrow"></Image>
+                        <p className="">Grocery</p>
+                    </div>
+                    <div className="text-[10px] md:text-[16px]">
+                        <Image src={LPG} width="62" height="42" alt="arrow"></Image>
+                        <p className="">Grocery</p>
+                    </div>
+                    <div className="text-[10px] md:text-[16px]">
+                        <Image src={organic} width="62" height="42" alt="arrow"></Image>
+                        <p className="">Grocery</p>
+                    </div>
+                    <div className="text-[10px] md:text-[16px]">
+                        <Image src={laundry} width="62" height="42" alt="arrow"></Image>
+                        <p className="">Grocery</p>
+                    </div>
+                    <div className="text-[10px] md:text-[16px]">
+                        <Image src={parcel} width="62" height="42" alt="arrow"></Image>
+                        <p className="">Grocery</p>
+                    </div>
+                    <div className="text-[10px] md:text-[16px]">
+                        <Image src={service} width="62" height="42" alt="arrow"></Image>
+                        <p className="">Grocery</p>
+                    </div>
                 </div>
             </div>
         </div>

@@ -21,35 +21,37 @@ const index = () => {
             {/* <NavicationLayout> */}
             <NavicationWithSideNavLayout>
                 {/* <Header /> */}
-                <div className="flex">
-                    <div className="w-[96px] h-[560px] border flex flex-col p-[8px] bg-[#F2F3F7] gap-[8px] rounded-md">
-                        <div className="">
-                            <Image className="border rounded-md" src={fruit} width="80" height="80" alt="tomato_img"></Image>
+                <div className="grid">
+                    <div className="flex">
+                        <div className="md:w-[96px] h-auto md:h-[560px] border flex flex-col p-[8px] bg-[#F2F3F7] gap-[8px] rounded-md">
+                            <div className="">
+                                <Image className="border rounded-md" src={fruit} width="80" height="80" alt="tomato_img"></Image>
+                            </div>
+                            <div className="">
+                                <Image className="border rounded-md" src={fruit} width="80" height="80" alt="tomato_img"></Image>
+                            </div>
+                            <div className="">
+                                <Image className="border rounded-md" src={fruit} width="80" height="80" alt="tomato_img"></Image>
+                            </div>
+                            <div className="">
+                                <Image className="border rounded-md" src={fruit} width="80" height="80" alt="tomato_img"></Image>
+                            </div>
+                            <div className="">
+                                <Image className="border rounded-md" src={fruit} width="80" height="80" alt="tomato_img"></Image>
+                            </div>
+                            <div className="">
+                                <Image className="border rounded-md" src={fruit} width="80" height="80" alt="tomato_img"></Image>
+                            </div>
+                            <div className="w-[78px] h-[24px] bg-white flex justify-center items-center">
+                                <Image className="" src={vector} width="" height="" alt="vector"></Image>
+                            </div>
                         </div>
-                        <div className="">
-                            <Image className="border rounded-md" src={fruit} width="80" height="80" alt="tomato_img"></Image>
-                        </div>
-                        <div className="">
-                            <Image className="border rounded-md" src={fruit} width="80" height="80" alt="tomato_img"></Image>
-                        </div>
-                        <div className="">
-                            <Image className="border rounded-md" src={fruit} width="80" height="80" alt="tomato_img"></Image>
-                        </div>
-                        <div className="">
-                            <Image className="border rounded-md" src={fruit} width="80" height="80" alt="tomato_img"></Image>
-                        </div>
-                        <div className="">
-                            <Image className="border rounded-md" src={fruit} width="80" height="80" alt="tomato_img"></Image>
-                        </div>
-                        <div className="w-[78px] h-[24px] bg-white flex justify-center items-center">
-                            <Image className="" src={vector} width="" height="" alt="vector"></Image>
-                        </div>
-                    </div>
-                    <div className="ml-[24px]">
-                        <Image className="shadow-lg rounded-md mb-[20px]" src={fruit} width="500" height="500" alt="tomato_img"></Image>
-                        <div className="flex justify-between">
-                            <button className="btn w-[240px] h-[53px] bg-[#FF9F00] font-semibold text-white ">Add to Cart <FaShoppingCart className="text-white text-lg mb-1" /></button>
-                            <button className="btn w-[240px] h-[53px] bg-[#FB641B] font-semibold text-white ">Buy Now <BsFillBagCheckFill className="text-white text-lg mb-2" /></button>
+                        <div className="ml-[24px]">
+                            <Image className="shadow-lg rounded-md mb-[20px]" src={fruit} width="400" height="500" alt="tomato_img"></Image>
+                            <div className="flex md:justify-between flex-col">
+                                <button className="btn btn-sm md:btn-md md:w-[240px] h-[53px] bg-[#FF9F00] font-semibold text-white ">Add to Cart <FaShoppingCart className="text-white text-lg mb-1" /></button>
+                                <button className="btn btn-sm md:btn-md md:w-[240px] h-[53px] bg-[#FB641B] font-semibold text-white ">Buy Now <BsFillBagCheckFill className="text-white text-lg mb-2" /></button>
+                            </div>
                         </div>
                     </div>
                     <div className="ml-[38px] ">
@@ -59,7 +61,7 @@ const index = () => {
                                 <Link href="#">KachaBazar</Link> /
                                 <Link className="text-[#287DF3]" href="#">Tomato (local) 500gm</Link>
                             </p>
-                            <h3 className="text-3xl font-bold text-[#686868]">Tomato (Local) 500 ±30 gm</h3>
+                            <h3 className="sm:text-sm md:text-lg lg:text-3xl font-bold text-[#686868]">Tomato (Local) 500 ±30 gm</h3>
                             <div className="flex gap-5">
                                 <div className="flex items-center">
                                     <BsFillStarFill className="text-[#FB641B]" />
@@ -85,16 +87,16 @@ const index = () => {
                                 <p className="text-lg text-[#FB641B]">1</p>
                                 <div className="text-md w-[34px] h-[34px] bg-[#F2F3F7] flex justify-center items-center">+</div>
                             </div>
-                            <p className="mt-[23px]">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using <q>Content here, content here</q>, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for</p>
+                            <p className="sm:mt-[14px] lg:mt-[23px] w-4/5 mx-auto">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using <q>Content here, content here</q>, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for</p>
                         </div>
                     </div>
                 </div>
                 <div className="divider text-[#686868] text-lg"></div>
                 <div className="">
                     <h5 className="text-[24px] font-semibold">Customer Product Ratings & Reviews</h5>
-                    <div className="flex justify-between">
+                    <div className="grid grid-cols-1 md:flex md:justify-between">
                         <div className="">
-                            <p className="text-[84px]">4.0 <span className="text-[44px]">(24)</span></p>
+                            <p className="text-[84px] text-center md:text-left">4.0 <span className="text-[44px]">(24)</span></p>
                             <div className="flex gap-5">
                                 <div className="flex items-center text-3xl gap-1">
                                     <BsFillStarFill className="text-[#FB641B]" />
@@ -265,16 +267,16 @@ const index = () => {
                         <p className="">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here.</p>
                     </div>
                     <div className="flex gap-3 items-center justify-end">
-                        <div className="btn btn-outline btn-error w-[140px] h-[32px]">Previous page</div>
+                        <div className="btn btn-sm md:btn-md lg:btn-lg btn-outline btn-error w-[140px] h-[28px] md:h-[32px] text-[12px] md:text-md ml-3 md:ml-0">Previous page</div>
                         <div className="">1</div>
                         <div className="">2</div>
                         <div className="">3</div>
                         <div className="">4</div>
-                        <div className="btn btn-outline btn-error w-[119px] h-[32px]">Next page</div>
+                        <div className="btn btn-sm md:btn-md lg:btn-lg btn-outline btn-error w-[119px] text-[12px] md:h-[32px]">Next page</div>
                     </div>
                 </div>
 
-                <div className="grid grid-cols-5 gap-[28px] mt-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-[28px] mt-10 ml-16 md:ml-0 lg:ml-0">
                     <div className="w-[222px] hover:border hover:rounded-lg">
                         <Image src={fruit} width="220" height="154" alt="tomato"></Image>
                         <div className="flex gap-5 items-center my-2">
@@ -305,7 +307,7 @@ const index = () => {
                             </div>
                             <p className="text-[#686868]">24 Ratings & 5 Reviews</p>
                         </div>
-                            <p className="">Seller: <span className="bg-[#287DF3] text-white px-1 rounded-md">Verified</span></p>
+                        <p className="">Seller: <span className="bg-[#287DF3] text-white px-1 rounded-md">Verified</span></p>
                         <button className="btn capitalize bg-[#FB641B] text-white mt-[86px] ">Add To Cart <FaShoppingCart className="text-lg" /></button>
                     </div>
                     <div className="w-[222px] hover:border hover:rounded-lg">
@@ -322,7 +324,7 @@ const index = () => {
                             </div>
                             <p className="text-[#686868]">24 Ratings & 5 Reviews</p>
                         </div>
-                            <p className="">Seller: <span className="bg-[#287DF3] text-white px-1 rounded-md">Assured</span></p>
+                        <p className="">Seller: <span className="bg-[#287DF3] text-white px-1 rounded-md">Assured</span></p>
                         <button className="btn capitalize bg-[#FB641B] text-white mt-[86px]">Add To Cart <FaShoppingCart className="text-lg" /></button>
                     </div>
                     <div className="w-[222px] hover:border hover:rounded-lg">
@@ -339,7 +341,7 @@ const index = () => {
                             </div>
                             <p className="text-[#686868]">24 Ratings & 5 Reviews</p>
                         </div>
-                            <p className="">Seller: <span className="bg-[#287DF3] text-white px-1 rounded-md">Verified</span></p>
+                        <p className="">Seller: <span className="bg-[#287DF3] text-white px-1 rounded-md">Verified</span></p>
                         <button className="btn capitalize bg-[#FB641B] text-white mt-[86px]">Add To Cart <FaShoppingCart className="text-lg" /></button>
                     </div>
                     <div className="w-[222px] hover:border hover:rounded-lg">
@@ -356,7 +358,7 @@ const index = () => {
                             </div>
                             <p className="text-[#686868]">24 Ratings & 5 Reviews</p>
                         </div>
-                            <p className="">Seller: <span className="bg-[#287DF3] text-white px-1 rounded-md">Verified</span></p>
+                        <p className="">Seller: <span className="bg-[#287DF3] text-white px-1 rounded-md">Verified</span></p>
 
                         <button className="btn capitalize bg-[#FB641B] text-white mt-[86px]">Add To Cart <FaShoppingCart className="text-lg" /></button>
                     </div>
