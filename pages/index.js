@@ -107,7 +107,6 @@ export default function Home({ items }) {
           </div>
         </div>
       </div> */}
-      <OrderPlace></OrderPlace>
     </>
   );
 }
