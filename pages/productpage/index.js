@@ -11,6 +11,8 @@ import kachakola from '../../assets/images/product_page/image 10.png'
 import { FaShoppingCart } from 'react-icons/fa';
 import { BsFillBagCheckFill, BsFillStarFill, BsStar } from 'react-icons/bs';
 import Link from "next/link";
+import Footer from "../../components/ProductPage/Footer";
+import Header from "./Header";
 
 
 const index = () => {
@@ -18,6 +20,7 @@ const index = () => {
         <div>
             {/* <NavicationLayout> */}
             <NavicationWithSideNavLayout>
+                {/* <Header /> */}
                 <div className="flex">
                     <div className="w-[96px] h-[560px] border flex flex-col p-[8px] bg-[#F2F3F7] gap-[8px] rounded-md">
                         <div className="">
@@ -271,9 +274,9 @@ const index = () => {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-5 gap-[28px]">
+                <div className="grid grid-cols-5 gap-[28px] mt-10">
                     <div className="w-[222px] hover:border hover:rounded-lg">
-                        <Image src={fruit} width="155" height="154" alt="tomato"></Image>
+                        <Image src={fruit} width="220" height="154" alt="tomato"></Image>
                         <div className="flex gap-5 items-center my-2">
                             <h5 className="text-[24px] text-[#FB641B]">Tk. 60</h5>
                             <p className=""><del>Tk. 80</del></p>
@@ -302,7 +305,8 @@ const index = () => {
                             </div>
                             <p className="text-[#686868]">24 Ratings & 5 Reviews</p>
                         </div>
-                        <button className="btn capitalize bg-[#FB641B] text-white mt-[44px]">Add To Cart <FaShoppingCart className="text-lg" /></button>
+                            <p className="">Seller: <span className="bg-[#287DF3] text-white px-1 rounded-md">Verified</span></p>
+                        <button className="btn capitalize bg-[#FB641B] text-white mt-[86px] ">Add To Cart <FaShoppingCart className="text-lg" /></button>
                     </div>
                     <div className="w-[222px] hover:border hover:rounded-lg">
                         <Image src={potol} width="220" height="154" alt="tomato"></Image>
@@ -318,7 +322,8 @@ const index = () => {
                             </div>
                             <p className="text-[#686868]">24 Ratings & 5 Reviews</p>
                         </div>
-                        <button className="btn capitalize bg-[#FB641B] text-white mt-[44px]">Add To Cart <FaShoppingCart className="text-lg" /></button>
+                            <p className="">Seller: <span className="bg-[#287DF3] text-white px-1 rounded-md">Assured</span></p>
+                        <button className="btn capitalize bg-[#FB641B] text-white mt-[86px]">Add To Cart <FaShoppingCart className="text-lg" /></button>
                     </div>
                     <div className="w-[222px] hover:border hover:rounded-lg">
                         <Image src={dheros} width="220" height="154" alt="tomato"></Image>
@@ -334,7 +339,8 @@ const index = () => {
                             </div>
                             <p className="text-[#686868]">24 Ratings & 5 Reviews</p>
                         </div>
-                        <button className="btn capitalize bg-[#FB641B] text-white mt-[44px]">Add To Cart <FaShoppingCart className="text-lg" /></button>
+                            <p className="">Seller: <span className="bg-[#287DF3] text-white px-1 rounded-md">Verified</span></p>
+                        <button className="btn capitalize bg-[#FB641B] text-white mt-[86px]">Add To Cart <FaShoppingCart className="text-lg" /></button>
                     </div>
                     <div className="w-[222px] hover:border hover:rounded-lg">
                         <Image src={kachakola} width="220" height="154" alt="tomato"></Image>
@@ -350,12 +356,14 @@ const index = () => {
                             </div>
                             <p className="text-[#686868]">24 Ratings & 5 Reviews</p>
                         </div>
-                        <button className="btn capitalize bg-[#FB641B] text-white mt-[44px]">Add To Cart <FaShoppingCart className="text-lg" /></button>
+                            <p className="">Seller: <span className="bg-[#287DF3] text-white px-1 rounded-md">Verified</span></p>
+
+                        <button className="btn capitalize bg-[#FB641B] text-white mt-[86px]">Add To Cart <FaShoppingCart className="text-lg" /></button>
                     </div>
                 </div>
             </NavicationWithSideNavLayout>
 
-            {/* </NavicationLayout> */}
+            <Footer />
         </div>
     );
 };
