@@ -2,7 +2,12 @@ import NavicationWithSideNavLayout from "../../layouts/NavicationWithSideNavLayo
 import Image from 'next/image'
 import fruit from '../../assets/images/product_page/image 6.png'
 import vector from '../../assets/images/product_page/Vector.png'
+import adminImg from '../../assets/images/product_page/b.png'
 import reviewer from '../../assets/images/product_page/Ellipse 38.png'
+import mistiKumra from '../../assets/images/product_page/image 7.png'
+import potol from '../../assets/images/product_page/image 8.png'
+import dheros from '../../assets/images/product_page/image 9.png'
+import kachakola from '../../assets/images/product_page/image 10.png'
 import { FaShoppingCart } from 'react-icons/fa';
 import { BsFillBagCheckFill, BsFillStarFill, BsStar } from 'react-icons/bs';
 import Link from "next/link";
@@ -224,11 +229,130 @@ const index = () => {
                         <div className="">3</div>
                         <div className="">4</div>
                         <div className="btn btn-outline btn-error w-[119px] h-[32px]">Next page</div>
-
                     </div>
                 </div>
                 <div className="divider text-[#686868] text-lg"></div>
-                
+                <div className="">
+                    <h5 className="text-[24px] font-semibold">Asks & Question About This Product</h5>
+                    <div className="mt-1">
+                        <textarea className="textarea textarea-bordered w-full h-[212px]" placeholder="Type your message"></textarea>
+                        <div className="flex justify-end">
+                            <button className=" btn bg-[#FB641B] w-[160px] text-white">Submit</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="mt-5">
+                    <div className="">
+                        <div className="mt-[24px] flex gap-3">
+                            <Image src={reviewer} width="26" height="26" alt="reviewer"></Image>
+                            <p className="text-[18px]">Jakariya Sick</p>
+                            <p className="text-[#686868]">#Question</p>
+                        </div>
+                        <small className="text-[#686868] ml-10">8 day ago</small>
+                        <p className="">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here.</p>
+                    </div>
+                    <div className="">
+                        <div className="mt-[24px] flex gap-3">
+                            <Image src={adminImg} width="26" height="26" alt="reviewer"></Image>
+                            <p className="text-[18px]">Jakariya Sick</p>
+                            <p className="text-[#686868]">#Answers</p>
+                        </div>
+                        <small className="text-[#686868] ml-10">8 day ago</small>
+                        <p className="">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here.</p>
+                    </div>
+                    <div className="flex gap-3 items-center justify-end">
+                        <div className="btn btn-outline btn-error w-[140px] h-[32px]">Previous page</div>
+                        <div className="">1</div>
+                        <div className="">2</div>
+                        <div className="">3</div>
+                        <div className="">4</div>
+                        <div className="btn btn-outline btn-error w-[119px] h-[32px]">Next page</div>
+                    </div>
+                </div>
+
+                <div className="grid grid-cols-5 gap-[28px]">
+                    <div className="w-[222px] hover:border hover:rounded-lg">
+                        <Image src={fruit} width="155" height="154" alt="tomato"></Image>
+                        <div className="flex gap-5 items-center my-2">
+                            <h5 className="text-[24px] text-[#FB641B]">Tk. 60</h5>
+                            <p className=""><del>Tk. 80</del></p>
+                            <p className="">(20% off)</p>
+                        </div>
+                        <p className="text-[16px] font-semibold">Tomato (Local) 500 ±30 gm</p>
+                        <div className="flex">
+                            <div className="flex items-center bg-[#F4253F] text-white px-1 rounded-md">
+                                1.9 <BsFillStarFill className="ml-2 text-white" />
+                            </div>
+                            <p className="text-[#686868]">24 Ratings & 5 Reviews</p>
+                        </div>
+                        <button className="btn capitalize bg-[#FB641B] text-white mt-[44px]">Add To Cart <FaShoppingCart className="text-lg" /></button>
+                    </div>
+                    <div className="w-[222px] hover:border hover:rounded-lg">
+                        <Image src={mistiKumra} width="220" height="154" alt="tomato"></Image>
+                        <div className="flex gap-5 items-center my-2">
+                            <h5 className="text-[24px] text-[#FB641B]">Tk. 60</h5>
+                            <p className=""><del>Tk. 80</del></p>
+                            <p className="">(20% off)</p>
+                        </div>
+                        <p className="text-[16px] font-semibold">Tomato (Local) 500 ±30 gm</p>
+                        <div className="flex">
+                            <div className="flex items-center bg-[#F4253F] text-white px-1 rounded-md">
+                                1.9 <BsFillStarFill className="ml-2 text-white" />
+                            </div>
+                            <p className="text-[#686868]">24 Ratings & 5 Reviews</p>
+                        </div>
+                        <button className="btn capitalize bg-[#FB641B] text-white mt-[44px]">Add To Cart <FaShoppingCart className="text-lg" /></button>
+                    </div>
+                    <div className="w-[222px] hover:border hover:rounded-lg">
+                        <Image src={potol} width="220" height="154" alt="tomato"></Image>
+                        <div className="flex gap-5 items-center my-2">
+                            <h5 className="text-[24px] text-[#FB641B]">Tk. 60</h5>
+                            <p className=""><del>Tk. 80</del></p>
+                            <p className="">(20% off)</p>
+                        </div>
+                        <p className="text-[16px] font-semibold">Tomato (Local) 500 ±30 gm</p>
+                        <div className="flex">
+                            <div className="flex items-center bg-[#F4253F] text-white px-1 rounded-md">
+                                1.9 <BsFillStarFill className="ml-2 text-white" />
+                            </div>
+                            <p className="text-[#686868]">24 Ratings & 5 Reviews</p>
+                        </div>
+                        <button className="btn capitalize bg-[#FB641B] text-white mt-[44px]">Add To Cart <FaShoppingCart className="text-lg" /></button>
+                    </div>
+                    <div className="w-[222px] hover:border hover:rounded-lg">
+                        <Image src={dheros} width="220" height="154" alt="tomato"></Image>
+                        <div className="flex gap-5 items-center my-2">
+                            <h5 className="text-[24px] text-[#FB641B]">Tk. 60</h5>
+                            <p className=""><del>Tk. 80</del></p>
+                            <p className="">(20% off)</p>
+                        </div>
+                        <p className="text-[16px] font-semibold">Tomato (Local) 500 ±30 gm</p>
+                        <div className="flex">
+                            <div className="flex items-center bg-[#F4253F] text-white px-1 rounded-md">
+                                1.9 <BsFillStarFill className="ml-2 text-white" />
+                            </div>
+                            <p className="text-[#686868]">24 Ratings & 5 Reviews</p>
+                        </div>
+                        <button className="btn capitalize bg-[#FB641B] text-white mt-[44px]">Add To Cart <FaShoppingCart className="text-lg" /></button>
+                    </div>
+                    <div className="w-[222px] hover:border hover:rounded-lg">
+                        <Image src={kachakola} width="220" height="154" alt="tomato"></Image>
+                        <div className="flex gap-5 items-center my-2">
+                            <h5 className="text-[24px] text-[#FB641B]">Tk. 60</h5>
+                            <p className=""><del>Tk. 80</del></p>
+                            <p className="">(20% off)</p>
+                        </div>
+                        <p className="text-[16px] font-semibold">Tomato (Local) 500 ±30 gm</p>
+                        <div className="flex">
+                            <div className="flex items-center bg-[#F4253F] text-white px-1 rounded-md">
+                                1.9 <BsFillStarFill className="ml-2 text-white" />
+                            </div>
+                            <p className="text-[#686868]">24 Ratings & 5 Reviews</p>
+                        </div>
+                        <button className="btn capitalize bg-[#FB641B] text-white mt-[44px]">Add To Cart <FaShoppingCart className="text-lg" /></button>
+                    </div>
+                </div>
             </NavicationWithSideNavLayout>
 
             {/* </NavicationLayout> */}
