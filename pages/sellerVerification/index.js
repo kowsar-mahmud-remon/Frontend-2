@@ -1,8 +1,3 @@
-import React, { useEffect, useState } from 'react';
-import Image from 'next/image'
-import { FaCloud } from 'react-icons/fa'
-import { AiOutlineCloudUpload } from 'react-icons/ai'
-import SideNav from '../../components/SideNav/SideNav'
 import Sellerverification from '../../components/sellerverification/sellerverification';
 import SecondImage from '../../components/sellerverification/SecondImage';
 
