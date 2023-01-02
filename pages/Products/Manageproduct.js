@@ -63,7 +63,109 @@ const Manageproduct = () => {
                             </div>
                         ))}
                     </div>
+
+                    <div className='bg-[#DFECFD] flex p-5 my-8'>
+                        <div className='pr-4'>
+                            <Image
+                                src={exclaimation}
+                                alt="exclaimation"
+                                width="26"
+                                height="26"
+                            />
+                        </div>
+                        <div className='text-[#686868]'>
+                            <p className='pb-2'><strong>Explanation</strong></p>
+                            <p>The product which is buyer can see and stock 0 will appear in online tab.</p>
+                        </div>
+                    </div>
+
+                    <div className='grid grid-cols-6 items-center'>
+                        <div className='w-[176px]'>
+                            <select className="select select-bordered w-[176px]">
+                                <option disabled selected>Category</option>
+                                <option> Apple</option>
+                                <option> Orange</option>
+                                <option> Tomato</option>
+                            </select>
+                        </div>
+                        <input type="text" placeholder="Type here" className="input input-bordered w-[176px]" />
+                        <input type="text" placeholder="Type here" className="input input-bordered w-[176px]" />
+                        <input type="text" placeholder="Type here" className="input input-bordered w-[176px]" />
+                        <input type="text" placeholder="Type here" className="input input-bordered w-[176px]" />
+                        <button type="submit" placeholder="Type here" className="h-[44px] rounded w-[176px] bg-[#FB641B] hover:bg-[#ce4e0e] text-white font-medium cursor-pointer" >Search</button>
+                    </div>
+
+                    <div className='flex justify-between my-4 items-center'>
+                        <div className='flex items-center'>
+                            <p className='mr-6'>Selected: 0</p>
+                            <input type="text" placeholder="Type here" className="input input-bordered w-[102px] mr-4" value="Inactivate" />
+                            <input type="text" placeholder="Type here" className="input input-bordered w-[102px]" value="Batch Delete" />
+                        </div>
+
+                        <div>
+                            <div className="btn-group">
+                                <button className="bg-[#FB641B] hover:bg-[#ce4e0e] w-[102px] h-[44px] rounded">Product</button>
+                                <button className=" text-[#FB641B] hover:bg-[#ce4e0e] hover:text-white w-[102px] h-[44px] rounded">SKU</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="overflow-x-auto w-full">
+                        <table className="table w-full">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <label>
+                                            <input type="checkbox" className="checkbox" />
+                                        </label>
+                                    </th>
+                                    <th>Product</th>
+                                    <th>Local Title</th>
+                                    <th>Product SKU</th>
+                                    <th>Variation</th>
+                                    <th>Price $</th>
+                                    <th>Stock</th>
+                                    <th>Created</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <th>
+                                        NO Data
+                                    </th>
+                                    <td>
+
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <th>
+                                        NO Data
+                                    </th>
+                                    <th>
+                                       
+                                    </th>
+                                    <th>
+                                        
+                                    </th>
+                                    <th>
+                                    
+                                    </th>
+                                    <th>
+                                    
+                                    </th>
+                                    <th>
+                                        NO Data
+                                    </th>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
                 </div>
+
+
             </div>
         </section>
     );
