@@ -13,7 +13,7 @@ const SecondImage = () => {
 
 
     return (
-        <div className="max-w-[680px] md:w-[680px] h-[170px] border-5 flex justify-between items-center border rounded-lg">
+        <div className="max-w-[680px] md:w-[480px] h-[170px] border-5 flex justify-between items-center border rounded-lg">
             {bankInfo ? <div>
                 <Image src={URL.createObjectURL(bankInfo)} alt="Preview" width="200" height="200" />
                 <p className="md:ml-5 text-sm md:text-md">Upload a Cheque Copy</p>
