@@ -6,13 +6,13 @@ import Image from 'next/image';
 
 const MENU_LIST = [
     { text: "All", href: "/Products/Manageproduct" },
-    { text: "Online(0)", href: "/Products/Manageproduct/online" },
-    { text: "Draft(0)", href: "/contact" },
-    { text: "Pending QC(0)", href: "/contact" },
-    { text: "Out of Stock(0)", href: "/contact" },
-    { text: "Inactive(0)", href: "/contact" },
-    { text: "Suspended(0)", href: "/contact" },
-    { text: "Deleted(0)", href: "/contact" },
+    { text: "Online(0)", href: "" },
+    { text: "Draft(0)", href: "" },
+    { text: "Pending QC(0)", href: "" },
+    { text: "Out of Stock(0)", href: "" },
+    { text: "Inactive(0)", href: "" },
+    { text: "Suspended(0)", href: "" },
+    { text: "Deleted(0)", href: "" },
 ];
 
 const Manageproduct = () => {
@@ -53,7 +53,7 @@ const Manageproduct = () => {
                     <div className='mb-4'>
                         <button className='h-[40px] rounded w-[176px] bg-[#FB641B] hover:bg-[#ce4e0e] text-white font-medium'>Add Product</button>
                     </div>
-                    <div className='grid grid-cols-8 justify-center bg-white'>
+                    <div className='grid lg:grid-cols-8 md:grid-cols-5 grid-cols-3 gap-3 justify-center bg-white'>
                         {MENU_LIST.map((menu, idx) => (
                             <div
 
@@ -79,7 +79,7 @@ const Manageproduct = () => {
                         </div>
                     </div>
 
-                    <div className='grid grid-cols-6 items-center'>
+                    <div className='grid lg:grid-cols-6 md:grid-cols-4 grid-cols-2 gap-3 items-center'>
                         <div className='w-[176px]'>
                             <select className="select select-bordered w-[176px]">
                                 <option disabled selected>Category</option>
@@ -95,7 +95,7 @@ const Manageproduct = () => {
                         <button type="submit" placeholder="Type here" className="h-[44px] rounded w-[176px] bg-[#FB641B] hover:bg-[#ce4e0e] text-white font-medium cursor-pointer" >Search</button>
                     </div>
 
-                    <div className='flex justify-between my-4 items-center'>
+                    <div className='flex lg:justify-between md:justify-between my-4 items-center'>
                         <div className='flex items-center'>
                             <p className='mr-6'>Selected: 0</p>
                             <input type="text" placeholder="Type here" className="input input-bordered w-[102px] mr-4" value="Inactivate" />
