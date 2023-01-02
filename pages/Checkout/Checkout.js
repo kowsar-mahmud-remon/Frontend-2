@@ -8,6 +8,7 @@ const Checkout = () => {
     return (
         <div className='bg-[#C9C9C9] flex min-h-screen pt-5'>
             <div className='max-w-screen-xl hero-content flex-col lg:flex-row md:flex-row mx-auto'>
+                {/* Checkout form */}
                 <div className=" lg:w-[788px] md:w-full w-full">
                     <div className='mb-2'>
                         <div className="text-[16px] text-[#686868] breadcrumbs">
@@ -94,9 +95,9 @@ const Checkout = () => {
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
+                {/* Order Summary */}
                 <div className='lg:ml-6 md:ml-3 ml-0 lg:pt-[96px] md:pt-[96px] pt-4 lg:w-11/12 md:w-2/5 w-full'>
                     <div className='rounded-lg bg-white p-4 h-[294px]'>
                         <h1 className='text-[#FB641B] mb-4'>Order Summary </h1>
@@ -110,7 +111,7 @@ const Checkout = () => {
                         </div>
                         <div className='flex justify-between  mb-10'>
                             <h3>Total</h3>
-                            <p className='text-[#FB641B]'>TK 0</p>  
+                            <p className='text-[#FB641B]'>TK 0</p>
                         </div>
                         <div>
                             <button className='bg-[#FB641B] px-2 w-full h-[48px] text-white font rounded text-base font-medium hover:bg-[#c74c0e]'>PROCEED TO CHECKOUT (0)</button>
