@@ -31,6 +31,16 @@ const AddProductForm = () => {
             </div>
             <div class="flex items-center mt-4">
                 <div class="w-1/3">
+                    <label class="block text-[#001E00] text-start" for="Category">
+                        Category:
+                    </label>
+                </div>
+                <div class="w-2/3">
+                    <input class="appearance-none border-2 border-accent rounded w-[423px] py-2 px-4 text-accent leading-tight focus:outline-nonefocus:border-primary" id="Category" type="text" />
+                </div>
+            </div>
+            <div class="flex items-center mt-4">
+                <div class="w-1/3">
                     <span class="block text-[#001E00] text-start">
                         Category Suggestions:
                     </span>
