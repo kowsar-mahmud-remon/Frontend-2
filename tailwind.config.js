@@ -5,6 +5,13 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
     "./layouts/**/*.{js,ts,jsx,tsx}",
   ],
+  theme: {
+    extend: {
+      boxShadow: {
+        'small': '0px 6px 28px rgba(0, 0, 0, 0.16)',
+      }
+    }
+  },
   daisyui: {
     themes: [
       {
@@ -13,7 +20,8 @@ module.exports = {
           // primary: "#1b2857fb",
           // secondary: "#FFC000",
           secondary: "#707070",
-          accent: "#FFEDD5",
+          accent: "#686868",
+          // accent: "#FFEDD5",
           neutral: "#F3F4F6",
           "base-100": "#FFFFFF",
 

@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React, { useEffect } from 'react';
+import React from 'react';
 import kachabazarIcon from '../../assets/CategoryImages/KachabazarIcon/shopping-bag 1.png';
 import categories from '../../Utils/Category.json';
 import products from '../../Utils/Products.json';
