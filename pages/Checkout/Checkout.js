@@ -33,7 +33,7 @@ const Checkout = () => {
                                 height="21"
                                 className='cursor-pointer'
                             />
-                            <p className='text-[10px] pl-2'>Delete</p>
+                            <p className='text-[10px] pl-2 text-[#686868]'>Delete</p>
                         </div>
                     </div>
                     <div className=" bg-[#FFFFFF] rounded-lg">
@@ -58,14 +58,14 @@ const Checkout = () => {
                                 </div>
                             </div>
                             <div className='lg:col-span-2  text-center'>
-                                <h4 className='font-medium text-lg'>Tomato (Local) 500 ±30 gm</h4>
-                                <span className='text-base'>No Brand, Color Family:Black</span>
+                                <h4 className='font-medium text-[17px] text-[#686868]'>Tomato (Local) 500 ±30 gm</h4>
+                                <span className='text-sm text-[#686868]'>No Brand, Color Family:Black</span>
                             </div>
 
                             <div className='text-center'>
                                 <h4 className='font-medium text-lg text-[#FB641B]'>TK. 60</h4>
-                                <p className='text-base'>TK. 80</p>
-                                <p className='text-sm'>(20% off)</p>
+                                <s className='text-[#686868] text-sm'>TK. 80</s>
+                                <p className='text-[#686868] text-sm'>(20% off)</p>
                                 <div className='flex justify-center items-center pt-4'>
                                     <Image
                                         src={heart}
@@ -102,15 +102,15 @@ const Checkout = () => {
                     <div className='rounded-lg bg-white p-4 h-[294px]'>
                         <h1 className='text-[#FB641B] mb-4'>Order Summary </h1>
                         <div className='flex justify-between mb-4'>
-                            <p>Subtotal (0 items)</p>
-                            <p>TK 0</p>
+                            <p className='text-[#686868]'>Subtotal (0 items)</p>
+                            <p className='text-[#686868]'>TK 0</p>
                         </div>
                         <div className='flex items-center mb-4'>
                             <input type="text" placeholder="Enter your promo code" className="input input-bordered w-full  mr-1 h-[42px]" />
                             <button className='bg-[#FB641B] px-4 text-sm text-white font rounded h-[40px] hover:bg-[#c74c0e]'>APPLY</button>
                         </div>
                         <div className='flex justify-between  mb-10'>
-                            <h3>Total</h3>
+                            <h3 className='text-[#686868]'>Total</h3>
                             <p className='text-[#FB641B]'>TK 0</p>
                         </div>
                         <div>
