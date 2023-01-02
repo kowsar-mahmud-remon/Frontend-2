@@ -58,7 +58,7 @@ const Checkout = () => {
                                 </div>
                             </div>
                             <div className='lg:col-span-2  text-center'>
-                                <h4 className='font-medium text-[17px] text-[#686868]'>Tomato (Local) 500 ±30 gm</h4>
+                                <h4 className='font-medium text-[17px] text-[#001E00]'>Tomato (Local) 500 ±30 gm</h4>
                                 <span className='text-sm text-[#686868]'>No Brand, Color Family:Black</span>
                             </div>
 
