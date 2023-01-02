@@ -97,7 +97,7 @@ const Checkout = () => {
 
                     </div>
                 </div>
-                <div className='ml-6 lg:pt-[96px] md:pt-[96px] pt-4'>
+                <div className='lg:ml-6 md:ml-3 ml-0 lg:pt-[96px] md:pt-[96px] pt-4 lg:w-11/12 md:w-2/5 w-full'>
                     <div className='rounded-lg bg-white p-4 h-[294px]'>
                         <h1 className='text-[#FB641B] mb-4'>Order Summary </h1>
                         <div className='flex justify-between mb-4'>
