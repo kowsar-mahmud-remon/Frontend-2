@@ -21,7 +21,7 @@ const index = () => {
             {/* <NavicationLayout> */}
             <NavicationWithSideNavLayout>
                 {/* <Header /> */}
-                <div className="grid">
+                <div className="grid grid-cols-1 md:grid-cols-2">
                     <div className="flex">
                         <div className="md:w-[96px] h-auto md:h-[560px] border flex flex-col p-[8px] bg-[#F2F3F7] gap-[8px] rounded-md">
                             <div className="">

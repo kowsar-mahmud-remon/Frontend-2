@@ -97,7 +97,7 @@ const Navication = () => {
                 <div className={`${styles.navSearch}`}>
                     <div style={{ borderRight: "2px solid #026C51" }} className='flex items-center'>
                         <RiMapPinFill className='text-lg ml-[14px]' />
-                        <span className='px-2 whitespace-nowrap hidden md:d-block lg:d-block'>Use your current location</span>
+                        <span className='px-2 whitespace-nowrap'>Use your current location</span>
                         <IoIosArrowDown className='mr-[14px] text-lg' />
                     </div>
                     <div className='flex items-center w-full justify-between'>
