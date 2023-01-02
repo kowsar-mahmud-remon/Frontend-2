@@ -12,7 +12,7 @@ import { FaShoppingCart } from 'react-icons/fa';
 import { BsFillBagCheckFill, BsFillStarFill, BsStar } from 'react-icons/bs';
 import Link from "next/link";
 import Footer from "../../components/ProductPage/Footer";
-import Header from "./Header";
+import Header from "../../components/ProductPage/Header";
 
 
 const index = () => {
