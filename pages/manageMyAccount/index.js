@@ -6,15 +6,15 @@ const manageMyAccount = () => {
     return (
 
 
-        <div>
+        <div className="min-w-[1920px]">
             <Navication></Navication>
 
-            <div className="flex  my-8 mx-5 gap-14 xl:mx-12">
-                <div>
+            <div className="flex  my-8 mx-5 gap-[55px] xl:mx-12">
+                <div className="ml-[300px]">
                     <ManageAccoutSideBar></ManageAccoutSideBar>
                 </div>
-                <div className="">
-                    <div>
+                <div >
+                    <div className="mr-[300px]">
                         <div>
                             <h1 className="text-[#FB641B] text-[24px] font-semibold">Manage My Account</h1>
                         </div>
