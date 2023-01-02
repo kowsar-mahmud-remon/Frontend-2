@@ -12,9 +12,9 @@ const Sellerverification = () => {
         setNidFront(event.target.files[0])
     }
     function handleBackChange(event) {
-        setNidBack(event.target.files[0])
+        setNidBack(event.target.files[0]) 
     }
-
+ 
 
 
     return (
