@@ -7,8 +7,8 @@ import Image from 'next/image'
 const Checkout = () => {
     return (
         <div className='bg-[#C9C9C9] flex min-h-screen pt-5'>
-            <div className='max-w-screen-xl flex mx-auto'>
-                <div className=" w-[788px]">
+            <div className='max-w-screen-xl hero-content flex-col lg:flex-row md:flex-row mx-auto'>
+                <div className=" lg:w-[788px] md:w-full w-full">
                     <div className='mb-2'>
                         <div className="text-[16px] text-[#686868] breadcrumbs">
                             <ul>
@@ -30,6 +30,7 @@ const Checkout = () => {
                                 alt="delte product"
                                 width="18"
                                 height="21"
+                                className='cursor-pointer'
                             />
                             <p className='text-[10px] pl-2'>Delete</p>
                         </div>
@@ -42,7 +43,7 @@ const Checkout = () => {
                         <div>
                             <p className='border text-[#686868]'></p>
                         </div>
-                        <div className='grid grid-cols-5 mx-auto w-[788px] justify-center items-center pl-6'>
+                        <div className='grid lg:grid-cols-5 grid-cols-4 mx-auto lg:w-[788px] md:w-full w-full justify-center items-center pl-6'>
                             <div className='flex items-center py-[28px] justify-center'>
                                 <input type="checkbox" className="checkbox" />
                                 <div className='bg-white rounded-md shadow ml-4'>
@@ -55,7 +56,7 @@ const Checkout = () => {
 
                                 </div>
                             </div>
-                            <div className='col-span-2 text-center'>
+                            <div className='lg:col-span-2  text-center'>
                                 <h4 className='font-medium text-lg'>Tomato (Local) 500 ±30 gm</h4>
                                 <span className='text-base'>No Brand, Color Family:Black</span>
                             </div>
@@ -96,7 +97,7 @@ const Checkout = () => {
 
                     </div>
                 </div>
-                <div className='ml-6 pt-[96px]'>
+                <div className='ml-6 lg:pt-[96px] md:pt-[96px] pt-4'>
                     <div className='rounded-lg bg-white p-4 h-[294px]'>
                         <h1 className='text-[#FB641B] mb-4'>Order Summary </h1>
                         <div className='flex justify-between mb-4'>
@@ -104,7 +105,7 @@ const Checkout = () => {
                             <p>TK 0</p>
                         </div>
                         <div className='flex items-center mb-4'>
-                            <input type="text" placeholder="Enter your promo code" className="input input-bordered w-full max-w-xs mr-1 h-[42px]" />
+                            <input type="text" placeholder="Enter your promo code" className="input input-bordered w-full  mr-1 h-[42px]" />
                             <button className='bg-[#FB641B] px-4 text-sm text-white font rounded h-[40px] hover:bg-[#c74c0e]'>APPLY</button>
                         </div>
                         <div className='flex justify-between  mb-10'>
