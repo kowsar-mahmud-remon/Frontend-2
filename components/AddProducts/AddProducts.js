@@ -9,7 +9,7 @@ const AddProducts = () => {
                 <div className='flex items-center text-lg text-accent'>
                     <span>Home</span> <FaAngleRight /> <span> Products</span> <FaAngleRight /><span className='text-black'> Add Products</span>
                 </div>
-                <h2 className='text-2xl font-medium mb-8 mt-2 text-primary'>Add Products</h2>
+                <h2 className='text-2xl 2xl:text-3xl font-medium mb-8 mt-2 text-primary'>Add Products</h2>
                 <AddProductForm />
                 <div className='mt-6 flex gap-4 justify-center'>
                     <button className='py-5 px-20 border border-accent text-2xl text-accent rounded-lg'>Save Draft</button>

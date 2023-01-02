@@ -4,10 +4,65 @@ import { FaAngleRight } from 'react-icons/fa';
 const AddProductForm = () => {
     return (
         <div className='p-6 border border-[#F2F2F2] shadow-small'>
-            <h2 className='text-lg'>Product Images</h2>
-            <p className='text-[#707070] text-sm mt-2'>The picture will be displayed on the cover of the product details page. Sizes are between 330x330 and 2000x2000px. Pornographic images are prohibited.</p>
+            <h2 className='text-lg 2xl:text-2xl'>Product Images</h2>
+            <p className='text-[#707070] text-sm 2xl:text-lg mt-2'>The picture will be displayed on the cover of the product details page. Sizes are between 330x330 and 2000x2000px. Pornographic images are prohibited.</p>
+            <div for="thumbnail-file" class="mx-auto cursor-pointer w-full h-[180px] 2xl:h-[200px] mt-8 rounded-xl border-2 border-dashed border-accent bg-white grid grid-cols-4 2xl:grid-cols-5">
+                <div className='flex flex-col items-center justify-center'>
+                    <svg fill="#FB641B" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-14 w-16"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_iconCarrier"><path d="M13 19v-4h3l-4-5-4 5h3v4z"></path><path d="M7 19h2v-2H7c-1.654 0-3-1.346-3-3 0-1.404 1.199-2.756 2.673-3.015l.581-.102.192-.558C8.149 8.274 9.895 7 12 7c2.757 0 5 2.243 5 5v1h1c1.103 0 2 .897 2 2s-.897 2-2 2h-3v2h3c2.206 0 4-1.794 4-4a4.01 4.01 0 0 0-3.056-3.888C18.507 7.67 15.56 5 12 5 9.244 5 6.85 6.611 5.757 9.15 3.609 9.792 2 11.82 2 14c0 2.757 2.243 5 5 5z"></path></g></svg>
 
-            <p className='text-center my-80'>image input field comming soon</p>
+                    <h2 class="mt-2 text-xs 2xl:text-base text-accent tracking-wide">Upload Thumbnail Image </h2>
+                    <input id="thumbnail-file" type="file" class="hidden" />
+                </div>
+                <div className='col-span-3 2xl:col-span-4 border-l border-accent grid-cols-3 grid 2xl:grid-cols-4 gap-7 p-4'>
+                    <div className='w-full h-full bg-slate-300'>
+
+                    </div>
+                </div>
+            </div>
+            <div for="thumbnail-file" class="mx-auto cursor-pointer w-full h-[180px] 2xl:h-[200px] mt-8 rounded-xl border-2 border-dashed border-accent bg-white grid grid-cols-4 2xl:grid-cols-5">
+                <div className='flex flex-col items-center justify-center'>
+                    <svg fill="#FB641B" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-14 w-16"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_iconCarrier"><path d="M13 19v-4h3l-4-5-4 5h3v4z"></path><path d="M7 19h2v-2H7c-1.654 0-3-1.346-3-3 0-1.404 1.199-2.756 2.673-3.015l.581-.102.192-.558C8.149 8.274 9.895 7 12 7c2.757 0 5 2.243 5 5v1h1c1.103 0 2 .897 2 2s-.897 2-2 2h-3v2h3c2.206 0 4-1.794 4-4a4.01 4.01 0 0 0-3.056-3.888C18.507 7.67 15.56 5 12 5 9.244 5 6.85 6.611 5.757 9.15 3.609 9.792 2 11.82 2 14c0 2.757 2.243 5 5 5z"></path></g></svg>
+
+                    <h2 class="mt-2 text-xs 2xl:text-base text-accent tracking-wide">Upload Thumbnail Image </h2>
+                    <input id="thumbnail-file" type="file" class="hidden" />
+                </div>
+                <div className='col-span-3 2xl:col-span-4 border-l border-accent grid-cols-3 grid 2xl:grid-cols-4 gap-7 p-4'>
+                    <div className='w-full h-full bg-slate-300'>
+                    </div>
+                    <div className='w-full h-full bg-slate-300'>
+                    </div>
+                    <div className='w-full h-full bg-slate-300'>
+                    </div>
+                    <div className='w-full h-full bg-slate-300 hidden 2xl:block'>
+                    </div>
+                </div>
+            </div>
+            <div for="thumbnail-file" class="mx-auto cursor-pointer w-full h-[320px] 2xl:h-[400px] mt-8 rounded-xl border-2 border-dashed border-accent bg-white grid grid-cols-4 2xl:grid-cols-5">
+                <div className='flex flex-col items-center justify-center'>
+                    <svg fill="#FB641B" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-14 w-16"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_iconCarrier"><path d="M13 19v-4h3l-4-5-4 5h3v4z"></path><path d="M7 19h2v-2H7c-1.654 0-3-1.346-3-3 0-1.404 1.199-2.756 2.673-3.015l.581-.102.192-.558C8.149 8.274 9.895 7 12 7c2.757 0 5 2.243 5 5v1h1c1.103 0 2 .897 2 2s-.897 2-2 2h-3v2h3c2.206 0 4-1.794 4-4a4.01 4.01 0 0 0-3.056-3.888C18.507 7.67 15.56 5 12 5 9.244 5 6.85 6.611 5.757 9.15 3.609 9.792 2 11.82 2 14c0 2.757 2.243 5 5 5z"></path></g></svg>
+
+                    <h2 class="mt-2 text-xs 2xl:text-base text-accent tracking-wide">Upload Thumbnail Image </h2>
+                    <input id="thumbnail-file" type="file" class="hidden" />
+                </div>
+                <div className='col-span-3 2xl:col-span-4 border-l border-accent grid-cols-3 grid 2xl:grid-cols-4 gap-7 p-4'>
+                    <div className='w-full h-full bg-slate-300'>
+                    </div>
+                    <div className='w-full h-full bg-slate-300'>
+                    </div>
+                    <div className='w-full h-full bg-slate-300'>
+                    </div>
+                    <div className='w-full h-full bg-slate-300 hidden 2xl:block'>
+                    </div>
+                    <div className='w-full h-full bg-slate-300'>
+                    </div>
+                    <div className='w-full h-full bg-slate-300'>
+                    </div>
+                    <div className='w-full h-full bg-slate-300'>
+                    </div>
+                    <div className='w-full h-full bg-slate-300 hidden 2xl:block'>
+                    </div>
+                </div>
+            </div>
 
             <div class="flex items-center mt-6">
                 <div class="w-1/3">

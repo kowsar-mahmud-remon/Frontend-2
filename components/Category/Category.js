@@ -6,10 +6,10 @@ import products from '../../Utils/Products.json';
 import ProductCard from './ProductCard';
 
 const Category = () => {
-    // console.log(products)
     return (
         <div>
             <div className='mb-4'>
+                <p className='text-accent mb-2'>Home /<span className='text-[#287DF3]'> Kachabazar</span></p>
                 <div className='flex gap-1 items-center'>
                     <Image src={kachabazarIcon} alt='' />
                     <h2 className='text-primary text-2xl'>Kacha Bazar</h2>
