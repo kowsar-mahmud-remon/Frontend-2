@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaAngleRight, FaAngleUp } from 'react-icons/fa';
+import AddProductForm from './AddProductForm';
 
 const AddProducts = () => {
     return (
@@ -9,6 +10,11 @@ const AddProducts = () => {
                     <span>Home</span> <FaAngleRight /> <span> Products</span> <FaAngleRight /><span className='text-black'> Add Products</span>
                 </div>
                 <h2 className='text-2xl font-medium mb-8 mt-2 text-primary'>Add Products</h2>
+                <AddProductForm />
+                <div className='mt-6 flex gap-4 justify-center'>
+                    <button className='py-5 px-20 border border-accent text-2xl text-accent rounded-lg'>Save Draft</button>
+                    <button className='py-5 px-20 bg-primary border border-primary text-2xl text-white rounded-lg'>Submit</button>
+                </div>
             </div>
             <div>
                 <div className='p-6 border border-[#F2F2F2] shadow-small'>
