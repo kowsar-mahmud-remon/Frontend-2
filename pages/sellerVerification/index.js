@@ -48,11 +48,11 @@ const index = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 my-5">
                     <div className="">
                         <p className="text-sm md:text-md">ID Name*</p>
-                        <input type="text" placeholder="Type here" className="input input-bordered max-w-[680px]" />
+                        <input type="text" placeholder="Type here" className="input input-bordered md:w-[680px]" />
                     </div>
                     <div className="">
                         <p className="text-sm md:text-md">State Name*</p>
-                        <input type="text" placeholder="Type here" className="input input-bordered  max-w-[680px]" />
+                        <input type="text" placeholder="Type here" className="input input-bordered  md:w-[680px]" />
                     </div>
                 </div>
                 <div className="my-4">
@@ -69,26 +69,26 @@ const index = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 my-2">
                         <div className="">
                             <p className="text-sm md:text-md">Account Holder Name*</p>
-                            <input type="text" placeholder="Branch" className="input input-bordered max-w-[680px]" />
+                            <input type="text" placeholder="Branch" className="input input-bordered md:w-[680px]" />
                         </div>
                         <div className="">
                             <p className="text-sm md:text-md">Bank Name*</p>
-                            <input type="text" placeholder="Branch" className="input input-bordered  max-w-[680px]" />
+                            <input type="text" placeholder="Branch" className="input input-bordered  md:w-[680px]" />
                         </div>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 my-2">
                         <div className="">
                             <p className="text-sm md:text-md">Branch Name*</p>
-                            <input type="text" placeholder="Branch" className="input input-bordered max-w-[680px]" />
+                            <input type="text" placeholder="Branch" className="input input-bordered md:w-[680px]" />
                         </div>
                         <div className="">
                             <p className="text-sm md:text-md">Account Number*</p>
-                            <input type="text" placeholder="Account" className="input input-bordered max-w-[680px]" />
+                            <input type="text" placeholder="Account" className="input input-bordered md:w-[680px]" />
                         </div>
                     </div>
                     <div className="">
                         <p className="text-sm md:text-md">Routing Number*</p>
-                        <input type="text" placeholder="Routing Number" className="input input-bordered  md:max-w-[680px]" />
+                        <input type="text" placeholder="Routing Number" className="input input-bordered  md:w-[680px]" />
                     </div>
                 </div>
             </div >
