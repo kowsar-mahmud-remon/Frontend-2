@@ -1,22 +1,25 @@
-import React from 'react';
-import Mangeitem from './Mangeitem';
+import React, { useState } from 'react';
 import exclaimation from '../../assets/images/exclamation.png'
 import Image from 'next/image';
 import DataTable from 'react-data-table-component';
+import Managelist from './Managelist';
 
 
-const MENU_LIST = [
-    { text: "All", href: "/Products/Manageproduct", _id: 1 },
-    { text: "Online(0)", href: "", _id: 2 },
-    { text: "Draft(0)", href: "", _id: 3 },
-    { text: "Pending QC(0)", href: "", _id: 4 },
-    { text: "Out of Stock(0)", href: "", _id: 5 },
-    { text: "Inactive(0)", href: "", _id: 6 },
-    { text: "Suspended(0)", href: "", _id: 7 },
-    { text: "Deleted(0)", href: "", _id: 8 },
-];
 
 const Manageproduct = () => {
+
+    const [active, setActive] = useState({ text: "All", href: "/Products/Manageproduct" })
+
+    const MENU_LIST = [
+        { text: "All", href: "/Products/Manageproduct" },
+        { text: "Online(0)", href: "" },
+        { text: "Draft(0)", href: "" },
+        { text: "Pending QC(0)", href: "" },
+        { text: "Out of Stock(0)", href: "" },
+        { text: "Inactive(0)", href: "" },
+        { text: "Suspended(0)", href: "" },
+        { text: "Deleted(0)", href: "" },
+    ];
 
 
     const columns = [
@@ -65,6 +68,7 @@ const Manageproduct = () => {
         }
     ]
 
+
     return (
         <section className='bg-[#C9C9C9] '>
             <div className='max-w-screen-xl mx-auto'>
@@ -79,7 +83,7 @@ const Manageproduct = () => {
                     <div>
                         <h1 className='text-[#FB641B] font-medium text-2xl'>Product Management</h1>
                     </div>
-                    <div className='bg-[#DFECFD] flex p-5 my-8'>
+                    <div className='bg-[#DFECFD] flex p-4 my-8'>
                         <div className='pr-4'>
                             <Image
                                 src={exclaimation}
@@ -89,8 +93,8 @@ const Manageproduct = () => {
                             />
                         </div>
                         <div className='text-[#686868]'>
-                            <p className='pb-2'>Since we have upgraded the product management, For a better experience, the older operation of file uploading on the current page would be offline in a few days. You can experience the new one in the menu <strong>Products / Bulk Add/Edit Products</strong></p>
-                            <p>Your products are not yet visible to buyers. Please add address to make them visible</p>
+                            <p className='pb-2 text-base'>Since we have upgraded the product management, For a better experience, the older operation of file uploading on the current page would be offline in a few days. You can experience the new one in the menu <strong>Products / Bulk Add/Edit Products</strong></p>
+                            <p className='text-[13px]'>Your products are not yet visible to buyers. Please add address to make them visible</p>
                         </div>
                     </div>
                 </div>
@@ -100,18 +104,18 @@ const Manageproduct = () => {
                     <div className='mb-4'>
                         <button className='h-[40px] rounded w-[176px] bg-[#FB641B] hover:bg-[#ce4e0e] text-white font-medium'>Add Product</button>
                     </div>
-                    <div className='grid lg:grid-cols-8 md:grid-cols-5 grid-cols-3 gap-3 justify-center bg-white'>
-                        <button className='hover:bg-[#F2F2F2] py-3'>All</button>
-                        <button className='hover:bg-[#F2F2F2] py-3'>Online(0)</button>
-                        <button className='hover:bg-[#F2F2F2] py-3'>Draft(0)</button>
-                        <button className='hover:bg-[#F2F2F2] py-3'>Pending QC(0)</button>
-                        <button className='hover:bg-[#F2F2F2] py-3'>Out of Stock(0)</button>
-                        <button className='hover:bg-[#F2F2F2] py-3'>Inactive(0)</button>
-                        <button className='hover:bg-[#F2F2F2] py-3'>Suspended(0)</button>
-                        <button className='hover:bg-[#F2F2F2] py-3'>Deleted(0)</button>
+                    <div className='grid lg:grid-cols-8 md:grid-cols-5 grid-cols-3 gap-3 justify-center bg-white items-center '>
+                        {MENU_LIST.map((menu, idx) => (
+                            <div
+
+                                key={menu.text}
+                            >
+                                <Managelist menu={menu}  setActive={setActive} active={active}></Managelist>
+                            </div>
+                        ))}
                     </div>
 
-                    <div className='bg-[#DFECFD] flex p-5 my-8'>
+                    <div className='bg-[#DFECFD] flex p-4 my-8'>
                         <div className='pr-4'>
                             <Image
                                 src={exclaimation}
@@ -121,7 +125,7 @@ const Manageproduct = () => {
                             />
                         </div>
                         <div className='text-[#686868]'>
-                            <p className='pb-2'><strong>Explanation</strong></p>
+                            <p className='pb-2 text-[13px]'><strong>Explanation</strong></p>
                             <p>The product which is buyer can see and stock 0 will appear in online tab.</p>
                         </div>
                     </div>
