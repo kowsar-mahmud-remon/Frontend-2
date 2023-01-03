@@ -8,10 +8,10 @@ import Managelist from './Managelist';
 
 const Manageproduct = () => {
 
-    const [active, setActive] = useState({ text: "All", href: "/Products/Manageproduct" })
+    const [active, setActive] = useState({ text: "All", href: "" })
 
     const MENU_LIST = [
-        { text: "All", href: "/Products/Manageproduct" },
+        { text: "All", href: "" },
         { text: "Online(0)", href: "" },
         { text: "Draft(0)", href: "" },
         { text: "Pending QC(0)", href: "" },
@@ -70,7 +70,7 @@ const Manageproduct = () => {
 
 
     return (
-        <section className='bg-[#C9C9C9] '>
+        <section className='bg-[#C9C9C9] py-10'>
             <div className='max-w-screen-xl mx-auto'>
                 <div>
                     <div className="text-sm breadcrumbs">
@@ -93,14 +93,14 @@ const Manageproduct = () => {
                             />
                         </div>
                         <div className='text-[#686868]'>
-                            <p className='pb-2 text-base'>Since we have upgraded the product management, For a better experience, the older operation of file uploading on the current page would be offline in a few days. You can experience the new one in the menu <strong>Products / Bulk Add/Edit Products</strong></p>
+                            <p className='pb-2 text-[15px]'>Since we have upgraded the product management, For a better experience, the older operation of file uploading on the current page would be offline in a few days. You can experience the new one in the menu <strong>Products / Bulk Add/Edit Products</strong></p>
                             <p className='text-[13px]'>Your products are not yet visible to buyers. Please add address to make them visible</p>
                         </div>
                     </div>
                 </div>
 
 
-                <div className='bg-[#F2F2F2] p-6'>
+                <div className='bg-[#F2F2F2] p-6 shadow-md rounded'>
                     <div className='mb-4'>
                         <button className='h-[40px] rounded w-[176px] bg-[#FB641B] hover:bg-[#ce4e0e] text-white font-medium'>Add Product</button>
                     </div>
@@ -126,13 +126,13 @@ const Manageproduct = () => {
                         </div>
                         <div className='text-[#686868]'>
                             <p className='pb-2 text-[13px]'><strong>Explanation</strong></p>
-                            <p>The product which is buyer can see and stock 0 will appear in online tab.</p>
+                            <p className='text-[13px]'>The product which is buyer can see and stock 0 will appear in online tab.</p>
                         </div>
                     </div>
 
                     <div className='grid lg:grid-cols-6 md:grid-cols-4 grid-cols-2 gap-3 items-center'>
                         <div className='w-[176px]'>
-                            <select className="select select-bordered w-[176px]">
+                            <select className="select select-bordered w-[176px] text-[#686868]">
                                 <option disabled selected>Category</option>
                                 <option> Apple</option>
                                 <option> Orange</option>
@@ -155,8 +155,8 @@ const Manageproduct = () => {
 
                         <div>
                             <div className="btn-group">
-                                <button className="bg-[#FB641B] hover:bg-[#ce4e0e] w-[100px] h-[44px] rounded ml-1">Product</button>
-                                <button className=" text-[#FB641B] hover:bg-[#ce4e0e] hover:text-white w-[100px] h-[44px] rounded">SKU</button>
+                                <button className="bg-[#FB641B] hover:bg-[#ce4e0e] w-[100px] h-[44px] rounded ml-1 font-medium text-white">Product</button>
+                                <button className=" text-[#FB641B] hover:bg-[#ce4e0e] font-medium hover:text-white w-[100px] h-[44px] rounded">SKU</button>
                             </div>
                         </div>
                     </div>
