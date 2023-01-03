@@ -11,7 +11,7 @@ import { MdArrowForwardIos } from 'react-icons/md';
 
 const SellerVerificationPage1 = () => {
   return (
-    <div className="flex w-[1920px]">
+    <div className="flex w-[1920px] mt-[1000px]">
       <div className="">
         <div className="mx-6 mb-8">
           <Link href="/" className=''>
