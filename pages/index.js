@@ -1,46 +1,47 @@
-import Head from 'next/head'
-import { Inter } from '@next/font/google'
-import styles from '../styles/Home.module.css'
-import Navication from '../components/Navication/Navication'
-import Carosel from '../components/Carosel/Carosel'
-import SideNav from '../components/SideNav/SideNav'
-import Image from 'next/image'
+import Head from 'next/head';
+import { Inter } from '@next/font/google';
+import styles from '../styles/Home.module.css';
+import Navication from '../components/Navication/Navication';
+import Carosel from '../components/Carosel/Carosel';
+import SideNav from '../components/SideNav/SideNav';
+import Image from 'next/image';
 import slideImg from '../assets/images/slideImg.png';
 import rightHeroMid from '../assets/images/right_hero/hero_mid.png';
 import rightHeroBottm from '../assets/images/right_hero/hro_bottm.png';
 import { FaArrowAltCircleRight } from 'react-icons/fa';
 import logo from '../assets/images/logo/main_logo.png';
 import logoDic from '../assets/images/logo/logo_dic.png';
-import NavicationWithSideNavLayout from '../layouts/NavicationWithSideNavLayout'
+import NavicationWithSideNavLayout from '../layouts/NavicationWithSideNavLayout';
+import OrderPlace from '../components/OrderPlace/OrderPlace';
 
 export const getStaticProps = async () => {
   try {
-    const res = await fetch("https://banglar-big-store.onrender.com/api/slides/slides")
-    const data = await res.json()
+    const res = await fetch("https://banglar-big-store.onrender.com/api/slides/slides");
+    const data = await res.json();
     if (!data.result) {
       return {
         props: {
           items: []
         }
-      }
+      };
     }
     return {
       props: {
         items: data.result
       },
       revalidate: 600
-    }
+    };
   } catch (err) {
-    console.log(err)
+    console.log(err);
     return {
       props: {
         items: []
       }
-    }
+    };
   }
-}
+};
 
-export default function Home({items}) {
+export default function Home({ items }) {
   return (
     <>
       <Head>
@@ -107,5 +108,5 @@ export default function Home({items}) {
         </div>
       </div> */}
     </>
-  )
+  );
 }
