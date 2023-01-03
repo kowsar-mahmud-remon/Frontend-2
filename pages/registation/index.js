@@ -7,6 +7,7 @@ import { BiHide } from 'react-icons/bi';
 import AsyncSelect from 'react-select/async';
 import { gender, days, months, years } from '../../assets/DB/fieldData';
 
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { useForm } from 'react-hook-form';
@@ -18,10 +19,9 @@ import { useCookies } from 'react-cookie';
 import { useRouter } from 'next/router'
 
 
-
-
-
 const Registation = () => {
+
+
     const [showPassword, setShowPassword] = useState(false)
     const [error, setError] = useState({})
     const { register, handleSubmit, watch, formState: { errors }, setValue } = useForm();
@@ -32,6 +32,7 @@ const Registation = () => {
             i.label.toLowerCase().includes(inputValue.toLowerCase())
         );
     };
+
     const router = useRouter()
 
     useEffect(() => {
@@ -48,7 +49,7 @@ const Registation = () => {
                 resolve(filterColors(inputValue, lableValue));
             }, 1000);
         });
-    console.log(data)
+
     const onSubmit = data => {
 
         const { confirm_password, emailOrPhone, lastName, firstName, password } = data || {}
