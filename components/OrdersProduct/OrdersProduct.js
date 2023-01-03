@@ -11,7 +11,7 @@ const OrdersProduct = ({data}) => {
                     </div>
                     <p className="text-[#287DF3] text-[16px] mr-[19px]">MANAGE</p>
                 </div>
-                <hr />
+                <hr className='border-[1px] border-[#686868]'/>
                 <div className="flex justify-between ">
                     <div className="flex ml-[56px] mt-[16px] mb-[16px] gap-[16px]">
                         <Image src={data.image} width="57" height="46" alt=""></Image>
