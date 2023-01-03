@@ -1,13 +1,20 @@
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 
 const Mangeitem = ({ menu }) => {
-    console.log(menu);
-    return (
-      <div className='text-center hover:bg-[#F2F2F2] py-3'>
-        <Link href={menu.href}>{menu.text}</Link>
+
+  const [active, setActive] = useState(null);
+  const handleMenu = () => {
+    setActive(!active);
+  };
+
+  return (
+    <div className='py-3 hover:bg-[#F2F2F2] text-center '>
+      <div className={active ? "bg-[#F2F2F2] text-[#FB641B]": ""}>
+        <Link onClick={() => handleMenu(menu._id)} href={menu.href}>{menu.text}</Link>
       </div>
-    );
+    </div>
+  );
 };
 
 export default Mangeitem;

@@ -2,21 +2,68 @@ import React from 'react';
 import Mangeitem from './Mangeitem';
 import exclaimation from '../../assets/images/exclamation.png'
 import Image from 'next/image';
+import DataTable from 'react-data-table-component';
 
 
 const MENU_LIST = [
-    { text: "All", href: "/Products/Manageproduct" },
-    { text: "Online(0)", href: "" },
-    { text: "Draft(0)", href: "" },
-    { text: "Pending QC(0)", href: "" },
-    { text: "Out of Stock(0)", href: "" },
-    { text: "Inactive(0)", href: "" },
-    { text: "Suspended(0)", href: "" },
-    { text: "Deleted(0)", href: "" },
+    { text: "All", href: "/Products/Manageproduct", _id: 1 },
+    { text: "Online(0)", href: "", _id: 2 },
+    { text: "Draft(0)", href: "", _id: 3 },
+    { text: "Pending QC(0)", href: "", _id: 4 },
+    { text: "Out of Stock(0)", href: "", _id: 5 },
+    { text: "Inactive(0)", href: "", _id: 6 },
+    { text: "Suspended(0)", href: "", _id: 7 },
+    { text: "Deleted(0)", href: "", _id: 8 },
 ];
 
 const Manageproduct = () => {
 
+
+    const columns = [
+        {
+            name: 'Product',
+            selector: row => row.title,
+
+        },
+        {
+            name: 'Local Title',
+
+        },
+        {
+            name: 'Product SKU',
+
+        },
+        {
+            name: 'Variation',
+            selector: row => row.title,
+
+        },
+        {
+            name: 'Price',
+
+        },
+        {
+            name: 'Stock',
+
+        },
+        {
+            name: 'Created',
+
+        },
+        {
+            name: 'Actions',
+            selector: row => row.title,
+
+        },
+    ];
+
+    const data = [
+        {
+            id: 1,
+            title: 'No Data',
+            year: '1988',
+        }
+    ]
 
     return (
         <section className='bg-[#C9C9C9] '>
@@ -54,14 +101,14 @@ const Manageproduct = () => {
                         <button className='h-[40px] rounded w-[176px] bg-[#FB641B] hover:bg-[#ce4e0e] text-white font-medium'>Add Product</button>
                     </div>
                     <div className='grid lg:grid-cols-8 md:grid-cols-5 grid-cols-3 gap-3 justify-center bg-white'>
-                        {MENU_LIST.map((menu, idx) => (
-                            <div
-
-                                key={menu.text}
-                            >
-                                <Mangeitem menu={menu}></Mangeitem>
-                            </div>
-                        ))}
+                        <button className='hover:bg-[#F2F2F2] py-3'>All</button>
+                        <button className='hover:bg-[#F2F2F2] py-3'>Online(0)</button>
+                        <button className='hover:bg-[#F2F2F2] py-3'>Draft(0)</button>
+                        <button className='hover:bg-[#F2F2F2] py-3'>Pending QC(0)</button>
+                        <button className='hover:bg-[#F2F2F2] py-3'>Out of Stock(0)</button>
+                        <button className='hover:bg-[#F2F2F2] py-3'>Inactive(0)</button>
+                        <button className='hover:bg-[#F2F2F2] py-3'>Suspended(0)</button>
+                        <button className='hover:bg-[#F2F2F2] py-3'>Deleted(0)</button>
                     </div>
 
                     <div className='bg-[#DFECFD] flex p-5 my-8'>
@@ -104,13 +151,21 @@ const Manageproduct = () => {
 
                         <div>
                             <div className="btn-group">
-                                <button className="bg-[#FB641B] hover:bg-[#ce4e0e] w-[102px] h-[44px] rounded">Product</button>
-                                <button className=" text-[#FB641B] hover:bg-[#ce4e0e] hover:text-white w-[102px] h-[44px] rounded">SKU</button>
+                                <button className="bg-[#FB641B] hover:bg-[#ce4e0e] w-[100px] h-[44px] rounded ml-1">Product</button>
+                                <button className=" text-[#FB641B] hover:bg-[#ce4e0e] hover:text-white w-[100px] h-[44px] rounded">SKU</button>
                             </div>
                         </div>
                     </div>
 
-                    <div className="overflow-x-auto w-full">
+                    <div>
+                        <DataTable
+                            columns={columns}
+                            data={data}
+                            selectableRows
+                        />
+                    </div>
+
+                    {/* <div className="overflow-x-auto w-full">
                         <table className="table w-full">
                             <thead>
                                 <tr>
@@ -162,7 +217,7 @@ const Manageproduct = () => {
                             </tbody>
 
                         </table>
-                    </div>
+                    </div> */}
                 </div>
 
 
