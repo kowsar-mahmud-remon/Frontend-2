@@ -1,6 +1,6 @@
 import { Tab } from '@headlessui/react';
 import React from 'react';
-import { FaAngleRight, FaInfoCircle } from 'react-icons/fa';
+import { FaAngleRight, FaRegCalendar } from 'react-icons/fa';
 const MediaCenter = () => {
 
     return (
@@ -38,9 +38,10 @@ const MediaCenter = () => {
                                     <button className='text-primary py-2 px-3.5 ml-4 border border-primary rounded'>Create New Folder</button>
                                 </div>
                                 <div className='flex gap-4 items-center'>
-                                    <div>
-                                        <input type="date" className='border border-r-0 py-[10px] rounded-l px-3 text-accent' />
-                                        <input type="date" className='border border-l-0 py-[10px] rounded-r px-3 text-accent' />
+                                    <div className='w-[300px] relative'>
+                                        <input type="text" className='border border-r-0 py-[10px] rounded-l px-3 text-accent w-[150px]' onfocus="(this.type = 'date')" placeholder='Start date' />
+                                        <input type="text" onfocus="(this.type = 'date')" className='border border-l-0 py-[10px] rounded-r px-3 text-accent w-[150px]' placeholder='End Date' />
+                                        <FaRegCalendar className='absolute top-[10px] right-[10px] bottom-[10px] text-[20px] text-accent' />
                                     </div>
                                     <input type="text" placeholder="Search picture name" className="input input-bordered w-[215px] rounded py-[9px] px-3 text-accent focus:border-primary" />
                                     <button className='text-primary py-[9px] px-3.5 border border-primary rounded'>Clear</button>
