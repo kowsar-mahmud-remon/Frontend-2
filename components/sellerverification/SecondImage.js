@@ -21,7 +21,7 @@ const SecondImage = () => {
                 <div className="max-w-200 max-h-200 border border-5 p-4 md:ml-10 rounded-lg text-sm md:text-md">Upload a Cheque Copy</div>
             }
 
-            <label for="bankimg">
+            <label htmlFor="bankimg">
                 <AiOutlineCloudUpload className='text-[66px] text-[#FB641B] mr-16' />
                 <p className='md:-ml-3 text-sm md:text-md'>upload photo</p>
             </label>

@@ -30,7 +30,7 @@ const Sellerverification = () => {
                             <div className="md:ml-10 w-200 h-200 border border-5 p-4 rounded-lg text-sm md:text-md">NID Front Photo</div>
                         }
 
-                        <label for="frontimg">
+                        <label htmlFor="frontimg">
                             <AiOutlineCloudUpload className='text-[66px] text-[#FB641B] mr-16' />
                             <p className='md:-ml-3 text-sm md:text-md'>upload photo</p>
                         </label>
@@ -51,7 +51,7 @@ const Sellerverification = () => {
                             <div className="w-200 h-200 border border-5 p-4 md:ml-10 rounded-lg text-sm md:text-md">NID Back Photo</div>
                         }
 
-                        <label for="backimg">
+                        <label htmlFor="backimg">
                             <AiOutlineCloudUpload className='text-[66px] text-[#FB641B] mr-16' />
                             <p className='md:-ml-3 text-sm md:text-md'>upload photo</p>
                         </label>

@@ -91,6 +91,10 @@ const index = () => {
                             <p className="text-sm md:text-md font-semibold my-2">Routing Number*</p>
                             <input type="text" placeholder="Routing Number" className="input input-bordered  md:w-[480px]" />
                         </div>
+
+                        <div className='md:flex md:justify-end mr-10 my-5'>
+                            <button className="md:w-1/5 btn text-md bg-[#FB641B] text-white">Submit</button>
+                        </div>
                     </div>
                 </div >
             </div >
