@@ -69,21 +69,21 @@ const MyOrder = () => {
     const receiveDatas = [
         {
             id: '1', orderId: 'PFL-12345678998745', Delivered: 'Banglar Big Store Rider',
-            image: '/image 8.png', peoductName: 'Tomato(Local) 500+30 gm',  status: 'Delivered',
-           
+            image: '/image 8.png', peoductName: 'Tomato(Local) 500+30 gm', status: 'Delivered',
+
         },
         {
             id: '1', orderId: 'PFL-12345678998745', Delivered: 'Banglar Big Store Rider',
-            image: '/image 8.png', peoductName: 'Tomato(Local) 500+30 gm',  status: 'Delivered',
-           
+            image: '/image 8.png', peoductName: 'Tomato(Local) 500+30 gm', status: 'Delivered',
+
         },
         {
             id: '1', orderId: 'PFL-12345678998745', Delivered: 'Banglar Big Store Rider',
-            image: '/image 8.png', peoductName: 'Tomato(Local) 500+30 gm',  status: 'Delivered',
-           
+            image: '/image 8.png', peoductName: 'Tomato(Local) 500+30 gm', status: 'Delivered',
+
         },
-        
-        
+
+
 
     ]
 
@@ -96,9 +96,14 @@ const MyOrder = () => {
     }
 
     const [isActive, setActive] = useState('all')
-   const ToShip = () =>{
-    
-   }
+    const [shipingProduct, setShipingProduct] = useState()
+    const ToShip = () => {
+        setActive('ToShip')
+        const shipingData = datas.filter(data => data.status === 'Processing')
+        setShipingProduct(shipingData)
+    }
+
+   
     return (
         <div className="min-w-[1920px]">
             <Navication></Navication>
@@ -118,11 +123,11 @@ const MyOrder = () => {
                                 <ul className="flex gap-[90px]  ">
                                     <button onClick={() => setActive('all')} className={isActive === 'all' ? "text-[#FB641B] underline text-[16px]" : "  text-[16px]"}>All</button>
                                     <button onClick={() => setActive('ToPay')} className={isActive === 'ToPay' ? "text-[#FB641B] underline text-[16px]" : "  text-[16px]"}>To Pay</button>
-                                    <button onClick={() => setActive('ToShip')} className={isActive === 'ToShip' ? "text-[#FB641B] underline text-[16px]" : "  text-[16px]"}>To Ship ()</button>
-                                    <button onClick={() => setActive('ToReceive')} className={isActive === 'ToReceive' ? "text-[#FB641B] underline text-[16px]" : "  text-[16px]"}>To Receive ()</button>
+                                    <button onClick={() => ToShip()} className={isActive === 'ToShip' ? "text-[#FB641B] underline text-[16px]" : "  text-[16px]"}>To Ship ()</button>
+                                    <button onClick={() => setActive('ToReceive')} className={isActive === 'ToReceive' ? "text-[#FB641B] underline text-[16px]" : "  text-[16px]"}>To Receive ({receiveDatas.length})</button>
                                 </ul>
                             </div>
-                            <hr className='bg-[#686868] border-[1px]'/>
+                            <hr className='bg-[#686868] border-[1px]' />
                         </div>
                         {
                             isActive === 'all' && <>
@@ -145,34 +150,34 @@ const MyOrder = () => {
                             }
                             {
                                 isActive === 'ToPay' && datas.filter(data => data.status === 'Payment').map(data => data ? <><OrdersProduct key={data.id} data={data}></OrdersProduct></> : <>
-                                  <div>
-                                    <p>There are no orders placed yet</p>
-                                    <button>Continue Shopping</button>
-                                  </div>
+                                    <div>
+                                        <p>There are no orders placed yet</p>
+                                        <button>Continue Shopping</button>
+                                    </div>
 
                                 </>)
                             }
                             {
-                                isActive === 'ToShip' && datas.filter(data => data.status === 'Processing').map(data =><OrdersProduct key={data.id} data={data}></OrdersProduct>)
+                                isActive === 'ToShip' && shipingProduct.map(data => <OrdersProduct key={data.id} data={data}></OrdersProduct>)
                             }
                         </div>
-                         <div>
+                        <div>
                             {
-                                 isActive === 'ToReceive' && <>
-                                 <div className="mt-[16px]">
-                                     <div className='flex gap-[16px]'>
-                                        <p className='text-[#001E00] font-bold text-[16px]'>Group by Order Number</p>
-                                        <input type="checkbox" className="toggle w-[42px] h-[24px] bg-[#F2F3F7] border-[#B7B7B7] border-[1px]"  />
+                                isActive === 'ToReceive' && <>
+                                    <div className="mt-[16px]">
+                                        <div className='flex gap-[16px]'>
+                                            <p className='text-[#001E00] font-bold text-[16px]'>Group by Order Number</p>
+                                            <input type="checkbox" className="toggle w-[42px] h-[24px] bg-[#F2F3F7] border-[#B7B7B7] border-[1px]" />
 
-                                     </div>
-                                 </div></>
+                                        </div>
+                                    </div></>
                             }
-                         </div>
-                         <div>
+                        </div>
+                        <div>
                             {
-                               isActive === 'ToReceive' && receiveDatas.map(data =><ToReceive key={data.id} data={data}></ToReceive>)
+                                isActive === 'ToReceive' && receiveDatas.map(data => <ToReceive key={data.id} data={data}></ToReceive>)
                             }
-                         </div>
+                        </div>
 
                     </div>
 
