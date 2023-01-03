@@ -80,7 +80,7 @@ export default function Home({ items }) {
                     Marketplace
                     <FaArrowAltCircleRight />
                   </button>
-                  <button className='btn btn-primary'>btn</button>
+                  
                 </div>
               </div>
               <Image alt='' src={rightHeroMid} />
