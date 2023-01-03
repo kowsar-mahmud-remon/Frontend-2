@@ -11,7 +11,10 @@ import rightHeroBottm from '../assets/images/right_hero/hro_bottm.png';
 import { FaArrowAltCircleRight } from 'react-icons/fa';
 import logo from '../assets/images/logo/main_logo.png';
 import logoDic from '../assets/images/logo/logo_dic.png';
-import NavicationWithSideNavLayout from '../layouts/NavicationWithSideNavLayout';
+
+import NavicationWithSideNavLayout from '../layouts/NavicationWithSideNavLayout'
+import Category from '../components/Category/Category'
+import AddProducts from '../components/AddProducts/AddProducts'
 import OrderPlace from '../components/OrderPlace/OrderPlace';
 
 export const getStaticProps = async () => {
@@ -52,6 +55,8 @@ export default function Home({ items }) {
       </Head>
       <NavicationWithSideNavLayout >
         <div className={`${styles.homeBody} w-[100%] `} >
+          {/* <Category /> */}
+          <AddProducts />
           <div className={`flex bg-white flex-col h-[310px] lg:h-[366px] xl:flex-row xl:h-[366px] 2xl:h-[466px]  shadow-xl shadow-block-900 w-[100%] p-4 `}>
             {
               items.length && <Carosel data={items} />
