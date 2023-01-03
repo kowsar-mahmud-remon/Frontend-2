@@ -13,6 +13,7 @@ import logo from '../assets/images/logo/main_logo.png';
 import logoDic from '../assets/images/logo/logo_dic.png';
 import NavicationWithSideNavLayout from '../layouts/NavicationWithSideNavLayout';
 import OrderPlace from '../components/OrderPlace/OrderPlace';
+import SellerProductsModal from '../components/SellerProductsModal/SellerProductsModal';
 
 export const getStaticProps = async () => {
   try {
