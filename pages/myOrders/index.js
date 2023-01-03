@@ -1,3 +1,4 @@
+import { useState } from "react";
 import ManageAccoutSideBar from "../../components/manageAccoutSideBar/manageAccoutSideBar";
 import Navication from "../../components/Navication/Navication";
 import OrderNavbar from "../../components/OrderNavbar/OrderNavbar";
@@ -63,8 +64,17 @@ const index = () => {
         }
 
     ]
+   const orderproduct = []
+   const handleOrder = (e) =>{
+          const orderNumber =e.target.value
+          if(orderNumber===5){
+            const orderdata = datas.slice(0,5)
+            console.log(orderdata)
+            orderproduct.push(datas)
 
-
+          }
+          console.log(orderproduct)
+   }
     return (
         <div className="min-w-[1920px]">
             <Navication></Navication>
@@ -87,10 +97,10 @@ const index = () => {
                             <div className="w-[924px] h-[80px] rounded-[8px] bg-[#FFFFFF] shadow-lg">
                                 <div className=" w-full max-w-xs mt-4 gap-[16px] flex ">
                                     <p className="label mt-[25px] ml-[24px] mb-[30px] text-[16px]"> <span className="label-text">Show:</span></p>
-                                    <select
+                                    <select onClick={(e) => handleOrder(e)}
                                         className="h-[48px] select input-bordered mt-[16px] w-[169px] font-normal text-[16px] rounded-[4px] border-[#707070] ">
-                                        <option>Last 5 Orders</option>
-                                        <option>Last 10 Orders</option>
+                                        <option value={5}>Last 5 Orders</option>
+                                        <option value={10}>Last 10 Orders</option>
                                     </select>
                                 </div>
                             </div>
