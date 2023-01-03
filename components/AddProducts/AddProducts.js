@@ -23,9 +23,9 @@ const AddProducts = () => {
                         <button className='text-[rgb(40,125,243)]'>Hide <FaAngleUp className='inline' /></button>
                     </div>
                     <h2 className='text-[#F4253F] mt-2 mb-3.5 text-lg font-medium'>Low</h2>
-                    <div class="h-1.5 w-full bg-slate-200 rounded-full"></div>
+                    <div className="h-1.5 w-full bg-slate-200 rounded-full"></div>
                     <h2 className='font-medium text-primary mt-8 mb-2'>Recommend for you</h2>
-                    <div class="h-0.5 w-full bg-[#686868] rounded-full"></div>
+                    <div className="h-0.5 w-full bg-[#686868] rounded-full"></div>
                     <button className='flex items-center mt-2 text-[#287DF3]' ><span>Category is required</span> <FaAngleRight /></button>
                 </div>
                 <div className='p-6 border border-[#F2F2F2] shadow-small mt-8'>
