@@ -7,6 +7,7 @@ import { BiHide } from 'react-icons/bi';
 import AsyncSelect from 'react-select/async';
 import { gender, days, months, years } from '../../assets/DB/fieldData';
 
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { useForm } from 'react-hook-form';
@@ -20,7 +21,7 @@ import { useRouter } from 'next/router'
 
 const Registation = () => {
 
-    
+
     const [showPassword, setShowPassword] = useState(false)
     const [error, setError] = useState({})
     const { register, handleSubmit, watch, formState: { errors }, setValue } = useForm();
