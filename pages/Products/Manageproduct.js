@@ -104,7 +104,7 @@ const Manageproduct = () => {
                     <div className='mb-4'>
                         <button className='h-[40px] rounded w-[176px] bg-[#FB641B] hover:bg-[#ce4e0e] text-white font-medium'>Add Product</button>
                     </div>
-                    <div className='grid lg:grid-cols-8 md:grid-cols-5 grid-cols-3 gap-3 justify-center bg-white items-center '>
+                    <div className='grid lg:grid-cols-8 md:grid-cols-5 grid-cols-3 gap-3 justify-center bg-white items-center shadow-md'>
                         {MENU_LIST.map((menu, idx) => (
                             <div
 
