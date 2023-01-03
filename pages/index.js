@@ -16,6 +16,7 @@ import NavicationWithSideNavLayout from '../layouts/NavicationWithSideNavLayout'
 import Category from '../components/Category/Category'
 import AddProducts from '../components/AddProducts/AddProducts'
 import OrderPlace from '../components/OrderPlace/OrderPlace';
+import SellerProductsModal from '../components/SellerProductsModal/SellerProductsModal';
 
 export const getStaticProps = async () => {
   try {
