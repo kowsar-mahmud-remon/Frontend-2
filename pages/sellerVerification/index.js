@@ -25,16 +25,16 @@ const index = () => {
                             <div className=" text-[5px] md:text-[12px] px-1 rounded-lg border border-black">4</div>
                             <div className=" text-[5px] md:text-[12px] border border-black px-5 md:px-20 rounded-xl">Add Shop Name</div>
                         </div>
-                        <h4 className="text-[24px] font-semibold text-[#686868]">Please give your ID & Bank Information</h4>
+                        <h4 className="text-[24px] font-semibold text-[#686868] my-3">Please give your ID & Bank Information</h4>
                         <div className="grid grid-cols-2 gap-5">
                             {/* <div className=""> */}
-                            <div className="max-w-[680px] shadow-lg items-center border bg-[#FB641B] text-white rounded-md p-5">
+                            <div className="max-w-[480px] shadow-lg items-center border bg-[#FB641B] text-white rounded-md p-5">
                                 <p className='text-lg font-semibold'>I’m an individual</p>
                                 <p>Most sellers on Banglar Big Store fall into this category</p>
                             </div>
                             {/* </div> */}
                             {/* <div className=""> */}
-                            <div className="max-w-[680px] items-center border text-[#FB641B] rounded-md p-5 shadow-lg">
+                            <div className="max-w-[480px] items-center border text-[#FB641B] rounded-md p-5 shadow-lg">
                                 <p className='text-lg font-semibold'>I’m a Sole Trader or Incorporated Business</p>
                                 <p>A registered legal entity</p>
                             </div>
@@ -42,25 +42,24 @@ const index = () => {
                         </div>
 
                     </div>
-                    <h4 className="text-[24px] mt-10 font-semibold text-[#686868]">Please give your ID & Bank Information</h4>
-
+                    <h4 className="text-[24px] mt-12 font-semibold text-[#686868]">Please give your ID & Bank Information</h4>
 
                     <Sellerverification />
 
                     <div className="grid grid-cols-1 md:grid-cols-2 my-5">
                         <div className="">
-                            <p className="text-sm md:text-md">ID Name*</p>
-                            <input type="text" placeholder="Type here" className="input input-bordered md:w-[480px]" />
+                            <p className="text-sm md:text-md font-semibold my-2">ID Name*</p>
+                            <input type="text" placeholder="Type your ID Name" className="input input-bordered md:w-[480px]" />
                         </div>
                         <div className="">
-                            <p className="text-sm md:text-md">State Name*</p>
-                            <input type="text" placeholder="Type here" className="input input-bordered  md:w-[480px]" />
+                            <p className="text-sm md:text-md font-semibold my-2">State Name*</p>
+                            <input type="text" placeholder="Type your State Name" className="input input-bordered  md:w-[480px]" />
                         </div>
                     </div>
                     <div className="my-4">
-                        <h5 className="max-text-xl font-semibold my-5 text-[#686868]">Please give your ID & Bank Information</h5>
+                        <h4 className="text-[24px] mt-12 font-semibold text-[#686868]">Please give your ID & Bank Information</h4>
                         <div className="">
-                            <p className="text-sm md:text-md">Verify Your Bank Account*</p>
+                            <p className="text-sm md:text-md font-semibold my-2">Verify Your Bank Account*</p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
 
@@ -70,26 +69,26 @@ const index = () => {
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 my-2">
                             <div className="">
-                                <p className="text-sm md:text-md">Account Holder Name*</p>
-                                <input type="text" placeholder="Branch" className="input input-bordered md:w-[480px]" />
+                                <p className="text-sm md:text-md font-semibold my-2">Account Holder Name*</p>
+                                <input type="text" placeholder="Account Holder" className="input input-bordered md:w-[480px]" />
                             </div>
                             <div className="">
-                                <p className="text-sm md:text-md">Bank Name*</p>
+                                <p className="text-sm md:text-md font-semibold my-2">Bank Name*</p>
                                 <input type="text" placeholder="Branch" className="input input-bordered  md:w-[480px]" />
                             </div>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 my-2">
                             <div className="">
-                                <p className="text-sm md:text-md">Branch Name*</p>
+                                <p className="text-sm md:text-md font-semibold my-2">Branch Name*</p>
                                 <input type="text" placeholder="Branch" className="input input-bordered md:w-[480px]" />
                             </div>
                             <div className="">
-                                <p className="text-sm md:text-md">Account Number*</p>
+                                <p className="text-sm md:text-md font-semibold my-2">Account Number*</p>
                                 <input type="text" placeholder="Account" className="input input-bordered md:w-[480px]" />
                             </div>
                         </div>
                         <div className="">
-                            <p className="text-sm md:text-md">Routing Number*</p>
+                            <p className="text-sm md:text-md font-semibold my-2">Routing Number*</p>
                             <input type="text" placeholder="Routing Number" className="input input-bordered  md:w-[480px]" />
                         </div>
                     </div>
