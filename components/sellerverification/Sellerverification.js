@@ -18,19 +18,19 @@ const Sellerverification = () => {
 
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 mt-4">
+        <div className="grid grid-cols-1 md:grid-cols-2">
             <div className="my-4">
-                <p className="text-sm md:text-md">Upload ID Card Front*</p>
+                <p className="text-sm md:text-md font-semibold my-2">Upload ID Card Front*</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div className="max-w-[680px] md:w-full lg:w-[480px] h-[170px] border-5 flex justify-between items-center border rounded-lg">
                         {nidFront ? <div>
                             <Image src={URL.createObjectURL(nidFront)} alt="Preview" width="200" height="200" />
-                            <p className="md:ml-5">NID Card Front</p>
+                            <p className="md:ml-5 text-sm md:text-md">NID Card Front</p>
                         </div> :
                             <div className="md:ml-10 w-200 h-200 border border-5 p-4 rounded-lg text-sm md:text-md">NID Front Photo</div>
                         }
 
-                        <label for="frontimg">
+                        <label htmlFor="frontimg">
                             <AiOutlineCloudUpload className='text-[66px] text-[#FB641B] mr-16' />
                             <p className='md:-ml-3 text-sm md:text-md'>upload photo</p>
                         </label>
@@ -41,7 +41,7 @@ const Sellerverification = () => {
                 </div>
             </div>
             <div className="my-4">
-                <p className="text-sm md:text-md">Upload ID Card Back*</p>
+                <p className="text-sm md:text-md font-semibold my-2">Upload ID Card Back*</p>
                 <div className="grid-cols-1 md:grid-cols-2 gap-5">
                     <div className="max-w-[680px] md:w-full lg:w-[480px] h-[170px] border-5 flex justify-between items-center border rounded-lg">
                         {nidBack ? <div>
@@ -51,7 +51,7 @@ const Sellerverification = () => {
                             <div className="w-200 h-200 border border-5 p-4 md:ml-10 rounded-lg text-sm md:text-md">NID Back Photo</div>
                         }
 
-                        <label for="backimg">
+                        <label htmlFor="backimg">
                             <AiOutlineCloudUpload className='text-[66px] text-[#FB641B] mr-16' />
                             <p className='md:-ml-3 text-sm md:text-md'>upload photo</p>
                         </label>

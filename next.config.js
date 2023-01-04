@@ -2,8 +2,11 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["banglar-big-store.s3.amazonaws.com", "encrypted-tbn0.gstatic.com"]
-  }
-}
+    domains: [
+      "banglar-big-store.s3.amazonaws.com",
+      "encrypted-tbn0.gstatic.com",
+    ],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
