@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const ManageList = ({ menu, tabname, setActive, active }) => {
 
-    console.log(menu.text, active);
+    console.log(menu);
 
     const handleMenu = (menu) => {
         setActive(menu)
@@ -10,8 +10,8 @@ const ManageList = ({ menu, tabname, setActive, active }) => {
 
     return (
         <div className='text-center '>
-            <div className={menu.text === active.text ? "bg-[#F2F2F2] text-[#FB641B]  w-full py-4 " : ""}>
-                <Link className="h-full w-full hover:text-[#FB641B] text-[16px]"  onClick={() => handleMenu(menu)} href={menu.href}>{menu.text}</Link>
+            <div className={`${menu?.text === active?.text ? "bg-[#F2F2F2] text-[#FB641B]  w-full py-4 " : ""}`}>
+                <button className="h-full w-full hover:text-[#FB641B] text-[16px]"  onClick={() => handleMenu(menu)} href={menu?.href}>{menu?.text}</button>
             </div>
         </div>
     );

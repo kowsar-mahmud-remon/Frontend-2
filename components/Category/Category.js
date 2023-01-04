@@ -17,7 +17,7 @@ const Category = () => {
             </div>
             <div className='grid grid-cols-3 justify-center lg:flex gap-4 overflow-x-scroll 2xl:w-4/6 mb-6'>
                 {
-                    categories && categories.map(category => <button
+                    JSON.parse(categories) && JSON.parse(categories).map(category => <button
                         className='bg-info flex items-center justify-center text-sm rounded-full font-medium hover:border-2 hover:border-primary hover:bg-white w-[103px] h-[36px] mx-auto'
                         key={category.id}
                     >{category.name}</button>)
@@ -25,7 +25,7 @@ const Category = () => {
             </div>
             <div className='grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5 gap-5'>
                 {
-                    products && products.map(product => <ProductCard key={product.id} product={product} />)
+                   JSON.parse(products) && JSON.parse(products).map(product => <ProductCard key={product.id} product={product} />)
                 }
 
             </div>
