@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const pastPurchase = () => {
@@ -20,7 +21,7 @@ const pastPurchase = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 <div className="mb-4" >
                     <div>
-                        <img className="w-42 h-32" src="https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141353.jpg?w=2000" alt="" />
+                        <Image className="w-42 h-32" src="https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141353.jpg?w=2000" alt="" />
                     </div>
                     <div>
                         <h1 className="py-2"><span className="text-orange-600  text-xl "> Tk 18</span>  <small><del>Tk 20</del> (2% off)</small></h1>
@@ -32,7 +33,7 @@ const pastPurchase = () => {
                 </div>
                 <div className="mb-4" >
                     <div>
-                        <img className="w-42 h-32" src="https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141353.jpg?w=2000" alt="" />
+                        <Image className="w-42 h-32" src="https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141353.jpg?w=2000" alt="" />
                     </div>
                     <div>
                         <h1 className="py-2"><span className="text-orange-600  text-xl "> Tk 18</span>  <small><del>Tk 20</del> (2% off)</small></h1>
@@ -44,7 +45,7 @@ const pastPurchase = () => {
                 </div>
                 <div className="mb-4" >
                     <div>
-                        <img className="w-42 h-32" src="https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141353.jpg?w=2000" alt="" />
+                        <Image className="w-42 h-32" src="https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141353.jpg?w=2000" alt="" />
                     </div>
                     <div>
                         <h1 className="py-2"><span className="text-orange-600  text-xl "> Tk 18</span>  <small><del>Tk 20</del> (2% off)</small></h1>
@@ -56,7 +57,7 @@ const pastPurchase = () => {
                 </div>
                 <div className="mb-4" >
                     <div>
-                        <img className="w-42 h-32" src="https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141353.jpg?w=2000" alt="" />
+                        <Image className="w-42 h-32" src="https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141353.jpg?w=2000" alt="" />
                     </div>
                     <div>
                         <h1 className="py-2"><span className="text-orange-600  text-xl "> Tk 18</span>  <small><del>Tk 20</del> (2% off)</small></h1>
@@ -68,7 +69,7 @@ const pastPurchase = () => {
                 </div>
                 <div className="mb-4" >
                     <div>
-                        <img className="w-42 h-32" src="https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141353.jpg?w=2000" alt="" />
+                        <Image className="w-42 h-32" src="https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141353.jpg?w=2000" alt="" />
                     </div>
                     <div>
                         <h1 className="py-2"><span className="text-orange-600  text-xl "> Tk 18</span>  <small><del>Tk 20</del> (2% off)</small></h1>
@@ -80,7 +81,7 @@ const pastPurchase = () => {
                 </div>
                 <div className="mb-4" >
                     <div>
-                        <img className="w-42 h-32" src="https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141353.jpg?w=2000" alt="" />
+                        <Image className="w-42 h-32" src="https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141353.jpg?w=2000" alt="" />
                     </div>
                     <div>
                         <h1 className="py-2"><span className="text-orange-600  text-xl "> Tk 18</span>  <small><del>Tk 20</del> (2% off)</small></h1>

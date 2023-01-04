@@ -108,7 +108,7 @@ const Manageproduct = () => {
                         {MENU_LIST.map((menu, idx) => (
                             <div
 
-                                key={menu.text}
+                                key={menu?.text}
                             >
                                 <Managelist menu={menu}  setActive={setActive} active={active}></Managelist>
                             </div>
