@@ -95,11 +95,11 @@ const Navication = () => {
                     <button className='h-[36px] bg-green-500 px-5 text-white'>Search</button>
                 </div> */}
                 <div className={`${styles.navSearch}`}>
-                    <div style={{ borderRight: "2px solid #026C51" }} className='flex items-center'>
+                    {/* <div style={{ borderRight: "2px solid #026C51" }} className='flex items-center'>
                         <RiMapPinFill className='text-lg ml-[14px]' />
                         <span className='px-2 whitespace-nowrap'>Use your current location</span>
                         <IoIosArrowDown className='mr-[14px] text-lg' />
-                    </div>
+                    </div> */}
                     <div className='flex items-center w-full justify-between'>
                         <input className='pl-[16px]' value={searchText} onChange={(e) => setSearchText(e.target.value)} type="text" placeholder='Finding Your Product....' />
                         <BsFillMicFill onClick={() => handleVoice()} className={`mx-3 text-2xl cursor-pointer`} style={{ color: recognitionColor }} />
@@ -129,7 +129,7 @@ const Navication = () => {
                         <FaUserAlt className='m-[4px]' />
                     </Link>
                 </div>
-                <div className={`${styles.mobileMenuBtn}`}>
+                {/* <div className={`${styles.mobileMenuBtn}`}>
                     <button onClick={handleMobileMenu} className='border-2 border-[#0000004d] p-[3px] text-xl rounded' id='mobile-menu-btn'>
                         <GiHamburgerMenu />
                     </button>
@@ -150,7 +150,7 @@ const Navication = () => {
                             <FaUserAlt className='m-[4px]' />
                         </Link>
                     </div>
-                </div>
+                </div> */}
 
             </div>
             <div className={`${styles.buttonSearchWraper} bg-[#FFFFFF]`}>

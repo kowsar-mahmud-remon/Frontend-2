@@ -13,4 +13,14 @@
 /* Carosel Styles */
 @import url("./componentsStyles/Carosel.module.css");
 
-
+/* *{
+    outline: 1px solid red;
+} */
+.slick-slide {
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    align-content: center !important;
+    margin: 0 0.1px;
+    padding: 3px 0.1px;
+}
