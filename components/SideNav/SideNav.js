@@ -28,10 +28,17 @@ import latherShoes from '../../assets/images/sid_nav_cons/leather 1.png';
 import VehiceleEssentials from '../../assets/images/sid_nav_cons/car 1.png';
 import { MdArrowBackIos } from 'react-icons/md';
 import { useRouter } from 'next/router';
+import { useGetCategoryQuery } from '../../features/category/categoryApi';
 
 
 const Category = () => {
     const router = useRouter();
+
+    const { data, isLoading, isError, error } = useGetCategoryQuery()
+
+    console.log(data)
+
+
     const { asPath } = router;
     const categories = [
         {
@@ -595,6 +602,32 @@ const Category = () => {
                         )
                     })
                 }
+                {/* {
+                    data.categories.map((c, index) => {
+                        const path = `/categories/${c.slug}/${c._id || "67434842347374"}`;
+                        return (
+                            <li onClick={() => {
+                                router.push(path)
+                            }} as={"li"} href={`/hi`} key={index} className={asPath == path ? styles.active : ""} >
+                                <Link href='/'>
+                                    <Image
+                                        src={c.categoryImage.img}
+                                        alt={c.categoryImage.key}
+                                    />
+                                    {c.name}
+                                    <MdArrowBackIos />
+                                </Link>
+                                <ul>
+                                    {c.subCategories.map((s, index) => <li key={index}>
+                                        <Link className={asPath == "/sub" ? styles.activeSubLink : ""} href='/sub-menu'>
+                                            Sub Menu
+                                        </Link>
+                                    </li>)}
+                                </ul>
+                            </li>
+                        )
+                    })
+                } */}
             </ul>
         </section>
     );

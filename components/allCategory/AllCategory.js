@@ -34,7 +34,7 @@ const AllCategory = () => {
                 breakpoint: 1900,
                 settings: {
                     slidesToShow: 5,
-                    slidesToScroll: 1,
+                    slidesToScroll: 2,
                 }
             },
             {
