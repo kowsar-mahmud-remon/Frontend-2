@@ -106,7 +106,7 @@ const MyOrder = () => {
 
     return (
         <div className="min-w-[1920px]">
-            <Navication></Navication>
+         
 
             <div className="flex  my-8 mx-5 gap-[55px] xl:mx-12">
                 <div className="ml-[300px]">

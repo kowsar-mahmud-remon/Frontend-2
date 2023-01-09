@@ -6,7 +6,7 @@ import Navication from "../../components/Navication/Navication";
 const index = () => {
   return (
     <div>
-      <Navication></Navication>
+   
       <div className="w-[742px] mx-auto mt-10">
         <p>
           <span className="text-[#686868]">Home</span>/

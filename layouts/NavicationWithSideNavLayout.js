@@ -7,7 +7,7 @@ import SideNav from '../components/SideNav/SideNav';
 const NavicationWithSideNavLayout = ({ children }) => {
     return (
         <main >
-            <Navication />
+          
             <section className={`page-side-nav-wraper my-7 mx-5 xl:mx-12`}>
                 <SideNav />
                 <div className='page-body' id='page-body'>
