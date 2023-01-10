@@ -5,13 +5,17 @@ import styles from '../../styles/componentsStyles/SideNav.module.css';
 import { MdArrowBackIos } from 'react-icons/md';
 import { useRouter } from 'next/router';
 import { useGetCategoryQuery } from '../../features/category/categoryApi';
+import { useDispatch, useSelector } from 'react-redux';
+import { setActiveBtn } from '../../features/category/categorySlice';
 
 
 const Category = () => {
     const router = useRouter();
     const { data, isLoading, isError, error } = useGetCategoryQuery()
     const { asPath } = router;
-    console.log(data)
+    const { category: { activeBtn } } = useSelector(state => state)
+    const dispatch = useDispatch()
+
     return (
         <section className={`${styles.sideNav} w-[285px] p-2 bg-[#ffffff] shawdow-black shadow-2xl `} id="sidNav">
             <ul>
@@ -37,10 +41,12 @@ const Category = () => {
                                 <ul>
                                     {c.subCategories.map((s, index) => {
 
-                                        return (<li key={index}>
-                                            <Link className={asPath == path ? styles.activeSubLink : ""} href={path}>
+                                        return (<li
+                                            onClick={() => dispatch(setActiveBtn({ value: s.name, id: s._id }))}
+                                            key={index}>
+                                            <p className={`${activeBtn == s.name ? styles.activeSubLink : ""} py-1 px-2 rounded-md my-2 cursor-pointer`}>
                                                 {s.name}
-                                            </Link>
+                                            </p>
                                         </li>)
                                     })}
                                 </ul>

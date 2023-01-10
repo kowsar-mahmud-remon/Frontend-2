@@ -10,7 +10,7 @@ const ProductCard = ({ product }) => {
 
     const { regularPrice, slug, productName, quantity, productTitle, discount, productPictures } = product || {}
 
-    console.log(productPictures[0])
+    // console.log(productPictures[0])
     // {(price - (price * discount) / 100).toFixed(0)}
 
     return (
