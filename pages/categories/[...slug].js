@@ -6,6 +6,7 @@ import { useGetAllSelectedCategoryQuery, useGetSingleCategoryQuery } from '../..
 import NavicationWithSideNavLayout from '../../layouts/NavicationWithSideNavLayout';
 import img from '../../assets/CategoryImages/KachabazarIcon/shopping-bag 1.png'
 import Image from 'next/image';
+import ProductCard from '../../components/allCategory/ProductCard';
 const DynamicCat = () => {
     const router = useRouter()
     const { slug } = router.query
@@ -14,11 +15,11 @@ const DynamicCat = () => {
     const [categoryId, setCategoryId] = useState(null)
     const { data, isLoading, isError, error } = useGetSingleCategoryQuery(id, {
         pollingInterval: 20000,
-        refetchOnMountOrArgChange: true,
+        // refetchOnMountOrArgChange: true,
         skip: false,
     })
 
-    const { data: categoryData, isLoading: categoryLoading, error: categoryError, refetch } = useGetAllSelectedCategoryQuery(categoryId, {
+    const { data: categoryData, isLoading: categoryLoading, error: categoryError, refetch,discount } = useGetAllSelectedCategoryQuery(categoryId, {
         pollingInterval: 20000,
         refetchOnMountOrArgChange: true,
         skip: !categoryId ? true : false,
@@ -65,6 +66,14 @@ const DynamicCat = () => {
                                 key={index}
                                 className={`${activeBtn === btn.name ? active : deactivate}`}
                             >{btn.name}</button>)
+                        }
+                    </div>
+                    <div className='flex gap-8 flex-wrap mt-6 justify-center'>
+                        {
+                            categoryData?.result?.map((product, index) => <ProductCard
+                                product={product}
+                                key={index}
+                            />)
                         }
                     </div>
                 </div>
