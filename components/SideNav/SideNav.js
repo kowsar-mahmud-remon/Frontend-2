@@ -15,7 +15,7 @@ const Category = () => {
     const { asPath } = router;
     const { category: { activeBtn } } = useSelector(state => state)
     const dispatch = useDispatch()
-    console.log(data)
+
     return (
         <section className={`${styles.sideNav} w-[285px] p-2 bg-[#ffffff] shawdow-black shadow-2xl `} id="sidNav">
             <ul>

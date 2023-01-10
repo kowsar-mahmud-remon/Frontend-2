@@ -29,7 +29,7 @@ const ProductCard = ({ product }) => {
                             width={222}
                             alt='img'
                         />
-                        <div className='absolute top-3 right-3 bg-white rounded-full p-3 w-[38px] h-[38px] flex justify-center items-center cursor-pointer'>
+                        <div className='absolute top-3 right-[25px] bg-white rounded-full p-3 w-[38px] h-[38px] flex justify-center items-center cursor-pointer'>
                             <Image src={love} width={30} alt='img' />
                         </div >
                     </div>

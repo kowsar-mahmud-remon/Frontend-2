@@ -14,67 +14,12 @@ import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import { AiTwotoneStar } from 'react-icons/ai';
 import Slider from 'react-slick';
 import ProductCard from './ProductCard';
+import { settings } from '../../Utils/sliderConfig';
 
 const AllCategoryCard = ({ result, products }) => {
 
-    console.log('products', products)
     const slideRef = useRef(null)
-    let settings = {
-        arrows: true,
-        // infinite: true,
-        speed: 500,
-        // autoplay: true,
-        autoplaySpeed: 3000,
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        cssEase: "linear",
-        // centerMode:true,
-
-        /* mobileFirst: true, */
-        responsive: [
-            {
-                breakpoint: 1900,
-                settings: {
-                    slidesToShow: 5,
-                    slidesToScroll: 2,
-                }
-            },
-            {
-                breakpoint: 1600,
-                settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 1,
-                }
-            },
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                }
-            },
-            {
-                breakpoint: 968,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                }
-            },
-            {
-                breakpoint: 640,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                }
-            },
-        ]
-    };
-
-    const number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 2, 3, 4, 5, 6, 7, 8, 9, 0, 2]
-
-
-
-
+    
     return (
         <>
             {
