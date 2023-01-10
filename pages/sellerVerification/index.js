@@ -61,10 +61,7 @@ const index = () => {
                         <div className="">
                             <p className="text-sm md:text-md font-semibold my-2">Verify Your Bank Account*</p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-
-
                                 <SecondImage />
-
                             </div>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 my-2">

@@ -20,6 +20,7 @@ import MediaCenter from '../components/MediaCenter/MediaCenter'
 
 import OrderPlace from '../components/OrderPlace/OrderPlace';
 import SellerProductsModal from '../components/SellerProductsModal/SellerProductsModal';
+import AllCategory from '../components/allCategory/AllCategory';
 
 
 export const getStaticProps = async () => {
@@ -61,7 +62,7 @@ export default function Home({ items }) {
       <NavicationWithSideNavLayout >
         <div className={`${styles.homeBody} w-[100%] `} >
           {/* <Category /> */}
-          <MediaCenter />
+          {/* <MediaCenter /> */}
           {/* <AddProducts /> */}
           <div className={`flex bg-white flex-col h-[310px] lg:h-[366px] xl:flex-row xl:h-[366px] 2xl:h-[466px]  shadow-xl shadow-block-900 w-[100%] p-4 `}>
             {
@@ -80,7 +81,7 @@ export default function Home({ items }) {
                     Marketplace
                     <FaArrowAltCircleRight />
                   </button>
-                  
+
                 </div>
               </div>
               <Image alt='' src={rightHeroMid} />
@@ -88,36 +89,10 @@ export default function Home({ items }) {
             </div>
           </div>
         </div>
-      </NavicationWithSideNavLayout>
-      {/* <div >
-        <Navication />
-        <div className={`${styles.homeBody} my-7 mx-12`}>
-          <SideNav />
-          <div className='w-[100%]'>
-            <div className={`flex bg-white h-[466px] w-[100%] p-4 ml-5`}>
-              <Carosel />
-              <div className={`${styles.rightHeroSection} pl-4`} >
-                <div>
-                  <div>
-                    <Image alt='' alt='' src={logo} />
-                    <Image alt='' alt='' src={logoDic} />
-
-                  </div>
-                  <div className=''>
-                    <p className='text-[001E00] font-semibold'>Order Online and enjoy</p>
-                    <button className='bg-[#026C51] flex items-center gap-2 mt-5 rounded-full py-1 px-5 text-[#ffffff] font-bold'>
-                      Marketplace 
-                      <FaArrowAltCircleRight />
-                    </button>
-                  </div>
-                </div>
-                <Image alt='' alt='' src={rightHeroMid} />
-                <Image alt='' alt='' src={rightHeroBottm} />
-              </div>
-            </div>
-          </div>
+        <div>
+          <AllCategory />
         </div>
-      </div> */}
+      </NavicationWithSideNavLayout>
     </>
   );
 }

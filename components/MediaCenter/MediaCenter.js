@@ -21,7 +21,7 @@ const MediaCenter = () => {
                                 /* Use the `selected` state to conditionally style the selected tab. */
                                 <button
                                     className={` text-lg p-2
-                                        ${selected ? 'text-[#287DF3] border-b-4 border-[#287DF3]' : undefined}
+                                        ${selected && 'text-[#287DF3] border-b-4 border-[#287DF3]'}
                                     `}
                                 >
                                     Image

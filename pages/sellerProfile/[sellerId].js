@@ -61,7 +61,7 @@ const seller = () => {
 
   return (
     <>
-      <Navication></Navication>
+ 
       <div className="w-3/5 mx-auto shadow-2xl mt-4 rounded-xl">
         {/* banner and logo */}
         <div className="">
