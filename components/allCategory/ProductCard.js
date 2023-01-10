@@ -22,9 +22,9 @@ const ProductCard = ({ product }) => {
                     <div className='relative '>
                         <Image
                         className='h-[154px] object-cover'
-                            loader={() => productPictures[0].img}
+                            loader={() => productPictures[4].img}
                             loading='lazy'
-                            src={productPictures[0].img}
+                            src={productPictures[4].img}
                             height={40}
                             width={222}
                             alt='img'

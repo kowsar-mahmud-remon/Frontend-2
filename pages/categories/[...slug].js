@@ -10,6 +10,7 @@ import ProductCard from '../../components/allCategory/ProductCard';
 import { useDispatch, useSelector } from 'react-redux';
 import { setActiveBtn } from '../../features/category/categorySlice';
 const DynamicCat = () => {
+    
     const router = useRouter()
     const { slug } = router.query
     const id = slug && slug[1]
@@ -30,7 +31,7 @@ const DynamicCat = () => {
 
     useEffect(() => {
         dispatch(setActiveBtn({ value: 'allProducts', id }))
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [id])
 
     //   btn style 
@@ -53,19 +54,13 @@ const DynamicCat = () => {
                         <button
                             className={`${activeBtn === 'allProducts' ? active : deactivate}`}
                             onClick={() => {
-                                // setCategoryId(id)
                                 dispatch(setActiveBtn({ value: 'allProducts', id }))
-                                // refetch()
-
                             }}
                         >All Products</button>
                         {
                             data?._categories[0].subCategoryName.map((btn, index) => <button
                                 onClick={() => {
-                                    // setCategoryId(btn._id)
-                                    // setActiveBtn(btn.name)
                                     dispatch(setActiveBtn({ value: btn.name, id: btn._id }))
-                                    // refetch()
                                 }}
                                 key={index}
                                 className={`${activeBtn === btn.name ? active : deactivate}`}
