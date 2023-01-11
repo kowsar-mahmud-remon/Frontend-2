@@ -18,7 +18,7 @@ export const categoryApi = apiSlice.injectEndpoints({
             query: ({ page, limit }) => `/products/home-product?page=${page}&limit=${limit}`
         }),
         getAllCategoryCount: builder.query({
-            query: () => `/category/get-allCategory-count`
+            query: () => `/products/home-category-count`
         }),
     }),
 });

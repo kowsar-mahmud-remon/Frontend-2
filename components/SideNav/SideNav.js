@@ -43,6 +43,7 @@ const Category = () => {
 
                                         return (<li
                                             onClick={() => dispatch(setActiveBtn({ value: s.name, id: s._id }))}
+
                                             key={index}>
                                             <p className={`${activeBtn == s.name ? styles.activeSubLink : ""} py-1 px-2 rounded-md my-2 cursor-pointer`}>
                                                 {s.name}

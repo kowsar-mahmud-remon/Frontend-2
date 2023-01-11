@@ -2,39 +2,45 @@ import React, { useState, useEffect } from 'react';
 import { useGetAllCategoryCountQuery, useGetAllCategoryForHomePage, useGetAllCategoryForHomePageQuery, useGetCategoryQuery } from '../../features/category/categoryApi';
 import AllCategoryCard from './AllCategoryCard';
 import InfiniteScroll from 'react-infinite-scroll-component';
+import { useDispatch, useSelector } from 'react-redux';
+import { increasePage } from '../../features/category/categorySlice';
 
 const AllCategory = () => {
 
     const limit = 3
-    const [page, setPage] = useState(0)
+    const [call, setCall] = useState(false)
     const [category, setCategory] = useState([])
-
-    const { data: categoryData, isLoading: categoryLoading, error: categoryError } = useGetAllCategoryForHomePageQuery({ page, limit }, {
-        skip: category.length > 0 ? true : false
+    const { category: { page } } = useSelector(state => state)
+    const dispatch = useDispatch()
+    
+    const { data: categoryData, isLoading: categoryLoading, error: categoryError, refetch } = useGetAllCategoryForHomePageQuery({ page, limit }, {
+        skip: false,
     })
+
     const { data: categoryCountData, isLoading: categoryCountLoading, error: categoryCountError } = useGetAllCategoryCountQuery()
-    // console.log('cs',categoryCountData)
-    console.log('cat', categoryData)
+
     useEffect(() => {
-        if (categoryData?.result) {
+        if (categoryData?.result && (category.length < (+categoryCountData?.result))) {
             console.log('cats', categoryData)
             setCategory([...category, ...categoryData?.result])
+            setCall(!call)
         }
-    }, [page, category, categoryData])
+    }, [categoryData])
 
     const fetchMoreData = () => {
-        setPage(page + 1)
-        console.log('page', page)
-        console.log('cat', category)
+        dispatch(increasePage({ page: 1 }))
+        setCall(!call)
     }
+
+    
 
     return (
         <>
             <InfiniteScroll
                 dataLength={category.length}
                 next={fetchMoreData}
-                hasMore={category.length < (categoryCountData?.total)}
-                loader={<h4>Loading...</h4>}
+                hasMore={category.length < (+categoryCountData?.result)}
+                loader={<h4 className='text-center py-7'>Loading...</h4>}
                 endMessage={
                     <p style={{ textAlign: 'center', marginTop: '10px' }}>
                         <b>Yay! You have seen it all</b>

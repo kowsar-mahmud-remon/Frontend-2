@@ -2,7 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     activeBtn: 'allProducts',
-    id:''
+    id:'',
+    page:0
 };
 
 const categorySlice = createSlice({
@@ -13,9 +14,11 @@ const categorySlice = createSlice({
             state.activeBtn = action?.payload?.value;
             state.id = action?.payload?.id;
         },
-      
+        increasePage: (state, action) => {
+            state.page+=action?.payload?.page;
+        },
     },
 });
 
-export const {  setActiveBtn } = categorySlice.actions;
+export const {  setActiveBtn,increasePage } = categorySlice.actions;
 export default categorySlice.reducer;
