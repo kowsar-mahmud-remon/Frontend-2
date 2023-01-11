@@ -31,7 +31,7 @@ const AllCategory = () => {
         dispatch(increasePage({ page: 1 }))
         setCall(!call)
     }
-
+    console.log(categoryData)
     return (
         <>
             <InfiniteScroll

@@ -6,17 +6,15 @@ import logo from '../../assets/CategoryImages/ProductsImg/logo.jpg'
 import cart from '../../assets/CategoryImages/ProductsImg/Vector (2).png'
 import img2 from '../../assets/CategoryImages/ProductsImg/lemon.png'
 import love from '../../assets/CategoryImages/ProductsImg/love.png'
+import { useRouter } from 'next/router';
 const ProductCard = ({ product }) => {
-
+    const router=useRouter()
     const { regularPrice, slug, productName, quantity, productTitle, discount, productPictures } = product || {}
-
-    // console.log(productPictures[0])
-    // {(price - (price * discount) / 100).toFixed(0)}
 
     return (
         <div>
             <div
-                // key={index}
+                onClick={()=>router.push(`/productpage/${slug}`)}
                 className={` w-[180px] md:w-[240px] h-auto cursor-pointer rounded-md pb-4 ${styles.cardCategory} duration-[.3s] rounded-md`}>
                 <div className=''>
                     <div className='relative '>

@@ -16,13 +16,15 @@ import Footer from "../../components/ProductPage/Footer";
 import Header from "../../components/ProductPage/Header";
 import { useState } from "react";
 import logo from '../../assets/CategoryImages/ProductsImg/logo.jpg'
+import ProgressBar from "@ramonak/react-progress-bar";
+import { useRouter } from "next/router";
 
 const ProductPage = () => {
 
     const [img, setImg] = useState(null)
-    console.log(img)
-
-
+    const router=useRouter()
+    const { slug} = router.query
+    console.log(slug)
 
     return (
         <div>
@@ -112,10 +114,10 @@ const ProductPage = () => {
                 </div>
                 <div className="divider text-[#686868] text-lg"></div>
                 <div className="">
-                    <h5 className="text-[24px] font-semibold">Customer Product Ratings & Reviews</h5>
+                    <h5 className="text-[24px] font-bold">Customer Product Ratings & Reviews</h5>
                     <div className="grid grid-cols-1 md:flex md:justify-between">
                         <div className="">
-                            <p className="text-[84px] text-center md:text-left">4.0 <span className="text-[44px]">(24)</span></p>
+                            <p className="text-[84px] text-center md:text-left text-[#001E00] font-bold">4.0 <span className="text-[44px] text-[#686868] font-[400] ml-3">(24)</span></p>
                             <div className="flex gap-5">
                                 <div className="flex items-center text-3xl gap-1">
                                     <BsFillStarFill className="text-[#FB641B]" />
@@ -135,7 +137,15 @@ const ProductPage = () => {
                                     <BsFillStarFill className="text-[#FB641B]" />
                                     <BsFillStarFill className="text-[#FB641B]" />
                                 </div>
-                                <progress className="progress progress-success w-56" value="100" max="100"></progress>
+                                {/* <progress style={{background:'#026C51'}} className="progress progress-[#026C51] w-56 bg-[#026C51]" value="100" max="100"></progress> */}
+                                <ProgressBar
+                                    className="w-full span h-[10px]"
+                                    completed={'70'}
+                                    customLabel=""
+                                    barContainerClassName="w-full bg-gray-200 container"
+                                    completedClassName={'bg-[#026C51] w-[70%]'}
+                                // labelClassName="label"
+                                />
                                 <span>(11)</span>
                             </div>
                             <div className="flex gap-2 justify-center items-center">
@@ -265,9 +275,6 @@ const ProductPage = () => {
                         </div>
                     </div>
                 </div>
-
-
-
                 <div className="mt-5">
                     <div className="">
                         <div className="mt-[24px] flex gap-3">
