@@ -21,18 +21,16 @@ const AllCategory = () => {
 
     useEffect(() => {
         if (categoryData?.result && (category.length < (+categoryCountData?.result))) {
-            console.log('cats', categoryData)
             setCategory([...category, ...categoryData?.result])
             setCall(!call)
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [categoryData])
 
     const fetchMoreData = () => {
         dispatch(increasePage({ page: 1 }))
         setCall(!call)
     }
-
-    
 
     return (
         <>
@@ -42,8 +40,8 @@ const AllCategory = () => {
                 hasMore={category.length < (+categoryCountData?.result)}
                 loader={<h4 className='text-center py-7'>Loading...</h4>}
                 endMessage={
-                    <p style={{ textAlign: 'center', marginTop: '10px' }}>
-                        <b>Yay! You have seen it all</b>
+                    <p className='text-center my-10 '>
+                        <strong>You have seen all products category</strong>
                     </p>
                 }
             >
