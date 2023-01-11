@@ -9,60 +9,70 @@ import potol from '../../assets/images/product_page/image 8.png'
 import dheros from '../../assets/images/product_page/image 9.png'
 import kachakola from '../../assets/images/product_page/image 10.png'
 import { FaShoppingCart } from 'react-icons/fa';
-import { BsFillBagCheckFill, BsFillStarFill, BsStar } from 'react-icons/bs';
+import { BsFillBagCheckFill, BsFillStarFill, BsStar, BsPlusLg } from 'react-icons/bs';
+import { HiMinusSm } from 'react-icons/hi';
 import Link from "next/link";
 import Footer from "../../components/ProductPage/Footer";
 import Header from "../../components/ProductPage/Header";
+import { useState } from "react";
+import logo from '../../assets/CategoryImages/ProductsImg/logo.jpg'
+import ProgressBar from "@ramonak/react-progress-bar";
+import { useRouter } from "next/router";
 
+const ProductPage = () => {
 
-const index = () => {
+    const [img, setImg] = useState(null)
+    const router=useRouter()
+    const { slug} = router.query
+    console.log(slug)
+
     return (
         <div>
             {/* <NavicationLayout> */}
             <NavicationWithSideNavLayout>
                 {/* <Header /> */}
-                <div className="grid grid-cols-1 md:grid-cols-2">
-                    <div className="flex">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-9">
+                    <div className="flex ">
                         <div className="md:w-[96px] h-auto md:h-[560px] border flex flex-col p-[8px] bg-[#F2F3F7] gap-[8px] rounded-md">
                             <div className="">
-                                <Image className="border rounded-md" src={fruit} width="80" height="80" alt="tomato_img"></Image>
+                                <Image onMouseOver={e => setImg(e.currentTarget.src)} className="border rounded-md cursor-pointer" src={fruit} width="80" height="80" alt="tomato_img"></Image>
                             </div>
                             <div className="">
-                                <Image className="border rounded-md" src={fruit} width="80" height="80" alt="tomato_img"></Image>
+                                <Image onMouseOver={e => setImg(e.currentTarget.src)} className="border rounded-md cursor-pointer" src={fruit} width="80" height="80" alt="tomato_img"></Image>
                             </div>
                             <div className="">
-                                <Image className="border rounded-md" src={fruit} width="80" height="80" alt="tomato_img"></Image>
+                                <Image onMouseOver={e => setImg(e.currentTarget.src)} className="border rounded-md cursor-pointer" src={fruit} width="80" height="80" alt="tomato_img"></Image>
                             </div>
                             <div className="">
-                                <Image className="border rounded-md" src={fruit} width="80" height="80" alt="tomato_img"></Image>
+                                <Image onMouseOver={e => setImg(e.currentTarget.src)} className="border rounded-md cursor-pointer" src={fruit} width="80" height="80" alt="tomato_img"></Image>
                             </div>
                             <div className="">
-                                <Image className="border rounded-md" src={fruit} width="80" height="80" alt="tomato_img"></Image>
+                                <Image onMouseOver={e => setImg(e.currentTarget.src)} className="border rounded-md cursor-pointer" src={fruit} width="80" height="80" alt="tomato_img"></Image>
                             </div>
                             <div className="">
-                                <Image className="border rounded-md" src={fruit} width="80" height="80" alt="tomato_img"></Image>
+                                <Image onMouseOver={e => setImg(e.currentTarget.src)} className="border rounded-md cursor-pointer" src={fruit} width="80" height="80" alt="tomato_img"></Image>
                             </div>
                             <div className="w-[78px] h-[24px] bg-white flex justify-center items-center">
                                 <Image className="" src={vector} width="" height="" alt="vector"></Image>
                             </div>
                         </div>
                         <div className="ml-[24px]">
-                            <Image className="shadow-lg rounded-md mb-[20px]" src={fruit} width="400" height="500" alt="tomato_img"></Image>
-                            <div className="flex md:justify-between flex-col">
+                            <Image className="shadow-lg rounded-md mb-[20px]" src={img ? img : fruit} width="500" height="500" alt="tomato_img"></Image>
+                            <div className="flex md:justify-between ">
                                 <button className="btn btn-sm md:btn-md md:w-[240px] h-[53px] bg-[#FF9F00] font-semibold text-white ">Add to Cart <FaShoppingCart className="text-white text-lg mb-1" /></button>
                                 <button className="btn btn-sm md:btn-md md:w-[240px] h-[53px] bg-[#FB641B] font-semibold text-white ">Buy Now <BsFillBagCheckFill className="text-white text-lg mb-2" /></button>
                             </div>
                         </div>
                     </div>
-                    <div className="ml-[38px] ">
+                    <div className="">
                         <div className="">
                             <p className="">
                                 <Link href="#">Home</Link> /
                                 <Link href="#">KachaBazar</Link> /
                                 <Link className="text-[#287DF3]" href="#">Tomato (local) 500gm</Link>
                             </p>
-                            <h3 className="sm:text-sm md:text-lg lg:text-3xl font-bold text-[#686868]">Tomato (Local) 500 ±30 gm</h3>
-                            <div className="flex gap-5">
+                            <h3 className="sm:text-sm md:text-lg lg:text-3xl font-bold text-[#686868] mt-[8px]">Tomato (Local) 500 ±30 gm</h3>
+                            <div className="flex gap-5 mt-[18px]">
                                 <div className="flex items-center">
                                     <BsFillStarFill className="text-[#FB641B]" />
                                     <BsFillStarFill className="text-[#FB641B]" />
@@ -73,30 +83,41 @@ const index = () => {
                                 <p className="text-[#FB641B]">4.0</p>
                                 <p className="text-[#686868]">24 ratings & reviews</p>
                             </div>
-                            <div className="flex gap-5 items-center">
+                            <div className="flex gap-5 items-center mt-[18px]">
                                 <p className="">Seller: <Link href="#" className="text-[#287DF3]">Profile</Link></p>
-                                <p className="">Seller: <span className="bg-[#287DF3] text-white px-1 rounded-md">Verified</span></p>
+                                <div className=""> <p className='flex items-center gap-2 relative text-[#686868] font-[500]'>Seller:
+                                    <span className='rounded-full justify-center items-center border-4 border-[#026C51] flex w-[34px] h-[34px] text-[16px] font-bold absolute top-[-1px] left-12 z-30 bg-slate-50'>
+                                        <Image className='rounded-full' src={logo} width={30} alt='img' />
+                                    </span> <span className='bg-[#026C51] px-3 rounded-md py-1 text-white font-bold ml-2 '>Assured</span></p></div>
                             </div>
                             <div className="flex gap-5 items-center my-2">
-                                <h5 className="text-[24px] text-[#FB641B]">Tk. 60</h5>
+                                <h5 className="text-[24px] text-[#FB641B] font-bold">Tk. 60</h5>
                                 <p className=""><del>Tk. 80</del></p>
                                 <p className="">(20% off)</p>
                             </div>
                             <div className="flex gap-5">
-                                <div className="text-md w-[34px] h-[34px] bg-[#F2F3F7] flex justify-center items-center">-</div>
-                                <p className="text-lg text-[#FB641B]">1</p>
-                                <div className="text-md w-[34px] h-[34px] bg-[#F2F3F7] flex justify-center items-center">+</div>
+                                <div
+                                    className="text-md w-[34px] h-[34px] bg-[#F2F3F7] flex justify-center items-center cursor-pointer"
+                                ><HiMinusSm
+                                        className="w-full"
+                                    /></div>
+                                <p className="text-lg text-[#FB641B] font-bold">1</p>
+                                <div
+                                    className="text-md w-[34px] h-[34px] bg-[#F2F3F7] flex justify-center items-center cursor-pointer"
+                                ><BsPlusLg
+                                        className="w-full"
+                                    /></div>
                             </div>
-                            <p className="sm:mt-[14px] lg:mt-[23px] w-4/5 mx-auto">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using <q>Content here, content here</q>, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for</p>
+                            <p className="sm:mt-[14px] text-[16px] leading-[128%] lg:mt-[23px] text-[#686868]">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using <q>Content here, content here</q>, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for</p>
                         </div>
                     </div>
                 </div>
                 <div className="divider text-[#686868] text-lg"></div>
                 <div className="">
-                    <h5 className="text-[24px] font-semibold">Customer Product Ratings & Reviews</h5>
+                    <h5 className="text-[24px] font-bold">Customer Product Ratings & Reviews</h5>
                     <div className="grid grid-cols-1 md:flex md:justify-between">
                         <div className="">
-                            <p className="text-[84px] text-center md:text-left">4.0 <span className="text-[44px]">(24)</span></p>
+                            <p className="text-[84px] text-center md:text-left text-[#001E00] font-bold">4.0 <span className="text-[44px] text-[#686868] font-[400] ml-3">(24)</span></p>
                             <div className="flex gap-5">
                                 <div className="flex items-center text-3xl gap-1">
                                     <BsFillStarFill className="text-[#FB641B]" />
@@ -116,7 +137,15 @@ const index = () => {
                                     <BsFillStarFill className="text-[#FB641B]" />
                                     <BsFillStarFill className="text-[#FB641B]" />
                                 </div>
-                                <progress className="progress progress-success w-56" value="100" max="100"></progress>
+                                {/* <progress style={{background:'#026C51'}} className="progress progress-[#026C51] w-56 bg-[#026C51]" value="100" max="100"></progress> */}
+                                <ProgressBar
+                                    className="w-full span h-[10px]"
+                                    completed={'70'}
+                                    customLabel=""
+                                    barContainerClassName="w-full bg-gray-200 container"
+                                    completedClassName={'bg-[#026C51] w-[70%]'}
+                                // labelClassName="label"
+                                />
                                 <span>(11)</span>
                             </div>
                             <div className="flex gap-2 justify-center items-center">
@@ -160,7 +189,7 @@ const index = () => {
                                     <BsStar className="text-[#FB641B]" />
                                     <BsStar className="text-[#FB641B]" />
                                 </div>
-                                <progress className="progress progress-error w-56" value="100" max="100"></progress>
+                                <progress className="progress progress-error w-56 " value="100" max="100"></progress>
                                 <span>(01)</span>
                             </div>
                         </div>
@@ -246,7 +275,6 @@ const index = () => {
                         </div>
                     </div>
                 </div>
-
                 <div className="mt-5">
                     <div className="">
                         <div className="mt-[24px] flex gap-3">
@@ -363,6 +391,7 @@ const index = () => {
                         <button className="btn capitalize bg-[#FB641B] text-white mt-[86px]">Add To Cart <FaShoppingCart className="text-lg" /></button>
                     </div>
                 </div>
+
             </NavicationWithSideNavLayout>
 
             <Footer />
@@ -370,4 +399,4 @@ const index = () => {
     );
 };
 
-export default index;
+export default ProductPage;

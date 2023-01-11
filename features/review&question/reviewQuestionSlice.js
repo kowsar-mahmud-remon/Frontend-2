@@ -7,7 +7,7 @@ const initialState = {
     categoryName:''
 };
 
-const categorySlice = createSlice({
+const reviewQuestionSlice = createSlice({
     name: "category",
     initialState,
     reducers: {
@@ -24,5 +24,5 @@ const categorySlice = createSlice({
     },
 });
 
-export const {  setActiveBtn,increasePage,addCategoryName } = categorySlice.actions;
-export default categorySlice.reducer;
+export const {  setActiveBtn,increasePage,addCategoryName } = reviewQuestionSlice.actions;
+export default reviewQuestionSlice.reducer;

@@ -6,30 +6,28 @@ import logo from '../../assets/CategoryImages/ProductsImg/logo.jpg'
 import cart from '../../assets/CategoryImages/ProductsImg/Vector (2).png'
 import img2 from '../../assets/CategoryImages/ProductsImg/lemon.png'
 import love from '../../assets/CategoryImages/ProductsImg/love.png'
+import { useRouter } from 'next/router';
 const ProductCard = ({ product }) => {
-
+    const router=useRouter()
     const { regularPrice, slug, productName, quantity, productTitle, discount, productPictures } = product || {}
-
-    // console.log(productPictures[0])
-    // {(price - (price * discount) / 100).toFixed(0)}
 
     return (
         <div>
             <div
-                // key={index}
+                onClick={()=>router.push(`/productpage/${slug}`)}
                 className={` w-[180px] md:w-[240px] h-auto cursor-pointer rounded-md pb-4 ${styles.cardCategory} duration-[.3s] rounded-md`}>
                 <div className=''>
                     <div className='relative '>
                         <Image
                         className='h-[154px] object-cover'
-                            loader={() => productPictures[0].img}
+                            loader={() => productPictures[4].img}
                             loading='lazy'
-                            src={productPictures[0].img}
+                            src={productPictures[4].img}
                             height={40}
                             width={222}
                             alt='img'
                         />
-                        <div className='absolute top-3 right-3 bg-white rounded-full p-3 w-[38px] h-[38px] flex justify-center items-center cursor-pointer'>
+                        <div className='absolute top-3 right-[25px] bg-white rounded-full p-3 w-[38px] h-[38px] flex justify-center items-center cursor-pointer'>
                             <Image src={love} width={30} alt='img' />
                         </div >
                     </div>
