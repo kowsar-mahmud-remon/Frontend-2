@@ -1,6 +1,6 @@
 import React from "react";
 import RightSideNavbar from "../../components/AdminDashboard/RightSideNavbar/RightSideNavbar";
-import logo from "../../assets/images/adminDashboard/Logo.png";
+// import logo from "../../assets/images/adminDashboard/Logo.png";
 import Image from "next/image";
 
 import message from "../../assets/images/adminDashboard/message.png";
@@ -10,8 +10,8 @@ import question from "../../assets/images/adminDashboard/question.png";
 
 import { FaArrowUp } from "react-icons/fa";
 import { FaArrowDown } from "react-icons/fa";
-import { Line } from "@nivo/bar";
-import LineGraph from "../../components/LineGraph/LineGraph";
+// import { Line } from "@nivo/bar";
+// import LineGraph from "../../components/LineGraph/LineGraph";
 
 const adminId = () => {
   return (
