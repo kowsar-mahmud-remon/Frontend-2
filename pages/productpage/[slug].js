@@ -14,17 +14,20 @@ import { HiMinusSm } from 'react-icons/hi';
 import Link from "next/link";
 import Footer from "../../components/ProductPage/Footer";
 import Header from "../../components/ProductPage/Header";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import logo from '../../assets/CategoryImages/ProductsImg/logo.jpg'
 import ProgressBar from "@ramonak/react-progress-bar";
 import { useRouter } from "next/router";
 import ReactPaginate from "react-paginate";
-import { useGetProductReviewCountQuery, useGetProductReviewQuery } from "../../features/review&question/reviewQuestionApi";
+import { useGetProductQuestionCountQuery, useGetProductQuestionQuery, useGetProductReviewCountQuery, useGetProductReviewQuery } from "../../features/review&question/reviewQuestionApi";
 // import styles from './productpage.module.css'
 import { useSelector } from "react-redux";
 import Paginate from "../../components/paginate/Paginate";
-import { increaseReviewPage } from "../../features/paginate/paginate.slice";
+import { increaseQuestionPage, increaseReviewPage } from "../../features/paginate/paginate.slice";
 import ProductReview from "../../components/ProductDesc/ProductReview";
+import QuestionCard from "../../components/ProductDesc/QuestionCard";
+import { useGetSingleCategoryDescQuery, useGetSingleProductQuery } from "../../features/category/categoryApi";
+import ProductCard from "../../components/allCategory/ProductCard";
 
 
 const ProductPage = () => {
@@ -32,12 +35,58 @@ const ProductPage = () => {
     const [img, setImg] = useState(null)
     const router = useRouter()
     const { slug } = router.query
-    console.log(slug)
+    const slugs = slug?.split('-')
+    const [callApi, setCallApi] = useState(false)
 
-    const { paginate: { reviewPage, limit } } = useSelector(state => state)
-    const { data: reviewCount, isLoading: reviewCountLoading, error: reviewCountError } = useGetProductReviewCountQuery(slug)
-    const { data: reviewData, isLoading: reviewLoading, error: reviewError } = useGetProductReviewQuery({ page: reviewPage, limit, productId: slug })
-    console.log(reviewData)
+    const { paginate: { reviewPage, questionPage, limit } } = useSelector(state => state)
+    // review count 
+    const { data: reviewCount, isLoading: reviewCountLoading, error: reviewCountError } = useGetProductReviewCountQuery(
+        slugs && slugs[0],
+        {
+            skip: callApi
+        }
+    )
+    // question count 
+    const { data: questionCount, isLoading: questionCountLoading, error: questionCountError } = useGetProductQuestionCountQuery(slugs && slugs[0],
+        {
+            skip: callApi
+        })
+    // review api 
+    const { data: reviewData, isLoading: reviewLoading, error: reviewError } = useGetProductReviewQuery({ page: reviewPage, limit, productId: slugs && slugs[0] },
+        {
+            skip: callApi
+        }
+    )
+    // question api 
+    const { data: questionData, isLoading: questionLoading, error: questionError } = useGetProductQuestionQuery({ page: questionPage, limit, productId: slugs && slugs[0] },
+        {
+            skip: callApi
+        }
+    )
+    // product details api 
+    const { data: productData, isLoading: productLoading, error: productError } = useGetSingleProductQuery(
+        slugs && slugs[0],
+        {
+            skip: callApi
+        }
+    )
+    // category details api 
+    const { data: categoryData, isLoading: categoryLoading, error: categoryError } = useGetSingleCategoryDescQuery(
+        slugs && slugs[1],
+        {
+            skip: callApi
+        }
+    )
+
+    console.log('category', categoryData)
+    console.log('product', productData)
+
+    useEffect(() => {
+        if (slugs) {
+            setCallApi(true)
+            console.log(slugs[0], slugs[1])
+        }
+    }, [slug, slugs])
 
     return (
         <div>
@@ -208,27 +257,32 @@ const ProductPage = () => {
                         </div>
                     </div>
                 </div>
-                <div className="divider text-[#686868] text-lg"></div>
-                <div className="">
-                    <h5 className="text-[24px]">Ratings & Reviews</h5>
-                    {
-                        reviewData?.result?.map((rev) => <ProductReview
-                            rev={rev}
-                            key={rev?._id}
-                        />)
-                    }
-                    <div className='flex justify-end items-end mb-5'>
-                        <div className='w-full flex items-end justify-end '>
-                            <Paginate
-                                action={increaseReviewPage}
-                                page={reviewPage}
-                                count={reviewCount?.total}
-                            />
+                {
+                    reviewData?.result.length > 0 && <>
+                        <div className="divider text-[#686868] text-lg"></div>
+
+                        <div className="">
+                            <h5 className="text-[24px]">Ratings & Reviews</h5>
+                            {
+                                reviewData?.result?.map((rev) => <ProductReview
+                                    rev={rev}
+                                    key={rev?._id}
+                                />)
+                            }
+                            <div className='flex justify-end items-end mb-5'>
+                                <div className='w-full flex items-end justify-end '>
+                                    <Paginate
+                                        action={increaseReviewPage}
+                                        page={reviewPage}
+                                        count={reviewCount?.total}
+                                    />
+                                </div>
+                            </div>
+
+
                         </div>
-                    </div>
-
-
-                </div>
+                    </>
+                }
                 <div className="divider text-[#686868] text-lg"></div>
                 <div className="">
                     <h5 className="text-[24px] font-semibold">Asks & Question About This Product</h5>
@@ -239,36 +293,46 @@ const ProductPage = () => {
                         </div>
                     </div>
                 </div>
-                <div className="mt-5">
-                    <div className="">
-                        <div className="mt-[24px] flex gap-3">
-                            <Image src={reviewer} width="26" height="26" alt="reviewer"></Image>
-                            <p className="text-[18px]">Jakariya Sick</p>
-                            <p className="text-[#686868]">#Question</p>
+                {
+                    questionData?.result.length > 0 && <>
+
+                        <div className="mt-5">
+
+                            {
+                                questionData?.result?.map((question, i) => <QuestionCard
+                                    key={i}
+                                    que={question}
+                                />)
+                            }
+
+                            <div className='flex justify-end items-end mb-5'>
+                                <div className='w-full flex items-end justify-end '>
+                                    <Paginate
+                                        action={increaseQuestionPage}
+                                        page={questionPage}
+                                        count={questionCount?.total}
+                                    />
+                                </div>
+                            </div>
+
                         </div>
-                        <small className="text-[#686868] ml-10">8 day ago</small>
-                        <p className="">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here.</p>
-                    </div>
-                    <div className="">
-                        <div className="mt-[24px] flex gap-3">
-                            <Image src={adminImg} width="26" height="26" alt="reviewer"></Image>
-                            <p className="text-[18px]">Jakariya Sick</p>
-                            <p className="text-[#686868]">#Answers</p>
-                        </div>
-                        <small className="text-[#686868] ml-10">8 day ago</small>
-                        <p className="">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here.</p>
-                    </div>
-                    <div className="flex gap-3 items-center justify-end">
-                        <div className="btn btn-sm md:btn-md lg:btn-lg btn-outline btn-error w-[140px] h-[28px] md:h-[32px] text-[12px] md:text-md ml-3 md:ml-0">Previous page</div>
-                        <div className="">1</div>
-                        <div className="">2</div>
-                        <div className="">3</div>
-                        <div className="">4</div>
-                        <div className="btn btn-sm md:btn-md lg:btn-lg btn-outline btn-error w-[119px] text-[12px] md:h-[32px]">Next page</div>
-                    </div>
+                    </>
+                }
+
+
+                <div
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-[28px] mt-10 ml-16 md:ml-0 lg:ml-0">
+                    {
+                        categoryData?.result.map((product, i) => <ProductCard
+                            key={i}
+                            product={product}
+                        />)
+                    }
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-[28px] mt-10 ml-16 md:ml-0 lg:ml-0">
+
+
+                {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-[28px] mt-10 ml-16 md:ml-0 lg:ml-0">
                     <div className="w-[222px] hover:border hover:rounded-lg">
                         <Image src={fruit} width="220" height="154" alt="tomato"></Image>
                         <div className="flex gap-5 items-center my-2">
@@ -354,10 +418,9 @@ const ProductPage = () => {
 
                         <button className="btn capitalize bg-[#FB641B] text-white mt-[86px]">Add To Cart <FaShoppingCart className="text-lg" /></button>
                     </div>
-                </div>
+                </div> */}
 
             </NavicationWithSideNavLayout>
-
             <Footer />
         </div>
     );

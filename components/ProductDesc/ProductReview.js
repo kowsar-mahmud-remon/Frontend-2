@@ -20,13 +20,6 @@ const ProductReview = ({ rev }) => {
                             alt="reviewer"
                         ></Image>
                         <p className="text-[18px] text-[#001E00]">{firstName} {lastName}</p>
-                        {/* <div className="flex items-center">
-                        <BsFillStarFill className="text-[#FB641B]" />
-                        <BsFillStarFill className="text-[#FB641B]" />
-                        <BsFillStarFill className="text-[#FB641B]" />
-                        <BsFillStarFill className="text-[#FB641B]" />
-                        <BsFillStarFill className="text-[#FB641B]" />
-                    </div> */}
                         <div className="flex items-center">
                             {
                                 [...Array(Number(rating))].map((star, index) => {
@@ -49,7 +42,6 @@ const ProductReview = ({ rev }) => {
                                     className="text-[#F2F3F7]" />)
                             }
                         </div>
-                        {/* <p>{rating}</p> */}
                     </div>
                     <small className="text-[#686868] ">{moment(createdAt).fromNow()}</small>
                 </div>
