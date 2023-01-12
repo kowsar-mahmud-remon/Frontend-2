@@ -40,9 +40,7 @@ const AllCategory = () => {
                 hasMore={category.length < (+categoryCountData?.result)}
                 loader={<h4 className='text-center py-7'>Loading...</h4>}
                 endMessage={
-                    <p className='text-center my-10 '>
-                        <strong>You have seen all products category</strong>
-                    </p>
+                    <></>
                 }
             >
                 {

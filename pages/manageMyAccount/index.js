@@ -1,4 +1,4 @@
-import ManageAccoutSideBar from "../../components/manageAccoutSideBar/manageAccoutSideBar";
+import ManageAccoutSideBar from "../../components/ManageAccoutSideBar/ManageAccoutSideBar";
 import Navication from "../../components/Navication/Navication";
 import Image from 'next/image';
 
