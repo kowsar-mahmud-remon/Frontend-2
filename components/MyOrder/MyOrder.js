@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ManageAccoutSideBar from '../manageAccoutSideBar/manageAccoutSideBar';
+import ManageAccoutSideBar from '../ManageAccoutSideBar/ManageAccoutSideBar';
 import Navication from '../Navication/Navication';
 import OrdersProduct from '../OrdersProduct/OrdersProduct';
 import ToReceive from '../ToReceive/ToReceive';

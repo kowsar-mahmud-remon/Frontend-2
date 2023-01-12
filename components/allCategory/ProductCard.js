@@ -9,12 +9,12 @@ import love from '../../assets/CategoryImages/ProductsImg/love.png'
 import { useRouter } from 'next/router';
 const ProductCard = ({ product }) => {
     const router=useRouter()
-    const { regularPrice, slug, productName, quantity, productTitle, discount, productPictures } = product || {}
+    const { regularPrice, productName, quantity, productTitle, discount, productPictures,_id} = product || {}
 
     return (
         <div>
             <div
-                onClick={()=>router.push(`/productpage/${slug}`)}
+                onClick={()=>router.push(`/productpage/${_id}`)}
                 className={` w-[180px] md:w-[240px] h-auto cursor-pointer rounded-md pb-4 ${styles.cardCategory} duration-[.3s] rounded-md`}>
                 <div className=''>
                     <div className='relative '>

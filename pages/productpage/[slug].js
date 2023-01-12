@@ -18,13 +18,26 @@ import { useState } from "react";
 import logo from '../../assets/CategoryImages/ProductsImg/logo.jpg'
 import ProgressBar from "@ramonak/react-progress-bar";
 import { useRouter } from "next/router";
+import ReactPaginate from "react-paginate";
+import { useGetProductReviewCountQuery, useGetProductReviewQuery } from "../../features/review&question/reviewQuestionApi";
+// import styles from './productpage.module.css'
+import { useSelector } from "react-redux";
+import Paginate from "../../components/paginate/Paginate";
+import { increaseReviewPage } from "../../features/paginate/paginate.slice";
+import ProductReview from "../../components/ProductDesc/ProductReview";
+
 
 const ProductPage = () => {
 
     const [img, setImg] = useState(null)
-    const router=useRouter()
-    const { slug} = router.query
+    const router = useRouter()
+    const { slug } = router.query
     console.log(slug)
+
+    const { paginate: { reviewPage, limit } } = useSelector(state => state)
+    const { data: reviewCount, isLoading: reviewCountLoading, error: reviewCountError } = useGetProductReviewCountQuery(slug)
+    const { data: reviewData, isLoading: reviewLoading, error: reviewError } = useGetProductReviewQuery({ page: reviewPage, limit, productId: slug })
+    console.log(reviewData)
 
     return (
         <div>
@@ -198,72 +211,23 @@ const ProductPage = () => {
                 <div className="divider text-[#686868] text-lg"></div>
                 <div className="">
                     <h5 className="text-[24px]">Ratings & Reviews</h5>
-                    <div className="">
-                        <div className="mt-[24px] flex gap-3">
-                            <Image src={reviewer} width="26" height="26" alt="reviewer"></Image>
-                            <p className="text-[18px]">Jakariya Sick</p>
-                            <div className="flex items-center">
-                                <BsFillStarFill className="text-[#FB641B]" />
-                                <BsFillStarFill className="text-[#FB641B]" />
-                                <BsFillStarFill className="text-[#FB641B]" />
-                                <BsFillStarFill className="text-[#FB641B]" />
-                                <BsFillStarFill className="text-[#FB641B]" />
-                            </div>
-                        </div>
-                        <small className="text-[#686868] ml-10">8 day ago</small>
-                        <p className="">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using <q>Content here, content here</q>, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for</p>
-                        <div className="flex gap-5">
-                            <div className="">
-                                <Image className=" rounded-md" src={fruit} width="80" height="80" alt="tomato_img"></Image>
-                            </div>
-                            <div className="">
-                                <Image className=" rounded-md" src={fruit} width="80" height="80" alt="tomato_img"></Image>
-                            </div>
-                            <div className="">
-                                <Image className=" rounded-md" src={fruit} width="80" height="80" alt="tomato_img"></Image>
-                            </div>
-                            <div className="">
-                                <Image className=" rounded-md" src={fruit} width="80" height="80" alt="tomato_img"></Image>
-                            </div>
+                    {
+                        reviewData?.result?.map((rev) => <ProductReview
+                            rev={rev}
+                            key={rev?._id}
+                        />)
+                    }
+                    <div className='flex justify-end items-end mb-5'>
+                        <div className='w-full flex items-end justify-end '>
+                            <Paginate
+                                action={increaseReviewPage}
+                                page={reviewPage}
+                                count={reviewCount?.total}
+                            />
                         </div>
                     </div>
-                    <div className="">
-                        <div className="mt-[24px] flex gap-3">
-                            <Image src={reviewer} width="26" height="26" alt="reviewer"></Image>
-                            <p className="text-[18px]">Jakariya Sick</p>
-                            <div className="flex items-center">
-                                <BsFillStarFill className="text-[#FB641B]" />
-                                <BsFillStarFill className="text-[#FB641B]" />
-                                <BsFillStarFill className="text-[#FB641B]" />
-                                <BsFillStarFill className="text-[#FB641B]" />
-                                <BsFillStarFill className="text-[#FB641B]" />
-                            </div>
-                        </div>
-                        <small className="text-[#686868] ml-10">8 day ago</small>
-                        <p className="text-[16px]">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using <q>Content here, content here</q>, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for</p>
-                        <div className="flex gap-5">
-                            <div className="">
-                                <Image className=" rounded-md" src={fruit} width="80" height="80" alt="tomato_img"></Image>
-                            </div>
-                            <div className="">
-                                <Image className=" rounded-md" src={fruit} width="80" height="80" alt="tomato_img"></Image>
-                            </div>
-                            <div className="">
-                                <Image className=" rounded-md" src={fruit} width="80" height="80" alt="tomato_img"></Image>
-                            </div>
-                            <div className="">
-                                <Image className=" rounded-md" src={fruit} width="80" height="80" alt="tomato_img"></Image>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="flex gap-3 items-center justify-end">
-                        <div className="btn btn-outline btn-error w-[140px] h-[32px]">Previous page</div>
-                        <div className="">1</div>
-                        <div className="">2</div>
-                        <div className="">3</div>
-                        <div className="">4</div>
-                        <div className="btn btn-outline btn-error w-[119px] h-[32px]">Next page</div>
-                    </div>
+
+
                 </div>
                 <div className="divider text-[#686868] text-lg"></div>
                 <div className="">

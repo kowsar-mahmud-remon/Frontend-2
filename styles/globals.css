@@ -16,11 +16,10 @@
 /* *{
     outline: 1px solid red;
 } */
+
 .slick-slide {
     display: inline-flex !important;
-    /* justify-content: center !important;
-    align-items: center !important;
-    align-content: center !important; */
+   
     margin: 0 0.1px;
     padding: 3px 0.1px;
 }
@@ -32,24 +31,6 @@
     margin-left: 0 !important;
 }
 
-/* for progress bar  */
-/* .wrapper {
-    border: 3px solid blue;
-  }
-  
-  .container {
-    background-color: pink;
-  }
-  
-  .barCompleted {
-    background-color: lightblue;
-    width: 80%;
-  }
-  
-  .label {
-    font-size: 20px;
-    color: green;
-  } */
   .span{
     height: 10px !important;
   }
@@ -59,3 +40,6 @@
 .container div{
     height: 10px !important;
 }
+
+/* pagination style */
+
