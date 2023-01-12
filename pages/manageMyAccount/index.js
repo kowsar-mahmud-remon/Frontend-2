@@ -2,12 +2,10 @@ import ManageAccoutSideBar from "../../components/manageAccoutSideBar/manageAcco
 import Navication from "../../components/Navication/Navication";
 import Image from 'next/image';
 
-const manageMyAccount = () => {
+const ManageMyAccount = () => {
     return (
 
-
         <div className="min-w-[1920px]">
-        
 
             <div className="flex  my-8 mx-5 gap-[55px] xl:mx-12">
                 <div className="ml-[300px]">
@@ -114,4 +112,4 @@ const manageMyAccount = () => {
     );
 };
 
-export default manageMyAccount;
+export default ManageMyAccount;

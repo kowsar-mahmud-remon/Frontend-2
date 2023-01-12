@@ -4,16 +4,16 @@ import { apiSlice } from "../api/apiSlice";
 export const reviewQuestionApi = apiSlice.injectEndpoints({
     endpoints: (builder) => ({
         getProductQuestionCount: builder.query({
-            query: (slugId) => `/question/get-product-question-count/${slugId}`
+            query: (productId) => `/question/get-product-question-count/${productId}`
         }),
         getProductQuestion: builder.query({
-            query: ({slugId,page,limit}) => `/question/get-product-question?page=${page}&limit=${limit}&productSlug=${slugId}`
+            query: ({productId,page,limit}) => `/question/get-product-question?page=${page}&limit=${limit}&productId=${productId}`
         }),
         getProductReviewCount: builder.query({
-            query: (slugId) => `/review/get-product-review-count/${slugId}`
+            query: (productId) => `/review/get-product-review-count/${productId}`
         }),
         getProductReview: builder.query({
-            query: ({slugId,page,limit}) => `/review/get-product-review?page=${page}&limit=${limit}&productSlug=${slugId}`
+            query: ({productId,page,limit}) => `/review/get-product-review?page=${page}&limit=${limit}&productId=${productId}`
         }),
     }),
 });

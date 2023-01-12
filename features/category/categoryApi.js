@@ -20,7 +20,13 @@ export const categoryApi = apiSlice.injectEndpoints({
         getAllCategoryCount: builder.query({
             query: () => `/products/home-category-count`
         }),
+        getSingleProduct: builder.query({
+            query: (id) => `/products/selected-product-desc/${id}`
+        }),
+        getSingleCategoryDesc: builder.query({
+            query: (id) => `/products/selected-category-product-desc/${id}`
+        }),
     }),
 });
 
-export const { useGetCategoryQuery, useGetSingleCategoryQuery, useGetAllSelectedCategoryQuery, useGetAllCategoryForHomePageQuery, useGetAllCategoryCountQuery } = categoryApi;
+export const { useGetCategoryQuery, useGetSingleCategoryQuery, useGetAllSelectedCategoryQuery, useGetAllCategoryForHomePageQuery, useGetAllCategoryCountQuery,useGetSingleCategoryDescQuery,useGetSingleProductQuery } = categoryApi;

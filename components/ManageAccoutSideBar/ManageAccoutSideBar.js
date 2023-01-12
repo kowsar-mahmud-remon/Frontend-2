@@ -3,7 +3,6 @@ import { useRouter } from 'next/router';
 import { FaCheck } from 'react-icons/fa';
 const ManageAccoutSideBar = () => {
     const router = useRouter()
-
     return (
         <div>
             <div>

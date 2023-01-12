@@ -1,12 +1,11 @@
-import Sellerverification from '../../components/sellerverification/sellerverification';
+import Sellerverification from '../../components/sellerverification/Sellerverification';
 import SecondImage from '../../components/sellerverification/SecondImage';
 import NavicationWithSideNavLayout from '../../layouts/NavicationWithSideNavLayout';
 
 
 const index = () => {
 
-
-
+    
     return (
         <NavicationWithSideNavLayout>
             <div className="">
