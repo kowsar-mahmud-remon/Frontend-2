@@ -6,7 +6,7 @@ import moment from "moment";
 
 const ProductReview = ({ rev }) => {
 
-    const { productImg,  review, rating, createdAt, reviewOwnerId: { firstName, lastName, profilePicture } } = rev || {}
+    const { productImg, review, rating, createdAt, reviewOwnerId: { firstName, lastName, profilePicture } } = rev || {}
 
     return (
         <div>
@@ -27,7 +27,29 @@ const ProductReview = ({ rev }) => {
                         <BsFillStarFill className="text-[#FB641B]" />
                         <BsFillStarFill className="text-[#FB641B]" />
                     </div> */}
-                        <p>{rating}</p>
+                        <div className="flex items-center">
+                            {
+                                [...Array(Number(rating))].map((star, index) => {
+                                    return <>
+                                        <BsFillStarFill
+                                            key={index}
+                                            className='text-[#FB641B]'
+                                        />
+
+                                    </>
+
+                                })
+
+
+
+                            }
+                            {
+                                [...Array(5 - Number(rating))].map((star, index) => <BsFillStarFill
+                                    key={index}
+                                    className="text-[#F2F3F7]" />)
+                            }
+                        </div>
+                        {/* <p>{rating}</p> */}
                     </div>
                     <small className="text-[#686868] ">{moment(createdAt).fromNow()}</small>
                 </div>
