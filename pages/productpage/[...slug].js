@@ -34,59 +34,55 @@ const ProductPage = () => {
 
     const [img, setImg] = useState(null)
     const router = useRouter()
-    const { slug } = router.query
-    const slugs = slug?.split('-')
-    const [callApi, setCallApi] = useState(false)
+    const { slug, subCategoryId } = router.query;
+    const _id = slug?.[1];
+    const [callApi, setCallApi] = useState(true);
 
     const { paginate: { reviewPage, questionPage, limit } } = useSelector(state => state)
     // review count 
     const { data: reviewCount, isLoading: reviewCountLoading, error: reviewCountError } = useGetProductReviewCountQuery(
-        slugs && slugs[0],
+        slug && _id,
         {
             skip: callApi
         }
     )
     // question count 
-    const { data: questionCount, isLoading: questionCountLoading, error: questionCountError } = useGetProductQuestionCountQuery(slugs && slugs[0],
+    const { data: questionCount, isLoading: questionCountLoading, error: questionCountError } = useGetProductQuestionCountQuery(slug && _id,
         {
             skip: callApi
         })
     // review api 
-    const { data: reviewData, isLoading: reviewLoading, error: reviewError } = useGetProductReviewQuery({ page: reviewPage, limit, productId: slugs && slugs[0] },
+    const { data: reviewData, isLoading: reviewLoading, error: reviewError } = useGetProductReviewQuery({ page: reviewPage, limit, productId: slug && _id, },
         {
-            skip: callApi
+            skip: true
         }
     )
     // question api 
-    const { data: questionData, isLoading: questionLoading, error: questionError } = useGetProductQuestionQuery({ page: questionPage, limit, productId: slugs && slugs[0] },
+    const { data: questionData, isLoading: questionLoading, error: questionError } = useGetProductQuestionQuery({ page: questionPage, limit, productId: slug && _id, },
         {
             skip: callApi
         }
     )
     // product details api 
     const { data: productData, isLoading: productLoading, error: productError } = useGetSingleProductQuery(
-        slugs && slugs[0],
+        slug && _id,
         {
             skip: callApi
         }
     )
     // category details api 
     const { data: categoryData, isLoading: categoryLoading, error: categoryError } = useGetSingleCategoryDescQuery(
-        slugs && slugs[1],
+        subCategoryId && subCategoryId,
         {
             skip: callApi
         }
     )
 
-    console.log('category', categoryData)
-    console.log('product', productData)
-
     useEffect(() => {
-        if (slugs) {
-            setCallApi(true)
-            console.log(slugs[0], slugs[1])
+        if (slug && subCategoryId) {
+            setCallApi(false);
         }
-    }, [slug, slugs])
+    }, [slug, subCategoryId]);
 
     return (
         <div>
