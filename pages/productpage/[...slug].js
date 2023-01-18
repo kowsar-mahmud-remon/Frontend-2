@@ -93,6 +93,7 @@ const ProductPage = () => {
         }
     }, [slug, subCategoryId]);
 
+    const total = 15
     return (
         <div>
             {/* <NavicationLayout> */}
@@ -182,7 +183,7 @@ const ProductPage = () => {
                 <div className="divider text-[#686868] text-lg"></div>
                 <div className="">
                     <h5 className="text-[24px] font-bold">Customer Product Ratings & Reviews</h5>
-                    <div className="grid grid-cols-1 md:flex md:justify-between">
+                    <div className="grid grid-cols-1 md:flex md:justify-start items-center gap-20">
                         <div className="">
                             <p className="text-[84px] text-center md:text-left text-[#001E00] font-bold">4.0 <span className="text-[44px] text-[#686868] font-[400] ml-3">(24)</span></p>
                             <div className="flex gap-5">
@@ -196,69 +197,47 @@ const ProductPage = () => {
                             </div>
                         </div>
                         <div className="">
-                            <div className="flex gap-2 justify-center items-center">
-                                <div className="flex items-center gap-1">
-                                    <BsFillStarFill className="text-[#FB641B]" />
-                                    <BsFillStarFill className="text-[#FB641B]" />
-                                    <BsFillStarFill className="text-[#FB641B]" />
-                                    <BsFillStarFill className="text-[#FB641B]" />
-                                    <BsFillStarFill className="text-[#FB641B]" />
-                                </div>
-                                {/* <progress style={{background:'#026C51'}} className="progress progress-[#026C51] w-56 bg-[#026C51]" value="100" max="100"></progress> */}
-                                <ProgressBar
-                                    className="w-full span h-[10px]"
-                                    completed={'70'}
-                                    customLabel=""
-                                    barContainerClassName="w-full bg-gray-200 container"
-                                    completedClassName={'bg-[#026C51] w-[70%]'}
-                                // labelClassName="label"
-                                />
-                                <span>(11)</span>
-                            </div>
-                            <div className="flex gap-2 justify-center items-center">
-                                <div className="flex items-center gap-1">
-                                    <BsFillStarFill className="text-[#FB641B]" />
-                                    <BsFillStarFill className="text-[#FB641B]" />
-                                    <BsFillStarFill className="text-[#FB641B]" />
-                                    <BsFillStarFill className="text-[#FB641B]" />
-                                    <BsStar className="text-[#FB641B]" />
-                                </div>
-                                <progress className="progress progress-success w-56" value="100" max="100"></progress>
-                                <span>(04)</span>
-                            </div>
-                            <div className="flex gap-2 justify-center items-center">
-                                <div className="flex items-center gap-1">
-                                    <BsFillStarFill className="text-[#FB641B]" />
-                                    <BsFillStarFill className="text-[#FB641B]" />
-                                    <BsFillStarFill className="text-[#FB641B]" />
-                                    <BsStar className="text-[#FB641B]" />
-                                    <BsStar className="text-[#FB641B]" />
-                                </div>
-                                <progress className="progress progress-warning w-56" value="100" max="100"></progress>
-                                <span>(05)</span>
-                            </div>
-                            <div className="flex gap-2 justify-center items-center">
-                                <div className="flex items-center gap-1">
-                                    <BsFillStarFill className="text-[#FB641B]" />
-                                    <BsFillStarFill className="text-[#FB641B]" />
-                                    <BsStar className="text-[#FB641B]" />
-                                    <BsStar className="text-[#FB641B]" />
-                                    <BsStar className="text-[#FB641B]" />
-                                </div>
-                                <progress className="progress progress-warning w-56" value="50" max="100"></progress>
-                                <span>(03)</span>
-                            </div>
-                            <div className="flex gap-2 justify-center items-center">
-                                <div className="flex items-center gap-1">
-                                    <BsFillStarFill className="text-[#FB641B]" />
-                                    <BsStar className="text-[#FB641B]" />
-                                    <BsStar className="text-[#FB641B]" />
-                                    <BsStar className="text-[#FB641B]" />
-                                    <BsStar className="text-[#FB641B]" />
-                                </div>
-                                <progress className="progress progress-error w-56 " value="100" max="100"></progress>
-                                <span>(01)</span>
-                            </div>
+                           
+                            {
+                                ratingData?.message?.map((d, i) => {
+                                    let color
+                                    if (d?._id >= 3 && d?._id <= 5) {
+                                        color = 'primary'
+                                    } else if (d?._id == 2) color = 'warning'
+                                    else if (d?._id == 1) color = 'error'
+                                    return <div
+                                        key={i}
+                                        className="flex gap-2 justify-center items-center">
+                                        <div className="flex items-center gap-1">
+                                            {
+                                                [...Array(Number(d._id))].map((star, index) => {
+                                                    return <>
+                                                        <BsFillStarFill
+                                                            key={index}
+                                                            className='text-[#FB641B]'
+                                                        />
+
+                                                    </>
+
+                                                })
+
+
+
+                                            }
+                                            {
+                                                [...Array(5 - Number(d._id))].map((star, index) => <BsFillStarFill
+                                                    key={index}
+                                                    className="text-[#F2F3F7]" />)
+                                            }
+                                        </div>
+                                        <progress className={`progress progress-${color} bg-green-500 w-56`} value={total / d._id} max="100"></progress>
+                                        <span>({d._id})</span>
+                                    </div>
+                                }
+
+                                )
+                            }
+
                         </div>
                     </div>
                 </div>
