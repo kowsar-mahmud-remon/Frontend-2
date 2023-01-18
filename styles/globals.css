@@ -19,27 +19,31 @@
 
 .slick-slide {
     display: inline-flex !important;
-   
+    justify-content: center;
+    align-items: center;
     margin: 0 0.1px;
     padding: 3px 0.1px;
 }
-.slick-list{
+
+.slick-list {
 
     height: 405px !important;
 }
-.slick-track{
+
+.slick-track {
     margin-left: 0 !important;
 }
 
-  .span{
+.span {
     height: 10px !important;
-  }
-.span span{
+}
+
+.span span {
     display: none !important;
 }
-.container div{
+
+.container div {
     height: 10px !important;
 }
 
 /* pagination style */
-

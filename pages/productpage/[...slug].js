@@ -33,7 +33,7 @@ import ProductCard from "../../components/allCategory/ProductCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { imageSettings } from "../../Utils/sliderConfig";
+import { imageSettings, imgSettingsMobile } from "../../Utils/sliderConfig";
 
 const ProductPage = () => {
 
@@ -106,11 +106,10 @@ const ProductPage = () => {
             {/* <NavicationLayout> */}
             <NavicationWithSideNavLayout>
                 {/* <Header /> */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-9">
-                    <div className="flex ">
-                        <div className="md:w-[96px] h-auto md:h-[560px] border flex flex-col p-[8px] bg-[#F2F3F7] gap-[8px] rounded-md">
-                            <div className='flex items-center'>
-
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-9">
+                    <div className="flex flex-col md:flex-row">
+                        <div className="hidden md:w-[96px] h-auto md:h-[560px] border md:flex flex-col p-[8px] bg-[#F2F3F7] gap-[8px] rounded-md ">
+                            <div className=''>
                                 <Slider {...imageSettings}
                                     className=' '
                                     ref={slideRef}
@@ -136,17 +135,58 @@ const ProductPage = () => {
                             </div>
 
                         </div>
-                        <div className="ml-[24px]">
-                            <Image className="shadow-lg rounded-md mb-[20px]" src={img ? img : productPictures?.[0]?.img} width="500" height="500" alt="tomato_img"></Image>
-                            <div className="flex md:justify-between ">
-                                <button className="btn btn-sm md:btn-md md:w-[240px] h-[53px] bg-[#FF9F00] font-semibold text-white ">Add to Cart <FaShoppingCart className="text-white text-lg mb-1" /></button>
-                                <button className="btn btn-sm md:btn-md md:w-[240px] h-[53px] bg-[#FB641B] font-semibold text-white ">Buy Now <BsFillBagCheckFill className="text-white text-lg mb-2" /></button>
+
+                        <div className="block md:hidden overflow-hidden mb-10">
+                            {
+                                <div className=' items-center'>
+                                    <Slider {...imgSettingsMobile}
+                                        className=' '
+                                        ref={slideRef}
+                                    >
+                                        {
+                                            productPictures?.map((n, index) => <div
+                                                key={index}
+                                                className=" flex justify-center">
+                                                <Image
+                                                    onMouseOver={e => setImg(e.currentTarget.src)}
+                                                    className="border rounded-md cursor-pointer"
+                                                    src={n?.img} width="590" height="296" alt="tomato_img"></Image>
+                                            </div>)
+                                        }
+                                    </Slider>
+
+                                </div>
+                            }
+                        </div>
+                        <div className="ml-0 md:ml-[24px] ">
+                            <Image className="shadow-lg rounded-md mb-[20px] hidden md:flex" src={img ? img : productPictures?.[0]?.img} width="500" height="500" alt="tomato_img"></Image>
+
+
+                            <div className="flex md:hidden gap-5 justify-center mb-[31px]" >
+                                <div
+                                    className="text-md w-[34px] h-[34px] bg-[#F2F3F7] flex justify-center items-center cursor-pointer"
+                                ><HiMinusSm
+                                        className="w-full"
+                                    /></div>
+                                <p className="text-lg text-[#FB641B] font-bold">1</p>
+                                <div
+                                    className="text-md w-[34px] h-[34px] bg-[#F2F3F7] flex justify-center items-center cursor-pointer"
+                                ><BsPlusLg
+                                        className="w-full"
+                                    /></div>
+                            </div>
+                            <div className="flex gap-7 md:justify-between ">
+                                <button
+                                    className="w-full flex justify-center items-center gap-3 md:btn-md md:w-[240px] h-[53px] bg-[#FF9F00] font-semibold text-white rounded-md"
+                                >Add to Cart <FaShoppingCart className="text-white text-lg mb-1" /></button>
+                                <button
+                                    className="w-full flex justify-center items-center gap-3 btn-sm md:btn-md md:w-[240px] h-[53px] bg-[#FB641B] font-semibold text-white rounded-md">Buy Now <BsFillBagCheckFill className="text-white text-lg mb-2" /></button>
                             </div>
                         </div>
                     </div>
                     <div className="">
                         <div className="">
-                            <p className="">
+                            <p className="hidden md:block">
                                 <Link href="/">Home</Link> /
                                 <span className="cursor-pointer" onClick={() => router.back()}>KachaBazar</span> /
                                 <span className="text-[#287DF3]" href="#">Tomato (local) 500gm</span>
@@ -181,7 +221,7 @@ const ProductPage = () => {
                                     </>)
                                 }
                             </div>
-                            <div className="flex gap-5">
+                            <div className="hidden md:flex gap-5 " >
                                 <div
                                     className="text-md w-[34px] h-[34px] bg-[#F2F3F7] flex justify-center items-center cursor-pointer"
                                 ><HiMinusSm
@@ -198,8 +238,8 @@ const ProductPage = () => {
                         </div>
                     </div>
                 </div>
-                <div className="divider text-[#686868] text-lg"></div>
-                <div className="">
+                <div className="divider text-[#686868] text-lg hidden md:block"></div>
+                <div className="hidden md:block">
                     <h5 className="text-[24px] font-bold">Customer Product Ratings & Reviews</h5>
                     <div className="grid grid-cols-1 md:flex md:justify-start items-center gap-20">
                         <div className="">
@@ -323,7 +363,7 @@ const ProductPage = () => {
 
 
                 <div
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-[28px] mt-10 ml-16 md:ml-0 lg:ml-0">
+                    className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-[28px] mt-10  md:ml-0 lg:ml-0">
                     {
                         categoryData?.result.map((product, i) => <ProductCard
                             key={i}
