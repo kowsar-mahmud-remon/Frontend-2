@@ -44,3 +44,11 @@ export const settings = {
         },
     ]
 };
+export const imageSettings = {
+    speed: 500,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    cssEase: "linear",
+    vertical: true,
+    verticalSwiping: true,
+};

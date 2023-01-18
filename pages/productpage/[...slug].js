@@ -1,3 +1,4 @@
+
 import NavicationWithSideNavLayout from "../../layouts/NavicationWithSideNavLayout";
 import Image from 'next/image'
 import fruit from '../../assets/images/product_page/image 6.png'
@@ -14,7 +15,7 @@ import { HiMinusSm } from 'react-icons/hi';
 import Link from "next/link";
 import Footer from "../../components/ProductPage/Footer";
 import Header from "../../components/ProductPage/Header";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import logo from '../../assets/CategoryImages/ProductsImg/logo.jpg'
 import ProgressBar from "@ramonak/react-progress-bar";
 import { useRouter } from "next/router";
@@ -28,14 +29,17 @@ import ProductReview from "../../components/ProductDesc/ProductReview";
 import QuestionCard from "../../components/ProductDesc/QuestionCard";
 import { useGetSingleCategoryDescQuery, useGetSingleProductQuery } from "../../features/category/categoryApi";
 import ProductCard from "../../components/allCategory/ProductCard";
-
+// Import css files
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import { imageSettings } from "../../Utils/sliderConfig";
 
 const ProductPage = () => {
 
     const [img, setImg] = useState(null)
     const router = useRouter()
     const { slug, subCategoryId } = router.query;
-    console.log(slug)
     const _id = slug?.[1];
     const [callApi, setCallApi] = useState(true);
 
@@ -85,7 +89,9 @@ const ProductPage = () => {
             skip: callApi
         }
     )
-    console.log(ratingData)
+    console.log(productData)
+    const { description, productName, productPictures, regularPrice, discount } = productData?.result || {}
+    const slideRef = useRef(null)
 
     useEffect(() => {
         if (slug && subCategoryId) {
@@ -94,6 +100,7 @@ const ProductPage = () => {
     }, [slug, subCategoryId]);
 
     const total = 15
+    console.log(img)
     return (
         <div>
             {/* <NavicationLayout> */}
@@ -102,30 +109,35 @@ const ProductPage = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-9">
                     <div className="flex ">
                         <div className="md:w-[96px] h-auto md:h-[560px] border flex flex-col p-[8px] bg-[#F2F3F7] gap-[8px] rounded-md">
-                            <div className="">
-                                <Image onMouseOver={e => setImg(e.currentTarget.src)} className="border rounded-md cursor-pointer" src={fruit} width="80" height="80" alt="tomato_img"></Image>
+                            <div className='flex items-center'>
+
+                                <Slider {...imageSettings}
+                                    className=' '
+                                    ref={slideRef}
+                                >
+                                    {
+                                        productPictures?.map((n, index) => <div
+                                            key={index}
+                                            className="">
+                                            <Image
+                                                onMouseOver={e => setImg(e.currentTarget.src)}
+                                                className="border rounded-md cursor-pointer"
+                                                src={n?.img} width="80" height="80" alt="tomato_img"></Image>
+                                        </div>)
+                                    }
+                                </Slider>
+
                             </div>
-                            <div className="">
-                                <Image onMouseOver={e => setImg(e.currentTarget.src)} className="border rounded-md cursor-pointer" src={fruit} width="80" height="80" alt="tomato_img"></Image>
-                            </div>
-                            <div className="">
-                                <Image onMouseOver={e => setImg(e.currentTarget.src)} className="border rounded-md cursor-pointer" src={fruit} width="80" height="80" alt="tomato_img"></Image>
-                            </div>
-                            <div className="">
-                                <Image onMouseOver={e => setImg(e.currentTarget.src)} className="border rounded-md cursor-pointer" src={fruit} width="80" height="80" alt="tomato_img"></Image>
-                            </div>
-                            <div className="">
-                                <Image onMouseOver={e => setImg(e.currentTarget.src)} className="border rounded-md cursor-pointer" src={fruit} width="80" height="80" alt="tomato_img"></Image>
-                            </div>
-                            <div className="">
-                                <Image onMouseOver={e => setImg(e.currentTarget.src)} className="border rounded-md cursor-pointer" src={fruit} width="80" height="80" alt="tomato_img"></Image>
-                            </div>
-                            <div className="w-[78px] h-[24px] bg-white flex justify-center items-center">
+                            <div
+                                onClick={() => slideRef.current.slickNext()}
+                                className="w-[78px] h-[24px] bg-white flex justify-center items-center cursor-pointer"
+                            >
                                 <Image className="" src={vector} width="" height="" alt="vector"></Image>
                             </div>
+
                         </div>
                         <div className="ml-[24px]">
-                            <Image className="shadow-lg rounded-md mb-[20px]" src={img ? img : fruit} width="500" height="500" alt="tomato_img"></Image>
+                            <Image className="shadow-lg rounded-md mb-[20px]" src={img ? img : productPictures?.[0]?.img} width="500" height="500" alt="tomato_img"></Image>
                             <div className="flex md:justify-between ">
                                 <button className="btn btn-sm md:btn-md md:w-[240px] h-[53px] bg-[#FF9F00] font-semibold text-white ">Add to Cart <FaShoppingCart className="text-white text-lg mb-1" /></button>
                                 <button className="btn btn-sm md:btn-md md:w-[240px] h-[53px] bg-[#FB641B] font-semibold text-white ">Buy Now <BsFillBagCheckFill className="text-white text-lg mb-2" /></button>
@@ -135,11 +147,11 @@ const ProductPage = () => {
                     <div className="">
                         <div className="">
                             <p className="">
-                                <Link href="#">Home</Link> /
-                                <Link href="#">KachaBazar</Link> /
-                                <Link className="text-[#287DF3]" href="#">Tomato (local) 500gm</Link>
+                                <Link href="/">Home</Link> /
+                                <span className="cursor-pointer" onClick={() => router.back()}>KachaBazar</span> /
+                                <span className="text-[#287DF3]" href="#">Tomato (local) 500gm</span>
                             </p>
-                            <h3 className="sm:text-sm md:text-lg lg:text-3xl font-bold text-[#686868] mt-[8px]">Tomato (Local) 500 ±30 gm</h3>
+                            <h3 className="sm:text-sm md:text-lg lg:text-3xl font-bold text-[#686868] mt-[8px]">{productName}</h3>
                             <div className="flex gap-5 mt-[18px]">
                                 <div className="flex items-center">
                                     <BsFillStarFill className="text-[#FB641B]" />
@@ -158,10 +170,16 @@ const ProductPage = () => {
                                         <Image className='rounded-full' src={logo} width={30} alt='img' />
                                     </span> <span className='bg-[#026C51] px-3 rounded-md py-1 text-white font-bold ml-2 '>Assured</span></p></div>
                             </div>
-                            <div className="flex gap-5 items-center my-2">
-                                <h5 className="text-[24px] text-[#FB641B] font-bold">Tk. 60</h5>
-                                <p className=""><del>Tk. 80</del></p>
-                                <p className="">(20% off)</p>
+                            <div className="flex gap-5 items-center my-2 mb-7">
+                                <span className='text-[#FB641B] font-bold text-[20px]'>
+                                    Tk  {discount ? (regularPrice - (regularPrice * discount) / 100).toFixed(0) : regularPrice}
+                                </span>
+                                {
+                                    discount && (<>
+                                        <span className='text-[#707070] text-[12px] line-through font-[500]'>TK {regularPrice}</span>
+                                        <span className='text-[#707070] text-[12px] '>({discount}% off)</span>
+                                    </>)
+                                }
                             </div>
                             <div className="flex gap-5">
                                 <div
@@ -176,7 +194,7 @@ const ProductPage = () => {
                                         className="w-full"
                                     /></div>
                             </div>
-                            <p className="sm:mt-[14px] text-[16px] leading-[128%] lg:mt-[23px] text-[#686868]">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using <q>Content here, content here</q>, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for</p>
+                            <p className="sm:mt-[14px] text-[16px] leading-[128%] lg:mt-[23px] text-[#686868]">{description}</p>
                         </div>
                     </div>
                 </div>
@@ -197,7 +215,7 @@ const ProductPage = () => {
                             </div>
                         </div>
                         <div className="">
-                           
+
                             {
                                 ratingData?.message?.map((d, i) => {
                                     let color
@@ -313,96 +331,6 @@ const ProductPage = () => {
                         />)
                     }
                 </div>
-
-
-
-                {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-[28px] mt-10 ml-16 md:ml-0 lg:ml-0">
-                    <div className="w-[222px] hover:border hover:rounded-lg">
-                        <Image src={fruit} width="220" height="154" alt="tomato"></Image>
-                        <div className="flex gap-5 items-center my-2">
-                            <h5 className="text-[24px] text-[#FB641B]">Tk. 60</h5>
-                            <p className=""><del>Tk. 80</del></p>
-                            <p className="">(20% off)</p>
-                        </div>
-                        <p className="text-[16px] font-semibold">Tomato (Local) 500 ±30 gm</p>
-                        <div className="flex">
-                            <div className="flex items-center bg-[#F4253F] text-white px-1 rounded-md">
-                                1.9 <BsFillStarFill className="ml-2 text-white" />
-                            </div>
-                            <p className="text-[#686868]">24 Ratings & 5 Reviews</p>
-                        </div>
-                        <button className="btn capitalize bg-[#FB641B] text-white mt-[44px]">Add To Cart <FaShoppingCart className="text-lg" /></button>
-                    </div>
-                    <div className="w-[222px] hover:border hover:rounded-lg">
-                        <Image src={mistiKumra} width="220" height="154" alt="tomato"></Image>
-                        <div className="flex gap-5 items-center my-2">
-                            <h5 className="text-[24px] text-[#FB641B]">Tk. 60</h5>
-                            <p className=""><del>Tk. 80</del></p>
-                            <p className="">(20% off)</p>
-                        </div>
-                        <p className="text-[16px] font-semibold">Tomato (Local) 500 ±30 gm</p>
-                        <div className="flex">
-                            <div className="flex items-center bg-[#F4253F] text-white px-1 rounded-md">
-                                1.9 <BsFillStarFill className="ml-2 text-white" />
-                            </div>
-                            <p className="text-[#686868]">24 Ratings & 5 Reviews</p>
-                        </div>
-                        <p className="">Seller: <span className="bg-[#287DF3] text-white px-1 rounded-md">Verified</span></p>
-                        <button className="btn capitalize bg-[#FB641B] text-white mt-[86px] ">Add To Cart <FaShoppingCart className="text-lg" /></button>
-                    </div>
-                    <div className="w-[222px] hover:border hover:rounded-lg">
-                        <Image src={potol} width="220" height="154" alt="tomato"></Image>
-                        <div className="flex gap-5 items-center my-2">
-                            <h5 className="text-[24px] text-[#FB641B]">Tk. 60</h5>
-                            <p className=""><del>Tk. 80</del></p>
-                            <p className="">(20% off)</p>
-                        </div>
-                        <p className="text-[16px] font-semibold">Tomato (Local) 500 ±30 gm</p>
-                        <div className="flex">
-                            <div className="flex items-center bg-[#F4253F] text-white px-1 rounded-md">
-                                1.9 <BsFillStarFill className="ml-2 text-white" />
-                            </div>
-                            <p className="text-[#686868]">24 Ratings & 5 Reviews</p>
-                        </div>
-                        <p className="">Seller: <span className="bg-[#287DF3] text-white px-1 rounded-md">Assured</span></p>
-                        <button className="btn capitalize bg-[#FB641B] text-white mt-[86px]">Add To Cart <FaShoppingCart className="text-lg" /></button>
-                    </div>
-                    <div className="w-[222px] hover:border hover:rounded-lg">
-                        <Image src={dheros} width="220" height="154" alt="tomato"></Image>
-                        <div className="flex gap-5 items-center my-2">
-                            <h5 className="text-[24px] text-[#FB641B]">Tk. 60</h5>
-                            <p className=""><del>Tk. 80</del></p>
-                            <p className="">(20% off)</p>
-                        </div>
-                        <p className="text-[16px] font-semibold">Tomato (Local) 500 ±30 gm</p>
-                        <div className="flex">
-                            <div className="flex items-center bg-[#F4253F] text-white px-1 rounded-md">
-                                1.9 <BsFillStarFill className="ml-2 text-white" />
-                            </div>
-                            <p className="text-[#686868]">24 Ratings & 5 Reviews</p>
-                        </div>
-                        <p className="">Seller: <span className="bg-[#287DF3] text-white px-1 rounded-md">Verified</span></p>
-                        <button className="btn capitalize bg-[#FB641B] text-white mt-[86px]">Add To Cart <FaShoppingCart className="text-lg" /></button>
-                    </div>
-                    <div className="w-[222px] hover:border hover:rounded-lg">
-                        <Image src={kachakola} width="220" height="154" alt="tomato"></Image>
-                        <div className="flex gap-5 items-center my-2">
-                            <h5 className="text-[24px] text-[#FB641B]">Tk. 60</h5>
-                            <p className=""><del>Tk. 80</del></p>
-                            <p className="">(20% off)</p>
-                        </div>
-                        <p className="text-[16px] font-semibold">Tomato (Local) 500 ±30 gm</p>
-                        <div className="flex">
-                            <div className="flex items-center bg-[#F4253F] text-white px-1 rounded-md">
-                                1.9 <BsFillStarFill className="ml-2 text-white" />
-                            </div>
-                            <p className="text-[#686868]">24 Ratings & 5 Reviews</p>
-                        </div>
-                        <p className="">Seller: <span className="bg-[#287DF3] text-white px-1 rounded-md">Verified</span></p>
-
-                        <button className="btn capitalize bg-[#FB641B] text-white mt-[86px]">Add To Cart <FaShoppingCart className="text-lg" /></button>
-                    </div>
-                </div> */}
 
             </NavicationWithSideNavLayout>
             <Footer />
