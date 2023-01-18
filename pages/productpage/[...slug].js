@@ -19,7 +19,7 @@ import logo from '../../assets/CategoryImages/ProductsImg/logo.jpg'
 import ProgressBar from "@ramonak/react-progress-bar";
 import { useRouter } from "next/router";
 import ReactPaginate from "react-paginate";
-import { useGetProductQuestionCountQuery, useGetProductQuestionQuery, useGetProductReviewCountQuery, useGetProductReviewQuery } from "../../features/review&question/reviewQuestionApi";
+import { useGetProductQuestionCountQuery, useGetProductQuestionQuery, useGetProductRatingQuery, useGetProductReviewCountQuery, useGetProductReviewQuery } from "../../features/review&question/reviewQuestionApi";
 // import styles from './productpage.module.css'
 import { useSelector } from "react-redux";
 import Paginate from "../../components/paginate/Paginate";
@@ -35,6 +35,7 @@ const ProductPage = () => {
     const [img, setImg] = useState(null)
     const router = useRouter()
     const { slug, subCategoryId } = router.query;
+    console.log(slug)
     const _id = slug?.[1];
     const [callApi, setCallApi] = useState(true);
 
@@ -77,6 +78,14 @@ const ProductPage = () => {
             skip: callApi
         }
     )
+    // product ratings api 
+    const { data: ratingData, isLoading: ratingLoading, error: ratingError } = useGetProductRatingQuery(
+        _id && _id,
+        {
+            skip: callApi
+        }
+    )
+    console.log(ratingData)
 
     useEffect(() => {
         if (slug && subCategoryId) {
