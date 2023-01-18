@@ -42,7 +42,7 @@ const AllCategoryCard = ({ result, products }) => {
                     </div>
 
                     {/* slider card  */}
-                    <div className='flex items-center'>
+                    <div className='flex items-center pt-3'>
 
                         <Slider {...settings}
                             className='flex items-center w-full '
