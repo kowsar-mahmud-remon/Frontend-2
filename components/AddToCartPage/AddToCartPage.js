@@ -104,12 +104,12 @@ const AddToCartPage = () => {
 
               <input type="checkbox" id="my-modal-4" className="modal-toggle" />
               <label htmlFor="my-modal-4" className="modal cursor-pointer">
-                <label className="modal-box relative max-w-[1225px]" htmlFor="">
+                <label className="modal-box relative w-full lg:max-w-[1225px]" htmlFor="">
                   <label htmlFor="my-modal-4" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
 
 
 
-                  <div className=" mt-[62px] mb-11">
+                  <div className=" lg:mt-[62px] mb-11">
                     <div className="lg:flex justify-between border-b border-[#B7B7B7]">
                       <div className="lg:w-[753px]">
                         <div className="flex items-center">
@@ -134,11 +134,11 @@ const AddToCartPage = () => {
                               <h4 className='text-lg text-[#001E00] mb-2'>Tomato (Local) 500 ±30 gm</h4>
                               <p className=' text-base text-[#686868] mb-2'>No Brand, Color Family:Black</p>
                               <p className='text-base text-[#FB641B] mb-2'>Tk 60</p>
-                              <div className=" text-[10px] text-[#707070] flex">
+                              <div className=" text-[10px] text-[#707070] flex mb-2">
                                 <p className=' mr-[10px]'>Tk 80</p>
                                 <p>(20% off)</p>
                               </div>
-                              <p className='text-base text-[#686868] w-full text-end pr-10'>Qty: 1</p>
+                              <p className='text-base text-[#686868] w-full lg:text-end pr-10'>Qty: 1</p>
                             </div>
                           </div>
                         </div>
@@ -160,12 +160,12 @@ const AddToCartPage = () => {
 
                     </div>
 
-                    <div className=" mx-[138px] grid gap-5 lg:grid-cols-4 mt-12">
+                    <div className=" lg:mx-[138px] grid gap-5 grid-cols-2 lg:grid-cols-4 mt-12">
                       {
-                        productDetails?.map(details => <div key={details.id} className="card bg-base-100 pb-10">
+                        productDetails?.map(details => <div key={details.id} className="card pb-10">
                           <figure>
                             <Image
-                              className='mb-3' src={details.img.src}
+                              className='w-auto mb-3' src={details.img.src}
                               alt="Picture of the author"
                               width={180}
                               height={130}
@@ -181,7 +181,7 @@ const AddToCartPage = () => {
                               </div>
                               <p className='text-[#686868] ml-2'>{details.ratingDetails}</p>
                             </div>
-                            <div className="flex">
+                            <div className="flex mb-[10px]">
                               <span className=' text-sm text-[#686868] mr-2'>Seller: </span>
                               <Image
                                 className=' mr-5 w-[80px]' src={details.seller.src}
@@ -190,6 +190,7 @@ const AddToCartPage = () => {
                                 height={10}
                               />
                             </div>
+                            <button className='btn bg-[#FB641B] text-white lg:hidden '>Add to Cart</button>
                           </div>
                         </div>)
                       }
