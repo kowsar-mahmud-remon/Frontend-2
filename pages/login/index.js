@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import NavicationLayout from '../../layouts/NavicationLayout';
 import loginImg from '../../assets/images/securityImg.png';
 import logo from '../../assets/images/logo/main_logo.png';
@@ -10,6 +10,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const Login = () => {
+    const [check, setCheck] = useState(false)
     return (
         <NavicationLayout>
             <div className=' h-[100%] mx-[20px] md:mx-[50px] xl:mx-[150px] 2xl:mx-[210px] pt-10 pb-16'>
@@ -29,24 +30,24 @@ const Login = () => {
                         <form className=' flex flex-col gap-6 mt-10'>
                             <label className='text-red-600/100'>Login</label>
                             <input className='input' type="text" placeholder='Enter Your Phone Number or Email' />
-                            <input className='input ' type="password" placeholder='Enter Your Password' />
+                            <input className='input ' type={check ? 'text' : 'password'} placeholder='Enter Your Password' />
                             <div className='flex justify-between'>
                                 <div className='flex gap-1 '>
-                                    <input type="checkbox" />
-                                    <p>Show Passowrd</p>
+                                    <input onChange={e => setCheck(e.target.checked)} type="checkbox" />
+                                    <p>Show Passwords</p>
                                 </div>
                                 <p className='text-blue-600/100 underline '>Forgot Password?</p>
                             </div>
                             <button className='btn bg-[#FB641B] h-[45px] sm:h-[55px] xl:h-[70px] text-white'>Login</button>
                             <span className='mx-auto text-[#FB641B]'>Or</span>
                         </form>
-                        <div className='flex flex-col gap-6 mt-6 pb-16'>
-                            <div className='flex gap-5'>
-                                <button className='btn bg-[#3B5998] text-white'>
+                        <div className='flex flex-col gap-6 mt-6 pb-16 '>
+                            <div className='w-full flex justify-between items-center gap-4 '>
+                                <button className='btn bg-[#3B5998] text-white w-[220px] flex-nowrap'>
                                     <Image alt="" src={fbLogo} />
                                     Facebook
                                 </button>
-                                <button className='btn bg-[#D34836] text-white'>
+                                <button className='btn bg-[#D34836] text-white w-[220px] flex-nowrap'>
                                     <Image alt="" src={googleLogo} />
                                     Google
                                 </button>

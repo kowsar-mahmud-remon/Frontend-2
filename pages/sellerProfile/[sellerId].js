@@ -101,7 +101,7 @@ const seller = () => {
                 width="18"
                 height="15"
               />
-              <span className="ml-3 fw-semibold">Follow 100K+</span>
+              <span className="ml-3 fw-semibold">Followers 100K+</span>
             </div>
             <div className="bg-[#F2F3F7] w-[208px] h-[48px] p-2 text-center rounded-xl text-[18px]">
               <Image
