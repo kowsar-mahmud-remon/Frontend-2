@@ -1,14 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
 import React from "react";
 import { FaStar } from "react-icons/fa";
 
-const SellerProductCard = ({ product }) => {
+const SellerProductCard = ({ product, img1 }) => {
   const { img, price, pName, rating, sellerVerify } = product;
+
   return (
     <div>
       <div className="card w-[222px] bg-base-100 shadow-xl p-3">
         <figure>
-          <img className="" src={img} alt="Shoes" />
+          <Image className="" src={img} width={170} height={170} alt="Shoes" />
         </figure>
         <div className="card-body">
           <h2 className="card-title text-[#FB641B] font-bold">Tk {price}</h2>
@@ -23,7 +25,13 @@ const SellerProductCard = ({ product }) => {
             </span>
           </div>
           <div>
-            <img src={sellerVerify} alt="" />
+            <Image
+              className=""
+              src={sellerVerify}
+              width="170"
+              height="170"
+              alt="logo image"
+            />
           </div>
         </div>
       </div>
