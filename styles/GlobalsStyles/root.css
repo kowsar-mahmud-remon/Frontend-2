@@ -5,12 +5,26 @@ html{
 .page-side-nav-wraper{
     display: block;
 }
-.page-body{
-    width: calc(100% - 300px);
+.active-page-body{
+    width: calc(100% - 300px) !important;
     margin-left: auto;
-    transition: .5s;
+    transition: .3s;
 }
-
+@media screen and (max-width: 768px){
+    .active-page-body{
+        width: 100vw !important;
+        margin-left: auto;
+        transition: .3s;
+    }
+}
+.deactive-page-body{
+    width: calc(100%) !important;
+    margin-left: auto;
+    transition: .3s;
+}
+.sideNavTransition{
+    transition: .3s;
+}
 .disable-sid-nav{
     transform: translateX(-330px);
     position: absolute;

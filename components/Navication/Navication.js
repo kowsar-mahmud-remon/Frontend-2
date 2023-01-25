@@ -63,7 +63,6 @@ const Navication = () => {
         setRecognitionStarted(true);
     }
 
-
     return (
         <section className='shadow-md z-20 shadow-block-900 pb-2 relative'>
             <div className='w-[100%] h-[110px] bg-[#026C51] flex items-center justify-center '>
