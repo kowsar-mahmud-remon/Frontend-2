@@ -8,11 +8,11 @@ const ShoppingTypeNav = () => {
       "Wholesale Shopping",
     ];
     return (
-      <div className="h-[88px] border-t-2 hidden lg:block">
+      <div className="h-[88px] border-t-2">
         <div className="flex justify-center items-center h-full">
           {options.map((option, index) => (
-            <div key={index} className="ml-6">
-              <button className="font-[500] py-3 px-6 rounded-full bg-[#F2F3F7]">
+            <div key={index} className="md:ml-6 ml-1">
+              <button className="font-[400] md:text-[14px] text-[8px] md:py-3 py-2 md:px-6 px-[10px] rounded-full bg-[#F2F3F7]">
                 {option}
               </button>
             </div>

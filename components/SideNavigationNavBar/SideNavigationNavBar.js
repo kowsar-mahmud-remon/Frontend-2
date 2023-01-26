@@ -38,11 +38,11 @@ const dispatch = useDispatch()
        },
      ];
     return (
-      <div className="hidden lg:block">
+      <div className="hidden md:block">
         <div className="mb-6 flex items-center">
           <div className="w-72">
             <button
-              className="cursor-pointer flex justify-center items-center py-3 mr-32 px-6 rounded-full border border-[#FB641B]"
+              className="cursor-pointer flex justify-center items-center py-3 mr-32 px-8 rounded-full border border-[#FB641B]"
               onClick={() => dispatch(handleCategorySideNav())}
             >
               <Image src={CatIcon} alt="icon" />
