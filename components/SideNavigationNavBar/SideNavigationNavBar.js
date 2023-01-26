@@ -38,7 +38,7 @@ const dispatch = useDispatch()
        },
      ];
     return (
-      <div>
+      <div className="hidden lg:block">
         <div className="mb-6 flex items-center">
           <div className="w-72">
             <button

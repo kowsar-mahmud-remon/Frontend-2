@@ -8,7 +8,7 @@ const ShoppingTypeNav = () => {
       "Wholesale Shopping",
     ];
     return (
-      <div className="h-[88px] border-t-2">
+      <div className="h-[88px] border-t-2 hidden lg:block">
         <div className="flex justify-center items-center h-full">
           {options.map((option, index) => (
             <div key={index} className="ml-6">
