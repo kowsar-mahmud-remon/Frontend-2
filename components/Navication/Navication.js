@@ -14,6 +14,8 @@ import { BsFillMicFill } from 'react-icons/bs';
 import { FaUserAlt } from 'react-icons/fa';
 import { RxDashboard } from 'react-icons/rx';
 import { GiHamburgerMenu } from 'react-icons/gi';
+import TopNavBar from '../TopNavBar/TopNavBar';
+import ShoppingTypeNav from '../ShoppingTypeNav/ShoppingTypeNav';
 
 
 
@@ -64,10 +66,11 @@ const Navication = () => {
     }
 
     return (
-        <section className='shadow-md z-20 shadow-block-900 pb-2 relative'>
-            <div className='w-[100%] h-[110px] bg-[#026C51] flex items-center justify-center '>
+        <section className='shadow-md z-20 shadow-block-900 relative'>
+            <TopNavBar/>
+            {/* <div className='w-[100%] h-[110px] bg-[#026C51] flex items-center justify-center '>
                 <Image src={advertise} alt="img" className='w-[80%] max-w-[600px] h-[auto] ' />
-            </div>
+            </div> */}
             <div className='flex items-center h-[80px] gap-3 px-[20px] lg:px-[40px] 2xl:px-[50px]  bg-[#ffffff] justify-between text-[#026C51]'>
                 <div className='flex justify-center first-line:'>
                     <Link href="/">
@@ -168,6 +171,7 @@ const Navication = () => {
                     </div>
                 </div>
             </div>
+            <ShoppingTypeNav/>
         </section>
     );
 };
