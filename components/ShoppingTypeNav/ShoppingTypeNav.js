@@ -12,9 +12,7 @@ const ShoppingTypeNav = () => {
         <div className="flex justify-center items-center h-full">
           {options.map((option, index) => (
             <div key={index} className="ml-6">
-              <button
-                className="py-3 px-6 rounded-full bg-[#F2F3F7]"
-              >
+              <button className="font-[500] py-3 px-6 rounded-full bg-[#F2F3F7]">
                 {option}
               </button>
             </div>
