@@ -11,7 +11,7 @@ import img2 from '../../assets/images/image 88.png';
 
 const DontSelectProductCheckout = () => {
   return (
-    <div className=' mt-8 mb-72 lg:mx-20 '>
+    <div className=' mt-8 mb-72 lg:w-[1200px] mx-auto'>
       <div className="m-4 lg:m-0">
         <p className=' text-base text-[#686868] mb-2'>Home / Add to Cart / <span>Checkout</span></p>
         <h4 className=' text-2xl font-medium text-[#FB641B]'>Ready to Checkout!</h4>
