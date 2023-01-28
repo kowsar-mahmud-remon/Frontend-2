@@ -5,11 +5,11 @@ import { store } from '../store/store'
 import '../styles/globals.css'
 
 export default function App({ Component, pageProps }) {
-  return <>
+  return <div className="">
     <Provider store={store}>
-      <Navication />
       <MobileNavBar/>
+      <Navication />
       <Component {...pageProps} />
     </Provider>
-  </>
+  </div>
 }

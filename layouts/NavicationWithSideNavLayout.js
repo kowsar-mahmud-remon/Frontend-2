@@ -17,7 +17,7 @@ const NavicationWithSideNavLayout = ({ children }) => {
   return (
     <main>
       <section
-        className={`page-side-nav-wraper my-7 mx-5 xl:mx-12 sideNavTransition`}
+        className={`page-side-nav-wraper my-7 md:mx-5 xl:mx-12 sideNavTransition`}
       >
         <SideNavigationNavBar/>
         <SideNav />

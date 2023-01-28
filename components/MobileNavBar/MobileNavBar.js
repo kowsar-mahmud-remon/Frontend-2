@@ -156,13 +156,16 @@ const MobileNavBar = () => {
     },
   ];
   return (
-    <div className="relative w-full md:hidden">
-      <div className="fixed bottom-0 z-50 w-full bg-white boxShadowTop">
+    <div className="w-full md:hidden relative">
+      <div className="fixed left-0 bottom-0 z-50 w-full bg-white boxShadowTop">
         <div></div>
         <div className="h-14 flex justify-center items-center">
           {options.map((option, index) => (
             <div key={index} className="mx-auto ">
-              <Link href={option.href} className="text-[8px] flex flex-col justify-center items-center hover:text-[#287DF3]">
+              <Link
+                href={option.href}
+                className="text-[8px] flex flex-col justify-center items-center hover:text-[#287DF3]"
+              >
                 <div>{option.img}</div>
                 {option.name}
               </Link>
