@@ -16,6 +16,7 @@ import { RxDashboard } from 'react-icons/rx';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import TopNavBar from '../TopNavBar/TopNavBar';
 import ShoppingTypeNav from '../ShoppingTypeNav/ShoppingTypeNav';
+import MobileNavBar from '../MobileNavBar/MobileNavBar';
 
 
 
@@ -110,7 +111,7 @@ const Navication = () => {
                         Search
                     </button>
                 </div>
-                <div className={` ${styles.nanMenu} flex item-center items-center`}>
+                <div className={` ${styles.nanMenu} md:flex item-center items-center hidden`}>
                     <button className='flex items-center border-2 rounded-md border-[#001E00] py-1 px-4 text-sm xl:text-lg font-semibold'>
                         <Image src={supportIcon} alt="img" className="mt-[3px] mr-1 " />
                         Support
@@ -156,7 +157,7 @@ const Navication = () => {
 
             </div>
             <div className={`${styles.buttonSearchWraper} bg-[#FFFFFF]`}>
-                <div className=' flex h-[40px] w-[90%] bg-[#FFFFFF] border-solid border-2 border-[#026C51] rounded-full  text-lg font-semibold overflow-hidden'>
+                <div className=' flex h-[40px] w-[90%] bg-[#FFFFFF] border-solid border-2 border-[#026C51] rounded-full  text-lg font-semibold overflow-hidden '>
                     <div className='flex items-center border-r-[3px] w-[auto] border-[#026C51] text-[#026C51] my-1'>
                         <RiMapPinFill className='mx-1 xl:mx-4 text-[20px] sm:text-[30px] ' />
                         <span className='text-[12px] xl:text-[16px]'>Location</span>
@@ -171,7 +172,7 @@ const Navication = () => {
                     </div>
                 </div>
             </div>
-            <ShoppingTypeNav/>
+            <ShoppingTypeNav />
         </section>
     );
 };
