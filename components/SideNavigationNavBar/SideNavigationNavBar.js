@@ -51,10 +51,10 @@ const dispatch = useDispatch()
           </div>
           <div className="ml-5 w-full flex flex-wrap ">
             {options.map((option, index) => (
-              <div key={index} className="mr-8 mb-3">
-                <button className="px-[30px] py-3 rounded-full shadow-lg ">
+              <div key={index} className="xl:mr-6 xl:mb-3 lg:mr-4 lg:mb-2 md:mr-2 md:mb-2">
+                <button className="lg:px-[25px] md:px-[10px] lg:py-3 md:py-2 rounded-full shadow-lg ">
                   <div className="flex justify-center items-center">
-                    <p className="font-[500] text-[17px]">{option.title}</p>
+                    <p className="md:font-[400] font-[500] xl:text-[17px] lg:text-[16px] md:text-[14px]">{option.title}</p>
                     {parseInt(option.total) > 200 ? (
                       <p className="text-xs font-semibold text-[#FB641B] ml-1">
                         200+
