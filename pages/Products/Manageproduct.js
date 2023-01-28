@@ -491,8 +491,8 @@ const Manageproduct = () => {
                   value="Batch Delete"
                 />
               </div>
-
-              <div>
+ 
+              <div> 
                 <div className="btn-group lg:py-0 md:py-0 py-5">
                   <button className="bg-[#FB641B] hover:bg-[#ce4e0e] px-4 h-[44px] rounded ml-1 font-medium text-white">
                     Product
