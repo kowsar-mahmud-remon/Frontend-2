@@ -96,12 +96,13 @@ const Search = () => {
 
     return (
         <div className="flex px-24 mt-2">
-            <div className='w-[582px]  mr-[21px] px-2'>
+            <div className='w-[552px] '>
                 <div className=' mb-[16px] border border-[#FB641B] py-[13px] px-[23px] rounded-full flex w-[166px]'>
                     <Image className=''
                         src={cate}
                         width={20}
                         height={20}
+                        alt=''
                     />
                     <span className='ml-2 font-semibold text-[18px]'>Categories</span>
                 </div>
@@ -111,6 +112,7 @@ const Search = () => {
                         <li className='flex justify-between'><p className='font-semibold text-[18px] mb-[16px]'>All Collecction</p>
                             <Image className='h-2 mt-2'
                                 src={v2}
+                                alt=''
                             />
                         </li>
                         <li className='mb-[16px] text-[14px]'>Kacha Bazar (172)</li>
