@@ -156,7 +156,7 @@ const MobileNavBar = () => {
     },
   ];
   return (
-    <div className="relative w-full">
+    <div className="relative w-full md:hidden">
       <div className="fixed bottom-0 z-50 w-full bg-white boxShadowTop">
         <div></div>
         <div className="h-14 flex justify-center items-center">
