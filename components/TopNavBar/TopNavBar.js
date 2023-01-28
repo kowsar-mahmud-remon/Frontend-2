@@ -9,7 +9,7 @@ const TopNavBar = () => {
     
   ];
   return (
-    <div className="bg-[#026C51] h-12 px-24">
+    <div className="bg-[#026C51] h-12 px-24 hidden md:block">
       <div className="text-white flex justify-end items-center h-full">
         {options.map((option, index) => (
           <div key={index}>

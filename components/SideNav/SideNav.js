@@ -6,18 +6,19 @@ import { MdArrowBackIos } from 'react-icons/md';
 import { useRouter } from 'next/router';
 import { useGetCategoryQuery } from '../../features/category/categoryApi';
 import { useDispatch, useSelector } from 'react-redux';
-import { addCategoryName, setActiveBtn } from '../../features/category/categorySlice';
+import { addCategoryName, handleCategorySideNav, setActiveBtn } from '../../features/category/categorySlice';
 
 
 const Category = () => {
     const router = useRouter();
     const { data, isLoading, isError, error } = useGetCategoryQuery()
     const { asPath } = router;
-    const { category: { activeBtn, categoryName } } = useSelector(state => state)
+    const { category: { activeBtn, categoryName, isActiveCategory } } = useSelector(state => state)
     const dispatch = useDispatch()
-    console.log(categoryName)
+    console.log(isActiveCategory)
     return (
-        <section className={`${styles.sideNav} w-[285px] p-2 bg-[#ffffff] shawdow-black shadow-2xl `} id="sidNav">
+        <section className={`${styles.sideNav} w-[285px] ${isActiveCategory ? 'left-[-400px]' : ''} p-2 bg-[#ffffff] shawdow-black shadow-2xl delay-700 sideNavTransition `} id="sidNav">
+          
             <ul>
                 {
                     data?.categories?.map((c, index) => {
@@ -25,7 +26,7 @@ const Category = () => {
 
                         return (
                             <li onClick={() => {
-                                dispatch(addCategoryName({name:c.name}))
+                                dispatch(addCategoryName({ name: c.name }))
                                 router.push(path)
                             }}
                                 as={"li"}

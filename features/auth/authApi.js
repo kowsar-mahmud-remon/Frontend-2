@@ -13,8 +13,15 @@ export const categoryNavApi = apiSlice.injectEndpoints({
                 const result = await queryFulfilled;
                 dispatch(userLoggedIn(result.data))
             }
-        })
+        }),
+        loginUser: builder.mutation({
+            query: (data) => ({
+                url: "/user/login",
+                method: "POST",
+                body: data
+            }),
+        }),
     }),
 });
 
-export const { useAddUserMutation } = categoryNavApi;
+export const { useAddUserMutation,useLoginUserMutation } = categoryNavApi;

@@ -7,9 +7,9 @@ import { FaAngleRight } from 'react-icons/fa';
 
 const OrderPlacePage = () => {
   return (
-    <div className="mb-80 lg:flex mx-auto w-[100%]">
+    <div className="mb-80 lg:flex mx-auto lg:w-[1200px]">
       <div className="lg:mr-6 mb-10 mx-6 lg:mx-0">
-        <div className=" mt-6 ml-4 lg:w-[788px]">
+        <div className=" mt-6 pl-4 lg:w-[788px]">
           <p className="text-base text-[#707070]">Deliver to: Abdul Korim</p>
           <div className="lg:flex mt-4">
             <p className="text-xs mr-6 text-[#287DF3] mt-1">Home</p>
@@ -35,7 +35,7 @@ const OrderPlacePage = () => {
           </div>
         </div>
 
-        <div className=" mt-8 ml-4 lg:w-[788px]">
+        <div className=" mt-8 pl-4 lg:w-[788px]">
           <p className="text-base text-[#707070]">Banglar Big Store</p>
           <div className="flex mt-4 border-b border-[#B7B7B7] pb-4">
             <Image
