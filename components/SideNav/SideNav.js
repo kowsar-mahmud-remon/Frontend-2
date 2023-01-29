@@ -11,7 +11,8 @@ import { addCategoryName, handleCategorySideNav, setActiveBtn } from '../../feat
 
 const Category = () => {
     const router = useRouter();
-    const { data, isLoading, isError, error } = useGetCategoryQuery()
+    const { data, isLoading, isError, error } = useGetCategoryQuery();
+    console.log( "kopi",data);
     const { asPath } = router;
     const { category: { activeBtn, categoryName, isActiveCategory } } = useSelector(state => state)
     const dispatch = useDispatch()
