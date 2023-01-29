@@ -10,7 +10,6 @@ import v2 from '../../assets/images/Vector (2).png'
 import cate from '../../assets/images/Group 2399.png'
 import sellerVerify from '../../assets/images/sellerProfile/product/verified.png'
 import { useState } from 'react';
-import OutsideClickHandler from 'react-outside-click-handler';
 const Search = () => {
     const [minValue, set_minValue] = useState(25);
     const [maxValue, set_maxValue] = useState(75);
@@ -181,6 +180,18 @@ const Search = () => {
     }
 
     return (
+<<<<<<< HEAD
+        <div className="flex px-24 mt-2">
+            <div className='w-[552px] '>
+                <div className=' mb-[16px] border border-[#FB641B] py-[13px] px-[23px] rounded-full flex w-[166px]'>
+                    <Image className=''
+                        src={cate}
+                        width={20}
+                        height={20}
+                        alt=''
+                    />
+                    <span className='ml-2 font-semibold text-[18px]'>Categories</span>
+=======
         <div className=" flex px-[94px] mt-2">
             <div className={`${leftWidth} mr-[21px] ${hide}  lg:block md:block  shadow shadow-xl`}>
                 <div className='flex justify-between px-2'>
@@ -188,7 +199,7 @@ const Search = () => {
                         <Image className='h-[20px] w-[20px] mt-[3px]'
                             src={cate}
                         />
-                        <span className='ml-2 font-semibold text-[18px] text-[#001E00]'>Categories</span>
+                        <span className='ml-2 font-semibold text-[18px]'>Categories</span>
 
                     </div>
                     <p className='font-bold lg:hidden md:hidden mt-2 cursor-pointer' onClick={() => handleClose(1)}>X</p>
