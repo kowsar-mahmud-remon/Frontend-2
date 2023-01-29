@@ -163,7 +163,7 @@ const Search = () => {
             setHide('sm:block min-[320px]:block')
             setLeftWidth('sm:w-full ')
             setRightWidth('sm:hidden')
-            setBgHide('min-[320px]:block')
+            setBgHide('min-[320px]:')
         }
         else {
 
@@ -181,7 +181,18 @@ const Search = () => {
     }
 
     return (
-        <div className=" flex px-[94px] mt-2">
+        <div className=" flex lg:px-[94px] sm:px-[24px] min-[320px]:ml-[24px]  mt-2">
+            <div className={`sm:bg-red-300 ${bghide}  sm:h-[926px] sm:w-[107px]  lg:hidden md:hidden`}>
+                <OutsideClickHandler
+                    onOutsideClick={() => {
+                        setRightWidth('sm:block ')
+                        setLeftWidth('sm:hidden ')
+                        setBgHide('min-[320px]:hidden')
+                    }}
+                >
+
+                </OutsideClickHandler>
+            </div>
             <div className={`${leftWidth} mr-[21px] ${hide}  lg:block md:block  shadow shadow-xl`}>
                 <div className='flex justify-between px-2'>
                     <div className=' ml-2 mb-[16px] border  border-[#FB641B] py-[11px] px-[23px] rounded-full flex w-[166px]'>
@@ -192,7 +203,6 @@ const Search = () => {
 
                     </div>
                     <p className='font-bold lg:hidden md:hidden mt-2 cursor-pointer' onClick={() => handleClose(1)}>X</p>
-
                 </div>
 
 
@@ -201,7 +211,6 @@ const Search = () => {
                         <li className='flex justify-between'><p className='font-semibold text-[18px] mb-[16px] text-[#001E00] '>All Collecction</p>
                             <Image className='h-2 mt-2'
                                 src={v2}
-                                alt=''
                             />
                         </li>
                         {
