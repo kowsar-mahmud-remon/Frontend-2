@@ -68,7 +68,7 @@ export default function Home({ items }) {
             {
               items.length && <Carosel data={items} />
             }
-            <div className={`${styles.rightHeroSection} pl-4`} >
+            {/* <div className={`${styles.rightHeroSection} pl-4`} >
               <div>
                 <div>
                   <Image alt='' src={logo} />
@@ -86,7 +86,7 @@ export default function Home({ items }) {
               </div>
               <Image alt='' src={rightHeroMid} />
               <Image alt='' src={rightHeroBottm} />
-            </div>
+            </div> */}
           </div>
         </div>
         <div>

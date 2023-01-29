@@ -4,7 +4,8 @@ const initialState = {
     activeBtn: 'allProducts',
     id:'',
     page:0,
-    categoryName:''
+    categoryName:'',
+    isActiveCategory:false,
 };
 
 const categorySlice = createSlice({
@@ -20,9 +21,12 @@ const categorySlice = createSlice({
         },
         addCategoryName:(state,action)=>{
             state.categoryName = action?.payload.name
+        },
+        handleCategorySideNav:(state)=>{
+            state.isActiveCategory = !state.isActiveCategory
         }
     },
 });
 
-export const {  setActiveBtn,increasePage,addCategoryName } = categorySlice.actions;
+export const {  setActiveBtn,increasePage,addCategoryName,handleCategorySideNav } = categorySlice.actions;
 export default categorySlice.reducer;

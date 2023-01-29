@@ -44,3 +44,57 @@ export const settings = {
         },
     ]
 };
+export const imgSettingsMobile = {
+    arrows: true,
+    speed: 500,
+    autoplaySpeed: 3000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    cssEase: "linear",
+ 
+    responsive: [
+        {
+            breakpoint: 1900,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 1600,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 968,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 640,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            }
+        },
+    ]
+};
+export const imageSettings = {
+    speed: 500,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    cssEase: "linear",
+    vertical: true,
+    verticalSwiping: true,
+};

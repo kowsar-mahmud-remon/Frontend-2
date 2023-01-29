@@ -23,3 +23,4 @@ const paginateSlice = createSlice({
 
 export const {  increaseReviewPage,increaseQuestionPage } = paginateSlice.actions;
 export default paginateSlice.reducer;
+

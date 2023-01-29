@@ -45,9 +45,11 @@ const AllCategory = () => {
             >
                 {
                     category?.map((category, index) => <AllCategoryCard
+                        
                         key={index}
                         products={category.products}
                         result={category}
+                        
                     />)
                 }
             </InfiniteScroll>

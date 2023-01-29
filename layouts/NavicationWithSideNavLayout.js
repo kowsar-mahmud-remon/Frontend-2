@@ -1,24 +1,37 @@
-import React from 'react';
-import Navication from '../components/Navication/Navication';
-import SideNav from '../components/SideNav/SideNav';
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import Navication from "../components/Navication/Navication";
+import SideNav from "../components/SideNav/SideNav";
+import { handleCategorySideNav } from "../features/category/categorySlice";
 // import styles from '../styles/Home.module.css'
 
+import SideNavigationNavBar from "../components/SideNavigationNavBar/SideNavigationNavBar";
 
 const NavicationWithSideNavLayout = ({ children }) => {
-    return (
-        <main >
-          
-            <section className={`page-side-nav-wraper my-7 mx-5 xl:mx-12`}>
-                <SideNav />
-                <div className='page-body' id='page-body'>
-                    {
-                        children
-                    }
-                </div>
-            </section>
+  const {
+    category: { isActiveCategory },
+  } = useSelector((state) => state || {});
+  const dispatch = useDispatch();
 
-        </main>
-    );
+  
+  return (
+    <main>
+      <section
+        className={`page-side-nav-wraper my-7 md:mx-5 xl:mx-12 sideNavTransition`}
+      >
+        <SideNavigationNavBar/>
+        <SideNav />
+        <div
+          className={`${
+            isActiveCategory ? "deactive-page-body" : "active-page-body"
+          } w-[100%-300px]`}
+          id="page-body"
+        >
+          {children}
+        </div>
+      </section>
+    </main>
+  );
 };
 
 export default NavicationWithSideNavLayout;
