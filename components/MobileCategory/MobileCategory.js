@@ -21,11 +21,11 @@ const MobileCategory = () => {
         <section
           className={`shawdow-black shadow-2xl delay-700 sideNavTransition`}
           id="sidNav"
-            >
-                <h1 className='text-lg font-bold my-5 ml-4'>Categories</h1>
-          <ul className="grid grid-cols-2 gap-4 p-2 bg-[#C9C9C9]">
+        >
+          <h1 className="text-lg font-bold my-5 ml-4">Categories</h1>
+          <ul className="grid grid-cols-2 gap-4 p-2 bg-[#f1ecec]">
             {data?.categories?.map((c, index) => {
-              let path = `/categories/${c.slug}`;
+              let path = `/categories/${c.slug}/${c._id}`;
 
               return (
                 <li
@@ -49,7 +49,7 @@ const MobileCategory = () => {
                       width={30}
                       height={30}
                     />
-                    <p className='ml-2'>{c.name}</p>
+                    <p className="ml-2">{c.name}</p>
                   </Link>
                 </li>
               );

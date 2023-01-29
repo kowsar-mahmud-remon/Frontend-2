@@ -42,17 +42,17 @@ const DynamicCat = () => {
     return (
         <NavicationWithSideNavLayout>
             <div>
-                <div>
+                <div className='mx-3'>
                     <div>
-                        <p className='text-[16px] '><Link href={'/'}>Home</Link> / <span className='text-[#287DF3]'>{name}</span> </p>
+                        <p className='lg:text-[16px] text-[12px] '><Link href={'/'}>Home</Link> / <span className='text-[#287DF3]'>{name}</span> </p>
                     </div>
                     <div className='flex items-center gap-1 mt-[8px]'>
                         <Image src={img} alt='img' width={28} height={28} />
-                        <p className='text-[24px] text-[#FB641B] font-[500]'>Exclusive</p>
+                        <p className='lg:text-[24px] text-[18px] text-[#FB641B] font-[500]'>{ name}</p>
                     </div>
                     <div className='flex gap-5 flex-wrap mt-[26px]'>
                         <button
-                            className={`${activeBtn === 'allProducts' ? active : deactivate}`}
+                            className={`${activeBtn === 'allProducts' ? active : deactivate} lg:text-[16px] text-[14px]`}
                             onClick={() => {
                                 dispatch(setActiveBtn({ value: 'allProducts', id }))
                             }}
@@ -63,7 +63,7 @@ const DynamicCat = () => {
                                     dispatch(setActiveBtn({ value: btn.name, id: btn._id }))
                                 }}
                                 key={index}
-                                className={`${activeBtn === btn.name ? active : deactivate}`}
+                                className={`${activeBtn === btn.name ? active : deactivate} lg:text-[16px] text-[14px]`}
                             >{btn.name}</button>)
                         }
                     </div>
