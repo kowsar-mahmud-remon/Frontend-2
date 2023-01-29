@@ -177,7 +177,6 @@ const Search = () => {
     }
 
     return (
-<<<<<<< HEAD
         <div className="flex px-24 mt-2">
             <div className='w-[552px] '>
                 <div className=' mb-[16px] border border-[#FB641B] py-[13px] px-[23px] rounded-full flex w-[166px]'>
@@ -188,19 +187,6 @@ const Search = () => {
                         alt=''
                     />
                     <span className='ml-2 font-semibold text-[18px]'>Categories</span>
-=======
-        <div className=" flex px-[94px] mt-2">
-            <div className={`${leftWidth} mr-[21px] ${hide}  lg:block md:block  shadow shadow-xl`}>
-                <div className='flex justify-between px-2'>
-                    <div className=' ml-2 mb-[16px] border  border-[#FB641B] py-[11px] px-[23px] rounded-full flex w-[166px]'>
-                        <Image className='h-[20px] w-[20px] mt-[3px]'
-                            src={cate}
-                        />
-                        <span className='ml-2 font-semibold text-[18px]'>Categories</span>
-
-                    </div>
-                    <p className='font-bold lg:hidden md:hidden mt-2 cursor-pointer' onClick={() => handleClose(1)}>X</p>
->>>>>>> 3aa2910c419a9b80843b6d0e706aa284206fce49
                 </div>
 
 
@@ -266,7 +252,7 @@ const Search = () => {
                         />
                     </div>
                     <div className='container mb-[16px] px-4'>
-                        <ReactSlider
+                        {/* <ReactSlider
                             className="horizontal-slider bg-red-500"
                             thumbClassName="example-thumb"
                             trackClassName="example-track"
@@ -276,7 +262,7 @@ const Search = () => {
                             renderThumb={(props, state) => <div {...props}>{state.valueNow}</div>}
                             pearling
                             minDistance={10}
-                        />
+                        /> */}
                     </div>
                     <div className='flex justify-between mb-[16px] px-2'>
                         <select className='w-[50px] border border-gray-400 rounded-md'>
