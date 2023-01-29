@@ -10,6 +10,7 @@ import v2 from '../../assets/images/Vector (2).png'
 import cate from '../../assets/images/Group 2399.png'
 import sellerVerify from '../../assets/images/sellerProfile/product/verified.png'
 import { useState } from 'react';
+import OutsideClickHandler from 'react-outside-click-handler';
 const Search = () => {
     const [minValue, set_minValue] = useState(25);
     const [maxValue, set_maxValue] = useState(75);
@@ -21,6 +22,7 @@ const Search = () => {
     const [hide, setHide] = useState('sm:hidden min-[320px]:hidden ')
     const [leftWidth, setLeftWidth] = useState('w-[382px]')
     const [rightWidth, setRightWidth] = useState('w-full')
+    const [bghide, setBgHide] = useState('')
 
     const handleclearAll = () => {
         const filter = document.getElementById('filter')
@@ -161,6 +163,7 @@ const Search = () => {
             setHide('sm:block min-[320px]:block')
             setLeftWidth('sm:w-full ')
             setRightWidth('sm:hidden')
+            setBgHide('min-[320px]:block')
         }
         else {
 
@@ -179,6 +182,17 @@ const Search = () => {
 
     return (
         <div className=" flex lg:px-[94px] sm:px-[24px] min-[320px]:ml-[24px]  mt-2">
+            <div className={`sm:bg-red-300 ${bghide}  sm:h-[926px] sm:w-[107px]  lg:hidden md:hidden`}>
+                <OutsideClickHandler
+                    onOutsideClick={() => {
+                        setRightWidth('sm:block ')
+                        setLeftWidth('sm:hidden ')
+                        setBgHide('min-[320px]:hidden')
+                    }}
+                >
+
+                </OutsideClickHandler>
+            </div>
             <div className={`${leftWidth} mr-[21px] ${hide}  lg:block md:block  shadow shadow-xl`}>
                 <div className='flex justify-between px-2'>
                     <div className=' ml-2 mb-[16px] border  border-[#FB641B] py-[11px] px-[23px] rounded-full flex w-[166px]'>
@@ -254,7 +268,9 @@ const Search = () => {
                         />
                     </div>
                     <div className='container mb-[16px] px-4 range'>
-
+                        <form >
+                            <input type="range" />
+                        </form>
                     </div>
                     <div className='flex justify-between mb-[16px] px-2'>
                         <select className='w-[50px] border border-gray-400 rounded-md'>
