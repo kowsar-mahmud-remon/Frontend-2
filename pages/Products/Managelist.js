@@ -2,7 +2,6 @@ import Link from "next/link";
 
 const ManageList = ({ menu, tabname, setActive, active }) => {
 
-    console.log(menu);
 
     const handleMenu = (menu) => {
         setActive(menu)
