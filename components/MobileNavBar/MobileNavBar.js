@@ -46,7 +46,7 @@ const MobileNavBar = () => {
     },
     {
       name: "Categories",
-      href: "/categories",
+      href: "/mobileCategories",
       img: (
         <>
           <svg
@@ -102,7 +102,7 @@ const MobileNavBar = () => {
     },
     {
       name: "Cart",
-      href: "/categories",
+      href: "/",
       img: (
         <>
           <svg
@@ -122,7 +122,7 @@ const MobileNavBar = () => {
     },
     {
       name: "Menu",
-      href: "/categories",
+      href: "/",
       img: (
         <>
           <svg
