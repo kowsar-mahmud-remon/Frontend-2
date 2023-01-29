@@ -32,18 +32,9 @@ export const counterSlice = createSlice({
       state.totalPrice = state.price + state.price2;
     },
 
-
-    reset: state => {
-      state.count = 0;
-    },
-
-    increaseByAmount: (state, action) => {
-      state.count = state.count + action.payload;
-    },
-
   }
 });
 
-export const { increment, productIncrement, productDecrement, decrement, reset, increaseByAmount } = counterSlice.actions;
+export const { increment, productIncrement, productDecrement, decrement } = counterSlice.actions;
 
 export default counterSlice.reducer;
