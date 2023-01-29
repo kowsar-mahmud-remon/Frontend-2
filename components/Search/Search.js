@@ -1,7 +1,8 @@
 import React from 'react';
 import { FaStar, FaShoppingCart, FaMenu } from "react-icons/fa";
 import { FiMenu } from "react-icons/fi";
-import ReactSlider from 'react-slider'
+import style from '../../styles/multirange.module.css'
+
 import Image from 'next/image'
 import img1 from '../../assets/images/image 4.png'
 import v2 from '../../assets/images/Vector (2).png'
@@ -10,10 +11,14 @@ import cate from '../../assets/images/Group 2399.png'
 import sellerVerify from '../../assets/images/sellerProfile/product/verified.png'
 import { useState } from 'react';
 const Search = () => {
-    const [min, setMin] = useState(0)
-    const [max, setMax] = useState(100)
+    const [minValue, set_minValue] = useState(25);
+    const [maxValue, set_maxValue] = useState(75);
+    const handleInput = (e) => {
+        set_minValue(e.minValue);
+        set_maxValue(e.maxValue);
+    };
     const [show, setShow] = useState(true)
-    const [hide, setHide] = useState('sm:hidden ')
+    const [hide, setHide] = useState('sm:hidden min-[320px]:hidden ')
     const [leftWidth, setLeftWidth] = useState('w-[382px]')
     const [rightWidth, setRightWidth] = useState('w-full')
 
@@ -153,8 +158,8 @@ const Search = () => {
     ]
     const handleRes = (view) => {
         if (view === 1) {
-            setHide('sm:block')
-            setLeftWidth('sm:w-full')
+            setHide('sm:block min-[320px]:block')
+            setLeftWidth('sm:w-full ')
             setRightWidth('sm:hidden')
         }
         else {
@@ -163,8 +168,8 @@ const Search = () => {
     }
     const handleClose = (view) => {
         if (view === 1) {
-            setRightWidth('sm:block')
-            setLeftWidth('sm:hidden')
+            setRightWidth('sm:block ')
+            setLeftWidth('sm:hidden ')
         }
         else {
 
@@ -173,14 +178,14 @@ const Search = () => {
     }
 
     return (
-        <div className=" flex px-[94px] mt-2">
+        <div className=" flex lg:px-[94px] sm:px-[24px] min-[320px]:ml-[24px]  mt-2">
             <div className={`${leftWidth} mr-[21px] ${hide}  lg:block md:block  shadow shadow-xl`}>
                 <div className='flex justify-between px-2'>
                     <div className=' ml-2 mb-[16px] border  border-[#FB641B] py-[11px] px-[23px] rounded-full flex w-[166px]'>
                         <Image className='h-[20px] w-[20px] mt-[3px]'
                             src={cate}
                         />
-                        <span className='ml-2 font-semibold text-[18px]'>Categories</span>
+                        <span className='ml-2 font-semibold text-[18px] text-[#001E00]'>Categories</span>
 
                     </div>
                     <p className='font-bold lg:hidden md:hidden mt-2 cursor-pointer' onClick={() => handleClose(1)}>X</p>
@@ -189,7 +194,7 @@ const Search = () => {
 
                 <div className='px-2'>
                     <ul>
-                        <li className='flex justify-between'><p className='font-semibold text-[18px] mb-[16px]'>All Collecction</p>
+                        <li className='flex justify-between'><p className='font-semibold text-[18px] mb-[16px] text-[#001E00] '>All Collecction</p>
                             <Image className='h-2 mt-2'
                                 src={v2}
                             />
@@ -197,7 +202,7 @@ const Search = () => {
                         {
                             show ? vegProducts && vegProducts.map((vproduct, i) => {
                                 return (
-                                    <li className='mb-[16px] text-[14px] font-semibold' key={i}>
+                                    <li className='mb-[16px] text-[14px]font-medium text-[#001E00]' key={i}>
                                         {vproduct}
                                     </li>
                                 )
@@ -229,7 +234,7 @@ const Search = () => {
 
                 <div className='px-2'>
                     <div className='flex justify-between mb-[16px]'>
-                        <h5>Filters</h5>
+                        <p className='font-semibold mb-[16px] text-[#001E00] '>Filters</p>
                         <p className='text-[#287DF3] cursor-pointer' onClick={handleclearAll}>Clear all</p>
                     </div>
                     <div>
@@ -243,23 +248,13 @@ const Search = () => {
 
                 <div>
                     <div className='flex justify-between px-2'>
-                        <p className='font-semibold mb-[16px] '>Prices</p>
+                        <p className='font-semibold mb-[16px] text-[#001E00] '>Prices</p>
                         <Image className='h-2 mt-2'
                             src={v2}
                         />
                     </div>
-                    <div className='container mb-[16px] px-4'>
-                        <ReactSlider
-                            className="horizontal-slider bg-red-500"
-                            thumbClassName="example-thumb"
-                            trackClassName="example-track"
-                            defaultValue={[0, 100]}
-                            ariaLabel={['Lower thumb', 'Upper thumb']}
-                            ariaValuetext={state => `Thumb value ${state.valueNow}`}
-                            renderThumb={(props, state) => <div {...props}>{state.valueNow}</div>}
-                            pearling
-                            minDistance={10}
-                        />
+                    <div className='container mb-[16px] px-4 range'>
+
                     </div>
                     <div className='flex justify-between mb-[16px] px-2'>
                         <select className='w-[50px] border border-gray-400 rounded-md'>
@@ -280,7 +275,7 @@ const Search = () => {
                 <hr className='mb-[16px]' />
                 <div>
                     <div className='flex justify-between px-2'>
-                        <p className='font-semibold mb-[16px]'>Seller</p>
+                        <p className='font-semibold mb-[16px] text-[#001E00]'>Seller</p>
                         <Image className='h-2 mt-2'
                             src={v2}
                         />
@@ -288,17 +283,17 @@ const Search = () => {
 
                     <div className="mb-[16px]">
                         <form className='px-2'>
-                            <div className='border p-1 rounded-md w-28 mb-2 '>
+                            <div className='border  rounded-md w-28 mb-2 p-[8px] '>
                                 <input type="checkbox" id="seller" name="vehicle1" onClick={handleNewSeller} value="New Seller" />
-                                <label for="vehicle1 " className='text-[14px]'> New Seller</label><br />
+                                <label for="vehicle1 " className='text-[14px] text-[#001E00] font-medium'> New Seller</label><br />
                             </div>
-                            <div className='border p-1 rounded-md w-32 mb-2'>
+                            <div className='border p-[8px] rounded-md w-32 mb-2'>
                                 <input type="checkbox" id="verifiedSeller" name="vehicle2" onClick={handleverifiedSeller} value="Verified Seller" />
-                                <label for="vehicle2" className='text-[14px]'> Verified Seller</label><br />
+                                <label for="vehicle2" className='text-[14px] text-[#001E00]  font-medium'> Verified Seller</label><br />
                             </div>
-                            <div className='border p-1 rounded-md w-32'>
+                            <div className='border p-[8px] rounded-md w-32'>
                                 <input type="checkbox" id="AssuredSeller" name="vehicle3" onClick={handleAssuredSeller} value="Assured Seller" />
-                                <label for="vehicle3" className='text-[14px]'> Assured Seller</label><br />
+                                <label for="vehicle3" className='text-[14px] text-[#001E00]  font-medium'> Assured Seller</label><br />
                             </div>
                         </form>
                     </div>
@@ -308,8 +303,8 @@ const Search = () => {
                 <hr className='mb-[16px]' />
 
                 <div>
-                    <div className='flex justify-between px-2'>
-                        <p className='font-semibold mb-[16px]'>Location</p>
+                    <div className='flex justify-between px-[16px]'>
+                        <p className='font-semibold mb-[16px] text-[#001E00]'>Location</p>
                         <Image className='h-2 mt-2'
                             src={v2}
                         />
@@ -317,38 +312,38 @@ const Search = () => {
 
                     <div className="mb-[16px] px-[16px]">
                         <form className='grid grid-cols-2'>
-                            <div className='border  rounded-md w-[98px] mb-2 flex '>
+                            <div className='border  rounded-md w-[98px] mb-2 flex p-[8px] '>
                                 <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-                                <label for="vehicle1" className='text-[14px]'> Dhaka</label><br />
+                                <label for="vehicle1" className='text-[14px] font-semibold text-[#001E00] ml-2 mt-[1px]'> Dhaka</label><br />
                             </div>
-                            <div className='border  rounded-md w-[136px]  mb-2'>
+                            <div className='border  rounded-md w-[136px] p-[8px] mb-2'>
                                 <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-                                <label for="vehicle1" className='text-[14px]'>Chittagong</label><br />
+                                <label for="vehicle1" className='text-[14px] font-semibold text-[#001E00] ml-2 mt-[1px]'>Chittagong</label><br />
 
                             </div>
-                            <div className='border  rounded-md w-[98px] mb-2'>
+                            <div className='border  rounded-md w-[98px] p-[8px] mb-2'>
                                 <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-                                <label for="vehicle1" className='text-[14px]'>Barishal</label><br />
+                                <label for="vehicle1" className='text-[14px] font-semibold text-[#001E00] ml-2 mt-[1px]'>Barishal</label><br />
                             </div>
-                            <div className='border  rounded-md w-[136px]  mb-2'>
+                            <div className='border  rounded-md w-[136px] p-[8px]  mb-2'>
                                 <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-                                <label for="vehicle1" className='text-[14px]'>Rajshahi</label><br />
+                                <label for="vehicle1" className='text-[14px] font-semibold text-[#001E00] ml-2 mt-[1px]'>Rajshahi</label><br />
                             </div>
-                            <div className='border  rounded-md w-[98px] mb-2'>
+                            <div className='border  rounded-md w-[98px] p-[8px] mb-2'>
                                 <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-                                <label for="vehicle1" className='text-[14px]'>Khulna</label><br />
+                                <label for="vehicle1" className='text-[14px] font-semibold text-[#001E00] ml-2 mt-[1px]'>Khulna</label><br />
                             </div>
-                            <div className='border  rounded-md w-[136px]  mb-2'>
+                            <div className='border  rounded-md w-[136px] p-[8px] mb-2'>
                                 <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-                                <label for="vehicle1" className='text-[14px]'>Rangpur</label><br />
+                                <label for="vehicle1" className='font-semibold text-[#001E00] ml-2 mt-[1px] text-[14px]'>Rangpur</label><br />
                             </div>
-                            <div className='border  rounded-md w-[98px] mb-2'>
+                            <div className='border  rounded-md w-[98px] p-[8px] mb-2'>
                                 <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-                                <label for="vehicle1" className='text-[14px]'>Sylhet</label><br />
+                                <label for="vehicle1" className='text-[14px] font-semibold text-[#001E00] ml-2 mt-[1px]'>Sylhet</label><br />
                             </div>
-                            <div className='border  rounded-md w-[136px]  mb-2'>
+                            <div className='border  rounded-md w-[136px]  p-[8px] mb-2'>
                                 <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-                                <label for="vehicle1" className='text-[14px]'>Mymensingh</label><br />
+                                <label for="vehicle1" className='text-[14px] font-semibold text-[#001E00] ml-2 mt-[1px]'>Mymensingh</label><br />
                             </div>
                         </form>
                     </div>
@@ -361,19 +356,20 @@ const Search = () => {
             </div>
 
             {/*--------------------- right div----------------- */}
-            <div className={`${rightWidth}`}>
+            <div className={`${rightWidth} `}>
                 <div className={`flex justify-between `}>
                     <p className='text-[16px] mt-[24px]'>Home / <span className='text-[#287DF3]'>Search Results</span></p>
-                    <p className='font-bold lg:hidden md:hidden' onClick={() => handleRes(1)}><FiMenu /></p>
-                    <div className='flex'><p className='font-semibold  mt-[34px]'>Sort By:</p>
-                        <select className='text-[16px] text-[#686868] p-[11px] font-semibold border mt-[24px] ' name="" id="">
+
+                    <div className='flex'><p className='font-semibold  lg:mt-[34px] sm:mt-6 min-[320px]:mt-6'>Sort By:</p>
+                        <select className='text-[12px] w-[110px] text-[#686868] p-[11px] font-semibold border lg:mt-[24px] sm:mt-4  min-[320px]:mt-4 ' name="" id="">
                             <option selected className='p-[11px]' value="">Best Match</option>
                             <option value="">Price High to low</option>
                             <option value="">Price Low to high</option>
                         </select>
                     </div>
+                    <p className='font-bold lg:hidden md:hidden mt-[19px] sm:mr-2 min-[320px]:mr-2' onClick={() => handleRes(1)}><FiMenu /></p>
                 </div>
-                <div className='flex flex-wrap gap-[22px]'>
+                <div className='flex flex-wrap lg:gap-[22px] sm:gap-[16px] min-[320px]:gap-[10px]'>
 
                     {
 
@@ -381,11 +377,11 @@ const Search = () => {
                             return (
                                 <div key={product.id}>
 
-                                    <div className="card w-[222px] h-[440px] bg-base-100 shadow-xl">
-                                        <Image className="" src={product.img} width="220" height="154" alt="Shoes" />
+                                    <div className="card sm:w-[180px] min-[320px]:w-[180px] lg:w-[262px] min-[320px]:h-[423px] lg:h-[440px] bg-base-100 shadow-xl">
+                                        <Image className="min-[320px]:w-[180px] min-[320px]:h-[126px]" src={product.img} width={180} height={126} alt="Shoes" />
 
                                         <div className="card-body px-[16px] inline">
-                                            <h2 className="card-title text-[#FB641B] font-bold text-[20px] inline-block mr-[4px] mb-[10px]">
+                                            <h2 className="card-title text-[#FB641B] font-bold text-[20px] inline-block mr-[4px] mb-[10px] min-[320px]:mt-[-20px]">
                                                 Tk {product.price}{" "}
                                             </h2>
                                             <span className="text-[#707070] text-[12px]">
@@ -394,9 +390,9 @@ const Search = () => {
                                             </span>
                                             <p className="font-bold text-[16px] mb-[10px]">{product.pName}</p>
                                             <div className="flex justify-between ">
-                                                <div className="flex bg-[#FB641B] text-white  rounded p-[2px] text-[12px] mr-[8px]">
-                                                    <span>{product.rating}</span>
-                                                    <FaStar className="my-auto ml-2"></FaStar>
+                                                <div className="flex lg:bg-[#FB641B] min-[320px]:bg-[#026C51] min-[320px]:h-4 text-white  rounded px-[2px] text-[12px] mr-[4px]">
+                                                    <span className='min-[320px]:mt-[-1px]'>{product.rating}</span>
+                                                    <FaStar className=" ml-2 min-[320px]:mt-[2px]"></FaStar>
                                                 </div>
                                                 <span className="text-[13px] text-[#686868] inline-block my-auto ml-2 ">
                                                     24 Ratings & 5 Reviews
@@ -410,9 +406,9 @@ const Search = () => {
                                                     height="24"
                                                     alt="logo image"
                                                 />
-                                                <div className="mt-[38px] mb-[16px]">
-                                                    <button className="btn bg-[#FB641B] w-[186px] mx-auto">
-                                                        <span className="text-white mr-[4px]">Add to Cart</span>
+                                                <div className="min-[320px]:mt-[16px] lg:mt-[38px] mb-[16px]">
+                                                    <button className="btn bg-[#FB641B] sm:w-[160px] min-[320px]:w-[160px] min-[320px]:h-[38px] lg:w-[186px] lg:mx-[20px] min-[320px]:mx-[-5px]">
+                                                        <span className="text-white text-[12px] mr-[4px]">Add to Cart</span>
                                                         <FaShoppingCart className="text-white h-[20px] w-[24px]"></FaShoppingCart>
                                                     </button>
                                                 </div>
