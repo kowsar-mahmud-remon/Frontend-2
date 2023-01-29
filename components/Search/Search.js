@@ -192,7 +192,7 @@ const Search = () => {
 
                     </div>
                     <p className='font-bold lg:hidden md:hidden mt-2 cursor-pointer' onClick={() => handleClose(1)}>X</p>
->>>>>>> 3aa2910c419a9b80843b6d0e706aa284206fce49
+
                 </div>
 
 
