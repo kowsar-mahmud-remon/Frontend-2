@@ -1,17 +1,18 @@
 import ManageAccoutSideBar from "../../components/ManageAccoutSideBar/ManageAccoutSideBar";
+import Navication from "../../components/Navication/Navication";
 import Image from 'next/image';
 
 const ManageMyAccount = () => {
     return (
 
-        <div className="">
+        <div className="min-w-[1920px]">
 
-            <div className="flex  my-8 mx-5 gap-[40px] xl:mx-4">
-                <div className="">
+            <div className="flex  my-8 mx-5 gap-[55px] xl:mx-12">
+                <div className="ml-[300px]">
                     <ManageAccoutSideBar></ManageAccoutSideBar>
                 </div>
                 <div >
-                    <div className="mr-[30px]">
+                    <div className="mr-[300px]">
                         <div>
                             <h1 className="text-[#FB641B] text-[24px] font-semibold">Manage My Account</h1>
                         </div>
