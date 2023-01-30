@@ -6,13 +6,9 @@ export const ManageAccount = () => {
 
         <div className="">
 
-<<<<<<< HEAD
             <div className="flex  my-8 mx-5 gap-[40px] xl:mx-4">
                 <div className="">
                 </div>
-=======
-            <div>
->>>>>>> 757944bc1469ef11918ee2eeb8b02ad4d4c63b1e
                 <div >
                     <div className="lg:mr-[30px]">
                         <div>
