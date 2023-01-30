@@ -68,22 +68,28 @@ const MyOrderDetails = () => {
               <p className="text-base ml-2">{data.status}</p>
             </div>
           </div>
-            <div>
-              <div className="overflow-x-auto">
-                <table className="table w-full">
-                  <tbody>
+          <div>
+            <div className="overflow-x-auto">
+              <table className="table w-full">
+                <tbody>
+                  {/* map er kaj hobe ekhane. just emni akhn show kora hoise */}
+                  {data && (
                     <tr>
-                                      <td>
-                                          <Image width='20' height='20' src={ data.image} alt=''/>
+                      <td className="flex items-center">
+                        <Image width="57" height="46" src={data.image} alt="" />
+                        <p>{data.productName}</p>
                       </td>
-                      <td>Cy Ganderton</td>
-                      <td>Quality Control Specialist</td>
-                      <td>Blue</td>
+                      <td>Tk{data.subtotal}</td>
+                      <td>Qty: {data.qty}</td>
+                      <td>
+                        <button className="text-[#287DF3]">Cancel</button>
+                      </td>
                     </tr>
-                  </tbody>
-                </table>
-              </div>
+                  )}
+                </tbody>
+              </table>
             </div>
+          </div>
         </div>
       </div>
       {/* <div className="grid grid-cols-2 gap-4">
