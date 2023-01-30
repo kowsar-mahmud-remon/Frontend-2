@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import React from 'react';
 import ManageAccountLayout from '../../components/ManageAccoutSideBar/ManageAccountLayout';
-import { profileLinksObj } from '../../Utils/myProfileLinks';
+import profileLinksObj  from '../../Utils/myProfileLinks';
 
 const Profile = () => {
 
@@ -10,17 +10,17 @@ const Profile = () => {
     return (
         <ManageAccountLayout>
             {
-                profileLinksObj.map((p, i) => {
+                profileLinksObj?.map((p, i) => {
                     console.log(p)
-                    if (p.href === router?.query?.slug) {
-                        return p.element
+                    if (p?.href === router?.query?.slug) {
+                        return p?.element
                     }
 
-                    p.links && p.links.map((e, i) => {
+                    p?.links && p?.links?.map((e, i) => {
                         if (e.href === router?.query?.slug) {
                             console.log('hello')
                             console.log(e)
-                            return e.element
+                            return e?.element
                         }
                     })
                 })
