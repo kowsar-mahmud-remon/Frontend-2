@@ -28,7 +28,7 @@ const MyOrderDetails = () => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full pl-5">
       <div className="flex justify-between items-center px-4 py-5 shadow-lg rounded-lg">
         <div className="">
           <h3 className="font-[500]">
