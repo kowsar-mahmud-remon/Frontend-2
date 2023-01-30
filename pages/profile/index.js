@@ -1,6 +1,6 @@
-import ManageMyAccount from "../../components/ManageAccoutSideBar/ManageAccount";
+import  ManageAccount  from "../../components/ManageAccoutSideBar/ManageAccount";
 import ManageAccountLayout from "../../components/ManageAccoutSideBar/ManageAccountLayout";
-import ManageAccoutSideBar from "../../components/ManageAccoutSideBar/ManageAccoutSideBar";
+
 
 
 const Profile = () => {
@@ -99,7 +99,7 @@ const Profile = () => {
                         </div>
                     </div>
                 </div> */}
-                <ManageMyAccount/>
+                <ManageAccount></ManageAccount>
             </ManageAccountLayout>
         </div>
     );
