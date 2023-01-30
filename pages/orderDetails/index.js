@@ -6,8 +6,7 @@ const index = () => {
   return (
     <div className=" mt-10 mx-16">
       <ManageAccountLayout>
-
-      <MyOrderDetails />
+        <MyOrderDetails />
       </ManageAccountLayout>
     </div>
   );

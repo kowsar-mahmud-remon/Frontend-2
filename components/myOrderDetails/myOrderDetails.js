@@ -1,6 +1,7 @@
 import Image from "next/image";
 import img1 from "../../assets/images/myOrdersDetails/Vector (3).png";
 import img2 from "../../assets/images/myOrdersDetails/Group 2417.png";
+import Timeline from "./Timeline/Timeline";
 
 const MyOrderDetails = () => {
   const data = {
@@ -42,9 +43,9 @@ const MyOrderDetails = () => {
             Total: <span className="font-[500]">Tk {data.total}</span>
           </h3>
         </div>
-          </div>
-          
-{/* mid part */}
+      </div>
+
+      {/* mid part */}
       <div className="shadow-lg rounded-lg mb-4 mt-5">
         <div className=" p-4">
           <div className="flex items-center">
@@ -72,6 +73,10 @@ const MyOrderDetails = () => {
             </div>
           </div>
           <div>
+            <Timeline status={data.status}></Timeline>
+          </div>
+          {/* table */}
+          <div>
             <div className="overflow-x-auto">
               <table className="table w-full">
                 <tbody>
@@ -94,9 +99,9 @@ const MyOrderDetails = () => {
             </div>
           </div>
         </div>
-          </div>
-          
-          {/* bottom part */}
+      </div>
+
+      {/* bottom part */}
       <div className="grid grid-cols-2 gap-4 my-10">
         <div>
           <div className="p-4 shadow-lg rounded-lg mb-4">
