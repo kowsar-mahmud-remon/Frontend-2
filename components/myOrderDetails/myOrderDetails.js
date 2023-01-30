@@ -1,6 +1,7 @@
 import Image from "next/image";
 import img1 from "../../assets/images/myOrdersDetails/Vector (3).png";
 import img2 from "../../assets/images/myOrdersDetails/Group 2417.png";
+
 const MyOrderDetails = () => {
   const data = {
     id: "1",
@@ -41,8 +42,10 @@ const MyOrderDetails = () => {
             Total: <span className="font-[500]">Tk {data.total}</span>
           </h3>
         </div>
-      </div>
-      <div className="shadow-lg rounded-lg mb-4">
+          </div>
+          
+{/* mid part */}
+      <div className="shadow-lg rounded-lg mb-4 mt-5">
         <div className=" p-4">
           <div className="flex items-center">
             <div>
@@ -91,8 +94,10 @@ const MyOrderDetails = () => {
             </div>
           </div>
         </div>
-      </div>
-      {/* <div className="grid grid-cols-2 gap-4">
+          </div>
+          
+          {/* bottom part */}
+      <div className="grid grid-cols-2 gap-4 my-10">
         <div>
           <div className="p-4 shadow-lg rounded-lg mb-4">
             <div>
@@ -118,7 +123,7 @@ const MyOrderDetails = () => {
               <div className="flex mt-2">
                 <div>
                   <p className="px-2 bg-[#F2F3F7] text-[#287DF3] rounded text-[12px]">
-                    Work
+                    Home
                   </p>
                 </div>
                 <div className="text-base ml-2">
@@ -150,7 +155,7 @@ const MyOrderDetails = () => {
             <p>Paid by Cash on Delivery</p>
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };
