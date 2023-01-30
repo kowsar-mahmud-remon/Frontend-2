@@ -5,7 +5,7 @@ const profileLinksObj = [
     {
         title: 'Manage My Account',
         href: "manageAccount",
-        element:<Profile></Profile>,
+        element:<ManageAccount></ManageAccount>,
         links: [
             {
                 title: 'My Profile',
