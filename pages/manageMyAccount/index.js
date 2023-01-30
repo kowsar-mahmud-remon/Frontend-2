@@ -1,5 +1,4 @@
 import ManageAccoutSideBar from "../../components/ManageAccoutSideBar/ManageAccoutSideBar";
-import Navication from "../../components/Navication/Navication";
 import Image from 'next/image';
 
 const ManageMyAccount = () => {
