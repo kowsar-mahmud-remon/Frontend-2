@@ -27,7 +27,8 @@ const ManageAccoutSideBar = () => {
                 </div>
                 <div>
                     <h1 className="font-bold text-[24px] mt-[16px]">My Reviews</h1>
-                    <h1 className="font-bold text-[24px] mt-[16px]">My Wishlist & Followed stores</h1>
+                    <h1 className="font-bold text-[24px] mt-[16px]">My Wishlist</h1>
+                    <h1 className="font-bold text-[24px] mt-[16px]">Followed stores</h1>
                     <h1 className="font-bold text-[24px] mt-[16px]">Sell On Banglar Big Store</h1>
                 </div>
             </div>
