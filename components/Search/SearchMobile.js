@@ -10,7 +10,7 @@ import v2 from '../../assets/images/Vector (2).png'
 import cate from '../../assets/images/Group 2399.png'
 import sellerVerify from '../../assets/images/sellerProfile/product/verified.png'
 import { useState } from 'react';
-const Search = () => {
+const SearchMobile = () => {
     const [minValue, set_minValue] = useState(25);
     const [maxValue, set_maxValue] = useState(75);
     const handleInput = (e) => {
@@ -18,7 +18,7 @@ const Search = () => {
         set_maxValue(e.maxValue);
     };
     const [show, setShow] = useState(true)
-    const [hide, setHide] = useState('sm:hidden min-[320px]:hidden ')
+    const [hide, setHide] = useState('sm:hidden hidden ')
     const [leftWidth, setLeftWidth] = useState('w-[382px]')
     const [rightWidth, setRightWidth] = useState('w-full')
     const [bghide, setBgHide] = useState('')
@@ -159,10 +159,10 @@ const Search = () => {
     ]
     const handleRes = (view) => {
         if (view === 1) {
-            setHide('sm:block min-[320px]:block')
+            setHide('sm:block block')
             setLeftWidth('sm:w-full ')
             setRightWidth('sm:hidden')
-            setBgHide('min-[320px]:')
+            setBgHide('')
         }
         else {
 
@@ -180,17 +180,18 @@ const Search = () => {
     }
 
     return (
-        <div className=" flex px-[94px] mt-2">
-            <div className={`${leftWidth} mr-[21px] ${hide}  lg:block md:block  shadow shadow-xl`}>
+        <div className=" flex  mt-2">
+            <div className={`${leftWidth} mr-[21px] ${hide}    shadow-xl`}>
                 <div className='flex justify-between px-2'>
                     <div className=' ml-2 mb-[16px] border  border-[#FB641B] py-[11px] px-[23px] rounded-full flex w-[166px]'>
                         <Image className='h-[20px] w-[20px] mt-[3px]'
                             src={cate}
+                            alt='img'
                         />
                         <span className='ml-2 font-semibold text-[18px]'>Categories</span>
 
                     </div>
-                    <p className='font-bold lg:hidden md:hidden mt-2 cursor-pointer' onClick={() => handleClose(1)}>X</p>
+                    <p className='font-bold  mt-2 cursor-pointer' onClick={() => handleClose(1)}>X</p>
                 </div>
 
 
@@ -199,12 +200,13 @@ const Search = () => {
                         <li className='flex justify-between'><p className='font-semibold text-[18px] mb-[16px] text-[#001E00] '>All Collecction</p>
                             <Image className='h-2 mt-2'
                                 src={v2}
+                                alt='img'
                             />
                         </li>
                         {
                             show ? vegProducts && vegProducts.map((vproduct, i) => {
                                 return (
-                                    <li className='mb-[16px] text-[14px]font-medium text-[#001E00]' key={i}>
+                                    <li className='mb-[16px] text-[14px] font-medium text-[#001E00]' key={i}>
                                         {vproduct}
                                     </li>
                                 )
@@ -253,6 +255,7 @@ const Search = () => {
                         <p className='font-semibold mb-[16px] text-[#001E00] '>Prices</p>
                         <Image className='h-2 mt-2'
                             src={v2}
+                            alt='img'
                         />
                     </div>
                     <div className='container mb-[16px] px-4 range'>
@@ -282,6 +285,7 @@ const Search = () => {
                         <p className='font-semibold mb-[16px] text-[#001E00]'>Seller</p>
                         <Image className='h-2 mt-2'
                             src={v2}
+                            alt='img'
                         />
                     </div>
 
@@ -311,6 +315,7 @@ const Search = () => {
                         <p className='font-semibold mb-[16px] text-[#001E00]'>Location</p>
                         <Image className='h-2 mt-2'
                             src={v2}
+                            alt='img'
                         />
                     </div>
 
@@ -364,16 +369,16 @@ const Search = () => {
                 <div className={`flex justify-between `}>
                     <p className='text-[16px] mt-[24px]'>Home / <span className='text-[#287DF3]'>Search Results</span></p>
 
-                    <div className='flex'><p className='font-semibold  lg:mt-[34px] sm:mt-6 min-[320px]:mt-6'>Sort By:</p>
-                        <select className='text-[12px] w-[110px] text-[#686868] p-[11px] font-semibold border lg:mt-[24px] sm:mt-4  min-[320px]:mt-4 ' name="" id="">
+                    <div className='flex'><p className='font-semibold sm:mt-6 mt-6'>Sort By:</p>
+                        <select className='text-[12px] w-[110px] text-[#686868] p-[11px] font-semibold border sm:mt-4  mt-4 ' name="" id="">
                             <option selected className='p-[11px]' value="">Best Match</option>
                             <option value="">Price High to low</option>
                             <option value="">Price Low to high</option>
                         </select>
                     </div>
-                    <p className='font-bold lg:hidden md:hidden mt-[19px] sm:mr-2 min-[320px]:mr-2' onClick={() => handleRes(1)}><FiMenu /></p>
+                    <p className='font-bold  mt-[19px]  mr-2' onClick={() => handleRes(1)}><FiMenu /></p>
                 </div>
-                <div className='flex flex-wrap lg:gap-[22px] sm:gap-[16px] min-[320px]:gap-[10px]'>
+                <div className='flex flex-wrap ml-[24px] gap-[16px] '>
 
                     {
 
@@ -381,11 +386,11 @@ const Search = () => {
                             return (
                                 <div key={product.id}>
 
-                                    <div className="card sm:w-[180px] min-[320px]:w-[180px] lg:w-[262px] min-[320px]:h-[423px] lg:h-[440px] bg-base-100 shadow-xl">
-                                        <Image className="min-[320px]:w-[180px] min-[320px]:h-[126px]" src={product.img} width={180} height={126} alt="Shoes" />
+                                    <div className="card w-[180px] h-[423px]  bg-base-100 shadow-xl">
+                                        <Image className="w-[180px] h-[126px]" src={product.img} alt="Shoes" />
 
                                         <div className="card-body px-[16px] inline">
-                                            <h2 className="card-title text-[#FB641B] font-bold text-[20px] inline-block mr-[4px] mb-[10px] min-[320px]:mt-[-20px]">
+                                            <h2 className="card-title text-[#FB641B] font-bold text-[20px] inline-block mr-[4px] mb-[10px] mt-[-20px]">
                                                 Tk {product.price}{" "}
                                             </h2>
                                             <span className="text-[#707070] text-[12px]">
@@ -394,9 +399,9 @@ const Search = () => {
                                             </span>
                                             <p className="font-bold text-[16px] mb-[10px]">{product.pName}</p>
                                             <div className="flex justify-between ">
-                                                <div className="flex lg:bg-[#FB641B] min-[320px]:bg-[#026C51] min-[320px]:h-4 text-white  rounded px-[2px] text-[12px] mr-[4px]">
-                                                    <span className='min-[320px]:mt-[-1px]'>{product.rating}</span>
-                                                    <FaStar className=" ml-2 min-[320px]:mt-[2px]"></FaStar>
+                                                <div className="flex  bg-[#026C51] h-4 text-white  rounded px-[2px] text-[12px] mr-[4px]">
+                                                    <span className='mt-[-1px]'>{product.rating}</span>
+                                                    <FaStar className=" ml-2 mt-[2px]"></FaStar>
                                                 </div>
                                                 <span className="text-[13px] text-[#686868] inline-block my-auto ml-2 ">
                                                     24 Ratings & 5 Reviews
@@ -410,8 +415,8 @@ const Search = () => {
                                                     height="24"
                                                     alt="logo image"
                                                 />
-                                                <div className="min-[320px]:mt-[16px] lg:mt-[38px] mb-[16px]">
-                                                    <button className="btn bg-[#FB641B] sm:w-[160px] min-[320px]:w-[160px] min-[320px]:h-[38px] lg:w-[186px] lg:mx-[20px] min-[320px]:mx-[-5px]">
+                                                <div className="mt-[16px]  mb-[16px]">
+                                                    <button className="btn bg-[#FB641B] sm:w-[160px] w-[160px] h-[38px] lg:w-[186px] lg:mx-[20px] mx-[-5px]">
                                                         <span className="text-white text-[12px] mr-[4px]">Add to Cart</span>
                                                         <FaShoppingCart className="text-white h-[20px] w-[24px]"></FaShoppingCart>
                                                     </button>
@@ -432,4 +437,4 @@ const Search = () => {
     );
 };
 
-export default Search;
+export default SearchMobile;
