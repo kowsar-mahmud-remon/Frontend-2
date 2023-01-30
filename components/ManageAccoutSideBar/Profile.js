@@ -8,8 +8,6 @@ const Profile = () => {
                 <h1 className='text-orange-600 text-2xl pl-6 pt-6'>My Profile</h1>
                 <div className="card font-sans  rounded-t-lg px-6 py-8  shadow-xl">
                     <div className='grid pb-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2'>
-
-
                         <div className="">
                             <h2 className="pb-2 font-sans">Full Name</h2>
                             <h1>Md Shakil Hossain</h1>
