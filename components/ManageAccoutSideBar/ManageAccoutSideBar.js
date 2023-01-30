@@ -12,7 +12,7 @@ const ManageAccoutSideBar = () => {
                     <Link className={router.pathname == '/manageMyAccount' ? "text-[#FB641B] font-bold mt-[16px] text-[24px]" :" font-bold mt-[16px] text-[24px]"} href="manageMyAccount"><h1>Manage My Account</h1></Link>
                     
                     <ul className='ml-6 mt-[16px]'>
-                        <Link href=''><li className="text-[#686868]  mt-[8px]  text-[16px]">My Profile</li></Link>
+                        <Link href='/profile'><li className="text-[#686868]  mt-[8px]  text-[16px]">My Profile</li></Link>
                         <Link href=''><li className="text-[#686868] mt-[8px]  text-[16px]">Address Book</li></Link>
                         <Link href=''> <li className="text-[#686868] mt-[8px] text-[16px]">My Payment Options</li></Link>
                         <Link href=''> <li className="text-[#686868] mt-[8px] text-[16px]">Vouchers</li></Link>
@@ -27,7 +27,8 @@ const ManageAccoutSideBar = () => {
                 </div>
                 <div>
                     <h1 className="font-bold text-[24px] mt-[16px]">My Reviews</h1>
-                    <h1 className="font-bold text-[24px] mt-[16px]">My Wishlist & Followed stores</h1>
+                    <Link href='/wishlist/myWishlist'><h1 className="font-bold text-[24px] mt-[16px]">My Wishlist</h1></Link>
+                    <h1 className="font-bold text-[24px] mt-[16px]">Followed stores</h1>
                     <h1 className="font-bold text-[24px] mt-[16px]">Sell On Banglar Big Store</h1>
                 </div>
             </div>
