@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import NavicationLayout from '../../layouts/NavicationLayout';
 import loginImg from '../../assets/images/securityImg.png';
 import logo from '../../assets/images/logo/main_logo.png';
@@ -8,8 +8,46 @@ import googleLogo from '../../assets/images/social_logos/google.png';
 
 import Image from 'next/image';
 import Link from 'next/link';
-
+import { useLoginUserMutation } from '../../features/auth/authApi';
+import { useEffect } from 'react';
+import { useCookies } from 'react-cookie';
+import { useRouter } from 'next/router';
 const Login = () => {
+    const [check, setCheck] = useState(false)
+
+    const [loginUser, { data, isLoading, error }] = useLoginUserMutation()
+    const [formError, setError] = useState('')
+    const [cookies, setCookie] = useCookies(['banglarBigStore']);
+    const router = useRouter()
+    useEffect(() => {
+        console.log(data)
+        console.log(error)
+        if (data) {
+            setError('')
+            setCookie('banglarBigStore', data?.token, { path: '/' });
+            router.push('/account/profile')
+        }
+    }, [data, error, cookies, setCookie,router])
+  
+
+    const handleForm = (e) => {
+
+        e.preventDefault();
+
+        if (e.target.email.value.match(/^(?:(?:\+|00)88|01)?\d{11}$/)) {
+            loginUser({
+                phone: e.target.email.value,
+                password: e.target.pass.value
+            })
+        }
+        if (e.target.email.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+            loginUser({
+                email: e.target.email.value,
+                password: e.target.pass.value
+            })
+        }
+    }
+    console.log(error?.data.message)
     return (
         <NavicationLayout>
             <div className=' h-[100%] mx-[20px] md:mx-[50px] xl:mx-[150px] 2xl:mx-[210px] pt-10 pb-16'>
@@ -26,27 +64,41 @@ const Login = () => {
                             <Image alt="" src={logo} />
                             <Image alt="" src={logo_dic} />
                         </div>
-                        <form className=' flex flex-col gap-6 mt-10'>
+                        <form
+                            onSubmit={handleForm}
+                            className=' flex flex-col gap-6 mt-10'>
                             <label className='text-red-600/100'>Login</label>
-                            <input className='input' type="text" placeholder='Enter Your Phone Number or Email' />
-                            <input className='input ' type="password" placeholder='Enter Your Password' />
+                            <input
+                                name='email'
+                                className='input border-2 border-gray-400' type="text" placeholder='Enter Your Phone Number or Email' />
+                            {
+                                formError && <p className='text-red-500 text-[15px] '>{formError}</p>
+                            }
+                            <input
+                                name='pass'
+                                className='input border-2 border-gray-400' type={check ? 'text' : 'password'} placeholder='Enter Your Password' />
                             <div className='flex justify-between'>
                                 <div className='flex gap-1 '>
-                                    <input type="checkbox" />
-                                    <p>Show Passowrd</p>
+                                    <input onChange={e => setCheck(e.target.checked)} type="checkbox" />
+                                    <p>Show Passwords</p>
                                 </div>
                                 <p className='text-blue-600/100 underline '>Forgot Password?</p>
                             </div>
+
+                            {
+                                error?.data?.message && <p className='text-red-500 text-[19px] mb-2 text-center '>{error?.data?.message}</p>
+                            }
+
                             <button className='btn bg-[#FB641B] h-[45px] sm:h-[55px] xl:h-[70px] text-white'>Login</button>
                             <span className='mx-auto text-[#FB641B]'>Or</span>
                         </form>
-                        <div className='flex flex-col gap-6 mt-6 pb-16'>
-                            <div className='flex gap-5'>
-                                <button className='btn bg-[#3B5998] text-white'>
+                        <div className='flex flex-col gap-6 mt-6 pb-16 '>
+                            <div className='w-full flex justify-between items-center gap-4 '>
+                                <button className='btn bg-[#3B5998] text-white w-[220px] flex-nowrap'>
                                     <Image alt="" src={fbLogo} />
                                     Facebook
                                 </button>
-                                <button className='btn bg-[#D34836] text-white'>
+                                <button className='btn bg-[#D34836] text-white w-[220px] flex-nowrap'>
                                     <Image alt="" src={googleLogo} />
                                     Google
                                 </button>

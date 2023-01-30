@@ -1,0 +1,200 @@
+[
+  {
+    "id": 1,
+    "name": "Products",
+    "subcata": [
+      {
+        "name": "Add Product"
+      },
+      {
+        "name": "New Media Center"
+      },
+      {
+        "name": "Fullfillment"
+      },
+      {
+        "name": "Edit Product"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Promotions",
+    "subcata": [
+      {
+        "name": "Add Product"
+      },
+      {
+        "name": "New Media Center"
+      },
+      {
+        "name": "Fullfillment"
+      },
+      {
+        "name": "Edit Product"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Orders & Reviews",
+    "subcata": [
+      {
+        "name": "Add Product"
+      },
+      {
+        "name": "New Media Center"
+      },
+      {
+        "name": "Fullfillment"
+      },
+      {
+        "name": "Edit Product"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Store Decoration",
+    "subcata": [
+      {
+        "name": "Add Product"
+      },
+      {
+        "name": "New Media Center"
+      },
+      {
+        "name": "Fullfillment"
+      },
+      {
+        "name": "Edit Product"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Assortment Growth",
+    "subcata": [
+      {
+        "name": "Add Product"
+      },
+      {
+        "name": "New Media Center"
+      },
+      {
+        "name": "Fullfillment"
+      },
+      {
+        "name": "Edit Product"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Account Health",
+    "subcata": [
+      {
+        "name": "Add Product"
+      },
+      {
+        "name": "New Media Center"
+      },
+      {
+        "name": "Fullfillment"
+      },
+      {
+        "name": "Edit Product"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Bussiness Adviser",
+    "subcata": [
+      {
+        "name": "Add Product"
+      },
+      {
+        "name": "New Media Center"
+      },
+      {
+        "name": "Fullfillment"
+      },
+      {
+        "name": "Edit Product"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Finnace",
+    "subcata": [
+      {
+        "name": "Add Product"
+      },
+      {
+        "name": "New Media Center"
+      },
+      {
+        "name": "Fullfillment"
+      },
+      {
+        "name": "Edit Product"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Seller Guidlines",
+    "subcata": [
+      {
+        "name": "Add Product"
+      },
+      {
+        "name": "New Media Center"
+      },
+      {
+        "name": "Fullfillment"
+      },
+      {
+        "name": "Edit Product"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Seller Support",
+    "subcata": [
+      {
+        "name": "Add Product"
+      },
+      {
+        "name": "New Media Center"
+      },
+      {
+        "name": "Fullfillment"
+      },
+      {
+        "name": "Edit Product"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Account Setting",
+    "subcata": [
+      {
+        "name": "Add Product"
+      },
+      {
+        "name": "New Media Center"
+      },
+      {
+        "name": "Fullfillment"
+      },
+      {
+        "name": "Edit Product"
+      }
+    ]
+  }
+]
