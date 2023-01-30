@@ -1,12 +1,12 @@
-import { ManageMyAccount } from "../components/ManageAccoutSideBar/ManageAccount";
+// import { ManageMyAccount } from "../components/ManageAccoutSideBar/ManageAccount";
 import Profile from "../components/manageAccoutSideBar/Profile";
+// import Profile from "../components/manageAccoutSideBar/Profile";
 
-
-export const profileLinksObj = [
+const profileLinksObj = [
     {
         title: 'Manage My Account',
         href: "manageAccount",
-        element:<Profile/>,
+        element: <Profile />,
         links: [
             {
                 title: 'My Profile',
@@ -33,7 +33,7 @@ export const profileLinksObj = [
     {
         title: 'My Orders',
         href: "myOrders",
-        element:<Profile/>,
+        element: <Profile />,
         links: [
             {
                 title: 'My Returns',
@@ -79,3 +79,5 @@ export const profileLinksObj = [
         element: <Profile />
     }
 ]
+
+export default profileLinksObj
