@@ -14,7 +14,7 @@ import OutsideClickHandler from 'react-outside-click-handler';
 const SearchDesktop = () => {
 
     const [show, setShow] = useState(true)
-    const [hide, setHide] = useState('sm:hidden min-[320px]:hidden ')
+    // const [hide, setHide] = useState('sm:hidden min-[320px]:hidden ')
     const [leftWidth, setLeftWidth] = useState('w-[282px]')
     const [rightWidth, setRightWidth] = useState('w-full')
     const [bghide, setBgHide] = useState('')
@@ -155,10 +155,10 @@ const SearchDesktop = () => {
     ]
     const handleRes = (view) => {
         if (view === 1) {
-            setHide('block ')
-            setLeftWidth('w-full ')
-            setRightWidth('hidden')
-            setBgHide('block')
+            // setHide('block ')
+            // setLeftWidth('w-full ')
+            // setRightWidth('hidden')
+            setBgHide('left-[1px]')
         }
         else {
 
@@ -166,20 +166,20 @@ const SearchDesktop = () => {
     }
     const handleClose = (view) => {
         if (view === 1) {
-            setRightWidth('block ')
-            setLeftWidth('hidden ')
-            setBgHide('hidden')
+            // setRightWidth('block ')
+            // setLeftWidth('hidden ')
+            setBgHide('left-[-395px]')
         }
         else {
 
 
         }
     }
-
+    // lg:top-[226px] 
     return (
-        <div className=" flex lg:px-[94px] md:px-[94px] mt-2">
-            <div className='flex '>
-                <div className={` w-[107px] ${bghide}  h-[969px] bg-red-200 lg:hidden md:hidden h-[300px]`}>
+        <div className=" flex lg:px-[94px] relative md:px-[94px] mt-2">
+            <div className={`flex z-20  absolute left-[-395px] lg:left-[93px]  lg:mr-[229px] ${bghide} `}>
+                <div className={` w-[107px]   h-[969px] bg-black opacity-[0.4]  lg:hidden md:hidden`}>
                     <OutsideClickHandler
                         onOutsideClick={() => {
                             handleClose(1)
@@ -188,7 +188,7 @@ const SearchDesktop = () => {
 
                     </OutsideClickHandler>
                 </div>
-                <div className={`${leftWidth} mr-[21px] ${hide}  lg:block md:block  shadow-xl `}>
+                <div className={`${leftWidth} mr-[21px] bg-white   lg:block md:block  shadow-xl `}>
 
                     <div className='flex justify-between px-2'>
                         <div className='max-[500px]:hidden ml-2 mb-[16px] border  border-[#FB641B] py-[11px] px-[23px] rounded-full flex w-[166px]'>
@@ -199,7 +199,7 @@ const SearchDesktop = () => {
                             <span className='ml-2 font-semibold text-[18px]'>Categories</span>
 
                         </div>
-                        <p className='font-bold lg:hidden md:hidden mt-2 cursor-pointer' onClick={() => handleClose(1)}>X</p>
+                        {/* <p className='font-bold lg:hidden md:hidden mt-2 cursor-pointer' onClick={() => handleClose(1)}>X</p> */}
                     </div>
 
 
@@ -374,7 +374,7 @@ const SearchDesktop = () => {
             </div>
 
             {/*--------------------- right div----------------- */}
-            <div className={`${rightWidth}  `}>
+            <div className={`${rightWidth}  z-10 lg:ml-[277px] ml-[-8px]`}>
                 <div className={`flex justify-between px-[24px] `}>
                     <p className='text-[16px] lg:mt-[24px] mt-[19px] md:mt-[24px]'>Home / <span className='text-[#287DF3]'>Search Results</span></p>
 
