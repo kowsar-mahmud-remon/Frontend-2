@@ -1,14 +1,9 @@
 import ManageAccoutSideBar from "../../components/ManageAccoutSideBar/ManageAccoutSideBar";
 import Image from 'next/image';
 
-export const ManageAccount = () => {
+ const ManageAccount = () => {
     return (
-
-        
-
-            
-              
-                <div >
+               <div >
                     <div className="lg:mr-[30px]">
                         <div>
                             <h1 className="text-[#FB641B] lg:text-[24px] font-semibold">Manage My Account</h1>
@@ -106,3 +101,5 @@ export const ManageAccount = () => {
 
     );
 };
+
+export default ManageAccount
