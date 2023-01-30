@@ -8,7 +8,6 @@ const ManageMyAccount = () => {
 
             <div className="flex  my-8 mx-5 gap-[40px] xl:mx-4">
                 <div className="">
-                    {/* <ManageAccoutSideBar></ManageAccoutSideBar> */}
                 </div>
                 <div >
                     <div className="mr-[30px]">
