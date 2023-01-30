@@ -18,8 +18,8 @@ const Profile = () => {
 
                     p.links && p.links.map((e, i) => {
                         if (e.href === router?.query?.slug) {
-                            console.log('hello')
-                            console.log(e)
+                            // console.log('hello')
+                            // console.log(e)
                             return e.element
                         }
                     })

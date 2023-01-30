@@ -17,7 +17,8 @@ const ManageAccoutSideBar = () => {
                     profileLinksObj.map((profile, i) => <div
                         key={i}
                         className="mt-4">
-                        <Link className={router.pathname == '/manageMyAccount' ? "text-[#FB641B] font-bold mt-[16px] text-[24px]" : " font-bold mt-[16px] text-[24px]"} href={`/profile/${profile.href}`}><h1>{profile.title}</h1></Link>
+                            
+                        <Link className={`/profile/${profile.href}` === `/profile/${profile.href}` ? "text-[#FB641B] font-bold mt-[16px] text-[24px]" : "font-bold mt-[16px] text-[24px]"} href={`/profile/${profile.href}`}><h1>{profile.title}</h1></Link>
 
                         {
                             profile?.links && <ul className='ml-6 mt-[16px]'>

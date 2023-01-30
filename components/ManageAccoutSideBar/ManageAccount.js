@@ -4,11 +4,10 @@ import Image from 'next/image';
 export const ManageAccount = () => {
     return (
 
-        <div className="">
+        
 
-            <div className="flex  my-8 mx-5 gap-[40px] xl:mx-4">
-                <div className="">
-                </div>
+            
+              
                 <div >
                     <div className="lg:mr-[30px]">
                         <div>
@@ -101,8 +100,8 @@ export const ManageAccount = () => {
 
                     </div>
                 </div>
-            </div>
-        </div>
+            
+        
 
 
     );
