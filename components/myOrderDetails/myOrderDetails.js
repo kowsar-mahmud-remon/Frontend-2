@@ -2,6 +2,7 @@ import Image from "next/image";
 import img1 from "../../assets/images/myOrdersDetails/Vector (3).png";
 import img2 from "../../assets/images/myOrdersDetails/Group 2417.png";
 import Timeline from "./Timeline/Timeline";
+import Link from "next/link";
 
 const MyOrderDetails = () => {
   const data = {
@@ -103,7 +104,7 @@ const MyOrderDetails = () => {
                       <td>Tk{data.subtotal}</td>
                       <td>Qty: {data.qty}</td>
                       <td>
-                        <button className="text-[#287DF3]">Cancel</button>
+                        <Link href='/orderDetails/myOrderCancelation' className="text-[#287DF3]">Cancel</Link>
                       </td>
                     </tr>
                   )}
