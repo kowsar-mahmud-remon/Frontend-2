@@ -1,11 +1,13 @@
-import ManageAccoutSideBar from "../../components/ManageAccoutSideBar/ManageAccoutSideBar";
+import ManageAccountLayout from "../../components/ManageAccoutSideBar/ManageAccountLayout";
+
 import MyOrderDetails from "../../components/myOrderDetails/myOrderDetails";
 
 const index = () => {
   return (
-    <div className="flex">
-      <ManageAccoutSideBar></ManageAccoutSideBar>
-      <MyOrderDetails />
+    <div className=" mt-10 mx-16">
+      <ManageAccountLayout>
+        <MyOrderDetails />
+      </ManageAccountLayout>
     </div>
   );
 };
