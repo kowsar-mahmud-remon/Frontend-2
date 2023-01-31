@@ -72,7 +72,7 @@ const MyOrderDetails = () => {
               <p className="text-base ml-2">{data.status}</p>
             </div>
           </div>
-          <div>
+          <div className="mt-10">
             <Timeline status={data.status}></Timeline>
           </div>
           {/* table */}
@@ -102,7 +102,7 @@ const MyOrderDetails = () => {
       </div>
 
       {/* bottom part */}
-      <div className="grid grid-cols-2 gap-4 my-10">
+      <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-4 my-10">
         <div>
           <div className="p-4 shadow-lg rounded-lg mb-4">
             <div>
@@ -140,7 +140,7 @@ const MyOrderDetails = () => {
           </div>
         </div>
         <div>
-          <div className="p-4 shadow-lg rounded-lg">
+          <div className="p-4 shadow-lg rounded-lg lg:mt-0 mt-4">
             <div>
               <h1 className="text-lg font-[500] mb-1">Total Summery</h1>
               <div className="flex justify-between items-center">
