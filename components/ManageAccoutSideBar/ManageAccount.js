@@ -1,17 +1,20 @@
-import ManageAccoutSideBar from "../../components/ManageAccoutSideBar/ManageAccoutSideBar";
+
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
  const ManageAccount = () => {
+// const rounter  = useRouter()
+// console.log(rounter)
     return (
                <div >
-                    <div className="lg:mr-[30px]">
+                    <div className="mr-[30px]">
                         <div>
-                            <h1 className="text-[#FB641B] lg:text-[24px] font-semibold">Manage My Account</h1>
+                            <h1 className="text-[#FB641B] text-[24px] font-semibold">Manage My Account</h1>
                         </div>
-                        <div className="lg:flex lg:gap-6 lg:py-8">
-                            <div className="card w-[250px] lg:w-[335px] lg:h-[223px]  bg-base-100 shadow-lg">
-                                <div className="card-body lg:px-4 lg:py-4">
-                                    <h1 className="font-bold lg:text-[18px]">Personal Profile | <span className="text-[#287DF3] lg:text-[18px]">Edit</span></h1>
+                        <div className="flex gap-6 py-8">
+                            <div className="card  w-[335px] h-[223px]  bg-base-100 shadow-lg">
+                                <div className="card-body px-4 py-4">
+                                    <h1 className="font-bold text-[18px]">Personal Profile | <span className="text-[#287DF3] text-[18px]">Edit</span></h1>
                                     <ul>
                                         <li>Abdul Karim</li>
                                         <li>abdulkorim@gmail.com</li>
@@ -19,12 +22,12 @@ import Image from 'next/image';
                                     </ul>
                                 </div>
                             </div>
-                            <div className="lg:card w-[250px] lg:w-[565px] lg:h-[223px]   bg-base-100 shadow-lg">
-                                <div className="lg:flex">
-                                    <div className="lg:px-4 lg:py-4">
-                                        <h1 className="font-bold lg:text-[18px]">Address Book | <span className="text-[#287DF3] lg:text-[18px]">Edit</span></h1>
+                            <div className="card w-[565px] h-[223px]   bg-base-100 shadow-lg">
+                                <div className="flex">
+                                    <div className="px-4 py-4">
+                                        <h1 className="font-bold text-[18px]">Address Book | <span className="text-[#287DF3] text-[18px]">Edit</span></h1>
                                         <p>DEFAULT SHIPPING ADDRESS</p>
-                                        <p className="font-bold lg:text-[16px]">Abdul Karim</p>
+                                        <p className="font-bold text-[16px]">Abdul Karim</p>
                                         <ul>
                                             <li>Ramgonj Tower 16/14,</li>
                                             <li>Giridhara,Matuil,Kodomtali</li>
@@ -35,7 +38,7 @@ import Image from 'next/image';
                                     <div className="divider  divider-horizontal"></div>
                                     <div className="py-4">
                                         <p>DEFAULT SHIPPING ADDRESS</p>
-                                        <p className="font-bold lg:text-[16px]">Abdul Karim</p>
+                                        <p className="font-bold text-[16px]">Abdul Karim</p>
                                         <ul>
                                             <li>Bashundhara City Shopping</li>
                                             <li>Complex 3 No Tejturi Bazar</li>
@@ -47,12 +50,12 @@ import Image from 'next/image';
                             </div>
                         </div>
                         <div className="">
-                            <div className="card w-[250px] lg:w-full shadow-lg rounded-lg">
-                                <p className="font-bold lg:text-[16px] lg:py-4 lg:px-4">Resent Orders</p>
-                                <table className="table lg:w-full  ">
+                            <div className="card  w-full shadow-lg rounded-lg">
+                                <p className="font-bold text-[16px] py-4 px-4">Resent Orders</p>
+                                <table className="table w-full  ">
 
 
-                                    <thead className="lg:w-full ">
+                                    <thead className="w-full ">
 
                                         <tr className="bg-[#F2F2F2]">
                                             <th className="text-[#686868]">Order#</th>

@@ -10,7 +10,7 @@ const Profile = () => {
 
             <ManageAccountLayout>
                    
-          
+              <ManageAccount></ManageAccount>
             
             </ManageAccountLayout>
         </div>

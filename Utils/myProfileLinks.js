@@ -1,58 +1,60 @@
 import ManageAccount from "../components/ManageAccoutSideBar/ManageAccount";
-import Profile from "../components/manageAccoutSideBar/Profile";
+
+import MyOrder from "../components/MyOrder/MyOrder";
+import Profile from "../components/ManageAccoutSideBar/Profile";
 
 const profileLinksObj = [
     {
         title: 'Manage My Account',
         href: "manageAccount",
-        element:<ManageAccount></ManageAccount>,
+        element:<ManageAccount/>,
         links: [
             {
                 title: 'My Profile',
                 href: "myProfile",
-                element: <Profile />
+                element: <Profile/>
             },
             {
                 title: 'Address Book',
                 href: "addressBook",
-                element: <Profile />
+                element: <Profile/>
             },
             {
                 title: 'My Payment Options',
                 href: "myPaymentOptions",
-                element: <Profile />
+                element: <Profile/>
             },
             {
                 title: 'Vouchers',
                 href: "vouchers",
-                element: <Profile />
+                element: <Profile/>
             },
         ]
     },
     {
         title: 'My Orders',
         href: "myOrders",
-        element:<Profile/>,
+        element:<MyOrder></MyOrder>,
         links: [
             {
                 title: 'My Returns',
                 href: "myReturns",
-                element: <Profile />
+                element: <Profile/>
             },
             {
                 title: 'My Cancellations',
                 href: "myCancellations",
-                element: <Profile />
+                element: <Profile/>
             },
             {
                 title: 'My Payment Options',
                 href: "myPaymentOptions",
-                element: <Profile />
+                element: <Profile/>
             },
             {
                 title: 'Vouchers',
                 href: "vouchers",
-                element: <Profile />
+                element: <Profile/>
             },
         ]
     },
