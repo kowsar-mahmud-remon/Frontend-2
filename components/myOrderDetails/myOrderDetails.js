@@ -74,6 +74,19 @@ const MyOrderDetails = () => {
           </div>
           <div className="mt-10">
             <Timeline status={data.status}></Timeline>
+            <div className="flex justify-center items-center">
+              <div className="w-4/5 p-7 bg-[#F2F3F7] rounded mt-3 relative">
+                <div className="w-5 h-5 bg-[#F2F3F7] absolute -top-2 left-16 rotate-45"></div>
+                {/* eta dynamic hobe */}
+                <p>
+                  31 Dec 2022 - 16:52{" "}
+                  <span className="font-[500]">
+                    Your order has been successfully verified
+                  </span>
+                </p>
+                <p className="text-[#287DF3] text-center">View More</p>
+              </div>
+            </div>
           </div>
           {/* table */}
           <div>
