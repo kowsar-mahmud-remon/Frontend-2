@@ -7,7 +7,7 @@ const ManageAccountLayout = ({ children }) => {
             <div>
                 <ManageAccoutSideBar />
             </div>
-            <div>
+            <div className='w-full'>
                 {
                     children
                 }
