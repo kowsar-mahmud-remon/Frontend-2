@@ -93,6 +93,14 @@ const MyOrderDetails = () => {
           <div>
             <div className="overflow-x-auto">
               <table className="table w-full">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                  </tr>
+                </thead>
                 <tbody>
                   {/* map er kaj hobe ekhane. just emni akhn show kora hoise */}
                   {data && (
@@ -104,7 +112,12 @@ const MyOrderDetails = () => {
                       <td>Tk{data.subtotal}</td>
                       <td>Qty: {data.qty}</td>
                       <td>
-                        <Link href='/orderDetails/myOrderCancelation' className="text-[#287DF3]">Cancel</Link>
+                        <Link
+                          href="/orderDetails/myOrderCancelation"
+                          className="text-[#287DF3]"
+                        >
+                          Cancel
+                        </Link>
                       </td>
                     </tr>
                   )}

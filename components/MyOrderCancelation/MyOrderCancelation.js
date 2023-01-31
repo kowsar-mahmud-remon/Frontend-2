@@ -17,8 +17,6 @@ const MyOrderCancelation = () => {
   };
   return (
     <div className="w-full pl-5">
-
-      {/* mid part */}
       <div className="shadow-lg rounded-lg mb-4 mt-5 w-full">
         <div className=" p-4">
           <div className="flex items-center">
@@ -33,7 +31,6 @@ const MyOrderCancelation = () => {
         </div>
         <hr className="border-t-2" />
         <div className="p-4">
-          
           {/* table */}
           <div>
             <div className="overflow-x-auto">
@@ -48,7 +45,6 @@ const MyOrderCancelation = () => {
                       </td>
                       <td>Tk{data.subtotal}</td>
                       <td>Qty: {data.qty}</td>
-                      
                     </tr>
                   )}
                 </tbody>
@@ -56,9 +52,26 @@ const MyOrderCancelation = () => {
             </div>
           </div>
         </div>
-      </div>
 
-      
+        <div className=" p-4">
+          <h2 className="text-[18px] font-[500] mb-2">
+            Policy For Cancellation
+          </h2>
+          <p className=" pl-6 mb-2">
+            Policy For Cancellation Before Cancelling the Order, Kindly Read
+            Thoroughly Our Following terms & Conditions:
+          </p>
+          <p className=" pl-6 mb-2">
+            Once you submit this form you agree to cancel the selected Reason.
+            We will be unable to retrieve your order once it is cancelled.
+          </p>
+          <p className=" pl-6 mb-2">
+            Once you confirm your order cancellation, We will Process your
+            refund within few minutes. I have read and accepted the Cancellation
+            Policy of Banglar Big Bazar
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
