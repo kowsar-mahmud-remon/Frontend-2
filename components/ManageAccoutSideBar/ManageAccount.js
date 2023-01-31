@@ -1,7 +1,7 @@
 import ManageAccoutSideBar from "../../components/ManageAccoutSideBar/ManageAccoutSideBar";
 import Image from 'next/image';
 
-export const ManageAccount = () => {
+ const ManageAccount = () => {
     return (
 
         <div className="">
@@ -107,3 +107,5 @@ export const ManageAccount = () => {
 
     );
 };
+
+export default ManageAccount
