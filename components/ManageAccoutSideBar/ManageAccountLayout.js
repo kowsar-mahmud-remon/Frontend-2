@@ -4,7 +4,7 @@ import ManageAccoutSideBar from './manageAccoutSideBar';
 const ManageAccountLayout = ({ children }) => {
     return (
         <div className='flex my-8 mx-5 gap-[40px] xl:mx-4'>
-            <div>
+            <div className='hidden md:block'>
                 <ManageAccoutSideBar />
             </div>
             <div className='w-full'>
