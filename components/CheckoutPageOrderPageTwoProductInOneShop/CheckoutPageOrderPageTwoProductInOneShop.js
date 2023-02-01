@@ -2,15 +2,26 @@ import React from 'react';
 import img from '../../assets/images/image 6.png';
 import img2 from '../../assets/images/Group.png';
 import img3 from '../../assets/images/Group 1913.png';
+import img4 from '../../assets/images/image 9.png';
 import Image from 'next/image';
 import { FaAngleRight } from 'react-icons/fa';
 
-const OrderPlacePage = () => {
+const CheckoutPageOrderPageTwoProductInOneShop = () => {
   const products =
     [
       {
         _id: 1,
         img: img,
+        name: "Tomato (Local) 500 ±30 gm",
+        subTitle: "No Brand, Color Family:Black",
+        price: 60,
+        previousPrice: 80,
+        discount: 20,
+        Qty: 1
+      },
+      {
+        _id: 2,
+        img: img4,
         name: "Tomato (Local) 500 ±30 gm",
         subTitle: "No Brand, Color Family:Black",
         price: 60,
@@ -72,7 +83,7 @@ const OrderPlacePage = () => {
                 <div className="sm:inline lg:flex items-center">
                   <p className="sm:inline mr-4 text-[10px] text-[#707070] line-through">Tk {product.previousPrice}</p>
                   <p className="sm:inline mr-4 text-[10px] text-[#707070]">({product.discount}% off)</p>
-                  <p className="sm:inline text-base text-[#FB641B] font-medium">Tk {product.price}</p>
+                  <p className="sm:inline text-base font-medium text-[#FB641B]">Tk {product.price}</p>
                 </div>
               </div>
             </div>)
@@ -110,8 +121,8 @@ const OrderPlacePage = () => {
         <div className=" mt-8">
           <p className=" text-base font-medium text-[#FB641B]">Order Summary</p>
           <div className="flex justify-between mt-4 text-[#686868]">
-            <p className=" text-base">Subtotal (1 items)</p>
-            <p className=" font-medium text-base">Tk 60</p>
+            <p className=" text-base">Subtotal (2 items)</p>
+            <p className=" font-medium text-base">Tk 120</p>
           </div>
           <div className="flex justify-between mt-4">
             <p className="text-base text-[#001E00]">Delivery Fee</p>
@@ -119,11 +130,11 @@ const OrderPlacePage = () => {
           </div>
           <div className="flex justify-between mt-4">
             <p className="text-base text-[#001E00]">Total Payment</p>
-            <p className=" font-medium text-base">Tk 90</p>
+            <p className=" font-medium text-base">Tk 150</p>
           </div>
           <div className="flex justify-between mt-4">
             <p className="text-base text-[#001E00]">Total:</p>
-            <p className=" font-medium text-base text-[#FB641B]">Tk 90</p>
+            <p className=" font-medium text-base text-[#FB641B]">Tk 150</p>
           </div>
           <div className=" mt-4 mb-8 text-end">
             <p className="text-xs justify-end text-[#707070]">VAT included, where applicable</p>
@@ -136,4 +147,4 @@ const OrderPlacePage = () => {
   );
 };
 
-export default OrderPlacePage;
+export default CheckoutPageOrderPageTwoProductInOneShop;
