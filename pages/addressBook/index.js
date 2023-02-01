@@ -6,7 +6,7 @@ const AddressBook = () => {
         <h1 className="text-base text-[#686868] cursor-pointer">
           <span className="text-[#F4253F]">+</span> Add New Address
         </h1>
-      </div> 
+      </div>
       <div className="card p-6 mx-auto grid md:grid-cols-2 lg:grid-cols-2 grid-cols-1 pb-72 rounded-lg h-[479px] bg-[#FFFFFF] shadow-lg">
         <div className="p-4 mb-2 rounded-lg border-[#707070] border address-card mr-4 w-[428px]">
           <div className="flex justify-between items-center">
