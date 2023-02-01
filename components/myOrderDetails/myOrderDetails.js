@@ -30,7 +30,7 @@ const MyOrderDetails = () => {
   };
 
   return (
-    <div className="w-full pl-5">
+    <div className="w-full md:pl-5">
       <div className="flex justify-between items-center px-4 py-5 shadow-lg rounded-lg">
         <div className="">
           <h3 className="font-[500]">
@@ -94,7 +94,7 @@ const MyOrderDetails = () => {
             <div className="overflow-x-auto">
               <table className="table w-full">
                 <thead>
-                  <tr>
+                  <tr className="hidden">
                     <th></th>
                     <th></th>
                     <th></th>

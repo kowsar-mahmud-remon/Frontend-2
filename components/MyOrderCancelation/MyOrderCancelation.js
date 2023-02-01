@@ -15,6 +15,28 @@ const MyOrderCancelation = () => {
     subtotal: "100",
     deliveryFee: "20",
   };
+  const options = [
+    {
+      option: "Delivery time is too long",
+      value: "Delivery time is too long",
+    },
+    {
+      option: "Wrong Delivery Address",
+      value: "Wrong Delivery Address",
+    },
+    {
+      option: "Currently No need this Product",
+      value: "Currently No need this Product",
+    },
+    {
+      option: "Not Good This Product",
+      value: "Not Good This Product",
+    },
+    {
+      option: "Not Original Product",
+      value: "Not Original Product",
+    },
+  ];
   return (
     <div className="w-full pl-5">
       <div className="shadow-lg rounded-lg mb-4 mt-5 w-full">
@@ -52,6 +74,31 @@ const MyOrderCancelation = () => {
             </div>
           </div>
         </div>
+      </div>
+      <form action="">
+        <div className="p-6 max-w-[500px] shadow-xl rounded-xl mb-10">
+          <div className="form-control">
+            <select name="slot" className="border-2 rounded p-3" required>
+              <option className="selected disabled hidden">
+                Select Your Reason
+              </option>
+              {options.map((option, index) => (
+                <option key={index} value={option.value}>
+                  {option.option}
+                </option>
+              ))}
+              {/*  */}
+            </select>
+          </div>
+        </div>
+
+        <div className="form-control">
+          <textarea
+            className="border-2 rounded p-3 h-[144px]"
+            placeholder="Type your message..."
+            required
+          ></textarea>
+        </div>
 
         <div className=" p-4">
           <h2 className="text-[18px] font-[500] mb-2">
@@ -70,8 +117,30 @@ const MyOrderCancelation = () => {
             refund within few minutes. I have read and accepted the Cancellation
             Policy of Banglar Big Bazar
           </p>
+          <div className="form-control">
+            <label className="label justify-start cursor-pointer">
+              <input
+                type="checkbox"
+                className="checkbox border-black"
+                required
+              />
+              <span className="label-text ml-2">
+                I have read and accepted the Cancellation Policy of Banglar Big
+                Bazar
+              </span>
+            </label>
+          </div>
         </div>
-      </div>
+        <div className="from-control flex justify-end">
+          <div>
+            <input
+              type="submit"
+              value="Confirm"
+              className="bg-[#FB641B] py-4 px-10 rounded-xl text-white font-bold cursor-pointer"
+            />
+          </div>
+        </div>
+      </form>
     </div>
   );
 };
