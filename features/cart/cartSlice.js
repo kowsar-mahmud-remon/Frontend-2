@@ -18,7 +18,7 @@ const initialState = {
     {
       _id: 2,
       img: img2,
-      name: "Potol (Pointed Gourd ) 500 ±30 gm",
+      name: "Potol (Pointed ) 500 ±30 gm",
       subTitle: "No Brand, Color Family:Black",
       price: 40,
       previousPrice: 50,
@@ -46,8 +46,12 @@ const cartSlice = createSlice({
         const tempProduct = { ...action.payload, cartQuantity: 1 };
         state.cartItems.push(tempProduct);
       }
+    },
 
+    removeFromCart(state, action) {
+      const nextCartItems = state.cartItems.filter(cartItem => cartItem._id !== action.payload._id);
 
+      state.cartItems = nextCartItems;
     },
 
     decreaseCart(state, action) {

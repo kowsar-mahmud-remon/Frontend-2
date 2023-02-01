@@ -4,7 +4,7 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { FaAngleRight } from 'react-icons/fa';
 import Image from 'next/image';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart, decreaseCart, getTotals, setProduct } from '../../features/cart/cartSlice';
+import { addToCart, decreaseCart, getTotals, removeFromCart, setProduct } from '../../features/cart/cartSlice';
 import { useEffect } from 'react';
 
 
@@ -17,6 +17,10 @@ const DontSelectProductCheckout = () => {
 
   const handleAddToCart = (product) => {
     dispatch(addToCart(product));
+  };
+
+  const handleRemoveFromCart = (cartItem) => {
+    dispatch(removeFromCart(cartItem));
   };
 
   const handleDecreaseCart = (product) => {
@@ -116,7 +120,7 @@ const DontSelectProductCheckout = () => {
                     </div>
                     <div className="flex">
                       <AiOutlineHeart className='text-[20px] mr-4'></AiOutlineHeart>
-                      <RiDeleteBinFill className='text-[18px]'></RiDeleteBinFill>
+                      <RiDeleteBinFill onClick={() => handleRemoveFromCart(product)} className='text-[18px]'></RiDeleteBinFill>
                     </div>
                   </div>
                   <div className="flex">
