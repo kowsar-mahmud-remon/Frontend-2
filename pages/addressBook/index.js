@@ -9,7 +9,7 @@ const AddressBook = () => {
             </div>
             <div className="card w-2/3 pt-4 mx-auto grid md:grid-cols-2 lg:grid-cols-2 grid-cols-1 pb-72  bg-base-100 shadow-xl">
 
-                <div className="p-2 mb-2 rounded-lg border-black border-2 address-card mr-4">
+                <div className="p-2 mb-2 rounded-lg border-black border-2 address-card mr-4">  
                     <div className="flex justify-between">
                         <h1 className="font-semibold">Abdul Korim</h1>
                         <p className='text-sky-600'>Edit</p>
