@@ -3,13 +3,14 @@ import style from "/styles/componentsStyles/box-shaddow.module.css";
 import arrow from "/assets/images/arrow.png";
 import plus from "/assets/images/plus.png";
 import AddressBookModal from "../../components/AddressBook/AddressBookModal";
-import AddNewAddress from "../../components/AddressBook/AddNewAddress";
+import EditAddress from "../../components/AddressBook/EditAddress";
 
 const AddressBook = () => {
   return (
     <>
       <AddressBookModal></AddressBookModal>
-      <AddNewAddress></AddNewAddress>
+      {/* <AddNewAddress></AddNewAddress> */}
+      <EditAddress></EditAddress>
       <div className="lg:w-[924px] md:w-[924px] w-full mx-auto my-7">
         <div className="flex justify-between mb-8">
           <div className="flex items-center">
@@ -42,7 +43,7 @@ const AddressBook = () => {
               </h1>
               <div>
                 <label
-                  htmlFor="my-modal-3"
+                  htmlFor="my-modal-1"
                   className="text-[#287DF3] bg-[#F2F3F7] text-[12px] px-2 rounded cursor-pointer"
                 >
                   Edit
@@ -73,7 +74,7 @@ const AddressBook = () => {
               </h1>
               <div>
                 <label
-                  htmlFor="my-modal-3"
+                  htmlFor="my-modal-1"
                   className="text-[#287DF3] bg-[#F2F3F7] text-[12px] px-2 rounded cursor-pointer"
                 >
                   Edit
@@ -95,7 +96,9 @@ const AddressBook = () => {
         <div className="flex items-center lg:invisible md:invisible visible">
           <Image className="w-[14px] mr-2" src={plus} alt="" />
           <button className="text-base text-[#686868] font-medium">
-            Add New Address
+            <label htmlFor="my-modal-2" className="cursor-pointer">
+              Add New Address
+            </label>
           </button>
         </div>
       </div>
