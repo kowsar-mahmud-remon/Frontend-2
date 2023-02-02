@@ -6,7 +6,7 @@ import ProfileResponsive from './ProfileResponsive';
 const ManageAccountLayout = ({ children, slug }) => {
     console.log(slug)
     return (
-        <div className='flex my-8 mx-5 gap-[40px] xl:mx-4'>
+        <div className='flex my-8 justify-center mx-5 gap-[40px] xl:mx-4'>
 
             <div className='hidden lg:block'>
            
