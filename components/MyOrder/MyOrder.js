@@ -108,10 +108,8 @@ const MyOrder = () => {
         <div className="">
          
 
-            <div className="flex  my-8 mx-5 gap-[55px] xl:mx-4">
-                <div className="">
-                    <ManageAccoutSideBar></ManageAccoutSideBar>
-                </div>
+            <div className="">
+                
                 <div >
                     <div className="">
                         <div>
