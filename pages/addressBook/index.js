@@ -4,12 +4,13 @@ import arrow from "/assets/images/arrow.png";
 import plus from "/assets/images/plus.png";
 import AddressBookModal from "../../components/AddressBook/AddressBookModal";
 import EditAddress from "../../components/AddressBook/EditAddress";
+import AddNewAddress from "../../components/AddressBook/AddNewAddress"
 
 const AddressBook = () => {
   return (
     <>
       <AddressBookModal></AddressBookModal>
-      {/* <AddNewAddress></AddNewAddress> */}
+      <AddNewAddress></AddNewAddress>
       <EditAddress></EditAddress>
       <div className="lg:w-[924px] md:w-[924px] w-full mx-auto my-7">
         <div className="flex justify-between mb-8">

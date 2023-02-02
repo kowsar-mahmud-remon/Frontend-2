@@ -22,52 +22,52 @@ const AddNewAddress = () => {
           </div>
           <div className="shadow-inner py-8 px-4 rounded">
             <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1">
-              <div>
+              <div className="lg:mt-6 mt-4">
                 <label className="block text-sm font-medium text-[#001E00]" for="">
                   Full Name
                 </label>
                 <input
                   type="text"
                   placeholder="Input full name"
-                  className="input border-[#686868] w-full lg:mr-2 md:mr-2"
+                  className={`input ${style.inputborder} w-full lg:mr-2 md:mr-2`}
                 />
               </div>
-              <div>
+              <div className="lg:mt-6 mt-4">
                 <label className="block text-sm font-medium text-[#001E00] lg:ml-2 md:ml-2" for="">
                   Address
                 </label>
                 <input
                   type="text"
                   placeholder="House no. Building/ Street/ area"
-                  className="input border-[#686868] w-full lg:ml-2 md:ml-2"
+                  className={`input ${style.inputborder} w-full lg:ml-2 md:ml-2`}
                 />
               </div>
-              <div>
+              <div className="lg:mt-6 mt-4">
                 <label className="block text-sm font-medium text-[#001E00]" for="">
                   Mobile Number
                 </label>
                 <input
                   type="tel"
                   placeholder="Input Mobile Number"
-                  className="input border-[#686868] w-full lg:mr-2 md:mr-2"
+                  className={`input ${style.inputborder} w-full lg:mr-2 md:mr-2`}
                 />
               </div>
-              <div>
+              <div className="lg:mt-6 mt-4">
                 <label className="block text-sm font-medium text-[#001E00] lg:ml-2 md:ml-2" for="">
                   Landmark
                 </label>
                 <input
                   type="text"
                   placeholder="E.g. Beside train station"
-                  className="input border-[#686868] w-full lg:ml-2 md:ml-2"
+                  className={`input ${style.inputborder} w-full lg:ml-2 md:ml-2`}
                 />
               </div>
 
-              <div>
+              <div className="lg:mt-6 mt-4">
                 <label className="block text-sm font-medium text-[#001E00] " for="">
                   Province
                 </label>
-                <select className="select border-[#686868] w-full">
+                <select className={`select ${style.inputborder} w-full`}>
                   <option disabled selected>
                     Please choose your provice
                   </option>
@@ -77,7 +77,7 @@ const AddNewAddress = () => {
                   <option>Walking Dead</option>
                 </select>
               </div>
-              <div>
+              <div className="lg:mt-6 mt-4">
                 <label className="block text-sm font-medium text-[#001E00] lg:ml-2 md:ml-2" for="">
                   Select a label for effective delivery:
                 </label>
@@ -95,11 +95,11 @@ const AddNewAddress = () => {
                 </div>
               </div>
 
-              <div>
+              <div className="lg:mt-6 mt-4">
                 <label className="block text-sm font-medium text-[#001E00]" for="">
                   City
                 </label>
-                <select className="select border-[#686868] w-full">
+                <select className={`select ${style.inputborder} w-full`}>
                   <option disabled selected>
                     Please choose your city/municipality
                   </option>
@@ -109,7 +109,7 @@ const AddNewAddress = () => {
                   <option>Walking Dead</option>
                 </select>
               </div>
-              <div className="lg:ml-2 md:ml-2 row-span-3">
+              <div className="lg:ml-2 md:ml-2 row-span-3 lg:mt-6 mt-4">
                 <label className="block text-sm font-medium text-[#001E00] " for="">
                   Default Address (Optional)
                 </label>
@@ -129,11 +129,11 @@ const AddNewAddress = () => {
                 </div>
               </div>
 
-              <div>
+              <div className="lg:mt-6 mt-4">
                 <label className="block text-sm font-medium text-[#001E00]" for="">
                   Area
                 </label>
-                <select className="select border-[#686868] w-full">
+                <select className={`select ${style.inputborder} w-full`}>
                   <option disabled selected>
                     Please choose your area
                   </option>
