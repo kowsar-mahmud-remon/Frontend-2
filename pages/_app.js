@@ -11,7 +11,9 @@ export default function App({ Component, pageProps }) {
       <SideButtons/>
       <MobileNavBar/>
       <Navication />
-      <Component {...pageProps} />
+      <div className='mr-6'>
+        <Component {...pageProps} />
+      </div>
     </Provider>
   </div>
 }
