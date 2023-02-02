@@ -8,7 +8,7 @@ const Details = () => {
     const router = useRouter()
     // console.log(router);
   return (
-    <div className=" mt-10 mx-16">
+    <div className=" mt-10 md:mx-16">
       <ManageAccountLayout>
               {
                   myOrderRelated?.map((a, i) => {
