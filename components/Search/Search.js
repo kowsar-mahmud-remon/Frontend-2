@@ -11,7 +11,7 @@ import sellerVerify from '../../assets/images/sellerProfile/product/verified.png
 import { useState } from 'react';
 
 const Search = () => {
-
+// search
     const [min, setMin] = useState(0)
     const [max, setMax] = useState(100)
     const [show, setShow] = useState(true)
