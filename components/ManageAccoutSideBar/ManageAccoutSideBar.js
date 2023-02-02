@@ -14,7 +14,7 @@ const ManageAccoutSideBar = () => {
    
 
     const getCurrentColor = (profile) =>{
-        const asPath = `/profile/${router.query.slug[0]}`
+        const asPath = `/profile/${router.query.slug?.[0]}`
         // console.log(asPath)
         // console.log(profile?.href)
         return asPath === `/profile/${profile?.href}` ? "text-[#FB641B] font-bold mt-[16px] text-[24px]" : " text-black font-bold mt-[16px] text-[24px]"

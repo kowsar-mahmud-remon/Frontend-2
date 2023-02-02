@@ -1,60 +1,61 @@
 import ManageAccount from "../components/ManageAccoutSideBar/ManageAccount"
+import ManageAccountResponsive from "../components/ManageAccoutSideBar/ManageAccountResponsive"
 
 const profileLinksResponsiveObj = [
     {
         title: 'Manage My Account',
         href: "manageAccount",
-        element:<ManageAccount/>,
+        element:<ManageAccountResponsive/>,
     },
     {
         title: 'My Profile',
         href: "myprofile",
-        element:<ManageAccount/>,
+        element:<ManageAccountResponsive/>
     },
     {
         title: 'Address book',
         href: "addressBook",
-        element:<ManageAccount/>,
+        element:<ManageAccountResponsive/>,
     },
     {
         title: 'My Payment Options',
         href: "paymentOptions",
-        element:<ManageAccount/>,
+        element:<ManageAccountResponsive/>,
     },
     {
         title: 'My Orders',
         href: "myOrders",
-        element:<ManageAccount/>,
+        element:<ManageAccountResponsive/>,
     },
     {
         title: 'My Returns',
         href: "myReturns",
-        element:<ManageAccount/>,
+        element:<ManageAccountResponsive/>,
     },
     {
         title: 'My Cancellations',
         href: "myCancellations",
-        element:<ManageAccount/>,
+        element:<ManageAccountResponsive/>,
     },
     {
         title: 'My Reviews',
         href: "myReviews",
-        element:<ManageAccount/>,
+        element:<ManageAccountResponsive/>,
     },
     {
         title: 'My Wishlist',
         href: "myWishlist",
-        element:<ManageAccount/>,
+        element:<ManageAccountResponsive/>,
     },
     {
         title: 'Followed Stores',
         href: "followedStores",
-        element:<ManageAccount/>,
+        element:<ManageAccountResponsive/>,
     },
     {
         title: 'Sell On Bangla Big Store',
         href: "sellStore",
-        element:<ManageAccount/>,
+        element:<ManageAccountResponsive/>,
     }
 ]
 

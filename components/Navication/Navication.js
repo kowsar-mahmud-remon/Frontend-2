@@ -67,7 +67,7 @@ const Navication = () => {
     }
 
     return (
-        <section className='shadow-md z-20 shadow-block-900 relative'>
+        <section className='shadow-md hidden lg:block z-20 shadow-block-900 relative'>
             <TopNavBar/>
             {/* <div className='w-[100%] h-[110px] bg-[#026C51] flex items-center justify-center '>
                 <Image src={advertise} alt="img" className='w-[80%] max-w-[600px] h-[auto] ' />

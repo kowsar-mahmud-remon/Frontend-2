@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 // const rounter  = useRouter()
 // console.log(rounter)
     return (
-               <div >
+               <div className='lg:block hidden'>
                     <div className="mr-[30px]">
                         <div>
                             <h1 className="text-[#FB641B] text-[24px] font-semibold">Manage My Account</h1>

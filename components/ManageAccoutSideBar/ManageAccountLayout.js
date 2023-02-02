@@ -1,8 +1,10 @@
 import React from 'react';
+import ManageAccountResponsive from './ManageAccountResponsive';
 import ManageAccoutSideBar from './manageAccoutSideBar';
 import ProfileResponsive from './ProfileResponsive';
 
-const ManageAccountLayout = ({ children }) => {
+const ManageAccountLayout = ({ children, slug }) => {
+    console.log(slug)
     return (
         <div className='flex my-8 mx-5 gap-[40px] xl:mx-4'>
             <div className='hidden lg:block'>
@@ -10,9 +12,13 @@ const ManageAccountLayout = ({ children }) => {
 
             </div>
             <div className='lg:hidden '>
-                <ProfileResponsive></ProfileResponsive>
+                {
+                    !slug?.length> 0 && <ProfileResponsive></ProfileResponsive> 
+                }
+                
+                {/* <ManageAccountResponsive></ManageAccountResponsive> */}
             </div>
-            <div className='hidden lg:block'>
+            <div>
                 {
                     children
                 }
