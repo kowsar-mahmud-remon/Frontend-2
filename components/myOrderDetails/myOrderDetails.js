@@ -31,6 +31,7 @@ const MyOrderDetails = () => {
 
   return (
     <div className="w-full md:pl-5">
+      <h2 className="text-[24px] font-[500] text-[#FB641B] mb-4">Order Details</h2>
       <div className="flex justify-between items-center px-4 py-5 shadow-lg rounded-lg">
         <div className="">
           <h3 className="font-[500]">
@@ -39,7 +40,7 @@ const MyOrderDetails = () => {
           </h3>
           <p className="text-[14px]">{data.orderDate}</p>
         </div>
-        <div className="">
+        <div className="hidden lg:block">
           <h3>
             Total: <span className="font-[500]">Tk {data.total}</span>
           </h3>
@@ -61,36 +62,24 @@ const MyOrderDetails = () => {
         </div>
         <hr className="border-t-2" />
         <div className="p-4">
-          <div className="flex justify-between items-center">
+          <div className="lg:flex justify-between items-center">
             <p className="text-[#026C51] text-base font-[500]">
               {" "}
               {data.deliveredDate}
             </p>
-            <div className="flex items-center">
+            <div className="flex items-center mt-2 md:mt-0">
               <div>
                 <Image src={img2} alt="" />
               </div>
               <p className="text-base ml-2">{data.status}</p>
             </div>
           </div>
-          <div className="mt-10">
+          <div className="md:mt-10 mt-5">
             <Timeline status={data.status}></Timeline>
-            <div className="flex justify-center items-center">
-              <div className="w-4/5 p-7 bg-[#F2F3F7] rounded mt-3 relative">
-                <div className="w-5 h-5 bg-[#F2F3F7] absolute -top-2 left-16 rotate-45"></div>
-                {/* eta dynamic hobe */}
-                <p>
-                  31 Dec 2022 - 16:52{" "}
-                  <span className="font-[500]">
-                    Your order has been successfully verified
-                  </span>
-                </p>
-                <p className="text-[#287DF3] text-center">View More</p>
-              </div>
-            </div>
+            
           </div>
           {/* table */}
-          <div>
+          <div className="lg:block hidden">
             <div className="overflow-x-auto">
               <table className="table w-full">
                 <thead>

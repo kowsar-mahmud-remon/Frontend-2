@@ -38,60 +38,70 @@ const MyOrderCancelation = () => {
       value: "Not Original Product",
     },
   ];
-  const cancel ='canceled';
+  const cancel ='';
   if (cancel === 'canceled') {
     return (
       <div>
-        <div className="mt-20">
-
-        <h2 className="text-[#0BD838] text-[24px] font-[500] flex justify-center items-center">
-          <FaCheckCircle></FaCheckCircle>{" "}
-          <span className="ml-2">Your Cancellation Was Successful!</span>
+          <h2 className="text-[24px] font-[500] text-[#FB641B] mb-4">
+            Order Cancellation
           </h2>
-          <p className="text-center">Your order number was { data.orderId}</p>
+        <div className="mt-20">
+          <h2 className="text-[#0BD838] text-[24px] font-[500] flex justify-center items-center">
+            <FaCheckCircle></FaCheckCircle>{" "}
+            <span className="ml-2">Your Cancellation Was Successful!</span>
+          </h2>
+          <p className="text-center">Your order number was {data.orderId}</p>
         </div>
         <div className="shadow-lg rounded-lg mb-4 mt-5 w-full">
-        <div className=" p-4">
-          <div className="flex items-center">
+          <div className=" p-4">
+            <div className="flex items-center">
+              <div>
+                <Image src={img1} alt="" />
+              </div>
+              <h2 className="text-[18px] font-[500] ml-2">Package</h2>
+            </div>
+            <p>
+              Sold by <span className=" text-[#287DF3]">Banglar Big Store</span>
+            </p>
+          </div>
+          <hr className="border-t-2" />
+          <div className="p-4">
+            {/* table */}
             <div>
-              <Image src={img1} alt="" />
-            </div>
-            <h2 className="text-[18px] font-[500] ml-2">Package</h2>
-          </div>
-          <p>
-            Sold by <span className=" text-[#287DF3]">Banglar Big Store</span>
-          </p>
-        </div>
-        <hr className="border-t-2" />
-        <div className="p-4">
-          {/* table */}
-          <div>
-            <div className="overflow-x-auto">
-              <table className="table w-full">
-                <tbody>
-                  {/* map er kaj hobe ekhane. just emni akhn show kora hoise */}
-                  {data && (
-                    <tr>
-                      <td className="flex items-center">
-                        <Image width="57" height="46" src={data.image} alt="" />
-                        <p>{data.productName}</p>
-                      </td>
-                      <td>Tk{data.subtotal}</td>
-                      <td>Qty: {data.qty}</td>
-                    </tr>
-                  )}
-                </tbody>
-              </table>
+              <div className="overflow-x-auto">
+                <table className="table w-full">
+                  <tbody>
+                    {/* map er kaj hobe ekhane. just emni akhn show kora hoise */}
+                    {data && (
+                      <tr>
+                        <td className="flex items-center">
+                          <Image
+                            width="57"
+                            height="46"
+                            src={data.image}
+                            alt=""
+                          />
+                          <p>{data.productName}</p>
+                        </td>
+                        <td>Tk{data.subtotal}</td>
+                        <td>Qty: {data.qty}</td>
+                      </tr>
+                    )}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
-      </div>
       </div>
     );
   }
 
   return (
     <div className="w-full pl-5">
+      <h2 className="text-[24px] font-[500] text-[#FB641B] mb-4">
+        Order Cancellation
+      </h2>
       <div className="shadow-lg rounded-lg mb-4 mt-5 w-full">
         <div className=" p-4">
           <div className="flex items-center">
