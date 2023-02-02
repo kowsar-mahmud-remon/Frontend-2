@@ -16,7 +16,7 @@ const ManageAccountLayout = ({ children, slug }) => {
                     !slug?.length> 0 && <ProfileResponsive></ProfileResponsive> 
                 }
                 
-                {/* <ManageAccountResponsive></ManageAccountResponsive> */}
+           
             </div>
             <div>
                 {
