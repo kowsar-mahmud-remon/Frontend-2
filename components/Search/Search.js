@@ -195,6 +195,7 @@ const Search = () => {
                         <li className='flex justify-between'><p className='font-semibold text-[18px] mb-[16px]'>All Collecction</p>
                             <Image className='h-2 mt-2'
                                 src={v2}
+                                alt=''
                             />
                         </li>
                         {
@@ -249,6 +250,7 @@ const Search = () => {
                         <p className='font-semibold mb-[16px] '>Prices</p>
                         <Image className='h-2 mt-2'
                             src={v2}
+                            alt=''
                         />
                     </div>
                     <div className='container mb-[16px] px-4'>
@@ -286,6 +288,7 @@ const Search = () => {
                         <p className='font-semibold mb-[16px]'>Seller</p>
                         <Image className='h-2 mt-2'
                             src={v2}
+                            alt=''
                         />
                     </div>
 
@@ -315,6 +318,7 @@ const Search = () => {
                         <p className='font-semibold mb-[16px]'>Location</p>
                         <Image className='h-2 mt-2'
                             src={v2}
+                            alt=''
                         />
                     </div>
 
