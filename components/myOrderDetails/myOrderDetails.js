@@ -31,7 +31,9 @@ const MyOrderDetails = () => {
 
   return (
     <div className="w-full md:pl-5">
-      <h2 className="text-[24px] font-[500] text-[#FB641B] mb-4">Order Details</h2>
+      <h2 className="text-[24px] font-[500] text-[#FB641B] mb-4">
+        Order Details
+      </h2>
       <div className="flex justify-between items-center px-4 py-5 shadow-lg rounded-lg">
         <div className="">
           <h3 className="font-[500]">
@@ -76,10 +78,9 @@ const MyOrderDetails = () => {
           </div>
           <div className="md:mt-10 mt-5">
             <Timeline status={data.status}></Timeline>
-            
           </div>
           {/* table */}
-          <div className="lg:block hidden">
+          <div className="md:block hidden">
             <div className="overflow-x-auto">
               <table className="table w-full">
                 <thead>
@@ -98,7 +99,7 @@ const MyOrderDetails = () => {
                         <Image width="57" height="46" src={data.image} alt="" />
                         <p>{data.productName}</p>
                       </td>
-                      <td>Tk{data.subtotal}</td>
+                      <td>Tk {data.subtotal}</td>
                       <td>Qty: {data.qty}</td>
                       <td>
                         <Link
@@ -112,6 +113,57 @@ const MyOrderDetails = () => {
                   )}
                 </tbody>
               </table>
+            </div>
+          </div>
+
+          {/* mobile table */}
+          <div>
+            <div className="md:hidden">
+              <div className="overflow-x-auto">
+                <table className="table w-full">
+                  <thead>
+                    <tr className="hidden">
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {/* map er kaj hobe ekhane. just emni akhn show kora hoise */}
+                    {data && (
+                      <tr>
+                        <td className="flex items-center px-0">
+                          <Image
+                            width="57"
+                            height="46"
+                            src={data.image}
+                            alt=""
+                          />
+                          <div>
+                            <p className="font-[500] text-[12px]">
+                              {data.productName}
+                            </p>
+                            <p className=" text-[11px]">Tk {data.subtotal}</p>
+                            <p className="text-[11px]">
+                              Qty: <span className="font-[500]"> {data.qty}</span>
+                            </p>
+                          </div>
+                        </td>
+
+                        <td>
+                          <Link
+                            href="/orderDetails/myOrderCancelation"
+                            className="text-[#287DF3]"
+                          >
+                            Cancel
+                          </Link>
+                        </td>
+                      </tr>
+                    )}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
