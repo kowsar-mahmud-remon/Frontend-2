@@ -199,7 +199,6 @@ const CashOnDeliveryOrderConfirmPage = () => {
           }
         </div>
       </div>
-
     </div>
   );
 };
