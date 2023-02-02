@@ -4,6 +4,7 @@ import authSliceReducer from "../features/auth/authSlice";
 import categorySliceReducer from "../features/category/categorySlice";
 import paginateSliceReducer from "../features/paginate/paginate.slice";
 import productSlice from "../features/product/productSlice";
+import cartSlice from "../features/cart/cartSlice";
 
 export const store = configureStore({
     reducer: {
@@ -11,7 +12,8 @@ export const store = configureStore({
         auth: authSliceReducer,
         category: categorySliceReducer,
         paginate: paginateSliceReducer,
-        counter: productSlice
+        counter: productSlice,
+        cart:cartSlice
     },
     devTools: process.env.NODE_ENV !== "production",
     middleware: (getDefaultMiddlewares) =>
