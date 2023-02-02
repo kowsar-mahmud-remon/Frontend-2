@@ -38,19 +38,117 @@ const MyOrderCancelation = () => {
       value: "Not Original Product",
     },
   ];
-  const cancel ='canceled';
+  // const cancel = 'canceled';
+  const cancel = '';
+  
   if (cancel === 'canceled') {
     return (
+      // successfully canceled
       <div>
-        <div className="mt-20">
-
-        <h2 className="text-[#0BD838] text-[24px] font-[500] flex justify-center items-center">
-          <FaCheckCircle></FaCheckCircle>{" "}
-          <span className="ml-2">Your Cancellation Was Successful!</span>
+        <h2 className="text-[24px] font-[500] text-[#FB641B] mb-4">
+          Order Cancellation
+        </h2>
+        <div className="md:mt-20 mt-5">
+          <h2 className="text-[#0BD838] text-[24px] font-[500] flex md:flex-row flex-col justify-center items-center">
+            <FaCheckCircle></FaCheckCircle>{" "}
+            <span className="md:ml-2 text-center">Your Cancellation Was Successful!</span>
           </h2>
-          <p className="text-center">Your order number was { data.orderId}</p>
+          <p className="text-center">Your order number was {data.orderId}</p>
         </div>
         <div className="shadow-lg rounded-lg mb-4 mt-5 w-full">
+          <div className=" p-4">
+            <div className="flex items-center">
+              <div>
+                <Image src={img1} alt="" />
+              </div>
+              <h2 className="text-[18px] font-[500] ml-2">Package</h2>
+            </div>
+            <p>
+              Sold by <span className=" text-[#287DF3]">Banglar Big Store</span>
+            </p>
+          </div>
+          <hr className="border-t-2" />
+          <div className="p-4">
+            {/* table */}
+            <div className="md:block hidden">
+              <div className="overflow-x-auto">
+                <table className="table w-full">
+                  <tbody>
+                    {/* map er kaj hobe ekhane. just emni akhn show kora hoise */}
+                    {data && (
+                      <tr>
+                        <td className="flex items-center">
+                          <Image
+                            width="57"
+                            height="46"
+                            src={data.image}
+                            alt=""
+                          />
+                          <p>{data.productName}</p>
+                        </td>
+                        <td>Tk{data.subtotal}</td>
+                        <td>Qty: {data.qty}</td>
+                      </tr>
+                    )}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            {/* mobile table */}
+            <div>
+              <div className="md:hidden">
+                <div className="overflow-x-auto">
+                  <table className="table w-full">
+                    <thead>
+                      <tr className="hidden">
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {/* map er kaj hobe ekhane. just emni akhn show kora hoise */}
+                      {data && (
+                        <tr>
+                          <td className="flex items-center px-0">
+                            <Image
+                              width="57"
+                              height="46"
+                              src={data.image}
+                              alt=""
+                            />
+                            <div>
+                              <p className="font-[500] text-[12px]">
+                                {data.productName}
+                              </p>
+                              <p className=" text-[11px]">Tk {data.subtotal}</p>
+                              <p className="text-[11px]">
+                                Qty:{" "}
+                                <span className="font-[500]"> {data.qty}</span>
+                              </p>
+                            </div>
+                          </td>
+                        </tr>
+                      )}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    // cancellation page
+    <div className="w-full md:pl-5 mb-10">
+      <h2 className="text-[24px] font-[500] text-[#FB641B] mb-4">
+        Order Cancellation
+      </h2>
+      <div className="shadow-lg rounded-lg mb-4 mt-5 w-full">
         <div className=" p-4">
           <div className="flex items-center">
             <div>
@@ -63,9 +161,9 @@ const MyOrderCancelation = () => {
           </p>
         </div>
         <hr className="border-t-2" />
-        <div className="p-4">
+        <div className="">
           {/* table */}
-          <div>
+          <div className="md:block hidden">
             <div className="overflow-x-auto">
               <table className="table w-full">
                 <tbody>
@@ -85,41 +183,35 @@ const MyOrderCancelation = () => {
             </div>
           </div>
         </div>
-      </div>
-      </div>
-    );
-  }
-
-  return (
-    <div className="w-full pl-5">
-      <div className="shadow-lg rounded-lg mb-4 mt-5 w-full">
-        <div className=" p-4">
-          <div className="flex items-center">
-            <div>
-              <Image src={img1} alt="" />
-            </div>
-            <h2 className="text-[18px] font-[500] ml-2">Package</h2>
-          </div>
-          <p>
-            Sold by <span className=" text-[#287DF3]">Banglar Big Store</span>
-          </p>
-        </div>
-        <hr className="border-t-2" />
-        <div className="p-4">
-          {/* table */}
-          <div>
+        {/* mobile table */}
+        <div>
+          <div className="md:hidden">
             <div className="overflow-x-auto">
               <table className="table w-full">
+                <thead>
+                  <tr className="hidden">
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                  </tr>
+                </thead>
                 <tbody>
                   {/* map er kaj hobe ekhane. just emni akhn show kora hoise */}
                   {data && (
                     <tr>
-                      <td className="flex items-center">
+                      <td className="flex items-center px-0">
                         <Image width="57" height="46" src={data.image} alt="" />
-                        <p>{data.productName}</p>
+                        <div>
+                          <p className="font-[500] text-[12px]">
+                            {data.productName}
+                          </p>
+                          <p className=" text-[11px]">Tk {data.subtotal}</p>
+                          <p className="text-[11px]">
+                            Qty: <span className="font-[500]"> {data.qty}</span>
+                          </p>
+                        </div>
                       </td>
-                      <td>Tk{data.subtotal}</td>
-                      <td>Qty: {data.qty}</td>
                     </tr>
                   )}
                 </tbody>
@@ -157,15 +249,15 @@ const MyOrderCancelation = () => {
           <h2 className="text-[18px] font-[500] mb-2">
             Policy For Cancellation
           </h2>
-          <p className=" pl-6 mb-2">
+          <p className=" md:pl-6 mb-2">
             Policy For Cancellation Before Cancelling the Order, Kindly Read
             Thoroughly Our Following terms & Conditions:
           </p>
-          <p className=" pl-6 mb-2">
+          <p className=" md:pl-6 mb-2">
             Once you submit this form you agree to cancel the selected Reason.
             We will be unable to retrieve your order once it is cancelled.
           </p>
-          <p className=" pl-6 mb-2">
+          <p className=" md:pl-6 mb-2">
             Once you confirm your order cancellation, We will Process your
             refund within few minutes. I have read and accepted the Cancellation
             Policy of Banglar Big Bazar
