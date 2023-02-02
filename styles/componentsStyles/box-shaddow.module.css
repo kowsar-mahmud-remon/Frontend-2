@@ -1,3 +1,6 @@
-.boxshaddow{
-    box-shadow: 0px 6px 28px rgba(0, 0, 0, 0.16);
+.boxshaddow {
+  box-shadow: 0px 6px 28px rgba(0, 0, 0, 0.16);
+}
+.modalBackground {
+  background: rgba(0, 0, 0, 0.6);
 }
