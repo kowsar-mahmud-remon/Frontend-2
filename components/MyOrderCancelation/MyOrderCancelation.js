@@ -38,7 +38,8 @@ const MyOrderCancelation = () => {
       value: "Not Original Product",
     },
   ];
-  const cancel = 'canceled';
+  // const cancel = 'canceled';
+  const cancel = '';
   
   if (cancel === 'canceled') {
     return (
