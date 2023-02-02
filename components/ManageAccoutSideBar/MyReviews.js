@@ -1,8 +1,12 @@
 import Image from "next/image";
-import { FaSmile, FaStar } from "react-icons/fa";
+import { FaRegSmile, FaSmile, FaStar, FaRegMeh, FaRegFrown } from "react-icons/fa";
+import ReactStars from "react-rating-stars-component";
 
 
 const MyReviews = () => {
+    const ratingChanged = (newRating) => {
+        console.log(newRating);
+    };
     return (
         <div className="">
             <div className="w-[924px] flex h-[654px] left-[636px] top-[297px]  shadowreviews">
@@ -14,38 +18,38 @@ const MyReviews = () => {
                         <Image src='/image 8.png' width={76} height={61} alt=""></Image>
                         <div className="">
                             <p className="font-[400] text-[16px] text-[#001E00]">Tomato (Local) 500 ±30 gm</p>
-                            <div className="flex mt-[8px] items-center gap-[4px]">
-                                <div className="flex">
-                                    <Image alt="" src="/Star 31.png" width={24} height={24}></Image>
-                                    <Image src='/Star 31.png' width={24} height={24} alt=""></Image>
-                                    <Image src='/Star 31.png' width={24} height={24} alt=""></Image>
-                                    <Image src='/Star 31.png' width={24} height={24} alt=""></Image>
-                                    <Image src='/Star 31.png' width={24} height={24} alt=""></Image>
-                                    {/* <FaStar className="text-[#FB641B] w-[24px] h-[]24px"></FaStar>
-                                <FaStar className="text-[#FB641B] w-[24px] h-[]24px"></FaStar>
-                                <FaStar className="text-[#FB641B] w-[24px] h-[]24px"></FaStar>
-                                <FaStar className="text-[#FB641B] w-[24px] h-[]24px"></FaStar>
-                                <FaStar className="text-[#FB641B] w-[24px] h-[]24px"></FaStar> */}
+                            <div className="flex  items-center gap-[4px]">
 
-                                </div>
-                                <p className="font-[400] text-[14px] text-[#686868]">Delightful</p>
-
+                                <ReactStars
+                                    count={5}
+                                    onChange={ratingChanged}
+                                    size={24}
+                                    isHalf={true}
+                                    emptyIcon={<i className="far fa-star"></i>}
+                                    halfIcon={<i className="fa fa-star-half-alt"></i>}
+                                    fullIcon={<i className="fa fa-star"></i>}
+                                    activeColor="#FB641B"
+                                />
+                                <p className="font-[400] mt-1 text-[14px] text-[#686868]">Delightful</p>
                             </div>
                         </div>
                     </div>
 
-                    <div className="w-[552px] ml-[24px] h-[96px] bg-[#F2F2F2] rounded-lg">
-                        <p className="p-[24px] font-[400] text-[16px] text-[#686868]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text</p>
+                    <div className="">
+                        <textarea className="textarea  p-[24px] font-[400] text-[16px] text-[#686868] w-[552px] ml-[24px] h-[96px] bg-[#F2F2F2] rounded-lg outline-none " ></textarea>
+
                     </div>
                     <div className="flex gap-[8px] mt-[12px]">
                         <Image src='/image 8.png' width={74} height={60} alt=""></Image>
                         <Image src='/image 8.png' width={74} height={60} alt=""></Image>
                         <Image src='/image 8.png' width={74} height={60} alt=""></Image>
-                        <div className="w-[74px] h-[60px] bg-[#F2F3F7] border-solid border-[1px] shadow-small">
-                            {/* <Image className="absolute" src='/image 12.png' width={74} height={60} alt=""></Image> */}
+                        <label className="w-[74px] h-[60px] bg-[#F2F3F7] border-solid border-[1px] shadow-small">
+                            
                             <Image className="mt-[14px] ml-[28px] mr-[28px] mb-[28px]" src='/Vector.png' width={20} height={18} alt=""></Image>
+                        
                             <p className="font-[400] mt-[-22px] ml-[10px]  text-[8px] text-[#686868]">Upload Photo</p>
-                        </div>
+                            <input type="file" multiple accept="image/*" className="hidden"/>
+                        </label>
                     </div>
                     <div className="mt-[32px] ml-[24px]">
                         <p className="font-[500] text-[16px] text-[#001E00]">Important:</p>
@@ -60,45 +64,48 @@ const MyReviews = () => {
                     <p className="font-[400] text-[16px] mt-[47px] text-[#686868]">Sold by <span className="text-[#287DF3]">Banglar Big Store</span></p>
                     <p className="font-[500] text-[16px] mt-[16px] text-[#001E00]">Your seller review:</p>
                     <div className="flex gap-[15px] mt-[16px]">
-                        <Image src='/emoji1.png' width={24} height={24} alt=""></Image>
-                        <Image src='/emoji2.png' width={24} height={24} alt=""></Image>
-                        <FaSmile className="w-[24px] h-[24px] text-[#FB641B]"></FaSmile>
+                        <FaRegFrown className="w-[24px] h-[24px] hover:text-[#FB641B]"></FaRegFrown>
+                        <FaRegMeh className="w-[24px] h-[24px] hover:text-[#FB641B]"></FaRegMeh>
+                        <FaRegSmile className="w-[24px] h-[24px] hover:text-[#FB641B]"></FaRegSmile>
                         <p className="font-[400] text-[16px] text-[#686868]">Positive</p>
                     </div>
                     <div className="mt-[32px]">
                         <p className="font-[500] text-[16px] text-[#001E00]">Review detail</p>
-                        <div className="w-[275px] mt-[8px] h-[72px] bg-[#F2F2F2] rounded-[4px]">
-                            <p className=" p-[12px] font-[400] text-[16px] text-[#686868]">How is your overall experience with the seller?</p>
-                        </div>
+
+                        <textarea className="textarea  p-[12px] font-[400] text-[16px] text-[#686868] w-[275px] mt-[8px] h-[72px] bg-[#F2F2F2] rounded-[4px] outline-none" ></textarea>
                     </div>
                     <div className="mt-[31px]">
                         <p className="font-[500] text-[16px] text-[#001E00]">Rate your Rider:</p>
                         <div className="mt-[16px] flex">
-                            <Image src='/Star 32.png' width={24} height={24} alt=""></Image>
-                            <Image src='/Star 32.png' width={24} height={24} alt=""></Image>
-                            <Image src='/Star 32.png' width={24} height={24} alt=""></Image>
-                            <Image src='/Star 32.png' width={24} height={24} alt=""></Image>
-                            <Image src='/Star 32.png' width={24} height={24} alt=""></Image>
+                            <ReactStars
+                                count={5}
+                                onChange={ratingChanged}
+                                size={24}
+                                isHalf={true}
+                                emptyIcon={<i className="far fa-star"></i>}
+                                halfIcon={<i className="fa fa-star-half-alt"></i>}
+                                fullIcon={<i className="fa fa-star"></i>}
+                                activeColor="#FB641B"
+                            />
                         </div>
                     </div>
-                    <div className="w-[275px] mt-[8px] h-[72px] bg-[#F2F2F2] rounded-[4px]">
-                        <p className=" p-[12px] font-[400] text-[16px] text-[#686868]">How is your overall experience with the seller?</p>
-                    </div>
+                    <textarea className="textarea  p-[12px] font-[400] text-[16px] text-[#686868] w-[275px] mt-[8px] h-[72px] bg-[#F2F2F2] rounded-[4px] outline-none" ></textarea>
+
                     <div className="mt-[65px]">
                         <div className="flex gap-[26px] items-center">
                             <p className="font-[400] text-[16px] text-[#001E00]">Review as Abdul K.</p>
                             <div className="flex gap-[8px] items-center">
-                             
+
                                 <label class="switch">
                                     <input type="checkbox" />
-                                        <span class="slider round"></span>
+                                    <span class="slider round"></span>
                                 </label>
                                 <p className="text-[#287DF3] text-[12px] font-[400]">Anonymous</p>
                             </div>
                         </div>
                     </div>
                     <div className="mt-[30px]">
-                         <button className="bg-[#FB641B] mb-[32px] text-white w-[275px] h-[48px] rounded-[8px]">Submit</button>
+                        <button className="bg-[#FB641B] mb-[32px] text-white w-[275px] h-[48px] rounded-[8px]">Submit</button>
                     </div>
                 </div>
 

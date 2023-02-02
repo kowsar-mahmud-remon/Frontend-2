@@ -1,5 +1,6 @@
 import ManageAccount from "../components/ManageAccoutSideBar/ManageAccount"
 import ManageAccountResponsive from "../components/ManageAccoutSideBar/ManageAccountResponsive"
+import MyOrderDetails from "../components/myOrderDetails/myOrderDetails"
 
 const profileLinksResponsiveObj = [
     {
@@ -25,7 +26,7 @@ const profileLinksResponsiveObj = [
     {
         title: 'My Orders',
         href: "myOrders",
-        element:<ManageAccountResponsive/>,
+        element:<MyOrderDetails/>,
     },
     {
         title: 'My Returns',
