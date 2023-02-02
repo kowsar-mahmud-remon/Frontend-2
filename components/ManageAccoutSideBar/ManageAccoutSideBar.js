@@ -1,40 +1,66 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 import { FaCheck } from 'react-icons/fa';
-import  profileLinksObj  from '../../Utils/myProfileLinks';
+import profileLinksObj from '../../Utils/myProfileLinks';
+import ProfileResponsive from './ProfileResponsive';
 
 
 
 // import Profile from './Profile';
 const ManageAccoutSideBar = () => {
-    
-    const router = useRouter()
 
+    const router = useRouter()
+   
+
+    const getCurrentColor = (profile) =>{
+        const asPath = `/profile/${router.query.slug?.[0]}`
+        // console.log(asPath)
+        // console.log(profile?.href)
+        return asPath === `/profile/${profile?.href}` ? "text-[#FB641B] font-bold mt-[16px] text-[24px]" : " text-black font-bold mt-[16px] text-[24px]"
+    }
+    // text-[#686868]  mt-[8px]  text-[16px]
+    // console.log(getCurrentColor())
     return (
         <div>
             <div>
+                <div>
+                    <p>Hello, Abdul Korim</p>
+                </div>
 
                 {
-                    profileLinksObj?.map((profile, i) => <div
-                        key={i}
-                        className="mt-4">
-                        <Link className={router.pathname == '/manageMyAccount' ? "text-[#FB641B] font-bold mt-[16px] text-[24px]" : " font-bold mt-[16px] text-[24px]"} href={`/profile/${profile?.href}`}><h1>{profile?.title}</h1></Link>
+                    profileLinksObj?.map((profile, i) => {
+                     
 
-                        {
-                            profile?.links && <ul className='ml-6 mt-[16px]'>
+                        const url = `/profile/${profile.href}`
+                     
 
-                                {
-                                    profile?.links?.map((p, i) => <Link
-                                        key={i}
-                                        href={`/profile/${p?.href}`}><li className="text-[#686868]  mt-[8px]  text-[16px]">{p?.title}</li></Link>)
-                                }
+                        return <div
+                            key={i}
+                            className="mt-4">
 
-                            </ul>
-                        }
+                            <Link className={getCurrentColor(profile)} href={url}><h1>{profile.title}</h1></Link>
 
-                    </div>)
+                            {
+                                profile?.links && <ul className='ml-6 mt-[16px]'>
+
+                                    {
+                                        profile?.links?.map((p, i) => <Link
+                                            key={i}
+                                            href={`/profile/${profile?.href}/${p?.href}`}><li className={router.asPath === `/profile/${profile?.href}/${p?.href}` ? "text-[#FB641B]  mt-[16px] text-[16px]" : " text-[#686868]  mt-[8px]  text-[16px]"}>{p?.title}</li></Link>)
+                                    }
+
+                                </ul>
+                            }
+
+                        </div>
+                    })
                 }
             </div>
+
+            {/* <div>
+                <ProfileResponsive></ProfileResponsive>
+            </div> */}
         </div>
     );
 };
