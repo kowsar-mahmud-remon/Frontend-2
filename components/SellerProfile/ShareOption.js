@@ -7,9 +7,10 @@ import dot from "../../assets/images/sellerProfile/dot.png";
 
 function ShareOption(props) {
   return (
-    <div className="flex justify-around w-[1090px] mx-auto mt-[24px] text-[24px]">
-      <div className="grid grid-cols-3 gap-0 w-[540px] mx-auto mt-4">
-        <div className="bg-[#F2F3F7] w-[160px] h-[48px] p-[10px] text-center rounded-xl text-[18px]">
+    <div className="flex lg:justify-around mobile:justify-evenly  lg:w-[1090px] mobile:w-[376px] mx-auto  lg:mt-[24px] text-[24px]">
+      <div className=" flex justify-center items-center  lg:w-[540px] mobile:w-[376px] mx-auto mt-4">
+        {/* follow 100k+ */}
+        <div className="bg-[#F2F3F7] lg:w-[160px] mobile:w-[151px] h-[48px] py-[10px] text-center rounded-xl lg:text-[18px] mobile:text-[16px] lg:mr-[16px] mobile:mr-[16px] mobile:font-semibold">
           <Image
             className="inline"
             src={follow}
@@ -17,19 +18,13 @@ function ShareOption(props) {
             width="18"
             height="15"
           />
-          <span className="ml-3 fw-semibold">Follow 100K+</span>
+          <span className="ml-3 fw-semibold mobile:text-[16px]">
+            Follow 100K+
+          </span>
         </div>
-        <div className="bg-[#F2F3F7] w-[160px] h-[48px] p-[10px] text-center rounded-xl text-[18px]">
-          <Image
-            className="inline"
-            src={message}
-            alt="follow image"
-            width="18"
-            height="15"
-          />
-          <span className="ml-3 fw-semibold">Message</span>
-        </div>
-        <div className="bg-[#F2F3F7] w-[160px] h-[48px] p-[10px] text-center rounded-xl text-[18px]">
+
+        {/* share */}
+        <div className="bg-[#F2F3F7] w-[160px] h-[48px] p-[10px] text-center rounded-xl text-[18px] mobile:w-[97px] mobile:text-[16px] mobile:font-semibold">
           <Image
             className="inline"
             src={share}
@@ -40,9 +35,9 @@ function ShareOption(props) {
           <span className="ml-3 fw-semibold">Share</span>
         </div>
       </div>
-      <div className="mt-[16px] ]">
+      <div className="mt-[16px]  lg:block">
         <Image
-          className="inline"
+          className="inline "
           src={dot}
           alt="follow image"
           width="6"

@@ -8,9 +8,9 @@ import user from "../../assets/images/sellerProfile/sellerImg.png";
 
 function AboutSection(props) {
   return (
-    <div className="w-[1090px] px-[67px]">
-      <div className="text-[24px]">
-        <h3 className="font-semibold mb-3 ">About</h3>
+    <div className="lg:w-[1090px] mobile:w-[424px]  lg:px-[0] mobile:mt-[24px] mobile:px-[24px] mobile:mx-auto">
+      <div className="lg:text-[24px] mobile:text-[16px]">
+        <h3 className="font-semibold mb-[16px] mobile:text-[18px] lg:text-[24px]">About</h3>
         <p className="mb-[24px]">
           <Image
             className="inline mr-3"
@@ -19,7 +19,7 @@ function AboutSection(props) {
             height="30"
             alt="Seller image"
           />
-          <span className="font-bold ml-[12px]">Seller Name : </span>Nasir Uddin
+          <span className="font-bold ml-[12px] ">Seller Name : </span>Nasir Uddin
         </p>
         <p className="mb-[24px]">
           <FaHome className="text-[#287DF3] inline mr-3 text-[20px] w-[26px] h-[24px]"></FaHome>
@@ -45,7 +45,7 @@ function AboutSection(props) {
         </p>
       </div>
       <div className="mt-[25px]">
-        <h3 className="mb-[8px] text-[24px] font-semibold">Seller ratings</h3>
+        <h3 className="mb-[8px] text-[24px] font-semibold mobile:text-[18px] lg:text-[24px]">Seller ratings</h3>
         <p className="text-[15px] text-[#686868] mb-[16px]">
           Based on 12 ratings
         </p>
