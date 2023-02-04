@@ -17,7 +17,7 @@ const SearchDesktop = () => {
     const [rightWidth, setRightWidth] = useState('w-full')
     const [bghide, setBgHide] = useState('')
     const minValue = 0;
-    const [filter, setFilter] = useState()
+    const [filters, setFilters] = useState([])
     const [maxValue, setMaxValue] = useState(10000)
     const [newSeller, setNewSeller] = useState('hidden')
 
@@ -26,66 +26,71 @@ const SearchDesktop = () => {
         setMaxValue(val)
     }
 
-    const filters = []
-    console.log(filters)
+
+    const handleCloseNewSeller = (id) => {
+        const rest = filters && filters.filter(fil => fil.id !== id)
+        setFilters(rest)
+    }
 
     const handleclearAll = () => {
-        const filter = document.getElementById('filter')
-        // filter.classList.add('hidden')
+        setFilters('')
+    }
+
+    const handleSeller = (check, val) => {
+        if (filters.length <= 3) {
+            if (check === true) {
+
+                setFilters([...filters, val])
+            }
+            else if (check === false) {
+                handleCloseNewSeller(val.id)
+            }
+        }
     }
     const handleNewSeller = (val) => {
 
-        console.log(val)
-        // const newFilter = [val]
-        // setFilters(newFilter, ...filters)
+        if (filters.length <= 3) {
+            if (val === true) {
 
-        // console.log(val)
-        // // const newFilters = ['new Seller']
-        // filters.push(val)
-        // const y = document.getElementById('seller').value;
-        if (val === true) {
-            setNewSeller('block')
-
-        }
-        else if (val === false) {
-            setNewSeller('hidden')
-
+                setFilters([...filters, { id: 1, value: 'NewSeller' }])
+            }
+            else if (val === false) {
+                handleCloseNewSeller(1)
+            }
         }
 
     }
     const handleverifiedSeller = (val) => {
-        // setFilters(filters, 'verified Seller')
-        const x = document.getElementById('verifiedSeller').value;
-        if (val === true) {
-            filters.push('Verified Seller')
 
-        }
-        else if (val === false) {
-            const filter = document.getElementById('filter')
-            filter.remove()
+
+        if (filters.length <= 3) {
+            if (val === true) {
+
+                setFilters([...filters, { id: 2, value: 'VarifiedSeller' }])
+            }
+            else if (val === false) {
+                handleCloseNewSeller(2)
+            }
         }
 
     }
+
     const handleAssuredSeller = (val) => {
 
-        if (val === true) {
-            // const x = document.getElementById('AssuredSeller').value;
-            const filter = document.getElementById('filter')
-            const p = document.createElement('p')
-            p.innerHTML = <button> Assured Seller</button>
-            filter.appendChild(p)
-        }
-        else if (val === false) {
-            const filter = document.getElementById('filter')
-            const p = document.createElement('p')
-            p.innerHTML = ''
-            filter.appendChild(p)
+        if (filters.length <= 3) {
+            if (val === true) {
 
+                setFilters([...filters, { id: 3, value: 'AssuredSeller ' }])
+            }
+            else if (val === false) {
+                handleCloseNewSeller(3)
+            }
         }
+
     }
-    const handleCloseNewSeller = () => {
-        // setNewSeller('hidden')
-    }
+    console.log(filters)
+
+
 
     const searchProducts = [
         {
@@ -206,18 +211,12 @@ const SearchDesktop = () => {
         <div className=" flex lg:px-[94px] relative md:px-[94px] mt-2">
             <div className={`flex z-20  absolute  lg:left-[93px]  lg:mr-[229px] ${bghide} `}>
                 <div onClick={() => handleClose(1)} className={` w-[107px]   h-[1148px] bg-black opacity-[0.4]  lg:hidden md:hidden`}>
-                    {/* <OutsideClickHandler
-                        onOutsideClick={() => {
-                            // handleClose(1)
-                        }}
-                    >
 
-                    </OutsideClickHandler> */}
                 </div>
 
                 <div className={`${leftWidth}   lg:block md:block   `}>
                     <div className='flex justify-between px-4'>
-                        <div className='max-[500px]:hidden  mb-[16px] border  border-[#FB641B] py-[11px] px-[23px] rounded-full flex w-[166px]'>
+                        <div className='max-[600px]:hidden  mb-[16px] border  border-[#FB641B] py-[11px] px-[23px] rounded-full flex w-[166px]'>
                             <Image className='h-[20px] w-[20px] mt-[3px]'
                                 src={cate}
                                 alt='img'
@@ -235,7 +234,16 @@ const SearchDesktop = () => {
                                 <p className='text-[#287DF3] cursor-pointer' onClick={handleclearAll}>Clear all</p>
                             </div>
                             <div>
-                                <div id='filter' className='flex mb-[16px]'>
+                                <div id='filter' className=' flex mb-[16px] '>
+                                    {
+                                        filters && filters.map(filter => {
+                                            return (
+                                                <p key={filter.id} className={`bg-[#F2F3F7] w-[100px] text-[#686868] text-[10px] h-[21px] py-[-2px] px-2 mr-2 `}> <span className='mr-1 cursor-pointer' onClick={() => handleCloseNewSeller(filter.id)}>X</span><span>{filter.value}</span> </p>
+
+                                            )
+                                        })
+                                    }
+
 
 
                                 </div>
@@ -292,9 +300,17 @@ const SearchDesktop = () => {
                                 <p className='text-[#287DF3] cursor-pointer' onClick={handleclearAll}>Clear all</p>
                             </div>
                             <div>
-                                <div id='filter' className='flex mb-[16px] '>
-                                    <p className={`bg-[#F2F3F7] w-[118px] text-[#686868] text-[14px] h-[28px] py-[-2px] px-2 ${newSeller}`}> <span className='mr-2 cursor-pointer' onClick={handleCloseNewSeller()}>X</span><span>New Seller</span> </p>
-                                    <p className={`bg-[#F2F3F7] w-[90px] text-[#686868] text-[14px] h-[28px] py-[-2px] px-2 ml-2 `}> <span className='mr-2 cursor-pointer ' onClick={handleCloseNewSeller()}>X</span><span>{maxValue}</span> </p>
+                                <div id='filter' className=' flex mb-[16px] '>
+                                    {
+                                        filters && filters.map(filter => {
+                                            return (
+                                                <p key={filter.id} className={`bg-[#F2F3F7] w-[100px] text-[#686868] text-[10px] h-[21px] py-[-2px] px-2 mr-2 `}> <span className='mr-1 cursor-pointer' onClick={() => handleCloseNewSeller(filter.id)}>X</span><span>{filter.value}</span> </p>
+
+                                            )
+                                        })
+                                    }
+
+
 
                                 </div>
                             </div>
@@ -338,7 +354,7 @@ const SearchDesktop = () => {
                                     alt='img'
                                 />
                             </div>
-                            <div className='border  rounded-md w-[136px]  p-[8px] mb-2'>
+                            <div className='border  rounded-md w-[136px] ml-4  px-[8px] mb-2'>
                                 <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" className='bg-[#026C51]' />
                                 <label for="vehicle1" className='text-[14px] font-semibold text-[#001E00] ml-2 mt-[1px]'>No Brands</label><br />
                             </div>
@@ -359,15 +375,15 @@ const SearchDesktop = () => {
                             <div className="mb-[16px]">
                                 <form className=''>
                                     <div className='border  rounded-md w-28 mb-2 p-[8px] '>
-                                        <input type="checkbox" className='accent-[#026C51]' id="seller" name="vehicle1" onClick={(e) => handleNewSeller(e.target.checked)} value="New Seller" />
+                                        <input type="checkbox" className='accent-[#026C51]' id="seller" name="vehicle1" onClick={(e) => handleSeller(e.target.checked, { id: 1, value: 'NewSeller' })} value="New Seller" />
                                         <label for="vehicle1 " className='text-[14px] text-[#001E00] font-medium'> New Seller</label><br />
                                     </div>
                                     <div className='border p-[8px] rounded-md w-32 mb-2'>
-                                        <input type="checkbox" className='accent-[#026C51]' id="verifiedSeller" name="vehicle2" onClick={(e) => handleverifiedSeller(e.target.checked)} value="Verified Seller" />
+                                        <input type="checkbox" className='accent-[#026C51]' id="verifiedSeller" name="vehicle2" onClick={(e) => handleSeller(e.target.checked, { id: 2, value: 'VarifiedSeller' })} value="Verified Seller" />
                                         <label for="vehicle2" className='text-[14px] text-[#001E00]  font-medium'> Verified Seller</label><br />
                                     </div>
                                     <div className='border p-[8px] rounded-md w-32'>
-                                        <input type="checkbox" className='accent-[#026C51]' id="AssuredSeller" name="vehicle3" onClick={(e) => handleAssuredSeller(e.target.checked)} value="Assured Seller" />
+                                        <input type="checkbox" className='accent-[#026C51]' id="AssuredSeller" name="vehicle3" onClick={(e) => handleSeller(e.target.checked, { id: 3, value: 'AssuredSeller' })} value="Assured Seller" />
                                         <label for="vehicle3" className='text-[14px] text-[#001E00]  font-medium'> Assured Seller</label><br />
                                     </div>
                                 </form>
