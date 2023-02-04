@@ -12,6 +12,7 @@ import {
   setActiveBtn,
 } from "../../features/category/categorySlice";
 import { useRouter } from "next/router";
+import style from "/styles/componentsStyles/box-shaddow.module.css";
 import { useEffect } from "react";
 
 const Manageproduct = () => {
@@ -25,215 +26,215 @@ const Manageproduct = () => {
 
   const datas = [
     {
-      "id": 1,
-      "name": "Products",
-      "img": "https://i.ibb.co/0MFWvk4/online-shopping.png",
-      "subcata": [
+      id: 1,
+      name: "Products",
+      img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
+      subcata: [
         {
-          "name": "Add Product"
+          name: "Add Product",
         },
         {
-          "name": "New Media Center"
+          name: "New Media Center",
         },
         {
-          "name": "Fullfillment"
+          name: "Fullfillment",
         },
         {
-          "name": "Edit Product"
-        }
-      ]
+          name: "Edit Product",
+        },
+      ],
     },
     {
-      "id": 2,
-      "name": "Promotions",
-      "img": "https://i.ibb.co/0MFWvk4/online-shopping.png",
-      "subcata": [
+      id: 2,
+      name: "Promotions",
+      img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
+      subcata: [
         {
-          "name": "Add Product"
+          name: "Add Product",
         },
         {
-          "name": "New Media Center"
+          name: "New Media Center",
         },
         {
-          "name": "Fullfillment"
+          name: "Fullfillment",
         },
         {
-          "name": "Edit Product"
-        }
-      ]
+          name: "Edit Product",
+        },
+      ],
     },
     {
-      "id": 3,
-      "name": "Orders & Reviews",
-      "img": "https://i.ibb.co/0MFWvk4/online-shopping.png",
-      "subcata": [
+      id: 3,
+      name: "Orders & Reviews",
+      img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
+      subcata: [
         {
-          "name": "Add Product"
+          name: "Add Product",
         },
         {
-          "name": "New Media Center"
+          name: "New Media Center",
         },
         {
-          "name": "Fullfillment"
+          name: "Fullfillment",
         },
         {
-          "name": "Edit Product"
-        }
-      ]
+          name: "Edit Product",
+        },
+      ],
     },
     {
-      "id": 4,
-      "name": "Store Decoration",
-      "img": "https://i.ibb.co/0MFWvk4/online-shopping.png",
-      "subcata": [
+      id: 4,
+      name: "Store Decoration",
+      img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
+      subcata: [
         {
-          "name": "Add Product"
+          name: "Add Product",
         },
         {
-          "name": "New Media Center"
+          name: "New Media Center",
         },
         {
-          "name": "Fullfillment"
+          name: "Fullfillment",
         },
         {
-          "name": "Edit Product"
-        }
-      ]
+          name: "Edit Product",
+        },
+      ],
     },
     {
-      "id": 5,
-      "name": "Assortment Growth",
-      "img": "https://i.ibb.co/0MFWvk4/online-shopping.png",
-      "subcata": [
+      id: 5,
+      name: "Assortment Growth",
+      img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
+      subcata: [
         {
-          "name": "Add Product"
+          name: "Add Product",
         },
         {
-          "name": "New Media Center"
+          name: "New Media Center",
         },
         {
-          "name": "Fullfillment"
+          name: "Fullfillment",
         },
         {
-          "name": "Edit Product"
-        }
-      ]
+          name: "Edit Product",
+        },
+      ],
     },
     {
-      "id": 6,
-      "name": "Account Health",
-      "img": "https://i.ibb.co/0MFWvk4/online-shopping.png",
-      "subcata": [
+      id: 6,
+      name: "Account Health",
+      img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
+      subcata: [
         {
-          "name": "Add Product"
+          name: "Add Product",
         },
         {
-          "name": "New Media Center"
+          name: "New Media Center",
         },
         {
-          "name": "Fullfillment"
+          name: "Fullfillment",
         },
         {
-          "name": "Edit Product"
-        }
-      ]
+          name: "Edit Product",
+        },
+      ],
     },
     {
-      "id": 7,
-      "name": "Bussiness Adviser",
-      "img": "https://i.ibb.co/0MFWvk4/online-shopping.png",
-      "subcata": [
+      id: 7,
+      name: "Bussiness Adviser",
+      img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
+      subcata: [
         {
-          "name": "Add Product"
+          name: "Add Product",
         },
         {
-          "name": "New Media Center"
+          name: "New Media Center",
         },
         {
-          "name": "Fullfillment"
+          name: "Fullfillment",
         },
         {
-          "name": "Edit Product"
-        }
-      ]
+          name: "Edit Product",
+        },
+      ],
     },
     {
-      "id": 8,
-      "name": "Finnace",
-      "img": "https://i.ibb.co/0MFWvk4/online-shopping.png",
-      "subcata": [
+      id: 8,
+      name: "Finnace",
+      img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
+      subcata: [
         {
-          "name": "Add Product"
+          name: "Add Product",
         },
         {
-          "name": "New Media Center"
+          name: "New Media Center",
         },
         {
-          "name": "Fullfillment"
+          name: "Fullfillment",
         },
         {
-          "name": "Edit Product"
-        }
-      ]
+          name: "Edit Product",
+        },
+      ],
     },
     {
-      "id": 9,
-      "name": "Seller Guidlines",
-      "img": "https://i.ibb.co/0MFWvk4/online-shopping.png",
-      "subcata": [
+      id: 9,
+      name: "Seller Guidlines",
+      img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
+      subcata: [
         {
-          "name": "Add Product"
+          name: "Add Product",
         },
         {
-          "name": "New Media Center"
+          name: "New Media Center",
         },
         {
-          "name": "Fullfillment"
+          name: "Fullfillment",
         },
         {
-          "name": "Edit Product"
-        }
-      ]
+          name: "Edit Product",
+        },
+      ],
     },
     {
-      "id": 10,
-      "name": "Seller Support",
-      "img": "https://i.ibb.co/0MFWvk4/online-shopping.png",
-      "subcata": [
+      id: 10,
+      name: "Seller Support",
+      img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
+      subcata: [
         {
-          "name": "Add Product"
+          name: "Add Product",
         },
         {
-          "name": "New Media Center"
+          name: "New Media Center",
         },
         {
-          "name": "Fullfillment"
+          name: "Fullfillment",
         },
         {
-          "name": "Edit Product"
-        }
-      ]
+          name: "Edit Product",
+        },
+      ],
     },
     {
-      "id": 11,
-      "name": "Account Setting",
-      "img": "https://i.ibb.co/0MFWvk4/online-shopping.png",
-      "subcata": [
+      id: 11,
+      name: "Account Setting",
+      img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
+      subcata: [
         {
-          "name": "Add Product"
+          name: "Add Product",
         },
         {
-          "name": "New Media Center"
+          name: "New Media Center",
         },
         {
-          "name": "Fullfillment"
+          name: "Fullfillment",
         },
         {
-          "name": "Edit Product"
-        }
-      ]
-    }
-  ]
+          name: "Edit Product",
+        },
+      ],
+    },
+  ];
 
 
 
@@ -270,9 +271,6 @@ const Manageproduct = () => {
       name: "Stock",
     },
     {
-      name: "Created",
-    },
-    {
       name: "Actions",
       selector: (row) => row.title,
     },
@@ -287,7 +285,7 @@ const Manageproduct = () => {
   ];
 
   return (
-    <section className="bg-[#C9C9C9] py-10">
+    <section className="bg-[#FFFFFF] py-10">
       <div className="px-10 mx-auto flex">
         <div className="lg:w-3/12 md:w-3/12 w-0">
           <section
@@ -368,42 +366,16 @@ const Manageproduct = () => {
               </ul>
             </div>
             <div>
-              <h1 className="text-[#FB641B] font-medium text-2xl">
-                Product Management
+              <h1 className="text-[#FB641B] font-semibold text-2xl">
+                Manage Products
               </h1>
-            </div>
-            <div className="bg-[#DFECFD] flex p-4 my-8">
-              <div className="pr-4">
-                <Image
-                  src={exclaimation}
-                  alt="exclaimation"
-                  width="35"
-                  height="35"
-                />
-              </div>
-              <div className="text-[#686868]">
-                <p className="pb-2 text-[15px]">
-                  Since we have upgraded the product management, For a better
-                  experience, the older operation of file uploading on the
-                  current page would be offline in a few days. You can
-                  experience the new one in the menu{" "}
-                  <strong>Products / Bulk Add/Edit Products</strong>
-                </p>
-                <p className="text-[13px]">
-                  Your products are not yet visible to buyers. Please add
-                  address to make them visible
-                </p>
-              </div>
             </div>
           </div>
 
-          <div className="bg-[#F2F2F2] p-6 shadow-md rounded">
-            <div className="mb-4">
-              <button className="h-[40px] rounded w-[176px] bg-[#FB641B] hover:bg-[#ce4e0e] text-white font-medium">
-                Add Product
-              </button>
-            </div>
-            <div className="grid lg:grid-cols-8 md:grid-cols-5 grid-cols-3 gap-3 justify-center bg-white items-center shadow-md">
+          <div className="bg-[#FFFFFF] rounded mt-8">
+            <div
+              className={`grid lg:grid-cols-8 md:grid-cols-5 grid-cols-3 gap-3 justify-center bg-white items-center ${style.boxshaddow}`}
+            >
               {MENU_LIST.map((menu, idx) => (
                 <div key={menu?.text}>
                   <Managelist
@@ -415,97 +387,48 @@ const Manageproduct = () => {
               ))}
             </div>
 
-            <div className="bg-[#DFECFD] flex p-4 my-8">
-              <div className="pr-4">
-                <Image
-                  src={exclaimation}
-                  alt="exclaimation"
-                  width="26"
-                  height="26"
-                />
-              </div>
-              <div className="text-[#686868]">
-                <p className="pb-2 text-[13px]">
-                  <strong>Explanation</strong>
-                </p>
-                <p className="text-[13px]">
-                  The product which is buyer can see and stock 0 will appear in
-                  online tab.
-                </p>
-              </div>
-            </div>
-
-            <div className="grid lg:grid-cols-6 md:grid-cols-4 grid-cols-2 gap-3 items-center">
-              <div className="w-[176px]">
-                <select className="select select-bordered w-[176px] text-[#686868]">
-                  <option disabled selected>
-                    Category
-                  </option>
-                  <option> Apple</option>
-                  <option> Orange</option>
-                  <option> Tomato</option>
-                </select>
-              </div>
-              <input
-                type="text"
-                placeholder="Type here"
-                className="input input-bordered w-[176px]"
-              />
-              <input
-                type="text"
-                placeholder="Type here"
-                className="input input-bordered w-[176px]"
-              />
-              <input
-                type="text"
-                placeholder="Type here"
-                className="input input-bordered w-[176px]"
-              />
-              <input
-                type="text"
-                placeholder="Type here"
-                className="input input-bordered w-[176px]"
-              />
-              <button
-                type="submit"
-                placeholder="Type here"
-                className="h-[44px] rounded bg-[#FB641B] hover:bg-[#ce4e0e] text-white font-medium cursor-pointer"
-              >
-                Search
-              </button>
-            </div>
-
-            <div className="flex lg:justify-between md:justify-between lg:flex-row md:flex-row flex-col my-4 items-center">
-              <div className="flex items-center">
-                <p className="mr-6">Selected: 0</p>
+            <div className={`${style.boxshaddow} p-5  mt-4`}>
+              <div className="grid lg:grid-cols-5 md:grid-cols-5 grid-cols-2 gap-3 items-center">
                 <input
                   type="text"
-                  placeholder="Type here"
-                  className="input input-bordered w-[102px] mr-4"
-                  value="Inactivate"
+                  placeholder="Product Name"
+                  className="input input-bordered h-11"
                 />
                 <input
                   type="text"
-                  placeholder="Type here"
-                  className="input input-bordered w-[102px]"
-                  value="Batch Delete"
+                  placeholder="Product ID"
+                  className="input input-bordered h-11"
                 />
-              </div>
- 
-              <div> 
-                <div className="btn-group lg:py-0 md:py-0 py-5">
-                  <button className="bg-[#FB641B] hover:bg-[#ce4e0e] px-4 h-[44px] rounded ml-1 font-medium text-white">
-                    Product
-                  </button>
-                  <button className=" text-[#FB641B] hover:bg-[#ce4e0e] font-medium hover:text-white px-4 h-[44px] rounded">
-                    SKU
-                  </button>
+
+                <div>
+                  <select className="border h-11 px-5 rounded-lg text-[#686868] ">
+                    <option value="0">Select car:</option>
+                    <option value="1">Audi</option>
+                    <option value="2">BMW</option>
+                    <option value="3">Citroen</option>
+                    <option value="4">Ford</option>
+                    <option value="5">Honda</option>
+                    <option value="6">Jaguar</option>
+                    <option value="7">Land Rover</option>
+                    <option value="8">Mercedes</option>
+                    <option value="9">Mini</option>
+                    <option value="10">Nissan</option>
+                    <option value="11">Toyota</option>
+                    <option value="12">Volvo</option>
+                  </select>
                 </div>
-              </div>
-            </div>
 
-            <div>
-              <DataTable columns={columns} data={data} selectableRows />
+                <button
+                  className="rounded text-white
+                 px-5 py-2 bg-[#FB641B] hover:bg-[#f85a0b]"
+                >
+                  Search
+                </button>
+              </div>
+
+              <div className="mt-4">
+                <DataTable columns={columns} data={data} />
+              </div>
             </div>
 
             {/* <div className="overflow-x-auto w-full">
