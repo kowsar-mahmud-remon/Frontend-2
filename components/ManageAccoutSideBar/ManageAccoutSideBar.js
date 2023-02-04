@@ -11,9 +11,9 @@ import ProfileResponsive from './ProfileResponsive';
 const ManageAccoutSideBar = () => {
 
     const router = useRouter()
-   
 
-    const getCurrentColor = (profile) =>{
+
+    const getCurrentColor = (profile) => {
         const asPath = `/profile/${router.query.slug?.[0]}`
         // console.log(asPath)
         // console.log(profile?.href)
@@ -25,15 +25,22 @@ const ManageAccoutSideBar = () => {
         <div>
             <div>
                 <div>
-                    <p>Hello, Abdul Korim</p>
+                    <p className='font-[500] text-[16px] text-[#001E00]'>Hello, Abdul Korim</p>
+                    <div className='mt-[16px]'>
+                        <button className='w-[172px] h-[30px] flex items-center justify-center gap-[8px] bg-[#0BD838] rounded-[15px]'>
+                            <FaCheck className='text-[#FFFFFF]'></FaCheck>
+                            <span className='text-[#FFFFFF]'>Verified Account</span>
+                        </button>
+
+                    </div>
                 </div>
 
                 {
                     profileLinksObj?.map((profile, i) => {
-                     
+
 
                         const url = `/profile/${profile.href}`
-                     
+
 
                         return <div
                             key={i}
