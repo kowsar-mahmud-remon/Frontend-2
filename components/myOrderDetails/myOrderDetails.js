@@ -1,6 +1,8 @@
 import Image from "next/image";
 import img1 from "../../assets/images/myOrdersDetails/Vector (3).png";
 import img2 from "../../assets/images/myOrdersDetails/Group 2417.png";
+import Timeline from "./Timeline/Timeline";
+import Link from "next/link";
 
 const MyOrderDetails = () => {
   const data = {
@@ -28,7 +30,10 @@ const MyOrderDetails = () => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full md:pl-5">
+      <h2 className="text-[24px] font-[500] text-[#FB641B] mb-4">
+        Order Details
+      </h2>
       <div className="flex justify-between items-center px-4 py-5 shadow-lg rounded-lg">
         <div className="">
           <h3 className="font-[500]">
@@ -37,14 +42,14 @@ const MyOrderDetails = () => {
           </h3>
           <p className="text-[14px]">{data.orderDate}</p>
         </div>
-        <div className="">
+        <div className="hidden lg:block">
           <h3>
             Total: <span className="font-[500]">Tk {data.total}</span>
           </h3>
         </div>
-          </div>
-          
-{/* mid part */}
+      </div>
+
+      {/* mid part */}
       <div className="shadow-lg rounded-lg mb-4 mt-5">
         <div className=" p-4">
           <div className="flex items-center">
@@ -59,21 +64,33 @@ const MyOrderDetails = () => {
         </div>
         <hr className="border-t-2" />
         <div className="p-4">
-          <div className="flex justify-between items-center">
+          <div className="lg:flex justify-between items-center">
             <p className="text-[#026C51] text-base font-[500]">
               {" "}
               {data.deliveredDate}
             </p>
-            <div className="flex items-center">
+            <div className="flex items-center mt-2 md:mt-0">
               <div>
                 <Image src={img2} alt="" />
               </div>
               <p className="text-base ml-2">{data.status}</p>
             </div>
           </div>
-          <div>
+          <div className="md:mt-10 mt-5">
+            <Timeline status={data.status}></Timeline>
+          </div>
+          {/* table */}
+          <div className="md:block hidden">
             <div className="overflow-x-auto">
               <table className="table w-full">
+                <thead>
+                  <tr className="hidden">
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                  </tr>
+                </thead>
                 <tbody>
                   {/* map er kaj hobe ekhane. just emni akhn show kora hoise */}
                   {data && (
@@ -82,10 +99,15 @@ const MyOrderDetails = () => {
                         <Image width="57" height="46" src={data.image} alt="" />
                         <p>{data.productName}</p>
                       </td>
-                      <td>Tk{data.subtotal}</td>
+                      <td>Tk {data.subtotal}</td>
                       <td>Qty: {data.qty}</td>
                       <td>
-                        <button className="text-[#287DF3]">Cancel</button>
+                        <Link
+                          href="/orderDetails/myOrderCancelation"
+                          className="text-[#287DF3]"
+                        >
+                          Cancel
+                        </Link>
                       </td>
                     </tr>
                   )}
@@ -93,11 +115,62 @@ const MyOrderDetails = () => {
               </table>
             </div>
           </div>
-        </div>
+
+          {/* mobile table */}
+          <div>
+            <div className="md:hidden">
+              <div className="overflow-x-auto">
+                <table className="table w-full">
+                  <thead>
+                    <tr className="hidden">
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {/* map er kaj hobe ekhane. just emni akhn show kora hoise */}
+                    {data && (
+                      <tr>
+                        <td className="flex items-center px-0">
+                          <Image
+                            width="57"
+                            height="46"
+                            src={data.image}
+                            alt=""
+                          />
+                          <div>
+                            <p className="font-[500] text-[12px]">
+                              {data.productName}
+                            </p>
+                            <p className=" text-[11px]">Tk {data.subtotal}</p>
+                            <p className="text-[11px]">
+                              Qty: <span className="font-[500]"> {data.qty}</span>
+                            </p>
+                          </div>
+                        </td>
+
+                        <td>
+                          <Link
+                            href="/orderDetails/myOrderCancelation"
+                            className="text-[#287DF3]"
+                          >
+                            Cancel
+                          </Link>
+                        </td>
+                      </tr>
+                    )}
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
-          
-          {/* bottom part */}
-      <div className="grid grid-cols-2 gap-4 my-10">
+        </div>
+      </div>
+
+      {/* bottom part */}
+      <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-4 my-10">
         <div>
           <div className="p-4 shadow-lg rounded-lg mb-4">
             <div>
@@ -135,7 +208,7 @@ const MyOrderDetails = () => {
           </div>
         </div>
         <div>
-          <div className="p-4 shadow-lg rounded-lg">
+          <div className="p-4 shadow-lg rounded-lg lg:mt-0 mt-4">
             <div>
               <h1 className="text-lg font-[500] mb-1">Total Summery</h1>
               <div className="flex justify-between items-center">

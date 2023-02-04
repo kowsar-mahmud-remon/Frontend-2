@@ -1,59 +1,61 @@
-// import { ManageMyAccount } from "../components/ManageAccoutSideBar/ManageAccount";
-import Profile from "../components/manageAccoutSideBar/Profile";
-// import Profile from "../components/manageAccoutSideBar/Profile";
+import ManageAccount from "../components/ManageAccoutSideBar/ManageAccount";
+
+import MyOrder from "../components/MyOrder/MyOrder";
+import Profile from "../components/ManageAccoutSideBar/Profile";
+import MyReviews from "../components/ManageAccoutSideBar/MyReviews";
 
 const profileLinksObj = [
     {
         title: 'Manage My Account',
         href: "manageAccount",
-        element: <Profile />,
+        element:<ManageAccount/>,
         links: [
             {
                 title: 'My Profile',
                 href: "myProfile",
-                element: <Profile />
+                element: <MyOrder/>
             },
             {
                 title: 'Address Book',
                 href: "addressBook",
-                element: <Profile />
+                element: <Profile/>
             },
             {
                 title: 'My Payment Options',
                 href: "myPaymentOptions",
-                element: <Profile />
+                element: <Profile/>
             },
             {
                 title: 'Vouchers',
                 href: "vouchers",
-                element: <Profile />
+                element: <Profile/>
             },
         ]
     },
     {
         title: 'My Orders',
         href: "myOrders",
-        element: <Profile />,
+        element:<MyOrder></MyOrder>,
         links: [
             {
                 title: 'My Returns',
                 href: "myReturns",
-                element: <Profile />
+                element: <Profile/>
             },
             {
                 title: 'My Cancellations',
                 href: "myCancellations",
-                element: <Profile />
+                element: <Profile/>
             },
             {
                 title: 'My Payment Options',
                 href: "myPaymentOptions",
-                element: <Profile />
+                element: <Profile/>
             },
             {
                 title: 'Vouchers',
                 href: "vouchers",
-                element: <Profile />
+                element: <Profile/>
             },
         ]
     },
@@ -61,7 +63,7 @@ const profileLinksObj = [
     {
         title: 'My Reviews',
         href: "myReviews",
-        element: <Profile />
+        element: <MyReviews />
     },
     {
         title: 'My Wishlists',
