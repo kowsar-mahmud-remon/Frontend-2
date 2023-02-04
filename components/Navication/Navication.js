@@ -33,11 +33,7 @@ const Navication = () => {
     const dispatch = useDispatch()
 
     const { accessToken } = useSelector(state => state.auth)
-    // const { data, isLoading, error } = useGetMeQuery({
-    //     skip: accessToken ? false : true
-    // })
-
-
+   
     useEffect(() => {
 
         if (accessToken) {
