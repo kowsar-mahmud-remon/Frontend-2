@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 
 const OrderNavbar = () => {
     const router = useRouter()
-    console.log(router)
+
     return (
         <div>
             <ul className="flex gap-[90px]  ">

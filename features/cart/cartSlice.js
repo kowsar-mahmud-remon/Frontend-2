@@ -80,7 +80,7 @@ const cartSlice = createSlice({
             if (itemIndex >= 0) {
                 state.cartItems[itemIndex].items.forEach(d => {
                     if (d._id === action.payload.product._id) {
-                        console.log(d)
+                        
                         d.cartQuantity += 1
                     }
                 })
@@ -88,21 +88,13 @@ const cartSlice = createSlice({
             if (cartIndex >= 0) {
                 state.cartProduct[cartIndex].items.forEach(d => {
                     if (d._id === action.payload.product._id) {
-                        console.log(d)
+                      
                         d.cartQuantity += 1
                     }
                 })
             }
 
-            // state.cartItems[itemIndex]
-            // console.log(itemIndex)
-            // if (itemIndex >= 0) {
-            //     state.cartItems[itemIndex].cartQuantity += 1;
-            // }
-            // else {
-            //     const tempProduct = { ...action.payload, cartQuantity: 1 };
-            //     state.cartItems.push(tempProduct);
-            // }
+           
         },
 
         removeFromCart(state, action) {
@@ -161,17 +153,17 @@ const cartSlice = createSlice({
 
         addSingleCartProduct(state, action) {
             const data = state.cartProduct.findIndex(d => d.category === action.payload.category)
-            console.log(data)
+          
             if (data > -1) {
 
                 if (state.cartProduct[data].items.length > 0) {
 
                     state.cartProduct[data].items.forEach(element => {
-                        console.log('hey')
-                        console.log(action.payload.checked)
+                    
+                   
 
                         if (element._id === action.payload.items[0]._id) {
-                            console.log('hi ')
+                         
                             const links = state.cartProduct[data].items.filter(e => e._id !== action.payload.items[0]._id)
                             state.cartProduct[data].items = links
                             return
@@ -182,7 +174,7 @@ const cartSlice = createSlice({
                     })
                 } else {
                     if (action.payload.checked) {
-                        // console.log('hey', element._id)
+                     
                         state.cartProduct[data].items.push(action.payload.items[0])
                     }
                 }

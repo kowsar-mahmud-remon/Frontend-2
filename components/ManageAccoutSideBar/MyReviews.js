@@ -5,6 +5,7 @@ import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 
 const MyReviews = () => {
+
     const datas = [
         {
             id: '1', orderId: '121312323213432', orderDate: 'Placed On 21 Dec 2022 10:21:00',
@@ -71,6 +72,7 @@ const MyReviews = () => {
     const pages = Math.ceil(count /size)
     console.log(pages)
     console.log(count)
+
     return (
         <div>
             <div>

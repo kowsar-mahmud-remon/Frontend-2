@@ -23,6 +23,9 @@ import SellerProductsModal from '../components/SellerProductsModal/SellerProduct
 import AllCategory from '../components/allCategory/AllCategory';
 
 
+
+
+
 export const getStaticProps = async () => {
   try {
     const res = await fetch("https://banglar-big-store.onrender.com/api/slides/slides");
@@ -41,7 +44,7 @@ export const getStaticProps = async () => {
       revalidate: 600
     };
   } catch (err) {
-    console.log(err);
+  
     return {
       props: {
         items: []
@@ -51,6 +54,7 @@ export const getStaticProps = async () => {
 };
 
 export default function Home({ items }) {
+
   return (
     <>
       <Head>
