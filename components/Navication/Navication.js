@@ -14,6 +14,9 @@ import { BsFillMicFill } from 'react-icons/bs';
 import { FaUserAlt } from 'react-icons/fa';
 import { RxDashboard } from 'react-icons/rx';
 import { GiHamburgerMenu } from 'react-icons/gi';
+import TopNavBar from '../TopNavBar/TopNavBar';
+import ShoppingTypeNav from '../ShoppingTypeNav/ShoppingTypeNav';
+import MobileNavBar from '../MobileNavBar/MobileNavBar';
 
 
 
@@ -63,12 +66,12 @@ const Navication = () => {
         setRecognitionStarted(true);
     }
 
-
     return (
-        <section className='shadow-md z-20 shadow-block-900 pb-2 relative'>
-            <div className='w-[100%] h-[110px] bg-[#026C51] flex items-center justify-center '>
+        <section className='shadow-md hidden lg:block z-20 shadow-block-900 relative'>
+            <TopNavBar/>
+            {/* <div className='w-[100%] h-[110px] bg-[#026C51] flex items-center justify-center '>
                 <Image src={advertise} alt="img" className='w-[80%] max-w-[600px] h-[auto] ' />
-            </div>
+            </div> */}
             <div className='flex items-center h-[80px] gap-3 px-[20px] lg:px-[40px] 2xl:px-[50px]  bg-[#ffffff] justify-between text-[#026C51]'>
                 <div className='flex justify-center first-line:'>
                     <Link href="/">
@@ -108,7 +111,7 @@ const Navication = () => {
                         Search
                     </button>
                 </div>
-                <div className={` ${styles.nanMenu} flex item-center items-center`}>
+                <div className={` ${styles.nanMenu} md:flex item-center items-center hidden`}>
                     <button className='flex items-center border-2 rounded-md border-[#001E00] py-1 px-4 text-sm xl:text-lg font-semibold'>
                         <Image src={supportIcon} alt="img" className="mt-[3px] mr-1 " />
                         Support
@@ -154,7 +157,7 @@ const Navication = () => {
 
             </div>
             <div className={`${styles.buttonSearchWraper} bg-[#FFFFFF]`}>
-                <div className=' flex h-[40px] w-[90%] bg-[#FFFFFF] border-solid border-2 border-[#026C51] rounded-full  text-lg font-semibold overflow-hidden'>
+                <div className=' flex h-[40px] w-[90%] bg-[#FFFFFF] border-solid border-2 border-[#026C51] rounded-full  text-lg font-semibold overflow-hidden '>
                     <div className='flex items-center border-r-[3px] w-[auto] border-[#026C51] text-[#026C51] my-1'>
                         <RiMapPinFill className='mx-1 xl:mx-4 text-[20px] sm:text-[30px] ' />
                         <span className='text-[12px] xl:text-[16px]'>Location</span>
@@ -169,6 +172,7 @@ const Navication = () => {
                     </div>
                 </div>
             </div>
+            <ShoppingTypeNav />
         </section>
     );
 };

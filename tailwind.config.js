@@ -26,7 +26,7 @@ module.exports = {
     themes: [
       {
         light: {
-          primary: "#FB641B",
+          primary: "#026C51",
           // primary: "#1b2857fb",
           // secondary: "#FFC000",
           secondary: "#707070",
@@ -39,7 +39,7 @@ module.exports = {
           info: "#F4F4F4",
           success: "#1BBB70",
           warning: "#DF7E07",
-          error: "#FA5C5C",
+          error: "#F4253F",
           login: "#6358DC",
         },
         fontFamily: {
