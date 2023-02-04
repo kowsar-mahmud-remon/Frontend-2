@@ -77,23 +77,23 @@ const cartSlice = createSlice({
 
             //     })
             // })
-            if(itemIndex>=0){
-                state.cartItems[itemIndex].items.forEach(d=>{
-                   if( d._id === action.payload.product._id){
-                    console.log(d)
-                    d.cartQuantity+=1
-                   }
+            if (itemIndex >= 0) {
+                state.cartItems[itemIndex].items.forEach(d => {
+                    if (d._id === action.payload.product._id) {
+                        console.log(d)
+                        d.cartQuantity += 1
+                    }
                 })
             }
-            if(cartIndex>=0){
-                state.cartProduct[cartIndex].items.forEach(d=>{
-                   if( d._id === action.payload.product._id){
-                    console.log(d)
-                    d.cartQuantity+=1
-                   }
+            if (cartIndex >= 0) {
+                state.cartProduct[cartIndex].items.forEach(d => {
+                    if (d._id === action.payload.product._id) {
+                        console.log(d)
+                        d.cartQuantity += 1
+                    }
                 })
             }
-            
+
             // state.cartItems[itemIndex]
             // console.log(itemIndex)
             // if (itemIndex >= 0) {
@@ -163,21 +163,30 @@ const cartSlice = createSlice({
             const data = state.cartProduct.findIndex(d => d.category === action.payload.category)
             console.log(data)
             if (data > -1) {
-                console.log(state.cartProduct[data].items)
-                state.cartProduct[data].items.forEach(element => {
-                    console.log('hey')
-                    console.log('hey',element._id)
-                    if (element._id === action.payload.items[0]._id) {
-                        console.log('hi ')
-                        const links = state.cartProduct[data].items.filter(e => e._id !== action.payload.items[0]._id)
-                        state.cartProduct[data].items = links
-                    } else {
-                        console.log('hello')
+
+                if (state.cartProduct[data].items.length > 0) {
+
+                    state.cartProduct[data].items.forEach(element => {
+                        console.log('hey')
+                        console.log(action.payload.checked)
+
+                        if (element._id === action.payload.items[0]._id) {
+                            console.log('hi ')
+                            const links = state.cartProduct[data].items.filter(e => e._id !== action.payload.items[0]._id)
+                            state.cartProduct[data].items = links
+                            return
+                        } else {
+                            state.cartProduct[data].items.push(action.payload.items[0])
+                        }
+
+                    })
+                } else {
+                    if (action.payload.checked) {
+                        // console.log('hey', element._id)
                         state.cartProduct[data].items.push(action.payload.items[0])
                     }
-                })
+                }
             } else {
-                console.log(action.payload)
                 state.cartProduct.push(action.payload)
             }
         },

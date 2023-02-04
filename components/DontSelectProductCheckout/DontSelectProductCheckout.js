@@ -12,11 +12,11 @@ import { useEffect } from 'react';
 
 const DontSelectProductCheckout = () => {
   const { cartItems, cartProduct } = useSelector(state => state.cart);
-  const [priceAmount,setPriceAmount]=useState(0)
+  const [priceAmount, setPriceAmount] = useState(0)
   const dispatch = useDispatch();
 
-  const handleAddToCart = (product,category) => {
-    dispatch(addToCart({product,category}));
+  const handleAddToCart = (product, category) => {
+    dispatch(addToCart({ product, category }));
   };
 
   const handleRemoveFromCart = (cartItem) => {
@@ -34,18 +34,18 @@ const DontSelectProductCheckout = () => {
     dispatch(getTotals());
   }, [cart, dispatch]);
 
-  useEffect(()=>{
-  const amount= cartProduct.reduce((cartItm,item)=>{
-    console.log(cartItm)
-      item.items.forEach(e=>{
+  useEffect(() => {
+    const amount = cartProduct.reduce((cartItm, item) => {
+      console.log(cartItm)
+      item.items.forEach(e => {
         const { price, cartQuantity } = e;
         const itemTotal = price * cartQuantity;
-        cartItm.total+=itemTotal;
+        cartItm.total += itemTotal;
       })
       return cartItm
-    },{total:0,quantity:0})
+    }, { total: 0, quantity: 0 })
     console.log(amount)
-  },[cartProduct])
+  }, [cartProduct])
 
 
   const handleChange = (e, c, s, cart) => {
@@ -57,7 +57,7 @@ const DontSelectProductCheckout = () => {
         })
         return { ...product, items: links }
       });
-
+      cart.checked = checked
       dispatch(addSingleCartProduct(cart))
       dispatch(setProduct(tempProduct));
       return
@@ -86,7 +86,7 @@ const DontSelectProductCheckout = () => {
   };
 
   console.log(cartProduct)
-  // console.log(cartItems)
+
   return (
     <div className=' mt-8 mb-72 lg:w-[1200px] mx-auto'>
       <div className="m-4 lg:m-0">
@@ -167,7 +167,7 @@ const DontSelectProductCheckout = () => {
                       <div className="flex">
                         <button onClick={() => handleDecreaseCart(product)} className="btn btn-ghost text-3xl w-[34px] h-[34px] pt-0 font-bold text-[#686868] mr-5 ">-</button>
                         <p className='text-2xl mr-5 text-[#FB641B]'>{product.cartQuantity}</p>
-                        <button onClick={() => handleAddToCart(product,cart.category)} className='btn btn-ghost text-3xl w-[34px] h-[34px] pt-0 font-bold text-[#686868]'>+</button>
+                        <button onClick={() => handleAddToCart(product, cart.category)} className='btn btn-ghost text-3xl w-[34px] h-[34px] pt-0 font-bold text-[#686868]'>+</button>
 
                       </div>
                     </div>
@@ -194,7 +194,7 @@ const DontSelectProductCheckout = () => {
             <p className=" text-base text-[#001E00]">Total: </p>
             <p className=" text-base font-medium text-[#FB641B]">Tk {cart.cartTotalAmount}</p>
           </div>
-          <button className="btn bg-[#FB641B] w-full h-12 rounded-md text-white">PROCEED TO CHECKOUT ({cart.cartTotalQuantity})</button>
+          <button className="btn bg-[#FB641B] w-full h-12 rounded-md text-white">PROCEED TO CHECKOUT ({cart.cartTotalAmount})</button>
         </div>
       </div>
     </div>
