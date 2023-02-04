@@ -34,6 +34,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { imageSettings, imgSettingsMobile } from "../../Utils/sliderConfig";
+import { useAddCartMutation } from "../../features/cart/cartApi";
 
 const ProductPage = () => {
 
@@ -89,7 +90,17 @@ const ProductPage = () => {
             skip: callApi
         }
     )
+
     console.log(productData)
+    
+    // add to cart 
+    const { data: cartData, isLoading: cartLoading, error: cartError } = useAddCartMutation(
+        _id && _id,
+        {
+            skip: callApi
+        }
+    )
+    
     const { description, productName, productPictures, regularPrice, discount } = productData?.result || {}
     const slideRef = useRef(null)
 
@@ -100,12 +111,12 @@ const ProductPage = () => {
     }, [slug, subCategoryId]);
 
     const total = 15
-    console.log(img)
+
     return (
         <div>
-            {/* <NavicationLayout> */}
+
             <NavicationWithSideNavLayout>
-                {/* <Header /> */}
+
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-9">
                     <div className="flex flex-col md:flex-row">
                         <div className="hidden md:w-[96px] h-auto md:h-[560px] border md:flex flex-col p-[8px] bg-[#F2F3F7] gap-[8px] rounded-md ">
@@ -373,7 +384,7 @@ const ProductPage = () => {
                 </div>
 
             </NavicationWithSideNavLayout>
-            <Footer />
+        
         </div>
     );
 };
