@@ -6,7 +6,7 @@ import { myOrderRelated } from "../../Utils/orderDetaisManage";
 
 const Details = () => {
     const router = useRouter()
-    // console.log(router);
+  
   return (
     <div className=" mt-10 md:mx-16">
       <ManageAccountLayout>
