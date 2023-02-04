@@ -10,7 +10,7 @@ const ManageList = ({ menu, tabname, setActive, active }) => {
     return (
         <div className='text-center '>
             <div className={`${menu?.text === active?.text ? "bg-[#F2F2F2] text-[#FB641B]  w-full py-4 " : ""}`}>
-                <button className="h-full w-full hover:text-[#FB641B] text-[16px]"  onClick={() => handleMenu(menu)} href={menu?.href}>{menu?.text}</button>
+                <button className="h-full w-full hover:text-[#FB641B] text-sm font-medium text-[#707070]"  onClick={() => handleMenu(menu)} href={menu?.href}>{menu?.text}</button>
             </div>
         </div>
     );

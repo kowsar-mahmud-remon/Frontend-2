@@ -14,7 +14,7 @@ import { FaStar } from 'react-icons/fa';
 
 const AddToCartPage = () => {
   const [hidden, setHidden] = useState(false);
-  console.log(hidden);
+
 
   const productDetails =
     [

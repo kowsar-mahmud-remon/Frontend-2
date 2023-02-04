@@ -20,12 +20,12 @@ const Login = () => {
     const [cookies, setCookie] = useCookies(['banglarBigStore']);
     const router = useRouter()
     useEffect(() => {
-        console.log(data)
-        console.log(error)
+    
         if (data) {
+           
             setError('')
             setCookie('banglarBigStore', data?.token, { path: '/' });
-            router.push('/account/profile')
+            // router.push('/account/profile')
         }
     }, [data, error, cookies, setCookie,router])
   
@@ -47,7 +47,7 @@ const Login = () => {
             })
         }
     }
-    console.log(error?.data.message)
+
     return (
         <NavicationLayout>
             <div className=' h-[100%] mx-[20px] md:mx-[50px] xl:mx-[150px] 2xl:mx-[210px] pt-10 pb-16'>

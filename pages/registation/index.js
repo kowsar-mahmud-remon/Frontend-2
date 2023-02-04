@@ -109,15 +109,15 @@ const Registation = () => {
                                                 const isEmail =
                                                     /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i.test(value);
                                                 if (isEmail) {
-                                                    console.log(isEmail);
+                                                   
                                                     setValue('email', value)
                                                     return
                                                 }
                                                 if (!isEmail) {
                                                     const isPhone = phnRegEx.test(value);
-                                                    console.log(isPhone);
+                                                
                                                     if (isPhone) {
-                                                        console.log('isphone', value);
+                                                     
                                                         setValue('phone', value)
                                                         return
                                                     }

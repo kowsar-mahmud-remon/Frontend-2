@@ -5,7 +5,7 @@ import ReactStars from "react-rating-stars-component";
 
 const MyReviews = () => {
     const ratingChanged = (newRating) => {
-        console.log(newRating);
+    
     };
     return (
         <div className="">

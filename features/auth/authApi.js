@@ -21,7 +21,10 @@ export const categoryNavApi = apiSlice.injectEndpoints({
                 body: data
             }),
         }),
+        getMe: builder.query({
+            query: () => `/user/getMe`
+        }),
     }),
 });
 
-export const { useAddUserMutation,useLoginUserMutation } = categoryNavApi;
+export const { useAddUserMutation, useLoginUserMutation,useGetMeQuery } = categoryNavApi;

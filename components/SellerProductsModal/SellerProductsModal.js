@@ -4,7 +4,7 @@ import OutsideClickHandler from 'react-outside-click-handler';
 
 const SellerProductsModal = () => {
   const [hidden, setHidden] = useState(false);
-  console.log(hidden);
+
 
   return (
     <div className="">

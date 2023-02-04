@@ -94,15 +94,7 @@ const cartSlice = createSlice({
                 });
             }
 
-            // state.cartItems[itemIndex]
-            // console.log(itemIndex)
-            // if (itemIndex >= 0) {
-            //     state.cartItems[itemIndex].cartQuantity += 1;
-            // }
-            // else {
-            //     const tempProduct = { ...action.payload, cartQuantity: 1 };
-            //     state.cartItems.push(tempProduct);
-            // }
+
         },
 
         removeFromCart(state, action) {
