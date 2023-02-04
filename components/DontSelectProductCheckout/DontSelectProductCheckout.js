@@ -1,22 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { RiDeleteBinFill } from "react-icons/ri";
 import { AiOutlineHeart } from "react-icons/ai";
 import { FaAngleRight } from 'react-icons/fa';
 import Image from 'next/image';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart, decreaseCart, getTotals, removeFromCart, setProduct } from '../../features/cart/cartSlice';
+import { addCartProduct, addCartSection, addSingleCartProduct, addToCart, decreaseCart, getTotals, removeFromCart, setProduct } from '../../features/cart/cartSlice';
 import { useEffect } from 'react';
 
 
 
 
 const DontSelectProductCheckout = () => {
-  const { cartItems } = useSelector(state => state.cart);
-
+  const { cartItems, cartProduct } = useSelector(state => state.cart);
+  const [priceAmount, setPriceAmount] = useState(0);
   const dispatch = useDispatch();
 
-  const handleAddToCart = (product) => {
-    dispatch(addToCart(product));
+  const handleAddToCart = (product, category) => {
+    dispatch(addToCart({ product, category }));
   };
 
   const handleRemoveFromCart = (cartItem) => {
@@ -34,23 +34,58 @@ const DontSelectProductCheckout = () => {
     dispatch(getTotals());
   }, [cart, dispatch]);
 
-  const handleChange = (e) => {
-    const { name, checked } = e.target;
+  useEffect(() => {
+    const amount = cartProduct.reduce((cartItm, item) => {
+      console.log(cartItm);
+      item.items.forEach(e => {
+        const { price, cartQuantity } = e;
+        const itemTotal = price * cartQuantity;
+        cartItm.total += itemTotal;
+      });
+      return cartItm;
+    }, { total: 0, quantity: 0 });
+    console.log(amount);
+  }, [cartProduct]);
 
+
+  const handleChange = (e, c, s, cart) => {
+    const { name, checked } = e.target;
+    if (s) {
+      let tempProduct = cartItems.map(product => {
+        let links = product.items.map(p => {
+          return p.name === name ? { ...p, isChecked: checked } : p;
+        });
+        return { ...product, items: links };
+      });
+      cart.checked = checked;
+      dispatch(addSingleCartProduct(cart));
+      dispatch(setProduct(tempProduct));
+      return;
+    }
     if (name === "allProductSelect") {
-      let tempProduct = cartItems.map(product => { return { ...product, isChecked: checked }; });
+      let tempProduct = cartItems.map(product => {
+        let links = product.items.map(p => { return { ...p, isChecked: checked }; });
+        return { ...product, isChecked: checked, items: links };
+      });
+      dispatch(addCartProduct({ cartItems, checked }));
       dispatch(setProduct(tempProduct));
+
     }
-    else if (name === "allSelect") {
-      let tempProduct = cartItems.map(product => { return { ...product, isChecked: checked }; });
-      dispatch(setProduct(tempProduct));
-    }
-    else {
-      let tempProduct = cartItems.map(product => product.name === name ? { ...product, isChecked: checked } : product);
+    else if (name === c) {
+      let tempProduct = cartItems.map(product => {
+        if (product?.category === c) {
+          let links = product?.items?.map(p => { return { ...p, isChecked: checked }; });
+
+          return { ...product, isChecked: checked, items: links };
+        }
+        return product;
+      });
+      dispatch(addCartSection({ cart, checked }));
       dispatch(setProduct(tempProduct));
     }
   };
 
+  console.log(cartProduct);
 
   return (
     <div className=' mt-8 mb-72 lg:w-[1200px] mx-auto'>
@@ -78,63 +113,69 @@ const DontSelectProductCheckout = () => {
             </div>
           </div>
           <div className="p-6 mt-4">
-            <div className="pb-4 flex text-[#686868] border-b border-[#B7B7B7]">
-
-              <input
-                onChange={handleChange}
-                checked={!cartItems.some((product) => product?.isChecked !== true)}
-                name="allSelect"
-                type="checkbox"
-                className="w-[19px] h-[19px] rounded checkbox checkbox-primary mr-4 border border-[#686868]" />
-
-              <div className="flex items-center">
-                <p className=' text-base mr-1'>Banglar Big Store</p>
-                <FaAngleRight></FaAngleRight>
-              </div>
-            </div>
             {
-              cartItems.map((product, i) => <div key={i} className="flex mt-5 items-center">
+              cartItems.map((cart, i) => <div
+                key={i}
+              >
+                <div className="pb-4 flex text-[#686868] border-b border-[#B7B7B7] my-7">
+                  <input
+                    onChange={e => handleChange(e, cart?.category, undefined, cart)}
+                    checked={cart?.isChecked || false}
+                    name={cart?.category}
+                    type="checkbox"
+                    className="w-[19px] h-[19px] rounded checkbox checkbox-primary mr-4 border border-[#686868]" />
 
-                <input
-                  type="checkbox"
-                  name={product.name}
-                  onChange={handleChange}
-                  checked={product?.isChecked || false}
-                  className="w-[19px] h-[19px] rounded checkbox checkbox-primary mr-4 border border-[#686868]" />
-                <Image
-                  className='w-auto mr-5' src={product.img}
-                  alt="Picture of the author"
-                  width={127}
-                  height={103}
-                />
-                <div className="justify-between lg:flex w-full">
-                  <div className="mb-2">
-                    <p className='text-lg font-medium mb-4'>{product.name}</p>
-                    <p className='text-[#686868] text-base'>{product.subTitle}</p>
-                  </div>
-                  <div className=" text-[#707070] flex lg:block justify-between">
-                    <div className="flex lg:block items-center">
-                      <p className='text-base text-[#FB641B] font-medium mb-4 mr-2'>TK {product.price}</p>
-                      <p className='text-[10px] mb-4 line-through mr-1'>Tk {product.previousPrice}</p>
-                      <p className='text-[10px] mb-4'>({product.discount} % off)</p>
-                    </div>
-                    <div className="flex">
-                      <AiOutlineHeart className='text-[20px] mr-4'></AiOutlineHeart>
-                      <RiDeleteBinFill onClick={() => handleRemoveFromCart(product)} className='text-[18px]'></RiDeleteBinFill>
-                    </div>
-                  </div>
-                  <div className="flex">
-                    <button onClick={() => handleDecreaseCart(product)} className="btn btn-ghost text-3xl w-[34px] h-[34px] pt-0 font-bold text-[#686868] mr-5 ">-</button>
-
-                    <p className='text-2xl mr-5 text-[#FB641B]'>{product.cartQuantity}</p>
-
-                    <button onClick={() => handleAddToCart(product)} className='btn btn-ghost text-3xl w-[34px] h-[34px] pt-0 font-bold text-[#686868]'>+</button>
-
+                  <div className="flex items-center">
+                    <p className=' text-base mr-1'>{cart?.category}</p>
+                    <FaAngleRight></FaAngleRight>
                   </div>
                 </div>
-              </div>)
+                {
+                  cart?.items?.map((product, i) => <div key={i} className="flex mt-5 items-center">
+                    <input
+                      type="checkbox"
+                      name={product?.name}
+                      onChange={e => handleChange(e, product?.name, 'singleItem', {
+                        category: cart.category, items: [
+                          product
+                        ]
+                      })}
+                      checked={product?.isChecked || false}
+                      className="w-[19px] h-[19px] rounded checkbox checkbox-primary mr-4 border border-[#686868]" />
+                    <Image
+                      className='w-auto mr-5' src={product.img}
+                      alt="Picture of the author"
+                      width={127}
+                      height={103}
+                    />
+                    <div className="justify-between lg:flex w-full">
+                      <div className="mb-2">
+                        <p className='text-lg font-medium mb-4'>{product.name}</p>
+                        <p className='text-[#686868] text-base'>{product.subTitle}</p>
+                      </div>
+                      <div className=" text-[#707070] flex lg:block justify-between">
+                        <div className="flex lg:block items-center">
+                          <p className='text-base text-[#FB641B] font-medium mb-4 mr-2'>TK {product.price}</p>
+                          <p className='text-[10px] mb-4 line-through mr-1'>Tk {product.previousPrice}</p>
+                          <p className='text-[10px] mb-4'>({product.discount} % off)</p>
+                        </div>
+                        <div className="flex">
+                          <AiOutlineHeart className='text-[20px] mr-4'></AiOutlineHeart>
+                          <RiDeleteBinFill onClick={() => handleRemoveFromCart(product)} className='text-[18px] cursor-pointer'></RiDeleteBinFill>
+                        </div>
+                      </div>
+                      <div className="flex">
+                        <button onClick={() => handleDecreaseCart(product)} className="btn btn-ghost text-3xl w-[34px] h-[34px] pt-0 font-bold text-[#686868] mr-5 ">-</button>
+                        <p className='text-2xl mr-5 text-[#FB641B]'>{product.cartQuantity}</p>
+                        <button onClick={() => handleAddToCart(product, cart.category)} className='btn btn-ghost text-3xl w-[34px] h-[34px] pt-0 font-bold text-[#686868]'>+</button>
 
+                      </div>
+                    </div>
+                  </div>)
+                }
+              </div>)
             }
+
           </div>
 
         </div>
@@ -153,7 +194,7 @@ const DontSelectProductCheckout = () => {
             <p className=" text-base text-[#001E00]">Total: </p>
             <p className=" text-base font-medium text-[#FB641B]">Tk {cart.cartTotalAmount}</p>
           </div>
-          <button className="btn bg-[#FB641B] w-full h-12 rounded-md text-white">PROCEED TO CHECKOUT ({cart.cartTotalQuantity})</button>
+          <button className="btn bg-[#FB641B] w-full h-12 rounded-md text-white">PROCEED TO CHECKOUT ({cart.cartTotalAmount})</button>
         </div>
       </div>
     </div>
