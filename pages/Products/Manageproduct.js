@@ -235,7 +235,7 @@ const Manageproduct = () => {
     }
   ]
 
-  console.log(datas);
+
 
   const MENU_LIST = [
     { text: "All", href: "" },

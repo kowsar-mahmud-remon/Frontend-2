@@ -44,7 +44,7 @@ export const getStaticProps = async () => {
       revalidate: 600
     };
   } catch (err) {
-    console.log(err);
+  
     return {
       props: {
         items: []

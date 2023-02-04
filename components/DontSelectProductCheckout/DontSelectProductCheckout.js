@@ -28,7 +28,7 @@ const DontSelectProductCheckout = () => {
   };
 
   const cart = useSelector((state) => state.cart);
-  // console.log("cart", cart);
+  
 
   useEffect(() => {
     dispatch(getTotals());
@@ -36,7 +36,7 @@ const DontSelectProductCheckout = () => {
 
   useEffect(() => {
     const amount = cartProduct.reduce((cartItm, item) => {
-      console.log(cartItm)
+    
       item.items.forEach(e => {
         const { price, cartQuantity } = e;
         const itemTotal = price * cartQuantity;
@@ -44,7 +44,7 @@ const DontSelectProductCheckout = () => {
       })
       return cartItm
     }, { total: 0, quantity: 0 })
-    console.log(amount)
+
   }, [cartProduct])
 
 
@@ -85,7 +85,7 @@ const DontSelectProductCheckout = () => {
     }
   };
 
-  console.log(cartProduct)
+
 
   return (
     <div className=' mt-8 mb-72 lg:w-[1200px] mx-auto'>

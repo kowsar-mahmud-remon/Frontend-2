@@ -19,8 +19,9 @@ import ShoppingTypeNav from '../ShoppingTypeNav/ShoppingTypeNav';
 import MobileNavBar from '../MobileNavBar/MobileNavBar';
 import { useGetMeQuery } from '../../features/auth/authApi';
 import { useCookies } from 'react-cookie';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { userLoggedIn } from '../../features/auth/authSlice';
+import { store } from '../../store/store';
 
 const Navication = () => {
 
@@ -29,20 +30,31 @@ const Navication = () => {
     const [recognitionColor, setRecognitionColor] = useState("#686868")
 
     const [cookies, setCookie] = useCookies(['banglarBigStore']);
-    console.log('cookies', cookies)
     const dispatch = useDispatch()
-    const { data, isLoading, error } = useGetMeQuery({
-        skip: cookies?.token ? false : true
-    })
+
+    const { accessToken } = useSelector(state => state.auth)
+    // const { data, isLoading, error } = useGetMeQuery({
+    //     skip: accessToken ? false : true
+    // })
+
 
     useEffect(() => {
-        if (cookies.token) dispatch(userLoggedIn({ token: cookies.token }))
 
-    }, [dispatch, cookies])
+        if (accessToken) {
+            console.log(accessToken)
+            fetch('http://localhost:5000/api/user/getMe', {
+                headers: {
 
-    console.log('data', data)
-    console.log('error', error)
+                    'content-type': 'application/json',
+                    'Authorization': `Bearer ${accessToken}`
+                }
+            }).then(res => res.json())
+                .then(data => console.log(data))
+        }
 
+
+        if (cookies?.banglarBigStore) dispatch(userLoggedIn({ token: cookies?.banglarBigStore }))
+    }, [dispatch, cookies, accessToken]);
 
     useEffect(() => {
         const recognition = new window.webkitSpeechRecognition();

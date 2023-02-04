@@ -91,8 +91,7 @@ const ProductPage = () => {
         }
     )
 
-    console.log(productData)
-    
+  
     // add to cart 
     const { data: cartData, isLoading: cartLoading, error: cartError } = useAddCartMutation(
         _id && _id,

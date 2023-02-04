@@ -9,9 +9,7 @@ import '../styles/globals.css'
 
 
 export default function App({ Component, pageProps }) {
-
-
-
+ 
   return <div className="">
     <Provider store={store}>
       <SideButtons />
@@ -20,7 +18,7 @@ export default function App({ Component, pageProps }) {
       <div className='mr-6'>
         <Component {...pageProps} />
       </div>
-      <Footer/>
+      <Footer />
     </Provider>
   </div>
 }
