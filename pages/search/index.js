@@ -1,9 +1,12 @@
-import Search from "../../components/Search/Search";
+import SearchDesktop from "../../components/Search/SearchDesktop";
+
+
 
 function search() {
     return (
         <div>
-            <Search></Search>
+            <div className="  ">  <SearchDesktop></SearchDesktop></div>
+
         </div>
     )
 }
