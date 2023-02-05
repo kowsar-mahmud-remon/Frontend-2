@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import pro from "../../../assets/images/tomato.png";
 import QR from "../../../assets/images/ProductInv/frame 1.png";
 import QR2 from "../../../assets/images/ProductInv/Group 4715.png";
 const ProductInvoicesDetails = () => {
@@ -23,7 +24,7 @@ const ProductInvoicesDetails = () => {
         </div>
       </div>
 
-      <div className="flex">
+      <div className="flex ">
         <div className="w-3/5">
           <Image src={QR2} alt="" />
         </div>
@@ -48,7 +49,48 @@ const ProductInvoicesDetails = () => {
           </div>
         </div>
       </div>
-
+      <div className="flex flex-wrap gap-2 my-10">
+        <div className="border-2 rounded-lg w-[88px]">
+          <p className="text-center py-1">Product</p>
+          <hr className="border-t-2" />
+          <Image src={pro} alt="" className="p-3" />
+        </div>
+        <div className="border-2 rounded-lg w-[160px]">
+          <p className="text-center py-1">Local Title</p>
+          <hr className="border-t-2" />
+          <div>
+            <p className="text-center p-2">Potol (Pointed Gourd ) 500 ±30 gm</p>
+          </div>
+        </div>
+        <div className="border-2 rounded-lg ">
+          <p className="text-center py-1">Product SKU</p>
+          <hr className="border-t-2" />
+          <div>
+            <p className="text-center p-3">KS5488UKO</p>
+          </div>
+        </div>
+        <div className="border-2 rounded-lg ">
+          <p className="text-center py-1">Quantity</p>
+          <hr className="border-t-2" />
+          <div>
+            <p className="text-center p-3">1000 gm</p>
+          </div>
+        </div>
+        <div className="border-2 rounded-lg ">
+          <p className="text-center py-1">Deleted Date</p>
+          <hr className="border-t-2" />
+          <div>
+            <p className="text-center p-3">01 Feb 2023 </p>
+          </div>
+        </div>
+        <div className="border-2 rounded-lg">
+          <p className="text-center py-1">Price</p>
+          <hr className="border-t-2" />
+          <div>
+            <p className="text-center p-3">Tk. 60</p>
+          </div>
+        </div>
+      </div>
       <div className="flex">
         <div className="w-1/2">
           <h2 className="text-2xl font-[500]">Total Quantity: 1000gm</h2>
