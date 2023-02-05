@@ -111,7 +111,7 @@ const MyReviews = () => {
                         <div className="w-[365px] ">
                             <p className="text-[16px] ml-[87px] pt-[41px] font-[400] text-[#686868]">Sold by <span className="text-[#287DF3]">Banglar Big Store</span></p>
 
-                            <button className="reviewBtn ml-[116px] mt-[16px]"><span className="text-[#FB641B] font-[400] text-[16px]">REVIEW</span></button>
+                            <Link  href='#'><button className="reviewBtn ml-[116px] mt-[16px]"><span className="text-[#FB641B] font-[400] text-[16px]">REVIEW</span></button></Link>
                         </div>
 
                     </div>
