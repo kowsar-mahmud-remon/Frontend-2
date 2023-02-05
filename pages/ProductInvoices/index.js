@@ -5,9 +5,7 @@ import NavicationWithSideNavLayout from "../../layouts/NavicationWithSideNavLayo
 const ProductInv = () => {
   return (
     <div>
-      <NavicationWithSideNavLayout>
         <ProductInvoices></ProductInvoices>
-      </NavicationWithSideNavLayout>
     </div>
   );
 };
