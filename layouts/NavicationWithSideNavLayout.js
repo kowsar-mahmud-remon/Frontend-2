@@ -6,6 +6,7 @@ import { handleCategorySideNav } from "../features/category/categorySlice";
 // import styles from '../styles/Home.module.css'
 
 import SideNavigationNavBar from "../components/SideNavigationNavBar/SideNavigationNavBar";
+import SellerRightNav from "../components/sellerRightNav/SellerRightNav";
 
 const NavicationWithSideNavLayout = ({ children }) => {
   const {
@@ -19,8 +20,9 @@ const NavicationWithSideNavLayout = ({ children }) => {
       <section
         className={`page-side-nav-wraper my-7 md:mx-5 xl:mx-12 sideNavTransition`}
       >
-        <SideNavigationNavBar/>
+        <SideNavigationNavBar />
         <SideNav />
+        <SellerRightNav></SellerRightNav>
         <div
           className={`${
             isActiveCategory ? "deactive-page-body" : "active-page-body"
