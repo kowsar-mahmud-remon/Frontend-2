@@ -52,31 +52,33 @@ const EditProducts = () => {
   return (
     <div className=''>
 
-      <div className="lg:w-max-[1426px] mx-auto text-lg text-[#686868] flex items-center mb-2">
-        <p className='mr-1'>Home</p>
-        <FaAngleRight className='text-[#707070] text-xs mr-1'></FaAngleRight>
-        <p className='mr-1'>Products</p>
-        <FaAngleRight className='text-[#707070] text-xs'></FaAngleRight>
-        <p className='text-[#001E00]'>Edit Product</p>
+      <div className="lg:w-[1426px] mx-auto text-lg text-[#686868]">
+        <div className=" flex items-center mb-2">
+          <p className='mr-1'>Home</p>
+          <FaAngleRight className='text-[#707070] text-xs mr-1'></FaAngleRight>
+          <p className='mr-1'>Products</p>
+          <FaAngleRight className='text-[#707070] text-xs'></FaAngleRight>
+          <p className='text-[#001E00]'>Edit Product</p>
+        </div>
+        <p className=' text-2xl text-[#FB641B]'>Edit Products</p>
       </div>
 
-      <div className="lg:w-max-[1426px] mx-auto">
-        <p className=' text-2xl text-[#FB641B] mb-8'>Edit Products</p>
-        <div className="flex justify-end">
-          <input type="text" placeholder="Product Name" className="input input-bordered w-full max-w-[259px] text-sm ml-4 text-[#686868]" />
-          <input type="text" placeholder="Product ID" className="input input-bordered w-full max-w-[235px] text-sm ml-4 text-[#686868]" />
+      <div className="lg:w-[1426px] mx-auto mt-8">
+        <div className="lg:flex justify-end">
+          <input type="text" placeholder="Product Name" className="input input-bordered w-full max-w-[259px] text-sm lg:ml-4 text-[#686868]" mb-2 />
+          <input type="text" placeholder="Product ID" className="input input-bordered w-full max-w-[235px] text-sm lg:ml-4 text-[#686868]" mb-2 />
 
-          <select className="select select-bordered w-full max-w-[193px] text-sm ml-4 text-[#686868]">
+          <select className="select select-bordered w-full max-w-[193px] text-sm lg:ml-4 text-[#686868] mb-2">
             <option disabled selected>Category</option>
             <option>Category 01</option>
             <option>Category 02</option>
           </select>
 
-          <button className="btn bg-[#FB641B] w-[133px] rounded-md text-white normal-case ml-4">Search</button>
+          <button className="btn bg-[#FB641B] w-[133px] rounded-md text-white normal-case lg:ml-4 mb-2">Search</button>
         </div>
       </div>
 
-      <div className="lg:w-max-[1426px] mx-auto mt-6">
+      <div className="lg:w-[1426px] mx-auto mt-6">
         <p className='text-[#001E00] text-lg mb-3 font-medium'>Products</p>
         <div className="p-6 flex flex-wrap lg:justify-center">
           {
