@@ -26,7 +26,7 @@ const NavicationWithSideNavLayout = ({ children }) => {
         <div
           className={`${
             isActiveCategory ? "deactive-page-body" : "active-page-body"
-          } w-[300px]`}
+          } w-[100%-300px]`}
           id="page-body"
         >
           {children}
