@@ -80,21 +80,21 @@ const cartSlice = createSlice({
             if (itemIndex >= 0) {
                 state.cartItems[itemIndex].items.forEach(d => {
                     if (d._id === action.payload.product._id) {
-                        
-                        d.cartQuantity += 1
+                        console.log(d);
+                        d.cartQuantity += 1;
                     }
-                })
+                });
             }
             if (cartIndex >= 0) {
                 state.cartProduct[cartIndex].items.forEach(d => {
                     if (d._id === action.payload.product._id) {
-                      
-                        d.cartQuantity += 1
+                        console.log(d);
+                        d.cartQuantity += 1;
                     }
-                })
+                });
             }
 
-           
+
         },
 
         removeFromCart(state, action) {
@@ -128,7 +128,7 @@ const cartSlice = createSlice({
                     cartTotal.total += itemTotal;
                     cartTotal.quantity += cartQuantity;
 
-                })
+                });
                 return cartTotal;
 
             },
@@ -145,50 +145,50 @@ const cartSlice = createSlice({
 
         addCartProduct(state, action) {
             if (action.payload.checked) {
-                state.cartProduct = action.payload.cartItems
+                state.cartProduct = action.payload.cartItems;
             } else {
-                state.cartProduct = []
+                state.cartProduct = [];
             }
         },
 
         addSingleCartProduct(state, action) {
-            const data = state.cartProduct.findIndex(d => d.category === action.payload.category)
-          
+            const data = state.cartProduct.findIndex(d => d.category === action.payload.category);
+            console.log(data);
             if (data > -1) {
 
                 if (state.cartProduct[data].items.length > 0) {
 
                     state.cartProduct[data].items.forEach(element => {
-                    
-                   
+                        console.log('hey');
+                        console.log(action.payload.checked);
 
                         if (element._id === action.payload.items[0]._id) {
-                         
-                            const links = state.cartProduct[data].items.filter(e => e._id !== action.payload.items[0]._id)
-                            state.cartProduct[data].items = links
-                            return
+                            console.log('hi ');
+                            const links = state.cartProduct[data].items.filter(e => e._id !== action.payload.items[0]._id);
+                            state.cartProduct[data].items = links;
+                            return;
                         } else {
-                            state.cartProduct[data].items.push(action.payload.items[0])
+                            state.cartProduct[data].items.push(action.payload.items[0]);
                         }
 
-                    })
+                    });
                 } else {
                     if (action.payload.checked) {
-                     
-                        state.cartProduct[data].items.push(action.payload.items[0])
+                        // console.log('hey', element._id)
+                        state.cartProduct[data].items.push(action.payload.items[0]);
                     }
                 }
             } else {
-                state.cartProduct.push(action.payload)
+                state.cartProduct.push(action.payload);
             }
         },
 
         addCartSection(state, action) {
             if (action.payload.checked) {
-                state.cartProduct.push(action.payload.cart)
+                state.cartProduct.push(action.payload.cart);
             } else {
-                const data = state.cartProduct.filter(d => d.category !== action.payload.cart.category)
-                state.cartProduct = data
+                const data = state.cartProduct.filter(d => d.category !== action.payload.cart.category);
+                state.cartProduct = data;
             }
         }
 

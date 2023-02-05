@@ -12,7 +12,7 @@ import { useEffect } from 'react';
 
 const DontSelectProductCheckout = () => {
   const { cartItems, cartProduct } = useSelector(state => state.cart);
-  const [priceAmount, setPriceAmount] = useState(0)
+  const [priceAmount, setPriceAmount] = useState(0);
   const dispatch = useDispatch();
 
   const handleAddToCart = (product, category) => {
@@ -28,7 +28,7 @@ const DontSelectProductCheckout = () => {
   };
 
   const cart = useSelector((state) => state.cart);
-  
+
 
   useEffect(() => {
     dispatch(getTotals());
@@ -36,16 +36,16 @@ const DontSelectProductCheckout = () => {
 
   useEffect(() => {
     const amount = cartProduct.reduce((cartItm, item) => {
-    
+      console.log(cartItm);
       item.items.forEach(e => {
         const { price, cartQuantity } = e;
         const itemTotal = price * cartQuantity;
         cartItm.total += itemTotal;
-      })
-      return cartItm
-    }, { total: 0, quantity: 0 })
-
-  }, [cartProduct])
+      });
+      return cartItm;
+    }, { total: 0, quantity: 0 });
+    console.log(amount);
+  }, [cartProduct]);
 
 
   const handleChange = (e, c, s, cart) => {
@@ -53,39 +53,39 @@ const DontSelectProductCheckout = () => {
     if (s) {
       let tempProduct = cartItems.map(product => {
         let links = product.items.map(p => {
-          return p.name === name ? { ...p, isChecked: checked } : p
-        })
-        return { ...product, items: links }
+          return p.name === name ? { ...p, isChecked: checked } : p;
+        });
+        return { ...product, items: links };
       });
-      cart.checked = checked
-      dispatch(addSingleCartProduct(cart))
+      cart.checked = checked;
+      dispatch(addSingleCartProduct(cart));
       dispatch(setProduct(tempProduct));
-      return
+      return;
     }
     if (name === "allProductSelect") {
       let tempProduct = cartItems.map(product => {
-        let links = product.items.map(p => { return { ...p, isChecked: checked } })
-        return { ...product, isChecked: checked, items: links }
+        let links = product.items.map(p => { return { ...p, isChecked: checked }; });
+        return { ...product, isChecked: checked, items: links };
       });
-      dispatch(addCartProduct({ cartItems, checked }))
+      dispatch(addCartProduct({ cartItems, checked }));
       dispatch(setProduct(tempProduct));
 
     }
     else if (name === c) {
       let tempProduct = cartItems.map(product => {
         if (product?.category === c) {
-          let links = product?.items?.map(p => { return { ...p, isChecked: checked } })
+          let links = product?.items?.map(p => { return { ...p, isChecked: checked }; });
 
-          return { ...product, isChecked: checked, items: links }
+          return { ...product, isChecked: checked, items: links };
         }
-        return product
+        return product;
       });
-      dispatch(addCartSection({ cart, checked }))
+      dispatch(addCartSection({ cart, checked }));
       dispatch(setProduct(tempProduct));
     }
   };
 
-
+  console.log(cartProduct);
 
   return (
     <div className=' mt-8 mb-72 lg:w-[1200px] mx-auto'>

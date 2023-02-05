@@ -100,8 +100,8 @@ const CashOnDeliveryOrderConfirmPage = () => {
             <AiFillClockCircle className=' w-8 h-8 mr-3'></AiFillClockCircle>
             <p className=' text-2xl'>Thank you for your purchase!</p>
           </div>
-          <p className='text-base text-[#001E00] text-center mt-8'>Your order number is 636567003339341</p>
-          <p className='text-base text-[#001E00] text-center mt-16'>Please have this amount ready on delivery day.</p>
+          <p className='text-base text-[#001E00] text-center lg:mt-8 mt-4'>Your order number is 636567003339341</p>
+          <p className='text-base text-[#001E00] text-center lg:mt-16 mt-4'>Please have this amount ready on delivery day.</p>
           <h4 className=' text-[34px] text-[#FB641B] text-center mt-4'>Tk 130</h4>
         </div>
 
@@ -119,16 +119,18 @@ const CashOnDeliveryOrderConfirmPage = () => {
               />
               <div className=" text-base font-medium text-[#001E00] text-end">
                 <p>Est. 02 Jan 2023</p>
-                <p>24 Hours To 72 Hours Delivery Time</p>
+                <p className=' hidden lg:block'>24 Hours To 72 Hours Delivery Time</p>
               </div>
             </div>
 
-            <div className="mt-7 m-4 lg:flex justify-between">
-              <div className="text-base text-[#686868] flex items-center mb-2">
-                <p className='mr-1'>For more details, track your delivery status under</p>
-                <p className='text-[#001E00]'>My Account</p>
-                <FaAngleRight className='text-[#001E00]'></FaAngleRight>
-                <p className='text-[#001E00]'>My Order</p>
+            <div className="mt-7 m-4 lg:flex justify-between text-center items-center">
+              <div className="text-base text-[#686868] items-center mb-6 lg:mb-0">
+                <p className='mr-1 items-center'>
+                  <span>For more details, track your delivery status under</span>
+                  <span className='text-[#001E00] ml-1 font-medium'>My Account</span>
+                  <FaAngleRight className='text-[#001E00] ml-1 inline'></FaAngleRight>
+                  <span className='text-[#001E00] ml-1 font-medium'>My Order</span>
+                </p>
               </div>
               <button className="btn bg-[#FB641B] w-[134px] h-10 rounded-md text-white normal-case text-base font-medium">View Order</button>
             </div>
@@ -136,8 +138,8 @@ const CashOnDeliveryOrderConfirmPage = () => {
           </div>
         </div>
 
-        <div className="lg:w-[938px] mt-6 mx-auto p-4 border border-[#686868] flex items-center">
-          <IoMdMail className='w-[47px] h-[38px] text-[#287DF3] mr-4'></IoMdMail>
+        <div className="lg:w-[938px] mt-6 mx-auto p-4 border border-[#686868] flex lg:items-center">
+          <IoMdMail className='w-[47px] h-[38px] lg:text-[#287DF3] text-[#686868] mr-6 lg:mr-4'></IoMdMail>
           <p className='text-base text-[#686868]'>We’ve sent a confirmation email to abdulkorim@gmail.com with the order details.</p>
         </div>
 
@@ -147,12 +149,13 @@ const CashOnDeliveryOrderConfirmPage = () => {
         </div>
 
         <div className="lg:w-[938px] mt-14 mx-auto text-center">
-          <button className="btn bg-[#FB641B] w-[186px] h-12 rounded-md text-white normal-case text-base font-medium">View Order</button>
+          <button className="btn bg-[#FB641B] w-[186px] h-12 rounded-md text-white normal-case text-base font-medium">Continue Shoping</button>
         </div>
 
       </div>
 
       <div className="lg:w-[938px] mt-6 mx-auto">
+        <p className='mb-4 text-2xl font-medium'>Just For You</p>
         <div className="grid gap-6 grid-cols-2 lg:grid-cols-4">
           {
             productDetails?.map(details => <div key={details.id} className="card pb-10">
@@ -164,7 +167,7 @@ const CashOnDeliveryOrderConfirmPage = () => {
                   height={154}
                 />
               </figure>
-              <div className="card-body mt-3 p-0">
+              <div className="card-body p-4">
                 <p className=' text-xl text-[#FB641B] font-medium mb-[10px]'>Tk {details.price}</p>
                 <p className=' text-base font-medium mb-[10px]'>{details.title}</p>
                 <div className="flex mb-[10px]">
@@ -183,7 +186,7 @@ const CashOnDeliveryOrderConfirmPage = () => {
                     height={10}
                   />
                 </div>
-                <button className='btn bg-[#FB641B] text-white normal-case text-xl pt-2'>Add to Cart
+                <button className='btn bg-[#FB641B] h-[38px] text-white normal-case text-xl pt-2'>Add to Cart
                   <Image
                     className='w-[24px]' src={Vectorimg2}
                     alt="Picture of the author"
@@ -196,7 +199,6 @@ const CashOnDeliveryOrderConfirmPage = () => {
           }
         </div>
       </div>
-
     </div>
   );
 };
