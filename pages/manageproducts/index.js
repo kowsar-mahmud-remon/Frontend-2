@@ -14,6 +14,8 @@ import {
 import { useRouter } from "next/router";
 import style from "/styles/componentsStyles/box-shaddow.module.css";
 import { useEffect } from "react";
+import ManageProductTable from "../../components/ManageProductTable/ManageProductTable";
+import products from "./faketabledata.json";
 
 const Manageproduct = () => {
   const [active, setActive] = useState({ text: "All", href: "" });
@@ -249,41 +251,6 @@ const Manageproduct = () => {
     { text: "Deleted(0)", href: "" },
   ];
 
-  const columns = [
-    {
-      name: "Product",
-      selector: (row) => row.title,
-    },
-    {
-      name: "Local Title",
-    },
-    {
-      name: "Product SKU",
-    },
-    {
-      name: "Variation",
-      selector: (row) => row.title,
-    },
-    {
-      name: "Price",
-    },
-    {
-      name: "Stock",
-    },
-    {
-      name: "Actions",
-      selector: (row) => row.title,
-    },
-  ];
-
-  const data = [
-    {
-      id: 1,
-      title: "No Data",
-      year: "1988",
-    },
-  ];
-
   return (
     <section className="bg-[#FFFFFF] py-10">
       <div className="px-10 mx-auto flex">
@@ -427,63 +394,49 @@ const Manageproduct = () => {
               </div>
 
               <div className="mt-4">
-                <DataTable columns={columns} data={data} />
+                {/* <DataTable columns={columns} data={data} /> */}
+
+                <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+                  <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                    <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                      <tr>
+                        <th scope="col" className="px-6 py-3">
+                          Product
+                        </th>
+                        <th scope="col" className="px-6 py-3">
+                          Local Title
+                        </th>
+                        <th scope="col" className="px-6 py-3">
+                          Product SKU
+                        </th>
+                        <th scope="col" className="px-6 py-3">
+                          Variation
+                        </th>
+                        <th scope="col" className="px-6 py-3">
+                          Price
+                        </th>
+                        <th scope="col" className="px-6 py-3">
+                          Stock
+                        </th>
+                        <th scope="col" className="px-6 py-3">
+                          Actions
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {products.map((product) => {
+                        return (
+                          <ManageProductTable
+                            key={product.id}
+                            product={product}
+                          ></ManageProductTable>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
-
-            {/* <div className="overflow-x-auto w-full">
-                        <table className="table w-full">
-                            <thead>
-                                <tr>
-                                    <th>
-                                        <label>
-                                            <input type="checkbox" className="checkbox" />
-                                        </label>
-                                    </th>
-                                    <th>Product</th>
-                                    <th>Local Title</th>
-                                    <th>Product SKU</th>
-                                    <th>Variation</th>
-                                    <th>Price $</th>
-                                    <th>Stock</th>
-                                    <th>Created</th>
-                                    <th>Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-
-                                <tr>
-                                    <th>
-                                        NO Data
-                                    </th>
-                                    <td>
-
-                                    </td>
-                                    <td>
-                                    </td>
-                                    <th>
-                                        NO Data
-                                    </th>
-                                    <th>
-                                       
-                                    </th>
-                                    <th>
-                                        
-                                    </th>
-                                    <th>
-                                    
-                                    </th>
-                                    <th>
-                                    
-                                    </th>
-                                    <th>
-                                        NO Data
-                                    </th>
-                                </tr>
-                            </tbody>
-
-                        </table>
-                    </div> */}
           </div>
         </div>
       </div>
