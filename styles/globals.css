@@ -170,3 +170,17 @@ border: 1px solid #FB641B;
   
   border: 1px solid #FB641B;
 }
+.historyBox{
+  width: 924px;
+height: 506px;
+left: 636px;
+top: 375px;
+
+/* White */
+
+background: #FFFFFF;
+/* Effect 16 */
+
+box-shadow: 0px 6px 28px rgba(0, 0, 0, 0.16);
+border-radius: 8px;
+}
