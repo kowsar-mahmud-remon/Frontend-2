@@ -2,6 +2,7 @@ import ManageAccount from "../components/ManageAccoutSideBar/ManageAccount";
 
 import MyOrder from "../components/MyOrder/MyOrder";
 import Profile from "../components/ManageAccoutSideBar/Profile";
+import WriteReview from "../components/ManageAccoutSideBar/WriteReview";
 import MyReviews from "../components/ManageAccoutSideBar/MyReviews";
 
 const profileLinksObj = [
@@ -63,7 +64,7 @@ const profileLinksObj = [
     {
         title: 'My Reviews',
         href: "myReviews",
-        element: <MyReviews />
+        element: <MyReviews/>
     },
     {
         title: 'My Wishlists',

@@ -15,7 +15,7 @@ const MobileCategory = () => {
        category: { activeBtn, categoryName, isActiveCategory },
      } = useSelector((state) => state);
      const dispatch = useDispatch();
-     console.log(isActiveCategory);
+    
     return (
       <div>
         <section
