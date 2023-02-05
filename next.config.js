@@ -7,6 +7,7 @@ const nextConfig = {
       'localhost',
       "banglar-big-store.s3.amazonaws.com",
       "encrypted-tbn0.gstatic.com",
+      "banglar-big-store.s3.ap-northeast-1.amazonaws.com"
     ],
   },
 };

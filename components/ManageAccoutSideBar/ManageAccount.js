@@ -3,8 +3,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 
  const ManageAccount = () => {
-// const rounter  = useRouter()
-// console.log(rounter)
+
     return (
                <div className='lg:block hidden'>
                     <div className="mr-[30px]">

@@ -4,10 +4,10 @@ import OutsideClickHandler from 'react-outside-click-handler';
 
 const SellerProductsModal = () => {
   const [hidden, setHidden] = useState(false);
-  console.log(hidden);
+
 
   return (
-    <div className="mt-[1000px]">
+    <div className="">
       <label htmlFor="my-modal-4" onClick={() => setHidden(!hidden)} className="btn">open modal</label>
       {
         hidden && (
