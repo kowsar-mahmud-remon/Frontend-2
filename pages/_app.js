@@ -9,8 +9,8 @@ import '../styles/globals.css'
 export default function App({ Component, pageProps }) {
   return <div className="">
     <Provider store={store}>
-      <SellerRightNav/>
-      {/* <SideButtons/> */}
+      {/* <SellerRightNav/> */}
+      <SideButtons/>
       <MobileNavBar/>
       <Navication />
       <div className='mr-6'>
