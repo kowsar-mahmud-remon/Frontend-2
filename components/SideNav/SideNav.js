@@ -12,11 +12,11 @@ import { addCategoryName, handleCategorySideNav, setActiveBtn } from '../../feat
 const Category = () => {
     const router = useRouter();
     const { data, isLoading, isError, error } = useGetCategoryQuery();
-    console.log( "kopi",data);
+  
     const { asPath } = router;
     const { category: { activeBtn, categoryName, isActiveCategory } } = useSelector(state => state)
     const dispatch = useDispatch()
-    // console.log(isActiveCategory)
+  
     return (
         <section className={`${styles.sideNav} w-[285px] ${isActiveCategory ? 'left-[-400px]' : ''} p-2 bg-[#ffffff] shawdow-black shadow-2xl delay-700 sideNavTransition `} id="sidNav">
           
