@@ -20,13 +20,13 @@ const NavicationWithSideNavLayout = ({ children }) => {
       <section
         className={`page-side-nav-wraper my-7 md:mx-5 xl:mx-12 sideNavTransition`}
       >
-        <SideNavigationNavBar/>
+        <SideNavigationNavBar />
         <SideNav />
         <SellerRightNav></SellerRightNav>
         <div
           className={`${
             isActiveCategory ? "deactive-page-body" : "active-page-body"
-          } `}
+          } w-[300px]`}
           id="page-body"
         >
           {children}
