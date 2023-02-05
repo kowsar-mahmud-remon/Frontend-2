@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
 import { FaArrowLeft, FaRegSmile } from "react-icons/fa";
 import ReactStars from "react-rating-stars-component";
@@ -68,11 +69,15 @@ const MyReviewsResponsive = () => {
     const ratingChanged = (newRating) => {
         console.log(newRating);
     };
+
+    const router = useRouter()
     return (
         <div className="mt-[66px] ml-[20px]">
-            <div className='flex items-center gap-[13px]'>
-                <FaArrowLeft className=''></FaArrowLeft>
-                <h1 className='text-[20px]  font-[500] text-[#001E00]'>My Reviews</h1>
+            <div >
+                <button  onClick={() => router.back()} className='flex items-center gap-[13px]'>
+                    <FaArrowLeft className=''></FaArrowLeft>
+                    <h1 className='text-[20px]  font-[500] text-[#001E00]'>My Reviews</h1>
+                </button>
             </div>
             <div >
                 <div className=" flex justify-evenly">

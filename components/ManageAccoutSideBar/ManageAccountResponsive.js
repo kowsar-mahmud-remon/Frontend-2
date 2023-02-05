@@ -1,12 +1,16 @@
+import { useRouter } from "next/router";
 import { FaArrowLeft } from "react-icons/fa";
 
 
 const ManageAccountResponsive = () => {
+    const router = useRouter()
     return (
         <div className="mt-[66px] m-[24px]">
-            <div className='flex items-center gap-[13px]'>
-                 <FaArrowLeft className=''></FaArrowLeft>
-                <h1 className='text-[20px]  font-[500] text-[#001E00]'>Manage My Profile</h1>
+            <div >
+                <button onClick={() => router.back()} className='flex items-center gap-[13px]'>
+                    <FaArrowLeft className=''></FaArrowLeft>
+                    <h1 className='text-[20px]  font-[500] text-[#001E00]'>Manage My Profile</h1>
+                </button>
             </div>
             <div className="flex flex-col gap-6 py-4">
                 <div className="card  w-[360px] h-[148px]  bg-base-100 shadow-lg">
