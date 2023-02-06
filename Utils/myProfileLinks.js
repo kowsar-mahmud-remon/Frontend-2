@@ -4,6 +4,9 @@ import MyOrder from "../components/MyOrder/MyOrder";
 import Profile from "../components/ManageAccoutSideBar/Profile";
 import WriteReview from "../components/ManageAccoutSideBar/WriteReview";
 import MyReviews from "../components/ManageAccoutSideBar/MyReviews";
+import Wishlist from "../pages/wishlist/myWishlist";
+import FollowedStore from "../pages/wishlist/followedStore";
+import MyWishList from "../components/ManageAccoutSideBar/MyWishList";
 
 const profileLinksObj = [
     {
@@ -69,12 +72,12 @@ const profileLinksObj = [
     {
         title: 'My Wishlists',
         href: "myWishlists",
-        element: <Profile />
+        element: <MyWishList />
     },
     {
         title: 'Followed stores',
         href: "followedStores",
-        element: <Profile />
+        element: <FollowedStore />
     },
     {
         title: 'Sell On Banglar Big Store',

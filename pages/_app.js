@@ -9,7 +9,7 @@ import '../styles/globals.css'
 
 
 export default function App({ Component, pageProps }) {
- 
+
   return (
     <div className="">
       <Provider store={store}>
@@ -20,7 +20,9 @@ export default function App({ Component, pageProps }) {
         <div className="mr-6">
           <Component {...pageProps} />
         </div>
-        <Footer />
+        <div className='hidden lg:block'>
+          <Footer />
+        </div>
       </Provider>
     </div>
   );
