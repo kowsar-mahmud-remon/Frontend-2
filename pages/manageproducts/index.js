@@ -26,7 +26,7 @@ const Manageproduct = () => {
   } = useSelector((state) => state);
   const dispatch = useDispatch();
 
-  const datas = [
+  const datas = [  
     {
       id: 1,
       name: "Products",
