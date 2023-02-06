@@ -1,6 +1,7 @@
 import ManageAccount from "../components/ManageAccoutSideBar/ManageAccount"
 import ManageAccountResponsive from "../components/ManageAccoutSideBar/ManageAccountResponsive"
 import MyReviewsResponsive from "../components/ManageAccoutSideBar/MyReviewsResponsive"
+import WriteReviewResponsive from "../components/ManageAccoutSideBar/WriteReviewResponsive"
 import MyOrderDetails from "../components/myOrderDetails/myOrderDetails"
 
 const profileLinksResponsiveObj = [
@@ -42,7 +43,8 @@ const profileLinksResponsiveObj = [
     {
         title: 'My Reviews',
         href: "myReviews",
-        element:<MyReviewsResponsive/>,
+        // element:<MyReviewsResponsive/>,
+        element:<WriteReviewResponsive></WriteReviewResponsive>
     },
     {
         title: 'My Wishlist',
