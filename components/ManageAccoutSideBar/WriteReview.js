@@ -1,9 +1,24 @@
 import Image from "next/image";
+import { useState } from "react";
 import { FaRegSmile, FaSmile, FaStar, FaRegMeh, FaRegFrown } from "react-icons/fa";
 import ReactStars from "react-rating-stars-component";
 
 
 const WriteReview = () => {
+    const [file, setFile] = useState(null);
+
+    const handleChange = (e) => {
+        const selectedFile = e.target.files[0];
+
+        if (selectedFile) {
+            if (selectedFile.type === "image/jpeg") {
+                setFile(selectedFile);
+            } else {
+                alert("Invalid file type. Only JPEG files are allowed.");
+            }
+        }
+    };
+    console.log(file)
     const ratingChanged = (newRating) => {
         console.log(newRating);
     };
@@ -39,7 +54,7 @@ const WriteReview = () => {
                     </div>
 
                     <div className="">
-                        <textarea className="textarea  p-[24px] font-[400] text-[16px] text-[#686868] w-[552px] ml-[24px] h-[96px] bg-[#F2F2F2] rounded-lg outline-none " ></textarea>
+                        <textarea className="resize-none p-[24px] font-[400] text-[16px] text-[#686868] w-[552px] ml-[24px] h-[96px] bg-[#F2F2F2] rounded-lg outline-none " ></textarea>
 
                     </div>
                     <div className="flex gap-[8px] mt-[12px]">
@@ -51,7 +66,7 @@ const WriteReview = () => {
                             <Image className="mt-[14px] ml-[28px] mr-[28px] mb-[28px]" src='/Vector.png' width={20} height={18} alt=""></Image>
                         
                             <p className="font-[400] mt-[-22px] ml-[10px]  text-[8px] text-[#686868]">Upload Photo</p>
-                            <input type="file" multiple accept="image/*" className="hidden"/>
+                            <input type="file" accept="image/jpeg" onChange={handleChange} className='hidden' />
                         </label>
                     </div>
                     <div className="mt-[32px] ml-[24px]">
@@ -75,7 +90,7 @@ const WriteReview = () => {
                     <div className="mt-[32px]">
                         <p className="font-[500] text-[16px] text-[#001E00]">Review detail</p>
 
-                        <textarea className="textarea  p-[12px] font-[400] text-[16px] text-[#686868] w-[275px] mt-[8px] h-[72px] bg-[#F2F2F2] rounded-[4px] outline-none" ></textarea>
+                        <textarea className=" resize-none  p-[12px] font-[400] text-[16px] text-[#686868] w-[275px] mt-[8px] h-[72px] bg-[#F2F2F2] rounded-[4px] outline-none" ></textarea>
                     </div>
                     <div className="mt-[31px]">
                         <p className="font-[500] text-[16px] text-[#001E00]">Rate your Rider:</p>
@@ -92,7 +107,7 @@ const WriteReview = () => {
                             />
                         </div>
                     </div>
-                    <textarea className="textarea  p-[12px] font-[400] text-[16px] text-[#686868] w-[275px] mt-[8px] h-[72px] bg-[#F2F2F2] rounded-[4px] outline-none" ></textarea>
+                    <textarea className="resize-none  p-[12px] font-[400] text-[16px] text-[#686868] w-[275px] mt-[8px] h-[72px] bg-[#F2F2F2] rounded-[4px] outline-none" ></textarea>
 
                     <div className="mt-[65px]">
                         <div className="flex gap-[26px] items-center">
