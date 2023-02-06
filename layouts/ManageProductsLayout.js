@@ -27,9 +27,11 @@ const ManageProductsLayout = ({ children, slug }) => {
       </div>
 
       <div>
+
         {
           children
         }
+
       </div>
     </div>
   );
