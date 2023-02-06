@@ -272,3 +272,45 @@ top: 453px; */
   border-radius: 4px;
   box-sizing: border-box;
 }
+
+.wishlistBox {
+  width: 924px;
+  height: 149px;
+  left: 636px;
+  top: 303px;
+
+  /* White */
+
+  background: #FFFFFF;
+  /* Effect 16 */
+
+  box-shadow: 0px 6px 28px rgba(0, 0, 0, 0.16);
+  border-radius: 8px;
+}
+
+.wishlistcard {
+  width: 222px;
+  height: 338px;
+  left: 636px;
+  top: 519px;
+
+  /* White */
+
+  background: #FFFFFF;
+  /* Backgrun color */
+
+  border: 1px solid #F2F3F7;
+  box-shadow: 0px 7.96364px 39.8182px 2.65455px rgba(0, 0, 0, 0.08);
+  border-radius: 4px
+}
+
+.wishlistloveButton {
+
+ 
+
+  /* White */
+
+  background: #FFFFFF;
+  box-shadow: 0px 7.96364px 39.8182px 2.65455px rgba(0, 0, 0, 0.18);
+ 
+}

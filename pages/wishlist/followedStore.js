@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const followedStore = () => {
+const FollowedStore = () => {
     return (
         <div className=' m-4'>
             <div className="border-b-2 border-gray-400  shadow-xl">
@@ -34,4 +34,4 @@ const followedStore = () => {
     );
 };
 
-export default followedStore;
+export default FollowedStore;

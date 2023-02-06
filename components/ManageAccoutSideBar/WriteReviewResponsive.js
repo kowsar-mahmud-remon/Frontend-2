@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { useState } from "react";
 import { FaArrowLeft, FaRegFrown, FaRegMeh, FaRegSmile } from "react-icons/fa";
 import ReactStars from "react-rating-stars-component";
@@ -6,6 +7,8 @@ import ReactStars from "react-rating-stars-component";
 
 const WriteReviewResponsive = () => {
     const [file, setFile] = useState(null);
+    
+    const router = useRouter()
 
     const handleChange = (e) => {
         const selectedFile = e.target.files[0];
@@ -97,7 +100,7 @@ const WriteReviewResponsive = () => {
                     />
                 </div>
             </div>
-            <div className="mt-[190px]">
+            <div className="mt-[50px]">
                 <button className="bg-[#FB641B] mb-[32px] text-white w-[376px] h-[48px] rounded-[8px]">Submit</button>
             </div>
         </div>
