@@ -327,7 +327,7 @@ const SellerVerificationPageSideNav = () => {
   ];
 
   return (
-    <section className={`${styles.sideNav} w-[285px] p-2 bg-[#ffffff] shawdow-black shadow-2xl `} id="sidNav">
+    <section className={`${styles.sideNav} w-[282px] p-2 bg-[#ffffff] shawdow-black shadow-2xl `} id="sidNav">
       <ul>
         {/* <li className={asPath == "/" ? styles.active : ""} > */}
         {
