@@ -110,7 +110,7 @@ const MyWishList = () => {
             <div>
                 <p className="text-[ #001E00] font-[500] text-[16px] mt-[32px]">Just for you</p>
             </div>
-            <div className="grid grid-cols-4">
+            <div className="grid grid-cols-4 gap-[20px]">
 
                 {
                     wishlistData.map((data) => <>

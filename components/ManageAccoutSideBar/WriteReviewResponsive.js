@@ -100,7 +100,7 @@ const WriteReviewResponsive = () => {
                     />
                 </div>
             </div>
-            <div className="mt-[190px]">
+            <div className="mt-[50px]">
                 <button className="bg-[#FB641B] mb-[32px] text-white w-[376px] h-[48px] rounded-[8px]">Submit</button>
             </div>
         </div>
