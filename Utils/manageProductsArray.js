@@ -4,7 +4,7 @@ import EditProductsTwo from "../components/EditProducts/EditProductsTwo";
 export const manageProductsArray = [
   {
     title: "EditProducts",
-    href: "editProducts",
+    href: "editProduct",
     element: <EditProducts />,
   }, {
     title: "EditProductsTwo",
