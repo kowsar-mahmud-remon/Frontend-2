@@ -103,7 +103,7 @@ const AddToCartPage = () => {
             <div className="">
 
               <input type="checkbox" id="my-modal-4" className="modal-toggle" />
-              <label htmlFor="my-modal-4" className="modal cursor-pointer">
+              <label htmlFor="my-modal-4" className="modal cursor-pointer bg-black bg-opacity-70">
                 <label className="modal-box relative w-full lg:max-w-[1225px]" htmlFor="">
                   <label htmlFor="my-modal-4" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
 

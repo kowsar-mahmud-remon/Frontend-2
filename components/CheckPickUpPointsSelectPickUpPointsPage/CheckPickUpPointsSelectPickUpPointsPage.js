@@ -19,7 +19,7 @@ const CheckPickUpPointsSelectPickUpPointsPage = () => {
             <div className="">
 
               <input type="checkbox" id="my-modal-4" className="modal-toggle" />
-              <label htmlFor="my-modal-4" className="modal cursor-pointer">
+              <label htmlFor="my-modal-4" className="modal cursor-pointer bg-black bg-opacity-70">
                 <label className="modal-box relative max-w-[780px]" htmlFor="">
                   <label htmlFor="my-modal-4" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
 
@@ -50,7 +50,7 @@ const CheckPickUpPointsSelectPickUpPointsPage = () => {
 
                     <div className="modal-action mt-52 justify-between items-center mb-2">
                       <div className="flex items-center">
-                        <AiFillQuestionCircle className='text-[#001E00] w-4 h-4 mr-2'></AiFillQuestionCircle>
+                        <AiFillQuestionCircle className='text-[#001E00] w-4 h-5 mr-2'></AiFillQuestionCircle>
                         <p className=' text-sm text-[#686868]'>Paperfly Keraniganj Sadar Collection Point-</p>
                       </div>
                       <label htmlFor="my-modal-4" className="btn bg-[#FB641B] text-white w-[172px] normal-case text-base font-medium">Confirm</label>
