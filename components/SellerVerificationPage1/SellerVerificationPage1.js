@@ -12,10 +12,10 @@ import { MdArrowForwardIos } from "react-icons/md";
 const SellerVerificationPage1 = () => {
   return (
     <div className="flex max-w-[1896px] mt-[33px]">
-      <div className="mt-[45px] ">
+      <div className="mt-[45px] lg:block mobile:hidden">
         <div className="mx-6 mb-8">
           <Link href="/" className="">
-            <Image src={logo} alt="img" width={224} />
+            <Image className="" src={logo} alt="img" width={224} />
            
           </Link>
         </div>
