@@ -22,7 +22,7 @@ const NavicationWithSideNavLayout = ({ children }) => {
       >
         <SideNavigationNavBar />
         <SideNav />
-        <SellerRightNav></SellerRightNav>
+        {/* <SellerRightNav></SellerRightNav> */}
         <div
           className={`${
             isActiveCategory ? "deactive-page-body" : "active-page-body"
