@@ -9,7 +9,8 @@ const index = () => {
   return (
     
     
-      <SellerVerificationPage1></SellerVerificationPage1>
+      <SellerVerificationPage2></SellerVerificationPage2>
+      
       
         
        
