@@ -87,7 +87,7 @@ const MyOrder = () => {
 
     ]
 
-    const [OrderNumber, setOrderNumber] = useState()
+    const [OrderNumber, setOrderNumber] = useState(5)
     const handleOrder = (e) => {
         const orderNumber = e.target.value
         setOrderNumber(orderNumber)
@@ -119,13 +119,13 @@ const MyOrder = () => {
                         <div className="mt-[32px]">
                             <div>
                                 <ul className="flex gap-[90px]  ">
-                                    <button onClick={() => setActive('all')} className={isActive === 'all' ? "text-[#FB641B] underline text-[16px]" : "  text-[16px]"}>All</button>
-                                    <button onClick={() => setActive('ToPay')} className={isActive === 'ToPay' ? "text-[#FB641B] underline text-[16px]" : "  text-[16px]"}>To Pay</button>
-                                    <button onClick={() => ToShip()} className={isActive === 'ToShip' ? "text-[#FB641B] underline text-[16px]" : "  text-[16px]"}>To Ship ()</button>
-                                    <button onClick={() => setActive('ToReceive')} className={isActive === 'ToReceive' ? "text-[#FB641B] underline text-[16px]" : "  text-[16px]"}>To Receive ({receiveDatas.length})</button>
+                                    <button onClick={() => setActive('all')} className={isActive === 'all' ? "text-[#FB641B] border-b-[2px] border-[#FB641B] text-[16px]" : "  text-[16px]"}>All</button>
+                                    <button onClick={() => setActive('ToPay')} className={isActive === 'ToPay' ? "text-[#FB641B] border-b-[2px] border-[#FB641B] text-[16px]" : "  text-[16px]"}>To Pay</button>
+                                    <button onClick={() => ToShip()} className={isActive === 'ToShip' ? "text-[#FB641B] border-b-[2px] border-[#FB641B] text-[16px]" : "  text-[16px]"}>To Ship ()</button>
+                                    <button onClick={() => setActive('ToReceive')} className={isActive === 'ToReceive' ? "text-[#FB641B] border-b-[2px] border-[#FB641B] text-[16px]" : "  text-[16px]"}>To Receive ({receiveDatas.length})</button>
                                 </ul>
                             </div>
-                            <hr className='bg-[#686868] border-[1px]' />
+                            <hr className='bg-[#686868] border-[1px] w-[924px]' />
                         </div>
                         {
                             isActive === 'all' && <>
@@ -135,7 +135,7 @@ const MyOrder = () => {
                                             <p className="label mt-[25px] ml-[24px] mb-[30px] text-[16px]"> <span className="label-text">Show:</span></p>
                                             <select onClick={(e) => handleOrder(e)}
                                                 className="h-[48px] select input-bordered mt-[16px] w-[169px] font-normal text-[16px] rounded-[4px] border-[#707070] ">
-                                                <option value={5}>Last 5 Orders</option>
+                                                <option className='text-[16px] text-[#686868]' value={5}>Last 5 Orders</option>
                                                 <option value={10}>Last 10 Orders</option>
                                             </select>
                                         </div>
@@ -146,14 +146,21 @@ const MyOrder = () => {
                             {
                                 isActive === 'all' && (datas.slice(0, parseInt(OrderNumber))).map(data => <OrdersProduct key={data.id} data={data}></OrdersProduct>)
                             }
+                          
                             {
-                                isActive === 'ToPay' && datas.filter(data => data.status === 'Payment').map(data => data ? <><OrdersProduct key={data.id} data={data}></OrdersProduct></> : <>
-                                    <div>
+                                isActive === 'ToPay'    && (
+                                    datas.length !== 0   ?  <>
+                                     {
+                                           datas.filter(data => data.status === 'Payment').map(data =><OrdersProduct key={data.id} data={data}></OrdersProduct> )
+                                     }
+                                    </> : <>
+                                    <div className='mt-[106px] ml-[400px]'>
                                         <p>There are no orders placed yet</p>
-                                        <button>Continue Shopping</button>
+                                        <button className='continueButton mt-[32px] text-[#FB641B]'>Continue Shopping</button>
                                     </div>
-
-                                </>)
+                                     
+                                    </>
+                                ) 
                             }
                             {
                                 isActive === 'ToShip' && shipingProduct.map(data => <OrdersProduct key={data.id} data={data}></OrdersProduct>)

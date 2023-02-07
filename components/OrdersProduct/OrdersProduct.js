@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 const OrdersProduct = ({data}) => {
+  
     return (
       <div className="mt-[16px]">
         <div className="w-[924px] h-[149px] rounded-[8px] bg-[#FFFFFF] shadow-lg">
@@ -17,7 +18,7 @@ const OrdersProduct = ({data}) => {
               href={`/orderDetails/myOrderDetails`}
               className="text-[#287DF3] text-[16px] mr-[19px]"
             >
-              MANAGE
+              View More
             </Link>
           </div>
           <hr className="border-[1px] border-[#686868]" />

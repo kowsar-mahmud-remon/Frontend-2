@@ -306,11 +306,25 @@ top: 453px; */
 
 .wishlistloveButton {
 
- 
+
 
   /* White */
 
   background: #FFFFFF;
   box-shadow: 0px 7.96364px 39.8182px 2.65455px rgba(0, 0, 0, 0.18);
- 
+
+}
+
+.continueButton {
+  box-sizing: border-box;
+
+  width: 220px;
+  height: 56px;
+  left: 988px;
+  top: 484px;
+  
+  /* Button color */
+  
+  border: 2px solid #FB641B;
+
 }
