@@ -10,7 +10,7 @@ const ToReceive = ({ data }) => {
                             <p ><span className="text-[16px] font-bold text-black">Tracking Number</span> <span className="text-[#287DF3]">#{data.orderId}</span></p>
 
                         </div>
-                        <p className="text-[#287DF3] text-[16px] mr-[19px]">MANAGE</p>
+                        <p className="text-[#287DF3] text-[16px] mr-[19px]">View More Details</p>
                     </div>
                     <hr className='border-[1px] border-[#686868]'/>
                     <div className="flex justify-between ">

@@ -8,9 +8,19 @@ module.exports = {
   theme: {
     extend: {
       boxShadow: {
-        'small': '0px 6px 28px rgba(0, 0, 0, 0.16)',
-      }
-    }
+        small: "0px 6px 28px rgba(0, 0, 0, 0.16)",
+      },
+    },
+    screens: {
+      mobile: "375px",
+      // => @media (min-width: 640px) { ... }
+      md: "768px",
+      lg: "1024px",
+      // => @media (min-width: 1024px) { ... }
+
+      desktop: "1280px",
+      // => @media (min-width: 1280px) { ... }
+    },
   },
   daisyui: {
     themes: [
@@ -36,17 +46,16 @@ module.exports = {
           roboto: ["Roboto", "sans-serif"],
           poppins: ["Poppins", "sans-serif"],
 
-          "info": "#98A8DD",
-          "success": "#1BBB70",
-          "warning": "#DF7E07",
-          "error": "#FA5C5C",
-          "login": "#6358DC",
-          "profile": "#858A89"
-
+          info: "#98A8DD",
+          success: "#1BBB70",
+          warning: "#DF7E07",
+          error: "#FA5C5C",
+          login: "#6358DC",
+          profile: "#858A89",
         },
       },
       "light",
     ],
   },
   plugins: [require("daisyui")],
-}
+};

@@ -239,7 +239,7 @@ const Manageproduct = () => {
     },
   ];
 
-  console.log(datas);
+
 
   const MENU_LIST = [
     { text: "All", href: "" },
@@ -327,8 +327,8 @@ const Manageproduct = () => {
                 <li>
                   <a>Home</a>
                 </li>
-                <li>
-                  <a>Products</a>
+                <li>  
+                  <a>Products</a> 
                 </li>
                 <li>Manage Products</li>
               </ul>

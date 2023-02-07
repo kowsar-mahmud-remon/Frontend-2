@@ -12,15 +12,18 @@ import { FaArrowAltCircleRight } from 'react-icons/fa';
 import logo from '../assets/images/logo/main_logo.png';
 import logoDic from '../assets/images/logo/logo_dic.png';
 
-import NavicationWithSideNavLayout from '../layouts/NavicationWithSideNavLayout'
-import Category from '../components/Category/Category'
-import AddProducts from '../components/AddProducts/AddProducts'
+import NavicationWithSideNavLayout from '../layouts/NavicationWithSideNavLayout';
+import Category from '../components/Category/Category';
+import AddProducts from '../components/AddProducts/AddProducts';
 
-import MediaCenter from '../components/MediaCenter/MediaCenter'
+import MediaCenter from '../components/MediaCenter/MediaCenter';
 
 import OrderPlace from '../components/OrderPlace/OrderPlace';
 import SellerProductsModal from '../components/SellerProductsModal/SellerProductsModal';
 import AllCategory from '../components/allCategory/AllCategory';
+
+
+
 
 
 export const getStaticProps = async () => {
@@ -41,7 +44,7 @@ export const getStaticProps = async () => {
       revalidate: 600
     };
   } catch (err) {
-    console.log(err);
+
     return {
       props: {
         items: []
@@ -51,6 +54,7 @@ export const getStaticProps = async () => {
 };
 
 export default function Home({ items }) {
+
   return (
     <>
       <Head>

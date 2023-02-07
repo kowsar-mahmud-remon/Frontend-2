@@ -18,32 +18,313 @@
 } */
 
 .slick-slide {
-    display: inline-flex !important;
-    justify-content: center;
-    align-items: center;
-    margin: 0 0.1px;
-    padding: 3px 0.1px;
+  display: inline-flex !important;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.1px;
+  padding: 3px 0.1px;
 }
 
 .slick-list {
 
-    height: 405px !important;
+  height: 405px !important;
 }
 
 .slick-track {
-    margin-left: 0 !important;
+  margin-left: 0 !important;
 }
 
 .span {
-    height: 10px !important;
+  height: 10px !important;
 }
 
 .span span {
-    display: none !important;
+  display: none !important;
 }
 
 .container div {
-    height: 10px !important;
+  height: 10px !important;
 }
 
 /* pagination style */
+
+.profileNavbar:last-child div p {
+  border: none !important;
+
+
+}
+
+.shadowreviews {
+  background: #FFFFFF;
+  /* Effect 16 */
+
+  box-shadow: 0px 6px 28px rgba(0, 0, 0, 0.16);
+  border-radius: 8px
+}
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: #FB641B;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #FB641B;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.reviewBox {
+  width: 924px;
+  height: 56px;
+  background: #FFFFFF;
+  /* Effect 16 */
+
+  box-shadow: 0px 6px 28px rgba(0, 0, 0, 0.16);
+  border-radius: 8px;
+  left: 636px;
+  top: 305px
+}
+
+.reviewDetails {
+  width: 924px;
+  height: 149px;
+  left: 636px;
+  top: 377px;
+  background: #FFFFFF;
+
+
+  box-shadow: 0px 6px 28px rgba(0, 0, 0, 0.16);
+  border-radius: 8px;
+}
+
+.reviewBtn {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 121px;
+  height: 32px;
+  /* left: 1311px;
+top: 453px; */
+
+  /* Button color */
+
+  border: 1px solid #FB641B;
+}
+
+.dividerReview {
+  width: 134px;
+  height: 0px;
+  left: 668px;
+  top: 361px;
+
+  /* Button color */
+
+  border: 1px solid #FB641B;
+}
+
+.historyBox {
+  width: 924px;
+  height: 506px;
+  left: 636px;
+  top: 375px;
+
+  /* White */
+
+  background: #FFFFFF;
+  /* Effect 16 */
+
+  box-shadow: 0px 6px 28px rgba(0, 0, 0, 0.16);
+  border-radius: 8px;
+}
+
+.reviewResponsive {
+  width: 376px;
+  height: 113px;
+  left: 24px;
+  top: 142px;
+
+  /* White */
+
+  background: #FFFFFF;
+  /* 6 Effect */
+
+  box-shadow: 0px 6px 30px 2px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+}
+
+.historyResponsive {
+  width: 376px;
+  height: 481px;
+
+
+  /* White */
+
+  background: #FFFFFF;
+  /* 6 Effect */
+
+  box-shadow: 0px 6px 30px 2px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+}
+
+.historyInside {
+  box-sizing: border-box;
+
+
+  width: 352px;
+  height: 96px;
+
+
+  /* White */
+
+  background: #FFFFFF;
+  /* Off White */
+
+  border: 1px solid #F2F2F2;
+  border-radius: 8px
+}
+
+.writeResponsiveBox {
+  width: 376px;
+  height: 112px;
+  left: 24px;
+  top: 186px;
+
+  /* White */
+
+  background: #FFFFFF;
+  /* 6 Effect */
+
+  box-shadow: 0px 6px 30px 2px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+}
+
+.writeReviewTextArea {
+  width: 376px;
+  height: 89px;
+  left: 24px;
+  top: 314px;
+
+  /* Off Black */
+
+  border: 1px solid #B7B7B7;
+  border-radius: 4px;
+}
+
+.responsiveImageFileUpload {
+  width: 376px;
+  height: 48px;
+  left: 24px;
+  top: 419px;
+
+  /* Off Black */
+
+  border: 1px dashed #B7B7B7;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.wishlistBox {
+  width: 924px;
+  height: 149px;
+  left: 636px;
+  top: 303px;
+
+  /* White */
+
+  background: #FFFFFF;
+  /* Effect 16 */
+
+  box-shadow: 0px 6px 28px rgba(0, 0, 0, 0.16);
+  border-radius: 8px;
+}
+
+.wishlistcard {
+  width: 222px;
+  height: 338px;
+  left: 636px;
+  top: 519px;
+
+  /* White */
+
+  background: #FFFFFF;
+  /* Backgrun color */
+
+  border: 1px solid #F2F3F7;
+  box-shadow: 0px 7.96364px 39.8182px 2.65455px rgba(0, 0, 0, 0.08);
+  border-radius: 4px
+}
+
+.wishlistloveButton {
+
+
+
+  /* White */
+
+  background: #FFFFFF;
+  box-shadow: 0px 7.96364px 39.8182px 2.65455px rgba(0, 0, 0, 0.18);
+
+}
+
+.continueButton {
+  box-sizing: border-box;
+
+  width: 220px;
+  height: 56px;
+  left: 988px;
+  top: 484px;
+  
+  /* Button color */
+  
+  border: 2px solid #FB641B;
+
+}

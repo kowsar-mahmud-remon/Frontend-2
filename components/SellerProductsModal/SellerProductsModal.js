@@ -4,10 +4,10 @@ import OutsideClickHandler from 'react-outside-click-handler';
 
 const SellerProductsModal = () => {
   const [hidden, setHidden] = useState(false);
-  console.log(hidden);
+
 
   return (
-    <div className="mt-[1000px]">
+    <div className="">
       <label htmlFor="my-modal-4" onClick={() => setHidden(!hidden)} className="btn">open modal</label>
       {
         hidden && (
@@ -18,7 +18,7 @@ const SellerProductsModal = () => {
             <div className="">
 
               <input type="checkbox" id="my-modal-4" className="modal-toggle" />
-              <label htmlFor="my-modal-4" className="modal cursor-pointer">
+              <label htmlFor="my-modal-4" className="modal cursor-pointer bg-black bg-opacity-70">
                 <label className="modal-box relative max-w-[713px]" htmlFor="">
                   <label htmlFor="my-modal-4" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                   <div className="">
