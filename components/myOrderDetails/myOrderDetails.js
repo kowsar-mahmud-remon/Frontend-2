@@ -146,7 +146,8 @@ const MyOrderDetails = () => {
                             </p>
                             <p className=" text-[11px]">Tk {data.subtotal}</p>
                             <p className="text-[11px]">
-                              Qty: <span className="font-[500]"> {data.qty}</span>
+                              Qty:{" "}
+                              <span className="font-[500]"> {data.qty}</span>
                             </p>
                           </div>
                         </td>
@@ -182,7 +183,7 @@ const MyOrderDetails = () => {
                     Work
                   </p>
                 </div>
-                <div className="text-base ml-2">
+                <div className="text-base ml-2 text-[#686868]">
                   <p>{shippingAdd.address}</p>
                   <p>{shippingAdd.phone}</p>
                 </div>
@@ -199,7 +200,7 @@ const MyOrderDetails = () => {
                     Home
                   </p>
                 </div>
-                <div className="text-base ml-2">
+                <div className="text-base ml-2 text-[#686868]">
                   <p>{billingAddress.address}</p>
                   <p>{billingAddress.phone}</p>
                 </div>
