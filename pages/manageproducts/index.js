@@ -19,6 +19,7 @@ import products from "./faketabledata.json";
 
 const Manageproduct = () => {
   const [active, setActive] = useState({ text: "All", href: "" });
+  const [item, setItem] = useState(products)
   const router = useRouter;
   const { asPath } = router;
   const {
@@ -242,13 +243,13 @@ const Manageproduct = () => {
 
   const MENU_LIST = [
     { text: "All", href: "" },
-    { text: "Online(0)", href: "" },
-    { text: "Draft(0)", href: "" },
-    { text: "Pending QC(0)", href: "" },
-    { text: "Out of Stock(0)", href: "" },
-    { text: "Inactive(0)", href: "" },
-    { text: "Suspended(0)", href: "" },
-    { text: "Deleted(0)", href: "" },
+    { text: "Online", href: "" },
+    { text: "Draft", href: "" },
+    { text: "Pending QC", href: "" },
+    { text: "Out of Stock", href: "" },
+    { text: "Inactive", href: "" },
+    { text: "Suspended", href: "" },
+    { text: "Deleted", href: "" },
   ];
 
   return (
@@ -349,6 +350,9 @@ const Manageproduct = () => {
                     menu={menu}
                     setActive={setActive}
                     active={active}
+                    setItem={setItem}
+                    item={item}
+                    products={products}
                   ></Managelist>
                 </div>
               ))}
@@ -424,7 +428,7 @@ const Manageproduct = () => {
                       </tr>
                     </thead>
                     <tbody>
-                      {products.map((product) => {
+                      {item.map((product) => {
                         return (
                           <ManageProductTable
                             key={product.id}

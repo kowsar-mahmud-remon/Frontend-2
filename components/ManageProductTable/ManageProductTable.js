@@ -8,7 +8,7 @@ const ManageProductTable = ({ product }) => {
     <>
       <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-[#001E00]">
         <td className="px-6 py-4">
-          <Image width={35} height={35} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBAVn0aSVV9kfTyEnxqqudMYb3wtXGmfjcEg&usqp=CAU" alt=""/>
+          <Image width={35} height={35} src={image} alt=""/>
         </td>
         <th
           scope="row"
