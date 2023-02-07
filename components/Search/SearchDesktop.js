@@ -19,6 +19,7 @@ const SearchDesktop = () => {
     const [filters, setFilters] = useState([])
     const [maxValue, setMaxValue] = useState(10000)
     const [location, setLocation] = useState([])
+    const [chk, setChk] = useState()
 
     const handleRange = (val) => {
         console.log(val)
@@ -290,13 +291,13 @@ const SearchDesktop = () => {
                                 <p className='text-[#287DF3] cursor-pointer' onClick={handleclearAll}>Clear all</p>
                             </div>
                             <div>
-                                <div id='filter' className=' grid grid-cols-3 mb-[16px] '>
-                                    <p className={`bg-[#F2F3F7] w-[80px] text-[#686868] text-[10px] h-[21px] py-[-2px] px-2 mr-2 `}> <span className='mr-1 cursor-pointer' >X</span><span>{maxValue}</span> </p>
+                                <div id='filter' className=' grid grid-cols-3 mb-[16px] gap-1 '>
+                                    <p className={`bg-[#F2F3F7] w-[80px] text-[#686868] text-[11px] h-[21px] py-[-2px] px-2 mr-2 `}> <span className='mr-1 cursor-pointer' >X</span><span>{maxValue}</span> </p>
                                     {
                                         filters && filters.map(filter => {
                                             return (
                                                 <div key={filter.id} >
-                                                    <p className={`bg-[#F2F3F7] mb-[3px] w-[80px] text-[#686868] text-[10px] h-[21px] py-[-2px] px-2 mr-2 `}> <span className='mr-1 cursor-pointer' onClick={() => handleCloseSeller(filter.id)}>X</span><span>{filter.value}</span> </p>
+                                                    <p className={`bg-[#F2F3F7] mb-[3px] w-[83px] text-[#686868] text-[11px] h-[21px] py-[-2px] px-1 mr-4 `}> <span className='mr-1 cursor-pointer' onClick={() => handleCloseSeller(filter.id)}>X</span><span>{filter.value}</span> </p>
                                                 </div>
 
                                             )
@@ -306,7 +307,7 @@ const SearchDesktop = () => {
                                         location && location.map(loc => {
                                             return (
                                                 <div key={loc.id} >
-                                                    <p className={`bg-[#F2F3F7] mb-[3px] w-[80px] text-[#686868] text-[10px] h-[21px] py-[-2px] px-2 mr-2 `}> <span className='mr-1 cursor-pointer' onClick={() => handleCloseLocation(loc.id)}>X</span><span>{loc.place}</span> </p>
+                                                    <p className={`bg-[#F2F3F7] mb-[3px] w-[90px] text-[#686868] text-[11px] h-[21px] py-[-2px] px-2 mr-2 `}> <span className='mr-1 cursor-pointer' onClick={() => handleCloseLocation(loc.id)}>X</span><span>{loc.place}</span> </p>
                                                 </div>
 
                                             )
@@ -511,13 +512,13 @@ const SearchDesktop = () => {
             </div>
 
             {/*--------------------- right div----------------- */}
-            <div className={`${rightWidth}  z-10 lg:ml-[295px] ml-[-8px]`}>
+            <div className={`${rightWidth}  z-10 lg:ml-[295px] md:ml-[100px] ml-[-8px]`}>
                 <div className={`flex justify-between px-[24px] `}>
                     <p className='text-[16px] lg:mt-[24px] mt-[19px] md:mt-[24px]'>Home / <span className='text-[#287DF3]'>Search Results</span></p>
 
-                    <div className='flex'><p className='font-semibold  lg:mt-[34px]  md:mt-[34px]  mt-[20px] '>Sort By:</p>
-                        <select className='text-[12px] w-[110px] text-[#686868] px-[11px] font-semibold border lg:mt-[24px] md:mt-[24px] mt-[16px]  ' name="" id="">
-                            <option selected className='px-[11px] py-[-4px]' value="">Best Match</option>
+                    <div className='flex'><p className='font-semibold  lg:mt-[28px]  md:mt-[34px]  mt-[20px] '>Sort By:</p>
+                        <select className='text-[16px] w-[130px] text-[#686868]   px-[11px] font-semibold border lg:mt-[24px] md:mt-[24px] mt-[16px]  ' name="" id="">
+                            <option selected className='px-[11px] py-[4px]  ' value="">Best Match</option>
                             <option value="">Price High to low</option>
                             <option value="">Price Low to high</option>
                         </select>
@@ -532,8 +533,11 @@ const SearchDesktop = () => {
                             return (
                                 <div key={product.id}>
 
-                                    <div className="card w-[180px]  lg:w-[262px] md:w-[262px] lg:h-[440px] md:h-[440px] h-[390px] bg-base-100 shadow-xl">
-                                        <Image className="lg:mx-auto" src={product.img} width={180} height={126} alt="Shoes" />
+                                    <div className="card w-[180px]   lg:w-[250px] md:w-[250px] lg:h-[430px] md:h-[430px] h-[390px] bg-base-100 shadow-xl">
+                                        <div className=''>
+                                            <Image className="lg:mx-auto" src={product.img} width={180} height={126} alt="Shoes" />
+
+                                        </div>
 
                                         <div className="card-body px-[16px] inline">
                                             <h2 className="card-title text-[#FB641B] font-bold text-[20px] inline-block mr-[4px] mb-[10px] ">
@@ -561,8 +565,8 @@ const SearchDesktop = () => {
                                                     height="24"
                                                     alt="logo image"
                                                 />
-                                                <div className=" lg:mt-[38px] md:mt-[38px] mt-[16px] mb-[16px] lg:h-[38px] md:h-[38px]  ml-[5px]">
-                                                    <button className="btn bg-[#FB641B] lg:w-[186px] md:w-[186px] w-[140px] lg:mx-[20px] md:mx-[20px]  ">
+                                                <div className=" lg:mt-[38px] md:mt-[38px] mt-[16px] mb-[12px] lg:h-[38px] md:h-[38px]  ml-[5px]">
+                                                    <button className="btn bg-[#FB641B] lg:w-[186px] md:w-[186px] w-[140px] lg:mx-[9px] md:mx-[9px]  ">
                                                         <span className="text-white lg:text-[16px] md:text-[16px] text-[10px]  mr-[4px]">Add to Cart</span>
                                                         <FaShoppingCart className="text-white h-[20px] w-[17px]"></FaShoppingCart>
                                                     </button>
@@ -576,7 +580,7 @@ const SearchDesktop = () => {
                     }
                 </div>
                 <div className='flex justify-center'>
-                    <button className='btn border-[#FB641B] text-[#FB641B] text-[24px] font-semibold  w-[235px] mt-[58px] rounded-none'>Load More</button>
+                    <button className='btn border-[#FB641B] text-[#FB641B] text-[20px] font-semibold  w-[235px] mt-[58px] rounded-none'>Load More</button>
                 </div>
             </div>
         </div>
