@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }) {
         <SideButtons />
         <MobileNavBar />
         <Navication />
-        <div className="mr-6">
+        <div>
           <Component {...pageProps} />
         </div>
         <div className='hidden lg:block'>

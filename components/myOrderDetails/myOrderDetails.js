@@ -30,7 +30,7 @@ const MyOrderDetails = () => {
   };
 
   return (
-    <div className="w-full md:pl-5">
+    <div className="w-full md:pl-5 md:mx-0 mx-3">
       <h2 className="text-[24px] font-[500] text-[#FB641B] mb-4">
         Order Details
       </h2>
@@ -212,17 +212,17 @@ const MyOrderDetails = () => {
           <div className="p-4 shadow-lg rounded-lg lg:mt-0 mt-4">
             <div>
               <h1 className="text-lg font-[500] mb-1">Total Summery</h1>
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center text-[#686868]">
                 <p>Subtotal</p>
                 <p>Tk {data.subtotal}</p>
               </div>
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center text-[#686868]">
                 <p>Delivery Fee</p>
                 <p>Tk {data.deliveryFee}</p>
               </div>
             </div>
             <hr className="my-1 border-t-2" />
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center text-[#686868]">
               <p>Total</p>
               <p>Tk {data.total}</p>
             </div>

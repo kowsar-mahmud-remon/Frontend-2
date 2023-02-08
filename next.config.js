@@ -10,6 +10,7 @@ const nextConfig = {
       "www.transparentpng.com",
       "freepngimg.com",
       "banglar-big-store.s3.ap-northeast-1.amazonaws.com"
+      "freepngimg.com"
     ],
   },
 };

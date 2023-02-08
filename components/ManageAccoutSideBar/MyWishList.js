@@ -134,8 +134,9 @@ const MyWishList = () => {
                                         </div>
                                         <p className="text-[#686868] text-[14px] font-[400]">24 Ratings & 5 Reviews</p>
                                     </div>
-                                    <div className="mt-[3px]">
-                                        <p className="text-[#686868] text-[13px]">Seller:</p>
+                                    <div className="mt-[4px] flex gap-[8px]">
+                                        <p className="text-[#686868] text-[13px]">Seller:  </p>
+                                        <Image src='/seller.png' width={50} height={10} alt=""></Image>
                                     </div>
                                 </div>
                             </div>
