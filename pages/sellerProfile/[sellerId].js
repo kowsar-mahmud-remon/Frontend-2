@@ -10,7 +10,7 @@ import BackButton from "../../components/SellerProfile/BackButton";
 const seller = () => {
   return (
     <>
-      <div className="lg:w-[1224px] mobile:w-[424px]  mx-auto shadow-2xl lg:mt-[116px] mobile:mt-[54px] rounded-xl ">
+      <div className="lg:w-[1224px] mobile:w-[424px]  lg:mx-auto mobile:mx-auto shadow-2xl lg:mt-[116px] mobile:mt-[54px] rounded-xl ">
         {/* for small device */}
         <BackButton></BackButton>
         {/* banner and logo */}
