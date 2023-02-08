@@ -17,12 +17,12 @@ const profileLinksObj = [
             {
                 title: 'My Profile',
                 href: "myProfile",
-                element: <MyOrder/>
+                element: <Profile/>
             },
             {
                 title: 'Address Book',
                 href: "addressBook",
-                element: <Profile/>
+                element: <MyOrder/>
             },
             {
                 title: 'My Payment Options',
