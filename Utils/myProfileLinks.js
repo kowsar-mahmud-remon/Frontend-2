@@ -10,77 +10,76 @@ import MyWishList from "../components/ManageAccoutSideBar/MyWishList";
 import FollowedStores from "../components/ManageAccoutSideBar/FollowedStores";
 
 const profileLinksObj = [
-    {
-        title: 'Manage My Account',
-        href: "manageAccount",
-        element:<Profile/>,
-        links: [
-            {
-                title: 'My Profile',
-                href: "myProfile",
-                element: <Profile/>
-            },
-            {
-                title: 'Address Book',
-                href: "addressBook",
-                element: <MyOrder/>
-            },
-            {
-                title: 'My Payment Options',
-                href: "myPaymentOptions",
-                element: <Profile/>
-            },
-            {
-                title: 'Vouchers',
-                href: "vouchers",
-                element: <Profile/>
-            },
-        ]
-    },
-    {
-        title: 'My Orders',
-        href: "myOrders",
-        element:<MyOrder></MyOrder>,
-        links: [
-            {
-                title: 'My Returns',
-                href: "myReturns",
-                element: <Profile/>
-            },
-            {
-                title: 'My Cancellations',
-                href: "myCancellations",
-                element: <Profile/>
-            },
-            {
-                title: 'My Payment Options',
-                href: "myPaymentOptions",
-                element: <Profile/>
-            }
-          
-        ]
-    },
+  {
+    title: "Manage My Account",
+    href: "manageAccount",
+    element: <ManageAccount />,
+    links: [
+      {
+        title: "My Profile",
+        href: "myProfile",
+        element: <Profile />,
+      },
+      {
+        title: "Address Book",
+        href: "addressBook",
+        element: <MyOrder />,
+      },
+      {
+        title: "My Payment Options",
+        href: "myPaymentOptions",
+        element: <Profile />,
+      },
+      {
+        title: "Vouchers",
+        href: "vouchers",
+        element: <Profile />,
+      },
+    ],
+  },
+  {
+    title: "My Orders",
+    href: "myOrders",
+    element: <MyOrder></MyOrder>,
+    links: [
+      {
+        title: "My Returns",
+        href: "myReturns",
+        element: <Profile />,
+      },
+      {
+        title: "My Cancellations",
+        href: "myCancellations",
+        element: <Profile />,
+      },
+      {
+        title: "My Payment Options",
+        href: "myPaymentOptions",
+        element: <Profile />,
+      },
+    ],
+  },
 
-    {
-        title: 'My Reviews',
-        href: "myReviews",
-        element: <MyReviews/>
-    },
-    {
-        title: 'My Wishlists',
-        href: "myWishlists",
-        element: <MyWishList />
-    },
-    {
-        title: 'Followed stores',
-        href: "followedStores",
-        element: <FollowedStores />
-    },
-    {
-        title: 'Sell On Banglar Big Store',
-        href: "sell",
-        element: <Profile />
-    }
-]
+  {
+    title: "My Reviews",
+    href: "myReviews",
+    element: <MyReviews />,
+  },
+  {
+    title: "My Wishlists",
+    href: "myWishlists",
+    element: <MyWishList />,
+  },
+  {
+    title: "Followed stores",
+    href: "followedStores",
+    element: <FollowedStores />,
+  },
+  {
+    title: "Sell On Banglar Big Store",
+    href: "sell",
+    element: <Profile />,
+  },
+];
 
 export default profileLinksObj
