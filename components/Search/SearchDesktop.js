@@ -9,6 +9,7 @@ import cate from '../../assets/images/Group 2399.png'
 import sellerVerify from '../../assets/images/sellerProfile/product/verified.png'
 import { useState } from 'react';
 
+
 const SearchDesktop = () => {
 
     const [show, setShow] = useState(true)
@@ -19,7 +20,7 @@ const SearchDesktop = () => {
     const [filters, setFilters] = useState([])
     const [maxValue, setMaxValue] = useState(10000)
     const [location, setLocation] = useState([])
-    const [chk, setChk] = useState()
+
 
     const handleRange = (val) => {
         console.log(val)
@@ -30,6 +31,7 @@ const SearchDesktop = () => {
     const handleCloseSeller = (id) => {
         const rest = filters && filters.filter(fil => fil.id !== id)
         setFilters(rest)
+        // set_is_checked(false)
     }
     const handleCloseLocation = (id) => {
         const rest = location && location.filter(fil => fil.id !== id)
@@ -46,9 +48,12 @@ const SearchDesktop = () => {
             if (check === true) {
 
                 setFilters([...filters, val])
+                // set_is_checked(true)
+
             }
             else if (check === false) {
                 handleCloseSeller(val.id)
+
             }
         }
     }
@@ -163,6 +168,12 @@ const SearchDesktop = () => {
         'Salt & Sugar (116)',
         'Salt & Sugar (116)',
     ]
+    const options = [
+        { value: 'chocolate', label: 'Chocolate' },
+        { value: 'strawberry', label: 'Strawberry' },
+        { value: 'vanilla', label: 'Vanilla' }
+    ]
+
     const handleRes = (view) => {
         if (view === 1) {
 
@@ -175,27 +186,26 @@ const SearchDesktop = () => {
     }
     const handleClose = (view) => {
         if (view === 1) {
-
             setBgHide('left-[-395px]')
             setLeftWidth('w-[310px]')
         }
-        else {
 
-
-        }
     }
 
+
+
+
     return (
-        <div className=" flex lg:px-[94px] relative md:px-[94px] mt-2">
-            <div className={`flex z-20  absolute  lg:left-[93px]  lg:mr-[229px] ${bghide} `}>
-                <div onClick={() => handleClose(1)} className={` w-[107px]   h-[1148px] bg-black opacity-[0.4]  lg:hidden md:hidden`}>
+        <div className=" flex lg:px-[94px] relative  md:px-[94px]  mt-2">
+            <div className={`flex z-20  lg:absolute fixed h-[100vh] overflow-auto lg:h-auto  lg:left-[93px]  lg:mr-[229px] ${bghide} mt-[-8px]`}>
+                <div onClick={() => handleClose(1)} className={` w-[107px]    h-[1200px] bg-black opacity-[0.4]  lg:hidden md:hidden`}>
 
                 </div>
 
-                <div className={`${leftWidth}   lg:block md:block   `}>
+                <div className={`${leftWidth} lg:block md:block   `}>
                     <div className='flex justify-between px-4'>
-                        <div className='max-[600px]:hidden  mb-[16px] border  border-[#FB641B] py-[11px] px-[23px] rounded-full flex w-[166px]'>
-                            <Image className='h-[20px] w-[20px] mt-[3px]'
+                        <div className='max-[600px]:hidden lg:mt-[10px]   mb-[16px] border  border-[#FB641B] py-[11px] px-[23px] rounded-full flex w-[166px]'>
+                            <Image className='h-[20px] w-[20px] lg:mt-[3px]'
                                 src={cate}
                                 alt='img'
                             />
@@ -207,7 +217,7 @@ const SearchDesktop = () => {
                     <div className='shadow-xl  bg-white  mr-[21px]'>
                         {/* ---------------------filters start---------------- */}
                         <div className='px-4 lg:hidden md:hidden'>
-                            <div className='flex justify-between mb-[16px]'>
+                            <div className='flex justify-between mb-[16px] '>
                                 <p className='font-semibold mb-[16px] text-[#001E00] '>Filters</p>
                                 <p className='text-[#287DF3] cursor-pointer' onClick={handleclearAll}>Clear all</p>
                             </div>
@@ -247,7 +257,7 @@ const SearchDesktop = () => {
                         <div className='px-4'>
                             <ul>
                                 <li className='flex justify-between'><p className='font-semibold text-[18px] mb-[16px] text-[#001E00] '>All Collecction</p>
-                                    <Image className='h-2 mt-2'
+                                    <Image className='h-2 mt-2 '
                                         src={v2}
                                         alt='img'
                                     />
@@ -273,7 +283,7 @@ const SearchDesktop = () => {
                                 }
 
                                 {
-                                    show ? <li className=' text-[14px] mb-[16px] text-[#287DF3] cursor-pointer' onClick={() => setShow(false)}>{vegProducts.length - 5} more...</li> : <li className='cursor-pointer text-[#287DF3] text-[14px] mb-[16px]' onClick={() => setShow(true)}>show less</li>
+                                    show ? <li className=' text-[14px] font-semibold mb-[16px] text-[#287DF3] cursor-pointer' onClick={() => setShow(false)}>{vegProducts.length - 5} more...</li> : <li className='cursor-pointer text-[#287DF3] font-semibold text-[14px] mb-[16px]' onClick={() => setShow(true)}>show less</li>
                                 }
 
 
@@ -291,13 +301,13 @@ const SearchDesktop = () => {
                                 <p className='text-[#287DF3] cursor-pointer' onClick={handleclearAll}>Clear all</p>
                             </div>
                             <div>
-                                <div id='filter' className=' grid grid-cols-3 mb-[16px] gap-1 '>
+                                <div id='filter' className=' grid grid-cols-3 mb-[16px] gap-[4px] '>
                                     <p className={`bg-[#F2F3F7] w-[80px] text-[#686868] text-[11px] h-[21px] py-[-2px] px-2 mr-2 `}> <span className='mr-1 cursor-pointer' >X</span><span>{maxValue}</span> </p>
                                     {
                                         filters && filters.map(filter => {
                                             return (
                                                 <div key={filter.id} >
-                                                    <p className={`bg-[#F2F3F7] mb-[3px] w-[83px] text-[#686868] text-[11px] h-[21px] py-[-2px] px-1 mr-4 `}> <span className='mr-1 cursor-pointer' onClick={() => handleCloseSeller(filter.id)}>X</span><span>{filter.value}</span> </p>
+                                                    <p className={`bg-[#F2F3F7] mb-[3px] w-[83px] text-[#686868] text-[11px] h-[21px] py-[-2px] px-1  `}> <span className='mr-1 cursor-pointer' onClick={() => handleCloseSeller(filter.id)}>X</span><span>{filter.value}</span> </p>
                                                 </div>
 
                                             )
@@ -428,7 +438,7 @@ const SearchDesktop = () => {
                                     <div className='border   rounded-md w-[98px] p-[8px] mb-2 flex'>
                                         <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" className='accent-[#026C51] ' onClick={(e) => handleLocation(e.target.checked, { id: 3, place: 'Barishal' })} />
                                         <label for="vehicle1" className='text-[14px] font-semibold text-[#001E00] ml-2 mt-[1px]'>Barishal </label>
-                                        <Image className='h-[7px] w-[7px] ml-[7px] mt-[6px]'
+                                        <Image className='h-[7px] w-[7px] ml-[7px] mt-[9px]'
                                             src={v3}
                                             alt='img'
                                         />
@@ -513,17 +523,25 @@ const SearchDesktop = () => {
 
             {/*--------------------- right div----------------- */}
             <div className={`${rightWidth}  z-10 lg:ml-[295px] md:ml-[100px] ml-[-8px]`}>
-                <div className={`flex justify-between px-[24px] `}>
-                    <p className='text-[16px] lg:mt-[24px] mt-[19px] md:mt-[24px]'>Home / <span className='text-[#287DF3]'>Search Results</span></p>
+                <div className={`flex justify-between ml-[24px] mb-[16px]`}>
+                    <p className='text-[16px] lg:mt-[24px] mt-[19px] md:mt-[24px] lg:block md:block hidden'>Home / <span className='text-[#287DF3]'>Search Results</span></p>
+                    <p className='max-[480px]:text-[10px] lg:mt-[24px] mt-[19px] lg:hidden md:hidden md:mt-[24px] text-[#287DF3] max-[480px]:mr-[63px] '> Search Results</p>
 
-                    <div className='flex'><p className='font-semibold  lg:mt-[28px]  md:mt-[34px]  mt-[20px] '>Sort By:</p>
-                        <select className='text-[16px] w-[130px] text-[#686868]   px-[11px] font-semibold border lg:mt-[24px] md:mt-[24px] mt-[16px]  ' name="" id="">
+                    <div className='flex '>
+                        <p className='font-semibold max-[480px]:text-[10px] lg:mt-[28px]  md:mt-[34px]  mt-[20px] '>Sort By:</p>
+                        <select className='lg:text-[16px] mr-2 max-[480px]:w-[110px] max-[480px]:h-[24px] max-[480px]:text-[10px] lg:w-[161px] lg:h-[40px] rounded-sm  text-[#686868]   px-[11px] font-semibold border border-[#686868] lg:mt-[20px] md:mt-[24px] mt-[16px]' id="">
                             <option selected className='px-[11px] py-[4px]  ' value="">Best Match</option>
-                            <option value="">Price High to low</option>
-                            <option value="">Price Low to high</option>
+                            <option className=' ' value="">Price High to low</option>
+                            <option className=' ' value="">Price Low to high</option>
                         </select>
+                        {/* <Select className='lg:text-[16px] mr-2 max-[480px]:text-[10px] w-[130px] max-[480px]:w-[98px] text-[#686868]   px-[11px] font-semibold  lg:mt-[24px] md:mt-[24px] mt-[16px]  '
+                            defaultValue={selectedOption}
+                            onChange={setSelectedOption}
+                            options={options}
+                        /> */}
+                        <p className='font-bold lg:hidden md:hidden mt-[19px] mr-2' onClick={() => handleRes(1)}><FiMenu /></p>
                     </div>
-                    <p className='font-bold lg:hidden md:hidden mt-[19px] mr-2' onClick={() => handleRes(1)}><FiMenu /></p>
+
                 </div>
                 <div className='flex flex-wrap lg:gap-[22px] md:gap-[22px] gap-[16px] ml-[24px] '>
 

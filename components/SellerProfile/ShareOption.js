@@ -11,32 +11,32 @@ import Link from "next/link";
 
 function ShareOption(props) {
   return (
-    <div className="flex lg:justify-around mobile:justify-evenly  lg:w-[1090px] mobile:w-[376px] mx-auto  lg:mt-[24px] text-[24px]">
-      <div className=" flex justify-center items-center  lg:w-[540px] mobile:w-[376px] mx-auto mt-4">
+    <div className="flex   w-full   lg:mt-[24px] text-[24px]">
+      <div className=" flex justify-center items-center w-full mx-auto mt-4">
         {/* follow 100k+ */}
-        <div className="bg-[#F2F3F7] lg:w-[160px] mobile:w-[151px] h-[48px] py-[10px] text-center rounded-xl lg:text-[18px] mobile:text-[16px] lg:mr-[16px] mobile:mr-[16px] mobile:font-semibold cursor-pointer">
+        <div className="bg-[#F2F3F7] px-[6px] py-[10px] text-center rounded-xl lg:text-[18px] mobile:text-[14px] lg:mr-[16px] mobile:mr-[16px] mobile:font-semibold cursor-pointer">
           <Link href="#">
           <FaWifi className="inline rotate-45  text-[#287DF3]"></FaWifi>
-          <span className="ml-3 fw-semibold mobile:text-[16px]">
+          <span className="ml-3 fw-semibold mobile:text-[14px]">
             Follow 100K+
           </span>
           </Link>
         </div>
 
         {/* share */}
-        <div className="bg-[#F2F3F7] w-[160px] h-[48px] p-[10px] text-center rounded-xl text-[18px] mobile:w-[97px] mobile:text-[16px] mobile:font-semibold cursor-pointer">
+        <div className="bg-[#F2F3F7]  px-[6px] py-[11px] text-center rounded-xl lg:text-[18px]  mobile:text-[14px] mobile:font-semibold cursor-pointer">
         <Link href="#">
         <FaShare className="inline text-[#287DF3]"></FaShare>
-          <span className="ml-3 fw-semibold mobile:text-[16px]">
+          <span className="ml-3 fw-semibold mobile:text-[14px]">
             Share
           </span>
           </Link>
         </div>
       </div>
-      <div className="mt-[16px]  lg:block">
+      <div className="mt-[16px] ">
         
         {/* The button to open modal */}
-<label htmlFor="my-modal" className="btn bg-transparent border-none"><Image
+<label htmlFor="my-modal" className="btn bg-transparent border-none "><Image
           className="inline "
           src={dot}
           alt="follow image"
@@ -44,12 +44,12 @@ function ShareOption(props) {
           height="15"
         /></label>
 
-{/* Put this part before </body> tag */}
+{/* modal for edit */}
 <input type="checkbox" id="my-modal" className="modal-toggle bg-trasparent border-none" />
 <div className="modal">
   <div className="modal-box relative">
     <label htmlFor="my-modal" className="btn btn-sm btn-circle absolute right-2 top-2 border-none bg-transparent">✕</label>
-    <ul className="list-none text-[24px] ">
+    <ul className="list-none lg:text-[24px] mobile:text-[14px]">
       <li className="flex mb-[15px]">
         <Image className="mr-[30px]" src={logo} width={48} height={48}alt="logo" />
         <span className="">Seller Profile</span>

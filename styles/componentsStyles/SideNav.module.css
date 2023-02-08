@@ -1,5 +1,5 @@
 .sideNav {
-  /* position: absolute; */
+  position: absolute;
   transition: transform 0.5s;
 }
 .sideNav ul,

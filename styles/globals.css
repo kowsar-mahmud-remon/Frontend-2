@@ -320,11 +320,25 @@ top: 453px; */
 
   width: 220px;
   height: 56px;
-  left: 988px;
-  top: 484px;
-  
+
+
   /* Button color */
-  
+
   border: 2px solid #FB641B;
 
+}
+
+.followStore {
+  width: 924px;
+  height: 145px;
+  left: 636px;
+  top: 303px;
+
+  /* White */
+
+  background: #FFFFFF;
+  /* Effect 16 */
+
+  box-shadow: 0px 6px 28px rgba(0, 0, 0, 0.16);
+  border-radius: 8px;
 }
