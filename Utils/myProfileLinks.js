@@ -7,12 +7,13 @@ import MyReviews from "../components/ManageAccoutSideBar/MyReviews";
 import Wishlist from "../pages/wishlist/myWishlist";
 import FollowedStore from "../pages/wishlist/followedStore";
 import MyWishList from "../components/ManageAccoutSideBar/MyWishList";
+import FollowedStores from "../components/ManageAccoutSideBar/FollowedStores";
 
 const profileLinksObj = [
     {
         title: 'Manage My Account',
         href: "manageAccount",
-        element:<ManageAccount/>,
+        element:<Profile/>,
         links: [
             {
                 title: 'My Profile',
@@ -55,12 +56,8 @@ const profileLinksObj = [
                 title: 'My Payment Options',
                 href: "myPaymentOptions",
                 element: <Profile/>
-            },
-            {
-                title: 'Vouchers',
-                href: "vouchers",
-                element: <Profile/>
-            },
+            }
+          
         ]
     },
 
@@ -77,7 +74,7 @@ const profileLinksObj = [
     {
         title: 'Followed stores',
         href: "followedStores",
-        element: <FollowedStore />
+        element: <FollowedStores />
     },
     {
         title: 'Sell On Banglar Big Store',
