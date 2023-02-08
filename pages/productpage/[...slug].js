@@ -111,6 +111,9 @@ const ProductPage = () => {
 
     const total = 15
 
+
+
+    
     return (
         <div>
 
