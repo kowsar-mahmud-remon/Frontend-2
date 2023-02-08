@@ -109,7 +109,7 @@ const WriteReview = () => {
                     </div>
                     <textarea className="resize-none  p-[12px] font-[400] text-[16px] text-[#686868] w-[275px] mt-[8px] h-[72px] bg-[#F2F2F2] rounded-[4px] outline-none" ></textarea>
 
-                    <div className="mt-[65px]">
+                    <div className="mt-[55px]">
                         <div className="flex gap-[26px] items-center">
                             <p className="font-[400] text-[16px] text-[#001E00]">Review as Abdul K.</p>
                             <div className="flex gap-[8px] items-center">
@@ -122,7 +122,7 @@ const WriteReview = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="mt-[30px]">
+                    <div className="mt-[20px] mb-[10px]">
                         <button className="bg-[#FB641B] mb-[32px] text-white w-[275px] h-[48px] rounded-[8px]">Submit</button>
                     </div>
                 </div>
