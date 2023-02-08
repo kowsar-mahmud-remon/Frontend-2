@@ -6,9 +6,9 @@ import { FaStar } from "react-icons/fa";
 function StoryCard({ story }) {
   const { video, price, pName, rating, sellerVerify, total } = story;
   return (
-    <div className="card lg:w-[342px] mobile:w-[122px]  bg-base-100 shadow-xl">
+    <div className="card w-full  bg-base-100 shadow-xl">
       <iframe
-        className="rounded-t-lg lg:w-[342px] lg:h-[461px] mobile:w-[122px] mobile:h-[163px]"
+        className="rounded-t-lg  lg:h-[461px] w-full mobile:h-[163px]"
         width="342"
         height="461"
         src={video}
@@ -16,12 +16,12 @@ function StoryCard({ story }) {
         allowfullscreen
       ></iframe>
       <div className="card-body mobile:p-[6px] lg:p-[32px]">
-        <div className="flex justify-between">
-          <p className="text-[#FB641B] lg:text-[18px] mobile:text-[10px]">Tk{price}</p>
-          <Image src={sellerVerify} className="mobile:w-[60px] mobile:h-[12px] lg:w-[106px] lg:h-[20px]" width={106} height={20} />
+        <div className="flex  gap-3 items-center">
+          <p className="text-[#FB641B] lg:text-[18px] mobile:text-[8px] ">Tk{price}</p>
+          <Image src={sellerVerify} className=" h-full  overflow-auto" width={106} height={20} />
         </div>
 
-        <p className="lg:text-[16px] mobile:text-[7px] w-[176px]">{pName}</p>
+        <p className="lg:text-[16px] mobile:text-[7px]   overflow-hidden">{pName}</p>
         <div className="flex justify-start items-center ">
           <div className="flex bg-[#026C51] text-white  rounded p-[2px] lg:text-[12px] mobile:text-[5px] mr-[8px]">
             <span>{rating}</span>

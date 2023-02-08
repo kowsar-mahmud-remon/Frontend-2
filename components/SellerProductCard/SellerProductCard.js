@@ -9,11 +9,11 @@ const SellerProductCard = ({ product, img1 }) => {
     product;
 
   return (
-    <div>
-      <div className="card lg:w-[222px] lg:h-[440px] mobile:w-[180px] mobile:h-[400px] bg-base-100 shadow-xl">
-        <Image className="lg:w-[220px] lg:h-[154px] mobile:w-[180px] mobile:h-[126px]" src={img} width="220" height="154" alt="Shoes" />
+    <div >
+      <div className="card  h-full bg-base-100 shadow-xl">
+        <Image className="w-full" src={img} width="220" height="154" alt="Shoes" />
 
-        <div className="card-body px-[16px] inline">
+        <div className="card-body  px-[16px] inline">
           <h2 className="card-title text-[#FB641B] font-bold lg:text-[20px] mobile:text-[18px] inline-block mr-[4px] mb-[10px]">
             Tk {price}{" "}
           </h2>
@@ -33,16 +33,16 @@ const SellerProductCard = ({ product, img1 }) => {
           </div>
           <div className="mt-[14px]">
             <Image
-              className=""
+              className=" h-full  overflow-auto"
               src={sellerVerify}
               width="79"
               height="24"
               alt="logo image"
             />
-            <div className="mt-[38px] mb-[16px]">
-              <button className="btn bg-[#FB641B] lg:w-[186px] mobile:w-[140px] mobile:px-[4px] mobile:py-[9px]">
-                <span className="text-white mr-[4px] mobile:text-[13px]">Add to Cart</span>
-                <FaShoppingCart className="text-white lg:h-[20px] lg:w-[24px] mobile:h-[18px] mobile:w-[22px] "></FaShoppingCart>
+            <div className="mt-[38px] mb-[16px]  ">
+              <button className=" btn bg-[#FB641B] w-full mobile:px-[4px] mobile:py-[9px] text-white mr-[4px] mobile:text-[8px] lg:text-[16px]">
+                Add to Cart
+                <FaShoppingCart className="text-white lg:h-[20px] lg:w-[24px] mobile:h-[10px] mobile:w-[10px] inline"></FaShoppingCart>
               </button>
             </div>
           </div>
