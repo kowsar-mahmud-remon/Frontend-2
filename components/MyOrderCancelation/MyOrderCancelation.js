@@ -44,7 +44,7 @@ const MyOrderCancelation = () => {
   if (cancel === 'canceled') {
     return (
       // successfully canceled
-      <div>
+      <div className="md:mx-0 mx-3">
         <h2 className="text-[24px] font-[500] text-[#FB641B] mb-4">
           Order Cancellation
         </h2>
@@ -144,7 +144,7 @@ const MyOrderCancelation = () => {
 
   return (
     // cancellation page
-    <div className="w-full md:pl-5 mb-10">
+    <div className="w-full md:pl-5 mb-10 md:mx-0 mx-3">
       <h2 className="text-[24px] font-[500] text-[#FB641B] mb-4">
         Order Cancellation
       </h2>
@@ -249,15 +249,15 @@ const MyOrderCancelation = () => {
           <h2 className="text-[18px] font-[500] mb-2">
             Policy For Cancellation
           </h2>
-          <p className=" md:pl-6 mb-2">
+          <p className=" md:pl-9 mb-2 text-[#686868]">
             Policy For Cancellation Before Cancelling the Order, Kindly Read
             Thoroughly Our Following terms & Conditions:
           </p>
-          <p className=" md:pl-6 mb-2">
+          <p className=" md:pl-9 mb-2 text-[#686868]">
             Once you submit this form you agree to cancel the selected Reason.
             We will be unable to retrieve your order once it is cancelled.
           </p>
-          <p className=" md:pl-6 mb-2">
+          <p className=" md:pl-9 mb-2 text-[#686868]">
             Once you confirm your order cancellation, We will Process your
             refund within few minutes. I have read and accepted the Cancellation
             Policy of Banglar Big Bazar
@@ -269,7 +269,7 @@ const MyOrderCancelation = () => {
                 className="checkbox border-black"
                 required
               />
-              <span className="label-text ml-2">
+              <span className="ml-2 font-[500]">
                 I have read and accepted the Cancellation Policy of Banglar Big
                 Bazar
               </span>
@@ -281,7 +281,7 @@ const MyOrderCancelation = () => {
             <input
               type="submit"
               value="Confirm"
-              className="bg-[#FB641B] py-4 px-10 rounded-xl text-white font-bold cursor-pointer"
+              className="bg-[#FB641B] py-4 px-12 rounded-xl text-white font-bold cursor-pointer"
             />
           </div>
         </div>
