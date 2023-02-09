@@ -19,7 +19,7 @@ const MobileCategory = () => {
     return (
       <div>
         <section
-          className={`shawdow-black shadow-2xl delay-700 sideNavTransition`}
+          className={`shawdow-black shadow-2xl delay-700 sideNavTransition mb-12`}
           id="sidNav"
         >
           <h1 className="text-lg font-bold my-5 ml-4">Categories</h1>

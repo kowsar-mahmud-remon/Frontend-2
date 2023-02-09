@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FaStar, FaTrashAlt } from "react-icons/fa";
+import { FaHeart, FaRegHeart, FaStar, FaTrashAlt } from "react-icons/fa";
 
 
 const MyWishList = () => {
@@ -108,7 +108,7 @@ const MyWishList = () => {
                 </div>
             </div>
             <div>
-                <p className="text-[ #001E00] font-[500] text-[16px] mt-[32px]">Just for you</p>
+                <p className="text-[#001E00] font-bold text-[16px] mt-[32px]">Just for you</p>
             </div>
             <div className="grid grid-cols-4 gap-[20px]">
 
@@ -120,7 +120,9 @@ const MyWishList = () => {
                                     <label className="flex ">
                                         <Image src='/image 8.png' width={220} height={154} alt=""></Image>
                                         <div className="wishlistloveButton absolute ml-[181px] mt-[13px] w-[28px] h-[28px] rounded-full">
-                                            <Image src='/loveimage.png' className="ml-[5px]  pt-[6px]" width={17.33} height={16} alt=""></Image>
+                                        <FaHeart className="ml-[5px] text-[#F2F2F2] w-[17px] h-[16px] hover:fill-[#FB641B]  pt-[6px] "></FaHeart>
+                                            {/* <Image src='/loveimage.png' className="ml-[5px] hover:text-[#FB641B]  pt-[6px]" width={17.33} height={16} alt=""></Image> */}
+                                            
                                         </div>
                                     </label>
                                 </div>
@@ -134,8 +136,9 @@ const MyWishList = () => {
                                         </div>
                                         <p className="text-[#686868] text-[14px] font-[400]">24 Ratings & 5 Reviews</p>
                                     </div>
-                                    <div className="mt-[3px]">
-                                        <p className="text-[#686868] text-[13px]">Seller:</p>
+                                    <div className="mt-[4px] flex gap-[8px]">
+                                        <p className="text-[#686868] text-[13px]">Seller:  </p>
+                                        <Image src='/seller.png' width={50} height={10} alt=""></Image>
                                     </div>
                                 </div>
                             </div>

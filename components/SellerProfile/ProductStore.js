@@ -84,16 +84,16 @@ const stories = [
 
 function ProductStore(props) {
   return (
-    <div className="lg:w-[1090px] mobile:w-[424px] mx-auto mb-10 mt-[32px]">
+    <div className="w-full lg:px-[32px] mobile:px-[15px] mb-10 mt-[32px]">
       <h3 className="lg:text-[24px] mobile:text-[18px] mb-[24px] font-semibold block mobile:hidden">Products</h3>
       {/* for stories */}
       <div className="">
-        <div className="flex mb-[26px] mobile:w-[376px] lg:w-[1090px] mx-auto ">
-        <span className="text-[16px] font-bold lg:mr-[8px] mobile:mr-[4px]">Stories</span>
-        <hr className="text-[#686868] border-t-2 mt-3 lg:w-[930px] mobile:w-[248px] h-4 mx-auto" />{" "}
-        <span className="text-[14px] lg:ml-8px mobile:ml-[4px] cursor-pointer">See More</span>
+        <div className="flex justify-between mb-[26px] mx-auto ">
+        <span className="text-[14px] font-bold lg:mr-[8px] mobile:mr-[4px]">Stories</span>
+        <hr className="text-[#686868] border-t-2 mt-3  w-full h-4 mx-auto" />{" "}
+        <span className="text-[12px] lg:ml-8px mobile:ml-[4px] cursor-pointer whitespace-nowrap">See More</span>
         </div>
-        <div className="grid grid-cols-3 gap-3 lg:w-[1066px] mobile:w-[376px] mx-auto">
+        <div className="grid grid-cols-3 gap-2 w-full  mx-auto">
           {stories.map((story) => (
             <StoryCard key={story.id} story={story}></StoryCard>
           ))}
@@ -101,12 +101,12 @@ function ProductStore(props) {
       </div>
 
       {/* for grocery */}
-      <div className="flex mb-[26px] mt-[24px]  mobile:w-[376px] lg:w-[1090px] mx-auto ">
-        <span className="text-[16px] font-bold lg:mr-[8px] mobile:mr-[4px]">Grocery</span>
-        <hr className="text-[#686868] border-t-2 mt-3 lg:w-[930px] mobile:w-[248px] h-4 mx-auto" />{" "}
-        <span className="text-[14px] lg:ml-8px mobile:ml-[4px] cursor-pointer">See More</span>
+      <div className="flex mb-[26px] mt-[24px]  mx-auto ">
+      <span className="text-[14px] font-bold lg:mr-[8px] mobile:mr-[4px]">Grocery</span>
+        <hr className="text-[#686868] border-t-2 mt-3  w-full h-4 mx-auto" />{" "}
+        <span className="text-[12px] lg:ml-8px mobile:ml-[4px] cursor-pointer whitespace-nowrap">See More</span>
       </div>
-      <div className="grid lg:grid-cols-4 mobile:grid-cols-2  lg:w-[960px] mobile:w-[376px] mx-auto mb-10 gap-[20px]">
+      <div className="grid lg:grid-cols-4 mobile:grid-cols-2 w-full mx-auto mb-10 gap-[20px]">
         {products.map((product) => (
           <SellerProductCard
             key={product.id}
@@ -116,12 +116,12 @@ function ProductStore(props) {
       </div>
 
       {/* for kacha bazar */}
-      <div className="flex mb-[26px] mobile:w-[376px] lg:w-[1090px] mx-auto">
-      <span className="text-[16px] font-bold lg:mr-[8px] mobile:mr-[4px]">KachaBazar</span>
-        <hr className="text-[#686868] border-t-2 mt-3 lg:w-[930px] mobile:w-[220px] h-4 mx-auto" />{" "}
-        <span className="text-[14px] lg:ml-8px mobile:ml-[4px] cursor-pointer">See More</span>
+      <div className="flex mb-[26px]  mx-auto">
+      <span className="text-[14px] font-bold lg:mr-[8px] mobile:mr-[4px]">kachabazar</span>
+        <hr className="text-[#686868] border-t-2 mt-3  w-full h-4 mx-auto" />{" "}
+        <span className="text-[12px] lg:ml-8px mobile:ml-[4px] cursor-pointer whitespace-nowrap">See More</span>
       </div>
-      <div className="grid lg:grid-cols-4 mobile:grid-cols-2  lg:w-[960px] mobile:w-[376px] mx-auto pb-10 gap-[20px]">
+      <div className="grid lg:grid-cols-4 mobile:grid-cols-2 w-full mx-auto mb-10 gap-[20px]">
         {products.map((product) => (
           <SellerProductCard
             key={product.id}
