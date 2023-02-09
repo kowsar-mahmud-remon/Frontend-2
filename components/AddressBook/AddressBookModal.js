@@ -8,7 +8,7 @@ const AddressBookModal = () => {
     <div className="">
       <input type="checkbox" id="my-modal-3" className="modal-toggle" />
       <div className={`modal ${style.modalBackground}`}>
-        <div className="modal-box relative ">
+        <div className="modal-box relative w-11/12 max-w-[780px]">
           <div className="py-2 bg-[#FFFFFF] flex justify-between items-center">
             <p className=" text-[#001E00] font-medium text-base">
               Your Delivery Address
