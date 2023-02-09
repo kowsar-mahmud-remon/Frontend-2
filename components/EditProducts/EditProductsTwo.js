@@ -52,9 +52,9 @@ const EditProductsTwo = () => {
       }
     ];
   return (
-    <div className="">
+    <div className=" my-7">
 
-      <div className="lg:w-[1426px] mx-auto text-lg text-[#686868]">
+      <div className="lg:max:w-[1426px] mx-auto text-lg text-[#686868]">
         <div className=" flex items-center mb-2">
           <p className='mr-1'>Home</p>
           <FaAngleRight className='text-[#707070] text-xs mr-1'></FaAngleRight>
@@ -66,7 +66,7 @@ const EditProductsTwo = () => {
       </div>
 
 
-      <div className='lg:w-[1426px] mx-auto p-6 lg:flex mt-8'>
+      <div className='lg:max:w-[1426px] mx-auto p-6 lg:flex mt-8'>
 
         <div className="lg:mr-6 mb-5 lg:w-[96px] p-2  flex flex-wrap">
           <FaAngleUp className='mt-2 mb-4 w-full'></FaAngleUp>
@@ -101,11 +101,11 @@ const EditProductsTwo = () => {
           />
           <div className="lg:flex mt-5">
             <button
-              className="w-full flex justify-center items-center gap-3 lg:btn-md lg:w-[240px] h-[53px] bg-[#FF9F00] font-medium text-white rounded-md lg:mr-5 mb-2"
+              className="w-full flex justify-center items-center gap-3 lg:btn-md lg:max:w-[240px] h-[53px] bg-[#FF9F00] font-medium text-white rounded-md lg:mr-5 mb-2"
             >Add to Cart <FaShoppingCart className="text-white text-lg mb-1" />
             </button>
             <button
-              className="w-full flex justify-center items-center gap-3 lg:btn-md lg:w-[240px] h-[53px] bg-[#FB641B] font-medium text-white rounded-md mb-2"
+              className="w-full flex justify-center items-center gap-3 lg:btn-md lg:max:w-[240px] h-[53px] bg-[#FB641B] font-medium text-white rounded-md mb-2"
             >Buy Now <HiShoppingBag className="text-white text-lg mb-1" />
             </button>
           </div>
