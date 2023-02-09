@@ -10,6 +10,7 @@ import img4 from '../../assets/images/image 7.png';
 import img5 from '../../assets/images/image 88.png';
 import sellerImg from '../../assets/images/seller.png';
 import { FaStar } from 'react-icons/fa';
+import { AiFillHeart } from 'react-icons/ai';
 
 
 const AddToCartPage = () => {
@@ -104,14 +105,14 @@ const AddToCartPage = () => {
 
               <input type="checkbox" id="my-modal-4" className="modal-toggle" />
               <label htmlFor="my-modal-4" className="modal cursor-pointer bg-black bg-opacity-70">
-                <label className="modal-box relative w-full lg:max-w-[1225px]" htmlFor="">
+                <label className="modal-box lg:px-10 p-6 relative w-full lg:max-w-[1225px]" htmlFor="">
                   <label htmlFor="my-modal-4" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
 
 
 
-                  <div className=" lg:mt-[62px] mb-11">
-                    <div className="lg:flex justify-between border-b border-[#B7B7B7]">
-                      <div className="lg:w-[753px]">
+                  <div className=" lg:mt-[22px] mb-11">
+                    <div className="lg:flex justify-between lg:border-b border-[#B7B7B7]">
+                      <div className="lg:w-[715px] border-b lg:border-none  border-[#B7B7B7] pb-4 mb-4">
                         <div className="flex items-center">
                           <Image
                             className='mr-1 w-5 h-5'
@@ -135,16 +136,16 @@ const AddToCartPage = () => {
                               <p className=' text-base text-[#686868] mb-2'>No Brand, Color Family:Black</p>
                               <p className='text-base text-[#FB641B] mb-2'>Tk 60</p>
                               <div className=" text-[10px] text-[#707070] flex mb-2">
-                                <p className=' mr-[10px]'>Tk 80</p>
+                                <p className=' mr-[10px] line-through'>Tk 80</p>
                                 <p>(20% off)</p>
                               </div>
-                              <p className='text-base text-[#686868] w-full lg:text-end pr-10'>Qty: 1</p>
+                              <p className='text-base text-[#686868] w-full lg:text-end'>Qty: <span className='text-black'>1</span></p>
                             </div>
                           </div>
                         </div>
                       </div>
 
-                      <div className="p-4 w-[388px] justify-end mb-12">
+                      <div className="lg:p-4 lg:w-[388px] justify-end mb-12">
                         <h4 className='text-lg text-[#FB641B] mb-4'>My Shopping Cart</h4>
                         <div className="flex justify-between mb-4">
                           <p className='text-base text-[#686868]'>Subtotal (0 items)</p>
@@ -154,24 +155,29 @@ const AddToCartPage = () => {
                           <p className=' text-base text-[#001E00]'>Total:</p>
                           <p className='text-base text-[#FB641B]'>Tk 0</p>
                         </div>
-                        <button className='btn text-[#FB641B] border border-[#FB641B] btn-outline w-[166px] h-[48px] mr-6'>GO TO CART</button>
-                        <button className='btn bg-[#FB641B] text-white w-[166px] h-[48px]'>CHECK OUT</button>
+                        <div className="flex">
+                          <button className='btn text-[#FB641B] border border-[#FB641B] btn-outline w-1/2 lg:max-w-[166px] h-[48px] lg:mr-6 mr-3'>GO TO CART</button>
+                          <button className='btn bg-[#FB641B] text-white w-1/2 lg:max-w-[166px] h-[48px]'>CHECK OUT</button>
+                        </div>
                       </div>
 
                     </div>
 
-                    <div className=" lg:mx-[138px] grid gap-5 grid-cols-2 lg:grid-cols-4 mt-12">
+                    <div className=" lg:mx-[98px] grid gap-5 grid-cols-2 lg:grid-cols-4 mt-12">
                       {
                         productDetails?.map(details => <div key={details.id} className="card pb-10">
+                          <div className="flex lg:hidden justify-end mb-[-45px] mr-3 h-12 items-end">
+                            <AiFillHeart className=' text-base text-[#FB641B] z-10'></AiFillHeart>
+                          </div>
                           <figure>
                             <Image
-                              className='w-auto mb-3' src={details.img.src}
+                              className='p-2 w-[220px] h-[154px] mb-3' src={details.img.src}
                               alt="Picture of the author"
-                              width={180}
-                              height={130}
+                              width={220}
+                              height={154}
                             />
                           </figure>
-                          <div className="card-body mt-3 p-0">
+                          <div className="card-body p-0">
                             <p className=' text-xl text-[#FB641B] font-medium mb-[10px]'>Tk {details.price}</p>
                             <p className=' text-base font-medium mb-[10px]'>{details.title}</p>
                             <div className="flex mb-[10px]">

@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "/styles/componentsStyles/box-shaddow.module.css";
 
 const AddNewAddress = () => {
+  const [active, setActive] = useState(true);
+  const [active2, setActive2] = useState(true);
+
   return (
     <div className="text-[#686868]">
       <input type="checkbox" id="my-modal-2" className="modal-toggle" />
       <div className={`modal ${style.modalBackground}`}>
-        <div className="modal-box relative ">
+        <div className="modal-box relative w-11/12  max-w-[780px] ">
           <div className="py-2 bg-[#FFFFFF] flex justify-between items-center">
             <p className=" text-[#001E00] font-medium text-base">
               Add New Delivery Address
@@ -23,7 +26,10 @@ const AddNewAddress = () => {
           <div className="shadow-inner py-8 px-4 rounded">
             <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1">
               <div className="lg:mt-6 mt-4">
-                <label className="block text-sm font-medium text-[#001E00]" for="">
+                <label
+                  className="block text-sm font-medium text-[#001E00]"
+                  for=""
+                >
                   Full Name
                 </label>
                 <input
@@ -33,7 +39,10 @@ const AddNewAddress = () => {
                 />
               </div>
               <div className="lg:mt-6 mt-4">
-                <label className="block text-sm font-medium text-[#001E00] lg:ml-2 md:ml-2" for="">
+                <label
+                  className="block text-sm font-medium text-[#001E00] lg:ml-2 md:ml-2"
+                  for=""
+                >
                   Address
                 </label>
                 <input
@@ -43,7 +52,10 @@ const AddNewAddress = () => {
                 />
               </div>
               <div className="lg:mt-6 mt-4">
-                <label className="block text-sm font-medium text-[#001E00]" for="">
+                <label
+                  className="block text-sm font-medium text-[#001E00]"
+                  for=""
+                >
                   Mobile Number
                 </label>
                 <input
@@ -53,7 +65,10 @@ const AddNewAddress = () => {
                 />
               </div>
               <div className="lg:mt-6 mt-4">
-                <label className="block text-sm font-medium text-[#001E00] lg:ml-2 md:ml-2" for="">
+                <label
+                  className="block text-sm font-medium text-[#001E00] lg:ml-2 md:ml-2"
+                  for=""
+                >
                   Landmark
                 </label>
                 <input
@@ -64,7 +79,10 @@ const AddNewAddress = () => {
               </div>
 
               <div className="lg:mt-6 mt-4">
-                <label className="block text-sm font-medium text-[#001E00] " for="">
+                <label
+                  className="block text-sm font-medium text-[#001E00] "
+                  for=""
+                >
                   Province
                 </label>
                 <select className={`select ${style.inputborder} w-full`}>
@@ -78,17 +96,26 @@ const AddNewAddress = () => {
                 </select>
               </div>
               <div className="lg:mt-6 mt-4">
-                <label className="block text-sm font-medium text-[#001E00] lg:ml-2 md:ml-2" for="">
+                <label
+                  className="block text-sm font-medium text-[#001E00] lg:ml-2 md:ml-2"
+                  for=""
+                >
                   Select a label for effective delivery:
                 </label>
-                <div className="lg:ml-2 md:ml-2 flex justify-center items-center">
+                <div className="lg:ml-2 md:ml-2 flex justify-center items-center mt-1">
                   <button
-                    className={`mr-2  text-[#686868] py-2 px-6 ${style.boxbuttonshadow}`}
+                    onClick={() => setActive(!active)}
+                    className={`mr-2  text-[#686868] rounded py-2 px-6 ${
+                      style.boxbuttonshadow
+                    } ${active ? "border-[#026C51] border" : ""}`}
                   >
                     Home
                   </button>
                   <button
-                    className={`ml-2 py-2 text-[#686868] px-6 ${style.boxbuttonshadow}`}
+                  onClick={()=> setActive2(!active2)}
+                    className={`ml-2 py-2 text-[#686868] rounded px-6 ${
+                      style.boxbuttonshadow
+                    } ${active2 ? "border-[#026C51] border" : ""}`}
                   >
                     Office
                   </button>
@@ -96,7 +123,10 @@ const AddNewAddress = () => {
               </div>
 
               <div className="lg:mt-6 mt-4">
-                <label className="block text-sm font-medium text-[#001E00]" for="">
+                <label
+                  className="block text-sm font-medium text-[#001E00]"
+                  for=""
+                >
                   City
                 </label>
                 <select className={`select ${style.inputborder} w-full`}>
@@ -110,17 +140,24 @@ const AddNewAddress = () => {
                 </select>
               </div>
               <div className="lg:ml-2 md:ml-2 row-span-3 lg:mt-6 mt-4">
-                <label className="block text-sm font-medium text-[#001E00] " for="">
+                <label
+                  className="block text-sm font-medium text-[#001E00] "
+                  for=""
+                >
                   Default Address (Optional)
                 </label>
                 <div className="border p-3 rounded-lg">
                   <div className="flex">
                     <input type="checkbox" />
-                    <p className="text-sm  lg:ml-2 md:ml-2">Default shipping address</p>
+                    <p className="text-sm  lg:ml-2 md:ml-2">
+                      Default shipping address
+                    </p>
                   </div>
                   <div className="flex">
                     <input type="checkbox" />
-                    <p className="text-sm lg:ml-2 md:ml-2">Default billing address</p>
+                    <p className="text-sm lg:ml-2 md:ml-2">
+                      Default billing address
+                    </p>
                   </div>
                   <p className="mt-4">
                     Your existing default address setting will be replaced if
@@ -130,7 +167,10 @@ const AddNewAddress = () => {
               </div>
 
               <div className="lg:mt-6 mt-4">
-                <label className="block text-sm font-medium text-[#001E00]" for="">
+                <label
+                  className="block text-sm font-medium text-[#001E00]"
+                  for=""
+                >
                   Area
                 </label>
                 <select className={`select ${style.inputborder} w-full`}>

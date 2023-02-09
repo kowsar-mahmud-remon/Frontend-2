@@ -8,7 +8,6 @@ const ManageList = ({
   setItem,
   products,
 }) => {
-  console.log("prod", products);
   const handleMenu = (menu) => {
     setActive(menu);
     if (menu.text == "All") {

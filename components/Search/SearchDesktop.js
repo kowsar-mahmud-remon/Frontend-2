@@ -8,7 +8,7 @@ import v3 from '../../assets/images/Vector (3).png'
 import cate from '../../assets/images/Group 2399.png'
 import sellerVerify from '../../assets/images/sellerProfile/product/verified.png'
 import { useState } from 'react';
-import Select from 'react-select'
+
 
 const SearchDesktop = () => {
 
@@ -197,7 +197,7 @@ const SearchDesktop = () => {
 
     return (
         <div className=" flex lg:px-[94px] relative  md:px-[94px]  mt-2">
-            <div className={`flex z-20  lg:absolute fixed   lg:left-[93px]  lg:mr-[229px] ${bghide} mt-[-8px]`}>
+            <div className={`flex z-20  lg:absolute fixed h-[100vh] overflow-auto lg:h-auto  lg:left-[93px]  lg:mr-[229px] ${bghide} mt-[-8px]`}>
                 <div onClick={() => handleClose(1)} className={` w-[107px]    h-[1200px] bg-black opacity-[0.4]  lg:hidden md:hidden`}>
 
                 </div>

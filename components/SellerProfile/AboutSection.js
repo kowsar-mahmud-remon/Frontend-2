@@ -8,8 +8,8 @@ import user from "../../assets/images/sellerProfile/sellerImg.png";
 
 function AboutSection(props) {
   return (
-    <div className="lg:w-[1090px] mobile:w-[424px]  lg:px-[0] mobile:mt-[24px] mobile:px-[24px] mobile:mx-auto">
-      <div className="lg:text-[24px] mobile:text-[16px]">
+    <div className="w-full px-[32px]  mobile:mt-[24px]  ">
+      <div className="lg:text-[24px] mobile:text-[12px]">
         <h3 className="font-semibold mb-[16px] mobile:text-[18px] lg:text-[24px]">About</h3>
         <p className="mb-[24px]">
           <Image
@@ -25,7 +25,7 @@ function AboutSection(props) {
           <FaHome className="text-[#287DF3] inline mr-3 text-[20px] w-[26px] h-[24px]"></FaHome>
           <span className="ml-[12px]">Lives in Mirpur2, Dhaka.</span>
         </p>
-        <p>
+        <p className="">
           <FaThumbsUp className="text-[#287DF3] inline mr-3  w-[26px] h-[24px]"></FaThumbsUp>
           <span className="mr-2 ml-[12px] font-bold">Likes</span>{" "}
           <span>Johir, Abdullah and Sonjoy</span>

@@ -19,7 +19,7 @@ import products from "./faketabledata.json";
 
 const Manageproduct = () => {
   const [active, setActive] = useState({ text: "All", href: "" });
-  const [item, setItem] = useState(products)
+  const [item, setItem] = useState(products);
   const router = useRouter;
   const { asPath } = router;
   const {
@@ -433,6 +433,7 @@ const Manageproduct = () => {
                           <ManageProductTable
                             key={product.id}
                             product={product}
+                            item={item}
                           ></ManageProductTable>
                         );
                       })}
