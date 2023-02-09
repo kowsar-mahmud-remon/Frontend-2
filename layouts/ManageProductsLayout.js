@@ -7,24 +7,23 @@ import ManageProductsSideNav from '../components/manageproductsSideNav/managepro
 const ManageProductsLayout = ({ children, slug }) => {
 
   return (
-    <div className='flex'
+    <div className='flex justify-center'
     // className='flex my-8 justify-center mx-5 gap-[40px] xl:mx-4'
     >
 
       <div
-      // className='hidden lg:block'
+        className='hidden lg:block'
       >
 
         <ManageProductsSideNav />
 
       </div>
 
-      <div className='lg:hidden '>
+      {/* <div className='lg:hidden '>
         {
-          !slug?.length > 0
-          // && <ProfileResponsive></ProfileResponsive>
+          !slug?.length > 0 && <ProfileResponsive></ProfileResponsive>
         }
-      </div>
+      </div> */}
 
       <div>
 
