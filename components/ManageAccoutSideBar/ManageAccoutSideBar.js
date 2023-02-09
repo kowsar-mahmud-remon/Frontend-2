@@ -13,7 +13,7 @@ const ManageAccoutSideBar = () => {
     const asPath = `/profile/${router.query.slug?.[0]}`;
 
     return asPath === `/profile/${profile?.href}`
-      ? "text-[#FB641B] font-bold mt-[16px] text-[24px]"
+      ? " text-[#FB641B] font-bold mt-[16px] text-[24px]"
       : " text-black font-bold mt-[16px] text-[24px]";
   };
 
@@ -49,7 +49,7 @@ const ManageAccoutSideBar = () => {
                         className={
                           router.asPath ===
                           `/profile/${profile?.href}/${p?.href}`
-                            ? "text-[#FB641B]  mt-[16px] text-[16px]"
+                            ? "text-[#287DF3]  mt-[16px] text-[16px]"
                             : " text-[#686868]  mt-[8px]  text-[16px]"
                         }
                       >
