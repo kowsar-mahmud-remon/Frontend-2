@@ -37,7 +37,8 @@ const ManageProductsSideNav = () => {
           name: "Add Product",
         },
         {
-          name: "New Media Center",
+          name: "Manage Products",
+          href: "manageproducts"
         },
         {
           name: "Fullfillment",

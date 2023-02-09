@@ -22,7 +22,7 @@ const ManageProduct = () => {
   return (
     <section className="bg-[#FFFFFF] py-10">
       <div className="px-10 mx-auto">
-        <div className="Lg:w-9/12 md:w-9/12 w-full">
+        <div className=" w-full">
           <div>
             <div className="text-sm breadcrumbs">
               <ul>
@@ -102,7 +102,7 @@ const ManageProduct = () => {
               <div className="mt-4">
                 <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
                   <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                    <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:text-gray-400">
                       <tr>
                         <th scope="col" className="px-6 py-3">
                           Product
