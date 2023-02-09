@@ -1,5 +1,6 @@
 import EditProducts from "../components/EditProducts/EditProducts";
 import EditProductsTwo from "../components/EditProducts/EditProductsTwo";
+import ManageProduct from "../components/ManageProduct/ManageProduct";
 
 export const manageProductsArray = [
   {
@@ -10,6 +11,11 @@ export const manageProductsArray = [
     title: "EditProductsTwo",
     href: "editProductsTwo",
     element: <EditProductsTwo />
-  }
+  }, {
+    title: "ManageProducts",
+    href: "manageproducts",
+    element: <ManageProduct></ManageProduct>
+  },
+
 ];
 
