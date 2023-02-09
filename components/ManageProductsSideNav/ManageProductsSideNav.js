@@ -4,7 +4,7 @@ import Image from "next/image";
 import DataTable from "react-data-table-component";
 // import Managelist from "./Managelist";
 import Link from "next/link";
-import styles from "../../styles/componentsStyles/SideNav.module.css";
+import styles from "../../styles/manageProductSideNav.module.css";
 import { MdArrowBackIos } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -19,7 +19,7 @@ import { useState } from 'react';
 const ManageProductsSideNav = () => {
 
   const [active, setActive] = useState({ text: "All", href: "" });
-  const router = useRouter;
+  const router = useRouter();
   const { asPath } = router;
   const {
     category: { activeBtn, categoryName, isActiveCategory },
@@ -30,25 +30,29 @@ const ManageProductsSideNav = () => {
     {
       id: 1,
       name: "Products",
+      href: "editProductsTwo",
       img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
       subcata: [
         {
           name: "Add Product",
         },
         {
-          name: "New Media Center",
+          name: "Manage Products",
+          href: "manageproducts"
         },
         {
           name: "Fullfillment",
         },
         {
           name: "Edit Product",
+          href: "editProduct"
         },
       ],
     },
     {
       id: 2,
       name: "Promotions",
+      href: "editProductsTwo",
       img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
       subcata: [
         {
@@ -62,12 +66,14 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Edit Product",
+          href: "editProduct"
         },
       ],
     },
     {
       id: 3,
       name: "Orders & Reviews",
+      href: "editProductsTwo",
       img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
       subcata: [
         {
@@ -81,12 +87,14 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Edit Product",
+          href: "editProduct"
         },
       ],
     },
     {
       id: 4,
       name: "Store Decoration",
+      href: "editProductsTwo",
       img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
       subcata: [
         {
@@ -100,12 +108,14 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Edit Product",
+          href: "editProduct"
         },
       ],
     },
     {
       id: 5,
       name: "Assortment Growth",
+      href: "editProductsTwo",
       img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
       subcata: [
         {
@@ -119,12 +129,14 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Edit Product",
+          href: "editProduct"
         },
       ],
     },
     {
       id: 6,
       name: "Account Health",
+      href: "editProductsTwo",
       img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
       subcata: [
         {
@@ -138,12 +150,14 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Edit Product",
+          href: "editProduct"
         },
       ],
     },
     {
       id: 7,
       name: "Bussiness Adviser",
+      href: "editProductsTwo",
       img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
       subcata: [
         {
@@ -157,12 +171,14 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Edit Product",
+          href: "editProduct"
         },
       ],
     },
     {
       id: 8,
       name: "Finnace",
+      href: "editProductsTwo",
       img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
       subcata: [
         {
@@ -176,12 +192,14 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Edit Product",
+          href: "editProduct"
         },
       ],
     },
     {
       id: 9,
       name: "Seller Guidlines",
+      href: "editProductsTwo",
       img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
       subcata: [
         {
@@ -195,12 +213,14 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Edit Product",
+          href: "editProduct"
         },
       ],
     },
     {
       id: 10,
       name: "Seller Support",
+      href: "editProductsTwo",
       img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
       subcata: [
         {
@@ -214,12 +234,14 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Edit Product",
+          href: "editProduct"
         },
       ],
     },
     {
       id: 11,
       name: "Account Setting",
+      href: "editProductsTwo",
       img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
       subcata: [
         {
@@ -233,6 +255,7 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Edit Product",
+          href: "editProduct"
         },
       ],
     },
@@ -240,12 +263,12 @@ const ManageProductsSideNav = () => {
 
 
   return (
-    <section className="bg-[#FFFFFF] py-10">
-      <div className="px-10 mx-auto flex">
+    <section className="bg-[#FFFFFF] py-6">
+      <div className="px-6 mx-auto flex">
 
-        <div className="lg:w-3/12 md:w-3/12 w-0">
+        <div className="">
           <section
-            className={`${styles.sideNav} w-[285px] ${isActiveCategory ? "left-[-400px]" : ""
+            className={`${styles.sideNav} w-[266px] ${isActiveCategory ? "left-[-400px]" : ""
               } p-2 bg-[#ffffff] shawdow-black shadow-2xl delay-700 sideNavTransition`}
             id="sidNav"
           >
@@ -268,7 +291,7 @@ const ManageProductsSideNav = () => {
                         : ""
                     }
                   >
-                    <Link href="">
+                    <Link href={c?.href}>
                       <Image
                         loader={() => c.img}
                         src={c.img}
@@ -290,7 +313,7 @@ const ManageProductsSideNav = () => {
                             }
                             key={index}
                           >
-                            <p
+                            <p onClick={() => router.push(s?.href ? s?.href : "")}
                               className={`${activeBtn == s.name ? styles.activeSubLink : ""
                                 } py-1 px-2 rounded-md my-2 cursor-pointer`}
                             >
@@ -305,10 +328,10 @@ const ManageProductsSideNav = () => {
               })}
             </ul>
           </section>
-        </div>
+        </div >
 
-      </div>
-    </section>
+      </div >
+    </section >
   );
 };
 
