@@ -4,7 +4,7 @@ import style from "/styles/componentsStyles/box-shaddow.module.css";
 import ManageProductTable from "../../components/ManageProductTable/ManageProductTable";
 import products from "./faketabledata.json";
 
-const Manageproduct = () => {
+const ManageProduct = () => {
   const [active, setActive] = useState({ text: "All", href: "" });
   const [item, setItem] = useState(products);
 
@@ -149,4 +149,4 @@ const Manageproduct = () => {
   );
 };
 
-export default Manageproduct;
+export default ManageProduct;
