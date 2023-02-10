@@ -22,7 +22,7 @@ import { useRouter } from "next/router";
 import ReactPaginate from "react-paginate";
 import { useGetProductQuestionCountQuery, useGetProductQuestionQuery, useGetProductRatingQuery, useGetProductReviewCountQuery, useGetProductReviewQuery } from "../../features/review&question/reviewQuestionApi";
 // import styles from './productpage.module.css'
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Paginate from "../../components/paginate/Paginate";
 import { increaseQuestionPage, increaseReviewPage } from "../../features/paginate/paginate.slice";
 import ProductReview from "../../components/ProductDesc/ProductReview";
@@ -35,6 +35,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { imageSettings, imgSettingsMobile } from "../../Utils/sliderConfig";
 import { useAddCartMutation } from "../../features/cart/cartApi";
+import { addCartProductPage, addCartProductPageDecrease, addCartProductPageIncrease } from "../../features/cart/cartSlice";
 
 const ProductPage = () => {
 
@@ -43,7 +44,8 @@ const ProductPage = () => {
     const { slug, subCategoryId } = router.query;
     const _id = slug?.[1];
     const [callApi, setCallApi] = useState(true);
-
+    const dispatch=useDispatch()
+    const { cart: { cartProductPage }, auth } = useSelector(state => state)
     const { paginate: { reviewPage, questionPage, limit } } = useSelector(state => state)
     // review count 
     const { data: reviewCount, isLoading: reviewCountLoading, error: reviewCountError } = useGetProductReviewCountQuery(
@@ -91,7 +93,7 @@ const ProductPage = () => {
         }
     )
 
-  
+
     // add to cart 
     const { data: cartData, isLoading: cartLoading, error: cartError } = useAddCartMutation(
         _id && _id,
@@ -99,8 +101,8 @@ const ProductPage = () => {
             skip: callApi
         }
     )
-    
-    const { description, productName, productPictures, regularPrice, discount } = productData?.result || {}
+
+    const { description, productName, productPictures, regularPrice, discount,_id:productId } = productData?.result || {}
     const slideRef = useRef(null)
 
     useEffect(() => {
@@ -110,10 +112,25 @@ const ProductPage = () => {
     }, [slug, subCategoryId]);
 
     const total = 15
+    useEffect(() => {
+        dispatch(
+            addCartProductPage({
+                productName,
+                categoryName: productData?.result?.category?.name,
+                categoryId: productData?.result?.category?._id,
+                quantity: 1,
+                productId: productId
+            })
+        )
+    }, [productData, productName])
 
-
-
-    
+    const productQuantityIncrease = () => {
+        dispatch(addCartProductPageIncrease(1))
+    }
+    const productQuantityDecrease = () => {
+        dispatch(addCartProductPageDecrease(1))
+    }
+ 
     return (
         <div>
 
@@ -238,12 +255,14 @@ const ProductPage = () => {
                                 <div
                                     className="text-md w-[34px] h-[34px] bg-[#F2F3F7] flex justify-center items-center cursor-pointer"
                                 ><HiMinusSm
+                                        onClick={productQuantityDecrease}
                                         className="w-full"
                                     /></div>
-                                <p className="text-lg text-[#FB641B] font-bold">1</p>
+                                <p className="text-lg text-[#FB641B] font-bold">{cartProductPage?.quantity}</p>
                                 <div
                                     className="text-md w-[34px] h-[34px] bg-[#F2F3F7] flex justify-center items-center cursor-pointer"
                                 ><BsPlusLg
+                                        onClick={productQuantityIncrease}
                                         className="w-full"
                                     /></div>
                             </div>
@@ -386,7 +405,7 @@ const ProductPage = () => {
                 </div>
 
             </NavicationWithSideNavLayout>
-        
+
         </div>
     );
 };
