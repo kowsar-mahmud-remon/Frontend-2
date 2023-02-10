@@ -18,7 +18,7 @@ import cart from '../../assets/CategoryImages/ProductsImg/Vector (2).png'
 import { useRouter } from 'next/router';
 
 
-const AddToCartPage = ({ hidden, setHidden, categoryData }) => {
+const AddToCartPage = ({ hidden, setHidden, categoryData ,quantityItems}) => {
   const router=useRouter()
   console.log('hidden', hidden);
   const productDetails =
@@ -111,7 +111,6 @@ const AddToCartPage = ({ hidden, setHidden, categoryData }) => {
           <label htmlFor="my-modal-4" className="modal cursor-pointer bg-black bg-opacity-70">
             <label className="modal-box lg:px-10 p-6 relative w-full lg:max-w-[1225px]" htmlFor="">
               <label htmlFor="my-modal-4" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-
               <div className=" lg:mt-[22px] mb-11">
                 <div className="lg:flex justify-between lg:border-b border-[#B7B7B7]">
                   <div className="lg:w-[715px] border-b lg:border-none  border-[#B7B7B7] pb-4 mb-4">
@@ -120,10 +119,8 @@ const AddToCartPage = ({ hidden, setHidden, categoryData }) => {
                         className='mr-1 w-5 h-5'
                         src={Vectorimg}
                         alt="Picture of the author"
-                      // width={20}
-                      // height={20}
                       />
-                      <h2 className=' text-lg text-[#026C51] font-[600]'>1 new item(s) have been added to your cart</h2>
+                      <h2 className=' text-lg text-[#026C51] font-[600]'>{quantityItems} new item(s) have been added to your cart</h2>
                     </div>
                     <div className="">
                       <div className="flex mt-3 mb-3">

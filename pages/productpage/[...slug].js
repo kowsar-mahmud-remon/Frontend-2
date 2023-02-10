@@ -430,6 +430,7 @@ const ProductPage = () => {
                         setHidden={setHidden}
                         hidden={hidden}
                         categoryData={categoryData}
+                        quantityItems={cartProductPage?.quantity}
                     />
                 }
             </NavicationWithSideNavLayout>
