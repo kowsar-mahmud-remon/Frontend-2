@@ -36,6 +36,7 @@ import Slider from "react-slick";
 import { imageSettings, imgSettingsMobile } from "../../Utils/sliderConfig";
 import { useAddCartMutation } from "../../features/cart/cartApi";
 import { addCartProductPage, addCartProductPageDecrease, addCartProductPageIncrease } from "../../features/cart/cartSlice";
+import AddToCartPage from "../../components/AddToCartPage/AddToCartPage";
 
 const ProductPage = () => {
 
@@ -44,9 +45,10 @@ const ProductPage = () => {
     const { slug, subCategoryId } = router.query;
     const _id = slug?.[1];
     const [callApi, setCallApi] = useState(true);
-    const dispatch=useDispatch()
+    const dispatch = useDispatch()
     const { cart: { cartProductPage }, auth } = useSelector(state => state)
     const { paginate: { reviewPage, questionPage, limit } } = useSelector(state => state)
+    const [hidden, setHidden] = useState()
     // review count 
     const { data: reviewCount, isLoading: reviewCountLoading, error: reviewCountError } = useGetProductReviewCountQuery(
         slug && _id,
@@ -93,18 +95,12 @@ const ProductPage = () => {
         }
     )
 
+    // oroduct details api 
+    const { description, productName, productPictures, regularPrice, discount, _id: productId } = productData?.result || {}
+    // add to cart api 
+    const [addToCart, { data: cartPostData, error: cartPostError, isLoading: cartPostLoading }] = useAddCartMutation()
 
-    // add to cart 
-    const { data: cartData, isLoading: cartLoading, error: cartError } = useAddCartMutation(
-        _id && _id,
-        {
-            skip: callApi
-        }
-    )
-
-    const { description, productName, productPictures, regularPrice, discount,_id:productId } = productData?.result || {}
     const slideRef = useRef(null)
-
     useEffect(() => {
         if (slug && subCategoryId) {
             setCallApi(false);
@@ -112,7 +108,10 @@ const ProductPage = () => {
     }, [slug, subCategoryId]);
 
     const total = 15
+
+    // updating cart 
     useEffect(() => {
+
         dispatch(
             addCartProductPage({
                 productName,
@@ -122,15 +121,31 @@ const ProductPage = () => {
                 productId: productId
             })
         )
-    }, [productData, productName])
+    }, [dispatch, productData, productId, productName])
 
+    // increasing cart quantity 
     const productQuantityIncrease = () => {
         dispatch(addCartProductPageIncrease(1))
     }
+    // decreasing cart quantity 
     const productQuantityDecrease = () => {
         dispatch(addCartProductPageDecrease(1))
     }
- 
+
+    const addToCartDb = () => {
+        if (auth?.user) {
+
+            addToCart(cartProductPage)
+            setHidden(cartProductPage)
+
+        } else {
+            router.push({
+                pathname: '/login',
+                query: { from: router.asPath },
+            })
+        }
+    }
+    console.log(categoryData)
     return (
         <div>
 
@@ -206,9 +221,14 @@ const ProductPage = () => {
                                     /></div>
                             </div>
                             <div className="flex gap-7 md:justify-between ">
-                                <button
-                                    className="w-full flex justify-center items-center gap-3 md:btn-md md:w-[240px] h-[53px] bg-[#FF9F00] font-semibold text-white rounded-md"
-                                >Add to Cart <FaShoppingCart className="text-white text-lg mb-1" /></button>
+                                <label
+                                    htmlFor="my-modal-4"
+                                    onClick={addToCartDb}
+                                    className="w-full flex justify-center items-center gap-3 md:btn-md md:w-[240px] h-[53px] bg-[#FF9F00] font-semibold text-white rounded-md cursor-pointer"
+                                >
+                                    Add to Cart <FaShoppingCart className="text-white text-lg mb-1" />
+                                </label>
+
                                 <button
                                     className="w-full flex justify-center items-center gap-3 btn-sm md:btn-md md:w-[240px] h-[53px] bg-[#FB641B] font-semibold text-white rounded-md">Buy Now <BsFillBagCheckFill className="text-white text-lg mb-2" /></button>
                             </div>
@@ -404,8 +424,15 @@ const ProductPage = () => {
                     }
                 </div>
 
-            </NavicationWithSideNavLayout>
 
+                {
+                    hidden && <AddToCartPage
+                        setHidden={setHidden}
+                        hidden={hidden}
+                        categoryData={categoryData}
+                    />
+                }
+            </NavicationWithSideNavLayout>
         </div>
     );
 };

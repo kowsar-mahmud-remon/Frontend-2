@@ -5,13 +5,11 @@ import { getCookie } from "../../Utils/getCookies";
 export const apiSlice = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
-    baseUrl: `https://banglar-big-store.onrender.com/api`,
+    baseUrl: `http://localhost:5000/api`,
     prepareHeaders: async (headers, { getState, endpoint }) => {
       const token = getState()?.auth?.accessToken;
-      // const {token} = getCookie('banglarBigStore', 'token')
-      // console.log('tpkem',token)
+     
       if (getState()?.auth?.accessToken) {
-        console.log("token", getState()?.auth);
         headers.set("Authorization", `Bearer ${token}`);
       }
       return headers;
