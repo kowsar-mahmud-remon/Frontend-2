@@ -155,7 +155,9 @@ const AddToCartPage = ({ hidden, setHidden, categoryData ,quantityItems}) => {
                       <p className='text-base text-[#FB641B]'>Tk 0</p>
                     </div>
                     <div className="flex">
-                      <button className='btn text-[#FB641B] border border-[#FB641B] btn-outline w-1/2 lg:max-w-[166px] h-[48px] lg:mr-6 mr-3'>GO TO CART</button>
+                      <button
+                      onClick={()=>router.push('/cart')}
+                      className='btn text-[#FB641B] border border-[#FB641B] btn-outline w-1/2 lg:max-w-[166px] h-[48px] lg:mr-6 mr-3'>GO TO CART</button>
                       <button className='btn bg-[#FB641B] text-white w-1/2 lg:max-w-[166px] h-[48px]'>CHECK OUT</button>
                     </div>
                   </div>
