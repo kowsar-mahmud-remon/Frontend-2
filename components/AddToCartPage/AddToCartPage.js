@@ -98,7 +98,9 @@ const AddToCartPage = ({ hidden, setHidden, categoryData }) => {
     ];
 
   return (
-    <div className="">
+    <div style={{
+      background:'rgba(242, 242, 242, 1)'
+    }} className="">
       <OutsideClickHandler onOutsideClick={() => {
         setHidden(null);
       }}>
@@ -121,12 +123,12 @@ const AddToCartPage = ({ hidden, setHidden, categoryData }) => {
                       // width={20}
                       // height={20}
                       />
-                      <h2 className=' text-lg text-[#026C51] font-medium'>1 new item(s) have been added to your cart</h2>
+                      <h2 className=' text-lg text-[#026C51] font-[600]'>1 new item(s) have been added to your cart</h2>
                     </div>
                     <div className="">
                       <div className="flex mt-3 mb-3">
                         <Image
-                          className=' mr-5' src={img}
+                          className=' mr-5 h-[103] imgs' src={img}
                           alt="Picture of the author"
                           width={127}
                           height={103}
@@ -146,9 +148,9 @@ const AddToCartPage = ({ hidden, setHidden, categoryData }) => {
                   </div>
 
                   <div className="lg:p-4 lg:w-[388px] justify-end mb-12">
-                    <h4 className='text-lg text-[#FB641B] mb-4'>My Shopping Cart</h4>
+                    <h4 className='text-lg text-[#FB641B] mb-4 font-bold'>My Shopping Cart</h4>
                     <div className="flex justify-between mb-4">
-                      <p className='text-base text-[#686868]'>Subtotal (0 items)</p>
+                      <p className='text-base text-[#686868] font-[600]'>Subtotal (0 items)</p>
                       <p className='text-base text-[#686868]'>Tk 0</p>
                     </div>
                     <div className="flex justify-between mb-4">
