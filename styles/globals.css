@@ -342,3 +342,49 @@ top: 453px; */
   box-shadow: 0px 6px 28px rgba(0, 0, 0, 0.16);
   border-radius: 8px;
 }
+
+.profile {
+  width: 924px;
+  height: 548px;
+  left: 636px;
+  top: 303px;
+
+  /* White */
+
+  background: #FFFFFF;
+  /* Effect 16 */
+
+  box-shadow: 0px 6px 28px rgba(0, 0, 0, 0.16);
+  border-radius: 8px
+}
+
+
+.EmailChangeInput {
+  box-sizing: border-box;
+
+
+  width: 411px;
+  height: 64px;
+  left: 608px;
+  top: 697px;
+
+  /* White */
+
+  background: #FFFFFF;
+  /* Off Black */
+
+  border: 1px solid #B7B7B7;
+  border-radius: 4px;
+}
+
+.EmailChangeButton {
+  width: 172px;
+  height: 48px;
+  left: 1139px;
+  top: 837px;
+
+  /* Button color */
+
+  background: #FB641B;
+  border-radius: 4px;
+}

@@ -176,8 +176,8 @@ const Timeline = ({ status }) => {
                 <div className="w-5 h-5 bg-[#F2F3F7] absolute -top-2 left-16 rotate-45"></div>
                 {/* eta dynamic hobe */}
                 <p>
-                  31 Dec 2022 - 16:52{" "}
-                  <span className="font-[500]">
+                  <span className="text-[#686868]">31 Dec 2022 - 16:52 </span>
+                  <span className="font-[500] text-[#001E00]">
                     Your order has been successfully verified
                   </span>
                 </p>

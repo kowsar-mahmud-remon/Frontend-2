@@ -12,7 +12,7 @@ const profileLinksResponsiveObj = [
     },
     {
         title: 'My Profile',
-        href: "myprofile",
+        href: "myProfile",
         element:<ManageAccountResponsive/>
     },
     {

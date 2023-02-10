@@ -12,7 +12,7 @@ module.exports = {
       },
     },
     screens: {
-      mobile: "375px",
+      mobile: "280px",
       // => @media (min-width: 640px) { ... }
       md: "768px",
       lg: "1024px",
@@ -57,5 +57,6 @@ module.exports = {
       "light",
     ],
   },
-  plugins: [require("daisyui")],
+  plugins: [require("daisyui"), require('tailwind-scrollbar-hide')],
+  
 };
