@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }) {
   return (
     <div className="">
       <Provider store={store}>
-        {/* <SellerRightNav/> */}
+        
         <SideButtons />
         <MobileNavBar />
         <Navication />
