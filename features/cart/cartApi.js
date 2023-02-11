@@ -10,14 +10,10 @@ export const cartApi = apiSlice.injectEndpoints({
             }),
 
         }),
-        // loginUser: builder.mutation({
-        //     query: (data) => ({
-        //         url: "/user/login",
-        //         method: "POST",
-        //         body: data
-        //     }),
-        // }),
+        getAllCart: builder.query({
+            query: () => `/add-to-cart/get-all-cart`,
+        }),
     }),
 });
 
-export const { useAddCartMutation } = cartApi;
+export const { useAddCartMutation,useGetAllCartQuery } = cartApi;

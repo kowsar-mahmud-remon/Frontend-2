@@ -22,9 +22,9 @@ const Login = () => {
     useEffect(() => {
     
         if (data) {
-           
             setError('')
             setCookie('banglarBigStore', data?.token, { path: '/' });
+            if(router?.query?.from) router.push(router.query?.from)
             // router.push('/account/profile')
         }
     }, [data, error, cookies, setCookie,router])
@@ -47,7 +47,7 @@ const Login = () => {
             })
         }
     }
-
+   
     return (
         <NavicationLayout>
             <div className=' h-[100%] mx-[20px] md:mx-[50px] xl:mx-[150px] 2xl:mx-[210px] pt-10 pb-16'>

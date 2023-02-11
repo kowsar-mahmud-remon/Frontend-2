@@ -22,7 +22,7 @@ import { useRouter } from "next/router";
 import ReactPaginate from "react-paginate";
 import { useGetProductQuestionCountQuery, useGetProductQuestionQuery, useGetProductRatingQuery, useGetProductReviewCountQuery, useGetProductReviewQuery } from "../../features/review&question/reviewQuestionApi";
 // import styles from './productpage.module.css'
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Paginate from "../../components/paginate/Paginate";
 import { increaseQuestionPage, increaseReviewPage } from "../../features/paginate/paginate.slice";
 import ProductReview from "../../components/ProductDesc/ProductReview";
@@ -35,6 +35,8 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { imageSettings, imgSettingsMobile } from "../../Utils/sliderConfig";
 import { useAddCartMutation } from "../../features/cart/cartApi";
+import { addCartProductPage, addCartProductPageDecrease, addCartProductPageIncrease } from "../../features/cart/cartSlice";
+import AddToCartPage from "../../components/AddToCartPage/AddToCartPage";
 
 const ProductPage = () => {
 
@@ -43,8 +45,10 @@ const ProductPage = () => {
     const { slug, subCategoryId } = router.query;
     const _id = slug?.[1];
     const [callApi, setCallApi] = useState(true);
-
+    const dispatch = useDispatch()
+    const { cart: { cartProductPage }, auth } = useSelector(state => state)
     const { paginate: { reviewPage, questionPage, limit } } = useSelector(state => state)
+    const [hidden, setHidden] = useState()
     // review count 
     const { data: reviewCount, isLoading: reviewCountLoading, error: reviewCountError } = useGetProductReviewCountQuery(
         slug && _id,
@@ -91,18 +95,12 @@ const ProductPage = () => {
         }
     )
 
-  
-    // add to cart 
-    const { data: cartData, isLoading: cartLoading, error: cartError } = useAddCartMutation(
-        _id && _id,
-        {
-            skip: callApi
-        }
-    )
-    
-    const { description, productName, productPictures, regularPrice, discount } = productData?.result || {}
-    const slideRef = useRef(null)
+    // oroduct details api 
+    const { description, productName, productPictures, regularPrice, discount, _id: productId,regularPrice:price } = productData?.result || {}
+    // add to cart api 
+    const [addToCart, { data: cartPostData, error: cartPostError, isLoading: cartPostLoading }] = useAddCartMutation()
 
+    const slideRef = useRef(null)
     useEffect(() => {
         if (slug && subCategoryId) {
             setCallApi(false);
@@ -110,7 +108,44 @@ const ProductPage = () => {
     }, [slug, subCategoryId]);
 
     const total = 15
+    
+    useEffect(() => {
 
+        dispatch(
+            addCartProductPage({
+                productName,
+                categoryName: productData?.result?.category?.name,
+                categoryId: productData?.result?.category?._id,
+                quantity: 1,
+                productId: productId,
+                price
+            })
+        )
+    }, [dispatch, productData, productId, productName,price])
+
+    // increasing cart quantity 
+    const productQuantityIncrease = () => {
+        dispatch(addCartProductPageIncrease(1))
+    }
+    // decreasing cart quantity 
+    const productQuantityDecrease = () => {
+        dispatch(addCartProductPageDecrease(1))
+    }
+
+    const addToCartDb = () => {
+        if (auth?.user) {
+
+            addToCart(cartProductPage)
+            setHidden(cartProductPage)
+
+        } else {
+            router.push({
+                pathname: '/login',
+                query: { from: router.asPath },
+            })
+        }
+    }
+    console.log(cartPostData)
     return (
         <div>
 
@@ -186,9 +221,14 @@ const ProductPage = () => {
                                     /></div>
                             </div>
                             <div className="flex gap-7 md:justify-between ">
-                                <button
-                                    className="w-full flex justify-center items-center gap-3 md:btn-md md:w-[240px] h-[53px] bg-[#FF9F00] font-semibold text-white rounded-md"
-                                >Add to Cart <FaShoppingCart className="text-white text-lg mb-1" /></button>
+                                <label
+                                    htmlFor="my-modal-4"
+                                    onClick={addToCartDb}
+                                    className="w-full flex justify-center items-center gap-3 md:btn-md md:w-[240px] h-[53px] bg-[#FF9F00] font-semibold text-white rounded-md cursor-pointer"
+                                >
+                                    Add to Cart <FaShoppingCart className="text-white text-lg mb-1" />
+                                </label>
+
                                 <button
                                     className="w-full flex justify-center items-center gap-3 btn-sm md:btn-md md:w-[240px] h-[53px] bg-[#FB641B] font-semibold text-white rounded-md">Buy Now <BsFillBagCheckFill className="text-white text-lg mb-2" /></button>
                             </div>
@@ -235,12 +275,14 @@ const ProductPage = () => {
                                 <div
                                     className="text-md w-[34px] h-[34px] bg-[#F2F3F7] flex justify-center items-center cursor-pointer"
                                 ><HiMinusSm
+                                        onClick={productQuantityDecrease}
                                         className="w-full"
                                     /></div>
-                                <p className="text-lg text-[#FB641B] font-bold">1</p>
+                                <p className="text-lg text-[#FB641B] font-bold">{cartProductPage?.quantity}</p>
                                 <div
                                     className="text-md w-[34px] h-[34px] bg-[#F2F3F7] flex justify-center items-center cursor-pointer"
                                 ><BsPlusLg
+                                        onClick={productQuantityIncrease}
                                         className="w-full"
                                     /></div>
                             </div>
@@ -382,8 +424,16 @@ const ProductPage = () => {
                     }
                 </div>
 
+
+                {
+                    hidden && <AddToCartPage
+                        setHidden={setHidden}
+                        hidden={hidden}
+                        categoryData={categoryData}
+                        quantityItems={cartProductPage?.quantity}
+                    />
+                }
             </NavicationWithSideNavLayout>
-        
         </div>
     );
 };

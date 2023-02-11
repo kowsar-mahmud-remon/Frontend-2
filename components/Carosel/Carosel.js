@@ -30,6 +30,7 @@ const Carosel = ({ data }) => {
                 data?.map((item) => {
                     return <SwiperSlide key={item._id}>
                         <Image
+                            className=''
                             src={item?.image.img}
                             alt="img"
                             width="1000000"

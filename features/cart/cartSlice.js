@@ -62,6 +62,7 @@ const initialState = {
     cartProduct: [],
     cartTotalQuantity: 0,
     cartTotalAmount: 0,
+    cartProductPage: {}
 };
 
 const cartSlice = createSlice({
@@ -70,18 +71,15 @@ const cartSlice = createSlice({
     reducers: {
         addToCart(state, action) {
 
-            const itemIndex = state.cartItems.findIndex(item => item.category === action.payload.category);
-            const cartIndex = state.cartProduct.findIndex(item => item.category === action.payload.category);
-            // state.cartItems.forEach(d=>{
-            //     d.items.forEach(i=>{
-
-            //     })
-            // })
+            const itemIndex = state.cartItems.findIndex(item => item._id === action.payload._id);
+            const cartIndex = state.cartProduct.findIndex(item => item._id === action.payload._id);
+           
             if (itemIndex >= 0) {
                 state.cartItems[itemIndex].items.forEach(d => {
+                 
                     if (d._id === action.payload.product._id) {
                         console.log(d);
-                        d.cartQuantity += 1;
+                        d.quantity += 1;
                     }
                 });
             }
@@ -89,7 +87,7 @@ const cartSlice = createSlice({
                 state.cartProduct[cartIndex].items.forEach(d => {
                     if (d._id === action.payload.product._id) {
                         console.log(d);
-                        d.cartQuantity += 1;
+                        d.quantity += 1;
                     }
                 });
             }
@@ -104,16 +102,29 @@ const cartSlice = createSlice({
         },
 
         decreaseCart(state, action) {
-            const itemIndex = state.cartItems.findIndex(cartItem => cartItem._id === action.payload._id);
+         
+            const itemIndex = state.cartItems.findIndex(item => item._id === action.payload._id);
+            const cartIndex = state.cartProduct.findIndex(item => item._id === action.payload._id);
 
-            if (state.cartItems[itemIndex]?.cartQuantity >= 1) {
-                state.cartItems[itemIndex].cartQuantity -= 1;
-            }
-            else if (state.cartItems[itemIndex]?.cartQuantity === 1) {
-                // const nextCartItems = state.cartItems.filter(cartItem => cartItem._id !== action.payload._id);
+            if (itemIndex >= 0) {
+                state.cartItems[itemIndex].items.forEach(d => {
 
-                // state.cartItems = nextCartItems;
+                    if (d._id === action.payload.product._id && d.quantity > 1) {
+                        console.log('het')
+                        d.quantity -= 1;
+                    }
+                });
             }
+            if (cartIndex >= 0) {
+                state.cartProduct[cartIndex].items.forEach(d => {
+                    if (d._id === action.payload.product._id && d.quantity > 1) {
+
+                        d.quantity -= 1;
+                    }
+                });
+            }
+
+
         },
 
         setProduct(state, action) {
@@ -123,10 +134,10 @@ const cartSlice = createSlice({
         getTotals(state, action) {
             let { total, quantity } = state.cartProduct.reduce((cartTotal, cartItem) => {
                 cartItem.items.forEach((cart) => {
-                    const { price, cartQuantity } = cart;
-                    const itemTotal = price * cartQuantity;
+                    const { price, quantity } = cart;
+                    const itemTotal = price * quantity;
                     cartTotal.total += itemTotal;
-                    cartTotal.quantity += cartQuantity;
+                    cartTotal.quantity += quantity;
 
                 });
                 return cartTotal;
@@ -152,19 +163,19 @@ const cartSlice = createSlice({
         },
 
         addSingleCartProduct(state, action) {
-            const data = state.cartProduct.findIndex(d => d.category === action.payload.category);
-            console.log(data);
+           
+            const data = state.cartProduct.findIndex(d => d._id === action.payload._id);
+            
             if (data > -1) {
 
                 if (state.cartProduct[data].items.length > 0) {
 
                     state.cartProduct[data].items.forEach(element => {
-                        console.log('hey');
-                        console.log(action.payload.checked);
 
-                        if (element._id === action.payload.items[0]._id) {
-                            console.log('hi ');
-                            const links = state.cartProduct[data].items.filter(e => e._id !== action.payload.items[0]._id);
+                        if (element.productId === action.payload.items[0].productId ) {
+                            console.log('hey')
+                            const links = state.cartProduct[data].items.filter(e => e.productId !== action.payload.items[0].productId);
+                            console.log(links)
                             state.cartProduct[data].items = links;
                             return;
                         } else {
@@ -173,10 +184,9 @@ const cartSlice = createSlice({
 
                     });
                 } else {
-                    if (action.payload.checked) {
-                        // console.log('hey', element._id)
+                   
                         state.cartProduct[data].items.push(action.payload.items[0]);
-                    }
+                    
                 }
             } else {
                 state.cartProduct.push(action.payload);
@@ -184,17 +194,40 @@ const cartSlice = createSlice({
         },
 
         addCartSection(state, action) {
-            if (action.payload.checked) {
-                state.cartProduct.push(action.payload.cart);
+            if (action.payload.checked && state.cartProduct) {
+                const data = state.cartProduct.findIndex(d =>{ 
+                    
+                    return d._id === action.payload.cart._id});
+          
+                if (data > -1 ) {
+                    state.cartProduct[data] = action.payload.cart
+                } else {
+                    state.cartProduct.push(action.payload.cart);
+                }
             } else {
-                const data = state.cartProduct.filter(d => d.category !== action.payload.cart.category);
+                const data = state.cartProduct.filter(d => d._id !== action.payload.cart._id);
                 state.cartProduct = data;
             }
-        }
+        },
+        addCartProductPageIncrease: (state, action) => {
+            state.cartProductPage.quantity += action.payload
+        },
+        addCartProductPageDecrease: (state, action) => {
+            if (state.cartProductPage.quantity > 1) {
+                state.cartProductPage.quantity -= action.payload
+            }
+        },
+        addCartProductPage: (state, action) => {
+            state.cartProductPage = action.payload
+        },
+        setProductToCart: (state, action) => {
 
+            state.cartItems = action.payload
+
+        }
     }
 });
 
-export const { addToCart, removeFromCart, decreaseCart, setProduct, getTotals, addSingleCartProduct, addCartProduct, addCartSection } = cartSlice.actions;
+export const { addToCart, removeFromCart, decreaseCart, setProduct, getTotals, addSingleCartProduct, addCartProduct, addCartSection, addCartProductPageIncrease, addCartProductPageDecrease, addCartProductPage, setProductToCart } = cartSlice.actions;
 
 export default cartSlice.reducer;

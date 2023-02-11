@@ -6,13 +6,13 @@ const ManageProductTable = ({ product }) => {
 
   return (
     <>
-      <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-[#001E00]">
+      <tr className="bg-white border-b border-[#B7B7B7] text-[#001E00]">
         <td className="px-6 py-4">
-          <Image width={40} height={40} src={image} alt=""/>
+          <Image width={40} height={40} src={image} alt="" />
         </td>
         <th
           scope="row"
-          className="px-6 py-4 font-medium whitespace-nowrap dark:text-white"
+          className="px-6 py-4 font-medium whitespace-nowrap"
         >
           {title}
         </th>

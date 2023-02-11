@@ -54,13 +54,13 @@ const dispatch = useDispatch()
               <div key={index} className="xl:mr-6 xl:mb-3 lg:mr-4 lg:mb-2 md:mr-2 md:mb-2">
                 <button className="lg:px-[25px] md:px-[10px] lg:py-3 md:py-2 rounded-full shadow-lg ">
                   <div className="flex justify-center items-center">
-                    <p className="md:font-[400] font-[500] xl:text-[17px] lg:text-[16px] md:text-[14px]">{option.title}</p>
+                    <p className="md:font-bold font-[600] xl:text-[17px] text-[#001E00] lg:text-[16px] md:text-[14px]">{option.title}</p>
                     {parseInt(option.total) > 200 ? (
                       <p className="text-xs font-semibold text-[#FB641B] ml-1">
                         200+
                       </p>
                     ) : (
-                      <p className="text-xs font-semibold text-[#FB641B] ml-1">
+                      <p className="text-xs font-bold text-[#FB641B] ml-1">
                         {option.total}
                       </p>
                     )}

@@ -36,20 +36,21 @@ const ManageAccoutSideBar = () => {
           const url = `/profile/${profile.href}`;
 
           return (
-            <div key={i} className="mt-4">
+            <div key={i} className="">
               <Link className={getCurrentColor(profile)} href={url}>
                 <h1>{profile.title}</h1>
               </Link>
 
               {profile?.links && (
-                <ul className="ml-6 mt-[16px]">
+                <ul className="ml-6 ">
                   {profile?.links?.map((p, i) => (
                     <Link key={i} href={`/profile/${profile?.href}/${p?.href}`}>
                       <li
+                      
                         className={
                           router.asPath ===
                           `/profile/${profile?.href}/${p?.href}`
-                            ? "text-[#287DF3]  mt-[16px] text-[16px]"
+                            ? "text-[#287DF3] mt-[0] text-[16px]"
                             : " text-[#686868]  mt-[8px]  text-[16px]"
                         }
                       >
