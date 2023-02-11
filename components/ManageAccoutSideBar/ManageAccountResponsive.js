@@ -13,9 +13,9 @@ const ManageAccountResponsive = () => {
                 </button>
             </div>
             <div className="flex flex-col gap-6 py-4">
-                <div className="card  w-[360px] h-[148px]  bg-base-100 shadow-lg">
+                <div className="card w-full md:w-[360px] h-[148px]  bg-base-100 shadow-lg">
                     <div className="card-body px-4 py-4">
-                        <h1 className="font-bold text-[18px]">Personal Profile | <span className="text-[#287DF3] font-[400] text-[18px]">Edit</span></h1>
+                        <h1 className="font-[600] text-[18px]">Personal Profile | <span className="text-[#287DF3] font-[400] text-[18px]">Edit</span></h1>
                         <ul>
                             <li>Abdul Karim</li>
                             <li>abdulkorim@gmail.com</li>
@@ -23,12 +23,12 @@ const ManageAccountResponsive = () => {
                         </ul>
                     </div>
                 </div>
-                <div className="card w-[360px] h-[391px]   bg-base-100 shadow-lg">
+                <div className="card w-full md:w-[360px] h-[391px]   bg-base-100 shadow-lg">
                     <div className="flex flex-col">
                         <div className="px-4 py-4">
-                            <h1 className="font-bold text-[18px]">Address Book | <span className="text-[#287DF3] font-[400] text-[18px]">Edit</span></h1>
-                            <p>DEFAULT SHIPPING ADDRESS</p>
-                            <p className="font-bold text-[16px]">Abdul Karim</p>
+                            <h1 className="font-[600] text-[18px]">Address Book | <span className="text-[#287DF3] font-[400] text-[18px]">Edit</span></h1>
+                            <p className="mb-6 text-[#686868]">DEFAULT SHIPPING ADDRESS</p>
+                            <p className="font-[600] text-[16px] mb-1">Abdul Karim</p>
                             <ul>
                                 <li>Ramgonj Tower 16/14,</li>
                                 <li>Giridhara,Matuil,Kodomtali</li>
@@ -36,10 +36,10 @@ const ManageAccountResponsive = () => {
                                 <li>+88 012 342 450 45</li>
                             </ul>
                         </div>
-                        <p className=" h-[0px] left-[24px]  border-[2px] border-solid  border-[#F2F2F2] w-[360px] "></p>
+                        <p className=" h-[0px] left-[24px]  border-[2px] border-solid  border-[#F2F2F2] w-full md:w-[360px] "></p>
                         <div className="py-4 ml-[16px]">
-                            <p>DEFAULT SHIPPING ADDRESS</p>
-                            <p className="font-bold text-[16px]">Abdul Karim</p>
+                            <p className="mb-2 text-[#686868]">DEFAULT SHIPPING ADDRESS</p>
+                            <p className="font-[600] text-[16px] mb-1">Abdul Karim</p>
                             <ul>
                                 <li>Bashundhara City Shopping</li>
                                 <li>Complex 3 No Tejturi Bazar</li>

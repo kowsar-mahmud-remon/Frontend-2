@@ -68,7 +68,7 @@ export default function Home({ items }) {
           {/* <Category /> */}
           {/* <MediaCenter /> */}
           {/* <AddProducts /> */}
-          <div className={`flex bg-white flex-col h-[310px] lg:h-[366px] xl:flex-row xl:h-[366px] 2xl:h-[466px]  shadow-xl shadow-block-900 w-[100%] p-4 `}>
+          <div className={`flex bg-white flex-col h-[310px] lg:h-[396px] xl:flex-row xl:h-[396px] 2xl:h-[466px]  shadow-xl shadow-block-900 w-[100%] p-4 `}>
             {
               items.length && <Carosel data={items} />
             }

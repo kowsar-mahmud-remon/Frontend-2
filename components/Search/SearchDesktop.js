@@ -186,7 +186,7 @@ const SearchDesktop = () => {
     }
     const handleClose = (view) => {
         if (view === 1) {
-            setBgHide('left-[-395px]')
+            setBgHide('left-[-1095px]')
             setLeftWidth('w-[310px]')
         }
 
@@ -196,15 +196,18 @@ const SearchDesktop = () => {
 
 
     return (
-        <div className=" flex lg:px-[94px] relative  md:px-[94px]  mt-2">
-            <div className={`flex z-20  lg:absolute fixed h-[100vh] overflow-auto lg:h-auto  lg:left-[93px]  lg:mr-[229px] ${bghide} mt-[-8px]`}>
-                <div onClick={() => handleClose(1)} className={` w-[107px]    h-[1200px] bg-black opacity-[0.4]  lg:hidden md:hidden`}>
+        <div className=" flex lg:px-[94px]  md:px-[94px]  mt-2">
+            <div
+                onClick={() => handleClose(1)}
+                className={`flex z-20  fixed md:static fixed h-[100vh] top-0 right-0 md:left-0  w-full lg:w-[482px] overflow-auto lg:h-auto  abs-bg ${bghide} mt-[-8px] justify-between md:justify-start scrollbar-hide mt-0 lg:mt-4`}>
+
+                <div onClick={() => handleClose(1)} className={``}>
 
                 </div>
 
-                <div className={`${leftWidth} lg:block md:block   `}>
-                    <div className='flex justify-between px-4'>
-                        <div className='max-[600px]:hidden lg:mt-[10px]   mb-[16px] border  border-[#FB641B] py-[11px] px-[23px] rounded-full flex w-[166px]'>
+                <div className={`${leftWidth}  lg:w-full lg:block md:block  z-[999] `}>
+                    <div className='flex justify-between px-4 '>
+                        <div className='max-[600px] hidden lg:mt-[10px] hidden  mb-[16px] border  border-[#FB641B] py-[11px] px-[23px] rounded-full md:flex w-[176px] items-center'>
                             <Image className='h-[20px] w-[20px] lg:mt-[3px]'
                                 src={cate}
                                 alt='img'
@@ -214,9 +217,9 @@ const SearchDesktop = () => {
                         </div>
 
                     </div>
-                    <div className='shadow-xl  bg-white  mr-[21px]'>
+                    <div className='shadow-xl  bg-white mr-0 md:mr-[21px] scrollbar-hide'>
                         {/* ---------------------filters start---------------- */}
-                        <div className='px-4 lg:hidden md:hidden'>
+                        <div className='px-4 lg:hidden md:hidden pt-10 pb-20'>
                             <div className='flex justify-between mb-[16px] '>
                                 <p className='font-semibold mb-[16px] text-[#001E00] '>Filters</p>
                                 <p className='text-[#287DF3] cursor-pointer' onClick={handleclearAll}>Clear all</p>
@@ -404,7 +407,6 @@ const SearchDesktop = () => {
                             </div>
                         </div>
 
-
                         <hr className='mb-[16px]' />
 
                         <div>
@@ -504,7 +506,7 @@ const SearchDesktop = () => {
 
                         </div>
                         {/* -------------button-------------------- */}
-                        <div className='flex justify-center gap-2 lg:hidden md:hidden'>
+                        <div className='flex justify-center gap-2 mb-40 lg:hidden md:hidden'>
                             <button className="btn bg-white border-[#B7B7B7]  w-[99px] mb-3  ">
                                 {/* <span className="text-white lg:text-[16px] md:text-[16px] text-[10px]  mr-[4px]">CLOSE</span> */}
                                 <span className='text-[#B7B7B7] text-[16px] '>Cancel</span>
@@ -519,16 +521,17 @@ const SearchDesktop = () => {
 
 
                 </div>
+
             </div>
 
             {/*--------------------- right div----------------- */}
-            <div className={`${rightWidth}  z-10 lg:ml-[295px] md:ml-[100px] ml-[-8px]`}>
+            <div className={`${rightWidth}  z-10  md:ml-[32px] ml-[-8px]`}>
                 <div className={`flex justify-between ml-[24px] mb-[16px]`}>
                     <p className='text-[16px] lg:mt-[24px] mt-[19px] md:mt-[24px] lg:block md:block hidden'>Home / <span className='text-[#287DF3]'>Search Results</span></p>
                     <p className='max-[480px]:text-[10px] lg:mt-[24px] mt-[19px] lg:hidden md:hidden md:mt-[24px] text-[#287DF3] max-[480px]:mr-[63px] '> Search Results</p>
 
-                    <div className='flex '>
-                        <p className='font-semibold max-[480px]:text-[10px] lg:mt-[28px]  md:mt-[34px]  mt-[20px] '>Sort By:</p>
+                    <div className='flex gap-2'>
+                        <p className='font-semibold max-[480px]:text-[10px] lg:mt-[28px]  md:mt-[34px]  mt-[20px] '>Sort By: </p>
                         <select className='lg:text-[16px] mr-2 max-[480px]:w-[110px] max-[480px]:h-[24px] max-[480px]:text-[10px] lg:w-[161px] lg:h-[40px] rounded-sm  text-[#686868]   px-[11px] font-semibold border border-[#686868] lg:mt-[20px] md:mt-[24px] mt-[16px]' id="">
                             <option selected className='px-[11px] py-[4px]  ' value="">Best Match</option>
                             <option className=' ' value="">Price High to low</option>
