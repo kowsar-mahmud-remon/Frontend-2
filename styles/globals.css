@@ -392,3 +392,33 @@ top: 453px; */
 .imgs{
   height: 103px !important;
 }
+.cart-img{
+  height: 103px !important; 
+  width: 127px !important; 
+}
+
+.btn-cart{
+  width: 34px;
+  height: 34px;
+  background-color: #F2F3F7;
+  display: flex ;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .btn-cart{
+    width: 18px;
+    height: 18px;
+    background-color: #F2F3F7;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+  }
+  .cart-img{
+    height: 80px !important; 
+    width: 100px !important; 
+  }
+}
+.btn-flex{
+  display: flex !important;
+}
