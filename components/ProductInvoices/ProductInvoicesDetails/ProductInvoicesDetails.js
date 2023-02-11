@@ -11,7 +11,7 @@ const ProductInvoicesDetails = () => {
         PRODUCT INVOICE
       </h2>
 
-      <div className="my-7 flex">
+      <div className="my-7 flex md:flex-row flex-col justify-center items-center">
         <div className="w-3/4 border-2 rounded p-4">
           <h3 className="text-lg font-[500]">Abdul Korim</h3>
           <p className="text-base my-3">
@@ -19,16 +19,16 @@ const ProductInvoicesDetails = () => {
           </p>
           <p className="text-lg font-[500]">+88 012 342 450 45</p>
         </div>
-        <div className=" p-6 border-2 rounded ml-6">
+        <div className=" p-6 border-2 rounded md:ml-6 md:mt-0 mt-5">
           <Image src={QR} alt="" />
         </div>
       </div>
 
-      <div className="flex ">
-        <div className="w-3/5">
+      <div className="flex md:flex-row flex-col">
+        <div className="md:w-3/5 md:block flex justify-center md:mb-0 mb-5">
           <Image src={QR2} alt="" />
         </div>
-        <div className="w-2/5">
+        <div className="md:w-2/5 ">
           <div className="flex justify-end items-center mb-2">
             <p>Invoice No: </p>
             <div className="w-[158px] border-2 rounded pl-4 py-2 ml-3">
@@ -91,12 +91,12 @@ const ProductInvoicesDetails = () => {
           </div>
         </div>
       </div>
-      <div className="flex">
-        <div className="w-1/2">
+      <div className="flex md:flex-row flex-col">
+        <div className="md:w-1/2 md:mb-0 mb-5">
           <h2 className="text-2xl font-[500]">Total Quantity: 1000gm</h2>
           <h2 className="text-2xl font-[500]">Delivery: Banglar Big Bazar</h2>
         </div>
-        <div className="w-1/2">
+        <div className="md:w-1/2">
           <div className="flex justify-end items-center mb-2">
             <p>Sub Total: </p>
             <div className="w-[158px] border-2 rounded pl-4 py-2 ml-3">
