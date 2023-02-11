@@ -90,14 +90,14 @@ const DontSelectProductCheckout = () => {
   return (
     <div className=' mt-8 mb-72 lg:w-[1200px] mx-auto'>
       <div className="m-4 lg:m-0">
-        <p className=' text-base text-[#686868] mb-2'>Home / Add to Cart / <span>Checkout</span></p>
+        <p className=' text-base text-[#686868] mb-2'>Home / Add to Cart / <span className='text-[#287DF3]'>Checkout</span></p>
         <h4 className=' text-2xl font-medium text-[#FB641B]'>Ready to Checkout!</h4>
       </div>
 
       <div className="lg:flex m-6 lg:m-0">
         <div className="lg:w-[788px] mr-6 mb-28">
-          <div className="text-[#686868] flex justify-between p-6 shadow-lg mt-4">
-            <div className="flex">
+          <div className="text-[#686868] flex justify-between p-6 shadow-xl mt-4">
+            <div className="flex rounded">
 
               <input
                 type="checkbox"
@@ -105,14 +105,14 @@ const DontSelectProductCheckout = () => {
                 onChange={handleChange}
                 className="w-[19px] h-[19px] rounded checkbox checkbox-primary mr-4 border border-[#686868]" />
 
-              <p className=' text-base'>SELECT ALL 1 ITEM(S)</p>
+              <p className=' text-base '>SELECT ALL 1 ITEM(S)</p>
             </div>
             <div className="flex">
               <RiDeleteBinFill className='text-[18px] mr-2'></RiDeleteBinFill>
               <p className='text-[10px]'>Delete</p>
             </div>
           </div>
-          <div className="p-6 mt-4">
+          <div className="p-6 mt-4 mb-[16px] shadow-xl">
             {
               cartItems.map((cart, i) => <div
                 key={i}
