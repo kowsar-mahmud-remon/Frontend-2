@@ -15,6 +15,7 @@ const ManageList = ({
       return;
     }
 
+    
     const allData = products.filter((user) => user.status === menu.text);
 
     setItem(allData);
