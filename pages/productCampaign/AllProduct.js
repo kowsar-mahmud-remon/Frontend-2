@@ -46,7 +46,7 @@ const AllProduct = () => {
 
           <div
             className={`rounded-lg mt-8 min-h-screen ${style.boxshaddow} bg-[#FFFFFF]`}
-          >
+          > 
             <div className="p-6">
               <div className="mb-4">
                 <p className="text-base font-medium text-[#001E00]">
