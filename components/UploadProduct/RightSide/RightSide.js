@@ -57,7 +57,7 @@ const RightSide = ({ options}) => {
                 className=" h-10 bg-[#F2F3F7] border-2 border-dashed px-2 rounded w-full"
               />
               <div className="col-span-2">
-                <div className="grid grid-cols-4 gap-3">
+                <div className="grid grid-cols-4 gap-2">
                   <label className=" label justify-end">
                     <span className="">Discount:</span>
                   </label>

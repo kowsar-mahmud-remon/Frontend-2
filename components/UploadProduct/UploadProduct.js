@@ -30,12 +30,12 @@ const UploadProduct = () => {
   return (
     <div className="p-6 max-w-[1426px]">
       <form action="">
-        <div className="flex max-w-[1426px] rounded shadow-xl p-6">
-          <div className="w-2/5">
+        <div className="flex flex-col md:flex-row max-w-[1426px] rounded shadow-xl p-6">
+          <div className="md:w-[40%]">
             <LeftSide></LeftSide>
           </div>
 
-          <div className="w-3/5">
+          <div className="md:w-[60%]">
             <RightSide options={options}></RightSide>
         </div>
         </div>
