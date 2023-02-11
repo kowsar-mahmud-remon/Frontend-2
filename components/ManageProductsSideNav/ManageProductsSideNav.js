@@ -34,17 +34,19 @@ const ManageProductsSideNav = () => {
       img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
       subcata: [
         {
-          name: "Add Product",
+          name: "Upload Product",
+          href: "editProduct"
         },
         {
           name: "Manage Products",
           href: "manageproducts"
         },
         {
-          name: "Fullfillment",
+          name: "Edit Product",
+          href: "editProduct"
         },
         {
-          name: "Edit Product",
+          name: "Product Invoice",
           href: "editProduct"
         },
       ],
@@ -56,18 +58,17 @@ const ManageProductsSideNav = () => {
       img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
       subcata: [
         {
-          name: "Add Product",
-        },
-        {
-          name: "New Media Center",
-        },
-        {
-          name: "Fullfillment",
-        },
-        {
-          name: "Edit Product",
+          name: "Product Campaign",
           href: "editProduct"
         },
+        {
+          name: "Campaign Management",
+          href: "campaignManagement"
+        },
+        {
+          name: "Learn About Ads",
+          href: "editProduct"
+        }
       ],
     },
     {
@@ -77,76 +78,80 @@ const ManageProductsSideNav = () => {
       img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
       subcata: [
         {
-          name: "Add Product",
+          name: "Manage Orders",
+          href: "editProduct"
         },
         {
-          name: "New Media Center",
+          name: "Manage Reviews",
+          href: "editProduct"
         },
         {
-          name: "Fullfillment",
+          name: "Order History",
+          href: "editProduct"
         },
         {
-          name: "Edit Product",
+          name: "Returns Product",
           href: "editProduct"
         },
       ],
     },
     {
       id: 4,
-      name: "Store Decoration",
+      name: "Finance",
       href: "editProductsTwo",
       img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
       subcata: [
         {
-          name: "Add Product",
-        },
-        {
-          name: "New Media Center",
-        },
-        {
-          name: "Fullfillment",
-        },
-        {
-          name: "Edit Product",
+          name: "Sales Overview",
           href: "editProduct"
         },
+        {
+          name: "Order Overview",
+          href: "editProduct"
+        },
+        {
+          name: "Performance Report",
+          href: "editProduct"
+        }
       ],
     },
     {
       id: 5,
-      name: "Assortment Growth",
+      name: "Seller Support",
       href: "editProductsTwo",
       img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
       subcata: [
         {
-          name: "Add Product",
-        },
-        {
-          name: "New Media Center",
-        },
-        {
-          name: "Fullfillment",
-        },
-        {
-          name: "Edit Product",
+          name: "Help Center",
           href: "editProduct"
         },
+        {
+          name: "Contact Us",
+          href: "editProduct"
+        },
+        {
+          name: "Live Chat",
+          href: "editProduct"
+        }
       ],
     },
     {
       id: 6,
-      name: "Account Health",
+      name: "Seller Guideline",
       href: "editProductsTwo",
       img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
       subcata: [
         {
           name: "Add Product",
+          href: "editProduct"
         },
         {
           name: "New Media Center",
+          href: "editProduct"
         },
         {
           name: "Fullfillment",
+          href: "editProduct"
         },
         {
           name: "Edit Product",
@@ -156,109 +161,72 @@ const ManageProductsSideNav = () => {
     },
     {
       id: 7,
-      name: "Bussiness Adviser",
+      name: "Seller Documents",
       href: "editProductsTwo",
       img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
       subcata: [
         {
-          name: "Add Product",
-        },
-        {
-          name: "New Media Center",
-        },
-        {
-          name: "Fullfillment",
-        },
-        {
-          name: "Edit Product",
+          name: "Account Statement",
           href: "editProduct"
         },
+        {
+          name: "NID Card",
+          href: "editProduct"
+        },
+        {
+          name: "Bank Statement",
+          href: "editProduct"
+        }
       ],
     },
     {
       id: 8,
-      name: "Finnace",
+      name: "Account & Settings",
       href: "editProductsTwo",
       img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
       subcata: [
         {
-          name: "Add Product",
+          name: "Profile",
+          href: "editProduct"
         },
         {
-          name: "New Media Center",
+          name: "Account Settings",
+          href: "editProduct"
         },
         {
-          name: "Fullfillment",
+          name: "Subscription",
+          href: "editProduct"
         },
         {
-          name: "Edit Product",
+          name: "Total Earning",
           href: "editProduct"
         },
       ],
     },
     {
       id: 9,
-      name: "Seller Guidlines",
+      name: "Account Type",
       href: "editProductsTwo",
       img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
       subcata: [
         {
           name: "Add Product",
+          href: "editProduct"
         },
         {
           name: "New Media Center",
+          href: "editProduct"
         },
         {
           name: "Fullfillment",
+          href: "editProduct"
         },
         {
           name: "Edit Product",
           href: "editProduct"
         },
       ],
-    },
-    {
-      id: 10,
-      name: "Seller Support",
-      href: "editProductsTwo",
-      img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
-      subcata: [
-        {
-          name: "Add Product",
-        },
-        {
-          name: "New Media Center",
-        },
-        {
-          name: "Fullfillment",
-        },
-        {
-          name: "Edit Product",
-          href: "editProduct"
-        },
-      ],
-    },
-    {
-      id: 11,
-      name: "Account Setting",
-      href: "editProductsTwo",
-      img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
-      subcata: [
-        {
-          name: "Add Product",
-        },
-        {
-          name: "New Media Center",
-        },
-        {
-          name: "Fullfillment",
-        },
-        {
-          name: "Edit Product",
-          href: "editProduct"
-        },
-      ],
-    },
+    }
   ];
 
 
