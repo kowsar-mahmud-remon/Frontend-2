@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
+
 import { FaCheck } from "react-icons/fa";
 import profileLinksObj from "../../Utils/myProfileLinks";
-import ProfileResponsive from "./ProfileResponsive";
+
 
 // import Profile from './Profile';
 const ManageAccoutSideBar = () => {
