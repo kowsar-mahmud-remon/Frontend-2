@@ -33,7 +33,7 @@ const ProductCampaignModal = ({ modal }) => {
                   alt=""
                 ></Image>
               </div>
-              <div>
+              <div> 
                 <div>
                   <p className="text-[#001E00] text-lg font-medium">
                     {name}
