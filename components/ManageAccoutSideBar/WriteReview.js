@@ -170,7 +170,6 @@ const WriteReview = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 
