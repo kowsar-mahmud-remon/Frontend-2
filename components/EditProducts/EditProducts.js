@@ -58,9 +58,9 @@ const EditProducts = () => {
           <FaAngleRight className='text-[#707070] text-xs mr-1'></FaAngleRight>
           <p className='mr-1'>Products</p>
           <FaAngleRight className='text-[#707070] text-xs'></FaAngleRight>
-          <p className='text-[#001E00]'>Edit Product</p>
+          <p className='text-[#001E00] font-medium'>Edit Product</p>
         </div>
-        <p className=' text-2xl text-[#FB641B]'>Edit Products</p>
+        <p className=' text-2xl text-[#FB641B] font-medium'>Edit Products</p>
       </div>
 
       <div className="lg:max:w-[1426px] mx-auto mt-8">
@@ -88,7 +88,7 @@ const EditProducts = () => {
                   <label tabIndex={0} className="m-1">
                     <HiDotsHorizontal className='text-[#686868]'></HiDotsHorizontal>
                   </label>
-                  <ul tabIndex={0} className="dropdown-content menu shadow bg-base-100 rounded border w-[121px] text-base text-[#686868]">
+                  <ul tabIndex={0} className="dropdown-content menu shadow bg-base-100 rounded border border-[#B7B7B7] w-[121px] text-base text-[#686868]">
                     <li><a>View Detail</a></li>
                     <li><a>Edit</a></li>
                     <li><a>Delete</a></li>
