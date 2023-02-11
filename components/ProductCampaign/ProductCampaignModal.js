@@ -52,7 +52,7 @@ const ProductCampaignModal = ({ modal }) => {
                 <div className="flex items-center pt-2">
                   <p className="text-[#FB641B] text-xl mr-4">Tk {price}</p>
                   <p className="mr-4">Tk {disprice}</p>
-                  <p>(20% off)</p>
+                  <p>(20% off)</p> 
                 </div>
                 <div className="flex items-center pt-3">
                   <Image width={20} src={cashon} alt=""></Image>
