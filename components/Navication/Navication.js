@@ -2,7 +2,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import styles from "../../styles/componentsStyles/Navication.module.css";
 import logo from "../../assets/images/logo/main_logo.png";
-import logoDis from "../../assets/images/logo/logo_dic.png";
+import logoDis from "../../assets/images/logo/main_logo.png";
 import flagBD from "../../assets/images/flag(BD).png";
 import supportIcon from "../../assets/images/support_Icon.png";
 import advertise from "../../assets/images/navication/add.png";
@@ -75,14 +75,17 @@ const Navication = () => {
     setRecognitionStarted(true);
   };
   return (
-    <section className="shadow-md hidden lg:block z-20 shadow-block-900 relative">
+    <section className="shadow-md    z-20 shadow-block-900 relative">
       <TopNavBar />
 
       <div className="flex items-center h-[80px] gap-3 px-[20px] lg:px-[40px] 2xl:px-[50px]  bg-[#ffffff] justify-between text-[#026C51]">
         <div className="flex justify-center first-line:">
           <Link href="/">
-            <Image src={logo} alt="img" />
-            <Image src={logoDis} alt="img" />
+            <Image 
+            width={180}
+            height={48}
+            src={logo} alt="img" />
+           
           </Link>
         </div>
 
@@ -93,7 +96,7 @@ const Navication = () => {
               value={searchText}
               onChange={(e) => setSearchText(e.target.value)}
               type="text"
-              placeholder="Finding Your Product...."
+              placeholder="what are you looking for...."
             />
             <BsFillMicFill
               onClick={() => handleVoice()}
@@ -124,7 +127,7 @@ const Navication = () => {
           </Link>
         </div>
       </div>
-      <div className={`${styles.buttonSearchWraper} bg-[#FFFFFF]`}>
+      <div className={`${styles.buttonSearchWraper} bg-[#FFFFFF] hidden`}>
         <div className=" flex h-[40px] w-[90%] bg-[#FFFFFF] border-solid border-2 border-[#026C51] rounded-full  text-lg font-semibold overflow-hidden ">
           <div className="flex items-center border-r-[3px] w-[auto] border-[#026C51] text-[#026C51] my-1">
             <RiMapPinFill className="mx-1 xl:mx-4 text-[20px] sm:text-[30px] " />

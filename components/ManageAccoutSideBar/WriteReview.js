@@ -27,7 +27,7 @@ const WriteReview = () => {
             <div>
                 <h1 className="font-[400] text-[24px] text-[#FB641B]">Write Review</h1>
             </div>
-            <div className="w-[924px] flex h-[654px] left-[636px] mt-[26px] top-[297px]  shadowreviews">
+            <div className="w-[924px]  md:flex md:flex-row h-[654px] left-[636px] mt-[26px] top-[297px]  shadowreviews">
 
                 <div className="w-[600px]">
                     <p className="font-[400] text-[14px] ml-[24px] pt-[32px]  text-[#686868]">Delivered on 21 Apr 2022</p>
