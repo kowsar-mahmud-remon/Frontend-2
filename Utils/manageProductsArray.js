@@ -2,6 +2,8 @@ import CampaignManagement from "../components/CampaignManagement/CampaignManagem
 import EditProducts from "../components/EditProducts/EditProducts";
 import EditProductsTwo from "../components/EditProducts/EditProductsTwo";
 import ManageProduct from "../components/ManageProduct/ManageProduct";
+import ProductInvoices from "../components/ProductInvoices/ProductInvoices";
+import ProductInvoicesDetails from "../components/ProductInvoices/ProductInvoicesDetails/ProductInvoicesDetails";
 import UploadProduct from "../components/UploadProduct/UploadProduct";
 
 export const manageProductsArray = [
@@ -24,10 +26,22 @@ export const manageProductsArray = [
     title: "ManageProducts",
     href: "manageproducts",
     element: <ManageProduct></ManageProduct>
-  }, {
-    title: 'add products',
+  },
+  {
+    title: "ProductInvoices",
+    href: "productInvoices",
+    element: <ProductInvoices></ProductInvoices>
+  },
+  {
+    title: 'uploadProducts',
     href: 'uploadProducts',
-    element:<UploadProduct></UploadProduct>
+    element: <UploadProduct></UploadProduct>
+
+  },
+  {
+    title: 'ProductInvoiceDetails',
+    href: 'ProductInvoiceDetails',
+    element: <ProductInvoicesDetails></ProductInvoicesDetails>
 
   }
 
