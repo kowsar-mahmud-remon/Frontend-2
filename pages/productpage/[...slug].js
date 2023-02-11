@@ -96,7 +96,7 @@ const ProductPage = () => {
     )
 
     // oroduct details api 
-    const { description, productName, productPictures, regularPrice, discount, _id: productId } = productData?.result || {}
+    const { description, productName, productPictures, regularPrice, discount, _id: productId,regularPrice:price } = productData?.result || {}
     // add to cart api 
     const [addToCart, { data: cartPostData, error: cartPostError, isLoading: cartPostLoading }] = useAddCartMutation()
 
@@ -108,8 +108,7 @@ const ProductPage = () => {
     }, [slug, subCategoryId]);
 
     const total = 15
-
-    // updating cart 
+    
     useEffect(() => {
 
         dispatch(
@@ -118,10 +117,11 @@ const ProductPage = () => {
                 categoryName: productData?.result?.category?.name,
                 categoryId: productData?.result?.category?._id,
                 quantity: 1,
-                productId: productId
+                productId: productId,
+                price
             })
         )
-    }, [dispatch, productData, productId, productName])
+    }, [dispatch, productData, productId, productName,price])
 
     // increasing cart quantity 
     const productQuantityIncrease = () => {
@@ -145,7 +145,7 @@ const ProductPage = () => {
             })
         }
     }
-    console.log(categoryData)
+    console.log(cartPostData)
     return (
         <div>
 

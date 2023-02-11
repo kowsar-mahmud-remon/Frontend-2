@@ -33,7 +33,7 @@ const Category = () => {
                                 as={"li"}
                                 href={`/hi`}
                                 key={index}
-                                className={(asPath == path || categoryName === c.name) ? styles.active : ""}
+                                className={(asPath == path) ? styles.active : ""}
                             >
                                 <Link href={path}>
                                     <Image

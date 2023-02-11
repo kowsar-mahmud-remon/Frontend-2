@@ -11,7 +11,7 @@ import { useRouter } from 'next/router';
                             <h1 className="text-[#FB641B] text-[24px] font-semibold">Manage My Account</h1>
                         </div>
                         <div className="flex gap-6 py-8">
-                            <div className="card  w-[335px] h-[223px]  bg-base-100 shadow-lg">
+                            <div className="card w-[335px] h-[223px]  bg-base-100 shadow-lg">
                                 <div className="card-body px-4 py-4">
                                     <h1 className="font-bold text-[18px]">Personal Profile | <span className="text-[#287DF3] text-[18px]">Edit</span></h1>
                                     <ul>
@@ -24,9 +24,9 @@ import { useRouter } from 'next/router';
                             <div className="card w-[565px] h-[223px]   bg-base-100 shadow-lg">
                                 <div className="flex">
                                     <div className="px-4 py-4">
-                                        <h1 className="font-bold text-[18px]">Address Book | <span className="text-[#287DF3] text-[18px]">Edit</span></h1>
-                                        <p>DEFAULT SHIPPING ADDRESS</p>
-                                        <p className="font-bold text-[16px]">Abdul Karim</p>
+                                        <h1 className="font-bold text-[18px] mb-2">Address Book | <span className="text-[#287DF3] text-[18px]">Edit</span></h1>
+                                        <p className="mb-2 text-[#686868]">DEFAULT SHIPPING ADDRESS</p>
+                                        <p className="font-bold text-[16px] mb-2">Abdul Karim</p>
                                         <ul>
                                             <li>Ramgonj Tower 16/14,</li>
                                             <li>Giridhara,Matuil,Kodomtali</li>
@@ -36,8 +36,8 @@ import { useRouter } from 'next/router';
                                     </div>
                                     <div className="divider  divider-horizontal"></div>
                                     <div className="py-4">
-                                        <p>DEFAULT SHIPPING ADDRESS</p>
-                                        <p className="font-bold text-[16px]">Abdul Karim</p>
+                                        <p className="mb-2 text-[#686868]">DEFAULT SHIPPING ADDRESS</p>
+                                        <p className="font-bold text-[16px] mb-2">Abdul Karim</p>
                                         <ul>
                                             <li>Bashundhara City Shopping</li>
                                             <li>Complex 3 No Tejturi Bazar</li>
@@ -54,9 +54,9 @@ import { useRouter } from 'next/router';
                                 <table className="table w-full  ">
 
 
-                                    <thead className="w-full ">
+                                    <thead className="w-full rounded-none">
 
-                                        <tr className="bg-[#F2F2F2]">
+                                        <tr className="bg-[#F2F2F2] rounded-none">
                                             <th className="text-[#686868]">Order#</th>
                                             <th className="text-[#686868]">Placed On</th>
                                             <th className="text-[#686868]">Items</th>
@@ -72,7 +72,7 @@ import { useRouter } from 'next/router';
                                             <td className="text-[#686868]">12/12/2022</td>
                                             <td className="text-[#686868]"><Image src="/image 8.png" width="43" height="34" alt=""></Image></td>
                                             <td className="text-[#686868]">Tk. 60</td>
-                                            <td className="text-[#287DF3]">Mange</td>
+                                            <td className="text-[#287DF3]">View</td>
                                         </tr>
                                         {/* <tr>
                                             <td>123123123424</td>

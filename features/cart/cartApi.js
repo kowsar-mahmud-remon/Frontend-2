@@ -10,8 +10,10 @@ export const cartApi = apiSlice.injectEndpoints({
             }),
 
         }),
-        
+        getAllCart: builder.query({
+            query: () => `/add-to-cart/get-all-cart`,
+        }),
     }),
 });
 
-export const { useAddCartMutation } = cartApi;
+export const { useAddCartMutation,useGetAllCartQuery } = cartApi;
