@@ -35,6 +35,7 @@ const ManageProductsSideNav = () => {
       subcata: [
         {
           name: "Add Product",
+          href:"uploadProducts"
         },
         {
           name: "Manage Products",

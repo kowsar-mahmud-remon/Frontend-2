@@ -1,22 +1,20 @@
 import React from 'react';
 import ProfileResponsive from '../components/ManageAccoutSideBar/ProfileResponsive';
 import ManageProductsSideNav from '../components/manageproductsSideNav/manageproductsSideNav';
+import SellerRightNav from '../components/SellerRightNav/SellerRightNav';
 // import ManageAccountResponsive from './ManageAccountResponsive';
 // import ManageAccoutSideBar from './manageAccoutSideBar';
 
 const ManageProductsLayout = ({ children, slug }) => {
 
   return (
-    <div className='flex justify-center'
-    // className='flex my-8 justify-center mx-5 gap-[40px] xl:mx-4'
+    <div
+      className="flex justify-center"
+      // className='flex my-8 justify-center mx-5 gap-[40px] xl:mx-4'
     >
-
-      <div
-        className='hidden lg:block'
-      >
-
+      <SellerRightNav/>
+      <div className="hidden lg:block">
         <ManageProductsSideNav />
-
       </div>
 
       {/* <div className='lg:hidden '>
@@ -25,13 +23,7 @@ const ManageProductsLayout = ({ children, slug }) => {
         }
       </div> */}
 
-      <div>
-
-        {
-          children
-        }
-
-      </div>
+      <div className='md:mr-[120px]'>{children}</div>
     </div>
   );
 };
