@@ -45,12 +45,12 @@ const ProductInvoices = () => {
       <div className="flex flex-wrap">
         {datas.map((data) => (
           <>
-            <div className="w-[183px] p-2 mr-6 mb-6 shadow-xl rounded-lg">
+            <div className="w-[183px] p-2 md:mr-6 mb-6 shadow-xl rounded-lg">
               <Image src={data.img} alt="" />
               <h3 className="font-[500] text-center">{data.name}</h3>
               <div className="flex justify-center mt-1">
                 <Link
-                  href="/ProductInvoiceDetails"
+                  href="ProductInvoiceDetails"
                   className="p-1 bg-blue-100 text-blue-600 rounded text-[12px] text-center"
                 >
                   View Invoices
