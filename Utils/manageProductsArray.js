@@ -2,6 +2,7 @@ import CampaignManagement from "../components/CampaignManagement/CampaignManagem
 import EditProducts from "../components/EditProducts/EditProducts";
 import EditProductsTwo from "../components/EditProducts/EditProductsTwo";
 import ManageProduct from "../components/ManageProduct/ManageProduct";
+import UploadProduct from "../components/UploadProduct/UploadProduct";
 
 export const manageProductsArray = [
   {
@@ -23,7 +24,12 @@ export const manageProductsArray = [
     title: "ManageProducts",
     href: "manageproducts",
     element: <ManageProduct></ManageProduct>
-  },
+  }, {
+    title: 'add products',
+    href: 'uploadProducts',
+    element:<UploadProduct></UploadProduct>
+
+  }
 
 ];
 

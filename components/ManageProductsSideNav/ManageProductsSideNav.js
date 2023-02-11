@@ -36,6 +36,9 @@ const ManageProductsSideNav = () => {
         {
           name: "Upload Product",
           href: "editProduct"
+
+          name: "Add Product",
+          href:"uploadProducts"
         },
         {
           name: "Manage Products",
