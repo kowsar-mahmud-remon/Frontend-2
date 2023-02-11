@@ -35,10 +35,7 @@ const ManageProductsSideNav = () => {
       subcata: [
         {
           name: "Upload Product",
-          href: "editProduct"
-
-          name: "Add Product",
-          href:"uploadProducts"
+          href: "uploadProducts"
         },
         {
           name: "Manage Products",
@@ -50,7 +47,7 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Product Invoice",
-          href: "editProduct"
+          href: "productInvoices"
         },
       ],
     },

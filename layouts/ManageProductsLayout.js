@@ -9,10 +9,10 @@ const ManageProductsLayout = ({ children, slug }) => {
 
   return (
     <div
-      className="flex justify-center"
-      // className='flex my-8 justify-center mx-5 gap-[40px] xl:mx-4'
+      className="flex"
+    // className='flex my-8 justify-center mx-5 gap-[40px] xl:mx-4'
     >
-      <SellerRightNav/>
+      <SellerRightNav />
       <div className="hidden lg:block">
         <ManageProductsSideNav />
       </div>
