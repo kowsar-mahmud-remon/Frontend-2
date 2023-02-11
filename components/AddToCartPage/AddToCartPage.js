@@ -18,8 +18,8 @@ import cart from '../../assets/CategoryImages/ProductsImg/Vector (2).png'
 import { useRouter } from 'next/router';
 
 
-const AddToCartPage = ({ hidden, setHidden, categoryData ,quantityItems}) => {
-  const router=useRouter()
+const AddToCartPage = ({ hidden, setHidden, categoryData, quantityItems }) => {
+  const router = useRouter()
   console.log('hidden', hidden);
   const productDetails =
     [
@@ -99,7 +99,7 @@ const AddToCartPage = ({ hidden, setHidden, categoryData ,quantityItems}) => {
 
   return (
     <div style={{
-      background:'rgba(242, 242, 242, 1)'
+      background: 'rgba(242, 242, 242, 1)'
     }} className="">
       <OutsideClickHandler onOutsideClick={() => {
         setHidden(null);
@@ -156,8 +156,8 @@ const AddToCartPage = ({ hidden, setHidden, categoryData ,quantityItems}) => {
                     </div>
                     <div className="flex">
                       <button
-                      onClick={()=>router.push('/cart')}
-                      className='btn text-[#FB641B] border border-[#FB641B] btn-outline w-1/2 lg:max-w-[166px] h-[48px] lg:mr-6 mr-3'>GO TO CART</button>
+                        onClick={() => router.push('/cart')}
+                        className='btn text-[#FB641B] border border-[#FB641B] btn-outline w-1/2 lg:max-w-[166px] h-[48px] lg:mr-6 mr-3'>GO TO CART</button>
                       <button className='btn bg-[#FB641B] text-white w-1/2 lg:max-w-[166px] h-[48px]'>CHECK OUT</button>
                     </div>
                   </div>
@@ -167,11 +167,11 @@ const AddToCartPage = ({ hidden, setHidden, categoryData ,quantityItems}) => {
                 <div
                   className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-[28px] mt-10  md:ml-0 lg:ml-0">
                   {
-                    categoryData?.result.map(({ productPictures, regularPrice, productName,discount,productTitle,category:{_id:categoryId},slug,_id,subCategory }, i) => <div
+                    categoryData?.result.map(({ productPictures, regularPrice, productName, discount, productTitle, category: { _id: categoryId }, slug, _id, subCategory }, i) => <div
                       key={i}
                     >
                       <div
-                        onClick={() =>{ 
+                        onClick={() => {
                           router.push(`/productpage/${slug}/${_id}?categoryId=${categoryId}&subCategoryId=${subCategory}`)
                           setHidden(null)
                         }}
@@ -223,7 +223,7 @@ const AddToCartPage = ({ hidden, setHidden, categoryData ,quantityItems}) => {
                                   </span> <span className='bg-[#026C51] px-3 rounded-md py-1 text-white font-bold ml-2 '>Assured</span></p>
                               </div>
                             </div>
-                           
+
                           </div>
                         </div>
                       </div>

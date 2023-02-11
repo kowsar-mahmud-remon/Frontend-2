@@ -60,9 +60,9 @@ const EditProductsTwo = () => {
           <FaAngleRight className='text-[#707070] text-xs mr-1'></FaAngleRight>
           <p className='mr-1'>Products</p>
           <FaAngleRight className='text-[#707070] text-xs'></FaAngleRight>
-          <p className='text-[#001E00]'>Edit Product</p>
+          <p className='text-[#001E00] font-medium'>Edit Product</p>
         </div>
-        <p className=' text-2xl text-[#FB641B]'>View Product</p>
+        <p className=' text-2xl text-[#FB641B] font-medium'>View Product</p>
       </div>
 
 
