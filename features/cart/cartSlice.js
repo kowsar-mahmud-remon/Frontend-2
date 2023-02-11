@@ -62,6 +62,7 @@ const initialState = {
     cartProduct: [],
     cartTotalQuantity: 0,
     cartTotalAmount: 0,
+    cartProductPage: {}
 };
 
 const cartSlice = createSlice({
@@ -190,11 +191,22 @@ const cartSlice = createSlice({
                 const data = state.cartProduct.filter(d => d.category !== action.payload.cart.category);
                 state.cartProduct = data;
             }
+        },
+        addCartProductPageIncrease: (state, action) => {
+            state.cartProductPage.quantity += action.payload
+        },
+        addCartProductPageDecrease: (state, action) => {
+            if (state.cartProductPage.quantity > 1) {
+                state.cartProductPage.quantity -= action.payload
+            }
+        },
+        addCartProductPage: (state, action) => {
+            state.cartProductPage = action.payload
         }
 
     }
 });
 
-export const { addToCart, removeFromCart, decreaseCart, setProduct, getTotals, addSingleCartProduct, addCartProduct, addCartSection } = cartSlice.actions;
+export const { addToCart, removeFromCart, decreaseCart, setProduct, getTotals, addSingleCartProduct, addCartProduct, addCartSection,addCartProductPageIncrease, addCartProductPageDecrease, addCartProductPage } = cartSlice.actions;
 
 export default cartSlice.reducer;

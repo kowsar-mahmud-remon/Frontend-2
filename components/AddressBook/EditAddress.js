@@ -22,13 +22,13 @@ const EditAddress = () => {
   };
 
   return (
-    <div className="text-[#686868]">
+    <div className={`text-[#686868] shadow-md`}>
       <input type="checkbox" id="my-modal-1" className="modal-toggle" />
       <div className={`modal ${style.modalBackground}`}>
-        <div className="modal-box relative w-11/12 max-w-[780px]">
-          <div className="py-2 bg-[#FFFFFF] flex justify-between items-center">
+        <div className="modal-box relative w-11/12 max-w-[780px] scrollbar-hide m-0 p-0">
+          <div className={` rounded bg-[#FFFFFF] flex justify-between items-center ${style.modalShaddow} p-6`}>
             <p className=" text-[#001E00] font-medium text-base">
-              Add New Delivery Address
+              Edit Delivery Address
             </p>
             <button type="">
               <label
@@ -39,11 +39,11 @@ const EditAddress = () => {
               </label>
             </button>
           </div>
-          <div className="shadow-inner py-8 px-4 rounded">
+          <div className=" px-6 rounded">
             <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1">
-              <div className="lg:mt-6 mt-4">
+              <div className=" mt-4">
                 <label
-                  className="block text-sm font-medium text-[#001E00]"
+                  className="block text-sm font-medium text-[#001E00] mb-2"
                   for=""
                 >
                   Full Name
@@ -55,9 +55,9 @@ const EditAddress = () => {
                   className={`input ${style.inputborder} w-full lg:mr-2 md:mr-2`}
                 />
               </div>
-              <div className="lg:mt-6 mt-4">
+              <div className=" mt-4">
                 <label
-                  className="block text-sm font-medium text-[#001E00] lg:ml-2 md:ml-2"
+                  className="block text-sm font-medium text-[#001E00] mb-2 lg:ml-2 md:ml-2"
                   for=""
                 >
                   Address
@@ -69,9 +69,9 @@ const EditAddress = () => {
                   className={`input ${style.inputborder} w-full lg:ml-2 md:ml-2`}
                 />
               </div>
-              <div className="lg:mt-6 mt-4">
+              <div className=" mt-4">
                 <label
-                  className="block text-sm font-medium text-[#001E00]"
+                  className="block text-sm font-medium text-[#001E00] mb-2"
                   for=""
                 >
                   Mobile Number
@@ -83,9 +83,9 @@ const EditAddress = () => {
                   className={`input ${style.inputborder} w-full lg:mr-2 md:mr-2`}
                 />
               </div>
-              <div className="lg:mt-6 mt-4">
+              <div className=" mt-4">
                 <label
-                  className="block text-sm font-medium text-[#001E00] lg:ml-2 md:ml-2"
+                  className="block text-sm font-medium text-[#001E00] mb-2 lg:ml-2 md:ml-2"
                   for=""
                 >
                   Landmark
@@ -98,9 +98,9 @@ const EditAddress = () => {
                 />
               </div>
 
-              <div className="lg:mt-6 mt-4">
+              <div className=" mt-4">
                 <label
-                  className="block text-sm font-medium text-[#001E00] "
+                  className="block text-sm font-medium text-[#001E00] mb-2 "
                   for=""
                 >
                   Province
@@ -113,9 +113,9 @@ const EditAddress = () => {
                   <option>Walking Dead</option>
                 </select>
               </div>
-              <div className="lg:mt-6 mt-4">
+              <div className=" mt-4">
                 <label
-                  className="block text-sm font-medium text-[#001E00] lg:ml-2 md:ml-2"
+                  className="block text-sm font-medium text-[#001E00] mb-2 lg:ml-2 md:ml-2"
                   for=""
                 >
                   Select a label for effective delivery:
@@ -134,9 +134,9 @@ const EditAddress = () => {
                 </div>
               </div>
 
-              <div className="lg:mt-6 mt-4">
+              <div className=" mt-4">
                 <label
-                  className="block text-sm font-medium text-[#001E00]"
+                  className="block text-sm font-medium text-[#001E00] mb-2"
                   for=""
                 >
                   City
@@ -151,9 +151,9 @@ const EditAddress = () => {
                   <option>Walking Dead</option>
                 </select>
               </div>
-              <div className="lg:ml-2 md:ml-2 row-span-3 lg:mt-6 mt-4">
+              <div className="lg:ml-2 md:ml-2 row-span-3  mt-4">
                 <label
-                  className="block text-sm font-medium text-[#001E00] "
+                  className="block text-sm font-medium text-[#001E00] mb-2 "
                   for=""
                 >
                   Default Address (Optional)
@@ -161,15 +161,11 @@ const EditAddress = () => {
                 <div className="border p-3 rounded-lg">
                   <div className="flex">
                     <input type="checkbox" />
-                    <p className="text-sm  lg:ml-2 md:ml-2">
-                      Default shipping address
-                    </p>
+                    <p className="text-sm ml-2">Default shipping address</p>
                   </div>
                   <div className="flex">
                     <input type="checkbox" />
-                    <p className="text-sm lg:ml-2 md:ml-2">
-                      Default billing address
-                    </p>
+                    <p className="text-sm ml-2">Default billing address</p>
                   </div>
                   <p className="mt-4">
                     Your existing default address setting will be replaced if
@@ -178,9 +174,9 @@ const EditAddress = () => {
                 </div>
               </div>
 
-              <div className="lg:mt-6 mt-4">
+              <div className=" mt-4">
                 <label
-                  className="block text-sm font-medium text-[#001E00]"
+                  className="block text-sm font-medium text-[#001E00] mb-2"
                   for=""
                 >
                   Area
@@ -195,7 +191,7 @@ const EditAddress = () => {
               </div>
             </div>
           </div>
-          <div className="modal-action flex justify-between items-center">
+          <div className={`modal-action flex justify-between items-center p-6 ${style.modalShaddow}`}>
             <div className="flex items-center">
               <Image className="w-5" src={trash} alt=""></Image>
               <button

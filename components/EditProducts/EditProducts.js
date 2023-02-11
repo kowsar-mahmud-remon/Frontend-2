@@ -50,9 +50,9 @@ const EditProducts = () => {
 
     ];
   return (
-    <div className=''>
+    <div className='my-7'>
 
-      <div className="lg:w-[1426px] mx-auto text-lg text-[#686868]">
+      <div className="lg:max:w-[1426px] mx-auto text-lg text-[#686868]">
         <div className=" flex items-center mb-2">
           <p className='mr-1'>Home</p>
           <FaAngleRight className='text-[#707070] text-xs mr-1'></FaAngleRight>
@@ -63,7 +63,7 @@ const EditProducts = () => {
         <p className=' text-2xl text-[#FB641B]'>Edit Products</p>
       </div>
 
-      <div className="lg:w-[1426px] mx-auto mt-8">
+      <div className="lg:max:w-[1426px] mx-auto mt-8">
         <div className="lg:flex justify-end">
           <input type="text" placeholder="Product Name" className="input input-bordered w-full max-w-[259px] text-sm lg:ml-4 text-[#686868]" mb-2 />
           <input type="text" placeholder="Product ID" className="input input-bordered w-full max-w-[235px] text-sm lg:ml-4 text-[#686868]" mb-2 />
@@ -78,9 +78,9 @@ const EditProducts = () => {
         </div>
       </div>
 
-      <div className="lg:w-[1426px] mx-auto mt-6">
+      <div className="lg:max:w-[1426px] mx-auto mt-6">
         <p className='text-[#001E00] text-lg mb-3 font-medium'>Products</p>
-        <div className="p-6 flex flex-wrap lg:justify-center">
+        <div className="p-6 flex flex-wrap justify-center lg:justify-start">
           {
             productDetails.map(product => <div key={product._id} className="w-[183px] p-2">
               <div className=" flex justify-end mb-[-45px] mr-1">

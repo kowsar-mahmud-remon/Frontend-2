@@ -35,7 +35,6 @@ const Navication = () => {
 
   useEffect(() => {
     if (accessToken) {
-      console.log(accessToken);
       fetch("https://banglar-big-store.onrender.com/api/user/getMe", {
         headers: {
           "content-type": "application/json",
@@ -43,7 +42,12 @@ const Navication = () => {
         },
       })
         .then((res) => res.json())
-        .then((data) => console.log(data));
+        .then((data) =>{ 
+          console.log(data.user)
+          if(data?.user?._id){
+            dispatch(userLoggedIn({ token: cookies?.banglarBigStore, user: data?.user }))
+          }
+          });
     }
 
     if (cookies?.banglarBigStore)
@@ -70,7 +74,6 @@ const Navication = () => {
   const handleVoice = () => {
     setRecognitionStarted(true);
   };
-
   return (
     <section className="shadow-md hidden lg:block z-20 shadow-block-900 relative">
       <TopNavBar />
