@@ -50,7 +50,7 @@ const ManageAccoutSideBar = () => {
                         className={
                           router.asPath ===
                           `/profile/${profile?.href}/${p?.href}`
-                            ? "text-[#287DF3] mt-[0] text-[16px]"
+                            ? "text-[#287DF3] mt-[8px] text-[16px]"
                             : " text-[#686868]  mt-[8px]  text-[16px]"
                         }
                       >
