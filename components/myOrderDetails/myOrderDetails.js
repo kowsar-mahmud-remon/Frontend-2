@@ -103,7 +103,7 @@ const MyOrderDetails = () => {
                       <td>Qty: {data.qty}</td>
                       <td>
                         <Link
-                          href="/orderDetails/myOrderCancelation"
+                          href="/profile/myOrderCancelation"
                           className="text-[#287DF3]"
                         >
                           Cancel
@@ -154,7 +154,7 @@ const MyOrderDetails = () => {
 
                         <td>
                           <Link
-                            href="/orderDetails/myOrderCancelation"
+                            href="/profile/myOrderCancelation"
                             className="text-[#287DF3]"
                           >
                             Cancel

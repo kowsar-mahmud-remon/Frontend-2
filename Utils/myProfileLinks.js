@@ -8,6 +8,8 @@ import Wishlist from "../pages/wishlist/myWishlist";
 import FollowedStore from "../pages/wishlist/followedStore";
 import MyWishList from "../components/ManageAccoutSideBar/MyWishList";
 import FollowedStores from "../components/ManageAccoutSideBar/FollowedStores";
+import MyOrderDetails from "../components/myOrderDetails/myOrderDetails";
+import MyOrderCancelation from "../components/MyOrderCancelation/MyOrderCancelation";
 
 const profileLinksObj = [
   {
@@ -79,6 +81,21 @@ const profileLinksObj = [
     title: "Sell On Banglar Big Store",
     href: "sell",
     element: <Profile />,
+  },
+  {
+    title: "MyOrders",
+    href: "myOrderDetails",
+    element: <MyOrderDetails />,
+  },
+  {
+    title: "OrderCancelation",
+    href: "myOrderCancelation",
+    element: <MyOrderCancelation />,
+  },
+  {
+    title: "WriteReview",
+    href: "writeReview",
+    element: <WriteReview />,
   },
 ];
 
