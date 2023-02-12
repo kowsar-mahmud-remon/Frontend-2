@@ -14,17 +14,18 @@
 .sideNav ul li a {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 12px;
   font-size: 16px;
-  padding: 10px 10px;
-  border-bottom: 1px solid rgb(238, 207, 207);
+  padding: 32px 10px 0 10px;
+  /* border-bottom: 1px solid rgb(238, 207, 207); */
 }
 .sideNav ul li a:hover {
   background-color: #f2f2f2e3;
 }
 .sideNav ul .active a {
   background-color: #f2f2f2;
-  color: #fb641b;
+  /* color: #fb641b; */
+  color: #001e00;
 }
 .sideNav ul .active a svg {
   color: #000;
@@ -87,6 +88,7 @@
 
 .sideNav ul li ul li .activeSubLink {
   background-color: rgba(230, 220, 220, 0.74);
+  color: #fb641b;
 }
 
 @media only screen and (min-width: 200px) and (max-width: 768px) {

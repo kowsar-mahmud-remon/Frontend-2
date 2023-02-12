@@ -29,7 +29,7 @@ const CampaignManagementOne = () => {
         Orders: 25,
         runningTime: "05:00:25",
         endTime: "72:00:00",
-        actions: "Pending"
+        actions: ""
       },
       {
         _id: 3,
@@ -40,7 +40,7 @@ const CampaignManagementOne = () => {
         Orders: 25,
         runningTime: "05:00:25",
         endTime: "72:00:00",
-        actions: "Pending"
+        actions: ""
       },
     ];
   return (
@@ -109,11 +109,15 @@ const CampaignManagementOne = () => {
                 </td>
 
                 <td className="py-6 border-b border-[#B7B7B7] pr-6">
-                  {/* <button className="normal-case font-medium text-[#001E00] border border-[#B7B7B7] rounded-sm px-[21px] py-[10px]">{details.actions}</button> */}
-                  <select className="select select-bordered w-[108px] border border-[#B7B7B7]">
-                    <option className='text-base text-[#686868]'>Inactive</option>
-                    <option className='text-base text-[#0BD838]'>Active</option>
-                  </select>
+                  {
+                    details?.actions === "Pending" ? <button className="normal-case font-medium text-[#001E00] border border-[#B7B7B7] rounded px-[21px] py-[10px]">{details.actions}</button>
+                      :
+                      <select className="select select-bordered w-[108px] h-[40px] border text-[#0BD838] border-[#B7B7B7]">
+                        <option className='text-base text-[#0BD838] rounded'>Active</option>
+                        <option className='text-base text-[#686868] rounded'>Inactive</option>
+                      </select>
+                  }
+
                 </td>
 
               </tr>)
