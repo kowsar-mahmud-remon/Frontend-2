@@ -5,8 +5,8 @@ import profileLinksObj from "../../Utils/myProfileLinks";
 import profileLinksResponsiveObj from "../../Utils/myProfileLinksResponsive";
 const Profile = () => {
   const router = useRouter();
-  
-//   console.log(router.query.slug);
+
+  //   console.log(router.query.slug);
   return (
     <ManageAccountLayout slug={router?.query?.slug?.[0]}>
       <div className="hidden lg:block">
@@ -16,7 +16,6 @@ const Profile = () => {
             p?.links &&
               p?.links?.map((e, i) => {
                 if (e.href === router?.query?.slug?.[1]) {
- 
                   ele = e?.element;
                 }
               });

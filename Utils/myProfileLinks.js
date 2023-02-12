@@ -28,7 +28,7 @@ const profileLinksObj = [
       {
         title: "My Payment Options",
         href: "myPaymentOptions",
-        element: <Profile />,
+        element: <MyOrder />,
       },
       {
         title: "Vouchers",
@@ -52,11 +52,7 @@ const profileLinksObj = [
         href: "myCancellations",
         element: <Profile />,
       },
-      {
-        title: "My Payment Options",
-        href: "myPaymentOptions",
-        element: <Profile />,
-      },
+    
     ],
   },
 
