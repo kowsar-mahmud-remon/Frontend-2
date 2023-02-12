@@ -11,7 +11,7 @@ import FollowedStores from "../components/ManageAccoutSideBar/FollowedStores";
 import MyOrderDetails from "../components/myOrderDetails/myOrderDetails";
 import MyOrderCancelation from "../components/MyOrderCancelation/MyOrderCancelation";
 
-const profileLinksObj = [
+const profileSidebarLinks = [
   {
     title: "Manage My Account",
     href: "manageAccount",
@@ -82,21 +82,7 @@ const profileLinksObj = [
     href: "sell",
     element: <Profile />,
   },
-  {
-    title: "MyOrders",
-    href: "myOrderDetails",
-    element: <MyOrderDetails />,
-  },
-  {
-    title: "OrderCancelation",
-    href: "myOrderCancelation",
-    element: <MyOrderCancelation />,
-  },
-  {
-    title: "WriteReview",
-    href: "writeReview",
-    element: <WriteReview />,
-  },
+ 
 ];
 
-export default profileLinksObj
+export default profileSidebarLinks;
