@@ -86,7 +86,7 @@ const Registation = () => {
             <div className=' flex  justify-center '>
                 <div className=''>
                     <div className='md:mt-[130px] '>
-                        <p className='text-[#FB641B] font-semibold md:text-[24px] mb-[32px] text-[18px] mt-[72px] ml-6'>Register Your Banglar Big Store Account</p>
+                        <p className='text-[#FB641B] font-semibold md:text-[24px] mb-[32px] text-[18px] mt-[72px] ml-6 md:ml-0'>Register Your Banglar Big Store Account</p>
                     </div>
                     <div className=' mt-10 shadow-2xl rounded-2xl bg-white  max-w-[1500px]'>
                         <form onSubmit={(e) => handleSubmit(onSubmit)(e)} className='flex  py-10 flex-col md:flex-row mx-7 md:mx-7 lg:mx-10  xl:mx-20 md:gap-14 lg:gap-20 xl:gap-40 '>
@@ -210,7 +210,7 @@ const Registation = () => {
                                                 required: 'First Name is Required',
 
                                             })}
-                                            className='input border border-[#686868] text-[#686868] text-[16px]' type="text" placeholder='First Name' />
+                                            className='input border border-[#686868] text-[#686868] text-[16px] w-full' type="text" placeholder='First Name' />
                                         {
                                             errors?.firstName?.message && <p className='text-red-700/100'>{errors?.firstName?.message}</p>
                                         }
@@ -224,7 +224,7 @@ const Registation = () => {
 
 
                                             })}
-                                            className='input border border-[#686868] text-[#686868] text-[16px]' type="text" placeholder='Last Name' />
+                                            className='input border border-[#686868] text-[#686868] text-[16px] w-full' type="text" placeholder='Last Name' />
                                         {
                                             errors?.lastName?.message && <p className='text-red-700/100'>{errors?.lastName?.message}</p>
                                         }
@@ -242,10 +242,10 @@ const Registation = () => {
                                         autoComplete='off' className='min-input border-r-[1px] border-[#707070]' type="number" placeholder='Day' /> */}
                                             {/* Cinput
                                         autoComplete='off' className='min-input' type="number" placeholder='Year' /> */}
+                                            <AsyncSelect className=' border border-[#001E00] ' cacheOptions defaultOptions value={{ label: 'Months' }} loadOptions={(e) => promiseOptions(e, months)} />
+                                            <AsyncSelect className=' border border-[#001E00] ' cacheOptions defaultOptions value={{ label: 'Day' }} loadOptions={(e) => promiseOptions(e, days)} />
 
-                                            <AsyncSelect className=' border border-[#001E00] rounded-l-md' cacheOptions defaultOptions loadOptions={(e) => promiseOptions(e, days)} />
-                                            <AsyncSelect className=' border border-[#001E00] ' cacheOptions defaultOptions loadOptions={(e) => promiseOptions(e, months)} />
-                                            <AsyncSelect className=' border  border-[#001E00]' cacheOptions defaultOptions loadOptions={(e) => promiseOptions(e, years)} />
+                                            <AsyncSelect className=' border  border-[#001E00]' cacheOptions defaultOptions value={{ label: 'Year' }} loadOptions={(e) => promiseOptions(e, years)} />
 
 
                                         </div>
@@ -254,7 +254,7 @@ const Registation = () => {
                                         <label >Gender</label>
                                         {/* <input
                                     autoComplete='off' className='min-input border-[1px] border-[#707070] rounded' type="number" placeholder='Months' /> */}
-                                        <AsyncSelect className=' border border-[#001E00] rounded-md' cacheOptions defaultOptions loadOptions={(e) => promiseOptions(e, gender)} />
+                                        <AsyncSelect className=' border border-[#001E00] rounded-md' cacheOptions defaultOptions value={{ label: 'Select' }} loadOptions={(e) => promiseOptions(e, gender)} />
                                     </div>
                                 </div>
                                 <button

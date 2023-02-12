@@ -30,7 +30,7 @@ const MyOrderDetails = () => {
   };
 
   return (
-    <div className="w-full md:pl-5 md:mx-0 mx-3">
+    <div className="w-full md:px-0 px-3">
       <h2 className="text-[24px] font-[500] text-[#FB641B] mb-4">
         Order Details
       </h2>
@@ -103,7 +103,7 @@ const MyOrderDetails = () => {
                       <td>Qty: {data.qty}</td>
                       <td>
                         <Link
-                          href="/orderDetails/myOrderCancelation"
+                          href="/profile/myOrderCancelation"
                           className="text-[#287DF3]"
                         >
                           Cancel
@@ -154,7 +154,7 @@ const MyOrderDetails = () => {
 
                         <td>
                           <Link
-                            href="/orderDetails/myOrderCancelation"
+                            href="/profile/myOrderCancelation"
                             className="text-[#287DF3]"
                           >
                             Cancel
