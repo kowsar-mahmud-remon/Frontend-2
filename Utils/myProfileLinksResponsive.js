@@ -1,3 +1,5 @@
+import AddNewAddress from "../components/AddressBook/AddNewAddress"
+import AddressBook from "../components/AddressBook/AddressBook"
 import ManageAccount from "../components/ManageAccoutSideBar/ManageAccount"
 import ManageAccountResponsive from "../components/ManageAccoutSideBar/ManageAccountResponsive"
 import MyReviewsResponsive from "../components/ManageAccoutSideBar/MyReviewsResponsive"
@@ -22,7 +24,7 @@ const profileLinksResponsiveObj = [
   {
     title: "Address book",
     href: "addressBook",
-    element: <ManageAccountResponsive />,
+    element: <AddressBook />,
   },
   {
     title: "My Payment Options",

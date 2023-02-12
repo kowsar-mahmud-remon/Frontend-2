@@ -10,6 +10,8 @@ import MyWishList from "../components/ManageAccoutSideBar/MyWishList";
 import FollowedStores from "../components/ManageAccoutSideBar/FollowedStores";
 import MyOrderDetails from "../components/myOrderDetails/myOrderDetails";
 import MyOrderCancelation from "../components/MyOrderCancelation/MyOrderCancelation";
+import AddNewAddress from "../components/AddressBook/AddNewAddress";
+import AddressBook from "../components/AddressBook/AddressBook";
 
 const profileSidebarLinks = [
   {
@@ -25,7 +27,7 @@ const profileSidebarLinks = [
       {
         title: "Address Book",
         href: "addressBook",
-        element: <MyOrder />,
+        element: <AddressBook />,
       },
       {
         title: "My Payment Options",
@@ -82,7 +84,6 @@ const profileSidebarLinks = [
     href: "sell",
     element: <Profile />,
   },
- 
 ];
 
 export default profileSidebarLinks;
