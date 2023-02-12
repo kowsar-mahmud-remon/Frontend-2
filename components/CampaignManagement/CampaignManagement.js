@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import { FaAngleRight } from 'react-icons/fa';
 import { HiDotsHorizontal } from 'react-icons/hi';
@@ -51,7 +52,7 @@ const CampaignManagement = () => {
                     <HiDotsHorizontal className='text-[#686868]'></HiDotsHorizontal>
                   </label>
                   <ul tabIndex={0} className="dropdown-content menu shadow bg-base-100 rounded border border-[#B7B7B7] w-[121px] text-base text-[#686868]">
-                    <li><a>View Detail</a></li>
+                    <li><Link href="campaignManagementOne">View Detail</Link></li>
                     <li><a>Edit</a></li>
                   </ul>
                 </div>
