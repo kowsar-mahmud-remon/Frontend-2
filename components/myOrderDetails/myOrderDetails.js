@@ -3,6 +3,7 @@ import img1 from "../../assets/images/myOrdersDetails/Vector (3).png";
 import img2 from "../../assets/images/myOrdersDetails/Group 2417.png";
 import Timeline from "./Timeline/Timeline";
 import Link from "next/link";
+import { FaArrowLeft } from "react-icons/fa";
 
 const MyOrderDetails = () => {
   const data = {
@@ -31,7 +32,18 @@ const MyOrderDetails = () => {
 
   return (
     <div className="w-full md:px-0 px-3">
-      <h2 className="text-[24px] font-[500] text-[#FB641B] mb-4">
+      <div className='md:hidden'>
+        <button
+          onClick={() => router.back()}
+          className="flex items-center gap-[13px]"
+        >
+          <FaArrowLeft className=""></FaArrowLeft>
+          <h1 className="text-[20px]  font-[500] text-[#001E00] my-4">
+            Order Details
+          </h1>
+        </button>
+      </div>
+      <h2 className="text-[24px] font-[500] text-[#FB641B] mb-4 hidden md:block">
         Order Details
       </h2>
       <div className="flex justify-between items-center px-4 py-5 shadow-lg rounded-lg">
