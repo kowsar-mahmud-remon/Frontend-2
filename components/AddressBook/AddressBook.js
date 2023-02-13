@@ -4,7 +4,7 @@ import arrow from "/assets/images/arrow.png";
 import plus from "/assets/images/plus.png";
 import AddressBookModal from "../../components/AddressBook/AddressBookModal";
 import EditAddress from "../../components/AddressBook/EditAddress";
-import AddNewAddress from "../../components/AddressBook/AddNewAddress"
+import AddNewAddress from "../../components/AddressBook/AddNewAddress";
 
 const AddressBook = () => {
   return (

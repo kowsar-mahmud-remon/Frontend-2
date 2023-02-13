@@ -15,7 +15,7 @@ const OrdersProduct = ({data}) => {
               <p>{data.orderDate}</p>
             </div>
             <Link
-              href={`/orderDetails/myOrderDetails`}
+              href={`/profile/myOrderDetails`}
               className="text-[#287DF3] text-[16px] mr-[19px]"
             >
               View More

@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 
 import { FaCheck } from "react-icons/fa";
 import profileLinksObj from "../../Utils/myProfileLinks";
+import profileSidebarLinks from "../../Utils/profileLinkForSidebar";
 
 
 // import Profile from './Profile';
@@ -32,7 +33,7 @@ const ManageAccoutSideBar = () => {
           </div>
         </div>
 
-        {profileLinksObj?.map((profile, i) => {
+        {profileSidebarLinks?.map((profile, i) => {
           const url = `/profile/${profile.href}`;
 
           return (
@@ -46,11 +47,10 @@ const ManageAccoutSideBar = () => {
                   {profile?.links?.map((p, i) => (
                     <Link key={i} href={`/profile/${profile?.href}/${p?.href}`}>
                       <li
-                      
                         className={
                           router.asPath ===
                           `/profile/${profile?.href}/${p?.href}`
-                            ? "text-[#287DF3] mt-[0] text-[16px]"
+                            ? "text-[#287DF3] mt-[8px] text-[16px]"
                             : " text-[#686868]  mt-[8px]  text-[16px]"
                         }
                       >

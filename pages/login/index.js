@@ -20,15 +20,15 @@ const Login = () => {
     const [cookies, setCookie] = useCookies(['banglarBigStore']);
     const router = useRouter()
     useEffect(() => {
-    
+
         if (data) {
             setError('')
             setCookie('banglarBigStore', data?.token, { path: '/' });
-            if(router?.query?.from) router.push(router.query?.from)
+            if (router?.query?.from) router.push(router.query?.from)
             // router.push('/account/profile')
         }
-    }, [data, error, cookies, setCookie,router])
-  
+    }, [data, error, cookies, setCookie, router])
+
 
     const handleForm = (e) => {
 
@@ -47,63 +47,73 @@ const Login = () => {
             })
         }
     }
-   
+
     return (
         <NavicationLayout>
-            <div className=' h-[100%] mx-[20px] md:mx-[50px] xl:mx-[150px] 2xl:mx-[210px] pt-10 pb-16'>
+            <div className='  md:mb-[214px] flex  justify-center'>
                 <div>
-                    <h6 className='text-[686868]'>Home/<span className='text-blue-600/100'>Login</span></h6>
-                    <p className='text-red-600/100 font-semibold text-[16px] xl:text-[24px]'>Edit Your Banglar Big Bazar Account</p>
-                </div>
-                <div className='w-[100%] h-[750px] flex gap-[50px] shadow-2xl rounded-2xl bg-white mt-10'>
-                    <div className='h-[100%] w-[100%]'>
-                        <Image alt="" className='h-[100%]' src={loginImg} />
+                    <div className='hidden md:block'>
+
+                        <p className='text-[#FB641B] font-semibold text-[16px] md:text-[24px] md:mt-[147px] md:mb-[64px]'>Login Your Banglar Big Bazar Account</p>
                     </div>
-                    <div className='w-[100%] my-1 xl:my-auto pr-5 pl-5 sm:pr-16 xl:pr-[100px] sm:pl-16 '>
-                        <div>
-                            <Image alt="" src={logo} />
-                            <Image alt="" src={logo_dic} />
+                    <div className='  max-w-[1500px] md:flex  shadow-2xl rounded-2xl bg-white mt-10'>
+                        <div className='px-[28px] md:px-[0px] md:w-[45%] h-auto w-full rounded-md'>
+                            <Image alt="" className='md:h-[784px] md:w-[701px]' src={loginImg} />
                         </div>
-                        <form
-                            onSubmit={handleForm}
-                            className=' flex flex-col gap-6 mt-10'>
-                            <label className='text-red-600/100'>Login</label>
-                            <input
-                                name='email'
-                                className='input border-2 border-gray-400' type="text" placeholder='Enter Your Phone Number or Email' />
-                            {
-                                formError && <p className='text-red-500 text-[15px] '>{formError}</p>
-                            }
-                            <input
-                                name='pass'
-                                className='input border-2 border-gray-400' type={check ? 'text' : 'password'} placeholder='Enter Your Password' />
-                            <div className='flex justify-between'>
-                                <div className='flex gap-1 '>
-                                    <input onChange={e => setCheck(e.target.checked)} type="checkbox" />
-                                    <p>Show Passwords</p>
+                        <div className=' md:px-[86px] px-[28px] md:w-[55%] w-full '>
+                            <div className='md:mt-[58px] md:block hidden'>
+                                <Image alt="" src={logo} />
+
+                            </div>
+                            <form
+                                onSubmit={handleForm}
+                                className=' flex flex-col md:mt-[32px]'>
+                                <label className='text-[24px] text-[#FB641B] md:mb-[12px] mt-[20px] font-semibold'>Login</label>
+                                <p className='block  md:hidden sm:hidden mt-[24px] mb-2 text-[14px] text-[#001E00]'>Email Or Phone Number*</p>
+                                <input
+                                    name='email'
+                                    className='input border-2 border-[#686868] md:border-[#287DF3] md:mb-[32px] mb-[20px] bg-white h-[48px]  md:h-[72px] md:text-[16px]' type="text" placeholder='Enter Your Phone Number or Email' />
+                                {
+                                    formError && <p className='text-red-500 text-[15px] '>{formError}</p>
+                                }
+                                <p className='block  md:hidden sm:hidden mt-[20px] mb-2 text-[14px]  text-[#001E00]'>Password*</p>
+                                <input
+                                    name='pass'
+                                    className='input border-2 border-[#686868]  md:border-[#287DF3]  md:h-[72px] md:text-[16px]' type={check ? 'text' : 'password'} placeholder='Minimum 6 Characters' />
+                                <div className='flex justify-between mt-[12px] mb-[20px]'>
+                                    <div className='flex gap-[12px] '>
+                                        <input className='h[19px] w-[19px] border border-[#686868]' onChange={e => setCheck(e.target.checked)} type="checkbox" />
+                                        <p className='text-[#686868] font-semibold text-[16px]'>Show Passwords</p>
+                                    </div>
+                                    <p className='text-[#287DF3] text-[16px] font font-semibold '>Forgot Password?</p>
                                 </div>
-                                <p className='text-blue-600/100 underline '>Forgot Password?</p>
-                            </div>
 
-                            {
-                                error?.data?.message && <p className='text-red-500 text-[19px] mb-2 text-center '>{error?.data?.message}</p>
-                            }
+                                {
+                                    error?.data?.message && <p className='text-red-500 text-[19px] mb-2 text-center '>{error?.data?.message}</p>
+                                }
 
-                            <button className='btn bg-[#FB641B] h-[45px] sm:h-[55px] xl:h-[70px] text-white'>Login</button>
-                            <span className='mx-auto text-[#FB641B]'>Or</span>
-                        </form>
-                        <div className='flex flex-col gap-6 mt-6 pb-16 '>
-                            <div className='w-full flex justify-between items-center gap-4 '>
-                                <button className='btn bg-[#3B5998] text-white w-[220px] flex-nowrap'>
-                                    <Image alt="" src={fbLogo} />
-                                    Facebook
-                                </button>
-                                <button className='btn bg-[#D34836] text-white w-[220px] flex-nowrap'>
-                                    <Image alt="" src={googleLogo} />
-                                    Google
-                                </button>
+                                <button className='btn bg-[#FB641B] text-[18px] md:h-[72px]  text-white md:mt-[25px]'>Login</button>
+                                <span className='mx-auto text-[#FB641B] md:mt-[8px] text-[24px] mt-[20px]'>Or</span>
+
+                            </form>
+
+                            <div className='w-full flex  items-center gap-4 mt-[16px] mb-[40px]'>
+                                <div className='w-1/2'>
+                                    <button className='btn bg-[#3B5998] text-white md:text-[18px]  text-[15px]  md:h-[72px] h-[48px] flex-nowrap'>
+                                        <Image className='h-[27px] w-[28px]' alt="" src={fbLogo} />
+                                        Facebook
+                                    </button>
+                                </div>
+                                <div className='w-1/2'>
+                                    <button className='btn bg-[#D34836] text-white md:text-[18px] md:h-[72px]  text-[15px] h-[48px]  flex-nowrap'>
+                                        <Image className='h-[27px] w-[28px] ' alt="" src={googleLogo} />
+                                        Google
+                                    </button>
+                                </div>
                             </div>
-                            <p className='mx-auto'>You have no account? <Link className='text-blue-600/100' href='/registation'>Register</Link></p>
+                            <div className='flex flex-col gap-6 md:mt-3  pb-[145px] md:pb-[50px] '>
+                                <p className='mx-auto font-semibold md:text-[18px] text-[16px] text-[#001E00]'>You have no Seller account? <Link className='text-[#287DF3]' href='/registation'>Register</Link></p>
+                            </div>
                         </div>
                     </div>
                 </div>

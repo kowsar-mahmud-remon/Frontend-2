@@ -13,7 +13,7 @@ import MyOrderCancelation from "../components/MyOrderCancelation/MyOrderCancelat
 import AddNewAddress from "../components/AddressBook/AddNewAddress";
 import AddressBook from "../components/AddressBook/AddressBook";
 
-const profileLinksObj = [
+const profileSidebarLinks = [
   {
     title: "Manage My Account",
     href: "manageAccount",
@@ -32,7 +32,7 @@ const profileLinksObj = [
       {
         title: "My Payment Options",
         href: "myPaymentOptions",
-        element: <MyOrder />,
+        element: <Profile />,
       },
       {
         title: "Vouchers",
@@ -56,7 +56,11 @@ const profileLinksObj = [
         href: "myCancellations",
         element: <Profile />,
       },
-    
+      {
+        title: "My Payment Options",
+        href: "myPaymentOptions",
+        element: <Profile />,
+      },
     ],
   },
 
@@ -80,21 +84,6 @@ const profileLinksObj = [
     href: "sell",
     element: <Profile />,
   },
-  {
-    title: "MyOrders",
-    href: "myOrderDetails",
-    element: <MyOrderDetails />,
-  },
-  {
-    title: "OrderCancelation",
-    href: "myOrderCancelation",
-    element: <MyOrderCancelation />,
-  },
-  {
-    title: "WriteReview",
-    href: "writeReview",
-    element: <WriteReview />,
-  },
 ];
 
-export default profileLinksObj
+export default profileSidebarLinks;

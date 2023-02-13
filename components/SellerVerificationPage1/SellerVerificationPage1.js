@@ -12,17 +12,6 @@ import { MdArrowForwardIos } from "react-icons/md";
 const SellerVerificationPage1 = () => {
   return (
     <div className=" max-w-[1896px] mt-[33px]">
-      <div className="mt-[45px] lg:block mobile:hidden">
-        <div className="mx-6 mb-8">
-          <Link href="/" className="">
-            <Image className="" src={logo} alt="img" width={224} />
-           
-          </Link>
-        </div>
-        <div className=" w-[282px] m-6">
-          <SellerVerificationPageSideNav ></SellerVerificationPageSideNav>
-        </div>
-      </div>
       <div className="">
         <div className="w-full">
           <Image className=" mr-4" src={img} alt="" width={1426} height={123} />
@@ -34,34 +23,34 @@ const SellerVerificationPage1 = () => {
             <p className=" text-base mt-2 font-normal text-[#686868]">
               YOUR STORE IS INACTIVE UNTIL YOU COMPLETE THE STEPS BELOW
             </p>
-{/* for progress bar */}
-<div className="flex items-center my-8">
-            <div className="bg-[#FB641B] text-white border border-white rounded-3xl px-1 text-[5px] md:text-[12px]">
-              1
+            {/* for progress bar */}
+            <div className="flex items-center my-8">
+              <div className="bg-[#FB641B] text-white border border-white rounded-3xl px-1 text-[5px] md:text-[12px]">
+                1
+              </div>
+              <div className="bg-[#FB641B] text-white text-[5px] md:text-[12px] px-5 md:px-20 rounded-xl">
+                Add Shop Name
+              </div>
+              <div className=" text-[5px] md:text-[12px] px-1 rounded-lg border border-black">
+                2
+              </div>
+              <div className=" text-[5px] md:text-[12px] border border-black px-5 md:px-20 rounded-xl">
+                Add Shop Address
+              </div>
+              <div className=" text-[5px] md:text-[12px] px-1 rounded-lg border border-black">
+                3
+              </div>
+              <div className=" text-[5px] md:text-[12px] border border-black px-5 md:px-20 rounded-xl">
+                Verify ID & Bank
+              </div>
+              <div className=" text-[5px] md:text-[12px] px-1 rounded-lg border border-black">
+                4
+              </div>
+              <div className=" text-[5px] md:text-[12px] border border-black px-5 md:px-20 rounded-xl">
+                Add Product
+              </div>
+              {/* for profile info */}
             </div>
-            <div className="bg-[#FB641B] text-white text-[5px] md:text-[12px] px-5 md:px-20 rounded-xl">
-              Add Shop Name
-            </div>
-            <div className=" text-[5px] md:text-[12px] px-1 rounded-lg border border-black">
-              2
-            </div>
-            <div className=" text-[5px] md:text-[12px] border border-black px-5 md:px-20 rounded-xl">
-            Add Shop Address
-            </div>
-            <div className=" text-[5px] md:text-[12px] px-1 rounded-lg border border-black">
-              3
-            </div>
-            <div className=" text-[5px] md:text-[12px] border border-black px-5 md:px-20 rounded-xl">
-            Verify ID & Bank
-            </div>
-            <div className=" text-[5px] md:text-[12px] px-1 rounded-lg border border-black">
-              4
-            </div>
-            <div className=" text-[5px] md:text-[12px] border border-black px-5 md:px-20 rounded-xl">
-            Add Product
-            </div>
-            {/* for profile info */}
-          </div>
             <div className="">
               <p className=" text-2xl text-[#686868] font-medium mt-10">
                 Profile Information
@@ -107,9 +96,11 @@ const SellerVerificationPage1 = () => {
                   />
                 </div>
               </div>
-              <button className="btn w-[369px] h-[72px] bg-[#FB641B] mt-10 text-white">
-                Continue
-              </button>
+              <Link href="sellerVerificationPage2">
+                <button className="btn w-[369px] h-[72px] bg-[#FB641B] mt-10 text-white">
+                  Continue
+                </button>
+              </Link>
             </div>
 
             <div className=" mt-[78px]">
