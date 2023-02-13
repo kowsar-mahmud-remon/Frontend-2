@@ -5,7 +5,7 @@ import { getCookie } from "../../Utils/getCookies";
 export const apiSlice = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
-    baseUrl: `banglar-big-store-frontend-2.vercel.app/api`,
+    baseUrl: `http://localhost:5000/api`,
     prepareHeaders: async (headers, { getState, endpoint }) => {
       const token = getState()?.auth?.accessToken;
      

@@ -22,6 +22,7 @@ import { useCookies } from "react-cookie";
 import { useDispatch, useSelector } from "react-redux";
 import { userLoggedIn } from "../../features/auth/authSlice";
 import { store } from "../../store/store";
+import { FiSearch } from "react-icons/fi";
 
 const Navication = () => {
   const [searchText, setSearchText] = useState("");
@@ -42,12 +43,12 @@ const Navication = () => {
         },
       })
         .then((res) => res.json())
-        .then((data) =>{ 
+        .then((data) => {
           console.log(data.user)
-          if(data?.user?._id){
+          if (data?.user?._id) {
             dispatch(userLoggedIn({ token: cookies?.banglarBigStore, user: data?.user }))
           }
-          });
+        });
     }
 
     if (cookies?.banglarBigStore)
@@ -75,24 +76,24 @@ const Navication = () => {
     setRecognitionStarted(true);
   };
   return (
-    <section className="shadow-md    z-20 shadow-block-900 relative">
+    <section className="shadow-md z-20 shadow-block-900 relative">
       <TopNavBar />
 
       <div className="flex items-center h-[80px] gap-3 px-[20px] lg:px-[40px] 2xl:px-[50px]  bg-[#ffffff] justify-between text-[#026C51]">
         <div className="flex justify-center first-line:">
           <Link href="/">
-            <Image 
-            width={180}
-            height={48}
-            src={logo} alt="img" />
-           
+            <Image
+              width={180}
+              height={48}
+              src={logo} alt="img" />
+
           </Link>
         </div>
 
         <div className={`${styles.navSearch}`}>
-          <div className="flex items-center w-full justify-between">
+          <div className="flex items-center w-full justify-between bg-transparent">
             <input
-              className="pl-[16px]"
+              className="pl-[16px] bg-white outline-none border-0"
               value={searchText}
               onChange={(e) => setSearchText(e.target.value)}
               type="text"
@@ -104,7 +105,13 @@ const Navication = () => {
               style={{ color: recognitionColor }}
             />
           </div>
-          <button>Search</button>
+          <button style={{
+            display: "flex"
+          }} className="items-center gap-2 justify-center">
+            <FiSearch
+              className="text-[17px] text-white block md:hidden"
+            />
+            Search</button>
         </div>
         <div
           className={` ${styles.nanMenu} md:flex item-center items-center hidden`}

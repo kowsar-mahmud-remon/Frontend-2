@@ -90,11 +90,14 @@ export const imgSettingsMobile = {
         },
     ]
 };
+
+
 export const imageSettings = {
     speed: 500,
-    slidesToShow: 6,
+    slidesToShow: 3,
     slidesToScroll: 1,
     cssEase: "linear",
     vertical: true,
     verticalSwiping: true,
+    arrows:false,
 };

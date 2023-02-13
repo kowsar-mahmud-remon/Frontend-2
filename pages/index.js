@@ -68,29 +68,11 @@ export default function Home({ items }) {
           {/* <Category /> */}
           {/* <MediaCenter /> */}
           {/* <AddProducts /> */}
-          <div className={`flex bg-white flex-col h-[310px] lg:h-[396px] xl:flex-row xl:h-[396px] 2xl:h-[466px]  shadow-xl shadow-block-900 w-[100%] p-4 `}>
+          <div className={`flex bg-white flex-col h-[146px] lg:h-[396px] xl:flex-row xl:h-[396px] 2xl:h-[466px]  shadow-xl shadow-block-900 w-[100%] object-cover`}>
             {
               items.length && <Carosel data={items} />
             }
-            {/* <div className={`${styles.rightHeroSection} pl-4`} >
-              <div>
-                <div>
-                  <Image alt='' src={logo} />
-                  <Image alt='' src={logoDic} />
-
-                </div>
-                <div >
-                  <p className='text-[001E00] text-[13px] lg:text-[16px] font-medium lg:font-semibold'>Order Online and enjoy</p>
-                  <button className='bg-[#026C51] flex items-center gap-2 2xl:gap-2 mt-1 2xl:mt-5 rounded-full py-1 px-5 text-[#ffffff] text-[12px] lg:text-[16px] font-medium lg:font-bold'>
-                    Marketplace
-                    <FaArrowAltCircleRight />
-                  </button>
-
-                </div>
-              </div>
-              <Image alt='' src={rightHeroMid} />
-              <Image alt='' src={rightHeroBottm} />
-            </div> */}
+            
           </div>
         </div>
         <div>
