@@ -12,11 +12,11 @@ const SellerVerificationPage2 = () => {
           <Link href="/" className="">
             <Image className="" src={logo} alt="img" width={224} />
           </Link>
-        </div>
+        </div> 
         <div className=" w-[282px] m-6">
           <SellerVerificationPageSideNav></SellerVerificationPageSideNav>
         </div>
-      </div>
+      </div> 
 
       <div className="className='w-[1426px] px-6 mt-28">
         <p className=" text-2xl text-[#FB641B] font-medium">
