@@ -21,6 +21,7 @@ import MediaCenter from '../components/MediaCenter/MediaCenter';
 import OrderPlace from '../components/OrderPlace/OrderPlace';
 import SellerProductsModal from '../components/SellerProductsModal/SellerProductsModal';
 import AllCategory from '../components/allCategory/AllCategory';
+import VdoStory from '../components/VdoStory/VdoStory';
 
 
 
@@ -92,6 +93,9 @@ export default function Home({ items }) {
               <Image alt='' src={rightHeroBottm} />
             </div> */}
           </div>
+        </div>
+        <div>
+          <VdoStory/>
         </div>
         <div>
           <AllCategory />
