@@ -7,6 +7,8 @@ import { FaAngleRight } from 'react-icons/fa';
 import Image from 'next/image';
 import { HiDotsHorizontal } from 'react-icons/hi';
 import Link from 'next/link';
+import styles from "../../styles/campaignManagementTwo.module.css";
+
 
 
 
@@ -56,10 +58,10 @@ const EditProducts = () => {
       <div className="lg:max:w-[1426px] mx-auto text-lg text-[#686868]">
         <div className=" flex items-center mb-2">
           <p className='mr-1'>Home</p>
-          <FaAngleRight className='text-[#707070] text-xs mr-1'></FaAngleRight>
-          <p className='mr-1'>Products</p>
-          <FaAngleRight className='text-[#707070] text-xs'></FaAngleRight>
-          <p className='text-[#001E00] font-medium'>Edit Product</p>
+          {/* <FaAngleRight className='text-[#707070] text-xs mr-1'></FaAngleRight> */}
+          <p className='mr-1'>{">"} Products</p>
+          {/* <FaAngleRight className='text-[#707070] text-xs'></FaAngleRight> */}
+          <p className='text-[#001E00] font-medium'>{">"} Edit Product</p>
         </div>
         <p className=' text-2xl text-[#FB641B] font-medium'>Edit Products</p>
       </div>
@@ -81,7 +83,7 @@ const EditProducts = () => {
 
       <div className="lg:max:w-[1426px] mx-auto mt-6">
         <p className='text-[#001E00] text-lg mb-3 font-medium'>Products</p>
-        <div className="p-6 flex flex-wrap justify-center lg:justify-start">
+        <div className={`p-6 flex flex-wrap justify-center lg:justify-start ${styles.campaignManagementWithoutBorder}`}>
           {
             productDetails.map(product => <div key={product._id} className="w-[183px] p-2">
               <div className=" flex justify-end mb-[-45px] mr-1">

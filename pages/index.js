@@ -21,7 +21,9 @@ import MediaCenter from '../components/MediaCenter/MediaCenter';
 import OrderPlace from '../components/OrderPlace/OrderPlace';
 import SellerProductsModal from '../components/SellerProductsModal/SellerProductsModal';
 import AllCategory from '../components/allCategory/AllCategory';
+import VdoStory from '../components/VdoStory/VdoStory';
 
+import React from "react";
 
 
 
@@ -63,15 +65,15 @@ export default function Home({ items }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <NavicationWithSideNavLayout >
-        <div className={`${styles.homeBody} w-[100%] `} >
+      <NavicationWithSideNavLayout>
+        <div className={`${styles.homeBody} w-[100%] `}>
           {/* <Category /> */}
           {/* <MediaCenter /> */}
           {/* <AddProducts /> */}
-          <div className={`flex bg-white flex-col h-[310px] lg:h-[396px] xl:flex-row xl:h-[396px] 2xl:h-[466px]  shadow-xl shadow-block-900 w-[100%] p-4 `}>
-            {
-              items.length && <Carosel data={items} />
-            }
+          <div
+            className={`flex bg-white flex-col h-[310px] lg:h-[396px] xl:flex-row xl:h-[396px] 2xl:h-[466px]  shadow-xl shadow-block-900 w-[100%] p-4 `}
+          >
+            {items.length && <Carosel data={items} />}
             {/* <div className={`${styles.rightHeroSection} pl-4`} >
               <div>
                 <div>
@@ -92,6 +94,10 @@ export default function Home({ items }) {
               <Image alt='' src={rightHeroBottm} />
             </div> */}
           </div>
+        </div>
+        <div>
+          
+          <VdoStory />
         </div>
         <div>
           <AllCategory />
