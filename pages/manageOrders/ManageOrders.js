@@ -1,15 +1,15 @@
 import React from "react";
-import ManageProductTable from "../../components/ManageProductTable/ManageProductTable";
 import style from "../../styles/componentsStyles/box-shaddow.module.css";
-import ManageList from "./Managelist";
 import products from "./faketabledata.json";
 import { useState } from "react";
 import ManageOrderTable from "../../components/ManageOrderTable/ManageOrderTable";
+import ManageOrderModal from "../../components/ManageOrderModal/ManageOrderModal";
 
 const ManageOrders = () => {
   const [item, setItem] = useState(products);
   return (
     <section className="bg-[#FFFFFF] lg:max-w-[1426px] w-full">
+        <ManageOrderModal></ManageOrderModal>
       <div className="">
         <div className="">
           <div>
