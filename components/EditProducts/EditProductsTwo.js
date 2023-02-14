@@ -15,6 +15,7 @@ import DBBL from '../../assets/images/DBBL.png';
 import rocket from '../../assets/images/rocket.png';
 import BKASH from '../../assets/images/BKASH.png';
 import delivery3 from '../../assets/images/cash-on-delivery 1.png';
+import VectorShare from '../../assets/images/VectorShare.png';
 import { FaAngleUp } from 'react-icons/fa';
 import { FaAngleDown } from 'react-icons/fa';
 import { FaShoppingCart } from 'react-icons/fa';
@@ -53,7 +54,7 @@ const EditProductsTwo = () => {
       }
     ];
   return (
-    <div className=" my-7">
+    <div className="my-7">
 
       <div className="lg:max:w-[1426px] mx-auto text-lg text-[#686868]">
         <div className=" flex items-center mb-2">
@@ -67,51 +68,68 @@ const EditProductsTwo = () => {
 
       <div className={`lg:max:w-[1426px] mx-auto p-6 lg:flex mt-8 ${styles.campaignManagementWithoutBorder}`}>
 
-        <div className="lg:mr-6 mb-5 lg:w-[96px] p-2  flex flex-wrap">
-          <FaAngleUp className='mt-2 mb-4 w-full'></FaAngleUp>
+        <div className="lg:flex lg:flex-row-reverse">
 
-          {
-            productDetails.map(productImg => <div key={productImg._id} className="">
 
-              <Image
-                onMouseOver={e => setNewImg(e.currentTarget.src)}
-                className='w-[80px] h-[80px] mb-2'
-                src={productImg?.img}
-                alt="Picture of the author"
-                width={80}
-                height={80}
-              />
-
-            </div>)
-          }
-          <FaAngleDown className='mt-4 mb-2 w-full'></FaAngleDown>
-        </div>
-
-        <div className="lg:mr-[38px] mb-10">
-          <div className="flex justify-end mb-[-45px] mr-10 h-10 items-end">
-            <AiFillHeart className=' text-2xl text-[#FB641B] z-10'></AiFillHeart>
+          <div className="lg:mr-[38px] mb-10">
+            <div className="flex justify-end mb-[-45px] mr-10 h-10 items-end">
+              <div className={`p-2 z-10 ${styles.campaignManagementWithoutBorderRadius}`}>
+                <AiFillHeart className={`text-2xl text-[#FB641B] z-10 `}></AiFillHeart>
+              </div>
+            </div>
+            <Image
+              className={`w-[500px] h-[500px] mb-2 mx-auto ${styles.campaignManagementWithoutBorder}`}
+              src={newImg}
+              alt="Picture of the author"
+              width={500}
+              height={500}
+            />
+            <div className="lg:flex mt-5">
+              <button
+                className="w-full flex justify-center items-center gap-3 lg:btn-md lg:max:w-[240px] h-[53px] bg-[#FF9F00] font-medium text-white rounded-md lg:mr-5 mb-2"
+              >Add to Cart <FaShoppingCart className="text-white text-lg mb-1" />
+              </button>
+              <button
+                className="w-full flex justify-center items-center gap-3 lg:btn-md lg:max:w-[240px] h-[53px] bg-[#FB641B] font-medium text-white rounded-md mb-2"
+              >Buy Now <HiShoppingBag className="text-white text-lg mb-1" />
+              </button>
+            </div>
           </div>
-          <Image
-            className='w-[500px] h-[500px] mb-2 mx-auto'
-            src={newImg}
-            alt="Picture of the author"
-            width={500}
-            height={500}
-          />
-          <div className="lg:flex mt-5">
-            <button
-              className="w-full flex justify-center items-center gap-3 lg:btn-md lg:max:w-[240px] h-[53px] bg-[#FF9F00] font-medium text-white rounded-md lg:mr-5 mb-2"
-            >Add to Cart <FaShoppingCart className="text-white text-lg mb-1" />
-            </button>
-            <button
-              className="w-full flex justify-center items-center gap-3 lg:btn-md lg:max:w-[240px] h-[53px] bg-[#FB641B] font-medium text-white rounded-md mb-2"
-            >Buy Now <HiShoppingBag className="text-white text-lg mb-1" />
-            </button>
+          <div className="lg:mr-6 mb-5 lg:w-[96px] p-2  flex flex-wrap">
+            <FaAngleUp className='mt-2 mb-4 w-full hidden lg:block'></FaAngleUp>
+
+            {
+              productDetails.map(productImg => <div key={productImg._id} className="">
+
+                <Image
+                  onMouseOver={e => setNewImg(e.currentTarget.src)}
+                  className={`w-[80px] h-[80px] mb-2 ${styles.campaignManagementWithoutBorder}`}
+                  src={productImg?.img}
+                  alt="Picture of the author"
+                  width={80}
+                  height={80}
+                />
+
+              </div>)
+            }
+            <FaAngleDown className='mt-4 mb-2 w-full hidden lg:block'></FaAngleDown>
           </div>
+
         </div>
 
         <div className="">
-          <p className=' text-[32px] text-[#001E00] font-medium'>Tomato (Local) 500 ±30 gm</p>
+          <div className="flex items-center">
+            <p className=' text-[32px] text-[#001E00] font-medium mr-[104px]'>Tomato (Local) 500 ±30 gm</p>
+            <div className={`p-2 ${styles.campaignManagementWithoutBorderRadius}`}>
+              <Image
+                className={`w-[29px] h-[24px] `}
+                src={VectorShare}
+                alt="Picture of the author"
+                width={29}
+                height={24}
+              />
+            </div>
+          </div>
           <div className="mt-4 flex">
             <div className=" text-[#FB641B] text-2xl flex mr-8">
               <ImStarFull className='p-[1px]'></ImStarFull>

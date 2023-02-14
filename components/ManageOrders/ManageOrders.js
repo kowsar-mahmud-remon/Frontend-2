@@ -46,7 +46,7 @@ function ManageOrders() {
         },
     ];
     return (
-        <div className='ml-[60px]'>
+        <div className=''>
             <p className='text-[18px] mt-[45px]'><span className='text-[#686868] text-[18px]'>Home {">"} Orders & Reviews </span><span className='font-semibold text-[
 #001E00]'>{">"} Manage Orders</span></p>
             <h1 className='text-[#FB641B] text-[24px] mt-[8px] mb-[30px]'>Manage Orders</h1>

@@ -89,7 +89,7 @@ const EditProducts = () => {
               <div className=" flex justify-end mb-[-45px] mr-1">
                 <div className="dropdown">
                   <label tabIndex={0} className="">
-                    <HiDotsHorizontal className='text-[#686868]'></HiDotsHorizontal>
+                    <HiDotsHorizontal className='text-[#686868] cursor-pointer'></HiDotsHorizontal>
                   </label>
                   <ul tabIndex={0} className="dropdown-content menu shadow bg-base-100 rounded border border-[#B7B7B7] w-[125px] text-base text-[#686868]">
                     <li><Link href="editProductsTwo">View Detail</Link></li>
