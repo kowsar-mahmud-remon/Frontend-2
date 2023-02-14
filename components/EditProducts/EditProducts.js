@@ -7,6 +7,8 @@ import { FaAngleRight } from 'react-icons/fa';
 import Image from 'next/image';
 import { HiDotsHorizontal } from 'react-icons/hi';
 import Link from 'next/link';
+import styles from "../../styles/campaignManagementTwo.module.css";
+
 
 
 
@@ -81,7 +83,7 @@ const EditProducts = () => {
 
       <div className="lg:max:w-[1426px] mx-auto mt-6">
         <p className='text-[#001E00] text-lg mb-3 font-medium'>Products</p>
-        <div className="p-6 flex flex-wrap justify-center lg:justify-start">
+        <div className={`p-6 flex flex-wrap justify-center lg:justify-start ${styles.campaignManagementWithoutBorder}`}>
           {
             productDetails.map(product => <div key={product._id} className="w-[183px] p-2">
               <div className=" flex justify-end mb-[-45px] mr-1">
