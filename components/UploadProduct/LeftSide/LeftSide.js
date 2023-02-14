@@ -92,7 +92,7 @@ const LeftSide = () => {
                       />
                     </div>
                     {datas.map((data, index) => (
-                      <div key={index} className="">
+                      <div key={index} className="mb-2">
                         <label htmlFor="thumb-btn">
                           <div className="py-4 px-1 border-dashed border-2 rounded-lg flex flex-col items-center text-center text-[14px]">
                             <Image src={data.img} alt="" width="10px" />
