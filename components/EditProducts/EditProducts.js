@@ -99,7 +99,7 @@ const EditProducts = () => {
             <p className="text-base font-semibold text-[#001E00]">Products</p>
           </div>
           <div
-            className={`rounded-lg mt-2 ${style.boxshaddow} bg-[#FFFFFF]`}
+            className={`rounded-lg mt-2 lg:pb-96 md:pb-72 pb-10 ${style.boxshaddow} bg-[#FFFFFF]`}
           >
             <div className="p-6">
               <div className="grid lg:grid-cols-7 md:grid-cols-4 grid-cols-2 gap-3 justify-center mx-auto">
