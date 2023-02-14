@@ -57,10 +57,8 @@ const EditProductsTwo = () => {
       <div className="lg:max:w-[1426px] mx-auto text-lg text-[#686868]">
         <div className=" flex items-center mb-2">
           <p className='mr-1'>Home</p>
-          <FaAngleRight className='text-[#707070] text-xs mr-1'></FaAngleRight>
-          <p className='mr-1'>Products</p>
-          <FaAngleRight className='text-[#707070] text-xs'></FaAngleRight>
-          <p className='text-[#001E00] font-medium'>Edit Product</p>
+          <p className='mr-1'>{">"} Products</p>
+          <p className='text-[#001E00] font-medium'>{">"} Edit Product</p>
         </div>
         <p className=' text-2xl text-[#FB641B] font-medium'>View Product</p>
       </div>
@@ -112,7 +110,7 @@ const EditProductsTwo = () => {
         </div>
 
         <div className="">
-          <p className=' text-[32px] font-medium'>Tomato (Local) 500 ±30 gm</p>
+          <p className=' text-[32px] text-[#001E00] font-medium'>Tomato (Local) 500 ±30 gm</p>
           <div className="mt-4 flex">
             <div className=" text-[#FB641B] text-2xl flex mr-8">
               <ImStarFull className='p-[1px]'></ImStarFull>
