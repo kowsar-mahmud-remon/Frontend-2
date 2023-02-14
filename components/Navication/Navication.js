@@ -128,12 +128,6 @@ const Navication = () => {
             </select>
           </div>
 
-
-
-
-
-
-
           <Link href="/login" className="flex item-center ">
             Login
             <FaUserAlt className="m-[4px]" />
