@@ -16,47 +16,47 @@ const ProductCampaignModal = ({ modal }) => {
             <div className="grid lg:grid-cols-4 md:grid-cols-4 grid-cols-1">
               <div>
                 <Image
-                  className={` ${style.boxshaddow} rounded h-[170px]`}
+                  className={` ${style.boxshaddow} p-1 rounded h-[170px]`}
                   width={220}
                   src={image}
                   alt=""
                 ></Image>
               </div>
-              <div className="col-span-2">
+              <div className="col-span-2 pl-4">
                 <div>
-                  <p className="text-[#001E00] font-medium">{name}</p>
+                  <p className="text-[#001E00] font-bold">{name}</p>
                 </div>
                 <div className="flex items-center pt-3">
-                  <p className="text-[#001E00] mr-4">
+                  <p className="text-[#001E00] font-semibold mr-4">
                     Brand:{" "}
                     <span className="text-[#686868] text-sm">{brand}</span>
                   </p>
-                  <p className="text-[#001E00]">
+                  <p className="text-[#001E00] font-semibold">
                     Color:{" "}
                     <span className="text-[#686868] text-sm">{color}</span>
                   </p>
                 </div>
                 <div className="flex items-center pt-2">
-                  <p className="text-[#FB641B] text-xl mr-4">Tk {price}</p>
-                  <p className="mr-4">Tk {disprice}</p>
+                  <p className="text-[#FB641B] text-xl mr-4 font-semibold">Tk {price}</p>
+                  <p className="mr-4 line-through font-medium">Tk {disprice}</p>
                   <p>(20% off)</p>
                 </div>
                 <div className="flex items-center pt-3">
                   <Image width={20} src={cashon} alt=""></Image>
-                  <p className="text-xs ml-3">
+                  <p className="text-xs ml-3 font-medium">
                     24 Hours To 72 Hours Delivery Time
                   </p>
                 </div>
                 <div className="flex items-center pt-3">
                   <Image width={20} src={delivery} alt=""></Image>
-                  <p className="text-xs ml-3">Cash on Delivery Available</p>
+                  <p className="text-xs ml-3 font-medium">Cash on Delivery Available</p>
                 </div>
               </div>
               <div className="justify-end text-end">
                 <button type="">
                   <label
                     htmlFor="my-modal-2"
-                    className="cursor-pointer btn-sm btn-circle"
+                    className="cursor-pointer text-[#001E00]"
                   >
                     ✕
                   </label>

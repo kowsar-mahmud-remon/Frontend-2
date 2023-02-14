@@ -77,10 +77,10 @@ const AllProduct = () => {
   ];
 
   return (
-    <section className="bg-[#FFFFFF] py-10">
+    <section className="bg-[#FFFFFF] py-10 mx-auto w-full">
       <ProductCampaignModal modal={modal}></ProductCampaignModal>
       <div className="px-10 mx-auto">
-        <div className="max-w-[1426px]">
+        <div className="lg:max-w-[1426px] w-full">
           <div>
             <div className="text-sm breadcrumbs">
               <ul>
