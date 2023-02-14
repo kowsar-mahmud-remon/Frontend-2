@@ -109,7 +109,7 @@ const AllProduct = () => {
                   All Products
                 </p>
               </div>
-              <div className="grid lg:grid-cols-7 md:grid-cols-5 grid-cols-2 gap-3 justify-center">
+              <div className="grid lg:grid-cols-7 md:grid-cols-5 grid-cols-2 gap-3 justify-center mx-auto">
                 {products.map((product) => (
                   <AllProductCard
                     product={product}

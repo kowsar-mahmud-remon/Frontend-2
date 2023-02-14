@@ -7,7 +7,7 @@ const EditProductCard = ({ product }) => {
   console.log("dld", product);
   const { name, img } = product;
   return (
-    <div className="bg-[#F2F2F2] w-[183px] p-2 rounded-lg h-[215px] relative">
+    <div className="bg-[#F2F2F2] w-[183px] p-2 rounded-lg h-[215px] relative mx-auto">
       <div className="">
         <Image
           className="rounded-md mx-auto lg:w-[167px] md:w-[167px] w-full h-[130px] "
