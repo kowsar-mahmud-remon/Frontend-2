@@ -49,10 +49,8 @@ const CampaignManagementOne = () => {
       <div className="lg:w-[1426px] mx-auto text-lg text-[#686868] mb-8">
         <div className=" flex items-center mb-2">
           <p className='mr-1'>Home</p>
-          <FaAngleRight className='text-[#707070] text-xs mr-1'></FaAngleRight>
-          <p className='mr-1'>Promotions</p>
-          <FaAngleRight className='text-[#707070] text-xs'></FaAngleRight>
-          <p className='text-[#001E00] font-medium'>Campaign Management</p>
+          <p className='mr-1'>{">"} Promotions</p>
+          <p className='text-[#001E00] font-medium'> {">"} Campaign Management</p>
         </div>
         <p className=' text-2xl text-[#FB641B] font-medium'>Campaign Management</p>
       </div>
@@ -63,13 +61,13 @@ const CampaignManagementOne = () => {
 
           <thead className=''>
             <tr className=''>
-              <th className='normal-case text-base text-[#001E00] font-medium bg-[#FFFFFF]'>Product</th>
-              <th className='normal-case text-base text-[#001E00] font-medium bg-[#FFFFFF]'>Product Impressions</th>
-              <th className='normal-case text-base text-[#001E00] font-medium bg-[#FFFFFF]'>Total Clicks</th>
-              <th className='normal-case text-base text-[#001E00] font-medium bg-[#FFFFFF]'>Campaign Orders</th>
-              <th className='normal-case text-base text-[#001E00] font-medium bg-[#FFFFFF]'>Running time </th>
-              <th className='normal-case text-base text-[#001E00] font-medium bg-[#FFFFFF]'>End time</th>
-              <th className='normal-case text-base text-[#001E00] font-medium bg-[#FFFFFF]'>Actions</th>
+              <th className='normal-case text-base text-[#001E00] font-medium bg-[#FFFFFF] p-0 pl-8'><p className='border-r border-[#B7B7B7] mb-8'>Product</p></th>
+              <th className='normal-case text-base text-[#001E00] font-medium bg-[#FFFFFF] p-0 pl-4'><p className='border-r border-[#B7B7B7] mb-8'>Product Impressions</p></th>
+              <th className='normal-case text-base text-[#001E00] font-medium bg-[#FFFFFF] p-0 pl-4'><p className='border-r border-[#B7B7B7] mb-8'>Total Clicks</p></th>
+              <th className='normal-case text-base text-[#001E00] font-medium bg-[#FFFFFF] p-0 pl-4'><p className='border-r border-[#B7B7B7] mb-8'>Campaign Orders</p></th>
+              <th className='normal-case text-base text-[#001E00] font-medium bg-[#FFFFFF] p-0 pl-4'><p className='border-r border-[#B7B7B7] mb-8'>Running time</p></th>
+              <th className='normal-case text-base text-[#001E00] font-medium bg-[#FFFFFF] p-0 pl-4'><p className='border-r border-[#B7B7B7] mb-8'>End time</p></th>
+              <th className='normal-case text-base text-[#001E00] font-medium bg-[#FFFFFF] p-0 pl-4'><p className='mb-8'>Actions</p></th>
             </tr>
           </thead>
           <tbody className=''>
@@ -112,7 +110,7 @@ const CampaignManagementOne = () => {
                   {
                     details?.actions === "Pending" ? <button className="normal-case font-medium text-[#001E00] border border-[#B7B7B7] rounded px-[21px] py-[10px]">{details.actions}</button>
                       :
-                      <select className="select select-bordered w-[108px] h-[40px] border text-[#0BD838] border-[#B7B7B7]">
+                      <select className="select select-bordered w-[108px] h-[40px] border text-[#0BD838] border-[#B7B7B7] rounded">
                         <option className='text-base text-[#0BD838] rounded'>Active</option>
                         <option className='text-base text-[#686868] rounded'>Inactive</option>
                       </select>
