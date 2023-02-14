@@ -77,10 +77,10 @@ const AllProduct = () => {
   ];
 
   return (
-    <section className="bg-[#FFFFFF] py-10">
+    <section className="bg-[#FFFFFF] py-10 mx-auto w-full">
       <ProductCampaignModal modal={modal}></ProductCampaignModal>
       <div className="px-10 mx-auto">
-        <div className="max-w-[1426px]">
+        <div className="lg:max-w-[1426px] w-full">
           <div>
             <div className="text-sm breadcrumbs">
               <ul>
@@ -101,7 +101,7 @@ const AllProduct = () => {
           </div>
 
           <div
-            className={`rounded-lg mt-8 min-h-screen ${style.boxshaddow} bg-[#FFFFFF]`}
+            className={`rounded-lg mt-8 lg:pb-96 md:pb-72 pb-10 ${style.boxshaddow} bg-[#FFFFFF]`}
           >
             <div className="p-6">
               <div className="mb-4">
@@ -109,7 +109,7 @@ const AllProduct = () => {
                   All Products
                 </p>
               </div>
-              <div className="grid lg:grid-cols-7 md:grid-cols-5 grid-cols-2 gap-3 justify-center">
+              <div className="grid lg:grid-cols-7 md:grid-cols-5 grid-cols-2 gap-3 justify-center mx-auto ">
                 {products.map((product) => (
                   <AllProductCard
                     product={product}

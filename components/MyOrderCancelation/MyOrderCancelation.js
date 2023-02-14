@@ -2,7 +2,9 @@ import img1 from "../../assets/images/myOrdersDetails/Vector (3).png";
 import img2 from "../../assets/images/myOrdersDetails/Group 2417.png";
 import Image from "next/image";
 import { FaArrowLeft, FaCheckCircle } from "react-icons/fa";
+import { useRouter } from "next/router";
 const MyOrderCancelation = () => {
+  const router  = useRouter()
   const data = {
     id: "1",
     orderId: "121312323213432",

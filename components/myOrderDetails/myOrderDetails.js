@@ -4,8 +4,10 @@ import img2 from "../../assets/images/myOrdersDetails/Group 2417.png";
 import Timeline from "./Timeline/Timeline";
 import Link from "next/link";
 import { FaArrowLeft } from "react-icons/fa";
+import { useRouter } from "next/router";
 
 const MyOrderDetails = () => {
+  const router  = useRouter()
   const data = {
     id: "1",
     orderId: "121312323213432",

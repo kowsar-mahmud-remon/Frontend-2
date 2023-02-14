@@ -33,12 +33,8 @@ const profileSidebarLinks = [
         title: "My Payment Options",
         href: "myPaymentOptions",
         element: <Profile />,
-      },
-      {
-        title: "Vouchers",
-        href: "vouchers",
-        element: <Profile />,
-      },
+      }
+     
     ],
   },
   {
@@ -55,12 +51,8 @@ const profileSidebarLinks = [
         title: "My Cancellations",
         href: "myCancellations",
         element: <Profile />,
-      },
-      {
-        title: "My Payment Options",
-        href: "myPaymentOptions",
-        element: <Profile />,
-      },
+      }
+    
     ],
   },
 

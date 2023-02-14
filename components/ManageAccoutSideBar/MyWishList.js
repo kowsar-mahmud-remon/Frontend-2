@@ -119,8 +119,8 @@ const MyWishList = () => {
                                 <div>
                                     <label className="flex ">
                                         <Image src='/image 8.png' width={220} height={154} alt=""></Image>
-                                        <div className="wishlistloveButton absolute ml-[181px] mt-[13px] w-[28px] h-[28px] rounded-full">
-                                        <FaHeart className="ml-[5px] text-[#F2F2F2] w-[17px] h-[16px] hover:fill-[#FB641B]  pt-[6px] "></FaHeart>
+                                        <div className="wishlistloveButton absolute ml-[181px] mt-[13px] w-[28px] h-[28px] flex items-center justify-center rounded-full">
+                                        <FaHeart className=" text-[#F2F2F2]  w-[17px] h-[16px] hover:fill-[#FB641B]  "></FaHeart>
                                             {/* <Image src='/loveimage.png' className="ml-[5px] hover:text-[#FB641B]  pt-[6px]" width={17.33} height={16} alt=""></Image> */}
                                             
                                         </div>
