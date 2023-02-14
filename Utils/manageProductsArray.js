@@ -59,7 +59,7 @@ export const manageProductsArray = [
   },
   {
     title: 'ProductInvoiceDetails',
-    href: 'ProductInvoiceDetails',
+    href: 'productInvoiceDetails',
     element: <ProductInvoicesDetails></ProductInvoicesDetails>
   },
   {

@@ -28,13 +28,13 @@ const UploadProduct = () => {
     },
   ];
   return (
-    <div className="p-6 max-w-[1426px]">
-      <form action="">
-        <div className="flex flex-col md:flex-row max-w-[1426px] rounded shadow-xl p-6">
-          <div className="md:w-[40%]">
-            <LeftSide></LeftSide>
-          </div>
 
+    <div className="mt-7">
+      <div className="lg:max:w-[1426px] mx-auto text-lg text-[#686868]">
+        <div className=" flex items-center mb-2">
+          <p className='mr-1'>Home</p>
+          <p className='mr-1'>{">"} Products</p>
+          <p className='text-[#001E00] font-medium'>{">"} Upload Products</p>
           <div className="md:w-[60%] md:mt-0 mt-10">
             <RightSide options={options}></RightSide>
           </div>
@@ -51,7 +51,22 @@ const UploadProduct = () => {
             value="Submit"
           />
         </div>
-      </form>
+        <p className=' text-2xl text-[#FB641B] font-medium'>Upload Products</p>
+      </div>
+
+      <div className="p-6 max-w-[1426px] mt-8">
+        <form action="">
+          <div className="flex flex-col md:flex-row max-w-[1426px] rounded shadow-xl p-6">
+            <div className="md:w-[40%]">
+              <LeftSide></LeftSide>
+            </div>
+
+            <div className="md:w-[60%]">
+              <RightSide options={options}></RightSide>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
