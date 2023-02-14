@@ -22,7 +22,7 @@ const EditProductCard = ({ product }) => {
           </label>
           <ul
             tabIndex={0}
-            className="dropdown-content menu shadow rounded border border-[#B7B7B7] w-[125px] h-[156px] text-base bg-[#FFFFFF] text-[#686868]"
+            className="dropdown-content menu shadow rounded border border-[#B7B7B7] w-[125px] bg-[#FFFFFF] text-[#686868]"
           >
             <li>
               <Link href="editProductsTwo">View Detail</Link>
