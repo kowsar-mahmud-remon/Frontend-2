@@ -1,5 +1,4 @@
 import React from 'react';
-import ManageAccountResponsive from './ManageAccountResponsive';
 import ManageAccoutSideBar from './manageAccoutSideBar';
 import ProfileResponsive from './ProfileResponsive';
 
@@ -13,7 +12,7 @@ const ManageAccountLayout = ({ children, slug }) => {
                 <ManageAccoutSideBar />
 
             </div>
-            <div className='lg:hidden '>
+            <div className='lg:hidden block'>
                 {
                     !slug?.length> 0 && <ProfileResponsive></ProfileResponsive> 
                 }

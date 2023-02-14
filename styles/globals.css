@@ -188,10 +188,6 @@ top: 453px; */
 }
 
 .reviewResponsive {
-  width: 376px;
-  height: 113px;
-  left: 24px;
-  top: 142px;
 
   /* White */
 
@@ -203,43 +199,19 @@ top: 453px; */
 }
 
 .historyResponsive {
-  width: 376px;
-  height: 481px;
-
-
-  /* White */
-
   background: #FFFFFF;
-  /* 6 Effect */
-
   box-shadow: 0px 6px 30px 2px rgba(0, 0, 0, 0.08);
   border-radius: 8px;
 }
 
 .historyInside {
   box-sizing: border-box;
-
-
-  width: 352px;
-  height: 96px;
-
-
-  /* White */
-
   background: #FFFFFF;
-  /* Off White */
-
   border: 1px solid #F2F2F2;
   border-radius: 8px
 }
 
 .writeResponsiveBox {
-  width: 376px;
-  height: 112px;
-  left: 24px;
-  top: 186px;
-
-  /* White */
 
   background: #FFFFFF;
   /* 6 Effect */
@@ -249,25 +221,11 @@ top: 453px; */
 }
 
 .writeReviewTextArea {
-  width: 376px;
-  height: 89px;
-  left: 24px;
-  top: 314px;
-
-  /* Off Black */
-
   border: 1px solid #B7B7B7;
   border-radius: 4px;
 }
 
 .responsiveImageFileUpload {
-  width: 376px;
-  height: 48px;
-  left: 24px;
-  top: 419px;
-
-  /* Off Black */
-
   border: 1px dashed #B7B7B7;
   border-radius: 4px;
   box-sizing: border-box;
@@ -389,42 +347,140 @@ top: 453px; */
   border-radius: 4px;
 }
 
-.imgs{
+.imgs {
   height: 103px !important;
 }
-.cart-img{
-  height: 103px !important; 
-  width: 127px !important; 
+
+.cart-img {
+  height: 103px !important;
+  width: 127px !important;
 }
 
-.btn-cart{
+.btn-cart {
   width: 34px;
   height: 34px;
   background-color: #F2F3F7;
-  display: flex ;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
-.abs-bg{
+
+.abs-bg {
   background: white;
 }
+
 @media screen and (max-width: 768px) {
-  .btn-cart{
+  .btn-cart {
     width: 18px;
     height: 18px;
     background-color: #F2F3F7;
-    display: flex ;
+    display: flex;
     justify-content: center;
     align-items: center;
   }
-  .cart-img{
-    height: 80px !important; 
-    width: 100px !important; 
+
+  .cart-img {
+    height: 80px !important;
+    width: 100px !important;
   }
-  .abs-bg{
+
+  .abs-bg {
     background: rgba(0, 0, 0, 0.6);
   }
 }
-.btn-flex{
+
+.btn-flex {
   display: flex !important;
+}
+
+.editProfile {
+  width: 924px;
+  height: 548px;
+  left: 636px;
+  top: 303px;
+
+  /* White */
+
+  background: #FFFFFF;
+  /* Effect 16 */
+
+  box-shadow: 0px 6px 28px rgba(0, 0, 0, 0.16);
+  border-radius: 8px;
+}
+
+.editInput {
+  box-sizing: border-box;
+  width: 240px;
+  height: 48px;
+  left: 660px;
+  top: 362px;
+
+  /* Off Black */
+
+  border: 1px solid #B7B7B7;
+  border-radius: 4px;
+}
+
+.changePassword {
+  width: 924px;
+  height: 548px;
+  left: 636px;
+  top: 303px;
+
+  /* White */
+
+  background: #FFFFFF;
+  /* Effect 16 */
+
+  box-shadow: 0px 6px 28px rgba(0, 0, 0, 0.16);
+  border-radius: 8px;
+}
+
+.changePasswordInput {
+  box-sizing: border-box;
+  width: 418px;
+  height: 48px;
+  left: 660px;
+  top: 362px;
+
+  /* Off Black */
+
+  border: 1px solid #B7B7B7;
+  border-radius: 4px;
+}
+
+.profileBox {
+  box-shadow: 0px 6px 30px 2px rgba(0, 0, 0, 0.08);
+}
+
+.EmailChangeInputRes {
+  box-sizing: border-box;
+ 
+
+  /* White */
+
+  background: #FFFFFF;
+  /* Off Black */
+
+  border: 1px solid #B7B7B7;
+  border-radius: 4px;
+}
+
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  
+  opacity: 1;
+ 
+  
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: inner-spin-button !important;
+  width: 25px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
 }
