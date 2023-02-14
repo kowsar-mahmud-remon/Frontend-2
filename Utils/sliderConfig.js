@@ -5,7 +5,7 @@ export const settings = {
     slidesToShow: 5,
     slidesToScroll: 1,
     cssEase: "linear",
- 
+
     responsive: [
         {
             breakpoint: 1900,
@@ -48,10 +48,10 @@ export const imgSettingsMobile = {
     arrows: true,
     speed: 500,
     autoplaySpeed: 3000,
-    slidesToShow: 1,
+    slidesToShow: 4,
     slidesToScroll: 1,
     cssEase: "linear",
- 
+
     responsive: [
         {
             breakpoint: 1900,
@@ -94,10 +94,19 @@ export const imgSettingsMobile = {
 
 export const imageSettings = {
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     cssEase: "linear",
     vertical: true,
     verticalSwiping: true,
-    arrows:false,
+    arrows: false,
+};
+
+
+export const imgSettings = {
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    cssEase: "linear",
+    arrows: true,
 };

@@ -9,7 +9,7 @@ import flagBD from "../../assets/images/flag(BD).png";
 import supportIcon from "../../assets/images/support_Icon.png";
 import advertise from "../../assets/images/navication/add.png";
 import modalLogo from "../../assets/images/homeSlider/Banglar BigBazar Full logo-01 2.png";
-
+import Select from "react-select";
 import Link from "next/link";
 import { RiMapPinFill } from "react-icons/ri";
 import { IoIosArrowDown } from "react-icons/io";
@@ -26,7 +26,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { userLoggedIn } from "../../features/auth/authSlice";
 import { store } from "../../store/store";
 import { FiSearch } from "react-icons/fi";
-
+import bangladesh from "../../assets/countries/bangladesh.png";
+import usa from "../../assets/countries/usa.png";
 const Navication = () => {
   const [searchText, setSearchText] = useState("");
   const [recognitionStarted, setRecognitionStarted] = useState(false);
@@ -37,6 +38,20 @@ const Navication = () => {
 
   const { accessToken } = useSelector((state) => state.auth);
 
+  const languages = [
+    {
+      value: "english",
+      label: "English",
+      image: usa,
+    },
+    {
+      value: "bangla",
+      label: "Bangla",
+      image: bangladesh,
+    },
+  ];
+
+
   useEffect(() => {
     if (accessToken) {
       fetch("https://banglar-big-store.onrender.com/api/user/getMe", {
@@ -46,9 +61,9 @@ const Navication = () => {
         },
       })
         .then((res) => res.json())
-        .then((data) =>{ 
+        .then((data) => {
           console.log(data.user)
-          if(data?.user?._id){
+          if (data?.user?._id) {
             dispatch(userLoggedIn({ token: cookies?.banglarBigStore, user: data?.user }))
           }
         });
@@ -104,11 +119,11 @@ const Navication = () => {
       <div className="flex items-center h-[80px] gap-3 px-[20px] lg:px-[40px] 2xl:px-[50px]  bg-[#ffffff] justify-between text-[#026C51]">
         <div className="flex justify-center first-line:">
           <Link href="/">
-            <Image 
-            width={180}
-            height={48}
-            src={logo} alt="img" />
-           
+            <Image
+              width={180}
+              height={48}
+              src={logo} alt="img" />
+
           </Link>
         </div>
 
@@ -144,11 +159,45 @@ const Navication = () => {
           </button>
 
           <div className="flex item-center items-center mx-3">
-            <Image alt="" src={flagBD} />
+            {/* <Image alt="" src={flagBD} />
             <select className="bg-transparent">
               <option value="bn">BN</option>
               <option value="bn">EN</option>
-            </select>
+            </select> */}
+            <Select
+              className={`${styles.languageChange} border-none flex-1 md:flex-none justify-end`}
+              classNamePrefix="select"
+              options={languages}
+              isSearchable={false}
+              styles={{
+                control: (base) => ({
+                  ...base,
+                  border: 0,
+                  // This line disable the blue border
+                  boxShadow: "none",
+                  backgroundColor: "#f7f7f7",
+                }),
+              }}
+              defaultValue={languages[0]}
+              formatOptionLabel={(option) => (
+                <div className="flex items-center gap-2">
+                  {option.image ? (
+                    <Image
+                      style={{
+                        width: "30px",
+                        objectFit: "contain",
+                      }}
+                      src={option.image}
+                      alt={option.label}
+                      className="w-5 md:max-w-none"
+                    />
+                  ) : (
+                    ""
+                  )}
+                  <span className="text-[14px] md:text-[14px]">{option.label}</span>
+                </div>
+              )}
+            />
           </div>
 
           <label

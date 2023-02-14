@@ -1,25 +1,15 @@
 
 import NavicationWithSideNavLayout from "../../layouts/NavicationWithSideNavLayout";
 import Image from 'next/image'
-import fruit from '../../assets/images/product_page/image 6.png'
 import vector from '../../assets/images/product_page/Vector.png'
-import adminImg from '../../assets/images/product_page/b.png'
-import reviewer from '../../assets/images/product_page/Ellipse 38.png'
-import mistiKumra from '../../assets/images/product_page/image 7.png'
-import potol from '../../assets/images/product_page/image 8.png'
-import dheros from '../../assets/images/product_page/image 9.png'
-import kachakola from '../../assets/images/product_page/image 10.png'
 import { FaShoppingCart } from 'react-icons/fa';
 import { BsFillBagCheckFill, BsFillStarFill, BsStar, BsPlusLg } from 'react-icons/bs';
+import { BiChevronLeft, BiChevronRight } from 'react-icons/bi';
 import { HiMinusSm } from 'react-icons/hi';
 import Link from "next/link";
-import Footer from "../../components/ProductPage/Footer";
-import Header from "../../components/ProductPage/Header";
 import { useEffect, useRef, useState } from "react";
 import logo from '../../assets/CategoryImages/ProductsImg/logo.jpg'
-import ProgressBar from "@ramonak/react-progress-bar";
 import { useRouter } from "next/router";
-import ReactPaginate from "react-paginate";
 import { useGetProductQuestionCountQuery, useGetProductQuestionQuery, useGetProductRatingQuery, useGetProductReviewCountQuery, useGetProductReviewQuery } from "../../features/review&question/reviewQuestionApi";
 // import styles from './productpage.module.css'
 import { useDispatch, useSelector } from "react-redux";
@@ -33,7 +23,7 @@ import ProductCard from "../../components/allCategory/ProductCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { imageSettings, imgSettingsMobile } from "../../Utils/sliderConfig";
+import { imageSettings, imgSettings, imgSettingsMobile } from "../../Utils/sliderConfig";
 import { useAddCartMutation } from "../../features/cart/cartApi";
 import { addCartProductPage, addCartProductPageDecrease, addCartProductPageIncrease } from "../../features/cart/cartSlice";
 import AddToCartPage from "../../components/AddToCartPage/AddToCartPage";
@@ -145,14 +135,14 @@ const ProductPage = () => {
             })
         }
     }
-    console.log(cartPostData)
+    console.log(slideRef)
     return (
-        <div className="overflow-x-hidden mx-4 lg:mx-0">
+        <div className=" mx-4 lg:mx-0">
 
             <NavicationWithSideNavLayout>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-9 ">
-                    <div className="flex flex-col md:flex-row">
+                <div className="flex flex-col lg:flex-row gap-9 ">
+                    <div className="flex flex-col md:flex-row ">
                         <div className="hidden md:w-[96px] h-auto md:h-[560px] border md:flex flex-col p-[8px] bg-[#F2F3F7] gap-[8px] rounded-md">
                             <div className=''>
                                 <Slider {...imageSettings}
@@ -174,51 +164,69 @@ const ProductPage = () => {
                             </div>
                             <div
                                 onClick={() => slideRef.current.slickNext()}
-                                className="w-[78px] h-[24px] bg-white flex justify-center items-center cursor-pointer"
+                                className="w-[78px] h-[24px] bg-white flex justify-center items-center cursor-pointer "
                             >
                                 <Image className="" src={vector} width="" height="" alt="vector"></Image>
                             </div>
                         </div>
 
-                        <div className="block md:hidden overflow-hidden mb-10">
-                            {
-                                <div className=' items-center'>
-                                    <Slider {...imgSettingsMobile}
-                                        className=' '
-                                        ref={slideRef}
-                                    >
-                                        {
-                                            productPictures?.map((n, index) => <div
-                                                key={index}
-                                                className=" flex justify-center">
-                                                <Image
-                                                    onMouseOver={e => setImg(e.currentTarget.src)}
-                                                    className="border rounded-md cursor-pointer"
-                                                    src={n?.img} width="590" height="296" alt="tomato_img"></Image>
-                                            </div>)
-                                        }
-                                    </Slider>
+
+                        <div className="ml-0 md:ml-[24px] ">
+                            <div className="relative ">
+
+                                <Image
+                                    className="shadow-lg product-img rounded-md mb-[20px] w-full h-[500px] hidden md:flex object-contain" src={img ? img : productPictures?.[0]?.img} width="500" height="500" alt="tomato_img"></Image>
+                                <div className="flex md:hidden gap-5 justify-center mb-[31px] absolute bottom-0 right-[40%]" >
+                                    <div
+                                        className="text-md w-[34px] h-[34px] bg-[#F2F3F7] flex justify-center items-center cursor-pointer"
+                                    ><HiMinusSm
+                                            className="w-full"
+                                        /></div>
+                                    <p className="text-lg text-[#FB641B] font-bold">1</p>
+                                    <div
+                                        className="text-md w-[34px] h-[34px] bg-[#F2F3F7] flex justify-center items-center cursor-pointer"
+                                    ><BsPlusLg
+                                            className="w-full"
+                                        /></div>
+                                </div>
+                                <div className="block md:hidden absolute top-0 left-0 bg-blend-overlay w-full h-full bg-[#000000] opacity-[0.3]">
 
                                 </div>
-                            }
-                        </div>
-                        <div className="ml-0 md:ml-[24px] ">
-                            <Image className="shadow-lg product-img rounded-md mb-[20px] hidden md:flex" src={img ? img : productPictures?.[0]?.img} width="500" height="500" alt="tomato_img"></Image>
-
-
-                            <div className="flex md:hidden gap-5 justify-center mb-[31px]" >
-                                <div
-                                    className="text-md w-[34px] h-[34px] bg-[#F2F3F7] flex justify-center items-center cursor-pointer"
-                                ><HiMinusSm
-                                        className="w-full"
-                                    /></div>
-                                <p className="text-lg text-[#FB641B] font-bold">1</p>
-                                <div
-                                    className="text-md w-[34px] h-[34px] bg-[#F2F3F7] flex justify-center items-center cursor-pointer"
-                                ><BsPlusLg
-                                        className="w-full"
-                                    /></div>
                             </div>
+
+                            <div className="flex items-center md:hidden overflow-hidden mb-10 ">
+                                <div>
+                                    <BiChevronLeft
+                                        className="text-2xl"
+                                    />
+                                </div>
+                                {
+                                    <div className='h-[100px] w-full'>
+                                        <Slider {...imgSettings}
+                                            className=' '
+                                            ref={slideRef}
+                                        >
+                                            {
+                                                productPictures?.map((n, index) => <div
+                                                    key={index}
+                                                    className="'w-[40px] h-[56px] ">
+                                                    <Image
+                                                        onMouseOver={e => setImg(e?.currentTarget?.src)}
+                                                        className="border rounded-md cursor-pointer"
+                                                        src={n?.img} width="80" height="80" alt="tomato_img"></Image>
+                                                </div>)
+                                            }
+                                        </Slider>
+
+                                    </div>
+                                }
+                                <div className="bg-green-500">
+                                    <BiChevronRight
+                                        className="text-2xl"
+                                    />
+                                </div>
+                            </div>
+
                             <div className="flex gap-7 justify-between md:justify-between ">
                                 <label
                                     htmlFor="my-modal-4"
@@ -233,7 +241,7 @@ const ProductPage = () => {
                             </div>
                         </div>
                     </div>
-                    <div  className="px-4 lg:px-0 pl-4">
+                    <div className="px-4 lg:px-0 pl-4">
                         <div className="">
                             <p className="hidden md:block">
                                 <Link href="/">Home</Link> /
