@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import img from '../../assets/images/image 88.png'
+import img from '../../assets/images/image 88.png';
 import ManageOrdersModal from "./ManageOrdersModal";
 function ManageOrders() {
 
@@ -44,7 +44,7 @@ function ManageOrders() {
             status: 'Processing'
 
         },
-    ]
+    ];
     return (
         <div className='ml-[60px]'>
             <p className='text-[18px] mt-[45px]'><span className='text-[#686868] text-[18px]'>Home {">"} Orders & Reviews </span><span className='font-semibold text-[
@@ -111,7 +111,7 @@ function ManageOrders() {
                                 </div>
 
 
-                            )
+                            );
 
                         })
                     }

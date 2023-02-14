@@ -6,6 +6,7 @@ import { HiDotsHorizontal } from 'react-icons/hi';
 import img from '../../assets/images/image 7.png';
 import img2 from '../../assets/images/image 77.png';
 import VectorPlus from '../../assets/images/Vector-plus.png';
+import styles from "../../styles/campaignManagementTwo.module.css";
 
 
 
@@ -40,10 +41,10 @@ const CampaignManagement = () => {
         <p className=' text-2xl text-[#FB641B] font-medium'>Campaign Management</p>
       </div>
 
-      <div className="lg:w-[1426px] mx-auto mt-8">
-        <div className="p-8 flex flex-wrap justify-center lg:justify-start">
+      <div className={`lg:w-[1426px] mx-auto mt-8 h-screen ${styles.campaignManagementWithoutBorder}`}>
+        <div className={`p-8 flex flex-wrap gap-4 justify-center lg:justify-start`}>
           {
-            productDetails.map(product => <div key={product._id} className="w-[183px] p-2">
+            productDetails.map(product => <div key={product._id} className={`w-[183px] p-2 ${styles.campaignManagementWithoutBorder}`}>
               <div className=" flex justify-end mb-[-25px] mr-1">
                 <div className="dropdown dropdown-end">
                   <label tabIndex={0} className="">
@@ -72,7 +73,7 @@ const CampaignManagement = () => {
             </div>)
           }
 
-          <div className="w-[183px]">
+          <div className={`w-[183px] ${styles.campaignManagementWithoutBorder}`}>
 
             <Image
               className='w-[68px] h-[68px] mx-auto mt-[65px]'
