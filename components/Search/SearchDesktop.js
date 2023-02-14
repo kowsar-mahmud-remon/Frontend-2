@@ -8,6 +8,7 @@ import v3 from '../../assets/images/Vector (3).png'
 import cate from '../../assets/images/Group 2399.png'
 import sellerVerify from '../../assets/images/sellerProfile/product/verified.png'
 import { useState } from 'react';
+import style from '../../styles/componentsStyles/Search.module.css'
 
 
 const SearchDesktop = () => {
@@ -157,6 +158,59 @@ const SearchDesktop = () => {
             rating: 4,
             img: img1
         },
+        {
+            id: 10,
+            price: 18,
+            originalPrice: 20,
+            productOff: '2%off',
+            pName: 'Kacha Morich (Green Chili) 250 ±15 gm',
+            rating: 4,
+            img: img1
+        },
+        {
+            id: 11,
+            price: 18,
+            originalPrice: 20,
+            productOff: '2%off',
+            pName: 'Kacha Morich (Green Chili) 250 ±15 gm',
+            rating: 4,
+            img: img1
+        },
+        {
+            id: 12,
+            price: 18,
+            originalPrice: 20,
+            productOff: '2%off',
+            pName: 'Kacha Morich (Green Chili) 250 ±15 gm',
+            rating: 4,
+            img: img1
+        }, {
+            id: 13,
+            price: 18,
+            originalPrice: 20,
+            productOff: '2%off',
+            pName: 'Kacha Morich (Green Chili) 250 ±15 gm',
+            rating: 4,
+            img: img1
+        }, {
+            id: 14,
+            price: 18,
+            originalPrice: 20,
+            productOff: '2%off',
+            pName: 'Kacha Morich (Green Chili) 250 ±15 gm',
+            rating: 4,
+            img: img1
+        },
+        {
+            id: 15,
+            price: 18,
+            originalPrice: 20,
+            productOff: '2%off',
+            pName: 'Kacha Morich (Green Chili) 250 ±15 gm',
+            rating: 4,
+            img: img1
+        },
+
 
     ]
     const vegProducts = [
@@ -199,15 +253,15 @@ const SearchDesktop = () => {
         <div className=" flex lg:px-[94px]  md:px-[94px]  mt-2">
             <div
                 onClick={() => handleClose(1)}
-                className={`flex z-20  fixed md:static fixed h-[100vh] top-0 right-0 md:left-0  w-full lg:w-[482px] overflow-auto lg:h-auto  abs-bg ${bghide} mt-[-8px] justify-between md:justify-start scrollbar-hide mt-0 lg:mt-4`}>
+                className={`flex z-20  fixed md:static  h-[100vh] top-0 right-0 md:left-0  w-full lg:w-[482px] overflow-auto lg:h-auto  abs-bg ${bghide} mt-[-8px] justify-between md:justify-start scrollbar-hide mt-0 lg:mt-4`}>
 
                 <div onClick={() => handleClose(1)} className={``}>
 
                 </div>
 
-                <div className={`${leftWidth}  lg:w-full lg:block md:block  z-[999] `}>
+                <div className={`${leftWidth}  lg:w-full lg:block md:block  z-[999]  `}>
                     <div className='flex justify-between px-4 '>
-                        <div className='max-[600px] hidden lg:mt-[10px] hidden  mb-[16px] border  border-[#FB641B] py-[11px] px-[23px] rounded-full md:flex w-[176px] items-center'>
+                        <div className='max-[600px]  lg:mt-[10px] hidden  mb-[16px] border  border-[#FB641B] py-[11px] px-[23px] rounded-full md:flex w-[176px] items-center'>
                             <Image className='h-[20px] w-[20px] lg:mt-[3px]'
                                 src={cate}
                                 alt='img'
@@ -217,7 +271,7 @@ const SearchDesktop = () => {
                         </div>
 
                     </div>
-                    <div className='shadow-xl  bg-white mr-0 md:mr-[21px] scrollbar-hide'>
+                    <div className={`${style.search_left}  bg-white mr-0 md:mr-[21px] scrollbar-hide `}>
                         {/* ---------------------filters start---------------- */}
                         <div className='px-4 lg:hidden md:hidden pt-10 pb-20'>
                             <div className='flex justify-between mb-[16px] '>
@@ -259,7 +313,7 @@ const SearchDesktop = () => {
 
                         <div className='px-4'>
                             <ul>
-                                <li className='flex justify-between'><p className='font-semibold text-[18px] mb-[16px] text-[#001E00] '>All Collecction</p>
+                                <li className='flex justify-between'><p className='font-semibold text-[18px] my-[16px] text-[#001E00] '>All Collecction</p>
                                     <Image className='h-2 mt-2 '
                                         src={v2}
                                         alt='img'
@@ -527,7 +581,7 @@ const SearchDesktop = () => {
             {/*--------------------- right div----------------- */}
             <div className={`${rightWidth}  z-10  md:ml-[32px] ml-[-8px]`}>
                 <div className={`flex justify-between ml-[24px] mb-[16px]`}>
-                    <p className='text-[16px] lg:mt-[24px] mt-[19px] md:mt-[24px] lg:block md:block hidden'>Home / <span className='text-[#287DF3]'>Search Results</span></p>
+                    <p className='text-[16px] lg:mt-[24px] mt-[19px] md:mt-[24px] lg:block md:block hidden md:mb-[17px]'>Home / <span className='text-[#287DF3]'>Search Results</span></p>
                     <p className='max-[480px]:text-[10px] lg:mt-[24px] mt-[19px] lg:hidden md:hidden md:mt-[24px] text-[#287DF3] max-[480px]:mr-[63px] '> Search Results</p>
 
                     <div className='flex gap-2'>
@@ -546,17 +600,17 @@ const SearchDesktop = () => {
                     </div>
 
                 </div>
-                <div className='flex flex-wrap lg:gap-[22px] md:gap-[22px] gap-[16px] ml-[24px] '>
-
+                <div className='flex flex-wrap gap-[20px] w-[100%] ml-[24px] justify-center'>
+                    {/* sm:w-[41%] md:w-[93%] lg:w-[47%] xl:w-[33%]  */}
                     {
 
                         searchProducts && searchProducts.map(product => {
                             return (
-                                <div key={product.id}>
+                                <div key={product.id} className='  md:w-[242px]'>
 
-                                    <div className="card w-[180px]   lg:w-[250px] md:w-[250px] lg:h-[430px] md:h-[430px] h-[390px] bg-base-100 shadow-xl">
-                                        <div className=''>
-                                            <Image className="lg:mx-auto" src={product.img} width={180} height={126} alt="Shoes" />
+                                    <div className="card  md:w-[100%] md:h-[410px] h-[390px] bg-base-100 shadow-xl">
+                                        <div className='flex justify-center'>
+                                            <Image className="lg:mx-auto" src={product.img} height={126} alt="Shoes" />
 
                                         </div>
 
@@ -586,8 +640,8 @@ const SearchDesktop = () => {
                                                     height="24"
                                                     alt="logo image"
                                                 />
-                                                <div className=" lg:mt-[38px] md:mt-[38px] mt-[16px] mb-[12px] lg:h-[38px] md:h-[38px]  ml-[5px]">
-                                                    <button className="btn bg-[#FB641B] lg:w-[186px] md:w-[186px] w-[140px] lg:mx-[9px] md:mx-[9px]  ">
+                                                <div className=" flex justify-center mt-[36px] mb-4">
+                                                    <button className="btn bg-[#FB641B] w-[94%]   ">
                                                         <span className="text-white lg:text-[16px] md:text-[16px] text-[10px]  mr-[4px]">Add to Cart</span>
                                                         <FaShoppingCart className="text-white h-[20px] w-[17px]"></FaShoppingCart>
                                                     </button>
@@ -600,8 +654,8 @@ const SearchDesktop = () => {
                         })
                     }
                 </div>
-                <div className='flex justify-center'>
-                    <button className='btn border-[#FB641B] text-[#FB641B] text-[20px] font-semibold  w-[235px] mt-[58px] rounded-none'>Load More</button>
+                <div className='flex justify-center md:mb-[52px]'>
+                    <button className='btn border-[#FB641B] border-2  bg-white text-[#FB641B] text-[24px] font-semibold  w-[235px] h-[72px] mt-[58px] rounded-none'>Load More</button>
                 </div>
             </div>
         </div>
