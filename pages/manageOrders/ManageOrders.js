@@ -80,7 +80,7 @@ const ManageOrders = () => {
                           ></ManageOrderTable>
                         );
                       })}
-                    </tbody>
+                    </tbody> 
                   </table>
                 </div>
               </div>

@@ -9,7 +9,7 @@ const Details = () => {
   
   return (
     <div className=" mt-10 md:mx-16">
-      <ManageAccountLayout>
+      <ManageAccountLayout className='hidden md:block'>
               {
                   myOrderRelated?.map((a, i) => {
                       if (a?.href === router?.query?.slug) {

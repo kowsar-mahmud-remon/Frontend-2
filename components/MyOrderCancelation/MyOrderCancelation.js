@@ -1,7 +1,7 @@
 import img1 from "../../assets/images/myOrdersDetails/Vector (3).png";
 import img2 from "../../assets/images/myOrdersDetails/Group 2417.png";
 import Image from "next/image";
-import { FaCheckCircle } from "react-icons/fa";
+import { FaArrowLeft, FaCheckCircle } from "react-icons/fa";
 const MyOrderCancelation = () => {
   const data = {
     id: "1",
@@ -45,13 +45,26 @@ const MyOrderCancelation = () => {
     return (
       // successfully canceled
       <div className="md:mx-0 mx-3">
-        <h2 className="text-[24px] font-[500] text-[#FB641B] mb-4">
+        <div className="md:hidden ">
+          <button
+            onClick={() => router.back()}
+            className="flex items-center gap-[13px]"
+          >
+            <FaArrowLeft className=""></FaArrowLeft>
+            <h1 className="text-[20px]  font-[500] text-[#001E00] my-4">
+              Order Cancelation
+            </h1>
+          </button>
+        </div>
+        <h2 className="text-[24px] font-[500] text-[#FB641B] mb-4 md:block hidden">
           Order Cancellation
         </h2>
         <div className="md:mt-20 mt-5">
           <h2 className="text-[#0BD838] text-[24px] font-[500] flex md:flex-row flex-col justify-center items-center">
             <FaCheckCircle></FaCheckCircle>{" "}
-            <span className="md:ml-2 text-center">Your Cancellation Was Successful!</span>
+            <span className="md:ml-2 text-center">
+              Your Cancellation Was Successful!
+            </span>
           </h2>
           <p className="text-center">Your order number was {data.orderId}</p>
         </div>
@@ -145,7 +158,18 @@ const MyOrderCancelation = () => {
   return (
     // cancellation page
     <div className="w-full md:pl-5 mb-10 md:mx-0 mx-3">
-      <h2 className="text-[24px] font-[500] text-[#FB641B] mb-4">
+      <div className="md:hidden ">
+        <button
+          onClick={() => router.back()}
+          className="flex items-center gap-[13px]"
+        >
+          <FaArrowLeft className=""></FaArrowLeft>
+          <h1 className="text-[20px]  font-[500] text-[#001E00] my-4">
+            Order Cancelation
+          </h1>
+        </button>
+      </div>
+      <h2 className="text-[24px] font-[500] text-[#FB641B] mb-4 md:block hidden">
         Order Cancellation
       </h2>
       <div className="shadow-lg rounded-lg mb-4 mt-5 w-full">
