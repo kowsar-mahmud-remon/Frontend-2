@@ -28,7 +28,7 @@ const ManageOrderModal = () => {
           </div>
           <div className={`modal-action flex justify-evenly items-center mt-8 mb-[90px]`}>
             <button type="">
-              <label
+              <label  
                 htmlFor="my-modal-2"
                 className="bg-[#ffffff] px-10 py-[10px] text-sm rounded-lg  cursor-pointer text-[#686868] border border-[#686868]"
               >
