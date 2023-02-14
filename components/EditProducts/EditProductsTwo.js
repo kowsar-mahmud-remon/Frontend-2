@@ -22,6 +22,7 @@ import { HiShoppingBag } from 'react-icons/hi';
 import { AiFillHeart } from 'react-icons/ai';
 import { ImStarFull } from 'react-icons/im';
 import { FaAngleRight } from 'react-icons/fa';
+import styles from "../../styles/campaignManagementTwo.module.css";
 
 
 
@@ -57,16 +58,14 @@ const EditProductsTwo = () => {
       <div className="lg:max:w-[1426px] mx-auto text-lg text-[#686868]">
         <div className=" flex items-center mb-2">
           <p className='mr-1'>Home</p>
-          <FaAngleRight className='text-[#707070] text-xs mr-1'></FaAngleRight>
-          <p className='mr-1'>Products</p>
-          <FaAngleRight className='text-[#707070] text-xs'></FaAngleRight>
-          <p className='text-[#001E00] font-medium'>Edit Product</p>
+          <p className='mr-1'>{">"} Products</p>
+          <p className='text-[#001E00] font-medium'>{">"} Edit Product</p>
         </div>
         <p className=' text-2xl text-[#FB641B] font-medium'>View Product</p>
       </div>
 
 
-      <div className='lg:max:w-[1426px] mx-auto p-6 lg:flex mt-8'>
+      <div className={`lg:max:w-[1426px] mx-auto p-6 lg:flex mt-8 ${styles.campaignManagementWithoutBorder}`}>
 
         <div className="lg:mr-6 mb-5 lg:w-[96px] p-2  flex flex-wrap">
           <FaAngleUp className='mt-2 mb-4 w-full'></FaAngleUp>
@@ -112,7 +111,7 @@ const EditProductsTwo = () => {
         </div>
 
         <div className="">
-          <p className=' text-[32px] font-medium'>Tomato (Local) 500 ±30 gm</p>
+          <p className=' text-[32px] text-[#001E00] font-medium'>Tomato (Local) 500 ±30 gm</p>
           <div className="mt-4 flex">
             <div className=" text-[#FB641B] text-2xl flex mr-8">
               <ImStarFull className='p-[1px]'></ImStarFull>

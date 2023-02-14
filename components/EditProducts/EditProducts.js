@@ -6,6 +6,9 @@ import img4 from '../../assets/images/image 9.png';
 import { FaAngleRight } from 'react-icons/fa';
 import Image from 'next/image';
 import { HiDotsHorizontal } from 'react-icons/hi';
+import Link from 'next/link';
+import styles from "../../styles/campaignManagementTwo.module.css";
+
 
 
 
@@ -55,10 +58,10 @@ const EditProducts = () => {
       <div className="lg:max:w-[1426px] mx-auto text-lg text-[#686868]">
         <div className=" flex items-center mb-2">
           <p className='mr-1'>Home</p>
-          <FaAngleRight className='text-[#707070] text-xs mr-1'></FaAngleRight>
-          <p className='mr-1'>Products</p>
-          <FaAngleRight className='text-[#707070] text-xs'></FaAngleRight>
-          <p className='text-[#001E00] font-medium'>Edit Product</p>
+          {/* <FaAngleRight className='text-[#707070] text-xs mr-1'></FaAngleRight> */}
+          <p className='mr-1'>{">"} Products</p>
+          {/* <FaAngleRight className='text-[#707070] text-xs'></FaAngleRight> */}
+          <p className='text-[#001E00] font-medium'>{">"} Edit Product</p>
         </div>
         <p className=' text-2xl text-[#FB641B] font-medium'>Edit Products</p>
       </div>
@@ -80,16 +83,16 @@ const EditProducts = () => {
 
       <div className="lg:max:w-[1426px] mx-auto mt-6">
         <p className='text-[#001E00] text-lg mb-3 font-medium'>Products</p>
-        <div className="p-6 flex flex-wrap justify-center lg:justify-start">
+        <div className={`p-6 flex flex-wrap justify-center lg:justify-start ${styles.campaignManagementWithoutBorder}`}>
           {
             productDetails.map(product => <div key={product._id} className="w-[183px] p-2">
               <div className=" flex justify-end mb-[-45px] mr-1">
-                <div className="dropdown dropdown-end">
-                  <label tabIndex={0} className="m-1">
+                <div className="dropdown">
+                  <label tabIndex={0} className="">
                     <HiDotsHorizontal className='text-[#686868]'></HiDotsHorizontal>
                   </label>
-                  <ul tabIndex={0} className="dropdown-content menu shadow bg-base-100 rounded border border-[#B7B7B7] w-[121px] text-base text-[#686868]">
-                    <li><a>View Detail</a></li>
+                  <ul tabIndex={0} className="dropdown-content menu shadow bg-base-100 rounded border border-[#B7B7B7] w-[125px] text-base text-[#686868]">
+                    <li><Link href="editProductsTwo">View Detail</Link></li>
                     <li><a>Edit</a></li>
                     <li><a>Delete</a></li>
                     <li><a>Copy Link</a></li>

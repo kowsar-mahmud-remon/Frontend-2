@@ -1,6 +1,45 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable react-hooks/rules-of-hooks */
+import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
+import { FaUserAlt } from "react-icons/fa";
+import supportIcon from "../../assets/images/support_Icon.png";
+import modalLogo from "../../assets/images/homeSlider/Banglar BigBazar Full logo-01 2.png";
+import flagBD from "../../assets/images/flag(BD).png";
+import one from "../../assets/images/mobleBottomNav/1.png";
+import two from "../../assets/images/mobleBottomNav/2.png";
+import three from "../../assets/images/mobleBottomNav/3.png";
+import four from "../../assets/images/mobleBottomNav/4.png";
+import five from "../../assets/images/mobleBottomNav/5.png";
+import six from "../../assets/images/mobleBottomNav/6.png";
+import seven from "../../assets/images/mobleBottomNav/7.png";
+import eight from "../../assets/images/mobleBottomNav/8.png";
+import nine from "../../assets/images/mobleBottomNav/9.png";
+import ten from "../../assets/images/mobleBottomNav/10.png";
+import eleven from "../../assets/images/mobleBottomNav/11.png";
+import twelve from "../../assets/images/mobleBottomNav/12.png";
 
 const MobileNavBar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  // for modal
+  const [showModal, setShowModal] = useState(false);
+  const modalRef = useRef(null);
+
+  const handleModalClose = (event) => {
+    if (showModal && !modalRef.current.contains(event.target)) {
+      setShowModal(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleModalClose);
+
+    return () => {
+      document.removeEventListener("mousedown", handleModalClose);
+    };
+  }, [handleModalClose]);
+
   const options = [
     {
       name: "Home",
@@ -126,6 +165,7 @@ const MobileNavBar = () => {
       img: (
         <>
           <svg
+            onClick={() => setIsOpen(!isOpen)}
             width="20"
             height="15"
             viewBox="0 0 20 15"
@@ -156,9 +196,8 @@ const MobileNavBar = () => {
     },
   ];
   return (
-    <div className="w-full md:hidden relative">
+    <div className="w-full md:hidden relative ">
       <div className="fixed left-0 bottom-0 z-50 w-full bg-white boxShadowTop">
-        <div></div>
         <div className="h-14 flex justify-center items-center">
           {options.map((option, index) => (
             <div key={index} className="mx-auto ">
@@ -172,6 +211,194 @@ const MobileNavBar = () => {
             </div>
           ))}
         </div>
+      </div>
+      {/* for side menu */}
+      <div className="">
+        <nav className="relative  z-[100] flex items-center justify-between px-4 py-0   w-full top-0 shadow">
+          <div
+            className={`${
+              isOpen ? "" : "hidden"
+            } md:flex md:items-center md:w-auto absolute right-[0px] top-[0px]   bg-white w-full`}
+            style={{
+              transition: "all 0.1s ease",
+              transform: `translateX(${isOpen ? "0" : "100%"})`,
+            }}
+          >
+            {/* menu items */}
+            <div className="text-sm md:flex-grow py-3 px-3 mt-[40px] ">
+              <p className="font-bold text-[20px]">Menu</p>
+              <Link
+                href="/profile"
+                className="flex items-center mt-[16px]  border-b border-[#F2F2F2] pb-[16px]"
+              >
+                <Image src={one} width={24} height={24} alt="" />
+                <span className="text-[#001E00] text-[16px] ml-[16px]">
+                  Profile
+                </span>
+              </Link>
+              <Link
+                href="/#"
+                className="flex justify-between items-center mt-[16px]  border-b border-[#F2F2F2] pb-[16px]"
+              >
+                <div className="flex">
+                  <Image src={two} width={24} height={24} alt="" />
+                  <span className="text-[#001E00] text-[16px] ml-[16px]">
+                    Language
+                  </span>
+                </div>
+                <select className="bg-transparent text-end text-[14px] text-[#686868]">
+                  <option value="bn">English</option>
+                  <option value="bn">Bangla</option>
+                </select>
+              </Link>
+              <Link
+                href="/acounttype"
+                className="flex justify-between items-center mt-[16px]  border-b border-[#F2F2F2] pb-[16px]"
+              >
+                <div className="flex">
+                  <Image src={three} width={24} height={24} alt="" />
+                  <span className="text-[#001E00] text-[16px] ml-[16px]">
+                    Account Type
+                  </span>
+                </div>
+                <span className="text-end text-[14px] text-[#686868]">
+                  General Shopping
+                </span>
+              </Link>
+              <Link
+                href="/trackorder"
+                className="flex items-center mt-[16px]  border-b border-[#F2F2F2] pb-[16px]"
+              >
+                <Image src={four} width={24} height={24} alt="" />
+                <span className="text-[#001E00] text-[16px] ml-[16px]">
+                  Track Order
+                </span>
+              </Link>
+              <Link
+                href="/bbsaffiliate"
+                className="flex items-center mt-[16px]  border-b border-[#F2F2F2] pb-[16px]"
+              >
+                <Image src={five} width={24} height={24} alt="" />
+                <span className="text-[#001E00] text-[16px] ml-[16px]">
+                  BBS Affiliate
+                </span>
+              </Link>
+              <Link
+                href="/support"
+                className="flex items-center mt-[16px]  border-b border-[#F2F2F2] pb-[16px]"
+              >
+                <Image src={six} width={24} height={24} alt="" />
+                <span className="text-[#001E00] text-[16px] ml-[16px]">
+                  Support
+                </span>
+              </Link>
+              <Link
+                href="/faq"
+                className="flex items-center mt-[16px]  border-b border-[#F2F2F2] pb-[16px]"
+              >
+                <Image src={seven} width={24} height={24} alt="" />
+                <span className="text-[#001E00] text-[16px] ml-[16px]">
+                  FAQ
+                </span>
+              </Link>
+              <Link
+                href="/livechat"
+                className="flex items-center mt-[16px]  border-b border-[#F2F2F2] pb-[16px]"
+              >
+                <Image src={eight} width={24} height={24} alt="" />
+                <span className="text-[#001E00] text-[16px] ml-[16px]">
+                  Live Chat
+                </span>
+              </Link>
+              <Link
+                href="/about"
+                className="flex items-center mt-[16px]  border-b border-[#F2F2F2] pb-[16px]"
+              >
+                <Image src={nine} width={24} height={24} alt="" />
+                <span className="text-[#001E00] text-[16px] ml-[16px]">
+                  About
+                </span>
+              </Link>
+              <label
+                onClick={() => setShowModal(true)}
+                href="/logout"
+                className="flex items-center mt-[16px]"
+              >
+                <Image src={ten} width={24} height={24} alt="" />
+                <span className="text-[#001E00] text-[16px] ml-[16px]">
+                  Log Out
+                </span>
+              </label>
+
+              {/* for login modal */}
+
+              <div>
+                {showModal && (
+                  <div className="fixed inset-0 justify-center items-center  h-screen bg-black  bg-opacity-60 ">
+                    {showModal && (
+                      <div className="">
+                        <div
+                          className="bg-white  w-full px-4 py-6   rounded-md    flex flex-col fixed top-[18%]"
+                          ref={modalRef}
+                        >
+                          <Image
+                            className="mb-[45px] mt-[40px] mx-auto"
+                            src={modalLogo}
+                            width={174}
+                            height={51}
+                            alt=""
+                          />
+                          <div className="grid grid-cols-1 gap-2 items-center justify-center ">
+                            <Link
+                              className="btn bg-[#FB641B] text-white text-[16px] mb-[12px] w-[178px] mx-auto"
+                              href="/login"
+                            >
+                              Login
+                            </Link>
+                            <p className="text-[#688686] text-center mb-[24px] text-[18px]">
+                              Already have an account?
+                              <Link
+                                className="text-[#287DF3] ml-[3px]"
+                                href="/login"
+                              >
+                                Login
+                              </Link>{" "}
+                            </p>
+                            <Link
+                              className="btn bg-[#FB641B] text-white  text-[16px] mb-[12px] w-[178px] mx-auto "
+                              href="/registation"
+                            >
+                              Register
+                            </Link>
+                            <p className="text-[#688686] text-center mb-[30px] text-[18px]">
+                              You have no account?{" "}
+                              <Link
+                                className="text-[#287DF3] ml-[3px]"
+                                href="/login"
+                              >
+                                Register
+                              </Link>{" "}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+              {/* for blur */}
+              {/* <div className="absolute inset-0 bg-black bg-opacity-50 blur-md" /> */}
+              <div className="flex justify-between mt-[54px] mb-[160px]">
+                <Link href="/#">
+                  <Image src={eleven} width={179} height={56} alt="" />
+                </Link>
+                <Link href="/#">
+                  <Image src={twelve} width={179} height={56} alt="" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </nav>
       </div>
     </div>
   );

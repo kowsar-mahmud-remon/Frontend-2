@@ -9,18 +9,6 @@ import logo from "../../assets/images/logo/logo.png";
 function SellerVerificationPage3(props) {
   return (
     <div className="mt-[45px] flex">
-      {/* <SideNav /> */}
-      <div className="mt-[45px] lg:block mobile:hidden">
-        <div className="mx-6 mb-8">
-          <Link href="/" className="">
-            <Image className="" src={logo} alt="img" width={224} />
-           
-          </Link>
-        </div>
-        <div className=" w-[282px] m-6">
-          <SellerVerificationPageSideNav ></SellerVerificationPageSideNav>
-        </div>
-      </div>
 
       <div className="w-full  pb-40 px-5 md:pl-10">
         <div className="">
@@ -32,43 +20,43 @@ function SellerVerificationPage3(props) {
           </p>
           <div className="grid lg:grid-cols-4 lg:gap-0 mobile:grid-cols-2 mobile:gap-4 items-center my-8 whitespace-nowrap  lg:text-[12px] text-[10px]">
             <div className="flex ">
-            <div className="bg-[#FB641B] text-white border border-white rounded-3xl px-2  ">
-              1
-            </div>
-            <div className="bg-[#FB641B] text-white  px-3 rounded-xl w-full text-center">
-              Add Shop Name
-            </div>
-            </div>
-            <div className="flex ">
-            <div className="bg-[#FB641B] text-white  border border-white px-2 rounded-lg">
-              2
-            </div>
-            <div className="bg-[#FB641B] text-white  px-3 rounded-xl w-full text-center ">
-            Add Shop Address
-            </div>
+              <div className="bg-[#FB641B] text-white border border-white rounded-3xl px-2  ">
+                1
+              </div>
+              <div className="bg-[#FB641B] text-white  px-3 rounded-xl w-full text-center">
+                Add Shop Name
+              </div>
             </div>
             <div className="flex ">
-            <div className="bg-[#FB641B]  px-2 text-white rounded-lg border-2 border-white">
-              3
+              <div className="bg-[#FB641B] text-white  border border-white px-2 rounded-lg">
+                2
+              </div>
+              <div className="bg-[#FB641B] text-white  px-3 rounded-xl w-full text-center ">
+                Add Shop Address
+              </div>
             </div>
-            <div className="bg-[#FB641B]  px-3 rounded-xl w-full text-center text-white ">
-            Verify ID & Bank
-            </div>
+            <div className="flex ">
+              <div className="bg-[#FB641B]  px-2 text-white rounded-lg border-2 border-white">
+                3
+              </div>
+              <div className="bg-[#FB641B]  px-3 rounded-xl w-full text-center text-white ">
+                Verify ID & Bank
+              </div>
             </div>
             <div className="flex">
-            <div className="  px-2 rounded-lg border border-[#F2F3F7]">
-              4
-            </div>
-            <div className="  border border-whiet px-3 rounded-xl w-full text-center ">
-            Add Product
-            </div>
-            <div className="  px-2 rounded-xl border border-[#F2F3F7]">
-              
-            </div>
+              <div className="  px-2 rounded-lg border border-[#F2F3F7]">
+                4
+              </div>
+              <div className="  border border-whiet px-3 rounded-xl w-full text-center ">
+                Add Product
+              </div>
+              <div className="  px-2 rounded-xl border border-[#F2F3F7]">
+
+              </div>
             </div>
           </div>
           <h4 className="text-[24px] font-semibold text-[#001E00] my-3">
-          Account Type.
+            Account Type.
           </h4>
           <div className="grid grid-cols-2 gap-5">
             {/* <div className=""> */}
@@ -93,14 +81,14 @@ function SellerVerificationPage3(props) {
 
         <Sellerverification />
 
-        
+
         <div className="my-4 shadow-lg  p-[16px] rounded-xl border-t">
           <h4 className="text-[24px] mt-12 font-semibold text-[#001E00]">
-          Please give your Bank Information
+            Please give your Bank Information
           </h4>
           <div className="">
             <p className="text-sm md:text-md font-semibold my-2  text-[#707070]">
-            Verify Your Bank Account
+              Verify Your Bank Account
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               <SecondImage />
@@ -110,7 +98,7 @@ function SellerVerificationPage3(props) {
           <div className="grid lg:grid-cols-2 mobile:grid-cols-1 gap-4 my-2">
             <div className="">
               <p className="text-sm md:text-md font-semibold my-2">
-              Account Holder Name
+                Account Holder Name
               </p>
               <input
                 type="text"
@@ -120,7 +108,7 @@ function SellerVerificationPage3(props) {
             </div>
             <div className="">
               <p className="text-sm md:text-md font-semibold my-2">
-              Bank Name
+                Bank Name
               </p>
               <input
                 type="text"
@@ -132,7 +120,7 @@ function SellerVerificationPage3(props) {
           <div className="grid lg:grid-cols-2 mobile:grid-cols-1 gap-4 my-2">
             <div className="">
               <p className="text-sm md:text-md font-semibold my-2">
-              Account Number
+                Account Number
               </p>
               <input
                 type="text"
@@ -142,7 +130,7 @@ function SellerVerificationPage3(props) {
             </div>
             <div className="">
               <p className="text-sm md:text-md font-semibold my-2">
-              Branch Name
+                Branch Name
               </p>
               <input
                 type="text"
@@ -153,7 +141,7 @@ function SellerVerificationPage3(props) {
           </div>
           <div className="">
             <p className="text-sm md:text-md font-semibold my-2">
-            Routing Number
+              Routing Number
             </p>
             <input
               type="text"

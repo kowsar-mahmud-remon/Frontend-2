@@ -1,22 +1,20 @@
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
-import SellerVerificationPageSideNav from "../SellerVerificationPageSideNav/SellerVerificationPageSideNav";
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
+import SellerVerificationPageSideNav from '../../components/SellerVerificationPageSideNav/SellerVerificationPageSideNav';
 import logo from "../../assets/images/logo/logo.png";
 
-const SellerVerificationPage2 = () => {
-  return (
-    <div className="flex max-w-[1896px]">
-
-<div className="mt-[45px] lg:block mobile:hidden">
+const seller2 = () => {
+    return (
+        <div className="flex max-w-[1896px]">
+      <div className="mt-[45px] lg:block mobile:hidden">
         <div className="mx-6 mb-8">
           <Link href="/" className="">
-            <Image className=""  src={logo} alt="img" width={224} />
-           
+            <Image className="" src={logo} alt="img" width={224} />
           </Link>
         </div>
         <div className=" w-[282px] m-6">
-          <SellerVerificationPageSideNav ></SellerVerificationPageSideNav>
+          <SellerVerificationPageSideNav></SellerVerificationPageSideNav>
         </div>
       </div>
 
@@ -127,12 +125,14 @@ const SellerVerificationPage2 = () => {
           </div>
 
           <div className="flex justify-end">
-            <button className='btn w-[369px] h-[72px] bg-[#FB641B] mt-10 text-white'>Continue</button>
+            <button className="btn w-[369px] h-[72px] bg-[#FB641B] mt-10 text-white">
+              Continue
+            </button>
           </div>
         </div>
       </div>
     </div>
-  );
+    );
 };
 
-export default SellerVerificationPage2;
+export default seller2;

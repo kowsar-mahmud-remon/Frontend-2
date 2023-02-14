@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import styles from "../../styles/componentsStyles/Navication.module.css";
@@ -5,7 +7,10 @@ import logo from "../../assets/images/logo/main_logo.png";
 import logoDis from "../../assets/images/logo/main_logo.png";
 import flagBD from "../../assets/images/flag(BD).png";
 import supportIcon from "../../assets/images/support_Icon.png";
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
 import advertise from "../../assets/images/navication/add.png";
+import modalLogo from "../../assets/images/homeSlider/Banglar BigBazar Full logo-01 2.png";
 
 import Link from "next/link";
 import { RiMapPinFill } from "react-icons/ri";
@@ -42,12 +47,12 @@ const Navication = () => {
         },
       })
         .then((res) => res.json())
-        .then((data) =>{ 
+        .then((data) => {
           console.log(data.user)
-          if(data?.user?._id){
+          if (data?.user?._id) {
             dispatch(userLoggedIn({ token: cookies?.banglarBigStore, user: data?.user }))
           }
-          });
+        });
     }
 
     if (cookies?.banglarBigStore)
@@ -75,17 +80,17 @@ const Navication = () => {
     setRecognitionStarted(true);
   };
   return (
-    <section className="shadow-md    z-20 shadow-block-900 relative">
+    <section className="shadow-md     z-20 shadow-block-900 relative">
       <TopNavBar />
 
       <div className="flex items-center h-[80px] gap-3 px-[20px] lg:px-[40px] 2xl:px-[50px]  bg-[#ffffff] justify-between text-[#026C51]">
         <div className="flex justify-center first-line:">
           <Link href="/">
-            <Image 
-            width={180}
-            height={48}
-            src={logo} alt="img" />
-           
+            <Image
+              width={180}
+              height={48}
+              src={logo} alt="img" />
+
           </Link>
         </div>
 

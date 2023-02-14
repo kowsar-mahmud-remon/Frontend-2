@@ -2,7 +2,15 @@
   /* position: absolute; */
   transition: transform 0.5s;
 }
-.sideNav ul,
+.sideNav ul {
+  margin: 0;
+  padding: 0;
+  padding-top: 8px;
+  list-style: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
 .sideNav ul li {
   margin: 0;
   padding: 0;
@@ -14,17 +22,29 @@
 .sideNav ul li a {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 12px;
   font-size: 16px;
-  padding: 10px 10px;
-  border-bottom: 1px solid rgb(238, 207, 207);
+  /* padding: 10px 10px; */
+  padding-top: 12px;
+  padding-bottom: 16px;
+  padding-left: 11px;
+  padding-right: 12px;
+  color: #001e00;
+  font-weight: 500;
+  /* border-bottom: 1px solid rgb(238, 207, 207); */
+  border-bottom: 2px solid #f2f2f2;
+  /* #f2f2f2; */
 }
 .sideNav ul li a:hover {
-  background-color: #f2f2f2e3;
+  background-color: #f2f2f2;
 }
 .sideNav ul .active a {
   background-color: #f2f2f2;
-  color: #fb641b;
+  /* color: #fb641b; */
+  color: #001e00;
+  border: 0;
+  padding-bottom: 15px;
+  margin-bottom: 16px;
 }
 .sideNav ul .active a svg {
   color: #000;
@@ -34,11 +54,11 @@
   height: 13px;
   width: 13px;
   margin: 0 0px 0 auto;
-  transform: rotate(180deg);
+  transform: rotate(270deg);
   transition: 0.5s;
 }
 .sideNav ul .active a svg {
-  transform: rotate(270deg);
+  transform: rotate(90deg);
 }
 
 .sideNav ul li ul {
@@ -50,12 +70,17 @@
   transition: 0.5s;
   padding: 0 10px;
   z-index: -3;
+  border-bottom: 2px solid #f2f2f2;
 }
-.sideNav ul li ul li a {
-  background-color: transparent !important;
-  color: #000 !important;
-  padding: 2px 5px 2px 40px;
-  margin-top: 5px;
+.sideNav ul li ul li p {
+  /* background-color: transparent !important; */
+  color: #686868;
+  font-weight: 500;
+  font-size: 16px;
+  padding-top: 8px;
+  padding-bottom: 9px;
+  padding-left: 42px;
+  margin-bottom: 8px;
   height: 100%;
 }
 
@@ -86,7 +111,8 @@
 }
 
 .sideNav ul li ul li .activeSubLink {
-  background-color: rgba(230, 220, 220, 0.74);
+  background-color: #fee0d1;
+  color: #fb641b;
 }
 
 @media only screen and (min-width: 200px) and (max-width: 768px) {

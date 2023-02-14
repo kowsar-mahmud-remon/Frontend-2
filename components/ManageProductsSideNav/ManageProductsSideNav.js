@@ -1,6 +1,17 @@
 import React from 'react';
 import exclaimation from "../../assets/images/exclamation.png";
 import Image from "next/image";
+
+import exclusives from '../../assets/images/Seller_Verification_page/packaging 1.png';
+import sweet from '../../assets/images/Seller_Verification_page/promotion 1.png';
+import kachaBazar from '../../assets/images/Seller_Verification_page/rating 1.png';
+import spice from '../../assets/images/Seller_Verification_page/financial-profit 1.png';
+import dairy from '../../assets/images/Seller_Verification_page/graduation 1.png';
+import teaCoffee from '../../assets/images/Seller_Verification_page/customer-service 1.png';
+import laptop from '../../assets/images/Seller_Verification_page/laptop 1.png';
+import bakerySnacks from '../../assets/images/Seller_Verification_page/folder 1.png';
+import frozenFoods from '../../assets/images/Seller_Verification_page/settings 1.png';
+
 import DataTable from "react-data-table-component";
 // import Managelist from "./Managelist";
 import Link from "next/link";
@@ -31,7 +42,7 @@ const ManageProductsSideNav = () => {
       id: 1,
       name: "Products",
       href: "editProductsTwo",
-      img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
+      img: exclusives,
       subcata: [
         {
           name: "Upload Product",
@@ -55,11 +66,11 @@ const ManageProductsSideNav = () => {
       id: 2,
       name: "Promotions",
       href: "editProductsTwo",
-      img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
+      img: sweet,
       subcata: [
         {
           name: "Product Campaign",
-          href: "editProduct"
+          href: "allProduct"
         },
         {
           name: "Campaign Management",
@@ -75,11 +86,11 @@ const ManageProductsSideNav = () => {
       id: 3,
       name: "Orders & Reviews",
       href: "editProductsTwo",
-      img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
+      img: kachaBazar,
       subcata: [
         {
           name: "Manage Orders",
-          href: "editProduct"
+          href: "manageOrders"
         },
         {
           name: "Manage Reviews",
@@ -99,7 +110,7 @@ const ManageProductsSideNav = () => {
       id: 4,
       name: "Finance",
       href: "editProductsTwo",
-      img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
+      img: spice,
       subcata: [
         {
           name: "Sales Overview",
@@ -119,7 +130,7 @@ const ManageProductsSideNav = () => {
       id: 5,
       name: "Seller Support",
       href: "editProductsTwo",
-      img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
+      img: teaCoffee,
       subcata: [
         {
           name: "Help Center",
@@ -139,7 +150,7 @@ const ManageProductsSideNav = () => {
       id: 6,
       name: "Seller Guideline",
       href: "editProductsTwo",
-      img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
+      img: dairy,
       subcata: [
         {
           name: "Add Product",
@@ -163,7 +174,7 @@ const ManageProductsSideNav = () => {
       id: 7,
       name: "Seller Documents",
       href: "editProductsTwo",
-      img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
+      img: bakerySnacks,
       subcata: [
         {
           name: "Account Statement",
@@ -183,7 +194,7 @@ const ManageProductsSideNav = () => {
       id: 8,
       name: "Account & Settings",
       href: "editProductsTwo",
-      img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
+      img: frozenFoods,
       subcata: [
         {
           name: "Profile",
@@ -207,7 +218,7 @@ const ManageProductsSideNav = () => {
       id: 9,
       name: "Account Type",
       href: "editProductsTwo",
-      img: "https://i.ibb.co/0MFWvk4/online-shopping.png",
+      img: laptop,
       subcata: [
         {
           name: "Add Product",
@@ -231,7 +242,7 @@ const ManageProductsSideNav = () => {
 
 
   return (
-    <section className="bg-[#FFFFFF] py-6">
+    <section className="bg-[#FFFFFF] pb-6 sticky top-0">
       <div className="px-6 mx-auto flex">
 
         <div className="">
@@ -259,13 +270,13 @@ const ManageProductsSideNav = () => {
                         : ""
                     }
                   >
-                    <Link href={c?.href}>
+                    <Link href={router?.query?.slug ? router?.query?.slug : c?.href}>
                       <Image
-                        loader={() => c.img}
+                        // loader={() => c.img}
                         src={c.img}
                         alt={c.key}
-                        width={30}
-                        height={30}
+                        width={28}
+                        height={28}
                       />
                       {c.name}
                       <MdArrowBackIos />
@@ -283,7 +294,7 @@ const ManageProductsSideNav = () => {
                           >
                             <p onClick={() => router.push(s?.href ? s?.href : "")}
                               className={`${activeBtn == s.name ? styles.activeSubLink : ""
-                                } py-1 px-2 rounded-md my-2 cursor-pointer`}
+                                }  cursor-pointer text-[#686868]`}
                             >
                               {s.name}
                             </p>

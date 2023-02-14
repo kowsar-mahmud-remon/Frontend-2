@@ -1,9 +1,18 @@
 import CampaignManagement from "../components/CampaignManagement/CampaignManagement";
+import CampaignManagementOne from "../components/CampaignManagement/CampaignManagementOne";
+import CampaignManagementTwo from "../components/CampaignManagement/CampaignManagementTwo";
 import EditProducts from "../components/EditProducts/EditProducts";
 import EditProductsTwo from "../components/EditProducts/EditProductsTwo";
+import ManageOrders from "../components/ManageOrders/ManageOrders";
 import ManageProduct from "../components/ManageProduct/ManageProduct";
+import AllProduct from "../components/ProductCampaignMain/AllProduct";
 import ProductInvoices from "../components/ProductInvoices/ProductInvoices";
 import ProductInvoicesDetails from "../components/ProductInvoices/ProductInvoicesDetails/ProductInvoicesDetails";
+import Sellerverification from "../components/sellerverification/Sellerverification";
+import SellerVerificationPage1 from "../components/SellerVerificationPage1/SellerVerificationPage1";
+import SellerVerificationPage2 from "../components/SellerVerificationPage2/SellerVerificationPage2";
+import SellerVerificationPage3 from "../components/SellerVerificationPage3/SellerVerificationPage3";
+import SellerVerificationPage5 from "../components/SellerVerificationPage5/SellerVerificationPage5";
 import UploadProduct from "../components/UploadProduct/UploadProduct";
 
 export const manageProductsArray = [
@@ -21,6 +30,16 @@ export const manageProductsArray = [
     title: "CampaignManagement",
     href: "campaignManagement",
     element: <CampaignManagement></CampaignManagement>
+  },
+  {
+    title: "CampaignManagementOne",
+    href: "campaignManagementOne",
+    element: <CampaignManagementOne></CampaignManagementOne>
+  },
+  {
+    title: "CampaignManagementTwo",
+    href: "campaignManagementTwo",
+    element: <CampaignManagementTwo></CampaignManagementTwo>
   },
   {
     title: "ManageProducts",
@@ -42,7 +61,36 @@ export const manageProductsArray = [
     title: 'ProductInvoiceDetails',
     href: 'ProductInvoiceDetails',
     element: <ProductInvoicesDetails></ProductInvoicesDetails>
-
+  },
+  {
+    title: 'AllProduct',
+    href: 'allProduct',
+    element: <AllProduct></AllProduct>
+  },
+  {
+    title: 'SellerVerificationPage1',
+    href: 'sellerVerificationPage1',
+    element: <SellerVerificationPage1></SellerVerificationPage1>
+  },
+  {
+    title: 'SellerVerificationPage2',
+    href: 'sellerVerificationPage2',
+    element: <SellerVerificationPage2></SellerVerificationPage2>
+  },
+  {
+    title: 'SellerVerificationPage3',
+    href: 'sellerVerificationPage3',
+    element: <SellerVerificationPage3></SellerVerificationPage3>
+  },
+  {
+    title: 'SellerVerificationPage5',
+    href: 'sellerVerificationPage5',
+    element: <SellerVerificationPage5></SellerVerificationPage5>
+  },
+  {
+    title: 'ManageOrders',
+    href: 'manageOrders',
+    element: <ManageOrders></ManageOrders>
   }
 
 ];
