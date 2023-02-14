@@ -8,10 +8,13 @@ import sound from "../../../assets/images/storyVdo/vector (6).png";
 import threedot from "../../../assets/images/storyVdo/carbon.png";
 // import vdo from '../../../assets/video/vdo.mp4';
 import ReactPlayer from "react-player/youtube";
+import { useEffect } from "react";
+import { useState } from "react";
 
 
 const StoriesCard = ({ story }) => {
   const router = useRouter();
+  const [render,setRender]=useState(undefined)
   const {
     regularPrice,
     productName,
@@ -24,8 +27,11 @@ const StoriesCard = ({ story }) => {
     slug,
     category,
   } = story || {};
-
+  useEffect(()=>{
+    setRender(true)
+  },[])
   // console.log(vdo);
+  if(!render) return;
   return (
     <div className="w-[332px]">
       <div className="rounded-lg shadow-xl ">
