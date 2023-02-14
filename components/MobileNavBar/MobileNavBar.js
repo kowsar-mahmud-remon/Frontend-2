@@ -214,7 +214,7 @@ const MobileNavBar = () => {
       </div>
       {/* for side menu */}
       <div className="">
-        <nav className="relative  z-[100] flex items-center justify-between px-4 py-0   w-full top-0 shadow">
+        <nav className="relative  z-[101] flex items-center justify-between px-4 py-0   w-full top-0 shadow">
           <div
             className={`${
               isOpen ? "" : "hidden"
