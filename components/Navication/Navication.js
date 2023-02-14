@@ -1,5 +1,6 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
-
 import React, { useEffect, useState } from "react";
 import styles from "../../styles/componentsStyles/Navication.module.css";
 import logo from "../../assets/images/logo/main_logo.png";
@@ -9,6 +10,7 @@ import supportIcon from "../../assets/images/support_Icon.png";
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import advertise from "../../assets/images/navication/add.png";
+import modalLogo from "../../assets/images/homeSlider/Banglar BigBazar Full logo-01 2.png";
 
 import Link from "next/link";
 import { RiMapPinFill } from "react-icons/ri";
@@ -77,11 +79,8 @@ const Navication = () => {
   const handleVoice = () => {
     setRecognitionStarted(true);
   };
-  const contentStyle = { background: '#000' };
-  const overlayStyle = { background: 'rgba(0,0,0,0.5)' };
-  const arrowStyle = { color: '#000' };
   return (
-    <section className="shadow-md    z-20 shadow-block-900 relative">
+    <section className="shadow-md     z-20 shadow-block-900 relative">
       <TopNavBar />
 
       <div className="flex items-center h-[80px] gap-3 px-[20px] lg:px-[40px] 2xl:px-[50px]  bg-[#ffffff] justify-between text-[#026C51]">
@@ -127,22 +126,10 @@ const Navication = () => {
               <option value="bn">EN</option>
             </select>
           </div>
-
           <Link href="/login" className="flex item-center ">
             Login
             <FaUserAlt className="m-[4px]" />
           </Link>
-
-
-          <input type="checkbox" id="my-modal-3" className="modal-toggle" />
-          <div className="modal">
-            <div className="modal-box relative">
-              <label htmlFor="my-modal-3" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-              <h3 className="text-lg font-bold">Congratulations random Internet user!</h3>
-              <p className="py-4">ve been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
-            </div>
-          </div>
-
         </div>
       </div>
       <div className={`${styles.buttonSearchWraper} bg-[#FFFFFF] hidden`}>

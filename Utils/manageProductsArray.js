@@ -1,7 +1,9 @@
 import CampaignManagement from "../components/CampaignManagement/CampaignManagement";
 import CampaignManagementOne from "../components/CampaignManagement/CampaignManagementOne";
+import CampaignManagementTwo from "../components/CampaignManagement/CampaignManagementTwo";
 import EditProducts from "../components/EditProducts/EditProducts";
 import EditProductsTwo from "../components/EditProducts/EditProductsTwo";
+import ManageOrders from "../components/ManageOrders/ManageOrders";
 import ManageProduct from "../components/ManageProduct/ManageProduct";
 import AllProduct from "../components/ProductCampaignMain/AllProduct";
 import ProductInvoices from "../components/ProductInvoices/ProductInvoices";
@@ -33,6 +35,11 @@ export const manageProductsArray = [
     title: "CampaignManagementOne",
     href: "campaignManagementOne",
     element: <CampaignManagementOne></CampaignManagementOne>
+  },
+  {
+    title: "CampaignManagementTwo",
+    href: "campaignManagementTwo",
+    element: <CampaignManagementTwo></CampaignManagementTwo>
   },
   {
     title: "ManageProducts",
@@ -79,6 +86,11 @@ export const manageProductsArray = [
     title: 'SellerVerificationPage5',
     href: 'sellerVerificationPage5',
     element: <SellerVerificationPage5></SellerVerificationPage5>
+  },
+  {
+    title: 'ManageOrders',
+    href: 'manageOrders',
+    element: <ManageOrders></ManageOrders>
   }
 
 ];

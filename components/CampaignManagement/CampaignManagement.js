@@ -34,10 +34,8 @@ const CampaignManagement = () => {
       <div className="lg:w-[1426px] mx-auto text-lg text-[#686868]">
         <div className=" flex items-center mb-2">
           <p className='mr-1'>Home</p>
-          <FaAngleRight className='text-[#707070] text-xs mr-1'></FaAngleRight>
-          <p className='mr-1'>Promotions</p>
-          <FaAngleRight className='text-[#707070] text-xs'></FaAngleRight>
-          <p className='text-[#001E00] font-medium'>Campaign Management</p>
+          <p className='mr-1'>{">"} Promotions</p>
+          <p className='text-[#001E00] font-medium'>{">"} Campaign Management</p>
         </div>
         <p className=' text-2xl text-[#FB641B] font-medium'>Campaign Management</p>
       </div>
