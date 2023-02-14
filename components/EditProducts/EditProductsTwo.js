@@ -22,6 +22,7 @@ import { HiShoppingBag } from 'react-icons/hi';
 import { AiFillHeart } from 'react-icons/ai';
 import { ImStarFull } from 'react-icons/im';
 import { FaAngleRight } from 'react-icons/fa';
+import styles from "../../styles/campaignManagementTwo.module.css";
 
 
 
@@ -64,7 +65,7 @@ const EditProductsTwo = () => {
       </div>
 
 
-      <div className='lg:max:w-[1426px] mx-auto p-6 lg:flex mt-8'>
+      <div className={`lg:max:w-[1426px] mx-auto p-6 lg:flex mt-8 ${styles.campaignManagementWithoutBorder}`}>
 
         <div className="lg:mr-6 mb-5 lg:w-[96px] p-2  flex flex-wrap">
           <FaAngleUp className='mt-2 mb-4 w-full'></FaAngleUp>
