@@ -178,7 +178,6 @@ const ProductPage = () => {
                             >
                                 <Image className="" src={vector} width="" height="" alt="vector"></Image>
                             </div>
-
                         </div>
 
                         <div className="block md:hidden overflow-hidden mb-10">
