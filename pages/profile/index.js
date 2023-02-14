@@ -1,4 +1,4 @@
-import  ManageAccount  from "../../components/ManageAccoutSideBar/ManageAccount";
+import ManageAccount from "../../components/ManageAccoutSideBar/ManageAccount";
 import ManageAccountLayout from "../../components/ManageAccoutSideBar/ManageAccountLayout";
 
 
@@ -6,12 +6,14 @@ import ManageAccountLayout from "../../components/ManageAccoutSideBar/ManageAcco
 const Profile = () => {
     return (
         <div>
-            
+
 
             <ManageAccountLayout>
-                   
-              <ManageAccount></ManageAccount>
-            
+
+                <div className="hidden lg:block">
+                    <ManageAccount></ManageAccount>
+                </div>
+
             </ManageAccountLayout>
         </div>
     );

@@ -4,7 +4,7 @@ import visa from "/assets/payment/visa.png";
 import bkash from "/assets/payment/bkash.png";
 import style from "/styles/componentsStyles/box-shaddow.module.css";
 
-const myPaymentOption = () => {
+const MyPaymentOption = () => {
   return (
     <div className="lg:w-[924px] w-full lg:px-0 px-1 mx-auto mb-12">
       <h2 className="text-[#FB641B] text-2xl mt-6 mb-8 font-semibold">
@@ -74,4 +74,4 @@ const myPaymentOption = () => {
   );
 };
 
-export default myPaymentOption;
+export default MyPaymentOption;

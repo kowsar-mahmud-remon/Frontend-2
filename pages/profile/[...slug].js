@@ -1,12 +1,12 @@
 import { useRouter } from "next/router";
 import React from "react";
 import ManageAccountLayout from "../../components/ManageAccoutSideBar/ManageAccountLayout";
-import profileLinksObj from "../../Utils/myProfileLinks";
-import profileLinksResponsiveObj from "../../Utils/myProfileLinksResponsive";
+import {profileLinksObj,  profileLinksResponsiveObj } from "../../Utils/myProfileLinks";
+
 const Profile = () => {
   const router = useRouter();
   
-//   console.log(router.query.slug);
+  // console.log(router?.query?.slug?.[0]);
   return (
     <ManageAccountLayout slug={router?.query?.slug?.[0]}>
       <div className="hidden lg:block">

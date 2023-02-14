@@ -2,7 +2,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 import { FaCheck } from "react-icons/fa";
-import profileLinksObj from "../../Utils/myProfileLinks";
 import profileSidebarLinks from "../../Utils/profileLinkForSidebar";
 
 
@@ -37,37 +36,37 @@ const ManageAccoutSideBar = () => {
           const url = `/profile/${profile.href}`;
 
           return (
-            <div key={i} className="">
+            <div key={i} className="mt-[16px]">
               <Link className={getCurrentColor(profile)} href={url}>
                 <h1>{profile.title}</h1>
               </Link>
 
-              {profile?.links && (
-                <ul className="ml-6 ">
-                  {profile?.links?.map((p, i) => (
-                    <Link key={i} href={`/profile/${profile?.href}/${p?.href}`}>
-                      <li
-                        className={
-                          router.asPath ===
-                          `/profile/${profile?.href}/${p?.href}`
-                            ? "text-[#287DF3] mt-[8px] text-[16px]"
-                            : " text-[#686868]  mt-[8px]  text-[16px]"
-                        }
-                      >
-                        {p?.title}
-                      </li>
-                    </Link>
-                  ))}
-                </ul>
-              )}
+              <div className="mt-[16px]">
+                {profile?.links && (
+                  <ul className="ml-6 ">
+                    {profile?.links?.map((p, i) => (
+                      <Link key={i} href={`/profile/${profile?.href}/${p?.href}`}>
+                        <li
+                          className={
+                            router.asPath ===
+                              `/profile/${profile?.href}/${p?.href}`
+                              ? "text-[#287DF3] mt-[4px] text-[16px]"
+                              : " text-[#686868]  mt-[4px] text-[16px]"
+                          }
+                        >
+                          {p?.title}
+                        </li>
+                      </Link>
+                    ))}
+                  </ul>
+                )}
+              </div>
             </div>
           );
         })}
       </div>
 
-      {/* <div>
-                <ProfileResponsive></ProfileResponsive>
-            </div> */}
+
     </div>
   );
 };
