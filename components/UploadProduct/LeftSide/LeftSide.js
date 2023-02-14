@@ -68,7 +68,12 @@ const LeftSide = () => {
               <p>Thumbnail Image </p>
             </div>
           </label>
-          <input type="file" id="thumb-btn" className="hidden" accept="image/*"/>
+          <input
+            type="file"
+            id="thumb-btn"
+            className="hidden"
+            accept="image/*"
+          />
         </div>
 
         <div className="">
@@ -77,7 +82,7 @@ const LeftSide = () => {
               <div className="h-auto ">
                 <Slider {...imageSettings} className=" " ref={slideRef}>
                   <div>
-                    <div className="">
+                    <div className="mb-2">
                       <label htmlFor="thumb-btn">
                         <div className="py-4 px-1 border-dashed border-2 rounded-lg flex flex-col items-center text-center text-[14px]">
                           <Image src={img1} alt="" />
