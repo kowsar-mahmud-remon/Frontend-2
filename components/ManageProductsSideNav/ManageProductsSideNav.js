@@ -90,7 +90,7 @@ const ManageProductsSideNav = () => {
       subcata: [
         {
           name: "Manage Orders",
-          href: "editProduct"
+          href: "manageOrders"
         },
         {
           name: "Manage Reviews",
@@ -294,7 +294,7 @@ const ManageProductsSideNav = () => {
                           >
                             <p onClick={() => router.push(s?.href ? s?.href : "")}
                               className={`${activeBtn == s.name ? styles.activeSubLink : ""
-                                } py-1 pl-[41px] rounded-md my-2 cursor-pointer text-[#686868]`}
+                                }  cursor-pointer text-[#686868]`}
                             >
                               {s.name}
                             </p>

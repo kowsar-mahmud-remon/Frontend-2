@@ -1,12 +1,14 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../../styles/componentsStyles/Navication.module.css";
 import logo from "../../assets/images/logo/main_logo.png";
 import logoDis from "../../assets/images/logo/main_logo.png";
 import flagBD from "../../assets/images/flag(BD).png";
 import supportIcon from "../../assets/images/support_Icon.png";
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
 import advertise from "../../assets/images/navication/add.png";
 import modalLogo from "../../assets/images/homeSlider/Banglar BigBazar Full logo-01 2.png";
 import Select from "react-select";
@@ -93,25 +95,6 @@ const Navication = () => {
   const handleVoice = () => {
     setRecognitionStarted(true);
   };
-
-  // for modal
-  const [showModal, setShowModal] = useState(false);
-  const modalRef = useRef(null);
-
-  const handleModalClose = (event) => {
-    if (showModal && !modalRef.current.contains(event.target)) {
-      setShowModal(false);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleModalClose);
-
-    return () => {
-      document.removeEventListener("mousedown", handleModalClose);
-    };
-  }, [handleModalClose]);
-
   return (
     <section className="shadow-md    z-20 shadow-block-900 relative">
       <TopNavBar />
@@ -199,48 +182,10 @@ const Navication = () => {
               )}
             />
           </div>
-
-          <label
-            htmlFor="my-modal-4"
-            onClick={() => setShowModal(true)}
-            className="flex item-center cursor-pointer"
-          >
+          <Link href="/login" className="flex item-center ">
             Login
             <FaUserAlt className="m-[4px]" />
-          </label>
-
-          {/* for login modal */}
-
-          <div>
-            {showModal && (
-              <div
-                className="fixed top-[130px]  right-[45px] bg-white  m-auto p-4 border rounded-md border-black lg:w-[720px] md:w-[500px] "
-                ref={modalRef}
-              >
-                <Image
-                  className="mb-[60px] mt-[20px]"
-                  src={modalLogo}
-                  width={232}
-                  height={69}
-                  alt=""
-                />
-                <div className="grid grid-cols-2 gap-3">
-                  <Link
-                    className="btn bg-[#FB641B] text-white text-[18px]"
-                    href="/login"
-                  >
-                    Login
-                  </Link>
-                  <Link
-                    className="btn bg-[#F2F3F7] border border-[#B7B7B7] text-[18px]"
-                    href="/registation"
-                  >
-                    Register
-                  </Link>
-                </div>
-              </div>
-            )}
-          </div>
+          </Link>
         </div>
       </div>
       <div className={`${styles.buttonSearchWraper} bg-[#FFFFFF] hidden`}>
