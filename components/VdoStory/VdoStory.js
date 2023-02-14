@@ -3,13 +3,13 @@ import React from 'react';
 import { useRef } from 'react';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import Slider from 'react-slick';
-import { settings } from '../../Utils/sliderConfig';
-import StoryCard from './StoryCard/StoryCard';
+import { settings, storySettings } from '../../Utils/sliderConfig';
 // Import css files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import img from "../../assets/CategoryImages/KachabazarIcon/shopping-bag 1.png";
-import ProductCard from '../allCategory/ProductCard';
+
+import StoriesCard from './StoryCard/StoriesCard';
 const VdoStory = () => {
     const slideRef = useRef(null);
     const stories = [
@@ -111,7 +111,7 @@ const VdoStory = () => {
               <div className="flex items-center gap-2 ">
                 <Image src={img} alt="img" width={28} height={28} />
                 <div className="text-[15px] lg:text-[24px] text-[#FB641B] font-bold mr-6 md:mr-4">
-                  Exclusive
+                  Story
                 </div>
               </div>
               <div className="bg-[#FB641B] md:w-[75%] w-[80%] h-[2px] md:h-[3px]"></div>
@@ -135,14 +135,14 @@ const VdoStory = () => {
             </div>
 
             {/* slider card  */}
-            <div className="flex items-center pt-3">
+            <div className=" items-center pt-3">
               <Slider
-                {...settings}
-                className="flex items-center w-full "
+                {...storySettings}
+                className=" items-center w-full "
                 ref={slideRef}
               >
                 {products?.map((n, index) => (
-                  <StoryCard key={index} story={n} />
+                  <StoriesCard key={index} story={n} />
                 ))}
               </Slider>
             </div>
