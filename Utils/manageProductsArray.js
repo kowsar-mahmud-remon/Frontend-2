@@ -5,6 +5,7 @@ import EditProducts from "../components/EditProducts/EditProducts";
 import EditProductsTwo from "../components/EditProducts/EditProductsTwo";
 import ManageOrders from "../components/ManageOrders/ManageOrders";
 import ManageProduct from "../components/ManageProduct/ManageProduct";
+import ManageReview from "../components/ManageReview/ManageReview";
 import AllProduct from "../components/ProductCampaignMain/AllProduct";
 import ProductInvoices from "../components/ProductInvoices/ProductInvoices";
 import ProductInvoicesDetails from "../components/ProductInvoices/ProductInvoicesDetails/ProductInvoicesDetails";
@@ -91,6 +92,11 @@ export const manageProductsArray = [
     title: 'ManageOrders',
     href: 'manageOrders',
     element: <ManageOrders></ManageOrders>
+  },
+  {
+    title: 'ManageReview',
+    href: 'manageReview',
+    element: <ManageReview></ManageReview>
   }
 
 ];
