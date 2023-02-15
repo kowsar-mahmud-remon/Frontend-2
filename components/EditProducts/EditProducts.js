@@ -49,7 +49,7 @@ const EditProducts = () => {
       <div className="px-10 mx-auto">
         <div className="lg:max-w-[1426px] w-full">
           <div>
-            <div className="text-sm breadcrumbs">
+            <div className="text-sm breadcrumbs font-semibold text-[#686868]">
               <ul>
                 <li>
                   <a>Home</a>
@@ -57,11 +57,11 @@ const EditProducts = () => {
                 <li>
                   <a>Products</a>
                 </li>
-                <li>Edit Product</li>
+                <li className="text-[#001E00]">Edit Product</li>
               </ul>
             </div>
             <div className="">
-              <h1 className="text-[#FB641B] font-semibold text-2xl">
+              <h1 className="text-[#FB641B] font-bold text-2xl">
                 Edit Products
               </h1>
             </div>
