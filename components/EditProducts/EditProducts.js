@@ -88,33 +88,6 @@ const EditProducts = () => {
                   <option>Category 02</option>
                 </select>
 
-          <select className="select select-bordered w-full max-w-[193px] text-sm lg:ml-4 text-[#686868] mb-2">
-            <option disabled selected>Category</option>
-            <option>Category 01</option>
-            <option>Category 02</option>
-          </select>
-
-          <button className="btn bg-[#FB641B] w-[133px] rounded-md text-white normal-case lg:ml-4 mb-2">Search</button>
-        </div>
-      </div>
-
-      <div className="lg:max:w-[1426px] mx-auto mt-6">
-        <p className='text-[#001E00] text-lg mb-3 font-medium'>Products</p>
-        <div className={`p-6 flex flex-wrap justify-center lg:justify-start ${styles.campaignManagementWithoutBorder}`}>
-          {
-            productDetails.map(product => <div key={product._id} className="w-[183px] p-2">
-              <div className=" flex justify-end mb-[-45px] mr-1">
-                <div className="dropdown">
-                  <label tabIndex={0} className="">
-                    <HiDotsHorizontal className='text-[#686868] cursor-pointer'></HiDotsHorizontal>
-                  </label>
-                  <ul tabIndex={0} className="dropdown-content menu shadow bg-base-100 rounded border border-[#B7B7B7] w-[125px] text-base text-[#686868]">
-                    <li><Link href="editProductsTwo">View Detail</Link></li>
-                    <li><a>Edit</a></li>
-                    <li><a>Delete</a></li>
-                    <li><a>Copy Link</a></li>
-                  </ul>
-                </div>
                 <button className="btn bg-[#FB641B] w-[133px] rounded-md text-white normal-case lg:ml-4 mb-2">
                   Search
                 </button>
