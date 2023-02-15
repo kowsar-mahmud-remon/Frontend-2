@@ -45,8 +45,8 @@ const EditProducts = () => {
     },
   ];
   return (
-    <section className="bg-[#FFFFFF] pb-10 mx-auto w-full">
-      <div className="px-10 mx-auto">
+    <section className="bg-[#FFFFFF] pb-10 mt-7 mx-auto w-full">
+      <div className=" mx-auto">
         <div className="lg:max-w-[1426px] w-full">
           <div>
             <div className="text-sm breadcrumbs">
@@ -95,14 +95,14 @@ const EditProducts = () => {
             </div>
           </div>
 
-          <div className="mt-2">
+          <div className="mt-2 ">
             <p className="text-base font-semibold text-[#001E00]">Products</p>
           </div>
           <div
-            className={`rounded-lg mt-2 lg:pb-96 md:pb-72 pb-10 ${style.boxshaddow} bg-[#FFFFFF]`}
+            className={`px-6 rounded-lg mt-2 lg:pb-96 md:pb-72 pb-10 ${style.boxshaddow} bg-[#FFFFFF]`}
           >
             <div className="p-6">
-              <div className="grid lg:grid-cols-7 md:grid-cols-4 grid-cols-2 gap-3 justify-center mx-auto">
+              <div className="flex flex-wrap gap-4">
                 {products.map((product) => (
                   <EditProductCard
                     product={product}
