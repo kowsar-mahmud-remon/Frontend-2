@@ -35,7 +35,7 @@ const Category = () => {
                                 key={index}
                                 className={(asPath == path) ? styles.active : ""}
                             >
-                                <Link href={path}>
+                                <Link href={path} className='text-[19px] font-[500]'>
                                     <Image
                                         loader={() => c.categoryImage.img}
                                         src={c.categoryImage.img}
