@@ -127,7 +127,7 @@ const profileLinksResponsiveObj = [
   {
     title: "My Payment Options",
     href: "paymentOptions",
-    element: <ManageAccount />,
+    element: <MyPaymentOption />,
   },
   {
     title: "My Orders",
@@ -152,7 +152,7 @@ const profileLinksResponsiveObj = [
   {
     title: "My Wishlist",
     href: "myWishlist",
-    element: <ManageAccount />,
+    element: <MyWishList />,
   },
   {
     title: "Followed Stores",
@@ -179,6 +179,16 @@ const profileLinksResponsiveObj = [
     href: "writeReview",
     element: <WriteReview />,
   },
+  {
+    title:"EditProfile",
+    href:"editProfile",
+    element:<EditProfile></EditProfile>
+  },
+  {
+    title:"changesPassword",
+    href:"changesPassword",
+    element:<ChangesPassword></ChangesPassword>
+  }
 ];
 
 export { profileLinksObj,profileLinksResponsiveObj }
