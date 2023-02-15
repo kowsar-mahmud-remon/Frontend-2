@@ -1,5 +1,6 @@
 import CampaignManagement from "../components/CampaignManagement/CampaignManagement";
 import CampaignManagementOne from "../components/CampaignManagement/CampaignManagementOne";
+import CampaignManagementThree from "../components/CampaignManagement/CampaignManagementThree";
 import CampaignManagementTwo from "../components/CampaignManagement/CampaignManagementTwo";
 import EditProducts from "../components/EditProducts/EditProducts";
 import EditProductsTwo from "../components/EditProducts/EditProductsTwo";
@@ -91,6 +92,11 @@ export const manageProductsArray = [
     title: 'ManageOrders',
     href: 'manageOrders',
     element: <ManageOrders></ManageOrders>
+  },
+  {
+    title: 'CampaignManagementThree',
+    href: 'campaignManagementThree',
+    element: <CampaignManagementThree></CampaignManagementThree>
   }
 
 ];
