@@ -101,6 +101,11 @@ const Navication = () => {
     };
   }, [handleModalClose]);
 
+  // to close the modal when click the link
+  function handleClick(link) {
+    setShowModal(false);
+  }
+
   return (
     <section className="shadow-md     z-20 shadow-block-900 relative">
       <TopNavBar />
@@ -159,11 +164,11 @@ const Navication = () => {
           <div>
             {showModal && (
               <div
-                className="fixed top-[130px]  right-[45px] bg-white  m-auto p-4 border rounded-md border-black lg:w-[720px] md:w-[500px] "
+                className="fixed top-[130px]  right-[45px] bg-white  m-auto py-[80px] px-[15px] border-[2px] border-[#686868] rounded-md  lg:w-[900px] md:w-[500px] "
                 ref={modalRef}
               >
                 <Image
-                  className="mb-[60px] mt-[20px]"
+                  className="mb-[60px]"
                   src={modalLogo}
                   width={232}
                   height={69}
@@ -173,12 +178,14 @@ const Navication = () => {
                   <Link
                     className="btn bg-[#FB641B] text-white text-[18px]"
                     href="/login"
+                    onClick={() => handleClick("")}
                   >
                     Login
                   </Link>
                   <Link
-                    className="btn bg-[#F2F3F7] border border-[#B7B7B7] text-[18px]"
+                    className="btn bg-[#F2F3F7] border-[1px] border-[#B7B7B7] text-[18px]"
                     href="/registation"
+                    onClick={() => handleClick("")}
                   >
                     Register
                   </Link>
