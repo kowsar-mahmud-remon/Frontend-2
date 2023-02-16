@@ -71,7 +71,7 @@ const MyReturns = () => {
                             className='w-[19px] h-[20px] mr-[16px]'
                             src={img2}
 
-                            alt='Image' /></span>Retune Product</p>
+                            alt='Image' /></span>Return Product</p>
                     </div>
                     <div>
                         <div className="hidden md:block mx-auto">
