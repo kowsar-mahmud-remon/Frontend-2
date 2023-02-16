@@ -4,10 +4,13 @@ import CampaignManagementThree from "../components/CampaignManagement/CampaignMa
 import CampaignManagementTwo from "../components/CampaignManagement/CampaignManagementTwo";
 import EditProducts from "../components/EditProducts/EditProducts";
 import EditProductsTwo from "../components/EditProducts/EditProductsTwo";
-import ManageOrders from "../components/ManageOrders/ManageOrders";
 import ManageProduct from "../components/ManageProduct/ManageProduct";
 import ManageReview from "../components/ManageReview/ManageReview";
+import OrderHistory from "../components/orderHistory.js/OrderHistory";
 import AllProduct from "../components/ProductCampaignMain/AllProduct";
+import ProductCampaignFive from "../components/ProductCampaignMain/ProductCampaignFive";
+import ProductCampaignFour from "../components/ProductCampaignMain/ProductCampaignFour";
+import ProductCampaignThree from "../components/ProductCampaignMain/ProductCampaignThree";
 import ProductInvoices from "../components/ProductInvoices/ProductInvoices";
 import ProductInvoicesDetails from "../components/ProductInvoices/ProductInvoicesDetails/ProductInvoicesDetails";
 import Sellerverification from "../components/sellerverification/Sellerverification";
@@ -16,6 +19,7 @@ import SellerVerificationPage2 from "../components/SellerVerificationPage2/Selle
 import SellerVerificationPage3 from "../components/SellerVerificationPage3/SellerVerificationPage3";
 import SellerVerificationPage5 from "../components/SellerVerificationPage5/SellerVerificationPage5";
 import UploadProduct from "../components/UploadProduct/UploadProduct";
+import ManageOrders from "../pages/manageOrders/ManageOrders";
 
 export const manageProductsArray = [
   {
@@ -91,16 +95,12 @@ export const manageProductsArray = [
   {
     title: "ManageOrders",
     href: "manageOrders",
-    element: <ManageOrders></ManageOrders>,
+    element: <ManageOrders></ManageOrders>
   },
   {
-    title: "ManageReview",
-    href: "manageReview",
-    element: <ManageReview></ManageReview>,
-  },
-  {
-    title: "CampaignManagementThree",
-    href: "campaignManagementThree",
-    element: <CampaignManagementThree></CampaignManagementThree>,
-  },
+    title: 'CampaignManagementThree',
+    href: 'campaignManagementThree',
+    element: <CampaignManagementThree></CampaignManagementThree>
+  }
+
 ];

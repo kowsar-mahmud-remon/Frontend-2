@@ -1,13 +1,6 @@
 import Link from "next/link";
 
-const ManageList = ({
-  menu,
-  tabname,
-  setActive,
-  active,
-  setItem,
-  products,
-}) => {
+const ManageList = ({ menu, setActive, active, setItem, products }) => {
   const handleMenu = (menu) => {
     setActive(menu);
     if (menu.text == "All") {

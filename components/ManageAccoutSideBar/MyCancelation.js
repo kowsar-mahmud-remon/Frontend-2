@@ -55,12 +55,12 @@ const MyCancelation = () => {
 
 
     return (
-        <div className='px-4'>
+        <div className='px-4 '>
             <h1 className='text-[24px] md:text-[#FB641B] text-[#001E00] font-semibold mt-[24px] mb-[32px]'>My Cancellations</h1>
             {
                 cancels.map(cancel => {
                     return (
-                        <div key={cancel.id} className='md:w-[924px] shadow-lg rounded-md mb-[16px]'>
+                        <div key={cancel.id} className='md:w-[765px]  shadow-lg rounded-md mb-[16px]'>
                             <div className='flex justify-between items-center md:py-[20px]  md:mb-[16px] w-full px-[16px]'>
                                 <div>
                                     <p className='md:text-[16px] text-[14px] font-semibold text-[#001E00]'>Order <span className='text-[#287DF3]'>#12345678998745</span></p>
