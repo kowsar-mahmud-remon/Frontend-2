@@ -203,14 +203,14 @@ const Registation = () => {
                                 </div>
                                 <div className='md:flex lg:flex gap-3'>
                                     <div className='mb-3'>
-                                        <label className='text-[#001E00] text-[16px] mb-2'>First Name*</label>
+                                        <label className='text-[#001E00] text-[16px] '>First Name*</label>
                                         <input
                                             autoComplete="off"
                                             {...register("firstName", {
                                                 required: 'First Name is Required',
 
                                             })}
-                                            className='input border border-[#686868] text-[#686868] text-[16px] w-full' type="text" placeholder='First Name' />
+                                            className='input border border-[#686868] text-[#686868] text-[16px] w-full mt-[8px]' type="text" placeholder='First Name' />
                                         {
                                             errors?.firstName?.message && <p className='text-red-700/100'>{errors?.firstName?.message}</p>
                                         }
@@ -224,7 +224,7 @@ const Registation = () => {
 
 
                                             })}
-                                            className='input border border-[#686868] text-[#686868] text-[16px] w-full' type="text" placeholder='Last Name' />
+                                            className='input border border-[#686868] text-[#686868] text-[16px] w-full mt-[8px]' type="text" placeholder='Last Name' />
                                         {
                                             errors?.lastName?.message && <p className='text-red-700/100'>{errors?.lastName?.message}</p>
                                         }
