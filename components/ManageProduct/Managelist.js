@@ -1,13 +1,6 @@
 import Link from "next/link";
 
-const ManageList = ({
-  menu,
-  tabname,
-  setActive,
-  active,
-  setItem,
-  products,
-}) => {
+const ManageList = ({ menu, setActive, active, setItem, products }) => {
   const handleMenu = (menu) => {
     setActive(menu);
     if (menu.text == "All") {
@@ -30,7 +23,7 @@ const ManageList = ({
         }`}
       >
         <button
-          className="h-full w-full text-sm font-medium py-4"
+          className="h-full w-full text-base font-medium py-4"
           onClick={() => handleMenu(menu)}
           href={menu?.href}
         >

@@ -94,11 +94,11 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Manage Reviews",
-          href: "editProduct"
+          href: "manageReview"
         },
         {
           name: "Order History",
-          href: "editProduct"
+          href: "orderHistory"
         },
         {
           name: "Returns Product",

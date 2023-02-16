@@ -47,9 +47,9 @@ const EditProducts = () => {
   return (
     <section className="bg-[#FFFFFF] pb-10 mt-7 mx-auto w-full">
       <div className=" mx-auto">
-        <div className="lg:max-w-[1426px] w-full">
+        <div className=" w-full">
           <div>
-            <div className="text-lg breadcrumbs font-semibold text-[#686868]">
+            <div className="text-lg breadcrumbs text-[#686868]">
               <ul>
                 <li>
                   <a>Home</a>

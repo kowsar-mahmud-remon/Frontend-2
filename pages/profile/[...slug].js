@@ -16,7 +16,6 @@ const Profile = () => {
             p?.links &&
               p?.links?.map((e, i) => {
                 if (e.href === router?.query?.slug?.[1]) {
- 
                   ele = e?.element;
                 }
               });

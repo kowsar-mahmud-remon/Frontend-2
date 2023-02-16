@@ -151,7 +151,6 @@ const MyOrder = () => {
       <div>
         <h1 className="text-[#FB641B] text-[24px] font-semibold">My Orders</h1>
       </div>
-
       <div className="mt-[32px]">
         <div>
           <ul className="flex gap-[90px]  ">
