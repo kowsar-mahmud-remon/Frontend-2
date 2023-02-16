@@ -94,15 +94,15 @@
   transition: 0.4s;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background-color: #fb641b;
 }
 
-input:focus + .slider {
+input:focus+.slider {
   box-shadow: 0 0 1px #fb641b;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   -webkit-transform: translateX(18px);
   -ms-transform: translateX(18px);
   transform: translateX(18px);
@@ -242,10 +242,7 @@ top: 453px; */
 }
 
 .wishlistcard {
-  width: 222px;
-  height: 338px;
-  left: 636px;
-  top: 519px;
+
 
   /* White */
 
@@ -444,7 +441,7 @@ top: 453px; */
 
 .EmailChangeInputRes {
   box-sizing: border-box;
- 
+
 
   /* White */
 
@@ -459,10 +456,10 @@ top: 453px; */
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
-  
+
   opacity: 1;
- 
-  
+
+
 }
 
 input[type=number]::-webkit-inner-spin-button {
@@ -472,4 +469,24 @@ input[type=number]::-webkit-inner-spin-button {
   top: 0;
   right: 0;
   height: 100%;
+}
+
+.paymentOptionResponsiveModalButton {
+  background: #FFFFFF;
+  /* 6 Effect */
+
+  box-shadow: 0px 6px 30px 2px rgba(0, 0, 0, 0.08);
+  border-radius: 4px
+}
+.paymentOption{
+  box-shadow: 0px 6px 30px 2px rgba(0, 0, 0, 0.08);
+border-radius: 8px;
+}
+
+.wishlistResponsiveBox {
+  background: #FFFFFF;
+  /* 6 Effect */
+
+  box-shadow: 0px 6px 30px 2px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
 }

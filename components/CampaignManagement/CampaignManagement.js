@@ -52,7 +52,7 @@ const CampaignManagement = () => {
                   </label>
                   <ul tabIndex={0} className="dropdown-content menu shadow bg-base-100 rounded border border-[#B7B7B7] w-[121px] text-base text-[#686868]">
                     <li><Link href="campaignManagementOne">View Detail</Link></li>
-                    <li><a>Edit</a></li>
+                    <li><Link href="campaignManagementTwo">Edit</Link></li>
                   </ul>
                 </div>
               </div>

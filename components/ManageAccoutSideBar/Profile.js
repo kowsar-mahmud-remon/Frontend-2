@@ -171,8 +171,12 @@ const Profile = () => {
                             </label>
                         </div>
                         <div className='flex justify-between gap-[20px] mt-[200px] w-full'>
-                            <button className='text-[#FFFFFF] bg-[#FB641B] w-full h-[48px] rounded-[8px] font-[500]text-[16px]'>Edit Profile</button>
-                            <button className='text-[#FFFFFF] bg-[#FB641B] w-full h-[48px] rounded-[8px] font-[500]text-[16px]'>Change Password</button>
+
+                            <button className='text-[#FFFFFF] bg-[#FB641B] w-full h-[48px] rounded-[8px] font-[500]text-[16px]'><Link href='/profile/editProfile'>Edit Profile  </Link></button>
+
+
+                            <button className='text-[#FFFFFF] bg-[#FB641B] w-full h-[48px] rounded-[8px] font-[500]text-[16px]'><Link href='/profile/changesPassword'>Change Password</Link></button>
+
                         </div>
                     </div>
 

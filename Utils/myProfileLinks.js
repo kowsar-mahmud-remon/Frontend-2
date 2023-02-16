@@ -15,6 +15,8 @@ import AddressBook from "../components/AddressBook/AddressBook";
 import EditProfile from "../components/ManageAccoutSideBar/EditProfile";
 import ChangesPassword from "../components/ManageAccoutSideBar/ChangesPassword";
 import MyPaymentOption from "../components/ManageAccoutSideBar/myPaymentOption";
+import MyReturns from "../components/ManageAccoutSideBar/MyReturns";
+import MyCancelation from "../components/ManageAccoutSideBar/MyCancelation";
 
 
 const profileLinksObj = [
@@ -38,7 +40,7 @@ const profileLinksObj = [
         href: "myPaymentOptions",
         element: <MyPaymentOption />,
       }
-    
+
     ],
   },
   {
@@ -49,14 +51,14 @@ const profileLinksObj = [
       {
         title: "My Returns",
         href: "myReturns",
-        element: <Profile />,
+        element: <MyReturns></MyReturns>,
       },
       {
         title: "My Cancellations",
         href: "myCancellations",
-        element: <Profile />,
+        element: <MyCancelation />,
       }
-   
+
     ]
   },
 
@@ -96,14 +98,14 @@ const profileLinksObj = [
     element: <WriteReview />,
   },
   {
-    title:"editProfile",
-    href:"editProfile",
-    element:<EditProfile></EditProfile>
+    title: "editProfile",
+    href: "editProfile",
+    element: <EditProfile></EditProfile>
   },
   {
-    title:"changesPassword",
-    href:"changesPassword",
-    element:<ChangesPassword></ChangesPassword>
+    title: "changesPassword",
+    href: "changesPassword",
+    element: <ChangesPassword></ChangesPassword>
   }
 ];
 
@@ -127,7 +129,7 @@ const profileLinksResponsiveObj = [
   {
     title: "My Payment Options",
     href: "paymentOptions",
-    element: <ManageAccount />,
+    element: <MyPaymentOption />,
   },
   {
     title: "My Orders",
@@ -137,12 +139,12 @@ const profileLinksResponsiveObj = [
   {
     title: "My Returns",
     href: "myReturns",
-    element: <ManageAccount />,
+    element: <MyReturns />,
   },
   {
     title: "My Cancellations",
     href: "myCancellations",
-    element: <ManageAccount />,
+    element: <MyCancelation />,
   },
   {
     title: "My Reviews",
@@ -152,7 +154,7 @@ const profileLinksResponsiveObj = [
   {
     title: "My Wishlist",
     href: "myWishlist",
-    element: <ManageAccount />,
+    element: <MyWishList />,
   },
   {
     title: "Followed Stores",
@@ -179,6 +181,16 @@ const profileLinksResponsiveObj = [
     href: "writeReview",
     element: <WriteReview />,
   },
+  {
+    title:"EditProfile",
+    href:"editProfile",
+    element:<EditProfile></EditProfile>
+  },
+  {
+    title:"changesPassword",
+    href:"changesPassword",
+    element:<ChangesPassword></ChangesPassword>
+  }
 ];
 
-export { profileLinksObj,profileLinksResponsiveObj }
+export { profileLinksObj, profileLinksResponsiveObj }
