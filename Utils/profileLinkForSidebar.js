@@ -77,12 +77,12 @@ export const profileResponsiveBar = [
   },
   {
     title: "Address book",
-    href: "addressBook",
+    href: "manageAccount/addressBook",
   
   },
   {
     title: "My Payment Options",
-    href: "paymentOptions",
+    href: "manageAccount/myPaymentOptions",
    
   },
   {
@@ -97,7 +97,7 @@ export const profileResponsiveBar = [
   },
   {
     title: "My Cancellations",
-    href: "myCancellations",
+    href: "myOrders/myCancellations",
    
   },
   {
@@ -107,7 +107,7 @@ export const profileResponsiveBar = [
   },
   {
     title: "My Wishlist",
-    href: "myWishlist",
+    href: "myWishlists",
   
   },
   {
