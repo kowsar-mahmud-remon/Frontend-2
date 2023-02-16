@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useRef } from 'react';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import Slider from 'react-slick';
@@ -9,103 +9,98 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import img from "../../assets/CategoryImages/KachabazarIcon/shopping-bag 1.png";
 
-import StoriesCard from './StoryCard/StoriesCard';
+import StoriesCard from "./StoryCard/StoriesCard";
 const VdoStory = () => {
-  const slideRef = useRef(null);
-  const [load, setLoad] = useState(undefined)
-  useEffect(() => {
-    setLoad(true)
-  }, [load])
-  if (!load) return
-  const stories = [
-    {
-      vdo: "",
-      taka: "222",
-      title: "T-shirt For Unisex T-shirt For Unisex",
-      rate: '4.9'
-    },
-    {
-      vdo: "",
-      taka: "222",
-      title: "T-shirt For Unisex T-shirt For Unisex",
-      rate: '4.9'
-    },
-  ]
+    const slideRef = useRef(null);
+    const stories = [
+        {
+            vdo: "",
+            taka: "222",
+            title: "T-shirt For Unisex T-shirt For Unisex",
+            rate:'4.9'
+        },
+        {
+            vdo: "",
+            taka: "222",
+            title: "T-shirt For Unisex T-shirt For Unisex",
+            rate:'4.9'
+        },
+    ]
 
-  const products = [
-    {
-      regularPrice: '200',
-      productName: 'alu ptoroed',
-      quantity: '20',
-      productTitle: 'blabal',
-      discount: '30%',
-      productPictures: img,
-      _id: 'sdlfslkdfs',
-      subCategory: 'sdfsdf',
-      slug: 'sdfsd',
-      category: 'sdfsdf',
-    },
-    {
-      regularPrice: '200',
-      productName: 'alu ptoroed',
-      quantity: '20',
-      productTitle: 'blabal',
-      discount: '30%',
-      productPictures: img,
-      _id: 'sdlfslkdfs',
-      subCategory: 'sdfsdf',
-      slug: 'sdfsd',
-      category: 'sdfsdf',
-    },
-    {
-      regularPrice: '200',
-      productName: 'alu ptoroed',
-      quantity: '20',
-      productTitle: 'blabal',
-      discount: '30%',
-      productPictures: img,
-      _id: 'sdlfslkdfs',
-      subCategory: 'sdfsdf',
-      slug: 'sdfsd',
-      category: 'sdfsdf',
-    },
-    {
-      regularPrice: '200',
-      productName: 'alu ptoroed',
-      quantity: '20',
-      productTitle: 'blabal',
-      discount: '30%',
-      productPictures: img,
-      _id: 'sdlfslkdfs',
-      subCategory: 'sdfsdf',
-      slug: 'sdfsd',
-      category: 'sdfsdf',
-    },
-    {
-      regularPrice: '200',
-      productName: 'alu ptoroed',
-      quantity: '20',
-      productTitle: 'blabal',
-      discount: '30%',
-      productPictures: img,
-      _id: 'sdlfslkdfs',
-      subCategory: 'sdfsdf',
-      slug: 'sdfsd',
-      category: 'sdfsdf',
-    },
-    {
-      regularPrice: '200',
-      productName: 'alu ptoroed',
-      quantity: '20',
-      productTitle: 'blabal',
-      discount: '30%',
-      productPictures: img,
-      _id: 'sdlfslkdfs',
-      subCategory: 'sdfsdf',
-      slug: 'sdfsd',
-      category: 'sdfsdf',
-    },
-  ];
+   const products = [
+       {
+           regularPrice: '200',
+           productName: 'alu ptoroed',
+           quantity: '20',
+           productTitle: 'blabal',
+           discount: '30%',
+           productPictures: img,
+           _id: 'sdlfslkdfs',
+           subCategory: 'sdfsdf',
+           slug: 'sdfsd',
+           category:'sdfsdf',
+     },
+       {
+           regularPrice: '200',
+           productName: 'alu ptoroed',
+           quantity: '20',
+           productTitle: 'blabal',
+           discount: '30%',
+           productPictures: img,
+           _id: 'sdlfslkdfs',
+           subCategory: 'sdfsdf',
+           slug: 'sdfsd',
+           category:'sdfsdf',
+     },
+       {
+           regularPrice: '200',
+           productName: 'alu ptoroed',
+           quantity: '20',
+           productTitle: 'blabal',
+           discount: '30%',
+           productPictures: img,
+           _id: 'sdlfslkdfs',
+           subCategory: 'sdfsdf',
+           slug: 'sdfsd',
+           category:'sdfsdf',
+     },
+       {
+           regularPrice: '200',
+           productName: 'alu ptoroed',
+           quantity: '20',
+           productTitle: 'blabal',
+           discount: '30%',
+           productPictures: img,
+           _id: 'sdlfslkdfs',
+           subCategory: 'sdfsdf',
+           slug: 'sdfsd',
+           category:'sdfsdf',
+     },
+       {
+           regularPrice: '200',
+           productName: 'alu ptoroed',
+           quantity: '20',
+           productTitle: 'blabal',
+           discount: '30%',
+           productPictures: img,
+           _id: 'sdlfslkdfs',
+           subCategory: 'sdfsdf',
+           slug: 'sdfsd',
+           category:'sdfsdf',
+     },
+       {
+           regularPrice: '200',
+           productName: 'alu ptoroed',
+           quantity: '20',
+           productTitle: 'blabal',
+           discount: '30%',
+           productPictures: img,
+           _id: 'sdlfslkdfs',
+           subCategory: 'sdfsdf',
+           slug: 'sdfsd',
+           category:'sdfsdf',
+     },
+   ];
 
   return (
     <>

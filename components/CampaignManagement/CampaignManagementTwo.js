@@ -1,14 +1,16 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 import { FaAngleRight } from 'react-icons/fa';
 import img from '../../assets/images/image 66.png';
 import delivery from '../../assets/images/fast-delivery 1.png';
 import delivery2 from '../../assets/images/cash-on-delivery 2.png';
 import styles from "../../styles/campaignManagementTwo.module.css";
+import CampaignManagementThree from './CampaignManagementThree';
 
 
 
 const CampaignManagementTwo = () => {
+  const [hidden, setHidden] = useState(false);
   console.log("styles", styles);
   return (
     <div className='mt-7 p-4 lg:p-0 lg:w-[1426px]'>
@@ -33,11 +35,11 @@ const CampaignManagementTwo = () => {
           />
 
           <div className="">
-            <p className=' text-xl font-medium text-[#001E00]'>Tomato (Local) 500 ±30 gm</p>
+            <p className=' text-xl font-bold text-[#001E00]'>Tomato (Local) 500 ±30 gm</p>
 
             <div className="mt-4 flex">
-              <p className='text-base text-[#001E00] mr-4'>Brand: <span className='text-[#686868]'>No Brand</span></p>
-              <p className='text-base text-[#001E00]'>Color: <span className='text-[#686868]'>Red Color</span></p>
+              <p className='text-base text-[#001E00] mr-4 font-medium'>Brand: <span className='text-[#686868]'>No Brand</span></p>
+              <p className='text-base text-[#001E00] font-medium'>Color: <span className='text-[#686868]'>Red Color</span></p>
             </div>
 
             <div className=" text-[#707070] flex lg:block justify-between mt-4">
@@ -67,7 +69,7 @@ const CampaignManagementTwo = () => {
                   width={28}
                   height={28}
                 />
-                <p className='text-base text-[#686868]'>24 Hours To 72 Hours Delivery Time</p>
+                <p className='text-base text-[#686868]'>Cash on Delivery Available</p>
               </div>
             </div>
 
@@ -76,15 +78,15 @@ const CampaignManagementTwo = () => {
         </div>
 
         <div className="lg:w-[474px] flex lg:justify-end items-center mb-4">
-          <p className='text-[#001E00] mr-4'>Campaign Will Be Promoted:</p>
+          <p className='text-[#001E00] mr-4 text-base font-medium'>Campaign Will Be Promoted:</p>
           <div className="flex w-[172px] border border-[#B7B7B7] justify-between rounded">
-            <p className='pl-[16px] py-[10px] text-[#001E00]'>3</p>
+            <p className='pl-[16px] py-[10px] text-[#001E00] text-base font-medium'>3</p>
             <p className='pr-[16px] py-[10px] text-[#707070]'>Days</p>
           </div>
         </div>
 
         <div className="lg:w-[474px] flex lg:justify-end items-center mb-4">
-          <p className='text-[#001E00] mr-4'>Campaign for Pay:</p>
+          <p className='text-[#001E00] mr-4 text-base font-medium'>Campaign for Pay:</p>
           <div className="flex w-[172px] border border-[#B7B7B7] justify-between rounded text-[#707070]">
             <p className='pl-[16px] py-[10px]'>Tk 100</p>
             <p className='pr-[16px] py-[10px]'>Daily</p>
@@ -92,7 +94,7 @@ const CampaignManagementTwo = () => {
         </div>
 
         <div className="lg:w-[474px] flex lg:justify-end items-center mb-4">
-          <p className='text-[#001E00] mr-4'>Choose a Campaign Objective:</p>
+          <p className='text-[#001E00] mr-4 text-base font-medium'>Choose a Campaign Objective:</p>
           <div className="flex w-[172px] border border-[#B7B7B7] justify-between rounded">
             <select className="select w-full text-sm text-[#001E00]">
               {/* <option disabled selected>Social</option> */}
@@ -123,12 +125,15 @@ const CampaignManagementTwo = () => {
             className="w-full btn btn-outline lg:w-[264px] h-[72px] font-medium border border-[#686868] rounded-md lg:mr-4 mb-4"
           >Cancel
           </button>
-          <button
+          {/* <button
             className="w-full btn lg:w-[264px] h-[72px] bg-[#FB641B] font-medium text-white rounded-md mb-4"
           >Update
-          </button>
+          </button> */}
+          <label htmlFor="my-modal-4" onClick={() => setHidden(!hidden)} className="w-full btn lg:w-[264px] h-[72px] bg-[#FB641B] font-medium text-white rounded-md mb-4">Update</label>
         </div>
       </div>
+
+      <CampaignManagementThree hidden={hidden} setHidden={setHidden}></CampaignManagementThree>
 
 
 

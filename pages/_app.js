@@ -13,10 +13,12 @@ export default function App({ Component, pageProps }) {
   return (
     <div className="">
       <Provider store={store}>
-        
+
         <SideButtons />
         <MobileNavBar />
-        <Navication />
+        <div className='lg:block hidden'>
+          <Navication />
+        </div>
         <div className='md:mb-0 mb-20'>
           <Component {...pageProps} />
         </div>

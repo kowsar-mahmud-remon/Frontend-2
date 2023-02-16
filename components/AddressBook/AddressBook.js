@@ -5,8 +5,10 @@ import plus from "/assets/images/plus.png";
 import AddressBookModal from "../../components/AddressBook/AddressBookModal";
 import EditAddress from "../../components/AddressBook/EditAddress";
 import AddNewAddress from "../../components/AddressBook/AddNewAddress";
+import { useRouter } from "next/router";
 
 const AddressBook = () => {
+  const router = useRouter()
   return (
     <>
       <AddressBookModal></AddressBookModal>
@@ -15,14 +17,26 @@ const AddressBook = () => {
       <div className="lg:w-[924px] md:w-[924px] w-full mx-auto my-7">
         <div className="flex justify-between mb-8">
           <div className="flex items-center">
-            <Image
-              className="w-4 lg:-mr-4 md:-mr-4 mr-3 lg:ml-0 md:ml-0 ml-2 lg:invisible md:invisible visible"
-              src={arrow}
-              alt=""
-            ></Image>
-            <h1 className="text-2xl font-semibold lg:text-[#FB641B] md:text-[#FB641B] text-[#001E00]">
-              Address Book
-            </h1>
+            <button className="flex items-center lg:hidden block" onClick={() => router.back()}>
+              <Image
+                className="w-4 lg:-mr-4 md:-mr-4 mr-3 lg:ml-0 md:ml-0 ml-2 lg:invisible md:invisible visible"
+                src={arrow}
+                alt=""
+              ></Image>
+              <h1 className="text-2xl font-semibold lg:text-[#FB641B] md:text-[#FB641B] text-[#001E00]">
+                Address Book
+              </h1>
+            </button>
+            <div className="lg:block hidden">
+              <Image
+                className="w-4 lg:-mr-4 md:-mr-4 mr-3 lg:ml-0 md:ml-0 ml-2 lg:invisible md:invisible visible"
+                src={arrow}
+                alt=""
+              ></Image>
+              <h1 className="text-2xl font-semibold lg:text-[#FB641B] md:text-[#FB641B] text-[#001E00]">
+                Address Book
+              </h1>
+            </div>
           </div>
 
           <div className="flex items-center lg:visible md:visible invisible">
