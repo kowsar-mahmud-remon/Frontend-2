@@ -14,7 +14,7 @@ const AddressBook = () => {
       <AddressBookModal></AddressBookModal>
       <AddNewAddress></AddNewAddress>
       <EditAddress></EditAddress>
-      <div className="lg:w-[924px] md:w-[924px] w-full mx-auto my-7">
+      <div className="lg:w-[924px] md:w-[924px] w-full mx-[24px] my-7">
         <div className="flex justify-between mb-8">
           <div className="flex items-center">
             <button className="flex items-center lg:hidden block" onClick={() => router.back()}>
