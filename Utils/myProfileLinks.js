@@ -17,6 +17,7 @@ import ChangesPassword from "../components/ManageAccoutSideBar/ChangesPassword";
 import MyPaymentOption from "../components/ManageAccoutSideBar/myPaymentOption";
 import MyReturns from "../components/ManageAccoutSideBar/MyReturns";
 import MyCancelation from "../components/ManageAccoutSideBar/MyCancelation";
+import MyReturnsResponsive from "../components/ManageAccoutSideBar/MyReturnsResponsive";
 
 
 const profileLinksObj = [
@@ -139,7 +140,7 @@ const profileLinksResponsiveObj = [
   {
     title: "My Returns",
     href: "myReturns",
-    element: <MyReturns />,
+    element: <MyReturnsResponsive />,
   },
   {
     title: "My Cancellations",
