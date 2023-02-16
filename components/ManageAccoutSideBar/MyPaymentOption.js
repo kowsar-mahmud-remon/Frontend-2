@@ -11,13 +11,11 @@ const MyPaymentOption = () => {
   return (
     <div>
       <div className="hidden lg:block">
-        <div className="w-[924px]  px-0  mx-auto mb-12">
+        <div className="w-full  px-0  mx-auto mb-12">
           <h2 className="text-[#FB641B] text-2xl mt-6 mb-8 font-semibold">
             My Payment Option
           </h2>
-          <div
-            className={`rounded-lg bg-[#FFFFFF] p-6 ${style.boxshaddow} mb-6 h-[210px]`}
-          >
+          <div className={`rounded-lg bg-[#FFFFFF] p-6 ${style.boxshaddow} mb-6 h-[210px] w-full`}>
             <p className="text-[#001E00] text-base font-medium mb-8">
               Credit & Debit Card
             </p>

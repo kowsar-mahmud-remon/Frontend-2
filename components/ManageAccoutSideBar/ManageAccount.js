@@ -77,20 +77,7 @@ const ManageAccount = () => {
                                         <td className="text-[#686868]">Tk. 60</td>
                                         <td className="text-[#287DF3]">View</td>
                                     </tr>
-                                    {/* <tr>
-                                            <td>123123123424</td>
-                                            <td>12/12/2022</td>
-                                            <td>Blue</td>
-                                            <td>Tk. 60</td>
-                                            <td>Mange</td>
-                                        </tr>
-                                        <tr>
-                                            <td>123123123424</td>
-                                            <td>12/12/2022</td>
-                                            <td>Blue</td>
-                                            <td>Tk. 60</td>
-                                            <td>Mange</td>
-                                        </tr> */}
+                                  
                                 </tbody>
                             </table>
                         </div>

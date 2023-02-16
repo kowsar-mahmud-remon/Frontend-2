@@ -202,8 +202,8 @@ const MyOrder = () => {
       {isActive === "all" && (
         <>
           <div className="mt-[16px]">
-            <div className="w-[924px] h-[80px] rounded-[8px] bg-[#FFFFFF] shadow-lg">
-              <div className=" w-full max-w-xs mt-4 gap-[16px] flex ">
+            <div className="w-full h-[80px] rounded-[8px] bg-[#FFFFFF] shadow-lg">
+              <div className=" w-full mt-4 gap-[16px] flex ">
                 <p className="label mt-[25px] ml-[24px] mb-[30px] text-[16px]">
                   {" "}
                   <span className="label-text">Show:</span>

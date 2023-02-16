@@ -2,6 +2,7 @@ import React from 'react';
 import { useRouter } from "next/router";
 import { FaArrowLeft, FaEdit } from "react-icons/fa";
 import Link from 'next/link';
+import Modal from './Modal';
 const Profile = () => {
     const router = useRouter()
     return (
@@ -10,8 +11,8 @@ const Profile = () => {
                 <div>
                     <h1 className='text-[24px] text-[#FB641B]'>My Profile</h1>
                 </div>
-                <div className='profile mt-[32px]'>
-                    <div className='flex pt-[32px] ml-[24px] gap-[200px]'>
+                <div className='profile w-full h-[548px] mt-[32px]'>
+                    <div className='flex  mx-[24px] pt-[32px] justify-between gap-[100px]'>
                         <div>
                             <h1 className='text-[14px] text-[#001E00] font-[500]'>Full Name</h1>
                             <h2 className='text-[16px] text-[#686868] mt-[16px]'>Abdul Korim</h2>
@@ -27,7 +28,7 @@ const Profile = () => {
                             <h2 className='text-[#686868] text-[16px] mt-[16px]'>+880124 ******* 514</h2>
                         </div>
                     </div>
-                    <div className='mt-[56px] ml-[24px] flex gap-[210px]'>
+                    <div className='mt-[56px]  mx-[24px]  flex gap-[210px]'>
                         <div>
                             <h1 className='text-[#001E00] font-[500] text-[14px]'>Birthday</h1>
                             <h2 className='text-[#686868] text-[16px] mt-[16px]'>2000-02-21</h2>
@@ -37,7 +38,7 @@ const Profile = () => {
                             <h1 className='text-[#686868] text-[16px] mt-[16px]'>Male</h1>
                         </div>
                     </div>
-                    <div className='ml-[24px] mt-[150px] flex flex-col gap-[16px]'>
+                    <div className='  mx-[24px] mt-[150px] flex flex-col gap-[16px]'>
                         <label htmlFor="Newsletter-modal-3"><h1 className='text-[#287DF3] text-[16px]'>Subscribe to our Newsletter</h1></label>
                         <Link href='/profile/editProfile'>
                             <button className='w-[273px] h-[48px] bg-[#FB641B] text-[white] rounded-[8px]'><span className='text-[16px] text-[500] text-[#FFFFFF]'>Edit Profile</span></button>
@@ -183,66 +184,8 @@ const Profile = () => {
 
 
                 </div>
-                <input type="checkbox" id="Email-responsive-modal-3" className="modal-toggle" />
-                <div className="modal ">
-                    <div className="bg-[#FFFFFF] w-full mx-[30px] h-[211px] rounded-[8px] relative">
-                        <label htmlFor="Email-responsive-modal-3" className="absolute right-5 top-3">✕</label>
-                        <div className=' mt-[16px]'>
-                            <h3 className="text-[#001E00] text-[20px] font-[400] ml-[16px]">Email Address</h3>
-                            <div className='mt-[16px]'>
-                                <h1 className='text-[#001E00] text-[14px] ml-[16px]'>Email</h1>
-                                <form className='mt-[12px] mx-[16px]'>
-                                    <input type='text' placeholder='Enter your new mail' className='EmailChangeInputRes w-full h-[40px]  focus:border-[#B7B7B7] pl-[13px] placeholder:pl-[1px] placeholder:text-[14px]  focus:ring-sky-500 placeholder-[#686868] focus:outline-none'></input>
-                                    <div className=" flex justify-center mt-[18px] mb-[16px]">
-                                        <button className="w-[172px] h-[48px] bg-[#FB641B] rounded-[4px]"><span className='text-white'>Save</span></button>
-                                    </div>
-                                </form>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <input type="checkbox" id="Mobile-responsive-modal-3" className="modal-toggle" />
-                <div className="modal ">
-                    <div className="bg-[#FFFFFF] w-full mx-[24px] h-[211px] rounded-[8px] relative">
-                        <label htmlFor="Mobile-responsive-modal-3" className="absolute right-5 top-3">✕</label>
-                        <div className=' mt-[16px] '>
-                            <h3 className="text-[#001E00] text-[20px] font-[400] ml-[16px]">Mobile Number</h3>
-                            <div className='mt-[16px]'>
-                                <h1 className='text-[#001E00] text-[14px] ml-[16px]'>Number</h1>
-                                <form className='mt-[12px] mx-[16px]'>
-                                    <input type='text' placeholder='Enter your new Number' className='EmailChangeInputRes w-full h-[40px]  focus:border-[#B7B7B7] pl-[13px] placeholder:pl-[1px] placeholder:text-[14px]  focus:ring-sky-500 placeholder-[#686868] focus:outline-none'></input>
-                                    <div className=" flex justify-center mt-[18px] mb-[16px]">
-                                        <button className="w-[172px] h-[48px] bg-[#FB641B] rounded-[4px]"><span className='text-white'>Save</span></button>
-                                    </div>
-                                </form>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <input type="checkbox" id="Newsletter-responsive-modal-3" className="modal-toggle" />
-                <div className="modal ">
-                    <div className="bg-[#FFFFFF] w-full mx-[24px] h-[211px] rounded-[8px] relative">
-                        <label htmlFor="Newsletter-responsive-modal-3" className="absolute right-5 top-3">✕</label>
-                        <div className=' mt-[16px] '>
-                            <h3 className="text-[#001E00] text-[20px] font-[400] ml-[16px]">Newsletter Subscription</h3>
-                            <div className='mt-[16px]'>
-                                <h1 className='text-[#001E00] text-[14px] ml-[16px]'>Email</h1>
-                                <form className='mt-[12px] mx-[16px]'>
-                                    <input type='text' placeholder='Enter your new mail' className='EmailChangeInputRes w-full h-[40px]  focus:border-[#B7B7B7] pl-[13px] placeholder:pl-[1px] placeholder:text-[14px]  focus:ring-sky-500 placeholder-[#686868] focus:outline-none'></input>
-                                    <div className=" flex justify-center  mt-[18px] mb-[16px]">
-                                        <button className="w-[172px] h-[48px] bg-[#FB641B] rounded-[4px]"><span className='text-white'>Subcribe</span></button>
-                                    </div>
-                                </form>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <Modal></Modal>
+       
             </div>
 
             

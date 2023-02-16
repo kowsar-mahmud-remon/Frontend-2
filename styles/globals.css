@@ -288,10 +288,7 @@ top: 453px; */
 }
 
 .profile {
-  width: 924px;
-  height: 548px;
-  left: 636px;
-  top: 303px;
+
 
   /* White */
 
@@ -380,10 +377,7 @@ top: 453px; */
 }
 
 .editProfile {
-  width: 924px;
-  height: 548px;
-  left: 636px;
-  top: 303px;
+
 
   /* White */
 
@@ -408,16 +402,7 @@ top: 453px; */
 }
 
 .changePassword {
-  width: 924px;
-  height: 548px;
-  left: 636px;
-  top: 303px;
-
-  /* White */
-
   background: #FFFFFF;
-  /* Effect 16 */
-
   box-shadow: 0px 6px 28px rgba(0, 0, 0, 0.16);
   border-radius: 8px;
 }
@@ -472,7 +457,7 @@ border-radius: 8px;
 
 
 
-select {
+.selected {
 
   background: url("/arrowdown.png") no-repeat;
   background-position: calc(100% - 0.75rem) center !important;

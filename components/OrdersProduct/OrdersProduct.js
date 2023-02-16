@@ -5,7 +5,7 @@ const OrdersProduct = ({data}) => {
   
     return (
       <div className="mt-[16px]">
-        <div className="w-[924px] h-[149px] rounded-[8px] bg-[#FFFFFF] shadow-lg">
+        <div className="w-full h-[149px] rounded-[8px] bg-[#FFFFFF] shadow-lg">
           <div className="flex items-center justify-between">
             <div className="m-[16px]">
               <p>
