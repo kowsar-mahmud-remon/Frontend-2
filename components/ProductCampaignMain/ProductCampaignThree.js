@@ -1,17 +1,14 @@
 import Image from 'next/image';
-import React, { useState } from 'react';
-import { FaAngleRight } from 'react-icons/fa';
+import React from 'react';
 import img from '../../assets/images/image 66.png';
 import delivery from '../../assets/images/fast-delivery 1.png';
 import delivery2 from '../../assets/images/cash-on-delivery 2.png';
 import styles from "../../styles/campaignManagementTwo.module.css";
-import CampaignManagementThree from './CampaignManagementThree';
+import Link from 'next/link';
 
 
 
-const CampaignManagementTwo = () => {
-  const [hidden, setHidden] = useState(false);
-  console.log("styles", styles);
+const ProductCampaignThree = () => {
   return (
     <div className='mt-7 p-4 lg:p-0 lg:w-[1426px]'>
 
@@ -19,15 +16,15 @@ const CampaignManagementTwo = () => {
         <div className=" flex items-center mb-2">
           <p className='mr-1'>Home</p>
           <p className='mr-1'>{">"} Promotions</p>
-          <p className='text-[#001E00] font-medium'>{">"} Campaign Management</p>
+          <p className='text-[#001E00] font-medium'>{">"} Product Campaign</p>
         </div>
-        <p className=' text-2xl text-[#FB641B] font-medium'>Campaign Management</p>
+        <p className=' text-2xl text-[#FB641B] font-medium'>Product Campaign</p>
       </div>
 
       <div className={`lg:w-[642px] mx-auto pb-[376px] ${styles.campaignManagement}`}>
         <div className="lg:flex mt-[27px] mb-8">
           <Image
-            className='w-[241px] h-[182px] mb-2 lg:ml-[45px] lg:mr-4 object-cover	'
+            className='w-[241px] h-[182px] mb-2 lg:ml-[45px] lg:mr-4 object-cover	shadow-xl'
             src={img}
             alt="Picture of the author"
             width={241}
@@ -45,7 +42,7 @@ const CampaignManagementTwo = () => {
             <div className=" text-[#707070] flex lg:block justify-between mt-4">
               <div className="flex items-center">
                 <p className=' text-2xl text-[#FB641B] font-medium mb-2 mr-4'>TK 60</p>
-                <p className='text-base line-through mb-2 mr-4'>Tk 80</p>
+                <p className='text-base line-through mb-2 mr-4 font-medium'>Tk 80</p>
                 <p className='text-base mb-4'>(20 % off)</p>
               </div>
             </div>
@@ -122,24 +119,20 @@ const CampaignManagementTwo = () => {
       <div className="lg:w-[642px] mx-auto mt-[52px]">
         <div className="mb-10 justify-center lg:flex">
           <button
-            className="w-full btn btn-outline lg:w-[264px] h-[72px] font-normal text-2xl normal-case text-[#686868] border border-[#686868] rounded-md lg:mr-4 mb-4"
+            className="w-full btn btn-outline lg:w-[264px] h-[72px] border border-[#686868] rounded-md lg:mr-4 mb-4 text-2xl font-normal text-[#686868] normal-case"
           >Cancel
           </button>
-          {/* <button
-            className="w-full btn lg:w-[264px] h-[72px] bg-[#FB641B] font-medium text-white rounded-md mb-4"
-          >Update
-          </button> */}
-          <label htmlFor="my-modal-4" onClick={() => setHidden(!hidden)} className="w-full btn lg:w-[264px] h-[72px] bg-[#FB641B] font-normal text-2xl normal-case text-white rounded-md mb-4">Update</label>
+          <Link href="productCampaignFour">
+            <button
+              className="w-full btn lg:w-[264px] h-[72px] bg-[#FB641B] text-white rounded-md mb-4 text-2xl font-normal normal-case"
+            >Continue
+            </button>
+          </Link>
         </div>
       </div>
-
-      <CampaignManagementThree hidden={hidden} setHidden={setHidden}></CampaignManagementThree>
-
-
-
 
     </div >
   );
 };
 
-export default CampaignManagementTwo;
+export default ProductCampaignThree;

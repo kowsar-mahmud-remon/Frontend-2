@@ -8,6 +8,9 @@ import ManageProduct from "../components/ManageProduct/ManageProduct";
 import ManageReview from "../components/ManageReview/ManageReview";
 import OrderHistory from "../components/orderHistory.js/OrderHistory";
 import AllProduct from "../components/ProductCampaignMain/AllProduct";
+import ProductCampaignFive from "../components/ProductCampaignMain/ProductCampaignFive";
+import ProductCampaignFour from "../components/ProductCampaignMain/ProductCampaignFour";
+import ProductCampaignThree from "../components/ProductCampaignMain/ProductCampaignThree";
 import ProductInvoices from "../components/ProductInvoices/ProductInvoices";
 import ProductInvoicesDetails from "../components/ProductInvoices/ProductInvoicesDetails/ProductInvoicesDetails";
 import Sellerverification from "../components/sellerverification/Sellerverification";
@@ -95,20 +98,9 @@ export const manageProductsArray = [
     element: <ManageOrders></ManageOrders>
   },
   {
-    title: "ManageReview",
-    href: "manageReview",
-    element: <ManageReview></ManageReview>,
-  },
-  {
-    title: "CampaignManagementThree",
-    href: "campaignManagementThree",
-    element: <CampaignManagementThree></CampaignManagementThree>,
-  },
-
-  {
-    title: "OrderHistory",
-    href: "orderHistory",
-    element: <OrderHistory></OrderHistory>
+    title: 'CampaignManagementThree',
+    href: 'campaignManagementThree',
+    element: <CampaignManagementThree></CampaignManagementThree>
   }
 
 ];
