@@ -77,12 +77,12 @@ const AllProduct = () => {
   ];
 
   return (
-    <section className="bg-[#FFFFFF] py-10 mx-auto w-full">
+    <section className="bg-[#FFFFFF] py-10 w-full">
       <ProductCampaignModal modal={modal}></ProductCampaignModal>
-      <div className="px-10 mx-auto">
-        <div className="lg:max-w-[1426px] w-full">
+      <div className=" mx-auto">
+        <div className=" w-full">
           <div>
-            <div className="text-sm breadcrumbs">
+            <div className="text-lg text-[#686868] breadcrumbs">
               <ul>
                 <li>
                   <a>Home</a>
@@ -90,7 +90,7 @@ const AllProduct = () => {
                 <li>
                   <a>Promotions</a>
                 </li>
-                <li>Product Campaign</li>
+                <li className="text-[#001E00] font-semibold">Product Campaign</li>
               </ul>
             </div>
             <div className="">
@@ -109,7 +109,7 @@ const AllProduct = () => {
                   All Products
                 </p>
               </div>
-              <div className="grid lg:grid-cols-7 md:grid-cols-5 grid-cols-2 gap-3 justify-center mx-auto ">
+              <div className="flex flex-wrap gap-2 ">
                 {products.map((product) => (
                   <AllProductCard
                     product={product}

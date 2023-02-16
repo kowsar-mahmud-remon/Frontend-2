@@ -20,8 +20,8 @@ const CampaignManagementThree = ({ hidden, setHidden }) => {
 
             <div className="">
               <input type="checkbox" id="my-modal-4" className="modal-toggle" />
-              <label htmlFor="my-modal-4" className=" modal cursor-pointer bg-black bg-opacity-70">
-                <label className=" modal-box relative max-w-[642px] scrollbar-hide rounded-lg" htmlFor="">
+              <label htmlFor="my-modal-4" className=" modal cursor-pointer bg-black bg-opacity-70 flex-col">
+                <label className=" modal-box relative max-w-[642px] scrollbar-hide rounded-lg " htmlFor="">
 
                   <div className="mt-[47px]">
 
@@ -126,14 +126,12 @@ const CampaignManagementThree = ({ hidden, setHidden }) => {
 
 
                 </label>
-                <div className="flex justify-center absolute bottom-[0px]">
+                <div className="flex justify-center mt-8">
                   <label htmlFor="my-modal-4" className="btn bg-[#FB641B] text-white w-[264px] h-[72px] normal-case text-2xl font-normal">Ok</label>
                 </div>
 
               </label>
-
             </div>
-
           </OutsideClickHandler>
         )
       }

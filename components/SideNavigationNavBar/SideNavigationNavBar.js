@@ -46,7 +46,7 @@ const dispatch = useDispatch()
               onClick={() => dispatch(handleCategorySideNav())}
             >
               <Image src={CatIcon} alt="icon" />
-              <p className="ml-3 text-[18px] font-semibold">Categories</p>
+              <p className="ml-3 text-[18px] font-[660]">Categories</p>
             </button>
           </div>
           <div className="ml-5 w-full flex flex-wrap ">

@@ -51,4 +51,7 @@
   .mobileMenuBtn {
     display: block;
   }
+  .navSearch{
+    height: 34px;
+  }
 }
