@@ -23,12 +23,13 @@ import SellerProductsModal from '../components/SellerProductsModal/SellerProduct
 import AllCategory from '../components/allCategory/AllCategory';
 import VdoStory from '../components/VdoStory/VdoStory';
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 
 
 
 export const getStaticProps = async () => {
+  
   try {
     const res = await fetch("https://banglar-big-store.onrender.com/api/slides/slides");
     const data = await res.json();
