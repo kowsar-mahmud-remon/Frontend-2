@@ -11,15 +11,13 @@ const Profile = () => {
                 <div>
                     <h1 className='text-[24px] text-[#FB641B]'>My Profile</h1>
                 </div>
-                <div className='profile w-full h-[548px] mt-[32px]'>
-                    <div className='flex  mx-[24px] pt-[32px] justify-between gap-[100px]'>
+                <div className='profile w-[924px] h-[548px] mt-[32px]'>
+                    <div className='flex  mx-[24px] pt-[32px] gap-[170px]'>
                         <div>
                             <h1 className='text-[14px] text-[#001E00] font-[500]'>Full Name</h1>
                             <h2 className='text-[16px] text-[#686868] mt-[16px]'>Abdul Korim</h2>
                         </div>
                         <div>
-                            {/* <label  className="btn">open modal</label> */}
-
                             <h1 className='text-[14px] text-[#001E00] font-[500]'>Email Address <span className='text-[#707070]'> | </span><label htmlFor="Email-modal-3" className='text-[14px] text-[#287DF3]'>Change</label></h1>
                             <h2 className='text-[#686868] text-[16px] mt-[16px]'>abdulkorim@gmail.com</h2>
                         </div>
@@ -28,7 +26,7 @@ const Profile = () => {
                             <h2 className='text-[#686868] text-[16px] mt-[16px]'>+880124 ******* 514</h2>
                         </div>
                     </div>
-                    <div className='mt-[56px]  mx-[24px]  flex gap-[210px]'>
+                    <div className='mt-[56px]  mx-[24px]  flex gap-[175px]'>
                         <div>
                             <h1 className='text-[#001E00] font-[500] text-[14px]'>Birthday</h1>
                             <h2 className='text-[#686868] text-[16px] mt-[16px]'>2000-02-21</h2>

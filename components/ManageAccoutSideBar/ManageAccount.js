@@ -20,13 +20,13 @@ const ManageAccount = () => {
                                 <ul>
                                     <li>Abdul Karim</li>
                                     <li>abdulkorim@gmail.com</li>
-                                    <li>Subscribe to outer Newsletter</li>
+                                    <li className='text-[#287DF3]'>Subscribe to outer Newsletter</li>
                                 </ul>
                             </div>
                         </div>
                         <div className="card w-[565px] h-[223px]   bg-base-100 shadow-lg">
                             <div className="flex">
-                                <div className="px-4 py-4">
+                                <div className="px-4  py-4">
                                     <h1 className="font-bold text-[18px] mb-2">Address Book | <span className="text-[#287DF3] text-[18px]">Edit</span></h1>
                                     <p className="mb-2 text-[#686868]">DEFAULT SHIPPING ADDRESS</p>
                                     <p className="font-bold text-[16px] mb-2">Abdul Karim</p>
@@ -37,7 +37,7 @@ const ManageAccount = () => {
                                         <li>+88 012 342 450 45</li>
                                     </ul>
                                 </div>
-                                <div className="divider  divider-horizontal"></div>
+                                <div className="divider pt-[20px] h-[190px] text-[#707070] divider-horizontal"></div>
                                 <div className="py-4">
                                     <p className="mb-2 text-[#686868]">DEFAULT SHIPPING ADDRESS</p>
                                     <p className="font-bold text-[16px] mb-2">Abdul Karim</p>

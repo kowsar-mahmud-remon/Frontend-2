@@ -10,7 +10,7 @@ const ChangesPassword = () => {
                 <div>
                     <h1 className='text-[24px] text-[#FB641B]'>Changes Password</h1>
                 </div>
-                <div className="changePassword  h-[548px]   w-full  mt-[32px]">
+                <div className="changePassword  h-[548px]   w-[924px]  mt-[32px]">
                     <div className="pt-[32px]   mx-[24px]">
                         <div className="">
                             <div>
