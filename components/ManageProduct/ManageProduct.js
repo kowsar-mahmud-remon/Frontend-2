@@ -21,10 +21,10 @@ const ManageProduct = () => {
 
   return (
     <section className="bg-[#FFFFFF] py-10">
-      <div className="px-10 mx-auto">
+      <div className=" mx-auto">
         <div className=" w-full">
           <div>
-            <div className="text-sm breadcrumbs">
+            <div className="text-lg breadcrumbs text-[#686868]">
               <ul>
                 <li>
                   <a>Home</a>
@@ -32,7 +32,7 @@ const ManageProduct = () => {
                 <li>
                   <a>Products</a>
                 </li>
-                <li>Manage Products</li>
+                <li className="text-[#001E00] font-semibold ">Manage Products</li>
               </ul>
             </div>
             <div>

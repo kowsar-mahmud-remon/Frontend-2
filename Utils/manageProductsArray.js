@@ -6,6 +6,7 @@ import EditProducts from "../components/EditProducts/EditProducts";
 import EditProductsTwo from "../components/EditProducts/EditProductsTwo";
 import ManageOrders from "../components/ManageOrders/ManageOrders";
 import ManageProduct from "../components/ManageProduct/ManageProduct";
+import ManageReview from "../components/ManageReview/ManageReview";
 import AllProduct from "../components/ProductCampaignMain/AllProduct";
 import ProductInvoices from "../components/ProductInvoices/ProductInvoices";
 import ProductInvoicesDetails from "../components/ProductInvoices/ProductInvoicesDetails/ProductInvoicesDetails";
@@ -25,79 +26,81 @@ export const manageProductsArray = [
   {
     title: "EditProductsTwo",
     href: "editProductsTwo",
-    element: <EditProductsTwo />
+    element: <EditProductsTwo />,
   },
   {
     title: "CampaignManagement",
     href: "campaignManagement",
-    element: <CampaignManagement></CampaignManagement>
+    element: <CampaignManagement></CampaignManagement>,
   },
   {
     title: "CampaignManagementOne",
     href: "campaignManagementOne",
-    element: <CampaignManagementOne></CampaignManagementOne>
+    element: <CampaignManagementOne></CampaignManagementOne>,
   },
   {
     title: "CampaignManagementTwo",
     href: "campaignManagementTwo",
-    element: <CampaignManagementTwo></CampaignManagementTwo>
+    element: <CampaignManagementTwo></CampaignManagementTwo>,
   },
   {
     title: "ManageProducts",
     href: "manageproducts",
-    element: <ManageProduct></ManageProduct>
+    element: <ManageProduct></ManageProduct>,
   },
   {
     title: "ProductInvoices",
     href: "productInvoices",
-    element: <ProductInvoices></ProductInvoices>
+    element: <ProductInvoices></ProductInvoices>,
   },
   {
-    title: 'uploadProducts',
-    href: 'uploadProducts',
-    element: <UploadProduct></UploadProduct>
-
+    title: "uploadProducts",
+    href: "uploadProducts",
+    element: <UploadProduct></UploadProduct>,
   },
   {
-    title: 'ProductInvoiceDetails',
-    href: 'productInvoiceDetails',
-    element: <ProductInvoicesDetails></ProductInvoicesDetails>
+    title: "ProductInvoiceDetails",
+    href: "productInvoiceDetails",
+    element: <ProductInvoicesDetails></ProductInvoicesDetails>,
   },
   {
-    title: 'AllProduct',
-    href: 'allProduct',
-    element: <AllProduct></AllProduct>
+    title: "AllProduct",
+    href: "allProduct",
+    element: <AllProduct></AllProduct>,
   },
   {
-    title: 'SellerVerificationPage1',
-    href: 'sellerVerificationPage1',
-    element: <SellerVerificationPage1></SellerVerificationPage1>
+    title: "SellerVerificationPage1",
+    href: "sellerVerificationPage1",
+    element: <SellerVerificationPage1></SellerVerificationPage1>,
   },
   {
-    title: 'SellerVerificationPage2',
-    href: 'sellerVerificationPage2',
-    element: <SellerVerificationPage2></SellerVerificationPage2>
+    title: "SellerVerificationPage2",
+    href: "sellerVerificationPage2",
+    element: <SellerVerificationPage2></SellerVerificationPage2>,
   },
   {
-    title: 'SellerVerificationPage3',
-    href: 'sellerVerificationPage3',
-    element: <SellerVerificationPage3></SellerVerificationPage3>
+    title: "SellerVerificationPage3",
+    href: "sellerVerificationPage3",
+    element: <SellerVerificationPage3></SellerVerificationPage3>,
   },
   {
-    title: 'SellerVerificationPage5',
-    href: 'sellerVerificationPage5',
-    element: <SellerVerificationPage5></SellerVerificationPage5>
+    title: "SellerVerificationPage5",
+    href: "sellerVerificationPage5",
+    element: <SellerVerificationPage5></SellerVerificationPage5>,
   },
   {
-    title: 'ManageOrders',
-    href: 'manageOrders',
-    element: <ManageOrders></ManageOrders>
+    title: "ManageOrders",
+    href: "manageOrders",
+    element: <ManageOrders></ManageOrders>,
   },
   {
-    title: 'CampaignManagementThree',
-    href: 'campaignManagementThree',
-    element: <CampaignManagementThree></CampaignManagementThree>
-  }
-
+    title: "ManageReview",
+    href: "manageReview",
+    element: <ManageReview></ManageReview>,
+  },
+  {
+    title: "CampaignManagementThree",
+    href: "campaignManagementThree",
+    element: <CampaignManagementThree></CampaignManagementThree>,
+  },
 ];
-

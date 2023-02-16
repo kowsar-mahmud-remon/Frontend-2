@@ -23,12 +23,13 @@ import SellerProductsModal from '../components/SellerProductsModal/SellerProduct
 import AllCategory from '../components/allCategory/AllCategory';
 import VdoStory from '../components/VdoStory/VdoStory';
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 
 
 
 export const getStaticProps = async () => {
+  
   try {
     const res = await fetch("https://banglar-big-store.onrender.com/api/slides/slides");
     const data = await res.json();
@@ -71,7 +72,7 @@ export default function Home({ items }) {
           {/* <MediaCenter /> */}
           {/* <AddProducts /> */}
           <div
-            className={`flex bg-white flex-col h-[310px] lg:h-[396px] xl:flex-row xl:h-[396px] 2xl:h-[466px]  shadow-xl shadow-block-900 w-[100%] p-4 `}
+            className={`flex bg-white flex-col h-[310px] lg:h-[396px] xl:flex-row xl:h-[396px] 2xl:h-[466px]  shadow-xl shadow-block-900 w-[100%]`}
           >
             {items.length && <Carosel data={items} />}
             {/* <div className={`${styles.rightHeroSection} pl-4`} >

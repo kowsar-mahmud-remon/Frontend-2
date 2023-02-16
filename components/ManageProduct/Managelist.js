@@ -30,7 +30,7 @@ const ManageList = ({
         }`}
       >
         <button
-          className="h-full w-full text-sm font-medium py-4"
+          className="h-full w-full text-base font-medium py-4"
           onClick={() => handleMenu(menu)}
           href={menu?.href}
         >
