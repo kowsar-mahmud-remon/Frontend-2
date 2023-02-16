@@ -7,6 +7,9 @@ import EditProductsTwo from "../components/EditProducts/EditProductsTwo";
 import ManageOrders from "../components/ManageOrders/ManageOrders";
 import ManageProduct from "../components/ManageProduct/ManageProduct";
 import AllProduct from "../components/ProductCampaignMain/AllProduct";
+import ProductCampaignFive from "../components/ProductCampaignMain/ProductCampaignFive";
+import ProductCampaignFour from "../components/ProductCampaignMain/ProductCampaignFour";
+import ProductCampaignThree from "../components/ProductCampaignMain/ProductCampaignThree";
 import ProductInvoices from "../components/ProductInvoices/ProductInvoices";
 import ProductInvoicesDetails from "../components/ProductInvoices/ProductInvoicesDetails/ProductInvoicesDetails";
 import Sellerverification from "../components/sellerverification/Sellerverification";
@@ -94,10 +97,20 @@ export const manageProductsArray = [
     element: <ManageOrders></ManageOrders>
   },
   {
-    title: 'CampaignManagementThree',
-    href: 'campaignManagementThree',
-    element: <CampaignManagementThree></CampaignManagementThree>
-  }
+    title: 'ProductCampaignThree',
+    href: 'productCampaignThree',
+    element: <ProductCampaignThree></ProductCampaignThree>
+  },
+  {
+    title: 'ProductCampaignFour',
+    href: 'productCampaignFour',
+    element: <ProductCampaignFour></ProductCampaignFour>
+  },
+  {
+    title: 'ProductCampaignFive',
+    href: 'productCampaignFive',
+    element: <ProductCampaignFive></ProductCampaignFive>
+  },
 
 ];
 
