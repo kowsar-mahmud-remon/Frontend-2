@@ -8,7 +8,7 @@ import ManageOrderModal from "../../components/ManageOrderModal/ManageOrderModal
 const ManageOrders = () => {
   const [item, setItem] = useState(products);
   return (
-    <section className="bg-[#FFFFFF] lg:max-w-[1426px] w-full">
+    <section className="bg-[#FFFFFF] w-full">
         <ManageOrderModal></ManageOrderModal>
       <div className="">
         <div className="">

@@ -85,9 +85,7 @@ const ProductCampaignFive = () => {
           </div>
         </div>
 
-        <div className='border-b border-[#B7B7B7] mx-6'>
-
-        </div>
+        <div className='border-b border-[#B7B7B7] mx-6'></div>
 
         <div className="mx-6 mt-[59px]">
           <p className='text-2xl text-[#001E00] font-bold'>Payment Summary</p>

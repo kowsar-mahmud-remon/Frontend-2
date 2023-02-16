@@ -5,7 +5,7 @@ import { getCookie } from "../../Utils/getCookies";
 export const apiSlice = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
-    baseUrl: `https://banglar-big-store.onrender.com/api`,
+    baseUrl: `http://localhost:5000/api`,
     prepareHeaders: async (headers, { getState, endpoint }) => {
       const token = getState()?.auth?.accessToken;
 

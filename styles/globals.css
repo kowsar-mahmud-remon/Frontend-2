@@ -343,8 +343,8 @@ top: 453px; */
 .btn-cart {
   width: 34px;
   height: 34px;
-  background-color: #f2f3f7;
-  display: flex;
+  background-color: #F2F3F7;
+  display: flex ;
   justify-content: center;
   align-items: center;
 }
@@ -352,7 +352,39 @@ top: 453px; */
 .abs-bg {
   background: white;
 }
+.carosel .swiper-button-next::after,
+.carosel .swiper-button-prev::after {
+  font-size: 1rem;
+  font-weight: 1000;
+  color: #B7B7B7;
+}
 
+.swiper-button-prev {
+  left: 10px;
+  right: auto;
+  background: #F2F2F2;
+  border-radius: 50%;
+  width: 38px !important;
+  height: 38px !important;
+  font-size: 5px;
+}
+
+.carosel .swiper-button-next::before,
+.carosel .swiper-button-prev::before {
+  font-size: 1rem;
+  font-weight: 1000;
+  color: #B7B7B7;
+}
+
+.swiper-button-next {
+  left: 10px;
+  right: auto;
+  background: #F2F2F2;
+  border-radius: 50%;
+  width: 38px !important;
+  height: 38px !important;
+  font-size: 5px;
+}
 @media screen and (max-width: 768px) {
   .btn-cart {
     width: 18px;
@@ -372,6 +404,14 @@ top: 453px; */
 
   .abs-bg {
     background: rgba(0, 0, 0, 0.6);
+  }
+
+  .swiper-button-next {
+    display: none !important;
+  }
+
+  .swiper-button-prev {
+    display: none !important;
   }
 }
 
@@ -441,35 +481,14 @@ top: 453px; */
 
 .EmailChangeInputRes {
   box-sizing: border-box;
-
-
-  /* White */
-
   background: #FFFFFF;
-  /* Off Black */
-
   border: 1px solid #B7B7B7;
   border-radius: 4px;
 }
 
 
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
 
-  opacity: 1;
-
-
-}
-
-input[type=number]::-webkit-inner-spin-button {
-  -webkit-appearance: inner-spin-button !important;
-  width: 25px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-}
 
 .paymentOptionResponsiveModalButton {
   background: #FFFFFF;
@@ -489,4 +508,16 @@ border-radius: 8px;
 
   box-shadow: 0px 6px 30px 2px rgba(0, 0, 0, 0.08);
   border-radius: 8px;
+}
+
+
+
+select {
+
+  background: url("/arrowdown.png") no-repeat;
+  background-position: calc(100% - 0.75rem) center !important;
+  -moz-appearance:none !important;
+  -webkit-appearance: none !important; 
+  appearance: none !important;
+  padding-right: 2rem !important;
 }
