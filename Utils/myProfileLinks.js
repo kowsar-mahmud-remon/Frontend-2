@@ -98,7 +98,7 @@ const profileLinksObj = [
     element: <WriteReview />,
   },
   {
-    title: "editProfile",
+    title: "EditProfile",
     href: "editProfile",
     element: <EditProfile></EditProfile>
   },

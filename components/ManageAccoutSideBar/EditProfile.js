@@ -45,7 +45,11 @@ const EditProfile = () => {
                                 </div>
                                 <div>
                                     <h1 className="text-[#001E00] text-[16px]">Gender</h1>
-                                    <input placeholder="male" className="w-[155px] pl-[8px] mt-[8px] h-[48px] border-[1px] border-solid border-[#B7B7B7] rounded-[4px]"></input>
+                                    <div className="">
+                                        <select placeholder='Male' className="w-[155px] text-[#B7B7B7] pl-[8px] mt-[8px] h-[48px] border-[1px] border-solid border-[#B7B7B7] rounded-[4px]" name="" id="">
+                                            <option className="text-[#686868]" value="male">Male</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -87,7 +91,7 @@ const EditProfile = () => {
                             <div className='mt-[72px]'>
                                 <h1 className='text-[#001E00] text-[16px]'>Number</h1>
                                 <form className='mt-[8px]'>
-                                    <input type='number' placeholder='Enter your new Number' className='EmailChangeInput focus:border-[#B7B7B7] pl-[24px] placeholder:pl-[1px]  focus:ring-sky-500 placeholder-[#686868] focus:outline-none'></input>
+                                    <input type='text' placeholder='Enter your new Number' className='EmailChangeInput focus:border-[#B7B7B7] pl-[24px] placeholder:pl-[1px]  focus:ring-sky-500 placeholder-[#686868] focus:outline-none'></input>
                                     <div className="modal-action mt-[60px] mr-[24px]">
                                         <button className="EmailChangeButton"><span className='text-white'>Save</span></button>
                                     </div>
@@ -141,12 +145,24 @@ const EditProfile = () => {
                                             <FaEdit></FaEdit>
                                         </div>
                                     </label>
+
+
                                 </div>
                             </div>
                         </div>
                         <div className="mt-[20px] w-full">
                             <h1 className="text-[#686868] text-[14px] font-normal">Birthday</h1>
-                            <input placeholder='2000-02-21' className="text-[#686868]  w-full mt-[12px] h-[48px] bg-[#FFFFFF] rounded-[4px] profileBox  pl-[16px] text-[16px] font-[400]"></input>
+                            <div className="flex divide-x mt-[12px] bg-[#FFFFFF] rounded-[4px] profileBox  text-[16px] font-[400]">
+
+                                <input placeholder="05" type='number' min='1' max='31' className='w-full pl-[8px] h-[48px] border-[#B7B7B7] border-[1px] rounded-l-[4px] border-none'></input>
+
+                                <div className="h-[22px] border-[#B7B7B7] mt-[13px]"></div>
+                                <input placeholder="20" type="number" className='w-full pl-[8px] h-[48px] border-[#B7B7B7] border-[1px] border-none'></input>
+                                <div className="h-[22px] border-[#B7B7B7] mt-[13px]"></div>
+                                <input placeholder="2000" type="number" className='w-full pl-[8px] h-[48px] border-[#B7B7B7] border-[1px] rounded-r-[4px] border-none'></input>
+                            </div>
+
+                            {/* <input placeholder='2000-02-21' className="text-[#686868]  w-full mt-[12px] h-[48px] bg-[#FFFFFF] rounded-[4px] profileBox  pl-[16px] text-[16px] font-[400]"></input> */}
                         </div>
                         <div className="mt-[20px] w-full">
                             <h1 className="text-[#686868] text-[14px] font-normal">gender</h1>
@@ -156,14 +172,9 @@ const EditProfile = () => {
                                 </select>
                             </div>
                         </div>
-
                         <div className='flex justify-between gap-[20px] mt-[200px] w-full'>
-
                             <button className='text-[#686868] border-[#B7B7B7] border  bg-white w-full h-[48px] rounded-[8px] font-[500]text-[16px]'><Link href='/profile/editProfile'>Cancel</Link></button>
-
-
                             <button className='text-[#FFFFFF] bg-[#FB641B] w-full h-[48px] rounded-[8px] font-[500]text-[16px]'><Link href='/profile/changesPassword'>Save Change</Link></button>
-
                         </div>
                     </div>
 
@@ -171,14 +182,14 @@ const EditProfile = () => {
                 </div>
                 <input type="checkbox" id="Email-responsive-modal-3" className="modal-toggle" />
                 <div className="modal ">
-                    <div className="bg-[#FFFFFF] w-full mx-[24px] h-[211px] rounded-[8px] relative">
+                    <div className="bg-[#FFFFFF] w-full mx-[30px] h-[211px] rounded-[8px] relative">
                         <label htmlFor="Email-responsive-modal-3" className="absolute right-5 top-3">✕</label>
-                        <div className=' mt-[16px] ml-[16px]'>
-                            <h3 className="text-[#001E00] text-[20px] font-[400]">Email Address</h3>
+                        <div className=' mt-[16px]'>
+                            <h3 className="text-[#001E00] text-[20px] font-[400] ml-[16px]">Email Address</h3>
                             <div className='mt-[16px]'>
-                                <h1 className='text-[#001E00] text-[14px]'>Email</h1>
-                                <form className='mt-[12px]'>
-                                    <input type='text' placeholder='Enter your new mail' className='EmailChangeInputRes w-[344px] h-[40px]  focus:border-[#B7B7B7] pl-[13px] placeholder:pl-[1px] placeholder:text-[14px]  focus:ring-sky-500 placeholder-[#686868] focus:outline-none'></input>
+                                <h1 className='text-[#001E00] text-[14px] ml-[16px]'>Email</h1>
+                                <form className='mt-[12px] mx-[16px]'>
+                                    <input type='text' placeholder='Enter your new mail' className='EmailChangeInputRes w-full h-[40px]  focus:border-[#B7B7B7] pl-[13px] placeholder:pl-[1px] placeholder:text-[14px]  focus:ring-sky-500 placeholder-[#686868] focus:outline-none'></input>
                                     <div className=" flex justify-center mt-[18px] mb-[16px]">
                                         <button className="w-[172px] h-[48px] bg-[#FB641B] rounded-[4px]"><span className='text-white'>Save</span></button>
                                     </div>
@@ -210,25 +221,7 @@ const EditProfile = () => {
                     </div>
                 </div>
 
-                <input type="checkbox" id="Newsletter-responsive-modal-3" className="modal-toggle" />
-                <div className="modal ">
-                    <div className="bg-[#FFFFFF] w-full mx-[24px] h-[211px] rounded-[8px] relative">
-                        <label htmlFor="Newsletter-responsive-modal-3" className="absolute right-5 top-3">✕</label>
-                        <div className=' mt-[16px] ml-[16px]'>
-                            <h3 className="text-[#001E00] text-[20px] font-[400]">Newsletter Subscription</h3>
-                            <div className='mt-[16px]'>
-                                <h1 className='text-[#001E00] text-[14px]'>Email</h1>
-                                <form className='mt-[12px]'>
-                                    <input type='text' placeholder='Enter your new mail' className='EmailChangeInputRes w-[344px] h-[40px]  focus:border-[#B7B7B7] pl-[13px] placeholder:pl-[1px] placeholder:text-[14px]  focus:ring-sky-500 placeholder-[#686868] focus:outline-none'></input>
-                                    <div className=" flex justify-center  mt-[18px] mb-[16px]">
-                                        <button className="w-[172px] h-[48px] bg-[#FB641B] rounded-[4px]"><span className='text-white'>Subcribe</span></button>
-                                    </div>
-                                </form>
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
         </div>

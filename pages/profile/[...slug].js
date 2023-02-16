@@ -26,13 +26,13 @@ const Profile = () => {
           }
         })}
       </div>
-      <div className="lg:hidden">
+      {/* <div className="lg:hidden">
         {profileLinksResponsiveObj?.map((p, i) => {
           if (p?.href === router?.query?.slug?.[0]) {
             return p?.element;
           }
         })}
-      </div>
+      </div> */}
     </ManageAccountLayout>
   );
 };
