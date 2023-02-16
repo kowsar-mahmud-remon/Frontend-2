@@ -8,9 +8,9 @@ import { AiFillStar } from "react-icons/ai";
 
 const ManageReview = () => {
   return (
-    <section className="bg-[#FFFFFF] pb-10 mx-auto w-full">
-      <div className="px-10 mx-auto">
-        <div className="lg:max-w-[1426px] w-full">
+    <section className="bg-[#FFFFFF] pb-10 mx-auto w-full mt-11">
+      <div className=" mx-auto">
+        <div className="">
           <div>
             <div className="text-lg breadcrumbs font-semibold text-[#686868]">
               <ul>
@@ -20,12 +20,12 @@ const ManageReview = () => {
                 <li>
                   <a>Products</a>
                 </li>
-                <li className="text-[#001E00]">Edit Product</li>
+                <li className="text-[#001E00]">Manage Reviews</li>
               </ul>
             </div>
             <div className="mb-8">
               <h1 className="text-[#FB641B] font-semibold text-2xl">
-                Edit Products
+              Manage Reviews
               </h1>
             </div>
             <div className={`rounded-lg ${style.boxshaddow} bg-[#FFFFFF]`}>
