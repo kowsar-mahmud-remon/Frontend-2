@@ -10,7 +10,7 @@ const AllProductCard = ({ product, setModal }) => {
 
   return (
     <div>
-      <div className="bg-[#F2F2F2] p-2 rounded-lg h-[215px]">
+      <div className="bg-[#F2F2F2] p-2 w-[183px] rounded-lg h-[215px]">
         <label
           onClick={() => handleModal(product)}
           htmlFor="my-modal-2"
