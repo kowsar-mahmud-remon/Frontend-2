@@ -10,6 +10,7 @@ import OrderHistory from "../components/orderHistory.js/OrderHistory";
 import AllProduct from "../components/ProductCampaignMain/AllProduct";
 import ProductInvoices from "../components/ProductInvoices/ProductInvoices";
 import ProductInvoicesDetails from "../components/ProductInvoices/ProductInvoicesDetails/ProductInvoicesDetails";
+import ReturnProducts from "../components/ReturnProducts/ReturnProducts";
 import Sellerverification from "../components/sellerverification/Sellerverification";
 import SellerVerificationPage1 from "../components/SellerVerificationPage1/SellerVerificationPage1";
 import SellerVerificationPage2 from "../components/SellerVerificationPage2/SellerVerificationPage2";
@@ -109,6 +110,11 @@ export const manageProductsArray = [
     title: "OrderHistory",
     href: "orderHistory",
     element: <OrderHistory></OrderHistory>
+  },
+  {
+    title: "returnProducts",
+    href: "returnProduct",
+    element: <ReturnProducts></ReturnProducts>
   }
 
 ];

@@ -4,7 +4,7 @@ import style from "../../styles/componentsStyles/box-shaddow.module.css";
 import potol from "../../assets/images/image 88.png";
 import vector from "../../assets/images/Vector1.png";
 
-const returnWorks = () => {
+const ReturnProducts = () => {
   return (
     <section className="bg-[#FFFFFF] min-h-screen pt-10 mb-80 w-full">
       <div className="w-full">
@@ -95,4 +95,4 @@ const returnWorks = () => {
   );
 };
 
-export default returnWorks;
+export default ReturnProducts;

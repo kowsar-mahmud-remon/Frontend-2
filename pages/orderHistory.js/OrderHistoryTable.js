@@ -5,6 +5,8 @@ import { useState } from "react";
 const OrderHistoryTable = ({ product }) => {
   const { title,category, status, orderNum, kg, price, image, deliveryDate,} = product;
 
+  
+
   return (
     <>
       <tr className="bg-white border-b border-[#B7B7B7] text-[#001E00]">

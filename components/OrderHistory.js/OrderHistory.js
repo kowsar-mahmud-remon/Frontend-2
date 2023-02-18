@@ -37,7 +37,7 @@ const OrderHistory = () => {
                 <li>
                   <a>Promotions</a>
                 </li>
-                <li className="text-[#001E00] font-semibold">
+                <li className="text-[#001E00] font-medium">
                   Product Campaign
                 </li>
               </ul>
