@@ -13,12 +13,20 @@ const ToReceive = ({ data }) => {
                         </div>
                         <p className="text-[#287DF3] hidden md:block text-[16px] mr-[19px]">View More Details</p>
                     </div>
-                    <hr className='border-[1px] border-[#686868]' />
-                    <div className="flex justify-between ">
-                        <div className=" flex ml-[56px] mt-[16px] mb-[16px] gap-[16px]">
-                            <div>
-                                <Image src={data.image} width="57" height="46" alt=""></Image>
+                    <hr className='hidden md:block border-[1px] border-[#686868]' />
+                    <div>
+                        <div className="flex justify-between ">
+                            <div className=" flex md:ml-[56px] md:mt-[16px] mt-[12px] md:mb-[16px] gap-[8px] md:gap-[16px]">
+                                <div>
+                                    <Image src={data.image} width="57" height="46" alt=""></Image>
+                                </div>
+                                <div>
+                                    <p className='text-[#001E00] text-[12px] md:text-[18px] font-bold'>{data.peoductName}</p>
+                                    <p className='hidden md:block text-[#686868] text-[16px]'>Delivered by:{data.Delivered}</p>
+                                    <p className=" md:hidden block text-[12px] text-[#686868] ">Qty: <span className='text-[#001E00]'>1</span></p>
+                                </div>
                             </div>
+
                             <div>
                                 <p className="text-[#287DF3] mt-[29px] text-[14px] md:text-[16px] md:mb-[30px] mr-[19px]">Track Packge</p>
 
