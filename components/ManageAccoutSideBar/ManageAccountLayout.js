@@ -1,11 +1,11 @@
-import React from 'react';
-import ManageAccoutSideBar from './manageAccoutSideBar';
-import ProfileResponsive from './ProfileResponsive';
+import React from "react";
+import ManageAccoutSideBar from "./manageAccoutSideBar";
+import ProfileResponsive from "./ProfileResponsive";
 
 const ManageAccountLayout = ({ children, slug }) => {
 
     return (
-        <div className='lg:flex lg:my-8 lg:justify-center w-full  lg:gap-[40px] xl:mx-4'>
+        <div className='lg:flex lg:my-8 lg:justify-center w-full lg:mx-5 lg:gap-[40px] xl:mx-4'>
 
             <div className='hidden lg:block'>
 
@@ -29,4 +29,3 @@ const ManageAccountLayout = ({ children, slug }) => {
 };
 
 export default ManageAccountLayout;
-
