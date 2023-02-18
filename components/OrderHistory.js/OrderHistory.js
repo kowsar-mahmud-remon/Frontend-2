@@ -49,7 +49,7 @@ const OrderHistory = () => {
             </div>
           </div>
           <div className=" flex lg:justify-between flex-wrap gap-2 relative z-10 mt-8 w-full">
-            <div className="flex">
+            <div className="flex ">
               <div className="mr-4 pt-1">
                 <h3 className="text-[#001E00] font-medium text-lg">Filter:</h3>
               </div>
@@ -64,17 +64,17 @@ const OrderHistory = () => {
                 </select>
               </div>
             </div>
-            <div>
+            <div className="">
               <div>
                 <OrderHistoryDate></OrderHistoryDate>
-              </div>
+              </div> 
             </div>
           </div>
-          <div className="w-full">
+          <div className="">
             <div
               className={`rounded-lg  pb-10 ${style.boxshaddow} bg-[#FFFFFF] absolute lg:top-[436px] w-9/12`}
             >
-              <div className="p-6 w-full">
+              <div className="p-6 ">
                 <div className="mb-4">
                   <p className="text-lg font-medium w-full text-[#001E00]">
                     All Orders History
@@ -152,7 +152,9 @@ const OrderHistory = () => {
               </div>
             </div>
           </div>
+          
         </div>
+        
       </div>
     </section>
   );

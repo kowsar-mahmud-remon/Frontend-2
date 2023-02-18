@@ -8,12 +8,12 @@ import ManageOrderModal from "../../components/ManageOrderModal/ManageOrderModal
 const ManageOrders = () => {
   const [item, setItem] = useState(products);
   return (
-    <section className="bg-[#FFFFFF] w-full">
+    <section className="bg-[#FFFFFF] w-full mt-10">
         <ManageOrderModal></ManageOrderModal>
       <div className="">
         <div className="">
           <div>
-            <div className="text-xs breadcrumbs font-semibold">
+            <div className="text-lg breadcrumbs text-[#686868]">
               <ul>
                 <li>
                   <a>Home</a>
@@ -21,7 +21,7 @@ const ManageOrders = () => {
                 <li>
                   <a>Orders & Reviews</a>
                 </li>
-                <li>Manage Orders</li>
+                <li className="font-medium text-[#001E00]">Manage Orders</li>
               </ul>
             </div>
             <div>
