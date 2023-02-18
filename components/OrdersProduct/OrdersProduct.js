@@ -12,7 +12,7 @@ const OrdersProduct = ({data}) => {
                 <span className="text-[16px] font-bold text-black">Order</span>{" "}
                 <span className="text-[#287DF3]">#{data.orderId}</span>
               </p>
-              <p>{data.orderDate}</p>
+              <p className='text-[#686868] text-[14px]'>{data.orderDate}</p>
             </div>
             <Link
               href={`/profile/myOrderDetails`}
@@ -23,7 +23,7 @@ const OrdersProduct = ({data}) => {
           </div>
           <hr className="border-[1px] border-[#686868]" />
           <div className="flex justify-between ">
-            <div className="flex ml-[56px] mt-[16px] mb-[16px] gap-[16px]">
+            <div className="flex ml-[12px] mt-[16px] mb-[16px] gap-[16px] items-center">
               <Image src={data.image} width="57" height="46" alt=""></Image>
               <p>{data.peoductName}</p>
             </div>

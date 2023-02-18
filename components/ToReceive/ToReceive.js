@@ -14,7 +14,7 @@ const ToReceive = ({ data }) => {
                     </div>
                     <hr className='border-[1px] border-[#686868]'/>
                     <div className="flex justify-between ">
-                        <div className=" flex ml-[56px] mt-[16px] mb-[16px] gap-[16px]">
+                        <div className=" flex ml-[12px] mt-[16px] mb-[16px] gap-[16px]">
                             <div>
                                 <Image src={data.image} width="57" height="46" alt=""></Image>
                             </div>
