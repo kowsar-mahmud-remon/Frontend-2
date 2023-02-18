@@ -198,7 +198,7 @@ const ProductPage = () => {
   };
   console.log(slideRef);
   return (
-    <div className=" mx-4 lg:mx-0">
+    <div className="">
       <NavicationWithSideNavLayout>
         <div className="flex flex-col lg:flex-row gap-9 ">
           <div className="flex flex-col md:flex-row ">
@@ -233,21 +233,21 @@ const ProductPage = () => {
               </div>
             </div>
 
-            <div className="ml-0 md:ml-[24px] ">
+            <div className="md:mx-10 px-4 lg:px-0">
               <div className="relative ">
                 <Image
-                  className="shadow-lg product-img rounded-md mb-[20px] w-full h-[500px] hidden md:flex object-contain"
+                  className="shadow-lg product-img rounded-md mb-[20px] w-full md:h-[500px]  md:flex object-contain"
                   src={img ? img : productPictures?.[0]?.img}
                   width="500"
                   height="500"
                   alt="tomato_img"
                 ></Image>
-                <div className="flex md:hidden gap-5 justify-center mb-[31px] absolute bottom-0 right-[40%]">
-                  <div className="text-md w-[34px] h-[34px] bg-[#F2F3F7] flex justify-center items-center cursor-pointer">
+                <div className="flex w-full md:hidden gap-5 justify-center mb-[31px] absolute bottom-0 ">
+                  <div className="text-md w-[34px] h-[34px] bg-[#F2F3F7] flex justify-center items-center cursor-pointer rounded-xl ">
                     <HiMinusSm className="w-full" />
                   </div>
-                  <p className="text-lg text-[#FB641B] font-bold">1</p>
-                  <div className="text-md w-[34px] h-[34px] bg-[#F2F3F7] flex justify-center items-center cursor-pointer">
+                  <p className="text-lg text-black font-bold">1</p>
+                  <div className="text-md w-[34px] h-[34px] bg-[#F2F3F7] flex justify-center items-center cursor-pointer rounded-xl">
                     <BsPlusLg className="w-full" />
                   </div>
                 </div>
@@ -281,7 +281,7 @@ const ProductPage = () => {
                 </div>
               </div>
 
-              <div className="flex gap-7 justify-between md:justify-between ">
+              <div className="flex gap-7 justify-between ">
                 <label
                   htmlFor="my-modal-4"
                   onClick={addToCartDb}
@@ -313,7 +313,7 @@ const ProductPage = () => {
               <h3 className="sm:text-sm md:text-lg lg:text-3xl font-bold text-[#001E00] mt-[8px]">
                 {productName}
               </h3>
-              <div className="flex gap-5 mt-[18px]">
+              <div className="flex md:gap-5 gap-3 mt-[18px]">
                 <div className="flex items-center">
                   <BsFillStarFill className="text-[#FB641B]" />
                   <BsFillStarFill className="text-[#FB641B]" />
@@ -321,13 +321,15 @@ const ProductPage = () => {
                   <BsFillStarFill className="text-[#FB641B]" />
                   <BsStar />
                 </div>
-                <p className="text-[#FB641B]">4.0</p>
-                <p className="text-[#686868]">24 ratings & reviews</p>
+                <p className="text-[#FB641B] text-[14px] md:text-[16px]">4.0</p>
+                <p className="text-[#686868] text-[14px] md:text-[16px]">
+                  24 ratings & reviews
+                </p>
               </div>
-              <div className="flex gap-5 items-center mt-[18px]">
+              <div className="flex md:gap-5 gap-2 items-center mt-[18px] ">
                 <p className="">
                   Seller:{" "}
-                  <Link href="#" className="text-[#287DF3]">
+                  <Link href="#" className="text-[#287DF3] ">
                     Profile
                   </Link>
                 </p>
@@ -386,8 +388,8 @@ const ProductPage = () => {
                   />
                 </div>
               </div>
-              <div className="mt-9 flex gap-2">
-                <div className="flex gap-2 text-[14px] text-[#686868] items-center">
+              <div className="mt-9 md:flex gap-2">
+                <div className="flex gap-2 text-[14px] text-[#686868] items-center md:mb-0 mb-2">
                   <Image src={img7} alt="" />
                   <p>24 Hours To 72 Hours Delivery Time</p>
                 </div>
@@ -398,13 +400,15 @@ const ProductPage = () => {
               </div>
               <div className="mt-9">
                 <h2 className="text-2xl font-[500]">Description</h2>
-                <p className="sm:mt-[14px] text-[16px] leading-[128%] lg:mt-[23px] text-[#686868] ">
+                <p className="sm:mt-[14px] text-[16px] leading-[128%] lg:mt-[23px] mt-3 text-[#686868] ">
                   {description}
                 </p>
               </div>
               <div className="mt-9 flex items-center">
-                <h2 className="text-2xl font-[500] mr-3">Pay With:</h2>
-                <div className="flex gap-2 items-center">
+                <h2 className="md:text-2xl text-sm font-[500] mr-3">
+                  Pay With:
+                </h2>
+                <div className="flex md:gap-2 gap-1 items-center">
                   <Image src={img1} alt="" />
                   <Image src={img2} alt="" />
                   <Image src={img5} alt="" />
@@ -506,7 +510,7 @@ const ProductPage = () => {
           )}
           <div className="divider text-[#686868] text-lg"></div>
           <div className="">
-            <h5 className="text-[24px] font-semibold">
+            <h5 className="md:text-[24px] text-[20px] font-semibold">
               Asks & Question About This Product
             </h5>
             <div className="mt-1">
@@ -541,7 +545,7 @@ const ProductPage = () => {
             </>
           )}
 
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-[28px] mt-10  md:ml-0 lg:ml-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-[28px] mt-10  md:ml-0 lg:ml-0 justify-items-center">
             {categoryData?.result.map((product, i) => (
               <ProductCard key={i} product={product} />
             ))}
