@@ -67,7 +67,7 @@ const OrderHistory = () => {
             <div className="">
               <div>
                 <OrderHistoryDate></OrderHistoryDate>
-              </div>
+              </div> 
             </div>
           </div>
           <div className="">
