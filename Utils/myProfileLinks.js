@@ -81,6 +81,7 @@ const profileLinksObj = [
     href: "sellStore",
     element: <Profile />,
   },
+  // sub link
   {
     title: "MyOrders",
     href: "myOrderDetails",
@@ -106,6 +107,7 @@ const profileLinksObj = [
     href: "changesPassword",
     element: <ChangesPassword></ChangesPassword>
   }
+
 ];
 
 
