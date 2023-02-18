@@ -8,7 +8,7 @@ const Footer = () => {
     return (
         <div className={`mt-16 ${style.footer_top}  `}>
 
-            <div className="flex gap-[40px]   max-w-screen-xl mx-auto text-center md:text-left pt-[32px] md:px-[100px] ">
+            <div className="flex gap-[40px] max-w-screen-xl mx-auto text-center md:text-left pt-[32px] md:px-[100px] justify-content-center">
                 <div className=" mr-[40px]">
                     <Image className='ml-20 md:ml-[-3px] mb-[16px]' src={banglaLogo} width="200" height="250" alt="banglar big store"></Image>
                     <p className="p-10 md:p-0 lg:p-0 text-[12px] text-[#686868] w-[264px]">We are gradually introducing a new set of campaign objectives in Banglar Big Bazar. While some objective names and campaign creation steps are changing, all of the same functionality will be available.</p>
@@ -51,11 +51,21 @@ const Footer = () => {
             </div>
 
             <div className='flex mt-[39px] w-1/5 gap-5 mx-auto text-lg mb-[32px]'>
-                <FaFacebook className='text-[#026C51] h-[36px] w-[36px] ' />
-                <FaInstagram className='text-[#026C51]  h-[36px] w-[36px]' />
-                <FaTwitter className='text-[#026C51]  h-[36px] w-[36px]' />
-                <FaLinkedin className='text-[#026C51]  h-[36px] w-[36px]' />
-                <FaYoutube className='text-[#026C51]  h-[36px] w-[36px]' />
+                <div className='bg-[#F2F3F7] w-[36px] h-[36px] p-2 flex justify-center items-center rounded-full '>
+                    <FaFacebook className='text-[#026C51] h-[36px] w-[36px] cursor-pointer' />
+                </div>
+                <div className='bg-[#F2F3F7] w-[36px] h-[36px] p-2 flex justify-center items-center rounded-full '>
+                    <FaInstagram className='text-[#026C51]  h-[36px] w-[36px]' />
+                </div>
+                <div className='bg-[#F2F3F7] w-[36px] h-[36px] p-2 flex justify-center items-center rounded-full '>
+                    <FaTwitter className='text-[#026C51]  h-[36px] w-[36px]' />
+                </div>
+                <div className='bg-[#F2F3F7] w-[36px] h-[36px] p-2 flex justify-center items-center rounded-full '>
+                    <FaLinkedin className='text-[#026C51]  h-[36px] w-[36px]' />
+                </div>
+                <div className='bg-[#F2F3F7] w-[36px] h-[36px] p-2 flex justify-center items-center rounded-full '>
+                    <FaYoutube className='text-[#026C51]  h-[36px] w-[36px]' />
+                </div>
             </div>
 
             <div className="divider text-[#686868] text-lg mb-[16px]"></div>
