@@ -16,16 +16,16 @@ import { useSelector } from 'react-redux';
 
 import { useCookies } from 'react-cookie';
 
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 
 
 const Registation = () => {
 
 
-    const [showPassword, setShowPassword] = useState(false)
-    const [error, setError] = useState({})
+    const [showPassword, setShowPassword] = useState(false);
+    const [error, setError] = useState({});
     const { register, handleSubmit, watch, formState: { errors }, setValue } = useForm();
-    const [addUser, { isLoading, isError, data, error: registrationError }] = useAddUserMutation()
+    const [addUser, { isLoading, isError, data, error: registrationError }] = useAddUserMutation();
     const [cookies, setCookie] = useCookies(['banglarBigStore']);
     const filterColors = (inputValue, labelValue) => {
         return labelValue.filter((i) =>
@@ -33,15 +33,15 @@ const Registation = () => {
         );
     };
 
-    const router = useRouter()
+    const router = useRouter();
 
     useEffect(() => {
         if (data) {
             setCookie('banglarBigStore', data?.token, { path: '/' });
-            router.push('/account/profile')
+            router.push('/account/profile');
         }
-        if (registrationError) console.log(registrationError)
-    }, [data, registrationError, setCookie, router])
+        if (registrationError) console.log(registrationError);
+    }, [data, registrationError, setCookie, router]);
 
     const promiseOptions = (inputValue, lableValue) =>
         new Promise((resolve) => {
@@ -52,12 +52,12 @@ const Registation = () => {
 
     const onSubmit = data => {
 
-        const { confirm_password, emailOrPhone, lastName, firstName, password } = data || {}
+        const { confirm_password, emailOrPhone, lastName, firstName, password } = data || {};
 
 
-        let email, phone
+        let email, phone;
 
-        const phnRegEx = /^(?:\+?88|0088)?01[15-9]\d{8}$/
+        const phnRegEx = /^(?:\+?88|0088)?01[15-9]\d{8}$/;
         // checking email 
         if (emailOrPhone) {
             const isEmail =
@@ -78,8 +78,8 @@ const Registation = () => {
             password,
             firstName,
             lastName,
-        })
-    }
+        });
+    };
 
     return (
         <NavicationLayout>
@@ -103,29 +103,29 @@ const Registation = () => {
                                             required: 'Email Or Phone Number is required',
 
                                             validate: value => {
-                                                const phnRegEx = /^(?:\+?88|0088)?01[15-9]\d{8}$/
+                                                const phnRegEx = /^(?:\+?88|0088)?01[15-9]\d{8}$/;
                                                 // checking email 
                                                 if (value) {
                                                     const isEmail =
                                                         /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i.test(value);
                                                     if (isEmail) {
 
-                                                        setValue('email', value)
-                                                        return
+                                                        setValue('email', value);
+                                                        return;
                                                     }
                                                     if (!isEmail) {
                                                         const isPhone = phnRegEx.test(value);
 
                                                         if (isPhone) {
 
-                                                            setValue('phone', value)
-                                                            return
+                                                            setValue('phone', value);
+                                                            return;
                                                         }
                                                         if (!isPhone) {
                                                             return 'Phone or Email is required';
                                                         }
                                                     } else {
-                                                        return true
+                                                        return true;
                                                     }
                                                 }
 
@@ -154,7 +154,7 @@ const Registation = () => {
                                                 validate: value => {
 
                                                     const passReg = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
-                                                    return !passReg.test(value) ? "Password must be greater than 6 character, with at least a symbol, upper and lower case letters and a number" : true
+                                                    return !passReg.test(value) ? "Password must be greater than 6 character, with at least a symbol, upper and lower case letters and a number" : true;
                                                 }
                                             })}
                                         />
@@ -233,7 +233,7 @@ const Registation = () => {
                             </div>
                             <div className='flex flex-col gap-6 md:w-[50%]'>
                                 <div className='flex gap-2 mt-6 lg:mt-0 '>
-                                    <div className='flex flex-col gap-2'>
+                                    <div className='flex flex-col gap-2 w-full'>
                                         <label >Birthday</label>
                                         <div className='flex'>
                                             {/* <input
@@ -242,15 +242,15 @@ const Registation = () => {
                                         autoComplete='off' className='min-input border-r-[1px] border-[#707070]' type="number" placeholder='Day' /> */}
                                             {/* Cinput
                                         autoComplete='off' className='min-input' type="number" placeholder='Year' /> */}
-                                            <AsyncSelect className=' border border-[#001E00] ' cacheOptions defaultOptions value={{ label: 'Months' }} loadOptions={(e) => promiseOptions(e, months)} />
-                                            <AsyncSelect className=' border border-[#001E00] ' cacheOptions defaultOptions value={{ label: 'Day' }} loadOptions={(e) => promiseOptions(e, days)} />
+                                            <AsyncSelect className='w-full border border-[#001E00] ' cacheOptions defaultOptions value={{ label: 'Months' }} loadOptions={(e) => promiseOptions(e, months)} />
+                                            <AsyncSelect className='w-full border border-[#001E00] ' cacheOptions defaultOptions value={{ label: 'Day' }} loadOptions={(e) => promiseOptions(e, days)} />
 
-                                            <AsyncSelect className=' border  border-[#001E00]' cacheOptions defaultOptions value={{ label: 'Year' }} loadOptions={(e) => promiseOptions(e, years)} />
+                                            <AsyncSelect className='w-full border  border-[#001E00]' cacheOptions defaultOptions value={{ label: 'Year' }} loadOptions={(e) => promiseOptions(e, years)} />
 
 
                                         </div>
                                     </div>
-                                    <div className='flex flex-col gap-2'>
+                                    <div className='flex flex-col gap-2 w-[155px]'>
                                         <label >Gender</label>
                                         {/* <input
                                     autoComplete='off' className='min-input border-[1px] border-[#707070] rounded' type="number" placeholder='Months' /> */}

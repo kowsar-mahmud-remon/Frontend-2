@@ -20,7 +20,7 @@ const ManageProduct = () => {
   ];
 
   return (
-    <section className="bg-[#FFFFFF] py-10">
+    <section className="bg-[#FFFFFF] py-7">
       <div className=" mx-auto">
         <div className=" w-full">
           <div>

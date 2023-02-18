@@ -1,18 +1,18 @@
 import Image from 'next/image';
 import React from 'react';
-import productPlus from "../../assets/images/productPlus.png"
-import style from "../../styles/componentsStyles/box-shaddow.module.css"
+import productPlus from "../../assets/images/productPlus.png";
+import style from "../../styles/componentsStyles/box-shaddow.module.css";
 
 const ProductCampaign = () => {
-    return (
-        <section className="bg-[#FFFFFF] py-10">
+  return (
+    <section className="bg-[#FFFFFF] py-7">
       <div className="px-10 mx-auto">
         <div className="Lg:w-9/12 md:w-9/12 w-full">
           <div>
             <div className="text-sm breadcrumbs">
               <ul>
                 <li>
-                  <a>Home</a> 
+                  <a>Home</a>
                 </li>
                 <li>
                   <a>Promotions</a>
@@ -48,7 +48,7 @@ const ProductCampaign = () => {
         </div>
       </div>
     </section>
-    );
+  );
 };
 
 export default ProductCampaign;
