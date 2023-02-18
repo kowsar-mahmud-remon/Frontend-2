@@ -40,7 +40,7 @@ const OrdersProduct = ({ data }) => {
         </p>
       </div>
     </div>
-    </div >
+
   );
 };
 
