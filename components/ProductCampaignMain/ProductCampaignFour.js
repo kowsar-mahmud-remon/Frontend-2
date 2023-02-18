@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 const ProductCampaignFour = () => {
   return (
-    <div className='mt-7 p-4 lg:p-0 lg:w-[1426px]'>
+    <div className='mt-7 p-4 lg:p-0'>
 
       <div className="text-lg text-[#686868] mb-8">
         <div className=" flex items-center mb-2">

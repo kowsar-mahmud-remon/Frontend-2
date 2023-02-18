@@ -25,7 +25,7 @@ const OrderHistory = () => {
   };
 
   return (
-    <section className="bg-[#FFFFFF] min-h-screen pt-10 mb-80 w-full">
+    <section className="bg-[#FFFFFF] min-h-screen pt-7 mb-80 w-full">
       <div className="w-full">
         <div className="w-full">
           <div>
@@ -152,9 +152,9 @@ const OrderHistory = () => {
               </div>
             </div>
           </div>
-          
+
         </div>
-        
+
       </div>
     </section>
   );

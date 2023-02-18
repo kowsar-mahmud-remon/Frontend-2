@@ -7,10 +7,11 @@ import rocket from '../../assets/images/rocket.png';
 import BKASH from '../../assets/images/BKASH.png';
 import delivery2 from '../../assets/images/cash-on-delivery 2.png';
 import styles from "../../styles/campaignManagementTwo.module.css";
+import Link from 'next/link';
 
 const ProductCampaignFive = () => {
   return (
-    <div className='mt-7 p-4 lg:p-0 lg:w-[1426px]'>
+    <div className='mt-7 p-4 lg:p-0'>
 
       <div className="text-lg text-[#686868] mb-8">
         <div className=" flex items-center mb-2">
@@ -129,10 +130,13 @@ const ProductCampaignFive = () => {
             className="w-full btn btn-outline lg:w-[264px] h-[72px] border border-[#686868] rounded-md lg:mr-4 mb-4 normal-case text-2xl font-normal text-[#686868]"
           >Cancel
           </button>
-          <button
-            className="w-full btn lg:w-[264px] h-[72px] bg-[#FB641B] text-white rounded-md mb-4 normal-case text-2xl font-normal"
-          >Pay
-          </button>
+          <Link href="productCampaignSix">
+            <button
+              className="w-full btn lg:w-[264px] h-[72px] bg-[#FB641B] text-white rounded-md mb-4 normal-case text-2xl font-normal"
+            >Pay
+            </button>
+          </Link>
+
         </div>
       </div>
 
