@@ -40,8 +40,8 @@ const MobileNavBar = () => {
     };
   }, [handleModalClose]);
 
-   // to close the modal when click the link
-   function handleClick() {
+  // to close the modal when click the link
+  function handleClick() {
     setShowModal(false);
     setIsOpen(false);
   }
@@ -201,7 +201,7 @@ const MobileNavBar = () => {
       ),
     },
   ];
- 
+
   return (
     <div className="w-full md:hidden relative ">
       <div className="fixed left-0 bottom-0 z-[150] w-full bg-white boxShadowTop">
@@ -223,12 +223,14 @@ const MobileNavBar = () => {
       <div className="">
         <nav className="relative  z-[101] flex items-center justify-between px-4 py-0   w-full top-0 shadow">
           <div
+          
             className={`${
               isOpen ? "" : "hidden"
             } md:flex md:items-center md:w-auto absolute right-[0px] top-[0px]   bg-white w-full`}
             style={{
-              transition: "all 0.1s ease",
               transform: `translateX(${isOpen ? "0" : "100%"})`,
+              transition: "translate 1s ease-in-out",
+              
             }}
           >
             {/* menu items */}
@@ -346,7 +348,6 @@ const MobileNavBar = () => {
                       <div className="flex flex-col mt-[50%]">
                         <div
                           className="bg-white  rounded-md w-[90%] mx-auto pb-[69px]"
-                          
                           ref={modalRef}
                         >
                           <Image
