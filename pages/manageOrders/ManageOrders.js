@@ -10,8 +10,6 @@ const ManageOrders = () => {
   return (
     <section className="bg-[#FFFFFF] w-full mt-7">
       <ManageOrderModal></ManageOrderModal>
-    <section className="bg-[#FFFFFF] w-full mt-10">
-        <ManageOrderModal></ManageOrderModal>
       <div className="">
         <div className="">
           <div>
