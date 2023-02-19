@@ -5,7 +5,7 @@ import ProfileResponsive from "./ProfileResponsive";
 const ManageAccountLayout = ({ children, slug }) => {
 
     return (
-        <div className='lg:flex lg:my-8 lg:justify-center w-full lg:mx-5 lg:gap-[40px] xl:mx-4'>
+        <div className='lg:flex lg:my-8 lg:justify-center md:px-4 w-full lg:mx-5 lg:gap-[40px] xl:mx-4'>
 
             <div className='hidden lg:block'>
 
@@ -19,7 +19,7 @@ const ManageAccountLayout = ({ children, slug }) => {
 
 
             </div>
-            <div>
+            <div className="md:w-[70%]">
                 {
                     children
                 }
