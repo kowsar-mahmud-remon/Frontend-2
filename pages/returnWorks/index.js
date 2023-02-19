@@ -62,7 +62,7 @@ const returnWorks = () => {
                     <div className="flex items-center mb-4">
                       <h2 className="text-lg mr-4 font-semibold text-[#001E00]">Quantity:</h2>
                       <p>1 kg</p>
-                    </div>
+                    </div>            
                     <div className="flex items-center">
                       <h2 className="text-lg mr-4 font-semibold text-[#001E00]">Delivered Date:</h2>
                       <p>03 Feb 2023</p>
