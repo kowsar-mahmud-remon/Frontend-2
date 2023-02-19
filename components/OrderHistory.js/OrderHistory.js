@@ -79,7 +79,7 @@ const OrderHistory = () => {
                   <p className="text-lg font-medium w-full text-[#001E00]">
                     All Orders History
                   </p>
-                </div>
+                </div>  
                 <div className="mt-4">
                   <div className="relative overflow-x-auto shadow-md sm:rounded">
                     <table className="w-full text-left text-[#001E00] ">
