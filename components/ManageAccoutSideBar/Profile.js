@@ -10,8 +10,8 @@ const Profile = () => {
         <div>
           <h1 className="text-[24px] text-[#FB641B]">My Profile</h1>
         </div>
-        <div className="profile mt-[32px]">
-          <div className="flex pt-[32px] ml-[24px] gap-[200px]">
+        <div className="profile w-full h-[548px] mt-[32px]">
+          <div className="grid grid-cols-3 pt-[32px] lg:mx-[24px] ">
             <div>
               <h1 className="text-[14px] text-[#001E00] font-[500]">
                 Full Name
@@ -21,8 +21,6 @@ const Profile = () => {
               </h2>
             </div>
             <div>
-              {/* <label  className="btn">open modal</label> */}
-
               <h1 className="text-[14px] text-[#001E00] font-[500]">
                 Email Address <span className="text-[#707070]"> | </span>
                 <label
@@ -51,7 +49,7 @@ const Profile = () => {
               </h2>
             </div>
           </div>
-          <div className="mt-[56px] ml-[24px] flex gap-[210px]">
+          <div className="mt-[56px] mx-[24px] grid grid-cols-3 gap-0">
             <div>
               <h1 className="text-[#001E00] font-[500] text-[14px]">
                 Birthday
@@ -64,8 +62,11 @@ const Profile = () => {
               <h1 className="text-[#001E00] font-[500] text-[14px]">Genter</h1>
               <h1 className="text-[#686868] text-[16px] mt-[16px]">Male</h1>
             </div>
+            <div>
+
+            </div>
           </div>
-          <div className="ml-[24px] mt-[150px] flex flex-col gap-[16px]">
+          <div className="ml-[24px] mt-[150px]  flex flex-col gap-[16px]">
             <label htmlFor="Newsletter-modal-3">
               <h1 className="text-[#287DF3] text-[16px] cursor-pointer">
                 Subscribe to our Newsletter
@@ -88,7 +89,7 @@ const Profile = () => {
           </div>
         </div>
         <input type="checkbox" id="Email-modal-3" className="modal-toggle" />
-        <div className="modal">
+        <div className="modal fixed inset-0   h-screen bg-black  bg-opacity-60">
           <div className="bg-[#FFFFFF] w-[751px] h-[363px] rounded-[8px] relative">
             <label htmlFor="Email-modal-3" className="absolute right-5 top-3">
               ✕
@@ -117,7 +118,7 @@ const Profile = () => {
         </div>
 
         <input type="checkbox" id="Mobile-modal-3" className="modal-toggle" />
-        <div className="modal">
+        <div className="modal  fixed inset-0   h-screen bg-black  bg-opacity-60">
           <div className="bg-[#FFFFFF] w-[751px] h-[363px] rounded-[8px] relative">
             <label htmlFor="Mobile-modal-3" className="absolute right-5 top-3">
               ✕

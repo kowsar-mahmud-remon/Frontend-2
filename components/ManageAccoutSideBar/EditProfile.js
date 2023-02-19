@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { FaArrowLeft, FaEdit } from "react-icons/fa";
+import Modal from "./Modal";
 
 
 const EditProfile = () => {
@@ -11,20 +12,18 @@ const EditProfile = () => {
                 <div>
                     <h1 className='text-[24px] text-[#FB641B]'>Edit Profile</h1>
                 </div>
-                <div className="editProfile mt-[32px]">
-                    <div className="pt-[32px] ml-[24px]">
-                        <div className="flex  gap-[130px]">
+                <div className="editProfile w-full h-[548px] mt-[32px]">
+                    <div className="pt-[32px] mx-[24px]">
+                        <div className="grid grid-cols-3 gap-[100px]">
                             <div>
                                 <p className="text-[#001E00] text-[16px]">Full Name</p>
                                 <input className="editInput pl-[16px] mt-[8px]"></input>
                             </div>
                             <div>
-                                {/* <label  className="btn">open modal</label> */}
-
                                 <h1 className='text-[14px] text-[#686868] font-[400]'>Email Address <span className='text-[#707070]'> | </span><label htmlFor="Email-modal-3" className='text-[14px] text-[#287DF3]'>Change</label></h1>
                                 <h2 className='text-[#686868] text-[16px] mt-[16px]'>abdulkorim@gmail.com</h2>
                             </div>
-                            <div>
+                            <div className="">
                                 <h1 className='text-[14px] text-[#686868] font-[400]'>Mobile <span className='text-[#707070]'> | </span><label htmlFor="Mobile-modal-3" className='text-[14px] text-[#287DF3]'>Change</label></h1>
                                 <h2 className='text-[#686868] text-[16px] mt-[16px]'>+880124 ******* 514</h2>
                             </div>
@@ -46,7 +45,7 @@ const EditProfile = () => {
                                 <div>
                                     <h1 className="text-[#001E00] text-[16px]">Gender</h1>
                                     <div className="">
-                                        <select placeholder='Male' className="w-[155px] text-[#B7B7B7] pl-[8px] mt-[8px] h-[48px] border-[1px] border-solid border-[#B7B7B7] rounded-[4px]" name="" id="">
+                                        <select placeholder='Male' className="selected w-[155px] text-[#B7B7B7] pl-[8px] mt-[8px] h-[48px] border-[1px] border-solid border-[#B7B7B7] rounded-[4px]" name="" id="">
                                             <option className="text-[#686868]" value="male">Male</option>
                                         </select>
                                     </div>
@@ -54,7 +53,7 @@ const EditProfile = () => {
                             </div>
                         </div>
                         <div>
-                            <div className="mt-[240px] flex justify-end mx-[24px]">
+                            <div className="mt-[240px] flex justify-end ">
                                 <button className="w-[122px] h-[48px] text-[#686868] font-[500] text-[16px] rounded-[8px] border-solid border-[#B7B7B7] box-border border-[1px]">Cancel</button>
                                 <button className="w-[212px] ml-[16px] h-[48px] bg-[#FB641B]
                         rounded-[8px] text-white">Save Change</button>
@@ -63,7 +62,7 @@ const EditProfile = () => {
                     </div>
                 </div>
                 <input type="checkbox" id="Email-modal-3" className="modal-toggle" />
-                <div className="modal">
+                <div className="modal fixed inset-0   h-screen bg-black  bg-opacity-60">
                     <div className="bg-[#FFFFFF] w-[751px] h-[363px] rounded-[8px] relative">
                         <label htmlFor="Email-modal-3" className="absolute right-5 top-3">✕</label>
                         <div className=' mt-[24px] ml-[24px]'>
@@ -83,7 +82,7 @@ const EditProfile = () => {
                 </div>
 
                 <input type="checkbox" id="Mobile-modal-3" className="modal-toggle" />
-                <div className="modal">
+                <div className="modal fixed inset-0   h-screen bg-black  bg-opacity-60">
                     <div className="bg-[#FFFFFF] w-[751px] h-[363px] rounded-[8px] relative">
                         <label htmlFor="Mobile-modal-3" className="absolute right-5 top-3">✕</label>
                         <div className=' mt-[24px] ml-[24px]'>
@@ -167,60 +166,21 @@ const EditProfile = () => {
                         <div className="mt-[20px] w-full">
                             <h1 className="text-[#686868] text-[14px] font-normal">gender</h1>
                             <div className="">
-                                <select placeholder='Male' className="text-[#686868]  w-full mt-[12px] h-[48px] bg-[#FFFFFF] rounded-[4px] profileBox  pl-[16px] text-[16px] font-[400]" name="" id="">
+                                <select placeholder='Male' className="text-[#686868]  selected w-full mt-[12px] h-[48px] bg-[#FFFFFF] rounded-[4px] profileBox  pl-[16px] text-[16px] font-[400]" name="" id="">
                                     <option className="w-[200px]" value="male">Male</option>
                                 </select>
                             </div>
                         </div>
                         <div className='flex justify-between gap-[20px] mt-[200px] w-full'>
-                            <button className='text-[#686868] border-[#B7B7B7] border  bg-white w-full h-[48px] rounded-[8px] font-[500]text-[16px]'><Link href='/profile/editProfile'>Cancel</Link></button>
-                            <button className='text-[#FFFFFF] bg-[#FB641B] w-full h-[48px] rounded-[8px] font-[500]text-[16px]'><Link href='/profile/changesPassword'>Save Change</Link></button>
+                            <button className='text-[#686868] border-[#B7B7B7] border  bg-white w-full h-[48px] rounded-[8px] font-[500]text-[16px]'><Link href='#'>Cancel</Link></button>
+                            <button className='text-[#FFFFFF] bg-[#FB641B] w-full h-[48px] rounded-[8px] font-[500]text-[16px]'><Link href='#'>Save Change</Link></button>
                         </div>
                     </div>
 
 
                 </div>
-                <input type="checkbox" id="Email-responsive-modal-3" className="modal-toggle" />
-                <div className="modal ">
-                    <div className="bg-[#FFFFFF] w-full mx-[30px] h-[211px] rounded-[8px] relative">
-                        <label htmlFor="Email-responsive-modal-3" className="absolute right-5 top-3">✕</label>
-                        <div className=' mt-[16px]'>
-                            <h3 className="text-[#001E00] text-[20px] font-[400] ml-[16px]">Email Address</h3>
-                            <div className='mt-[16px]'>
-                                <h1 className='text-[#001E00] text-[14px] ml-[16px]'>Email</h1>
-                                <form className='mt-[12px] mx-[16px]'>
-                                    <input type='text' placeholder='Enter your new mail' className='EmailChangeInputRes w-full h-[40px]  focus:border-[#B7B7B7] pl-[13px] placeholder:pl-[1px] placeholder:text-[14px]  focus:ring-sky-500 placeholder-[#686868] focus:outline-none'></input>
-                                    <div className=" flex justify-center mt-[18px] mb-[16px]">
-                                        <button className="w-[172px] h-[48px] bg-[#FB641B] rounded-[4px]"><span className='text-white'>Save</span></button>
-                                    </div>
-                                </form>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <input type="checkbox" id="Mobile-responsive-modal-3" className="modal-toggle" />
-                <div className="modal ">
-                    <div className="bg-[#FFFFFF] w-full mx-[30px] h-[211px] rounded-[8px] relative">
-                        <label htmlFor="Mobile-responsive-modal-3" className="absolute right-5 top-3">✕</label>
-                        <div className=' mt-[16px] '>
-                            <h3 className="text-[#001E00] text-[20px] ml-[16px] font-[400]">Mobile Number</h3>
-                            <div className='mt-[16px]'>
-                                <h1 className='text-[#001E00] text-[14px] ml-[16px]'>Number</h1>
-                                <form className='mt-[12px] mx-[16px]'>
-                                    <input type='text' placeholder='Enter your new Number' className='EmailChangeInputRes w-full h-[40px]  focus:border-[#B7B7B7] pl-[13px] placeholder:pl-[1px] placeholder:text-[14px]  focus:ring-sky-500 placeholder-[#686868] focus:outline-none'></input>
-                                    <div className=" flex justify-center mt-[18px] mb-[16px]">
-                                        <button className="w-[172px] h-[48px] bg-[#FB641B] rounded-[4px]"><span className='text-white'>Save</span></button>
-                                    </div>
-                                </form>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                <Modal></Modal>
+               
 
             </div>
 
