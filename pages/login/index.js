@@ -13,21 +13,21 @@ import { useEffect } from 'react';
 import { useCookies } from 'react-cookie';
 import { useRouter } from 'next/router';
 const Login = () => {
-    const [check, setCheck] = useState(false)
+    const [check, setCheck] = useState(false);
 
-    const [loginUser, { data, isLoading, error }] = useLoginUserMutation()
-    const [formError, setError] = useState('')
+    const [loginUser, { data, isLoading, error }] = useLoginUserMutation();
+    const [formError, setError] = useState('');
     const [cookies, setCookie] = useCookies(['banglarBigStore']);
-    const router = useRouter()
+    const router = useRouter();
     useEffect(() => {
 
         if (data) {
-            setError('')
+            setError('');
             setCookie('banglarBigStore', data?.token, { path: '/' });
-            if (router?.query?.from) router.push(router.query?.from)
+            if (router?.query?.from) router.push(router.query?.from);
             // router.push('/account/profile')
         }
-    }, [data, error, cookies, setCookie, router])
+    }, [data, error, cookies, setCookie, router]);
 
 
     const handleForm = (e) => {
@@ -38,15 +38,15 @@ const Login = () => {
             loginUser({
                 phone: e.target.email.value,
                 password: e.target.pass.value
-            })
+            });
         }
         if (e.target.email.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
             loginUser({
                 email: e.target.email.value,
                 password: e.target.pass.value
-            })
+            });
         }
-    }
+    };
 
     return (
         <NavicationLayout>
@@ -72,14 +72,14 @@ const Login = () => {
                                 <p className='block  md:hidden sm:hidden mt-[24px] mb-2 text-[14px] text-[#001E00]'>Email Or Phone Number*</p>
                                 <input
                                     name='email'
-                                    className='input border-2 border-[#686868] md:border-[#287DF3] md:mb-[32px] mb-[20px] bg-white h-[48px]  md:h-[72px] md:text-[16px]' type="text" placeholder='Enter Your Phone Number or Email' />
+                                    className='input border border-[#707070] md:mb-[32px] mb-[20px] bg-white h-[48px]  md:h-[72px] md:text-[16px]' type="text" placeholder='Enter Your Phone Number or Email' />
                                 {
                                     formError && <p className='text-red-500 text-[15px] '>{formError}</p>
                                 }
                                 <p className='block  md:hidden sm:hidden mt-[20px] mb-2 text-[14px]  text-[#001E00]'>Password*</p>
                                 <input
                                     name='pass'
-                                    className='input border-2 border-[#686868]  md:border-[#287DF3]  md:h-[72px] md:text-[16px]' type={check ? 'text' : 'password'} placeholder='Minimum 6 Characters' />
+                                    className='input border border-[#707070]  md:h-[72px] md:text-[16px]' type={check ? 'text' : 'password'} placeholder='Minimum 6 Characters' />
                                 <div className='flex justify-between mt-[12px] mb-[20px]'>
                                     <div className='flex gap-[12px] '>
                                         <input className='h[19px] w-[19px] border border-[#686868]' onChange={e => setCheck(e.target.checked)} type="checkbox" />

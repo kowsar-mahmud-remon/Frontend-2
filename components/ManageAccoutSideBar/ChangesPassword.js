@@ -8,11 +8,11 @@ const ChangesPassword = () => {
         <div>
             <div className="hidden lg:block">
                 <div>
-                    <h1 className='text-[24px] text-[#FB641B]'>Changes Password</h1>
+                    <h1 className='text-[24px] max-w-[924px] text-[#FB641B]'>Changes Password</h1>
                 </div>
-                <div className="changePassword  h-[548px]   w-[924px]  mt-[32px]">
-                    <div className="pt-[32px]   mx-[24px]">
-                        <div className="">
+                <div className="changePassword  max-w-[924px] h-[548px]  mt-[32px]">
+                    <div className="pt-[32px] mx-[24px]">
+                        <div className="col-span-2">
                             <div>
                                 <h1 className="text-[#001E00] font-[400] text-[16px]">Current Password</h1>
                                 <input placeholder="Please Enter your Current Password" className="changePasswordInput   pl-[16px] mt-[8px] placeholder:text-[#686868] placeholder:pl-[2px]"></input>
@@ -35,10 +35,10 @@ const ChangesPassword = () => {
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <div className="mt-[40px] flex justify-end mx-[24px]">
-                            <button className="w-[122px] h-[48px] text-[#686868] font-[500] text-[16px] rounded-[8px] border-solid border-[#B7B7B7] box-border border-[1px]">Cancel</button>
-                            <button className="w-[212px] ml-[16px] h-[48px] bg-[#FB641B]
+                    <div className="">
+                        <div className="mt-[40px] flex justify-end gap-[10px] mx-[24px]">
+                            <button className=" w-[122px] h-[48px] text-[#686868] font-[500] text-[16px] rounded-[8px] border-solid border-[#B7B7B7] box-border border-[1px]">Cancel</button>
+                            <button className="w-[212px] whitespace-nowrap overflow-hidden  h-[48px] bg-[#FB641B]
                         rounded-[8px] text-white">Save Change</button>
                         </div>
                     </div>

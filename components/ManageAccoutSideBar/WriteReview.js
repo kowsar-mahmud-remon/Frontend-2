@@ -13,7 +13,7 @@ import ReactStars from "react-rating-stars-component";
 
 const WriteReview = () => {
   const [file, setFile] = useState(null);
-  const router = useRouter()
+  const router = useRouter();
   const handleChange = (e) => {
     const selectedFile = e.target.files[0];
 
@@ -59,8 +59,8 @@ const WriteReview = () => {
             <div className="flex pt-[12px] ml-[12px] items-center gap-[12px]">
               <Image
                 src="/image 8.png"
-                width={44}
-                height={36}
+                width={74}
+                height={60}
                 className="rounded-[4px]"
                 alt=""
               ></Image>
@@ -164,8 +164,14 @@ const WriteReview = () => {
               <p className="font-[400] text-[16px] ml-[24px] mt-[16px] text-[#001E00]">
                 Rate and review purchased product:
               </p>
-              <div className="flex mt-[11px]">
-                <Image src="/image 8.png" width={76} height={61} alt=""></Image>
+              <div className="flex my-[11px]">
+                <Image
+                  className="ml-[15px] mr-[16px]"
+                  src="/image 6.png"
+                  width={80}
+                  height={61}
+                  alt=""
+                ></Image>
                 <div className="">
                   <p className="font-[400] text-[16px] text-[#001E00]">
                     Tomato (Local) 500 ±30 gm
@@ -191,10 +197,10 @@ const WriteReview = () => {
               <div className="">
                 <textarea className="resize-none p-[24px] font-[400] text-[16px] text-[#686868] w-[552px] ml-[24px] h-[96px] bg-[#F2F2F2] rounded-lg outline-none "></textarea>
               </div>
-              <div className="flex gap-[8px] mt-[12px]">
-                <Image src="/image 8.png" width={74} height={60} alt=""></Image>
-                <Image src="/image 8.png" width={74} height={60} alt=""></Image>
-                <Image src="/image 8.png" width={74} height={60} alt=""></Image>
+              <div className="flex gap-[8px] mt-[12px] ml-[15px]">
+                <Image src="/image 6.png" width={80} height={60} alt=""></Image>
+                <Image src="/image 6.png" width={80} height={60} alt=""></Image>
+                <Image src="/image 6.png" width={80} height={60} alt=""></Image>
                 <label className="w-[74px] h-[60px] bg-[#F2F3F7] border-solid border-[1px] shadow-small">
                   <Image
                     className="mt-[14px] ml-[28px] mr-[28px] mb-[28px]"
@@ -238,7 +244,8 @@ const WriteReview = () => {
             <div className="divider divider-horizontal mt-[29px] h-[460px]"></div>
             <div className="w-[324px] ">
               <p className="font-[400] text-[16px] mt-[47px] text-[#686868]">
-                Sold by <span className="text-[#287DF3]">Banglar Big Store</span>
+                Sold by{" "}
+                <span className="text-[#287DF3]">Banglar Big Store</span>
               </p>
               <p className="font-[500] text-[16px] mt-[16px] text-[#001E00]">
                 Your seller review:
@@ -247,7 +254,9 @@ const WriteReview = () => {
                 <FaRegFrown className="w-[24px] h-[24px] hover:text-[#FB641B]"></FaRegFrown>
                 <FaRegMeh className="w-[24px] h-[24px] hover:text-[#FB641B]"></FaRegMeh>
                 <FaRegSmile className="w-[24px] h-[24px] hover:text-[#FB641B]"></FaRegSmile>
-                <p className="font-[400] text-[16px] text-[#686868]">Positive</p>
+                <p className="font-[400] text-[16px] text-[#686868]">
+                  Positive
+                </p>
               </div>
               <div className="mt-[32px]">
                 <p className="font-[500] text-[16px] text-[#001E00]">
@@ -302,21 +311,40 @@ const WriteReview = () => {
       </div>
       <div className="lg:hidden block">
         <div className="mt-[66px] mx-[20px]">
-          <div >
-            <button onClick={() => router.back()} className='flex items-center gap-[13px]'>
-              <FaArrowLeft className=''></FaArrowLeft>
-              <h1 className='text-[20px]  font-[500] text-[#001E00]'>My Reviews</h1>
+          <div>
+            <button
+              onClick={() => router.back()}
+              className="flex items-center gap-[13px]"
+            >
+              <FaArrowLeft className=""></FaArrowLeft>
+              <h1 className="text-[20px]  font-[500] text-[#001E00]">
+                My Reviews
+              </h1>
             </button>
           </div>
-          <p className="text-[#001E00] font-[500] text-[16px] mt-[16px]">Product Review</p>
+          <p className="text-[#001E00] font-[500] text-[16px] mt-[16px]">
+            Product Review
+          </p>
           <div>
-            <p className="font-normal  mt-[16px] text-[#001E00] text-[16px]">Banglar Big Store</p>
-            <p className="text-[#686868] mt-[4px] font-normal text-[12px]">Delivered on 21 Apr 2022</p>
+            <p className="font-normal  mt-[16px] text-[#001E00] text-[16px]">
+              Banglar Big Store
+            </p>
+            <p className="text-[#686868] mt-[4px] font-normal text-[12px]">
+              Delivered on 21 Apr 2022
+            </p>
           </div>
           <div className="writeResponsiveBox w-full h-[112px]  mt-[12px]">
             <div className="flex pt-[12px] ml-[12px] items-center gap-[12px]">
-              <Image src='/image 8.png' width={44} height={36} className='rounded-[4px]' alt=""></Image>
-              <p className="text-[#001E00] text-[14px] font-[400]">Tomato (Local) 500 ±30 gm</p>
+              <Image
+                src="/image 6.png"
+                width={44}
+                height={36}
+                className="rounded-[4px]"
+                alt=""
+              ></Image>
+              <p className="text-[#001E00] text-[14px] font-[400]">
+                Tomato (Local) 500 ±30 gm
+              </p>
             </div>
             <div>
               <div className="ml-[15px]  ">
@@ -324,7 +352,6 @@ const WriteReview = () => {
                   count={5}
                   onChange={ratingChanged}
                   spacing={12}
-
                   size={36}
                   isHalf={true}
                   emptyIcon={<i className="far fa-star"></i>}
@@ -334,23 +361,39 @@ const WriteReview = () => {
                 />
               </div>
             </div>
-
           </div>
           <div className="mt-[16px]">
-            <textarea placeholder="Type your Opinion..." class="resize-none rounded-md  h-[89px]
-            w-full writeReviewTextArea pl-[12px] pt-[12px]"></textarea>
+            <textarea
+              placeholder="Type your Opinion..."
+              class="resize-none rounded-md  h-[89px]
+            w-full writeReviewTextArea pl-[12px] pt-[12px]"
+            ></textarea>
           </div>
           <div className="responsiveImageFileUpload w-full h-[48px] mt-[16px]">
-            <label >
+            <label>
               <div className="flex justify-center items-center gap-[7px] mt-[14px]">
-                <Image src='/cloudupload.png' width={25} height={20} alt=""></Image>
-                <p className="font-[400] text-[10px] text-[#686868]">Upload Photo</p>
+                <Image
+                  src="/cloudupload.png"
+                  width={25}
+                  height={20}
+                  alt=""
+                ></Image>
+                <p className="font-[400] text-[10px] text-[#686868]">
+                  Upload Photo
+                </p>
               </div>
-              <input type="file" accept="image/jpeg" onChange={handleChange} className='hidden' />
+              <input
+                type="file"
+                accept="image/jpeg"
+                onChange={handleChange}
+                className="hidden"
+              />
             </label>
           </div>
           <div>
-            <p className="text-[#001E00] font-[500] text-[16px] mt-[24px]">Your seller review:</p>
+            <p className="text-[#001E00] font-[500] text-[16px] mt-[24px]">
+              Your seller review:
+            </p>
             <div className="flex items-center gap-[16px] mt-[16px]">
               <div className="flex items-center gap-[24px]">
                 <FaRegFrown className="w-full h-[36px] hover:text-[#FB641B]"></FaRegFrown>
@@ -361,7 +404,9 @@ const WriteReview = () => {
             </div>
           </div>
           <div className="mt-[24px]">
-            <p className="text-[#001E00] font-[500] text-[16px]">Rate your Rider:</p>
+            <p className="text-[#001E00] font-[500] text-[16px]">
+              Rate your Rider:
+            </p>
             <div>
               <ReactStars
                 count={5}
@@ -377,7 +422,9 @@ const WriteReview = () => {
             </div>
           </div>
           <div className="mt-[50px]">
-            <button className="bg-[#FB641B] mb-[32px] text-white w-full h-[48px] rounded-[8px]">Submit</button>
+            <button className="bg-[#FB641B] mb-[32px] text-white w-full h-[48px] rounded-[8px]">
+              Submit
+            </button>
           </div>
         </div>
       </div>

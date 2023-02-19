@@ -8,12 +8,14 @@ import ManageOrderModal from "../../components/ManageOrderModal/ManageOrderModal
 const ManageOrders = () => {
   const [item, setItem] = useState(products);
   return (
-    <section className="bg-[#FFFFFF] w-full">
+    <section className="bg-[#FFFFFF] w-full mt-7">
+      <ManageOrderModal></ManageOrderModal>
+    <section className="bg-[#FFFFFF] w-full mt-10">
         <ManageOrderModal></ManageOrderModal>
       <div className="">
         <div className="">
           <div>
-            <div className="text-xs breadcrumbs font-semibold">
+            <div className="text-lg breadcrumbs text-[#686868]">
               <ul>
                 <li>
                   <a>Home</a>
@@ -21,7 +23,7 @@ const ManageOrders = () => {
                 <li>
                   <a>Orders & Reviews</a>
                 </li>
-                <li>Manage Orders</li>
+                <li className="font-medium text-[#001E00]">Manage Orders</li>
               </ul>
             </div>
             <div>
@@ -33,8 +35,8 @@ const ManageOrders = () => {
 
           <div className="bg-[#FFFFFF] rounded mt-[30px]">
             <div className={`${style.boxshaddow} p-6 rounded-lg`}>
-            
-            <p className="text-[#001E00] font-semibold">All Open Oderes</p>
+
+              <p className="text-[#001E00] font-semibold">All Open Oderes</p>
 
               <div className="mt-4">
                 <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -51,22 +53,22 @@ const ManageOrders = () => {
                           Product SKU
                         </th>
                         <th scope="col" className="px-6 py-3">
-                        Category
+                          Category
                         </th>
                         <th scope="col" className="px-6 py-3">
-                        Price
+                          Price
                         </th>
                         <th scope="col" className="px-6 py-3">
-                        Quantity
+                          Quantity
                         </th>
                         <th scope="col" className="px-6 py-3">
-                        Payment Status
+                          Payment Status
                         </th>
                         <th scope="col" className="px-6 py-3">
-                        Delivery Date
+                          Delivery Date
                         </th>
                         <th scope="col" className="px-6 py-3">
-                        Status
+                          Status
                         </th>
                       </tr>
                     </thead>
@@ -80,7 +82,7 @@ const ManageOrders = () => {
                           ></ManageOrderTable>
                         );
                       })}
-                    </tbody> 
+                    </tbody>
                   </table>
                 </div>
               </div>

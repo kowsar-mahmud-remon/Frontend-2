@@ -12,9 +12,9 @@ const EditProfile = () => {
                 <div>
                     <h1 className='text-[24px] text-[#FB641B]'>Edit Profile</h1>
                 </div>
-                <div className="editProfile w-[924px] h-[548px] mt-[32px]">
+                <div className="editProfile w-full h-[548px] mt-[32px]">
                     <div className="pt-[32px] mx-[24px]">
-                        <div className="flex justify-between  gap-[120px]">
+                        <div className="grid grid-cols-3 gap-[100px]">
                             <div>
                                 <p className="text-[#001E00] text-[16px]">Full Name</p>
                                 <input className="editInput pl-[16px] mt-[8px]"></input>
@@ -23,7 +23,7 @@ const EditProfile = () => {
                                 <h1 className='text-[14px] text-[#686868] font-[400]'>Email Address <span className='text-[#707070]'> | </span><label htmlFor="Email-modal-3" className='text-[14px] text-[#287DF3]'>Change</label></h1>
                                 <h2 className='text-[#686868] text-[16px] mt-[16px]'>abdulkorim@gmail.com</h2>
                             </div>
-                            <div className="mr-[50px]">
+                            <div className="">
                                 <h1 className='text-[14px] text-[#686868] font-[400]'>Mobile <span className='text-[#707070]'> | </span><label htmlFor="Mobile-modal-3" className='text-[14px] text-[#287DF3]'>Change</label></h1>
                                 <h2 className='text-[#686868] text-[16px] mt-[16px]'>+880124 ******* 514</h2>
                             </div>
@@ -62,7 +62,7 @@ const EditProfile = () => {
                     </div>
                 </div>
                 <input type="checkbox" id="Email-modal-3" className="modal-toggle" />
-                <div className="modal">
+                <div className="modal fixed inset-0   h-screen bg-black  bg-opacity-60">
                     <div className="bg-[#FFFFFF] w-[751px] h-[363px] rounded-[8px] relative">
                         <label htmlFor="Email-modal-3" className="absolute right-5 top-3">✕</label>
                         <div className=' mt-[24px] ml-[24px]'>
@@ -82,7 +82,7 @@ const EditProfile = () => {
                 </div>
 
                 <input type="checkbox" id="Mobile-modal-3" className="modal-toggle" />
-                <div className="modal">
+                <div className="modal fixed inset-0   h-screen bg-black  bg-opacity-60">
                     <div className="bg-[#FFFFFF] w-[751px] h-[363px] rounded-[8px] relative">
                         <label htmlFor="Mobile-modal-3" className="absolute right-5 top-3">✕</label>
                         <div className=' mt-[24px] ml-[24px]'>

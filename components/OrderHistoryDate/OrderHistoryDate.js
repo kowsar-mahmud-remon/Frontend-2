@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { DateRange } from "react-date-range";
+import style from "../../styles/componentsStyles/box-shaddow.module.css"
 
 import format from "date-fns/format";
 import { addDays } from "date-fns";
@@ -73,7 +74,7 @@ const OrderHistoryDate = () => {
             ranges={range}
             months={2}
             direction="horizontal"
-            className="lg:w-[611px] md:w-[611px] w-[370px] bg-[#F2F3F7]"
+            className={`lg:w-[611px] md:w-[611px] ${style.dateBackground} w-[370px] bg-[#F2F3F7]`}
           />
         )}
       </div>
