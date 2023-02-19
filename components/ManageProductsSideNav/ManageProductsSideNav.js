@@ -134,11 +134,11 @@ const ManageProductsSideNav = () => {
       subcata: [
         {
           name: "Help Center",
-          href: "editProduct"
+          href: "helpCenter"
         },
         {
           name: "Contact Us",
-          href: "editProduct"
+          href: "contactUs"
         },
         {
           name: "Live Chat",
