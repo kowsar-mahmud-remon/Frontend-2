@@ -14,6 +14,7 @@ import ProductCampaignSix from "../components/ProductCampaignMain/ProductCampaig
 import ProductCampaignThree from "../components/ProductCampaignMain/ProductCampaignThree";
 import ProductInvoices from "../components/ProductInvoices/ProductInvoices";
 import ProductInvoicesDetails from "../components/ProductInvoices/ProductInvoicesDetails/ProductInvoicesDetails";
+import ReturnProducts from "../components/ReturnProducts/ReturnProducts";
 import Sellerverification from "../components/sellerverification/Sellerverification";
 import SellerVerificationPage1 from "../components/SellerVerificationPage1/SellerVerificationPage1";
 import SellerVerificationPage2 from "../components/SellerVerificationPage2/SellerVerificationPage2";
@@ -129,6 +130,11 @@ export const manageProductsArray = [
     element: <OrderHistory></OrderHistory>
   },
   {
+
+    title: "returnProducts",
+    href: "returnProduct",
+    element: <ReturnProducts></ReturnProducts>
+
     title: 'CampaignManagementThree',
     href: 'campaignManagementThree',
     element: <CampaignManagementThree></CampaignManagementThree>

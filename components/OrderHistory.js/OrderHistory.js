@@ -37,7 +37,7 @@ const OrderHistory = () => {
                 <li>
                   <a>Promotions</a>
                 </li>
-                <li className="text-[#001E00] font-semibold">
+                <li className="text-[#001E00] font-medium">
                   Product Campaign
                 </li>
               </ul>
@@ -82,8 +82,8 @@ const OrderHistory = () => {
                 </div>
                 <div className="mt-4">
                   <div className="relative overflow-x-auto shadow-md sm:rounded">
-                    <table className="w-full text-left text-[#001E00] dark:text-gray-400">
-                      <thead className="text-[13px] text-[#001E00] bg-[#F2F3F7] dark:bg-gray-700 dark:text-gray-400">
+                    <table className="w-full text-left text-[#001E00] ">
+                      <thead className=" text-[#001E00] bg-[#F2F3F7] ">
                         <tr>
                           <th
                             scope="col"
