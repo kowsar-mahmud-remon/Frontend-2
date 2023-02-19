@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import OrdersProduct from "../OrdersProduct/OrdersProduct";
+import ToPay from "../ToPay/ToPay";
+import ToShip from "../ToShip/ToShip";
 import ToReceive from "../ToReceive/ToReceive";
 
 const MyOrder = () => {
@@ -8,7 +10,7 @@ const MyOrder = () => {
       id: "1",
       orderId: "121312323213432",
       orderDate: "Placed On 21 Dec 2022 10:21:00",
-      image: "/image 6.png",
+      image: "/image 8.png",
       peoductName: "Tomato(Local) 500+30 gm",
       qty: "1",
       status: "Delivered",
@@ -18,7 +20,7 @@ const MyOrder = () => {
       id: "2",
       orderId: "121312323213432",
       orderDate: "Placed On 21 Dec 2022 10:21:00",
-      image: "/image 6.png",
+      image: "/image 8.png",
       peoductName: "Tomato(Local) 500+30 gm",
       qty: "1",
       status: "Payment",
@@ -28,7 +30,7 @@ const MyOrder = () => {
       id: "3",
       orderId: "121312323213432",
       orderDate: "Placed On 21 Dec 2022 10:21:00",
-      image: "/image 6.png",
+      image: "/image 8.png",
       peoductName: "Tomato(Local) 500+30 gm",
       qty: "1",
       status: "Payment",
@@ -38,7 +40,7 @@ const MyOrder = () => {
       id: "4",
       orderId: "121312323213432",
       orderDate: "Placed On 21 Dec 2022 10:21:00",
-      image: "/image 6.png",
+      image: "/image 8.png",
       peoductName: "Tomato(Local) 500+30 gm",
       qty: "1",
       status: "Payment",
@@ -48,7 +50,7 @@ const MyOrder = () => {
       id: "5",
       orderId: "121312323213432",
       orderDate: "Placed On 21 Dec 2022 10:21:00",
-      image: "/image 6.png",
+      image: "/image 8.png",
       peoductName: "Tomato(Local) 500+30 gm",
       qty: "1",
       status: "Delivered",
@@ -58,7 +60,7 @@ const MyOrder = () => {
       id: "6",
       orderId: "121312323213432",
       orderDate: "Placed On 21 Dec 2022 10:21:00",
-      image: "/image 6.png",
+      image: "/image 8.png",
       peoductName: "Tomato(Local) 500+30 gm",
       qty: "1",
       status: "Delivered",
@@ -68,7 +70,7 @@ const MyOrder = () => {
       id: "7",
       orderId: "121312323213432",
       orderDate: "Placed On 21 Dec 2022 10:21:00",
-      image: "/image 6.png",
+      image: "/image 8.png",
       peoductName: "Tomato(Local) 500+30 gm",
       qty: "1",
       status: "Delivered",
@@ -78,7 +80,7 @@ const MyOrder = () => {
       id: "8",
       orderId: "121312323213432",
       orderDate: "Placed On 21 Dec 2022 10:21:00",
-      image: "/image 6.png",
+      image: "/image 8.png",
       peoductName: "Tomato(Local) 500+30 gm",
       qty: "1",
       status: "Delivered",
@@ -88,7 +90,7 @@ const MyOrder = () => {
       id: "9",
       orderId: "121312323213432",
       orderDate: "Placed On 21 Dec 2022 10:21:00",
-      image: "/image 6.png",
+      image: "/image 8.png",
       peoductName: "Tomato(Local) 500+30 gm",
       qty: "1",
       status: "Processing",
@@ -98,7 +100,7 @@ const MyOrder = () => {
       id: "10",
       orderId: "121312323213432",
       orderDate: "Placed On 21 Dec 2022 10:21:00",
-      image: "/image 6.png",
+      image: "/image 8.png",
       peoductName: "Tomato(Local) 500+30 gm",
       qty: "1",
       status: "Processing",
@@ -110,7 +112,7 @@ const MyOrder = () => {
       id: "1",
       orderId: "PFL-12345678998745",
       Delivered: "Banglar Big Store Rider",
-      image: "/image 6.png",
+      image: "/image 8.png",
       peoductName: "Tomato(Local) 500+30 gm",
       status: "Delivered",
     },
@@ -118,7 +120,7 @@ const MyOrder = () => {
       id: "1",
       orderId: "PFL-12345678998745",
       Delivered: "Banglar Big Store Rider",
-      image: "/image 6.png",
+      image: "/image 8.png",
       peoductName: "Tomato(Local) 500+30 gm",
       status: "Delivered",
     },
@@ -126,7 +128,7 @@ const MyOrder = () => {
       id: "1",
       orderId: "PFL-12345678998745",
       Delivered: "Banglar Big Store Rider",
-      image: "/image 6.png",
+      image: "/image 8.png",
       peoductName: "Tomato(Local) 500+30 gm",
       status: "Delivered",
     },
@@ -140,20 +142,20 @@ const MyOrder = () => {
 
   const [isActive, setActive] = useState("all");
   const [shipingProduct, setShipingProduct] = useState();
-  const ToShip = () => {
-    setActive("ToShip");
-    const shipingData = datas.filter((data) => data.status === "Processing");
-    setShipingProduct(shipingData);
-  };
+  // const ToShip = () => {
+  //   setActive("ToShip");
+  //   const shipingData = datas.filter((data) => data.status === "Processing");
+  //   setShipingProduct(shipingData);
+  // };
 
   return (
-    <div className="">
-      <div>
+    <div className=" px-[24px]">
+      <div className="w-[100%]">
         <h1 className="text-[#FB641B] text-[24px] font-semibold">My Orders</h1>
       </div>
-      <div className="mt-[32px]">
-        <div>
-          <ul className="flex gap-[90px]  ">
+      <div className="mt-[32px] md:w-[96%]">
+        <div className="md:w-[70%]">
+          <ul className="flex  justify-between   ">
             <button
               onClick={() => setActive("all")}
               className={
@@ -174,16 +176,18 @@ const MyOrder = () => {
             >
               To Pay
             </button>
+
             <button
-              onClick={() => ToShip()}
+              onClick={() => setActive("ToShip")}
               className={
                 isActive === "ToShip"
                   ? "text-[#FB641B] border-b-[2px] border-[#FB641B] text-[16px]"
                   : "  text-[16px]"
               }
             >
-              To Ship ()
+              To ship()
             </button>
+
             <button
               onClick={() => setActive("ToReceive")}
               className={
@@ -196,12 +200,12 @@ const MyOrder = () => {
             </button>
           </ul>
         </div>
-        <hr className="bg-[#686868] border-[1px] w-[924px]" />
+        <hr className="bg-[#686868] border-[1px] " />
       </div>
       {isActive === "all" && (
         <>
-          <div className="mt-[16px]">
-            <div className="w-[924px] h-[80px] rounded-[8px] bg-[#FFFFFF] shadow-lg">
+          <div className="mt-[16px] md:block hidden">
+            <div className=" h-[80px] md:w-[96%] w-full rounded-[8px] bg-[#FFFFFF] shadow-lg">
               <div className=" w-full max-w-xs mt-4 gap-[16px] flex ">
                 <p className="label mt-[25px] ml-[24px] mb-[30px] text-[16px]">
                   {" "}
@@ -232,11 +236,9 @@ const MyOrder = () => {
         {isActive === "ToPay" &&
           (datas.length !== 0 ? (
             <>
-              {datas
-                .filter((data) => data.status === "Payment")
-                .map((data) => (
-                  <OrdersProduct key={data.id} data={data}></OrdersProduct>
-                ))}
+
+              <ToPay></ToPay>
+
             </>
           ) : (
             <>
@@ -249,9 +251,8 @@ const MyOrder = () => {
             </>
           ))}
         {isActive === "ToShip" &&
-          shipingProduct.map((data) => (
-            <OrdersProduct key={data.id} data={data}></OrdersProduct>
-          ))}
+          <ToShip></ToShip>
+        }
       </div>
       <div>
         {isActive === "ToReceive" && (

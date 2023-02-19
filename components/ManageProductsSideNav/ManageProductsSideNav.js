@@ -102,7 +102,7 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Returns Product",
-          href: "editProduct"
+          href: "returnProduct"
         },
       ],
     },

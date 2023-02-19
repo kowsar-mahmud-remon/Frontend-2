@@ -18,7 +18,7 @@ const Category = () => {
     const dispatch = useDispatch()
 
     return (
-        <section className={`${styles.sideNav} w-[285px] ${isActiveCategory ? 'left-[-400px]' : ''} p-2 bg-[#ffffff] shadow-black shadow-2xl delay-700 sideNavTransition `} id="sidNav">
+        <section className={`${styles.sideNav} w-[285px] ${isActiveCategory ? 'left-[-400px]' : ''} p-2 bg-[#ffffff] shadow-black delay-700 sideNavTransition `} id="sidNav">
 
             <ul>
                 {

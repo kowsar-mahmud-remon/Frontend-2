@@ -256,7 +256,6 @@ const SearchDesktop = () => {
                 className={`flex z-20  fixed md:static  h-[100vh] top-0 right-0 md:left-0  w-full lg:w-[482px] overflow-auto lg:h-auto  abs-bg ${bghide} mt-[-8px] justify-between md:justify-start scrollbar-hide mt-0 lg:mt-4`}>
 
                 <div onClick={() => handleClose(1)} className={``}>
-
                 </div>
 
                 <div className={`${leftWidth}  lg:w-full lg:block md:block  z-[999]  `}>
