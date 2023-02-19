@@ -35,10 +35,10 @@ const OrderHistory = () => {
                   <a>Home</a>
                 </li>
                 <li>
-                  <a>Promotions</a>
+                  <a>Orders & Reviews</a>
                 </li>
                 <li className="text-[#001E00] font-medium">
-                  Product Campaign
+                Order History
                 </li>
               </ul>
             </div>
