@@ -4,8 +4,6 @@ import MyOrder from "../components/MyOrder/MyOrder";
 import Profile from "../components/ManageAccoutSideBar/Profile";
 import WriteReview from "../components/ManageAccoutSideBar/WriteReview";
 import MyReviews from "../components/ManageAccoutSideBar/MyReviews";
-import Wishlist from "../pages/wishlist/myWishlist";
-import FollowedStore from "../pages/wishlist/followedStore";
 import MyWishList from "../components/ManageAccoutSideBar/MyWishList";
 import FollowedStores from "../components/ManageAccoutSideBar/FollowedStores";
 import MyOrderDetails from "../components/myOrderDetails/myOrderDetails";
@@ -17,6 +15,7 @@ import ChangesPassword from "../components/ManageAccoutSideBar/ChangesPassword";
 import MyPaymentOption from "../components/ManageAccoutSideBar/myPaymentOption";
 import MyReturns from "../components/ManageAccoutSideBar/MyReturns";
 import MyCancelation from "../components/ManageAccoutSideBar/MyCancelation";
+import MyReturnsResponsive from "../components/ManageAccoutSideBar/MyReturnsResponsive";
 
 
 const profileLinksObj = [
@@ -79,9 +78,10 @@ const profileLinksObj = [
   },
   {
     title: "Sell On Banglar Big Store",
-    href: "sell",
+    href: "sellStore",
     element: <Profile />,
   },
+  // sub link
   {
     title: "MyOrders",
     href: "myOrderDetails",
@@ -98,7 +98,7 @@ const profileLinksObj = [
     element: <WriteReview />,
   },
   {
-    title: "editProfile",
+    title: "EditProfile",
     href: "editProfile",
     element: <EditProfile></EditProfile>
   },
@@ -107,90 +107,11 @@ const profileLinksObj = [
     href: "changesPassword",
     element: <ChangesPassword></ChangesPassword>
   }
+
 ];
 
 
-const profileLinksResponsiveObj = [
-  {
-    title: "Manage My Account",
-    href: "manageAccount",
-    element: <ManageAccount />,
-  },
-  {
-    title: "My Profile",
-    href: "myProfile",
-    element: <Profile />,
-  },
-  {
-    title: "Address book",
-    href: "addressBook",
-    element: <AddressBook />,
-  },
-  {
-    title: "My Payment Options",
-    href: "paymentOptions",
-    element: <MyPaymentOption />,
-  },
-  {
-    title: "My Orders",
-    href: "myOrders",
-    element: <MyOrder />,
-  },
-  {
-    title: "My Returns",
-    href: "myReturns",
-    element: <MyReturns />,
-  },
-  {
-    title: "My Cancellations",
-    href: "myCancellations",
-    element: <MyCancelation />,
-  },
-  {
-    title: "My Reviews",
-    href: "myReviews",
-    element: <MyReviews></MyReviews>,
-  },
-  {
-    title: "My Wishlist",
-    href: "myWishlist",
-    element: <MyWishList />,
-  },
-  {
-    title: "Followed Stores",
-    href: "followedStores",
-    element: <ManageAccount />,
-  },
-  {
-    title: "Sell On Bangla Big Store",
-    href: "sellStore",
-    element: <ManageAccount />,
-  },
-  {
-    title: "MyOrders",
-    href: "myOrderDetails",
-    element: <MyOrderDetails />,
-  },
-  {
-    title: "OrderCancelation",
-    href: "myOrderCancelation",
-    element: <MyOrderCancelation />,
-  },
-  {
-    title: "WriteReview",
-    href: "writeReview",
-    element: <WriteReview />,
-  },
-  {
-    title:"EditProfile",
-    href:"editProfile",
-    element:<EditProfile></EditProfile>
-  },
-  {
-    title:"changesPassword",
-    href:"changesPassword",
-    element:<ChangesPassword></ChangesPassword>
-  }
-];
 
-export { profileLinksObj, profileLinksResponsiveObj }
+
+
+export { profileLinksObj}

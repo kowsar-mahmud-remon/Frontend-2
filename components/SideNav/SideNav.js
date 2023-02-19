@@ -12,14 +12,14 @@ import { addCategoryName, handleCategorySideNav, setActiveBtn } from '../../feat
 const Category = () => {
     const router = useRouter();
     const { data, isLoading, isError, error } = useGetCategoryQuery();
-  
+
     const { asPath } = router;
     const { category: { activeBtn, categoryName, isActiveCategory } } = useSelector(state => state)
     const dispatch = useDispatch()
-  
+
     return (
-        <section className={`${styles.sideNav} w-[285px] ${isActiveCategory ? 'left-[-400px]' : ''} p-2 bg-[#ffffff] shadow-black shadow-2xl delay-700 sideNavTransition `} id="sidNav">
-          
+        <section className={`${styles.sideNav} w-[285px] ${isActiveCategory ? 'left-[-400px]' : ''} p-2 bg-[#ffffff] shadow-black delay-700 sideNavTransition `} id="sidNav">
+
             <ul>
                 {
                     data?.categories?.map((c, index) => {
@@ -33,7 +33,7 @@ const Category = () => {
                                 as={"li"}
                                 href={`/hi`}
                                 key={index}
-                                className={(asPath == path) ? styles.active : ""}
+                                className={`${(asPath == path) ? styles.active : ""} text-[#001E00] text-[16px] font-[600]`}
                             >
                                 <Link href={path} className='text-[19px] font-[500]'>
                                     <Image
@@ -53,7 +53,7 @@ const Category = () => {
                                             onClick={() => dispatch(setActiveBtn({ value: s.name, id: s._id }))}
 
                                             key={index}>
-                                            <p className={`${activeBtn == s.name ? styles.activeSubLink : ""} py-1 px-2 rounded-md my-2 cursor-pointer`}>
+                                            <p className={`${activeBtn == s.name ? styles.activeSubLink : ""} py-1 px-2 rounded-md my-2 cursor-pointer `}>
                                                 {s.name}
                                             </p>
                                         </li>)

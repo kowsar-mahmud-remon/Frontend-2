@@ -108,9 +108,9 @@ const DontSelectProductCheckout = () => {
         <h4 className='text-[20px] lg:text-2xl font-medium text-[#FB641B]'>Ready to Checkout!</h4>
       </div>
 
-      <div className=" flex-col   flex  lg:flex-row m-6 lg:m-0 justify-center items-center md:items-start ">
+      <div className=" flex-col flex  lg:flex-row m-6 lg:m-0 justify-center items-center md:items-start ">
         <div className="lg:w-[788px] md:mr-6 mb-28">
-          <div className="text-[#686868] flex justify-between item-center p-6 shadow-2xl mt-4">
+          <div className="text-[#686868] flex justify-between item-center px-6 py-[18px] rounded-xl shadow-xl mt-4">
             <div className="flex rounded items-center">
 
               <input

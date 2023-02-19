@@ -8,6 +8,10 @@ import ManageProduct from "../components/ManageProduct/ManageProduct";
 import ManageReview from "../components/ManageReview/ManageReview";
 import OrderHistory from "../components/orderHistory.js/OrderHistory";
 import AllProduct from "../components/ProductCampaignMain/AllProduct";
+import ProductCampaignFive from "../components/ProductCampaignMain/ProductCampaignFive";
+import ProductCampaignFour from "../components/ProductCampaignMain/ProductCampaignFour";
+import ProductCampaignSix from "../components/ProductCampaignMain/ProductCampaignSix";
+import ProductCampaignThree from "../components/ProductCampaignMain/ProductCampaignThree";
 import ProductInvoices from "../components/ProductInvoices/ProductInvoices";
 import ProductInvoicesDetails from "../components/ProductInvoices/ProductInvoicesDetails/ProductInvoicesDetails";
 import ReturnProducts from "../components/ReturnProducts/ReturnProducts";
@@ -71,6 +75,26 @@ export const manageProductsArray = [
     element: <AllProduct></AllProduct>,
   },
   {
+    title: "ProductCampaignThree",
+    href: "productCampaignThree",
+    element: <ProductCampaignThree></ProductCampaignThree>,
+  },
+  {
+    title: "ProductCampaignFour",
+    href: "productCampaignFour",
+    element: <ProductCampaignFour></ProductCampaignFour>,
+  },
+  {
+    title: "ProductCampaignFive",
+    href: "productCampaignFive",
+    element: <ProductCampaignFive></ProductCampaignFive>,
+  },
+  {
+    title: "ProductCampaignSix",
+    href: "productCampaignSix",
+    element: <ProductCampaignSix></ProductCampaignSix>,
+  },
+  {
     title: "SellerVerificationPage1",
     href: "sellerVerificationPage1",
     element: <SellerVerificationPage1></SellerVerificationPage1>,
@@ -98,23 +122,22 @@ export const manageProductsArray = [
   {
     title: "ManageReview",
     href: "manageReview",
-    element: <ManageReview></ManageReview>,
+    element: <ManageReview></ManageReview>
   },
-  {
-    title: "CampaignManagementThree",
-    href: "campaignManagementThree",
-    element: <CampaignManagementThree></CampaignManagementThree>,
-  },
-
   {
     title: "OrderHistory",
     href: "orderHistory",
     element: <OrderHistory></OrderHistory>
   },
   {
+
     title: "returnProducts",
     href: "returnProduct",
     element: <ReturnProducts></ReturnProducts>
+
+    title: 'CampaignManagementThree',
+    href: 'campaignManagementThree',
+    element: <CampaignManagementThree></CampaignManagementThree>
   }
 
 ];

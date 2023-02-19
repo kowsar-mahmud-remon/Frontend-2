@@ -9,14 +9,13 @@ const Profile = () => {
   // console.log(router?.query?.slug?.[0]);
   return (
     <ManageAccountLayout slug={router?.query?.slug?.[0]}>
-      <div className="hidden lg:block">
+      <div className="">
         {profileLinksObj?.map((p, i) => {
           if (router?.query?.slug?.length > 1) {
             let ele;
             p?.links &&
               p?.links?.map((e, i) => {
                 if (e.href === router?.query?.slug?.[1]) {
- 
                   ele = e?.element;
                 }
               });
@@ -26,13 +25,13 @@ const Profile = () => {
           }
         })}
       </div>
-      <div className="lg:hidden">
+      {/* <div className="lg:hidden">
         {profileLinksResponsiveObj?.map((p, i) => {
           if (p?.href === router?.query?.slug?.[0]) {
             return p?.element;
           }
         })}
-      </div>
+      </div> */}
     </ManageAccountLayout>
   );
 };

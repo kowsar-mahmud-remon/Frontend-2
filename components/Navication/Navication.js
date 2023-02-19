@@ -9,7 +9,7 @@ import flagBD from "../../assets/images/flag(BD).png";
 import supportIcon from "../../assets/images/support_Icon.png";
 import advertise from "../../assets/images/navication/add.png";
 import modalLogo from "../../assets/images/homeSlider/Banglar BigBazar Full logo-01 2.png";
-
+import Select from "react-select";
 import Link from "next/link";
 import { RiMapPinFill } from "react-icons/ri";
 import { IoIosArrowDown } from "react-icons/io";
@@ -25,7 +25,9 @@ import { useCookies } from "react-cookie";
 import { useDispatch, useSelector } from "react-redux";
 import { userLoggedIn } from "../../features/auth/authSlice";
 import { store } from "../../store/store";
-
+import { FiSearch } from "react-icons/fi";
+import bangladesh from "../../assets/countries/bangladesh.png";
+import usa from "../../assets/countries/usa.png";
 const Navication = () => {
   const [searchText, setSearchText] = useState("");
   const [recognitionStarted, setRecognitionStarted] = useState(false);
@@ -35,6 +37,20 @@ const Navication = () => {
   const dispatch = useDispatch();
 
   const { accessToken } = useSelector((state) => state.auth);
+
+  const languages = [
+    {
+      value: "english",
+      label: "English",
+      image: usa,
+    },
+    {
+      value: "bangla",
+      label: "Bangla",
+      image: bangladesh,
+    },
+  ];
+
 
   useEffect(() => {
     if (accessToken) {
@@ -101,8 +117,13 @@ const Navication = () => {
     };
   }, [handleModalClose]);
 
+  // to close the modal when click the link
+  function handleClick(link) {
+    setShowModal(false);
+  }
+
   return (
-    <section className="shadow-md     z-20 shadow-block-900 relative">
+    <section className="shadow-md    z-20 shadow-block-900 relative">
       <TopNavBar />
 
       <div className="flex items-center h-[80px] gap-3 px-[20px] lg:px-[40px] 2xl:px-[50px]  bg-[#ffffff] justify-between text-[#026C51]">
@@ -113,9 +134,9 @@ const Navication = () => {
         </div>
 
         <div className={`${styles.navSearch}`}>
-          <div className="flex items-center w-full justify-between">
+          <div className="flex items-center w-full justify-between bg-transparent">
             <input
-              className="pl-[16px]"
+              className="pl-[16px] bg-white outline-none border-0"
               value={searchText}
               onChange={(e) => setSearchText(e.target.value)}
               type="text"
@@ -127,7 +148,13 @@ const Navication = () => {
               style={{ color: recognitionColor }}
             />
           </div>
-          <button>Search</button>
+          <button style={{
+            display: "flex"
+          }} className="items-center gap-2 justify-center">
+            <FiSearch
+              className="text-[17px] text-white block md:hidden"
+            />
+            Search</button>
         </div>
         <div
           className={` ${styles.nanMenu} md:flex item-center items-center hidden`}
@@ -138,11 +165,45 @@ const Navication = () => {
           </button>
 
           <div className="flex item-center items-center mx-3">
-            <Image alt="" src={flagBD} />
+            {/* <Image alt="" src={flagBD} />
             <select className="bg-transparent">
               <option value="bn">BN</option>
               <option value="bn">EN</option>
-            </select>
+            </select> */}
+            <Select
+              className={`${styles.languageChange} border-none flex-1 md:flex-none justify-end`}
+              classNamePrefix="select"
+              options={languages}
+              isSearchable={false}
+              styles={{
+                control: (base) => ({
+                  ...base,
+                  border: 0,
+                  // This line disable the blue border
+                  boxShadow: "none",
+                  backgroundColor: "#f7f7f7",
+                }),
+              }}
+              defaultValue={languages[0]}
+              formatOptionLabel={(option) => (
+                <div className="flex items-center gap-2">
+                  {option.image ? (
+                    <Image
+                      style={{
+                        width: "30px",
+                        objectFit: "contain",
+                      }}
+                      src={option.image}
+                      alt={option.label}
+                      className="w-5 md:max-w-none"
+                    />
+                  ) : (
+                    ""
+                  )}
+                  <span className="text-[14px] md:text-[14px]">{option.label}</span>
+                </div>
+              )}
+            />
           </div>
 
           <label
@@ -159,11 +220,11 @@ const Navication = () => {
           <div>
             {showModal && (
               <div
-                className="fixed top-[130px]  right-[45px] bg-white  m-auto p-4 border rounded-md border-black lg:w-[720px] md:w-[500px] "
+                className="fixed top-[130px]  right-[45px] bg-white  m-auto py-[80px] px-[15px] border-[2px] border-[#686868] rounded-md  lg:w-[900px] md:w-[500px] "
                 ref={modalRef}
               >
                 <Image
-                  className="mb-[60px] mt-[20px]"
+                  className="mb-[60px]"
                   src={modalLogo}
                   width={232}
                   height={69}
@@ -173,12 +234,14 @@ const Navication = () => {
                   <Link
                     className="btn bg-[#FB641B] text-white text-[18px]"
                     href="/login"
+                    onClick={() => handleClick("")}
                   >
                     Login
                   </Link>
                   <Link
-                    className="btn bg-[#F2F3F7] border border-[#B7B7B7] text-[18px]"
+                    className="btn bg-[#F2F3F7] border-[1px] border-[#B7B7B7] text-[18px]"
                     href="/registation"
+                    onClick={() => handleClick("")}
                   >
                     Register
                   </Link>
