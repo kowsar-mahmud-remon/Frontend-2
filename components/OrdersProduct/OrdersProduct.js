@@ -5,7 +5,7 @@ const OrdersProduct = ({ data }) => {
 
   return (
     <div className="mt-[16px]  ">
-      <div className="w-[100%] h-auto rounded-[8px] bg-[#FFFFFF] shadow-lg">
+      <div className="md:w-[96%] w-[100%] h-auto rounded-[8px] bg-[#FFFFFF] shadow-lg">
         <div className="flex items-center justify-between">
           <div className="m-[16px]">
             <p>

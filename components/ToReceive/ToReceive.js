@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 const ToReceive = ({ data }) => {
     return (
-        <div className='md:w-[765px]'>
+        <div className='md:w-[96%]'>
             <div className="mt-[16px] ">
                 <div className="w-[100%] h-[149px] rounded-[8px] bg-[#FFFFFF] shadow-lg pt-[12px]">
                     <div className="flex items-center justify-between">

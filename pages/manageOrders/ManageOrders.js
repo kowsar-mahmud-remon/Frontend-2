@@ -8,9 +8,7 @@ import ManageOrderModal from "../../components/ManageOrderModal/ManageOrderModal
 const ManageOrders = () => {
   const [item, setItem] = useState(products);
   return (
-    <section className="bg-[#FFFFFF] w-full mt-7">
-      <ManageOrderModal></ManageOrderModal>
-    <section className="bg-[#FFFFFF] w-full mt-10">
+    <section className="bg-[#FFFFFF] w-full pt-7">
         <ManageOrderModal></ManageOrderModal>
       <div className="">
         <div className="">
@@ -35,40 +33,40 @@ const ManageOrders = () => {
 
           <div className="bg-[#FFFFFF] rounded mt-[30px]">
             <div className={`${style.boxshaddow} p-6 rounded-lg`}>
-
-              <p className="text-[#001E00] font-semibold">All Open Oderes</p>
+            
+            <p className="text-[#001E00] font-semibold">All Open Oderes</p>
 
               <div className="mt-4">
                 <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-                  <table className="w-full text-sm text-left text-[#001E00] dark:text-gray-400">
-                    <thead className="text-[13px] text-[#001E00] bg-[#F2F3F7] dark:bg-gray-700 dark:text-gray-400">
+                  <table className="w-full text-base text-left text-[#001E00]">
+                    <thead className="text-base text-[#001E00] font-normal bg-[#F2F3F7]">
                       <tr>
-                        <th scope="col" className="px-6 py-3">
+                        <th scope="col" className="px-6 py-3 font-medium text-[#001E00] text-base">
                           Product
                         </th>
-                        <th scope="col" className="px-6 py-3">
+                        <th scope="col" className="px-6 py-3 font-medium text-[#001E00] text-base">
                           Local Title
                         </th>
-                        <th scope="col" className="px-6 py-3">
+                        <th scope="col" className="px-6 py-3 font-medium text-[#001E00] text-base">
                           Product SKU
                         </th>
-                        <th scope="col" className="px-6 py-3">
-                          Category
+                        <th scope="col" className="px-6 py-3 font-medium text-[#001E00] text-base">
+                        Category
                         </th>
-                        <th scope="col" className="px-6 py-3">
-                          Price
+                        <th scope="col" className="px-6 py-3 font-medium text-[#001E00] text-base">
+                        Price
                         </th>
-                        <th scope="col" className="px-6 py-3">
-                          Quantity
+                        <th scope="col" className="px-6 py-3 font-medium text-[#001E00] text-base">
+                        Quantity
                         </th>
-                        <th scope="col" className="px-6 py-3">
-                          Payment Status
+                        <th scope="col" className="px-6 py-3 font-medium text-[#001E00] text-base">
+                        Payment Status
                         </th>
-                        <th scope="col" className="px-6 py-3">
-                          Delivery Date
+                        <th scope="col" className="px-6 py-3 font-medium text-[#001E00] text-base">
+                        Delivery Date
                         </th>
-                        <th scope="col" className="px-6 py-3">
-                          Status
+                        <th scope="col" className="px-6 py-3 font-medium text-[#001E00] text-base">
+                        Status
                         </th>
                       </tr>
                     </thead>
@@ -82,7 +80,7 @@ const ManageOrders = () => {
                           ></ManageOrderTable>
                         );
                       })}
-                    </tbody>
+                    </tbody> 
                   </table>
                 </div>
               </div>
