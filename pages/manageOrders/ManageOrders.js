@@ -10,8 +10,6 @@ const ManageOrders = () => {
   return (
     <section className="bg-[#FFFFFF] w-full pt-7">
         <ManageOrderModal></ManageOrderModal>
-    <section className="bg-[#FFFFFF] w-full mt-7">
-      <ManageOrderModal></ManageOrderModal>
       <div className="">
         <div className="">
           <div>
@@ -35,8 +33,8 @@ const ManageOrders = () => {
 
           <div className="bg-[#FFFFFF] rounded mt-[30px]">
             <div className={`${style.boxshaddow} p-6 rounded-lg`}>
-
-              <p className="text-[#001E00] font-semibold">All Open Oderes</p>
+            
+            <p className="text-[#001E00] font-semibold">All Open Oderes</p>
 
               <div className="mt-4">
                 <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -69,23 +67,6 @@ const ManageOrders = () => {
                         </th>
                         <th scope="col" className="px-6 py-3 font-medium text-[#001E00] text-base">
                         Status
-                        <th scope="col" className="px-6 py-3">
-                          Category
-                        </th>
-                        <th scope="col" className="px-6 py-3">
-                          Price
-                        </th>
-                        <th scope="col" className="px-6 py-3">
-                          Quantity
-                        </th>
-                        <th scope="col" className="px-6 py-3">
-                          Payment Status
-                        </th>
-                        <th scope="col" className="px-6 py-3">
-                          Delivery Date
-                        </th>
-                        <th scope="col" className="px-6 py-3">
-                          Status
                         </th>
                       </tr>
                     </thead>
@@ -99,7 +80,7 @@ const ManageOrders = () => {
                           ></ManageOrderTable>
                         );
                       })}
-                    </tbody>
+                    </tbody> 
                   </table>
                 </div>
               </div>

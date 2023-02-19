@@ -42,7 +42,7 @@ const ReturnProducts = () => {
                   <div className="mr-[34px]">
                     <Image className={`lg:w-[314px] md:w-[314px] w-full h-[252px] ${style.boxbuttonshadow} rounded`} src={potol} width={314} alt=""></Image>
                   </div>
-                  <div>
+                  <div>  
                     <div className="flex items-center mb-4 lg:mt-0 md:mt-0 mt-14">
                       <h2 className="text-lg mr-4 font-semibold text-[#001E00] ">Local Title:</h2>
                       <p className=" text-lg text-[#001E00]">Potol (Pointed Gourd) 500 ±30 gm</p>

@@ -117,27 +117,26 @@ export const manageProductsArray = [
   {
     title: "ManageOrders",
     href: "manageOrders",
-    element: <ManageOrders></ManageOrders>
+    element: <ManageOrders></ManageOrders>,
   },
   {
     title: "ManageReview",
     href: "manageReview",
-    element: <ManageReview></ManageReview>
+    element: <ManageReview></ManageReview>,
   },
   {
     title: "OrderHistory",
     href: "orderHistory",
-    element: <OrderHistory></OrderHistory>
+    element: <OrderHistory></OrderHistory>,
   },
   {
-
     title: "returnProducts",
     href: "returnProduct",
-    element: <ReturnProducts></ReturnProducts>
-
-    title: 'CampaignManagementThree',
-    href: 'campaignManagementThree',
-    element: <CampaignManagementThree></CampaignManagementThree>
-  }
-
+    element: <ReturnProducts></ReturnProducts>,
+  },
+  {
+    title: "CampaignManagementThree",
+    href: "campaignManagementThree",
+    element: <CampaignManagementThree></CampaignManagementThree>,
+  },
 ];
