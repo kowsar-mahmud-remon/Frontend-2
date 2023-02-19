@@ -40,6 +40,12 @@ const MobileNavBar = () => {
     };
   }, [handleModalClose]);
 
+  // to close the modal when click the link
+  function handleClick() {
+    setShowModal(false);
+    setIsOpen(false);
+  }
+
   const options = [
     {
       name: "Home",
@@ -161,7 +167,7 @@ const MobileNavBar = () => {
     },
     {
       name: "Menu",
-      href: "/",
+      href: "",
       img: (
         <>
           <svg
@@ -195,9 +201,10 @@ const MobileNavBar = () => {
       ),
     },
   ];
+
   return (
     <div className="w-full md:hidden relative ">
-      <div className="fixed left-0 bottom-0 z-50 w-full bg-white boxShadowTop">
+      <div className="fixed left-0 bottom-0 z-[150] w-full bg-white boxShadowTop">
         <div className="h-14 flex justify-center items-center">
           {options.map((option, index) => (
             <div key={index} className="mx-auto ">
@@ -216,12 +223,14 @@ const MobileNavBar = () => {
       <div className="">
         <nav className="relative  z-[101] flex items-center justify-between px-4 py-0   w-full top-0 shadow">
           <div
+          
             className={`${
               isOpen ? "" : "hidden"
             } md:flex md:items-center md:w-auto absolute right-[0px] top-[0px]   bg-white w-full`}
             style={{
-              transition: "all 0.1s ease",
               transform: `translateX(${isOpen ? "0" : "100%"})`,
+              transition: "translate 1s ease-in-out",
+              
             }}
           >
             {/* menu items */}
@@ -334,15 +343,15 @@ const MobileNavBar = () => {
 
               <div>
                 {showModal && (
-                  <div className="fixed inset-0 justify-center items-center  h-screen bg-black  bg-opacity-60 ">
+                  <div className="fixed inset-0   h-screen bg-black  bg-opacity-60 ">
                     {showModal && (
-                      <div className="">
+                      <div className="flex flex-col mt-[50%]">
                         <div
-                          className="bg-white  w-full px-4 py-6   rounded-md    flex flex-col fixed top-[18%]"
+                          className="bg-white  rounded-md w-[90%] mx-auto pb-[69px]"
                           ref={modalRef}
                         >
                           <Image
-                            className="mb-[45px] mt-[40px] mx-auto"
+                            className="mb-[60px] mt-[45px] mx-auto"
                             src={modalLogo}
                             width={174}
                             height={51}
@@ -352,6 +361,7 @@ const MobileNavBar = () => {
                             <Link
                               className="btn bg-[#FB641B] text-white text-[16px] mb-[12px] w-[178px] mx-auto"
                               href="/login"
+                              onClick={() => handleClick("")}
                             >
                               Login
                             </Link>
@@ -360,6 +370,7 @@ const MobileNavBar = () => {
                               <Link
                                 className="text-[#287DF3] ml-[3px]"
                                 href="/login"
+                                onClick={() => handleClick("")}
                               >
                                 Login
                               </Link>{" "}
@@ -367,14 +378,16 @@ const MobileNavBar = () => {
                             <Link
                               className="btn bg-[#FB641B] text-white  text-[16px] mb-[12px] w-[178px] mx-auto "
                               href="/registation"
+                              onClick={() => handleClick("")}
                             >
                               Register
                             </Link>
-                            <p className="text-[#688686] text-center mb-[30px] text-[18px]">
+                            <p className="text-[#001E00] text-center mb-[30px] text-[18px]">
                               You have no account?{" "}
                               <Link
-                                className="text-[#287DF3] ml-[3px]"
+                                className="text-[#287DF3] ml-[3px] "
                                 href="/login"
+                                onClick={() => handleClick("")}
                               >
                                 Register
                               </Link>{" "}

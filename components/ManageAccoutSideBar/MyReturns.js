@@ -44,9 +44,9 @@ const MyReturns = () => {
     ]
 
     return (
-        <div className='flex justify-center '>
+        <div className='flex justify-center  pb-[227px]'>
             <div className='w-[924px]'>
-                <h1 className='text-[24px] text-[#FB641B] font-semibold mt-[24px] mb-[32px]'>Returns Details</h1>
+                <h1 className='text-[24px] text-[#FB641B] font-semibold mt-[24px] mb-[32px] ml-4 md:ml-4 lg:ml-0'>Returns Details</h1>
                 <div className='flex justify-between items-center px-[16px] shadow-md py-[20px] rounded-md mb-[16px] w-full'>
                     <div>
                         <p className='text-[16px] font-semibold text-[#001E00]'>Order <span className='text-[#287DF3]'>#12345678998745</span></p>
@@ -71,7 +71,7 @@ const MyReturns = () => {
                             className='w-[19px] h-[20px] mr-[16px]'
                             src={img2}
 
-                            alt='Image' /></span>Retune Product</p>
+                            alt='Image' /></span>Return Product</p>
                     </div>
                     <div>
                         <div className="hidden md:block mx-auto">
@@ -121,70 +121,40 @@ const MyReturns = () => {
                             </div>
 
 
-                            <div className=' w-[70%]'>
-                                {
-                                    vegs.map(veg => {
-                                        return (
-                                            <div key={veg.id} className='flex justify-between items-center mb-[32px]'>
-                                                <div className='flex items-center'>
-                                                    <Image
-                                                        className='w-[57px] h-[46px] mr-[16px]'
-                                                        src={veg.img}
 
-                                                        alt='Image' />
-                                                    <p className='text-[16px] text-[#001E00]'>{veg.title}</p>
-
-                                                </div>
-                                                <div><p className='text-[#686868] text-[16px]'>Tk {veg.tk}</p></div>
-                                                <div><p className='text-[#686868] text-[16px]'>Qty:<span className='text-[#001E00]'>{veg.qty}</span></p></div>
-                                            </div>
-                                        )
-                                    })
-                                }
-
-
-                            </div>
                         </div>
                         {/* mobile */}
-                        <div className="md:hidden flex h-[260px]">
-                            <div className="flex flex-col justify-center items-center  my-1">
-                                <div className="h-full w-1 my-1">
-                                    <div className="w-full h-full bg-[#F2F2F2] "></div>
-                                </div>
-                            </div>
-                            <div className="relative w-full">
-                                <div className="flex flex-col justify-between h-[260px]  absolute  -left-2 w-full">
-                                    <div>
-                                        <div className="flex items-center">
-                                            <div className="w-3 h-3 rounded-full border-2 border-[#026C51] bg-[#026C51]"></div>
-                                            <p className="ml-2">Processing</p>
-                                        </div>
-                                        <div className="">
-                                            <div className=" h-[96px] p-2 bg-[#F2F3F7] rounded mt-3 relative text-[12px] ml-6 ">
-                                                <div className="w-3 h-3 bg-[#F2F3F7] absolute -top-1 -z-10 left-4 rotate-45"></div>
-                                                {/* eta dynamic hobe */}
-                                                <p>
-                                                    31 Dec 2022 - 16:52{" "}
-                                                    <span className="font-[500]">
-                                                        Your order has been successfully verified
-                                                    </span>
-                                                </p>
-                                                <p className="text-[#287DF3] ">View More</p>
-                                            </div>
-                                            <div className="flex items-center">
-                                                <div className="w-3 h-3 rounded-full border-2 border-[#F2F2F2] bg-[#F2F2F2]"></div>
-                                                <p className="ml-2">Shipping</p>
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                    <div className="flex items-center">
-                                        <div className="w-3 h-3 rounded-full border-2 border-[#F2F2F2] bg-[#F2F2F2]"></div>
-                                        <p className="ml-2">Delivered</p>
-                                    </div>
-                                </div>
-                            </div>
+                        <div className=' w-[70%] mt-4 hidden md:block '>
+                            {
+                                vegs.map(veg => {
+                                    return (
+                                        <div key={veg.id} className='flex justify-between items-center mb-[32px]'>
+                                            <div className='flex items-center'>
+                                                <Image
+                                                    className='w-[73px] h-[58px] md:w-[57px] md:h-[46px] mr-[16px]'
+                                                    src={veg.img}
+
+                                                    alt='Image' />
+                                                <div className='md:hidden w-full '>
+                                                    <p className='text-[14px] text-[#001E00]'>{veg.title}</p>
+                                                    <p className='text-[#686868] text-[14px]'>Tk {veg.tk}</p>
+                                                    <p className='text-[#686868] text-[14px]'>Qty:<span className='text-[#001E00]'>{veg.qty}</span></p>
+                                                </div>
+                                                <p className='text-[16px] text-[#001E00] hidden md:block'>{veg.title}</p>
+
+
+                                            </div>
+                                            <div className='md:block hidden'><p className='text-[#686868] text-[16px]'>Tk {veg.tk}</p></div>
+                                            <div className='md:block hidden'><p className='text-[#686868] text-[16px]'>Qty:<span className='text-[#001E00]'>{veg.qty}</span></p></div>
+                                        </div>
+                                    )
+                                })
+                            }
+
+
                         </div>
+
                     </div>
                 </div>
 

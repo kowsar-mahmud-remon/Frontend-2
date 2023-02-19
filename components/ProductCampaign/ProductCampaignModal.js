@@ -3,6 +3,7 @@ import React from "react";
 import style from "/styles/componentsStyles/box-shaddow.module.css";
 import cashon from "/assets/images/cash-on-delivery 1.png";
 import delivery from "/assets/images/cash-on-delivery 2.png";
+import Link from "next/link";
 
 const ProductCampaignModal = ({ modal }) => {
   const { name, image, disprice, price, color, brand } = modal;
@@ -72,14 +73,17 @@ const ProductCampaignModal = ({ modal }) => {
                   Cancel
                 </label>
               </button>
-              <button type="">
-                <label
-                  htmlFor="my-modal-2"
-                  className="bg-[#FB641B] hover:bg-[#fc5907]  rounded-md  cursor-pointer text-white px-10 py-3"
-                >
-                  Continue
-                </label>
-              </button>
+              <Link href="productCampaignThree">
+                <button type="">
+                  <label
+                    htmlFor="my-modal-2"
+                    className="bg-[#FB641B] hover:bg-[#fc5907]  rounded-md  cursor-pointer text-white px-10 py-3"
+                  >
+                    Continue
+                  </label>
+                </button>
+              </Link>
+
             </div>
           </div>
         </div>

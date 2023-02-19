@@ -13,7 +13,7 @@ const CampaignManagementTwo = () => {
   const [hidden, setHidden] = useState(false);
   console.log("styles", styles);
   return (
-    <div className='mt-7 p-4 lg:p-0 lg:w-[1426px]'>
+    <div className='mt-7 p-4 lg:p-0'>
 
       <div className="text-lg text-[#686868] mb-8">
         <div className=" flex items-center mb-2">
@@ -122,14 +122,14 @@ const CampaignManagementTwo = () => {
       <div className="lg:w-[642px] mx-auto mt-[52px]">
         <div className="mb-10 justify-center lg:flex">
           <button
-            className="w-full btn btn-outline lg:w-[264px] h-[72px] font-medium border border-[#686868] rounded-md lg:mr-4 mb-4"
+            className="w-full btn btn-outline lg:w-[264px] h-[72px] font-normal text-2xl normal-case text-[#686868] border border-[#686868] rounded-md lg:mr-4 mb-4"
           >Cancel
           </button>
           {/* <button
             className="w-full btn lg:w-[264px] h-[72px] bg-[#FB641B] font-medium text-white rounded-md mb-4"
           >Update
           </button> */}
-          <label htmlFor="my-modal-4" onClick={() => setHidden(!hidden)} className="w-full btn lg:w-[264px] h-[72px] bg-[#FB641B] font-medium text-white rounded-md mb-4">Update</label>
+          <label htmlFor="my-modal-4" onClick={() => setHidden(!hidden)} className="w-full btn lg:w-[264px] h-[72px] bg-[#FB641B] font-normal text-2xl normal-case text-white rounded-md mb-4">Update</label>
         </div>
       </div>
 
