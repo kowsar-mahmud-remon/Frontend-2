@@ -79,7 +79,7 @@ const ToShip = () => {
                         <div key={data.id} className="mt-[16px]  ">
                             <div className="md:w-[96%] w-[100%] h-auto rounded-[8px] bg-[#FFFFFF] shadow-lg">
                                 <div className="flex items-center justify-between">
-                                    <div className="ml-[12px] mt-[16px]">
+                                    <div className="ml-[12px] md:mt-[16px] mt-[-13px]">
                                         <p>
                                             <span className="text-[16px] font-bold text-black">Order</span>{" "}
                                             <span className="text-[#287DF3] text-[16px] ">#{data.orderId}</span>
@@ -90,7 +90,7 @@ const ToShip = () => {
                                         </p>
 
                                     </div>
-                                    <div className='mt-[28px] md:mt-[0px]'>
+                                    <div className='mt-[16px] md:mt-[0px]'>
                                         <Link
                                             href={`/profile/myOrderDetails`}
                                             className="text-[#287DF3] text-[16px] mr-[19px]"
@@ -104,7 +104,7 @@ const ToShip = () => {
                                 </div>
                                 <hr className="border-[1px] mt-[16px] hidden md:block border-[#686868]" />
                                 <div className="flex justify-between ">
-                                    <div className="flex md:items-center md:ml-[56px] md:mt-[16px] mb-[16px] gap-[16px]">
+                                    <div className="flex md:items-center md:ml-[56px] md:mt-[16px] md:mb-[16px] gap-[16px]">
                                         <Image className='w-[57px] h-[46px] md:w-[57px] md:h-[46px] ml-[12px]' src={data.image} width="57" height="46" alt=""></Image>
                                         <div>
                                             <p className='text-[12px] md:text-[16px] text-[#001E00]'>{data.peoductName}</p>

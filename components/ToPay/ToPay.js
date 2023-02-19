@@ -153,7 +153,7 @@ const ToPay = () => {
                                             <p className="  text-[#686868]  ">Qty: <span className='text-[#001E00]'>{data.qty}</span></p>
                                             <div className='block md:hidden pr-[12px]'><Link
                                                 href={`/profile/myOrderDetails`}
-                                                className="text-[#287DF3] text-[16px] ]"
+                                                className="text-[#FB641B] text-[16px] ]"
                                             >
                                                 <span className=''>Pay Now</span>
                                             </Link></div>

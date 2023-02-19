@@ -6,8 +6,8 @@ const OrdersProduct = ({ data }) => {
   return (
     <div className="mt-[16px]  ">
       <div className="md:w-[96%] w-[100%] h-auto rounded-[8px] bg-[#FFFFFF] shadow-lg">
-        <div className="flex items-center justify-between">
-          <div className="m-[16px]">
+        <div className="flex md:items-center md:pt-[16px] justify-between">
+          <div className="px-[16px]">
             <p>
               <span className="text-[16px] font-bold text-black">Order</span>{" "}
               <span className="text-[#287DF3] text-[16px] ">#{data.orderId}</span>
@@ -18,7 +18,7 @@ const OrdersProduct = ({ data }) => {
             </p>
 
           </div>
-          <div className='mt-[26px] md:mt-[0px]'>
+          <div className=' md:mt-[0px]'>
             <Link
               href={`/profile/myOrderDetails`}
               className="text-[#287DF3] text-[16px] mr-[19px]"
@@ -30,9 +30,9 @@ const OrdersProduct = ({ data }) => {
             </p>
           </div>
         </div>
-        <hr className="border-[1px] hidden md:block border-[#686868]" />
+        <hr className="border-[1px] md:mt-[16px] hidden md:block border-[#686868]" />
         <div className="flex justify-between ">
-          <div className="flex md:items-center md:ml-[56px] md:mt-[16px] mb-[16px] gap-[16px]">
+          <div className="flex md:items-center md:ml-[56px] md:mt-[16px] md:mb-[16px] gap-[16px]">
             <Image className='w-[57px] h-[46px] md:w-[57px] md:h-[46px]' src={data.image} width="57" height="46" alt=""></Image>
             <div>
               <p className='text-[12px] md:text-[16px] text-[#001E00]'>{data.peoductName}</p>
