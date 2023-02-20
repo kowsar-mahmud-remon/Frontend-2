@@ -5,7 +5,7 @@ import Link from "next/link";
 const Profile = () => {
   const router = useRouter();
   return (
-    <div>
+    <div className="max-w-[924px] md:mr-5">
       <div className="lg:block hidden">
         <div>
           <h1 className="text-[24px] text-[#FB641B]">My Profile</h1>
