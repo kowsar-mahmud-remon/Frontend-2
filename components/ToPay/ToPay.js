@@ -135,7 +135,7 @@ const ToPay = () => {
                                 <div className='mt-[29px] hidden md:block  md:mt-[0px] pr-[12px] md:mr-[15px]'>
                                     <Link
                                         href={`/profile/myOrderDetails`}
-                                        className="text-[#287DF3] text-[16px] ]"
+                                        className="text-[#FB641B] text-[16px] ]"
                                     >
                                         <span className=''>Pay Now</span>
                                     </Link>
@@ -144,33 +144,35 @@ const ToPay = () => {
                             </div>
                             <hr className="border-[1px] hidden md:block border-[#686868]" />
                             <div className="flex justify-between ">
-                                <div className="flex md:items-center  gap-[16px]  md:ml-[16px] md:mt-[16px] mb-[16px] px-[12px] ">
+                                <div className="flex md:items-center  md:text-[1.3vw]  gap-[16px]  md:ml-[16px] md:mt-[16px] mb-[16px] px-[12px] ">
                                     <Image className='w-[73px] h-[58px] md:w-[57px] md:h-[46px] mt-[14px] md:mt-0' src={img} alt=""></Image>
-                                    <div className='mt-[14px] md:mt-0'>
-                                        <p className='text-[16px]text-[#001E00]'>{data.peoductName}</p>
-                                        <p className=" md:hidden block text-[16px] text-[#686868] ">Tk <span className=''>{data.taka}</span></p>
-                                        <div className='md:hidden  text-[14px] flex justify-between'>
+                                    <div className='mt-[14px] md:mt-0 '>
+                                        <p className=' text-[#001E00] md:text-[1.2vw]  text-[14px]'>{data.peoductName}</p>
+                                        <p className=" md:hidden block text-[14px]  text-[#686868] ">Tk <span className=''>{data.taka}</span></p>
+                                        <div className='md:hidden  text-[14px]  flex justify-between'>
                                             <p className="  text-[#686868]  ">Qty: <span className='text-[#001E00]'>{data.qty}</span></p>
-                                            <div className='block md:hidden pr-[12px]'><Link
-                                                href={`/profile/myOrderDetails`}
-                                                className="text-[#FB641B] text-[16px] ]"
-                                            >
-                                                <span className=''>Pay Now</span>
-                                            </Link></div>
+
                                         </div>
 
-
                                     </div>
+
                                 </div>
-                                <p className=" hidden md:block mt-[29px] mb-[30px]">Qty: {data.qty}</p>
-                                <p className=" hidden md:block mt-[34px] text-[#686868] w-[95px] h-[18px] bg-[#F2F3F7] rounded-[14px] text-xs text-center mb-[30px]">
+
+                                <p className=" hidden md:text-[1.2vw] lg:mt-[29px] md:block mt-[29px] mb-[30px]">Qty: {data.qty}</p>
+                                <p className=" hidden md:block mt-[34px] xl:mt-[36px] text-[#686868] w-[95px] h-[18px] bg-[#F2F3F7] rounded-[14px] text-[0.7rem] text-center mb-[30px]">
                                     {data.status}
                                 </p>
-                                <p className=" hidden  md:text-[15px] text-[#026C51] md:block mt-[29px] mb-[30px] mr-[15px]">
+                                <p className=" hidden  md:text-[1.2vw] text-[#026C51] md:block mt-[29px] mb-[30px] mr-[15px]">
                                     {data.deliveredDate}
                                 </p>
 
                             </div>
+                            <div className='block md:hidden flex justify-end pr-[12px]'><Link
+                                href={`/profile/myOrderDetails`}
+                                className="text-[#FB641B] text-[16px] ]"
+                            >
+                                <span className=''>Pay Now</span>
+                            </Link></div>
 
                         </div>
                     )
