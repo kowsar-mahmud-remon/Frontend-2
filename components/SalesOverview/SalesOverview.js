@@ -159,10 +159,10 @@ const SalesOverview = () => {
                   })}
                 </select>
               </div>
-            </div>
+            </div> 
             <div className=""></div>
           </div>
-          <div className="">
+          <div className="max-w-[1426px]">
             <div
               className={`rounded-lg  pb-10 ${style.boxshaddow} bg-[#FFFFFF]`}
             >
@@ -172,10 +172,10 @@ const SalesOverview = () => {
                     Sales Overview
                   </p>
                 </div>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex gap-4 flex-wrap">
                   <div>
                     <p className="text-base text-[#686868] mb-4">Total Sales</p>
-                    <div className="border-2 border-[#F2F2F2] py-6 rounded-lg w-[444px] h-[368px]">
+                    <div className="border-2 border-[#F2F2F2] py-6 rounded-lg lg:w-[444px] md:w-[444px] w-full lg:h-[368px]">
                       <div className="flex justify-center">
                         <div className="w-[275px] flex justify-center">
                           <CircularProgressbar
@@ -247,7 +247,7 @@ const SalesOverview = () => {
                     <p className="text-base text-[#686868] mb-4">
                       Top Sales Product
                     </p>
-                    <div className="border-2 border-[#F2F2F2] rounded-lg w-[444px] h-[368px] ">
+                    <div className="border-2 border-[#F2F2F2] rounded-lg lg:w-[444px] md:w-[444px] w-full lg:h-[368px] ">
                       {items.map((item, i) => {
                         return (
                           <>
@@ -290,7 +290,7 @@ const SalesOverview = () => {
                     <p className="text-base text-[#686868] mb-4">
                       Sales Analytics
                     </p>
-                    <div className="border-2 border-[#F2F2F2] p-4 rounded-lg w-[444px] h-[368px]">
+                    <div className="border-2 border-[#F2F2F2] p-4 rounded-lg lg:w-[444px] md:w-[444px] w-full lg:h-[368px]">
                       {/* <ResponsiveContainer width="100%" height="100%">
                         <LineChart
                           width={700}
