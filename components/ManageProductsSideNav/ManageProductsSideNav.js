@@ -114,7 +114,7 @@ const ManageProductsSideNav = () => {
       subcata: [
         {
           name: "Sales Overview",
-          href: "editProduct"
+          href: "salesOverview"
         },
         {
           name: "Order Overview",

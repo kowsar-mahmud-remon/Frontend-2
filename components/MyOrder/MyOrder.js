@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import OrdersProduct from "../OrdersProduct/OrdersProduct";
+import ToPay from "../ToPay/ToPay";
+import ToShip from "../ToShip/ToShip";
 import ToReceive from "../ToReceive/ToReceive";
 
 const MyOrder = () => {
@@ -140,18 +142,18 @@ const MyOrder = () => {
 
   const [isActive, setActive] = useState("all");
   const [shipingProduct, setShipingProduct] = useState();
-  const ToShip = () => {
-    setActive("ToShip");
-    const shipingData = datas.filter((data) => data.status === "Processing");
-    setShipingProduct(shipingData);
-  };
+  // const ToShip = () => {
+  //   setActive("ToShip");
+  //   const shipingData = datas.filter((data) => data.status === "Processing");
+  //   setShipingProduct(shipingData);
+  // };
 
   return (
     <div className=" px-[24px]">
       <div className="w-[100%]">
         <h1 className="text-[#FB641B] text-[24px] font-semibold">My Orders</h1>
       </div>
-      <div className="mt-[32px] w-[100%]">
+      <div className="mt-[32px] md:w-[96%]">
         <div className="md:w-[70%]">
           <ul className="flex  justify-between   ">
             <button
@@ -174,16 +176,18 @@ const MyOrder = () => {
             >
               To Pay
             </button>
+
             <button
-              onClick={() => ToShip()}
+              onClick={() => setActive("ToShip")}
               className={
                 isActive === "ToShip"
                   ? "text-[#FB641B] border-b-[2px] border-[#FB641B] text-[16px]"
                   : "  text-[16px]"
               }
             >
-              To Ship ()
+              To ship()
             </button>
+
             <button
               onClick={() => setActive("ToReceive")}
               className={
@@ -201,7 +205,7 @@ const MyOrder = () => {
       {isActive === "all" && (
         <>
           <div className="mt-[16px] md:block hidden">
-            <div className="w-[924px] h-[80px] rounded-[8px] bg-[#FFFFFF] shadow-lg">
+            <div className=" h-[80px] md:w-[96%] w-full rounded-[8px] bg-[#FFFFFF] shadow-lg">
               <div className=" w-full max-w-xs mt-4 gap-[16px] flex ">
                 <p className="label mt-[25px] ml-[24px] mb-[30px] text-[16px]">
                   {" "}
@@ -232,11 +236,9 @@ const MyOrder = () => {
         {isActive === "ToPay" &&
           (datas.length !== 0 ? (
             <>
-              {datas
-                .filter((data) => data.status === "Payment")
-                .map((data) => (
-                  <OrdersProduct key={data.id} data={data}></OrdersProduct>
-                ))}
+
+              <ToPay></ToPay>
+
             </>
           ) : (
             <>
@@ -249,9 +251,8 @@ const MyOrder = () => {
             </>
           ))}
         {isActive === "ToShip" &&
-          shipingProduct.map((data) => (
-            <OrdersProduct key={data.id} data={data}></OrdersProduct>
-          ))}
+          <ToShip></ToShip>
+        }
       </div>
       <div>
         {isActive === "ToReceive" && (
