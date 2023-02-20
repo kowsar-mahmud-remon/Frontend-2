@@ -24,3 +24,6 @@
   border-radius: 8px;
 }
 
+.graphChartBg{
+  background: linear-gradient(180deg, rgba(121, 169, 255, 0.6) 0%, rgba(233, 0, 0, 0.74) 100.42%);
+}
