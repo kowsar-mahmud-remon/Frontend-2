@@ -40,9 +40,11 @@ const MyPaymentOption = () => {
                   Expires 02/27
                 </p>
               </div>
-              <p className="text-end text-[#287DF3] text-sm font-medium cursor-pointer">
-                Delete
-              </p>
+              <label htmlFor="my-modal-1">
+                <p className="text-end text-[#287DF3] text-sm font-medium cursor-pointer">
+                  Delete
+                </p>
+              </label>
             </div>
           </div>
           <div
@@ -63,15 +65,35 @@ const MyPaymentOption = () => {
                 <p className="ml-4  font-medium text-[#001E00] ">014*******452</p>
               </div>
               <p></p>
-              <p className="text-end text-[#287DF3] text-sm font-medium cursor-pointer">
-                Delete
-              </p>
+
+              <label htmlFor="my-modal-1">
+                <p className="text-end text-[#287DF3] text-sm font-medium cursor-pointer">
+                  Delete
+                </p>
+              </label>
+
             </div>
           </div>
           <div className="mt-8">
             <button className="bg-[#FB641B] px-6 py-3 text-sm text-white font-normal rounded-lg ">
               Add New Payment Account
             </button>
+          </div>
+        </div>
+
+        <input type="checkbox" id="my-modal-1" className="modal-toggle" />
+        <div className="modal fixed inset-0   h-screen bg-black  bg-opacity-60">
+          <div className="max-w-[751px] w-full h-[363px] bg-[#FFFFFF] rounded-[8px] relative">
+            <label htmlFor="my-modal-1" className="absolute right-4 top-2">✕</label>
+            <div>
+              <h1 className="text-[#001E00] text-[24px] mt-[78px] ml-[24px]">Do you want to delete bKash account +88 014 ******452</h1>
+              <div className="flex items-center justify-end mt-[185px] mx-[24px] gap-[16px]">
+                <button className=" text-[#686868] text-[16px] font-[500] rounded-[8px] border-[1px] border-solid border-[#B7B7B7] w-[122px] h-[48px]">Cancel</button>
+
+                <button className=" text-[#FFFFFF] text-[16px] font-[500] rounded-[8px] border-[1px] border-solid border-[#B7B7B7] bg-[#FB641B] w-[172px] h-[48px]">Delete</button>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -122,10 +144,10 @@ const MyPaymentOption = () => {
           </div>
 
           <input type="checkbox" id="delete-modal-3" className="modal-toggle" />
-          <div className="modal ">
+          <div className="modal fixed inset-0   h-screen bg-black  bg-opacity-60 ">
             <div className="w-full mx-[24px] h-[138px] bg-[#FFFFFF] rounded-[8px] relative">
               <div className="mt-[18px]">
-                <h1 className="text-[#686868] text-center text-[16px] font-[500]">Do you want to delete bKash account</h1>
+                <h1 className="text-[#686868] whitespace-nowrap overflow-hidden text-center text-[16px] font-[500] mx-[10px]">Do you want to delete bKash account</h1>
                 <h2 className="text-[#686868] text-center text-[16px] font-[500]">+88 014 ******452</h2>
               </div>
 
@@ -133,7 +155,7 @@ const MyPaymentOption = () => {
                 <label htmlFor="delete-modal-3" className="paymentOptionResponsiveModalButton text-center pt-[4px]  text-[#686868] w-[87px] h-[32px]" >
                   Cancel
                 </label>
-                
+
                 <button className="paymentOptionResponsiveModalButton text-[#F4253F] w-[87px] h-[32px]">Delete</button>
               </div>
 

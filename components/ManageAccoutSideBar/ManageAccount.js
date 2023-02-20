@@ -5,7 +5,7 @@ import { FaArrowLeft } from "react-icons/fa";
 const ManageAccount = () => {
     const router = useRouter();
     return (
-        <div className="">
+        <div className="max-w-[924px] md:mr-5">
             <div className="lg:block hidden">
                 <div className=" ">
                     <div>
@@ -14,7 +14,7 @@ const ManageAccount = () => {
                         </h1>
                     </div>
                     <div className="grid grid-cols-8 gap-6 py-8">
-                        <div className="manageAccountBox col-span-3 w-full h-[223px]    bg-base-100 shadow-lg">
+                        <div className="manageAccountBox col-span-3 w-full    bg-base-100 shadow-lg">
                             <div className=" px-4 py-4">
                                 <h1 className="font-bold whitespace-nowrap text-[18px]">
                                     Personal Profile |{" "}
@@ -27,7 +27,7 @@ const ManageAccount = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="manageAccountBox  col-span-5  w-full h-[223px]   bg-base-100 shadow-lg">
+                        <div className="manageAccountBox  col-span-5  w-full   bg-base-100 shadow-lg">
                             <div className="grid grid-cols-9 ">
                                 <div className=" p-[16px] col-span-4 ">
                                     <h1 className="font-bold  text-[18px] mb-2">

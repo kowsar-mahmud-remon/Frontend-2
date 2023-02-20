@@ -6,24 +6,24 @@ const ManageAccountLayout = ({ children, slug }) => {
 
     return (
 
-        <div className="">
-            <div className='flex my-8  justify-center  xl:w-[100%] xl:gap-[40px] '>
-                <div className='hidden  lg:block'>
+        <div className="flex justify-center">
+            <div className='md:flex gap-5 my-8 w-full'>
+                <div className='hidden  md:block w-[30%]'>
                     <ManageAccoutSideBar />
                 </div>
-                <div className='lg:hidden block'>
+                <div className='md:hidden block'>
                     {
                         !slug?.length > 0 && <ProfileResponsive></ProfileResponsive>
                     }
                 </div>
-                <div className="lg:w-[70%]  ">
+                <div className="md:w-[70%] w-full">
                     {
                         children
                     }
                 </div>
 
             </div>
-           
+
         </div>
 
     );

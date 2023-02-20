@@ -19,7 +19,12 @@ const profileSidebarLinks = [
         title: "My Payment Options",
         href: "myPaymentOptions",
      
-      }
+      },
+      {
+        title: "Coupons",
+        href: "Coupons",
+     
+      },
      
     ],
   },
