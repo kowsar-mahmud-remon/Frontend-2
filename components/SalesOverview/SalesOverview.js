@@ -19,6 +19,9 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import SalesOverviewTable from "./SalesOverviewTable";
+import products from "./fakedb.json"
+import SalesChart from "./SalesChart";
 
 const SalesOverview = () => {
   const data = [
@@ -45,76 +48,76 @@ const SalesOverview = () => {
 
   const charts = [
     {
-      name: "January",
+      name: "Jan 1",
       uv: 4000,
       pv: 2400,
-      amt: 2400,
+      amt: 10,
     },
     {
-      name: "February",
+      name: "Jan 2",
       uv: 3000,
       pv: 1398,
-      amt: 2210,
+      amt: 20,
     },
     {
-      name: "March",
+      name: "Jan 3",
       uv: 2000,
       pv: 9800,
-      amt: 2290,
+      amt: 30,
     },
     {
-      name: "April",
+      name: "Jan 4",
       uv: 2780,
       pv: 3908,
-      amt: 2000,
+      amt: 40,
     },
     {
-      name: "May",
+      name: "Jan 5",
       uv: 1890,
       pv: 4800,
-      amt: 2181,
+      amt: 50,
     },
     {
-      name: "June",
+      name: "Jan 6",
       uv: 2390,
       pv: 3800,
-      amt: 2500,
+      amt: 60,
     },
     {
-      name: "July",
+      name: "Jan 7",
       uv: 3490,
       pv: 4300,
-      amt: 2100,
+      amt: 70,
     },
     {
-      name: "August",
+      name: "Jan 8",
       uv: 3490,
       pv: 4300,
-      amt: 2100,
+      amt: 80,
     },
     {
-      name: "September",
+      name: "Jan 9",
       uv: 3490,
       pv: 4300,
-      amt: 2100,
+      amt: 90,
     },
     {
-      name: "October",
+      name: "Jan 10",
       uv: 3490,
       pv: 4300,
-      amt: 2100,
+      amt: 100,
     },
     {
-      name: "November",
+      name: "Jan 11",
       uv: 3490,
       pv: 4300,
-      amt: 2100,
+      amt: 110,
     },
     {
-      name: "December",
+      name: "Jan 12",
       uv: 3490,
       pv: 4300,
-      amt: 2100,
+      amt: 120,
     },
   ];
 
@@ -165,7 +168,7 @@ const SalesOverview = () => {
             >
               <div className="p-6 ">
                 <div className="mb-4">
-                  <p className="text-lg font-medium w-full text-[#001E00]">
+                  <p className="text-lg font-semibold w-full text-[#001E00]">
                     Sales Overview
                   </p>
                 </div>
@@ -248,7 +251,7 @@ const SalesOverview = () => {
                       {items.map((item, i) => {
                         return (
                           <>
-                            <div key={i} className="flex p-4 hover:bg-[#F2F3F7]">
+                            <div key={i} className="flex items-center px-4 hover:bg-[#F2F3F7] h-[83px]">
                               <div className="mr-4">
                                 <Image
                                   className={`w-[76px] h-[61px] rounded ${style.boxbuttonshadow}`}
@@ -276,7 +279,7 @@ const SalesOverview = () => {
                         );
                       })}
 
-                      <div className="flex justify-end">
+                      <div className="flex justify-end pr-4">
                         <a className="text-[#287DF3] font-medium" href="">
                           More View
                         </a>
@@ -288,7 +291,7 @@ const SalesOverview = () => {
                       Sales Analytics
                     </p>
                     <div className="border-2 border-[#F2F2F2] p-4 rounded-lg w-[444px] h-[368px]">
-                      <ResponsiveContainer width="100%" height="100%">
+                      {/* <ResponsiveContainer width="100%" height="100%">
                         <LineChart
                           width={700}
                           height={300}
@@ -313,10 +316,33 @@ const SalesOverview = () => {
                           />
                           <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
                         </LineChart>
-                      </ResponsiveContainer>
+                      </ResponsiveContainer> */}
+                      <SalesChart></SalesChart>
                     </div>
                   </div>
                 </div>
+                <div>
+                    <p className="text-lg text-[#001E00] font-semibold mt-8 mb-4">
+                    Resent Orders
+                    </p>
+                    <div className="">
+                  <div className="relative overflow-x-auto ">
+                    <table className="w-full text-left text-[#001E00] ">
+                      
+                      <tbody>
+                        {products.map((product) => {
+                          return (
+                            <SalesOverviewTable
+                              key={product.id}
+                              product={product}
+                            ></SalesOverviewTable>
+                          );
+                        })}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                  </div>
               </div>
             </div>
           </div>

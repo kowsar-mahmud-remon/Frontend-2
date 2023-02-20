@@ -23,7 +23,7 @@ const ManageAccountLayout = ({ children, slug }) => {
                 </div>
 
             </div>
-           
+
         </div>
 
     );

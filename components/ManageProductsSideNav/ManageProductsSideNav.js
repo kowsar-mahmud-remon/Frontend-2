@@ -243,7 +243,7 @@ const ManageProductsSideNav = () => {
 
   return (
     <section className="bg-[#FFFFFF] pb-6 sticky top-0">
-      <div className="pl-6 mr-6 mx-auto flex">
+      <div className="pl-6 mx-auto flex">
 
         <div className="">
           <section

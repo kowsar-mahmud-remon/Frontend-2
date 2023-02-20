@@ -3,7 +3,7 @@ const Modal = () => {
     return (
         <div>
             <input type="checkbox" id="Email-responsive-modal-3" className="modal-toggle" />
-            <div className="modal ">
+            <div className="modal fixed inset-0   h-screen bg-black  bg-opacity-60">
                 <div className="bg-[#FFFFFF] w-full mx-[30px] h-[211px] rounded-[8px] relative">
                     <label htmlFor="Email-responsive-modal-3" className="absolute right-5 top-3">✕</label>
                     <div className=' mt-[16px]'>
@@ -27,7 +27,7 @@ const Modal = () => {
 
 
             <input type="checkbox" id="Mobile-responsive-modal-3" className="modal-toggle" />
-            <div className="modal ">
+            <div className="modal fixed inset-0   h-screen bg-black  bg-opacity-60">
                 <div className="bg-[#FFFFFF] w-full mx-[24px] h-[211px] rounded-[8px] relative">
                     <label htmlFor="Mobile-responsive-modal-3" className="absolute right-5 top-3">✕</label>
                     <div className=' mt-[16px] ml-[16px]'>
@@ -47,7 +47,7 @@ const Modal = () => {
             </div>
 
             <input type="checkbox" id="Newsletter-responsive-modal-3" className="modal-toggle" />
-            <div className="modal ">
+            <div className="modal fixed inset-0   h-screen bg-black  bg-opacity-60">
                 <div className="bg-[#FFFFFF] w-full mx-[24px] h-[211px] rounded-[8px] relative">
                     <label htmlFor="Newsletter-responsive-modal-3" className="absolute right-5 top-3">✕</label>
                     <div className=' mt-[16px] '>
