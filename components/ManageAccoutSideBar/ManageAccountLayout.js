@@ -16,14 +16,14 @@ const ManageAccountLayout = ({ children, slug }) => {
                         !slug?.length > 0 && <ProfileResponsive></ProfileResponsive>
                     }
                 </div>
-                <div className="lg:w-[70%]  ">
+                <div className="md:w-[70%] w-full ">
                     {
                         children
                     }
                 </div>
 
             </div>
-           
+
         </div>
 
     );
