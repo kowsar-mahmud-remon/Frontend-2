@@ -148,7 +148,7 @@ const RightSide = ({ options}) => {
           <select
             name="slot"
             className="col-span-3 bg-[#F2F3F7] border-2 border-dashed px-2 rounded w-full"
-            required
+            
           >
             <option className="selected disabled hidden"></option>
             {options.map((option, index) => (
@@ -168,7 +168,7 @@ const RightSide = ({ options}) => {
           <select
             name="slot"
             className="col-span-3 bg-[#F2F3F7] border-2 border-dashed px-2 rounded w-full"
-            required
+            
           >
             <option className="selected disabled hidden"></option>
             {options.map((option, index) => (
