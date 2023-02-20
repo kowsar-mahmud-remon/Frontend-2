@@ -16,6 +16,7 @@ import MyPaymentOption from "../components/ManageAccoutSideBar/myPaymentOption";
 import MyReturns from "../components/ManageAccoutSideBar/MyReturns";
 import MyCancelation from "../components/ManageAccoutSideBar/MyCancelation";
 import MyReturnsResponsive from "../components/ManageAccoutSideBar/MyReturnsResponsive";
+import Coupons from "../components/ManageAccoutSideBar/Coupons";
 
 
 const profileLinksObj = [
@@ -38,6 +39,10 @@ const profileLinksObj = [
         title: "My Payment Options",
         href: "myPaymentOptions",
         element: <MyPaymentOption />,
+      },  {
+        title: "Coupons",
+        href: "Coupons",
+        element: <Coupons />,
       }
 
     ],
