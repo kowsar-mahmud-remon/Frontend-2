@@ -14,10 +14,10 @@ const AddressBook = () => {
       <AddressBookModal></AddressBookModal>
       <AddNewAddress></AddNewAddress>
       <EditAddress></EditAddress>
-      <div className="lg:w-[924px] md:w-[924px] w-full mx-auto my-7">
+      <div className=" w-full mx-auto my-7">
         <div className="flex justify-between mb-8">
           <div className="flex items-center">
-            <button className="flex items-center lg:hidden block" onClick={() => router.back()}>
+            <button className="flex items-center lg:hidden" onClick={() => router.back()}>
               <Image
                 className="w-4 lg:-mr-4 md:-mr-4 mr-3 lg:ml-0 md:ml-0 ml-2 lg:invisible md:invisible visible"
                 src={arrow}

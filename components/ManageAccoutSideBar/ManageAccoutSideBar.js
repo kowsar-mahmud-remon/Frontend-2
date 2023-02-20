@@ -18,14 +18,14 @@ const ManageAccoutSideBar = () => {
   };
 
   return (
-    <div>
+    <div className="flex justify-end w-full">
       <div>
         <div>
           <p className="font-[500] text-[16px] text-[#001E00]">
             Hello, Abdul Korim
           </p>
           <div className="mt-[16px]">
-            <button className="w-[172px] h-[30px] flex items-center justify-center gap-[8px] bg-[#0BD838] rounded-[15px]">
+            <button className=" h-[30px] flex items-center justify-center gap-[8px] bg-[#0BD838] rounded-[15px]">
               <FaCheck className="text-[#FFFFFF]"></FaCheck>
               <span className="text-[#FFFFFF]">Verified Account</span>
             </button>
