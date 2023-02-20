@@ -22,7 +22,7 @@ const ManageProductsLayout = ({ children, slug }) => {
         }
       </div> */}
 
-      <div className="md:mr-[120px] w-full">{children}</div>
+      <div className="md:mr-[120px] w-full ml-6">{children}</div>
     </div>
   );
 };
