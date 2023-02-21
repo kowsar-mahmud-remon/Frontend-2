@@ -53,7 +53,7 @@ const UploadProduct = () => {
   ];
   return (
     <div>
-      <div className="p-6 max-w-[1426px] mt-8">
+      <div className="max-w-[1426px] mt-7">
         <div className="lg:max:w-[1426px] mx-auto text-lg text-[#686868]">
           <div className=" flex items-center mb-2">
             <p className="mr-1">Home</p>

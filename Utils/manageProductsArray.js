@@ -15,7 +15,9 @@ import ProductCampaignThree from "../components/ProductCampaignMain/ProductCampa
 import ProductInvoices from "../components/ProductInvoices/ProductInvoices";
 import ProductInvoicesDetails from "../components/ProductInvoices/ProductInvoicesDetails/ProductInvoicesDetails";
 import ReturnProducts from "../components/ReturnProducts/ReturnProducts";
-import SalesOverview from "../components/SalesOverview/SalesOverview";
+import ContactUs from "../components/SellerSupport/ContactUs";
+import HelpCenter from "../components/SellerSupport/HelpCenter";
+import LiveChatTwo from "../components/SellerSupport/LiveChatTwo";
 import Sellerverification from "../components/sellerverification/Sellerverification";
 import SellerVerificationPage1 from "../components/SellerVerificationPage1/SellerVerificationPage1";
 import SellerVerificationPage2 from "../components/SellerVerificationPage2/SellerVerificationPage2";
@@ -141,8 +143,18 @@ export const manageProductsArray = [
     element: <CampaignManagementThree></CampaignManagementThree>,
   },
   {
-    title: "SalesOverview",
-    href: "salesOverview",
-    element: <SalesOverview></SalesOverview>
+    title: "HelpCenter",
+    href: "helpCenter",
+    element: <HelpCenter></HelpCenter>,
+  },
+  {
+    title: "ContactUs",
+    href: "contactUs",
+    element: <ContactUs></ContactUs>,
+  },
+  {
+    title: "LiveChatTwo",
+    href: "liveChatTwo",
+    element: <LiveChatTwo></LiveChatTwo>,
   },
 ];
