@@ -11,6 +11,7 @@ import teaCoffee from '../../assets/images/Seller_Verification_page/customer-ser
 import laptop from '../../assets/images/Seller_Verification_page/laptop 1.png';
 import bakerySnacks from '../../assets/images/Seller_Verification_page/folder 1.png';
 import frozenFoods from '../../assets/images/Seller_Verification_page/settings 1.png';
+import shipped from '../../assets/images/Seller_Verification_page/shipped 1.png';
 
 import DataTable from "react-data-table-component";
 // import Managelist from "./Managelist";
@@ -128,6 +129,22 @@ const ManageProductsSideNav = () => {
     },
     {
       id: 5,
+      name: "Shipping Management",
+      href: "editProductsTwo",
+      img: shipped,
+      subcata: [
+        {
+          name: "Product Shipping",
+          href: "salesOverview"
+        },
+        {
+          name: "Orders Tracking",
+          href: "editProduct"
+        }
+      ],
+    },
+    {
+      id: 6,
       name: "Seller Support",
       href: "editProductsTwo",
       img: teaCoffee,
@@ -147,7 +164,7 @@ const ManageProductsSideNav = () => {
       ],
     },
     {
-      id: 6,
+      id: 7,
       name: "Seller Guideline",
       href: "editProductsTwo",
       img: dairy,
@@ -171,7 +188,7 @@ const ManageProductsSideNav = () => {
       ],
     },
     {
-      id: 7,
+      id: 8,
       name: "Seller Documents",
       href: "editProductsTwo",
       img: bakerySnacks,
@@ -191,7 +208,7 @@ const ManageProductsSideNav = () => {
       ],
     },
     {
-      id: 8,
+      id: 9,
       name: "Account & Settings",
       href: "editProductsTwo",
       img: frozenFoods,
@@ -215,7 +232,7 @@ const ManageProductsSideNav = () => {
       ],
     },
     {
-      id: 9,
+      id: 10,
       name: "Account Type",
       href: "editProductsTwo",
       img: laptop,
