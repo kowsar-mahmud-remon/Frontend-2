@@ -6,7 +6,9 @@ import EditProducts from "../components/EditProducts/EditProducts";
 import EditProductsTwo from "../components/EditProducts/EditProductsTwo";
 import ManageProduct from "../components/ManageProduct/ManageProduct";
 import ManageReview from "../components/ManageReview/ManageReview";
+import ManageReviewList from "../components/ManageReviewList/ManageReviewList";
 import OrderHistory from "../components/orderHistory.js/OrderHistory";
+import OrderTrackingPage01 from "../components/OrderTrackingPage01/OrderTrackingPage01";
 import AllProduct from "../components/ProductCampaignMain/AllProduct";
 import ProductCampaignFive from "../components/ProductCampaignMain/ProductCampaignFive";
 import ProductCampaignFour from "../components/ProductCampaignMain/ProductCampaignFour";
@@ -31,6 +33,11 @@ export const manageProductsArray = [
     title: "EditProducts",
     href: "editProduct",
     element: <EditProducts />,
+  },
+  {
+    title: "Orders Tracking",
+    href: "orderTrackingPage01",
+    element: <OrderTrackingPage01 />,
   },
   {
     title: "EditProductsTwo",
@@ -125,7 +132,8 @@ export const manageProductsArray = [
   {
     title: "ManageReview",
     href: "manageReview",
-    element: <ManageReview></ManageReview>,
+    element: <ManageReviewList></ManageReviewList>
+    // element: <ManageReview></ManageReview>,
   },
   {
     title: "OrderHistory",
