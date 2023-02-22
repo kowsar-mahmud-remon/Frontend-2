@@ -25,6 +25,11 @@ const profileSidebarLinks = [
         href: "Coupons",
      
       },
+      {
+        title: "Gift Cards",
+        href: "GiftCards",
+     
+      },
      
     ],
   },

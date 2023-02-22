@@ -132,7 +132,7 @@ const MyReviews = () => {
         <div>
           <h1 className="font-[400] text-[24px] text-[#FB641B]">My Reviews</h1>
         </div>
-        <div className="reviewBox border-b-4  mt-[32px]">
+        <div className=" max-w-[924px] h-[56px] rounded-[8px] shadow-small border-b-4  mt-[32px]">
           <div className="ml-[30px] p-[7px]  gap-[54px] flex">
             <button
               onClick={() => setActive("review")}
@@ -163,7 +163,7 @@ const MyReviews = () => {
         {isActive === "review" &&
           datas.slice(0, 3).map((data) => (
             <>
-              <div className="reviewDetails flex mt-[16px]">
+              <div className=" max-w-[924px] h-[149px] rounded-[8px] shadow-small flex mt-[16px]">
                 <div className="w-[559px]">
                   <p className="font-[400] pt-[16px] pl-[16px] text-[14px] text-[#686868]">
                     Purchased on: 21 Dce 2022 10:21:00
@@ -183,8 +183,8 @@ const MyReviews = () => {
                   </div>
                 </div>
                 <div className="divider divider-horizontal text-[#686868] border-solid mt-[26px] mb-[19px] h-[104px]"></div>
-                <div className="w-[365px] ">
-                  <p className="text-[16px] ml-[87px] pt-[41px] font-[400] text-[#686868]">
+                <div className="max-w-[365px] lg:mx-3">
+                  <p className="text-[16px] whitespace-nowrap ml-[87px] pt-[41px] font-[400] text-[#686868]">
                     Sold by{" "}
                     <span className="text-[#287DF3]">Banglar Big Store</span>
                   </p>
@@ -204,7 +204,7 @@ const MyReviews = () => {
         {isActive === "history" &&
           datas.slice(0, 2).map((data) => (
             <>
-              <div className="historyBox flex mt-[16px]">
+              <div className="historyBox max-w-[924px] h-[506px] flex mt-[16px]">
                 <div className="w-[600px]">
                   <p className="font-[400] ml-[24px] pt-[16px] text-[14px] text-[#686868]">
                     Purchased on: 21 Dce 2022 10:21:00
@@ -243,7 +243,7 @@ const MyReviews = () => {
                     </div>
                   </div>
 
-                  <div className="w-[503px] mt-[34px] ml-[24px] h-[188px] bg-[#F2F2F2] rounded-[8px]">
+                  <div className="xl:w-[503px] w-full mt-[34px] ml-[24px] h-[188px] bg-[#F2F2F2] rounded-[8px]">
                     <p className="text-[#686868] font-normal text-[16px] pt-[24px] pl-[24px] pr-[24px]">
                       Lorem Ipsum is simply dummy text of the printing and
                       typesetting industry. Lorem Ipsum has been the industrys
@@ -266,7 +266,7 @@ const MyReviews = () => {
                     ))}
                   </div>
                 </div>
-                <div className="divider divider-horizontal mt-[23px] h-[460px]"></div>
+                <div className="divider divider-horizontal lg:ml-[50px] mt-[23px] h-[460px]"></div>
                 <div className="w-[324px]">
                   <p className="font-[400] text-[16px] mt-[41px] text-[#686868]">
                     Sold by{" "}
@@ -307,22 +307,25 @@ const MyReviews = () => {
             </>
           ))}
 
-        <div className="btn-group mt-[16px] ml-[850px]">
-          <button
-            onClick={() => setPage(page - 1)}
-            className="w-[24px]  h-[28px] bg-[#F2F2F2] rounded-[4px]"
-          >
-            <FaAngleLeft className="m-[3px] text-[#707070]"></FaAngleLeft>
-          </button>
-          <button className="w-[24px] h-[28px] text-white rounded-[4px] bg-[#FB641B] ">
-            {page}
-          </button>
-          <button
-            onClick={() => setPage(page + 1)}
-            className="w-[24px]  h-[28px] bg-[#F2F2F2] rounded-[4px]"
-          >
-            <FaAngleRight className="m-[3px] text-[#707070]"></FaAngleRight>
-          </button>
+        <div className="flex lg:justify-end xl:mr-[70px] xxl:mr-[400px] ">
+         
+          <div className="btn-group mt-[16px]">
+            <button
+              onClick={() => setPage(page - 1)}
+              className="w-[24px]  h-[28px] bg-[#F2F2F2] rounded-[4px]"
+            >
+              <FaAngleLeft className="m-[3px] text-[#707070]"></FaAngleLeft>
+            </button>
+            <button className="w-[24px] h-[28px] text-white rounded-[4px] bg-[#FB641B] ">
+              {page}
+            </button>
+            <button
+              onClick={() => setPage(page + 1)}
+              className="w-[24px]  h-[28px] bg-[#F2F2F2] rounded-[4px]"
+            >
+              <FaAngleRight className="m-[3px] text-[#707070]"></FaAngleRight>
+            </button>
+          </div>
         </div>
       </div>
 
