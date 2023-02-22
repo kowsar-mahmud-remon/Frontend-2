@@ -135,7 +135,7 @@ const ManageProductsSideNav = () => {
       subcata: [
         {
           name: "Product Shipping",
-          href: "salesOverview"
+          href: "productShipping"
         },
         {
           name: "Orders Tracking",
