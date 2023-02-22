@@ -1,4 +1,8 @@
 const profileSidebarLinks = [
+    {
+      title: "Manage My Account",
+      href: "manageAccount",
+    },
   {
     title: "My Profile",
     href: "myProfile",
@@ -16,8 +20,12 @@ const profileSidebarLinks = [
     href: "Coupons",
   },
   {
-    title: "Manage My Account",
-    href: "manageAccount",
+    title: "Gift Cards",
+    href: "Coupons",
+  },
+  {
+    title: "My Orders",
+    href: "myOrders",
   },
   {
     title: "My Returns",
@@ -26,10 +34,6 @@ const profileSidebarLinks = [
   {
     title: "My Cancellations",
     href: "myCancellations",
-  },
-  {
-    title: "My Orders",
-    href: "myOrders",
   },
 
   {
