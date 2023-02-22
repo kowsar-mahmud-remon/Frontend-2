@@ -128,6 +128,22 @@ const ManageProductsSideNav = () => {
     },
     {
       id: 5,
+      name: "Shipping Management",
+      href: "editProductsTwo",
+      img: spice,
+      subcata: [
+        {
+          name: "Product Shipping",
+          href: "salesOverview"
+        },
+        {
+          name: "Orders Tracking",
+          href: "editProduct"
+        }
+      ],
+    },
+    {
+      id: 6,
       name: "Seller Support",
       href: "editProductsTwo",
       img: teaCoffee,
@@ -147,7 +163,7 @@ const ManageProductsSideNav = () => {
       ],
     },
     {
-      id: 6,
+      id: 7,
       name: "Seller Guideline",
       href: "editProductsTwo",
       img: dairy,
@@ -171,7 +187,7 @@ const ManageProductsSideNav = () => {
       ],
     },
     {
-      id: 7,
+      id: 8,
       name: "Seller Documents",
       href: "editProductsTwo",
       img: bakerySnacks,
@@ -191,7 +207,7 @@ const ManageProductsSideNav = () => {
       ],
     },
     {
-      id: 8,
+      id: 9,
       name: "Account & Settings",
       href: "editProductsTwo",
       img: frozenFoods,
@@ -215,7 +231,7 @@ const ManageProductsSideNav = () => {
       ],
     },
     {
-      id: 9,
+      id: 10,
       name: "Account Type",
       href: "editProductsTwo",
       img: laptop,
