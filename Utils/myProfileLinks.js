@@ -17,6 +17,7 @@ import MyReturns from "../components/ManageAccoutSideBar/MyReturns";
 import MyCancelation from "../components/ManageAccoutSideBar/MyCancelation";
 import MyReturnsResponsive from "../components/ManageAccoutSideBar/MyReturnsResponsive";
 import Coupons from "../components/ManageAccoutSideBar/Coupons";
+import GiftCards from "../components/ManageAccoutSideBar/GiftCards";
 
 
 const profileLinksObj = [
@@ -43,6 +44,11 @@ const profileLinksObj = [
         title: "Coupons",
         href: "Coupons",
         element: <Coupons />,
+      },
+      {
+        title: "Gift Cards",
+        href: "GiftCards",
+        element:<GiftCards></GiftCards>
       }
 
     ],

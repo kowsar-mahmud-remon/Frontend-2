@@ -15,7 +15,7 @@ const MyPaymentOption = () => {
           <h2 className="text-[#FB641B] text-2xl mt-6 mb-8 font-semibold">
             My Payment Option
           </h2>
-          <div className={`rounded-lg bg-[#FFFFFF] p-6 ${style.boxshaddow} mb-6 h-[210px] w-full`}>
+          <div className={`rounded-lg bg-[#FFFFFF] p-6 ${style.boxshaddow} mb-6 h-[210px] max-w-[924px]`}>
             <p className="text-[#001E00] text-base font-medium mb-8">
               Credit & Debit Card
             </p>
@@ -48,7 +48,7 @@ const MyPaymentOption = () => {
             </div>
           </div>
           <div
-            className={`rounded-lg bg-[#FFFFFF] p-6 ${style.boxshaddow} h-[210px]`}
+            className={`rounded-lg bg-[#FFFFFF] p-6 ${style.boxshaddow} max-w-[924px] h-[210px]`}
           >
             <p className="text-[#001E00] text-base font-medium mb-8">
               Other Payment Methods
