@@ -36,12 +36,6 @@ const OrderOverview = () => {
                   <table className="w-full text-base text-left text-[#001E00]">
                     <thead className="text-base text-[#001E00] font-normal bg-[#F2F3F7] h-[48px]">
                     <tr>
-                    <th
-                          scope="col"
-                          className=" py-2 font-medium text-[#001E00] text-base"
-                        >
-                          <p className="border-r px-6 border-[#B7B7B7]">Product</p>
-                        </th>
                         <th
                           scope="col"
                           className=" py-2 font-medium text-[#001E00] text-base"
