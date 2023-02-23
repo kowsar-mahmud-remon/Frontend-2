@@ -152,11 +152,11 @@ const ManageProductsSideNav = () => {
       subcata: [
         {
           name: "Manage Reviews",
-          href: "helpCenter"
+          href: "manageReview",
         },
         {
           name: "Question and Answer",
-          href: "contactUs"
+          href: "questionanswer",
         },
         {
           name: "Report Management",
