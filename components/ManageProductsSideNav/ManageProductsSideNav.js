@@ -160,7 +160,7 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Report Management",
-          href: "liveChatTwo"
+          href: "reportManagement"
         }
       ],
     },
