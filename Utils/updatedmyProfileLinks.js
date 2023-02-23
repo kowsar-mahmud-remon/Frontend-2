@@ -19,39 +19,31 @@ import MyReturnsResponsive from "../components/ManageAccoutSideBar/MyReturnsResp
 import Coupons from "../components/ManageAccoutSideBar/Coupons";
 import GiftCards from "../components/ManageAccoutSideBar/GiftCards";
 
-
 const profileLinksObj = [
   {
     title: "Manage My Account",
     href: "manageAccount",
     element: <ManageAccount />,
-    links: [
-      {
-        title: "My Profile",
-        href: "myProfile",
-        element: <Profile />,
-      },
-      {
-        title: "Address Book",
-        href: "addressBook",
-        element: <AddressBook />,
-      },
-      {
-        title: "My Payment Options",
-        href: "myPaymentOptions",
-        element: <MyPaymentOption />,
-      },  {
-        title: "Coupons",
-        href: "Coupons",
-        element: <Coupons />,
-      },
-      {
-        title: "Gift Cards",
-        href: "GiftCards",
-        element:<GiftCards></GiftCards>
-      }
-
-    ],
+  },
+  {
+    title: "My Profile",
+    href: "myProfile",
+    element: <Profile />,
+  },
+  {
+    title: "Address Book",
+    href: "addressBook",
+    element: <AddressBook />,
+  },
+  {
+    title: "My Payment Options",
+    href: "myPaymentOptions",
+    element: <MyPaymentOption />,
+  },
+  {
+    title: "Coupons",
+    href: "Coupons",
+    element: <Coupons />,
   },
   {
     title: "My Orders",
@@ -59,23 +51,39 @@ const profileLinksObj = [
     element: <MyOrder></MyOrder>,
     links: [
       {
-        title: "My Returns",
-        href: "myReturns",
-        element: <MyReturns></MyReturns>,
+        title: "MyOrders",
+        href: "myOrderDetails",
+        element: <MyOrderDetails />,
       },
       {
-        title: "My Cancellations",
-        href: "myCancellations",
-        element: <MyCancelation />,
-      }
-
-    ]
+        title: "OrderCancelation",
+        href: "myOrderCancelation",
+        element: <MyOrderCancelation />,
+      },
+    ],
+  },
+  {
+    title: "My Returns",
+    href: "myReturns",
+    element: <MyReturns></MyReturns>,
+  },
+  {
+    title: "My Cancellations",
+    href: "myCancellations",
+    element: <MyCancelation />,
   },
 
   {
     title: "My Reviews",
     href: "myReviews",
     element: <MyReviews />,
+    links: [
+      {
+        title: "WriteReview",
+        href: "writeReview",
+        element: <WriteReview />,
+      },
+    ],
   },
   {
     title: "My Wishlists",
@@ -93,36 +101,17 @@ const profileLinksObj = [
     element: <Profile />,
   },
   // sub link
-  {
-    title: "MyOrders",
-    href: "myOrderDetails",
-    element: <MyOrderDetails />,
-  },
-  {
-    title: "OrderCancelation",
-    href: "myOrderCancelation",
-    element: <MyOrderCancelation />,
-  },
-  {
-    title: "WriteReview",
-    href: "writeReview",
-    element: <WriteReview />,
-  },
+
   {
     title: "EditProfile",
     href: "editProfile",
-    element: <EditProfile></EditProfile>
+    element: <EditProfile></EditProfile>,
   },
   {
     title: "changesPassword",
     href: "changesPassword",
-    element: <ChangesPassword></ChangesPassword>
-  }
-
+    element: <ChangesPassword></ChangesPassword>,
+  },
 ];
 
-
-
-
-
-export { profileLinksObj}
+export { profileLinksObj };

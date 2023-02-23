@@ -1,6 +1,7 @@
 import React from "react";
 import ManageAccoutSideBar from "./manageAccoutSideBar";
 import ProfileResponsive from "./ProfileResponsive";
+import UpdatedSideBar from "./updatedSideBar";
 
 const ManageAccountLayout = ({ children, slug }) => {
 
@@ -9,7 +10,8 @@ const ManageAccountLayout = ({ children, slug }) => {
         <div className="flex justify-center">
             <div className='md:flex gap-5 my-8 w-full'>
                 <div className='hidden  md:block w-[30%]'>
-                    <ManageAccoutSideBar />
+                    {/* <ManageAccoutSideBar /> */}
+                    <UpdatedSideBar/>
                 </div>
                 <div className='md:hidden block'>
                     {
