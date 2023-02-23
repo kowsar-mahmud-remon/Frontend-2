@@ -140,7 +140,7 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Orders Tracking",
-          href: "orderTrackingPage01"
+          href: "editProduct"
         }
       ],
     },
