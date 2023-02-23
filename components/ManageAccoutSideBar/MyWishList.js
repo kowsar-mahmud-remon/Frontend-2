@@ -90,21 +90,21 @@ const MyWishList = () => {
         <div>
           <p className="text-[24px] font-[400] text-[#FB641B]">My Wishlist</p>
         </div>
-        <div className="wishlistBox mt-[32px]">
+        <div className="wishlistBox max-w-[924px] h-[149px] mt-[32px]">
           <p className="text-[14px] ml-[16px] pt-[16px] font-normal text-[#686868]">
             Purchased on: 21 Dce 2022 10:21:00
           </p>
-          <div className="mt-[18px] flex gap-[200px]">
-            <div className="flex gap-[16px] ml-[10px]">
+          <div className="mt-[18px] flex items-center justify-between mr-[24px]">
+            <div className="flex col-span-1 gap-[16px] ml-[10px]">
               <Image src="/image 6.png" width={79} height={63} alt=""></Image>
               <div>
-                <p className="text-[#001E00] font-[400] text-[16px]">
+                <p className="text-[#001E00] whitespace-nowrap font-[400] text-[16px]">
                   Tomato (Local) 500 ±30 gm
                 </p>
                 <FaTrashAlt className="w-[18px] h-[21px] mt-[16px]"></FaTrashAlt>
               </div>
             </div>
-            <div>
+            <div className="col-span-1 ">
               <p className="text-[16px] font-[500] text-[#FB641B]">Tk. 60</p>
 
               <div className="flex gap-[8px] mt-[12px]">
@@ -116,14 +116,16 @@ const MyWishList = () => {
                 </p>
               </div>
             </div>
-            <div className="w-[66px] h-[28px] mt-[10px]  bg-[#FB641B] rounded-[26px]">
-              <Image
-                src="/shopingcart.png"
-                className="mt-[6px] ml-[24px]"
-                width={19}
-                height={16}
-                alt=""
-              ></Image>
+            <div className="col-span-1">
+              <div className="w-[66px] flex items-center justify-center h-[28px] mt-[10px]  bg-[#FB641B] rounded-[26px]">
+                <Image
+                  src="/shopingcart.png"
+                  className=" "
+                  width={19}
+                  height={16}
+                  alt=""
+                ></Image>
+              </div>
             </div>
           </div>
         </div>
@@ -132,11 +134,11 @@ const MyWishList = () => {
             Just for you
           </p>
         </div>
-        <div className="grid grid-cols-4 gap-[20px]">
+        <div className="grid grid-cols-4 gap-[10px] max-w-[924px]">
           {wishlistData.map((data) => (
             <>
               <div className="mt-[16px]">
-                <div className="wishlistcard w-full h-[338px]">
+                <div className="wishlistcard max-w-[222px] h-full">
                   <div>
                     <label className="flex ">
                       <Image
@@ -145,9 +147,9 @@ const MyWishList = () => {
                         height={154}
                         alt=""
                       ></Image>
-                      <div className="wishlistloveButton absolute ml-[181px] mt-[13px] w-[28px] h-[28px] flex items-center justify-center rounded-full">
+                      <div className="wishlistloveButton absolute ml-[120px] xl:ml-[181px] mt-[13px] w-[28px] h-[28px] flex items-center justify-center rounded-full">
                         <FaHeart className=" text-[#F2F2F2]  w-[17px] h-[16px] hover:fill-[#FB641B]  "></FaHeart>
-                        {/* <Image src='/loveimage.png' className="ml-[5px] hover:text-[#FB641B]  pt-[6px]" width={17.33} height={16} alt=""></Image> */}
+                      
                       </div>
                     </label>
                   </div>
@@ -155,7 +157,7 @@ const MyWishList = () => {
                     <p className="text-[#FB641B] font-[500] text-[20px]">
                       Tk 1024
                     </p>
-                    <p className="text-[#001E00] text-[16px] font-[400] w-[184px]">
+                    <p className="text-[#001E00] text-[16px] font-[400] max-w-[184px]">
                       Misti Kumra Fali (Sweet Pumpkin Fali)
                     </p>
                     <div className="mt-[10px] flex gap-[8px] items-center">
@@ -169,7 +171,7 @@ const MyWishList = () => {
                         24 Ratings & 5 Reviews
                       </p>
                     </div>
-                    <div className="mt-[4px] flex gap-[8px]">
+                    <div className="mt-[4px] mb-[10px] flex gap-[8px]">
                       <p className="text-[#686868] text-[13px]">Seller: </p>
                       <Image
                         src="/seller.png"

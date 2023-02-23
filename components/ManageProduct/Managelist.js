@@ -1,6 +1,7 @@
 import Link from "next/link";
 
-const ManageList = ({ menu, setActive, active, setItem, products }) => {
+const ManageList = ({ menu, setActive, active, setItem, products,item }) => {
+  
   const handleMenu = (menu) => {
     setActive(menu);
     if (menu.text == "All") {
@@ -9,25 +10,28 @@ const ManageList = ({ menu, setActive, active, setItem, products }) => {
     }
 
     const allData = products.filter((user) => user.status === menu.text);
+    
 
     setItem(allData);
   };
+  
 
   return (
-    <div className="text-center text-[#707070]">
+    <div className="text-center text-[#707070] text-[16px]">
       <div
         className={`${
           menu?.text === active?.text
-            ? "bg-[#F2F2F2] border-b-2 border-[#FB641B]  w-full text-[#FB641B]"
+            ? "bg-[#FFFFFF] border-b-[2px]  border-[#FB641B] whitespace-nowrap  w-[80%] mx-auto  text-[#FB641B] font-semibold"
             : ""
         }`}
       >
         <button
-          className="h-full w-full text-base font-medium py-4"
+          className=" w-full text-base  py-[13px]"
           onClick={() => handleMenu(menu)}
           href={menu?.href}
         >
-          {menu?.text}
+          
+          {menu?.text + "(0)" } 
         </button>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import img from '../../assets/images/center.png';
 import styles from "../../styles/campaignManagementTwo.module.css";
@@ -54,10 +55,12 @@ const ContactUs = () => {
             className="w-full btn btn-outline lg:w-[114px] h-[40px] text-base normal-case text-[#686868] border border-[#686868] rounded-md lg:mr-4 mb-4"
           >Cancel
           </button>
-          <button
-            className="w-full btn bg-[#FB641B] lg:w-[134px] h-[40px] text-base normal-case text-white rounded-md mb-4"
-          >Submit
-          </button>
+          <Link href="contactUsOne">
+            <button
+              className="w-full btn bg-[#FB641B] lg:w-[134px] h-[40px] text-base normal-case text-white rounded-md mb-4"
+            >Submit
+            </button>
+          </Link>
         </div>
       </div>
 

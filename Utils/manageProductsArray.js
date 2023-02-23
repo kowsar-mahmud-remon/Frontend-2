@@ -6,7 +6,9 @@ import EditProducts from "../components/EditProducts/EditProducts";
 import EditProductsTwo from "../components/EditProducts/EditProductsTwo";
 import ManageProduct from "../components/ManageProduct/ManageProduct";
 import ManageReview from "../components/ManageReview/ManageReview";
+import ManageReviewList from "../components/ManageReviewList/ManageReviewList";
 import OrderHistory from "../components/orderHistory.js/OrderHistory";
+import OrderTrackingPage01 from "../components/OrderTrackingPage01/OrderTrackingPage01";
 import AllProduct from "../components/ProductCampaignMain/AllProduct";
 import ProductCampaignFive from "../components/ProductCampaignMain/ProductCampaignFive";
 import ProductCampaignFour from "../components/ProductCampaignMain/ProductCampaignFour";
@@ -14,8 +16,10 @@ import ProductCampaignSix from "../components/ProductCampaignMain/ProductCampaig
 import ProductCampaignThree from "../components/ProductCampaignMain/ProductCampaignThree";
 import ProductInvoices from "../components/ProductInvoices/ProductInvoices";
 import ProductInvoicesDetails from "../components/ProductInvoices/ProductInvoicesDetails/ProductInvoicesDetails";
+import QuestionAndAnswer from "../components/QuestionAndAnswer/QuestionAndAnswer";
 import ReturnProducts from "../components/ReturnProducts/ReturnProducts";
 import ContactUs from "../components/SellerSupport/ContactUs";
+import ContactUsOne from "../components/SellerSupport/ContactUsOne";
 import HelpCenter from "../components/SellerSupport/HelpCenter";
 import LiveChatTwo from "../components/SellerSupport/LiveChatTwo";
 import Sellerverification from "../components/sellerverification/Sellerverification";
@@ -23,6 +27,7 @@ import SellerVerificationPage1 from "../components/SellerVerificationPage1/Selle
 import SellerVerificationPage2 from "../components/SellerVerificationPage2/SellerVerificationPage2";
 import SellerVerificationPage3 from "../components/SellerVerificationPage3/SellerVerificationPage3";
 import SellerVerificationPage5 from "../components/SellerVerificationPage5/SellerVerificationPage5";
+import ProductShipping from "../components/ShippingManagement/ProductShipping";
 import UploadProduct from "../components/UploadProduct/UploadProduct";
 import ManageOrders from "../pages/manageOrders/ManageOrders";
 
@@ -31,6 +36,11 @@ export const manageProductsArray = [
     title: "EditProducts",
     href: "editProduct",
     element: <EditProducts />,
+  },
+  {
+    title: "Orders Tracking",
+    href: "orderTrackingPage01",
+    element: <OrderTrackingPage01 />,
   },
   {
     title: "EditProductsTwo",
@@ -71,6 +81,11 @@ export const manageProductsArray = [
     title: "ProductInvoiceDetails",
     href: "productInvoiceDetails",
     element: <ProductInvoicesDetails></ProductInvoicesDetails>,
+  },
+  {
+    title: 'Feedback',
+    href: 'feedback',
+    element: <ManageReview></ManageReview>
   },
   {
     title: "AllProduct",
@@ -125,7 +140,13 @@ export const manageProductsArray = [
   {
     title: "ManageReview",
     href: "manageReview",
-    element: <ManageReview></ManageReview>,
+    element: <ManageReviewList></ManageReviewList>
+    // element: <QuestionAndAnswer></QuestionAndAnswer>
+  },
+  {
+    title: "Question and Answer",
+    href: "questionanswer",
+    element: <QuestionAndAnswer></QuestionAndAnswer>
   },
   {
     title: "OrderHistory",
@@ -151,6 +172,11 @@ export const manageProductsArray = [
     title: "ContactUs",
     href: "contactUs",
     element: <ContactUs></ContactUs>,
+  },
+  {
+    title: "ContactUsOne",
+    href: "contactUsOne",
+    element: <ContactUsOne></ContactUsOne>,
   },
   {
     title: "LiveChatTwo",
