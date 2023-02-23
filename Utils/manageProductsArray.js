@@ -140,7 +140,12 @@ export const manageProductsArray = [
   {
     title: "ManageReview",
     href: "manageReview",
-    // element: <ManageReviewList></ManageReviewList>
+    element: <ManageReviewList></ManageReviewList>
+    // element: <QuestionAndAnswer></QuestionAndAnswer>
+  },
+  {
+    title: "Question and Answer",
+    href: "questionanswer",
     element: <QuestionAndAnswer></QuestionAndAnswer>
   },
   {
