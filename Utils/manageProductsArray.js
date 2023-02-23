@@ -19,6 +19,7 @@ import ProductInvoicesDetails from "../components/ProductInvoices/ProductInvoice
 import QuestionAndAnswer from "../components/QuestionAndAnswer/QuestionAndAnswer";
 import ReturnProducts from "../components/ReturnProducts/ReturnProducts";
 import ContactUs from "../components/SellerSupport/ContactUs";
+import ContactUsOne from "../components/SellerSupport/ContactUsOne";
 import HelpCenter from "../components/SellerSupport/HelpCenter";
 import LiveChatTwo from "../components/SellerSupport/LiveChatTwo";
 import Sellerverification from "../components/sellerverification/Sellerverification";
@@ -26,6 +27,7 @@ import SellerVerificationPage1 from "../components/SellerVerificationPage1/Selle
 import SellerVerificationPage2 from "../components/SellerVerificationPage2/SellerVerificationPage2";
 import SellerVerificationPage3 from "../components/SellerVerificationPage3/SellerVerificationPage3";
 import SellerVerificationPage5 from "../components/SellerVerificationPage5/SellerVerificationPage5";
+import ProductShipping from "../components/ShippingManagement/ProductShipping";
 import UploadProduct from "../components/UploadProduct/UploadProduct";
 import ManageOrders from "../pages/manageOrders/ManageOrders";
 
@@ -167,9 +169,13 @@ export const manageProductsArray = [
     element: <ContactUs></ContactUs>,
   },
   {
+    title: "ContactUsOne",
+    href: "contactUsOne",
+    element: <ContactUsOne></ContactUsOne>,
+  },
+  {
     title: "LiveChatTwo",
     href: "liveChatTwo",
     element: <LiveChatTwo></LiveChatTwo>,
   },
-
 ];
