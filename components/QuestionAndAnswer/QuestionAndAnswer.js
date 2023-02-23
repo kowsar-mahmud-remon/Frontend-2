@@ -52,11 +52,11 @@ const QuestionAndAnswer = () => {
                                     <div>
                                         <h1 className='text-[#FB641B] text-[16px] border border-[#FB641B] cursor-pointer w-[121px] text-center h-[32px] px-[5px] mb-[16px]'>Answer</h1>
                                         <h1 className='text-[#F4253F] flex text-[16px] border border-[#F4253F] cursor-pointer w-[121px] text-center h-[32px] px-[5px]'> <span><Image
-                                            className="w-[16px]   ml-[4px]  h-[19px] mt-[5px]"
+                                            className="w-[16px] ml-[17px] h-[19px] mt-[5px]"
                                             src={del}
 
                                             alt=""
-                                        ></Image></span> <span className='mt-[4px]'>Delete</span></h1>
+                                        ></Image></span> <span className='mt-[4px] ml-[4px]'>Delete</span></h1>
                                     </div>
                                 </div>
                             </div>

@@ -32,7 +32,7 @@ const ManageReviewList = () => {
                             <div className='flex justify-between'>
                                 <p className='text-[16px] text-[#686868] w-[90%]'>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here{','}, making it look like readable <span className='text-[#287DF3]'>Read More...</span></p>
 
-                                <h1 className='text-[#FB641B] text-[16px] border border-[#FB641B] cursor-pointer h-[26px] px-[5px]'>Feedback</h1>
+                                <Link href="feedback">    <h1 className='text-[#FB641B] text-[16px] border border-[#FB641B] cursor-pointer h-[26px] px-[5px]'>Feedback</h1></Link>
                             </div>
                         </div>
                     </div>
@@ -50,7 +50,7 @@ const ManageReviewList = () => {
                             <div className='flex justify-between'>
                                 <p className='text-[16px] text-[#686868] w-[90%]'>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here{','}, making it look like readable <span className='text-[#287DF3]'>Read More...</span></p>
 
-                                <h1 className='text-[#FB641B] text-[16px] border border-[#FB641B] cursor-pointer h-[26px] px-[5px]'>Feedback</h1>
+                                <Link href="feedback">    <h1 className='text-[#FB641B] text-[16px] border border-[#FB641B] cursor-pointer h-[26px] px-[5px]'>Feedback</h1></Link>
                             </div>
                         </div>
                     </div>
