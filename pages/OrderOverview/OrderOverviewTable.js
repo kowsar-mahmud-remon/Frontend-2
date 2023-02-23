@@ -23,7 +23,7 @@ const OrderOverviewTable = ({ product }) => {
    }
   }
 
-  return (
+  return ( 
     <>
       <tr className="bg-white border-b text-sm border-[#B7B7B7] text-[#001E00]">
         <td className="px-6 py-4">
