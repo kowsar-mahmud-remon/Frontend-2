@@ -1,8 +1,8 @@
 const profileSidebarLinks = [
-    {
-      title: "Manage My Account",
-      href: "manageAccount",
-    },
+  {
+    title: "Manage My Account",
+    href: "manageAccount",
+  },
   {
     title: "My Profile",
     href: "myProfile",
