@@ -16,6 +16,7 @@ import ProductCampaignSix from "../components/ProductCampaignMain/ProductCampaig
 import ProductCampaignThree from "../components/ProductCampaignMain/ProductCampaignThree";
 import ProductInvoices from "../components/ProductInvoices/ProductInvoices";
 import ProductInvoicesDetails from "../components/ProductInvoices/ProductInvoicesDetails/ProductInvoicesDetails";
+import QuestionAndAnswer from "../components/QuestionAndAnswer/QuestionAndAnswer";
 import ReturnProducts from "../components/ReturnProducts/ReturnProducts";
 import ContactUs from "../components/SellerSupport/ContactUs";
 import HelpCenter from "../components/SellerSupport/HelpCenter";
@@ -80,6 +81,11 @@ export const manageProductsArray = [
     element: <ProductInvoicesDetails></ProductInvoicesDetails>,
   },
   {
+    title: 'Feedback',
+    href: 'feedback',
+    element: <ManageReview></ManageReview>
+  },
+  {
     title: "AllProduct",
     href: "allProduct",
     element: <AllProduct></AllProduct>,
@@ -132,8 +138,8 @@ export const manageProductsArray = [
   {
     title: "ManageReview",
     href: "manageReview",
-    element: <ManageReviewList></ManageReviewList>
-    // element: <ManageReview></ManageReview>,
+    // element: <ManageReviewList></ManageReviewList>
+    element: <QuestionAndAnswer></QuestionAndAnswer>
   },
   {
     title: "OrderHistory",
@@ -165,4 +171,5 @@ export const manageProductsArray = [
     href: "liveChatTwo",
     element: <LiveChatTwo></LiveChatTwo>,
   },
+
 ];
