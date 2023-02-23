@@ -8,6 +8,7 @@ import ManageProduct from "../components/ManageProduct/ManageProduct";
 import ManageReview from "../components/ManageReview/ManageReview";
 import ManageReviewList from "../components/ManageReviewList/ManageReviewList";
 import OrderHistory from "../components/orderHistory.js/OrderHistory";
+import OrderOverview from "../components/OrderOverview";
 import OrderTrackingPage01 from "../components/OrderTrackingPage01/OrderTrackingPage01";
 import AllProduct from "../components/ProductCampaignMain/AllProduct";
 import ProductCampaignFive from "../components/ProductCampaignMain/ProductCampaignFive";
@@ -182,5 +183,10 @@ export const manageProductsArray = [
     title: "LiveChatTwo",
     href: "liveChatTwo",
     element: <LiveChatTwo></LiveChatTwo>,
+  },
+  {
+    title: "OrderOverview",
+    href: "orderOverview",
+    element: <OrderOverview></OrderOverview>,
   },
 ];

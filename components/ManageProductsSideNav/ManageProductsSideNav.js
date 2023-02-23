@@ -120,7 +120,7 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Order Overview",
-          href: "editProduct"
+          href: "orderOverview"
         },
         {
           name: "Performance Report",
