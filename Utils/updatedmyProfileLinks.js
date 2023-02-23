@@ -48,6 +48,18 @@ const profileLinksObj = [
     title: "My Orders",
     href: "myOrders",
     element: <MyOrder></MyOrder>,
+    links: [
+      {
+        title: "MyOrders",
+        href: "myOrderDetails",
+        element: <MyOrderDetails />,
+      },
+      {
+        title: "OrderCancelation",
+        href: "myOrderCancelation",
+        element: <MyOrderCancelation />,
+      },
+    ],
   },
   {
     title: "My Returns",
@@ -64,6 +76,13 @@ const profileLinksObj = [
     title: "My Reviews",
     href: "myReviews",
     element: <MyReviews />,
+    links: [
+      {
+        title: "WriteReview",
+        href: "writeReview",
+        element: <WriteReview />,
+      },
+    ],
   },
   {
     title: "My Wishlists",
@@ -81,21 +100,7 @@ const profileLinksObj = [
     element: <Profile />,
   },
   // sub link
-  {
-    title: "MyOrders",
-    href: "myOrderDetails",
-    element: <MyOrderDetails />,
-  },
-  {
-    title: "OrderCancelation",
-    href: "myOrderCancelation",
-    element: <MyOrderCancelation />,
-  },
-  {
-    title: "WriteReview",
-    href: "writeReview",
-    element: <WriteReview />,
-  },
+
   {
     title: "EditProfile",
     href: "editProfile",

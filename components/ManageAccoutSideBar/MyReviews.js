@@ -189,7 +189,7 @@ const MyReviews = () => {
                     <span className="text-[#287DF3]">Banglar Big Store</span>
                   </p>
 
-                  <Link href="/profile/writeReview">
+                  <Link href="myReviews/writeReview">
                     <button className="reviewBtn ml-[116px] mt-[16px]">
                       <span className="text-[#FB641B] font-[400] text-[16px]">
                         REVIEW
