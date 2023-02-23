@@ -4,6 +4,8 @@ import CampaignManagementThree from "../components/CampaignManagement/CampaignMa
 import CampaignManagementTwo from "../components/CampaignManagement/CampaignManagementTwo";
 import EditProducts from "../components/EditProducts/EditProducts";
 import EditProductsTwo from "../components/EditProducts/EditProductsTwo";
+import ReportManagement from "../components/FeedbackManagement/ReportManagement";
+import ReportManagementOne from "../components/FeedbackManagement/ReportManagementOne";
 import ManageProduct from "../components/ManageProduct/ManageProduct";
 import ManageReview from "../components/ManageReview/ManageReview";
 import ManageReviewList from "../components/ManageReviewList/ManageReviewList";
@@ -188,5 +190,15 @@ export const manageProductsArray = [
     title: "OrderOverview",
     href: "orderOverview",
     element: <OrderOverview></OrderOverview>,
+  },
+  {
+    title: "ReportManagement",
+    href: "reportManagement",
+    element: <ReportManagement></ReportManagement>,
+  },
+  {
+    title: "ReportManagementOne",
+    href: "reportManagementOne",
+    element: <ReportManagementOne></ReportManagementOne>,
   },
 ];
