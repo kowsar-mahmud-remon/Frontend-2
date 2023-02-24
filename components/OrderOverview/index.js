@@ -35,7 +35,7 @@ const OrderOverview = () => {
                 <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
                   <table className="w-full text-base text-left text-[#001E00]">
                     <thead className="text-base text-[#001E00] font-normal bg-[#F2F3F7] h-[48px]">
-                    <tr>
+                    <tr> 
                         <th
                           scope="col"
                           className=" py-2 font-medium text-[#001E00] text-base"
