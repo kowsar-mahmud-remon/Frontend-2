@@ -33,7 +33,7 @@ const MyOrderDetails = () => {
   };
 
   return (
-    <div className="w-full md:px-0 px-3">
+    <div className="max-w-[924px] md:px-0 px-3">
       <div className='md:hidden'>
         <button
           onClick={() => router.back()}
@@ -48,7 +48,7 @@ const MyOrderDetails = () => {
       <h2 className="text-[24px] font-[500] text-[#FB641B] mb-4 hidden md:block">
         Order Details
       </h2>
-      <div className="flex justify-between items-center px-4 py-5 shadow-lg rounded-lg">
+      <div className="flex lg:mr-[20px] justify-between items-center px-4 py-5 shadow-lg rounded-lg">
         <div className="">
           <h3 className="font-[500]">
             Order{" "}
@@ -64,7 +64,7 @@ const MyOrderDetails = () => {
       </div>
 
       {/* mid part */}
-      <div className="shadow-lg rounded-lg mb-4 mt-5">
+      <div className="shadow-lg lg:mr-[20px] rounded-lg mb-4 mt-5">
         <div className=" p-4">
           <div className="flex items-center">
             <div>
@@ -185,7 +185,7 @@ const MyOrderDetails = () => {
       </div>
 
       {/* bottom part */}
-      <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-4 my-10">
+      <div className="grid lg:mr-[20px] lg:grid-cols-2 grid-cols-1 lg:gap-4 my-10">
         <div>
           <div className="p-4 shadow-lg rounded-lg mb-4">
             <div>

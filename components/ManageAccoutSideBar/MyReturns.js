@@ -45,9 +45,10 @@ const MyReturns = () => {
 
     return (
         <div className='flex justify-center  pb-[227px]'>
-            <div className='w-[924px]'>
+            <div className='max-w-[924px] '>
                 <h1 className='text-[24px] text-[#FB641B] font-semibold mt-[24px] mb-[32px] ml-4 md:ml-4 lg:ml-0'>Returns Details</h1>
-                <div className='flex justify-between items-center px-[16px] shadow-md py-[20px] rounded-md mb-[16px] w-full'>
+               <div className='lg:mr-[20px]'>
+               <div className='flex justify-between items-center px-[16px] shadow-md py-[20px] rounded-md mb-[16px] w-full'>
                     <div>
                         <p className='text-[16px] font-semibold text-[#001E00]'>Order <span className='text-[#287DF3]'>#12345678998745</span></p>
                         <p className='text-[14px] text-[#686868] font-semibold'>Placed On 21 Dce 2022 10:21:00</p>
@@ -158,6 +159,7 @@ const MyReturns = () => {
                     </div>
                 </div>
 
+               </div>
 
             </div>
         </div>

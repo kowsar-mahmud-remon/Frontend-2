@@ -12,7 +12,7 @@ const EditProfile = () => {
                 <div>
                     <h1 className='text-[24px] text-[#FB641B]'>Edit Profile</h1>
                 </div>
-                <div className="editProfile w-full h-[548px] mt-[32px]">
+                <div className="editProfile max-w-[924px] lg:mr-[20px] h-[548px] mt-[32px]">
                     <div className="pt-[32px] mx-[24px]">
                         <div className="grid grid-cols-3 gap-[100px]">
                             <div>
@@ -161,7 +161,7 @@ const EditProfile = () => {
                                 <input placeholder="2000" type="number" className='w-full pl-[8px] h-[48px] border-[#B7B7B7] border-[1px] rounded-r-[4px] border-none'></input>
                             </div>
 
-                            {/* <input placeholder='2000-02-21' className="text-[#686868]  w-full mt-[12px] h-[48px] bg-[#FFFFFF] rounded-[4px] profileBox  pl-[16px] text-[16px] font-[400]"></input> */}
+                     
                         </div>
                         <div className="mt-[20px] w-full">
                             <h1 className="text-[#686868] text-[14px] font-normal">gender</h1>

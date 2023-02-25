@@ -10,12 +10,12 @@ const MyPaymentOption = () => {
   const router = useRouter()
   return (
     <div>
-      <div className="hidden lg:block">
-        <div className="w-full  px-0  mx-auto mb-12">
-          <h2 className="text-[#FB641B] text-2xl mt-6 mb-8 font-semibold">
+      <div className="hidden lg:block ">
+        <div className="w-full   px-0   mb-12">
+          <h2 className="text-[#FB641B] text-2xl  mb-8 font-semibold">
             My Payment Option
           </h2>
-          <div className={`rounded-lg bg-[#FFFFFF] p-6 ${style.boxshaddow} mb-6 h-[210px] max-w-[924px]`}>
+          <div className={`rounded-lg lg:mr-[20px] bg-[#FFFFFF] p-6 ${style.boxshaddow} mb-6 h-[210px] max-w-[924px]`}>
             <p className="text-[#001E00] text-base font-medium mb-8">
               Credit & Debit Card
             </p>
@@ -48,7 +48,7 @@ const MyPaymentOption = () => {
             </div>
           </div>
           <div
-            className={`rounded-lg bg-[#FFFFFF] p-6 ${style.boxshaddow} max-w-[924px] h-[210px]`}
+            className={`rounded-lg bg-[#FFFFFF] lg:mr-[20px] p-6 ${style.boxshaddow} max-w-[924px] h-[210px]`}
           >
             <p className="text-[#001E00] text-base font-medium mb-8">
               Other Payment Methods
@@ -83,12 +83,17 @@ const MyPaymentOption = () => {
 
         <input type="checkbox" id="my-modal-1" className="modal-toggle" />
         <div className="modal fixed inset-0   h-screen bg-black  bg-opacity-60">
-          <div className="max-w-[751px] w-full h-[363px] bg-[#FFFFFF] rounded-[8px] relative">
+          <div className="max-w-[751px]   h-[363px] bg-[#FFFFFF] rounded-[8px] relative">
             <label htmlFor="my-modal-1" className="absolute right-4 top-2">✕</label>
             <div>
-              <h1 className="text-[#001E00] text-[24px] mt-[78px] ml-[24px]">Do you want to delete bKash account +88 014 ******452</h1>
+              <h1 className="text-[#001E00] text-[24px] lg:mr-[24px] mt-[78px] ml-[24px]">Do you want to delete bKash account +88 014 ******452</h1>
               <div className="flex items-center justify-end mt-[185px] mx-[24px] gap-[16px]">
-                <button className=" text-[#686868] text-[16px] font-[500] rounded-[8px] border-[1px] border-solid border-[#B7B7B7] w-[122px] h-[48px]">Cancel</button>
+
+                <label htmlFor="my-modal-1" className="  flex items-center justify-center text-[#686868] text-[16px] font-[500] rounded-[8px] border-[1px] border-solid border-[#B7B7B7] w-[122px] h-[48px]">
+
+                  Cancel
+                </label>
+
 
                 <button className=" text-[#FFFFFF] text-[16px] font-[500] rounded-[8px] border-[1px] border-solid border-[#B7B7B7] bg-[#FB641B] w-[172px] h-[48px]">Delete</button>
               </div>
