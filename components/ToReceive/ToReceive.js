@@ -2,18 +2,18 @@ import React from 'react';
 import Image from 'next/image';
 const ToReceive = ({ data }) => {
     return (
-        <div className='md:w-[96%]'>
+        <div className='md:w-[92%]'>
             <div className="mt-[16px] ">
                 <div className="w-[100%]  rounded-[8px] bg-[#FFFFFF] shadow-lg pt-[12px]">
                     <div className="flex items-center justify-between">
-                        <div className="mx-[16px] text-[4.3vw] md:text-[16px] ">
+                        <div className="mx-[16px] text-[4.3vw] md:text-[18px] ">
                             <p className='mb-[4px]'><span className=" font-bold text-[#001E00]">Tracking Number</span> <span className="text-[#287DF3]">#{data.orderId}</span></p>
                             <p className='md:hidden  text-[#686868]'>Delivered by:{data.Delivered}</p>
 
                         </div>
-                        <p className="text-[#287DF3] hidden md:block text-[16px] mr-[19px]">View More Details</p>
+                        <p className="text-[#287DF3] hidden md:block text-[18px] mr-[19px]">View More Details</p>
                     </div>
-                    <hr className='hidden md:block border-[1px] border-[#686868]' />
+                    <hr className='hidden md:block border-[1px] mt-[16px] border-[#686868]' />
                     <div>
                         <div className="flex justify-between ">
                             <div className=" flex md:ml-[56px] md:mt-[16px] mt-[12px] md:mb-[16px] gap-[8px] md:gap-[16px]">
