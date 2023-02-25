@@ -72,14 +72,14 @@ const Profile = () => {
                 Subscribe to our Newsletter
               </h1>
             </label>
-            <Link href="/profile/editProfile">
+            <Link href="myProfile/editProfile">
               <button className="w-[273px] h-[48px] bg-[#FB641B] text-[white] rounded-[8px]">
                 <span className="text-[16px] text-[500] text-[#FFFFFF]">
                   Edit Profile
                 </span>
               </button>
             </Link>
-            <Link href="/profile/changesPassword">
+            <Link href="myProfile/changesPassword">
               <button className="w-[273px] h-[48px] bg-[#FB641B] text-[white] rounded-[8px]">
                 <span className="text-[16px] text-[500] text-[#FFFFFF]">
                   Change Password

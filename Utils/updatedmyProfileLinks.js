@@ -29,6 +29,18 @@ const profileLinksObj = [
     title: "My Profile",
     href: "myProfile",
     element: <Profile />,
+    links: [
+      {
+        title: "EditProfile",
+        href: "editProfile",
+        element: <EditProfile></EditProfile>,
+      },
+      {
+        title: "changesPassword",
+        href: "changesPassword",
+        element: <ChangesPassword></ChangesPassword>,
+      },
+    ],
   },
   {
     title: "Address Book",
@@ -54,11 +66,6 @@ const profileLinksObj = [
         title: "MyOrders",
         href: "myOrderDetails",
         element: <MyOrderDetails />,
-      },
-      {
-        title: "OrderCancelation",
-        href: "myOrderCancelation",
-        element: <MyOrderCancelation />,
       },
     ],
   },
@@ -101,16 +108,10 @@ const profileLinksObj = [
     element: <Profile />,
   },
   // sub link
-
   {
-    title: "EditProfile",
-    href: "editProfile",
-    element: <EditProfile></EditProfile>,
-  },
-  {
-    title: "changesPassword",
-    href: "changesPassword",
-    element: <ChangesPassword></ChangesPassword>,
+    title: "OrderCancelation",
+    href: "myOrderCancelation",
+    element: <MyOrderCancelation />,
   },
 ];
 
