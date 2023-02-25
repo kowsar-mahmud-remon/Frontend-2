@@ -120,7 +120,7 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Order Overview",
-          href: "editProduct"
+          href: "orderOverview"
         },
         {
           name: "Performance Report",
@@ -160,7 +160,7 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Report Management",
-          href: "liveChatTwo"
+          href: "reportManagement"
         }
       ],
     },
@@ -208,6 +208,8 @@ const ManageProductsSideNav = () => {
         },
       ],
     },
+
+ 
     {
       id: 9,
       name: "Seller Documents",
