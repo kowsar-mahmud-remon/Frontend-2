@@ -168,7 +168,7 @@ const MyOrderDetails = () => {
 
                         <td>
                           <Link
-                            href="/profile/myOrderCancelation"
+                            href="profile/myOrderCancelation"
                             className="text-[#287DF3]"
                           >
                             Cancel
