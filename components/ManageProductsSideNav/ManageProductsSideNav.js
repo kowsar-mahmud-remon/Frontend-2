@@ -86,10 +86,14 @@ const ManageProductsSideNav = () => {
     },
     {
       id: 3,
-      name: "Orders & Reviews",
+      name: "Orders Management",
       href: "editProductsTwo",
       img: kachaBazar,
       subcata: [
+        {
+          name: "Order Notifications",
+          href: "orderNotification"
+        },
         {
           name: "Manage Orders",
           href: "manageOrders"
