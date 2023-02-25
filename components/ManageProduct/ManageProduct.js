@@ -86,7 +86,7 @@ const ManageProduct = () => {
                 <div className="">
                   <select className="border h-11 pl-2 pr-[100px] rounded-lg ">
                     <option className="" value="0">
-                      Category
+                      Category 
                     </option>
                     <option value="1">Audi</option>
                     <option value="2">BMW</option>

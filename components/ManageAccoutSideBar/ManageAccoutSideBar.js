@@ -2,7 +2,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 import { FaCheck } from "react-icons/fa";
-import profileSidebarLinks from "../../Utils/profileLinkForSidebar";
+import profileSidebarLinks from "../../Utils/updatedProfileLink";
+
 
 
 // import Profile from './Profile';

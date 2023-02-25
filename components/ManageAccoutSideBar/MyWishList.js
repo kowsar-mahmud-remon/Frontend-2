@@ -86,7 +86,7 @@ const MyWishList = () => {
   ];
   return (
     <div>
-      <div className="lg:block hidden">
+      <div className="lg:block hidden lg:mr-[20px]">
         <div>
           <p className="text-[24px] font-[400] text-[#FB641B]">My Wishlist</p>
         </div>

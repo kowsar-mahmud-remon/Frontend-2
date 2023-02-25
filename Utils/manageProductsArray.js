@@ -4,10 +4,14 @@ import CampaignManagementThree from "../components/CampaignManagement/CampaignMa
 import CampaignManagementTwo from "../components/CampaignManagement/CampaignManagementTwo";
 import EditProducts from "../components/EditProducts/EditProducts";
 import EditProductsTwo from "../components/EditProducts/EditProductsTwo";
+import ReportManagement from "../components/FeedbackManagement/ReportManagement";
+import ReportManagementOne from "../components/FeedbackManagement/ReportManagementOne";
 import ManageProduct from "../components/ManageProduct/ManageProduct";
 import ManageReview from "../components/ManageReview/ManageReview";
 import ManageReviewList from "../components/ManageReviewList/ManageReviewList";
 import OrderHistory from "../components/orderHistory.js/OrderHistory";
+import OrderNotificationTable from "../components/OrderNotification/OrderNotificationTable";
+import OrderOverview from "../components/OrderOverview";
 import OrderTrackingPage01 from "../components/OrderTrackingPage01/OrderTrackingPage01";
 import AllProduct from "../components/ProductCampaignMain/AllProduct";
 import ProductCampaignFive from "../components/ProductCampaignMain/ProductCampaignFive";
@@ -30,6 +34,7 @@ import SellerVerificationPage5 from "../components/SellerVerificationPage5/Selle
 import ProductShipping from "../components/ShippingManagement/ProductShipping";
 import UploadProduct from "../components/UploadProduct/UploadProduct";
 import ManageOrders from "../pages/manageOrders/ManageOrders";
+import OrderNotification from "../pages/OrderNotification/OrderNotification";
 
 export const manageProductsArray = [
   {
@@ -182,5 +187,25 @@ export const manageProductsArray = [
     title: "LiveChatTwo",
     href: "liveChatTwo",
     element: <LiveChatTwo></LiveChatTwo>,
+  },
+  {
+    title: "OrderOverview",
+    href: "orderOverview",
+    element: <OrderOverview></OrderOverview>,
+  },
+  {
+    title: "ReportManagement",
+    href: "reportManagement",
+    element: <ReportManagement></ReportManagement>,
+  },
+  {
+    title: "ReportManagementOne",
+    href: "reportManagementOne",
+    element: <ReportManagementOne></ReportManagementOne>,
+  },
+  {
+    title: "OrderNotification",
+    href: "orderNotification",
+    element: <OrderNotification></OrderNotification>,
   },
 ];

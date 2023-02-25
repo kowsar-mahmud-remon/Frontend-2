@@ -8,50 +8,57 @@ import MyWishList from "../components/ManageAccoutSideBar/MyWishList";
 import FollowedStores from "../components/ManageAccoutSideBar/FollowedStores";
 import MyOrderDetails from "../components/myOrderDetails/myOrderDetails";
 import MyOrderCancelation from "../components/MyOrderCancelation/MyOrderCancelation";
-import AddNewAddress from "../components/AddressBook/AddNewAddress";
 import AddressBook from "../components/AddressBook/AddressBook";
 import EditProfile from "../components/ManageAccoutSideBar/EditProfile";
 import ChangesPassword from "../components/ManageAccoutSideBar/ChangesPassword";
 import MyPaymentOption from "../components/ManageAccoutSideBar/myPaymentOption";
 import MyReturns from "../components/ManageAccoutSideBar/MyReturns";
 import MyCancelation from "../components/ManageAccoutSideBar/MyCancelation";
-import MyReturnsResponsive from "../components/ManageAccoutSideBar/MyReturnsResponsive";
 import Coupons from "../components/ManageAccoutSideBar/Coupons";
 import GiftCards from "../components/ManageAccoutSideBar/GiftCards";
-
 
 const profileLinksObj = [
   {
     title: "Manage My Account",
     href: "manageAccount",
     element: <ManageAccount />,
+  },
+  {
+    title: "My Profile",
+    href: "myProfile",
+    element: <Profile />,
     links: [
       {
-        title: "My Profile",
-        href: "myProfile",
-        element: <Profile />,
+        title: "EditProfile",
+        href: "editProfile",
+        element: <EditProfile></EditProfile>,
       },
       {
-        title: "Address Book",
-        href: "addressBook",
-        element: <AddressBook />,
+        title: "changesPassword",
+        href: "changesPassword",
+        element: <ChangesPassword></ChangesPassword>,
       },
-      {
-        title: "My Payment Options",
-        href: "myPaymentOptions",
-        element: <MyPaymentOption />,
-      },  {
-        title: "Coupons",
-        href: "Coupons",
-        element: <Coupons />,
-      },
-      {
-        title: "Gift Cards",
-        href: "GiftCards",
-        element:<GiftCards></GiftCards>
-      }
-
     ],
+  },
+  {
+    title: "Shipping Address",
+    href: "shippingAddress",
+    element: <AddressBook />,
+  },
+  {
+    title: "My Payment Options",
+    href: "myPaymentOptions",
+    element: <MyPaymentOption />,
+  },
+  {
+    title: "Coupons",
+    href: "Coupons",
+    element: <Coupons />,
+  },
+  {
+    title: "Gift Cards",
+    href: "GiftCards",
+    element: <GiftCards />,
   },
   {
     title: "My Orders",
@@ -59,23 +66,34 @@ const profileLinksObj = [
     element: <MyOrder></MyOrder>,
     links: [
       {
-        title: "My Returns",
-        href: "myReturns",
-        element: <MyReturns></MyReturns>,
+        title: "MyOrders",
+        href: "myOrderDetails",
+        element: <MyOrderDetails />,
       },
-      {
-        title: "My Cancellations",
-        href: "myCancellations",
-        element: <MyCancelation />,
-      }
-
-    ]
+    ],
+  },
+  {
+    title: "My Returns",
+    href: "myReturns",
+    element: <MyReturns></MyReturns>,
+  },
+  {
+    title: "My Cancellations",
+    href: "myCancellations",
+    element: <MyCancelation />,
   },
 
   {
     title: "My Reviews",
     href: "myReviews",
     element: <MyReviews />,
+    links: [
+      {
+        title: "WriteReview",
+        href: "writeReview",
+        element: <WriteReview />,
+      },
+    ],
   },
   {
     title: "My Wishlists",
@@ -94,35 +112,10 @@ const profileLinksObj = [
   },
   // sub link
   {
-    title: "MyOrders",
-    href: "myOrderDetails",
-    element: <MyOrderDetails />,
-  },
-  {
     title: "OrderCancelation",
     href: "myOrderCancelation",
     element: <MyOrderCancelation />,
   },
-  {
-    title: "WriteReview",
-    href: "writeReview",
-    element: <WriteReview />,
-  },
-  {
-    title: "EditProfile",
-    href: "editProfile",
-    element: <EditProfile></EditProfile>
-  },
-  {
-    title: "changesPassword",
-    href: "changesPassword",
-    element: <ChangesPassword></ChangesPassword>
-  }
-
 ];
 
-
-
-
-
-export { profileLinksObj}
+export { profileLinksObj };

@@ -14,7 +14,7 @@ const AddressBook = () => {
       <AddressBookModal></AddressBookModal>
       <AddNewAddress></AddNewAddress>
       <EditAddress></EditAddress>
-      <div className=" w-full mx-auto my-7">
+      <div className=" max-w-[924px] lg:mr-[20px]">
         <div className="flex justify-between mb-8">
           <div className="flex items-center">
             <button className="flex items-center lg:hidden" onClick={() => router.back()}>
@@ -49,9 +49,9 @@ const AddressBook = () => {
           </div>
         </div>
         <div
-          className={`p-6 w-full grid md:grid-cols-2 lg:grid-cols-2 grid-cols-1 pb-72 rounded-lg h-[479px] bg-[#FFFFFF] ${style.boxshaddow}`}
+          className={`p-6 w-full grid  lg:justify-items-center xl:grid-cols-2 grid-cols-1 pb-72 rounded-lg h-[479px] bg-[#FFFFFF] ${style.boxshaddow}`}
         >
-          <div className="p-4 mb-2 rounded-lg border-[#707070] border address-card mr-4 lg:w-[428px] md:w-[428px] w-full">
+          <div className="p-4 mb-2 rounded-lg border-[#707070] border address-card mr-4 max-w-[428px]">
             <div className="flex justify-between items-center">
               <h1 className="font-medium text-base text-[#001E00] ">
                 Abdul Korim
@@ -74,7 +74,7 @@ const AddressBook = () => {
               <p className="text-[#287DF3] bg-[#F2F3F7] text-[12px] px-2 rounded cursor-pointer">
                 Home
               </p>
-              <p className="text-[#707070] bg-[#F2F3F7] text-[12px]  px-2 rounded ml-4">
+              <p className="text-[#707070] bg-[#F2F3F7]  text-[12px]  px-2 rounded ml-4">
                 Default Shipping Address
               </p>
               <p className="text-[#707070] text-[12px] bg-[#F2F3F7] px-2 rounded ml-4">
@@ -82,7 +82,7 @@ const AddressBook = () => {
               </p>
             </div>
           </div>
-          <div className="p-4 mb-2 rounded-lg border-[#707070] border address-card mr-4 lg:w-[428px] md:w-[428px] w-full">
+          <div className="p-4 mb-2 rounded-lg border-[#707070] border address-card mr-4 max-w-[428px] ">
             <div className="flex justify-between items-center">
               <h1 className="font-medium text-base text-[#001E00] ">
                 Abdul Korim
@@ -97,7 +97,7 @@ const AddressBook = () => {
               </div>
             </div>
             <p className="py-3 text-[#686868]">++88 012 342 450 45</p>
-            <p className="text-[#686868]">
+            <p className="text-[#686868] ">
               Bashundhara City Shopping Complex, 3 No Tejturi Bazar West
             </p>
 

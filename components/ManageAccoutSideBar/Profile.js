@@ -62,9 +62,7 @@ const Profile = () => {
               <h1 className="text-[#001E00] font-[500] text-[14px]">Genter</h1>
               <h1 className="text-[#686868] text-[16px] mt-[16px]">Male</h1>
             </div>
-            <div>
-
-            </div>
+            <div></div>
           </div>
           <div className="ml-[24px] mt-[150px]  flex flex-col gap-[16px]">
             <label htmlFor="Newsletter-modal-3">
@@ -72,14 +70,14 @@ const Profile = () => {
                 Subscribe to our Newsletter
               </h1>
             </label>
-            <Link href="/profile/editProfile">
+            <Link href="myProfile/editProfile">
               <button className="w-[273px] h-[48px] bg-[#FB641B] text-[white] rounded-[8px]">
                 <span className="text-[16px] text-[500] text-[#FFFFFF]">
                   Edit Profile
                 </span>
               </button>
             </Link>
-            <Link href="/profile/changesPassword">
+            <Link href="myProfile/changesPassword">
               <button className="w-[273px] h-[48px] bg-[#FB641B] text-[white] rounded-[8px]">
                 <span className="text-[16px] text-[500] text-[#FFFFFF]">
                   Change Password
@@ -270,7 +268,7 @@ const Profile = () => {
             <div className="flex justify-between gap-[20px] mt-[200px] w-full">
               <Link
                 className="text-[#FFFFFF] bg-[#FB641B] w-full h-[48px] rounded-[8px] font-[500]text-[16px]"
-                href="/profile/editProfile"
+                href="myProfile/editProfile"
               >
                 {" "}
                 <button className="text-[#FFFFFF] bg-[#FB641B] w-full h-[48px] rounded-[8px] font-[500]text-[16px]">
@@ -280,7 +278,7 @@ const Profile = () => {
 
               <Link
                 className="text-[#FFFFFF] bg-[#FB641B] w-full h-[48px] rounded-[8px] font-[500]text-[16px]"
-                href="/profile/changesPassword"
+                href="myProfile/changesPassword"
               >
                 {" "}
                 <button className="text-[#FFFFFF] bg-[#FB641B] w-full h-[48px] rounded-[8px] font-[500]text-[16px]">

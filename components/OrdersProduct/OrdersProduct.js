@@ -20,7 +20,7 @@ const OrdersProduct = ({ data }) => {
           </div>
           <div className=' md:mt-[0px]'>
             <Link
-              href={`/profile/myOrderDetails`}
+              href={`myOrders/myOrderDetails`}
               className="text-[#287DF3] md: text-[16px] mr-[8px] md:mr-[15px]"
             >
               <span>View More</span>

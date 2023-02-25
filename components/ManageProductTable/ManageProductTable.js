@@ -40,11 +40,11 @@ const ManageProductTable = ({ product }) => {
         <td className="px-6 py-4">
           <div className="flex-col ">
             <button className="border flex items-center  text-[#686868] bg-white py-[5px] px-[27px] rounded-lg mb-[12px]">
-              <FaEdit className="mr-[6px] "/>
+              <FaEdit className="mr-[6px] " />
               Edit
             </button>
             <button className="border flex items-center  bg-[#F4253F] text-white py-[5px] px-[20px] rounded-lg">
-              <FaTrashAlt className="mr-[6px] "/>
+              <FaTrashAlt className="mr-[6px] " />
               Delete
             </button>
           </div>

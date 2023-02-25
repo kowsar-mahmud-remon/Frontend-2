@@ -1,15 +1,15 @@
 const profileSidebarLinks = [
-    {
-      title: "Manage My Account",
-      href: "manageAccount",
-    },
+  {
+    title: "Manage My Account",
+    href: "manageAccount",
+  },
   {
     title: "My Profile",
     href: "myProfile",
   },
   {
-    title: "Address Book",
-    href: "addressBook",
+    title: "Shipping Address",
+    href: "shippingAddress",
   },
   {
     title: "My Payment Options",
@@ -21,7 +21,7 @@ const profileSidebarLinks = [
   },
   {
     title: "Gift Cards",
-    href: "Coupons",
+    href: "GiftCards",
   },
   {
     title: "My Orders",
@@ -54,51 +54,5 @@ const profileSidebarLinks = [
   },
 ];
 
-export const profileResponsiveBar = [
-  {
-    title: "Manage My Account",
-    href: "manageAccount",
-  },
-  {
-    title: "My Profile",
-    href: "manageAccount/myProfile",
-  },
-  {
-    title: "Address book",
-    href: "manageAccount/addressBook",
-  },
-  {
-    title: "My Payment Options",
-    href: "manageAccount/myPaymentOptions",
-  },
-  {
-    title: "My Orders",
-    href: "myOrders",
-  },
-  {
-    title: "My Returns",
-    href: "myReturns",
-  },
-  {
-    title: "My Cancellations",
-    href: "myOrders/myCancellations",
-  },
-  {
-    title: "My Reviews",
-    href: "myReviews",
-  },
-  {
-    title: "My Wishlist",
-    href: "myWishlists",
-  },
-  {
-    title: "Followed Stores",
-    href: "followedStores",
-  },
-  {
-    title: "Sell On Bangla Big Store",
-    href: "sellStore",
-  },
-];
 
 export default profileSidebarLinks;
