@@ -308,7 +308,6 @@ const MyReviews = () => {
           ))}
 
         <div className="flex lg:justify-end xl:mr-[70px] xxl:mr-[400px] ">
-         
           <div className="btn-group mt-[16px]">
             <button
               onClick={() => setPage(page - 1)}
@@ -385,7 +384,7 @@ const MyReviews = () => {
                         </div>
                         <Link
                           className="text-[14px] mt-[16px] text-[#FB641B] font-normal  italic"
-                          href="/profile/writeReview"
+                          href="myReviews/writeReview"
                         >
                           REVIEW
                         </Link>
