@@ -273,7 +273,7 @@ const ManageProductsSideNav = () => {
       id: 11,
       name: "Account & Settings",
       href: "editProductsTwo",
-      img: account,
+      img: frozenFoods,
       subcata: [
         {
           name: "Profile",
@@ -293,7 +293,7 @@ const ManageProductsSideNav = () => {
       id: 12,
       name: "Account Type",
       href: "editProductsTwo",
-      img: laptop,
+      img: account,
       subcata: [
         {
           name: "Add Product",
