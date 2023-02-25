@@ -42,7 +42,7 @@ const ManageProductsSideNav = () => {
   const datas = [
     {
       id: 1,
-      name: "Products",
+      name: "Inventory Management",
       href: "editProductsTwo",
       img: exclusives,
       subcata: [
@@ -58,8 +58,12 @@ const ManageProductsSideNav = () => {
           name: "Edit Product",
           href: "editProduct"
         },
+        // {
+        //   name: "Product Invoice",
+        //   href: "productInvoices"
+        // },
         {
-          name: "Product Invoice",
+          name: "Products List",
           href: "productInvoices"
         },
       ],
@@ -86,18 +90,22 @@ const ManageProductsSideNav = () => {
     },
     {
       id: 3,
-      name: "Orders & Reviews",
+      name: "Orders Management",
       href: "editProductsTwo",
       img: kachaBazar,
       subcata: [
         {
-          name: "Manage Orders",
+          name: "Order Notifications",
           href: "manageOrders"
         },
         {
-          name: "Manage Reviews",
-          href: "manageReview"
+          name: "Manage Orders",
+          href: "manageOrders"
         },
+        // {
+        //   name: "Manage Reviews",
+        //   href: "manageReview"
+        // },
         {
           name: "Order History",
           href: "orderHistory"
@@ -125,11 +133,35 @@ const ManageProductsSideNav = () => {
         {
           name: "Performance Report",
           href: "editProduct"
+        },
+        {
+          name: "Total Earning",
+          href: "editProduct"
         }
       ],
     },
     {
       id: 5,
+      name: "Seller Documents",
+      href: "editProductsTwo",
+      img: bakerySnacks,
+      subcata: [
+        {
+          name: "Account Statement",
+          href: "editProduct"
+        },
+        {
+          name: "NID Card",
+          href: "editProduct"
+        },
+        {
+          name: "Bank Statement",
+          href: "editProduct"
+        }
+      ],
+    },
+    {
+      id: 6,
       name: "Shipping Management",
       href: "editProductsTwo",
       img: shipped,
@@ -145,7 +177,7 @@ const ManageProductsSideNav = () => {
       ],
     },
     {
-      id: 6,
+      id: 7,
       name: "Feedback Management",
       href: "editProductsTwo",
       img: review,
@@ -161,26 +193,6 @@ const ManageProductsSideNav = () => {
         {
           name: "Report Management",
           href: "reportManagement"
-        }
-      ],
-    },
-    {
-      id: 7,
-      name: "Seller Support",
-      href: "editProductsTwo",
-      img: teaCoffee,
-      subcata: [
-        {
-          name: "Help Center",
-          href: "helpCenter"
-        },
-        {
-          name: "Contact Us",
-          href: "contactUs"
-        },
-        {
-          name: "Live Chat",
-          href: "liveChatTwo"
         }
       ],
     },
@@ -208,30 +220,54 @@ const ManageProductsSideNav = () => {
         },
       ],
     },
-
- 
     {
       id: 9,
-      name: "Seller Documents",
+      name: "Tax & Offers",
       href: "editProductsTwo",
-      img: bakerySnacks,
+      img: dairy,
       subcata: [
         {
-          name: "Account Statement",
+          name: "Coupon Management",
           href: "editProduct"
         },
         {
-          name: "NID Card",
+          name: "Commission Management",
           href: "editProduct"
         },
         {
-          name: "Bank Statement",
+          name: "Tax Management",
           href: "editProduct"
         }
       ],
     },
+
     {
       id: 10,
+      name: "Help & Support",
+      href: "editProductsTwo",
+      img: teaCoffee,
+      subcata: [
+        {
+          name: "FAQ",
+          href: "helpCenter"
+        },
+        {
+          name: "Email Support",
+          href: "contactUs"
+        },
+        {
+          name: "Live Chat",
+          href: "liveChatTwo"
+        },
+        {
+          name: "Phone Support",
+          href: "liveChatTwo"
+        }
+      ],
+    },
+
+    {
+      id: 11,
       name: "Account & Settings",
       href: "editProductsTwo",
       img: frozenFoods,
@@ -247,15 +283,11 @@ const ManageProductsSideNav = () => {
         {
           name: "Subscription",
           href: "editProduct"
-        },
-        {
-          name: "Total Earning",
-          href: "editProduct"
-        },
+        }
       ],
     },
     {
-      id: 11,
+      id: 12,
       name: "Account Type",
       href: "editProductsTwo",
       img: laptop,
@@ -287,7 +319,7 @@ const ManageProductsSideNav = () => {
 
         <div className="">
           <section
-            className={`${styles.sideNav} w-[266px] ${isActiveCategory ? "left-[-400px]" : ""
+            className={`${styles.sideNav} w-[285px] ${isActiveCategory ? "left-[-400px]" : ""
               } p-2 bg-[#ffffff] shawdow-black shadow-2xl delay-700 sideNavTransition`}
             id="sidNav"
           >
