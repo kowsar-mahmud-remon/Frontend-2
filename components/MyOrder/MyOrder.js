@@ -153,7 +153,7 @@ const MyOrder = () => {
       <div className="w-[100%]">
         <h1 className="text-[#FB641B] text-[24px] font-semibold">My Orders</h1>
       </div>
-      <div className="mt-[32px] md:w-[96%]">
+      <div className="mt-[32px] md:w-[92%]">
         <div className="md:w-[70%]">
           <ul className="flex  justify-between   ">
             <button
@@ -205,7 +205,7 @@ const MyOrder = () => {
       {isActive === "all" && (
         <>
           <div className="mt-[16px] md:block hidden">
-            <div className=" h-[80px] md:w-[96%] w-full rounded-[8px] bg-[#FFFFFF] shadow-lg">
+            <div className=" h-[80px] md:w-[92%] w-full rounded-[8px] bg-[#FFFFFF] shadow-lg">
               <div className=" w-full max-w-xs mt-4 gap-[16px] flex ">
                 <p className="label mt-[25px] ml-[24px] mb-[30px] text-[16px]">
                   {" "}

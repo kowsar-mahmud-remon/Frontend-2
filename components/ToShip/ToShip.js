@@ -77,7 +77,7 @@ const ToShip = () => {
                 datas.map(data => {
                     return (
                         <div key={data.id} className="mt-[16px]  ">
-                            <div className="md:w-[96%] w-[100%] h-auto rounded-[8px] bg-[#FFFFFF] shadow-lg">
+                            <div className="md:w-[92%] w-[100%] h-auto rounded-[8px] bg-[#FFFFFF] shadow-lg">
                                 <div className="flex md:items-center justify-between ">
                                     <div className="ml-[12px] md:mt-[16px] mt-[16px] w-[70%]">
                                         <p>

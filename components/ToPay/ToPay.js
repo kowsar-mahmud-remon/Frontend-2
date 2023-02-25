@@ -119,7 +119,7 @@ const ToPay = () => {
             {
                 datas.map(data => {
                     return (
-                        <div key={data.id} className='md:w-[96%]'>
+                        <div key={data.id} className='md:w-[92%]'>
                             <div className="mt-[16px] ">
                                 <div className="w-[100%]  rounded-[8px] bg-[#FFFFFF] shadow-lg pt-[12px]">
                                     <div className="flex items-center justify-between md:mb-[16px]">
@@ -152,7 +152,7 @@ const ToPay = () => {
                                                 <p className='text-[#001E00] text-[.7rem] md:text-[1.3vw] hidden md:block   '>Qty:{data.qty}</p>
                                             </div>
                                             <div className=' bg-[#F2F3F7] rounded-md'>
-                                                <p className='text-[#686868] px-[5px]  rounded-sm  text-[.7rem] hidden md:block  md:text-[.4rem]   '>{data.status}</p>
+                                                <p className='text-[#686868] px-[5px]  rounded-sm  text-[.7rem] hidden md:block  md:text-[.7vw]   '>{data.status}</p>
                                             </div>
                                             <div>
                                                 <p className='text-[#026C51] hidden md:block text-[.7rem] md:text-[1.3vw] '>{data.deliveredDate}</p>

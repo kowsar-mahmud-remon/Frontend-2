@@ -5,14 +5,14 @@ const OrdersProduct = ({ data }) => {
 
   return (
     <div className="mt-[16px]  ">
-      <div className="md:w-[96%] w-[100%] h-auto rounded-[8px] bg-[#FFFFFF] shadow-lg">
+      <div className="md:w-[92%] w-[100%] h-auto rounded-[8px] bg-[#FFFFFF] shadow-lg">
         <div className="flex md:items-center pt-[16px] justify-between">
           <div className="px-[16px] ">
             <p>
               <span className="md:text-[16px] text-[14px] font-bold text-black">Order</span>{" "}
               <span className="text-[#287DF3] md:text-[16px] text-[14px]">#{data.orderId}</span>
             </p>
-            <p className='text-[11px] md:text-[14px] text-[14px] text-[#686868] '>{data.orderDate}</p>
+            <p className='text-[11px] md:text-[14px] text-[#686868] '>{data.orderDate}</p>
             <p className=" md:hidden block text-[11px] text-[#686868]  mr-[19px]">
               {data.deliveredDate}
             </p>
