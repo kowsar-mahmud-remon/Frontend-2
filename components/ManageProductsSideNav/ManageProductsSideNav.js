@@ -13,6 +13,9 @@ import bakerySnacks from '../../assets/images/Seller_Verification_page/folder 1.
 import frozenFoods from '../../assets/images/Seller_Verification_page/settings 1.png';
 import shipped from '../../assets/images/Seller_Verification_page/shipped 1.png';
 import review from '../../assets/images/Seller_Verification_page/review 1.png';
+import clipboard from '../../assets/images/Seller_Verification_page/clipboard 1.png';
+import tax from '../../assets/images/Seller_Verification_page/tax 1.png';
+import account from '../../assets/images/Seller_Verification_page/account 1.png';
 
 import DataTable from "react-data-table-component";
 // import Managelist from "./Managelist";
@@ -92,7 +95,7 @@ const ManageProductsSideNav = () => {
       id: 3,
       name: "Orders Management",
       href: "editProductsTwo",
-      img: kachaBazar,
+      img: clipboard,
       subcata: [
         {
           name: "Order Notifications",
@@ -224,7 +227,7 @@ const ManageProductsSideNav = () => {
       id: 9,
       name: "Tax & Offers",
       href: "editProductsTwo",
-      img: dairy,
+      img: tax,
       subcata: [
         {
           name: "Coupon Management",
@@ -270,7 +273,7 @@ const ManageProductsSideNav = () => {
       id: 11,
       name: "Account & Settings",
       href: "editProductsTwo",
-      img: frozenFoods,
+      img: account,
       subcata: [
         {
           name: "Profile",
