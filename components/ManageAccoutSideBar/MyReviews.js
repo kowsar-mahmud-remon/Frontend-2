@@ -128,11 +128,11 @@ const MyReviews = () => {
   };
   return (
     <div>
-      <div className="lg:block hidden">
+      <div className="lg:block hidden lg:mr-[20px]">
         <div>
           <h1 className="font-[400] text-[24px] text-[#FB641B]">My Reviews</h1>
         </div>
-        <div className=" max-w-[924px] h-[56px] rounded-[8px] shadow-small border-b-4  mt-[32px]">
+        <div className=" max-w-[924px]  h-[56px] rounded-[8px] shadow-small border-b-4  mt-[32px]">
           <div className="ml-[30px] p-[7px]  gap-[54px] flex">
             <button
               onClick={() => setActive("review")}

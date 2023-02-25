@@ -8,9 +8,9 @@ const ChangesPassword = () => {
         <div>
             <div className="hidden lg:block">
                 <div>
-                    <h1 className='text-[24px] max-w-[924px] text-[#FB641B]'>Changes Password</h1>
+                    <h1 className='text-[24px] max-w-[924px]  text-[#FB641B]'>Changes Password</h1>
                 </div>
-                <div className="changePassword  max-w-[924px] h-[548px]  mt-[32px]">
+                <div className="changePassword  max-w-[924px] lg:mr-[20px] h-[548px]  mt-[32px]">
                     <div className="pt-[32px] mx-[24px]">
                         <div className="col-span-2">
                             <div>

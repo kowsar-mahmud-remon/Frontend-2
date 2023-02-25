@@ -8,14 +8,12 @@ import MyWishList from "../components/ManageAccoutSideBar/MyWishList";
 import FollowedStores from "../components/ManageAccoutSideBar/FollowedStores";
 import MyOrderDetails from "../components/myOrderDetails/myOrderDetails";
 import MyOrderCancelation from "../components/MyOrderCancelation/MyOrderCancelation";
-import AddNewAddress from "../components/AddressBook/AddNewAddress";
 import AddressBook from "../components/AddressBook/AddressBook";
 import EditProfile from "../components/ManageAccoutSideBar/EditProfile";
 import ChangesPassword from "../components/ManageAccoutSideBar/ChangesPassword";
 import MyPaymentOption from "../components/ManageAccoutSideBar/myPaymentOption";
 import MyReturns from "../components/ManageAccoutSideBar/MyReturns";
 import MyCancelation from "../components/ManageAccoutSideBar/MyCancelation";
-import MyReturnsResponsive from "../components/ManageAccoutSideBar/MyReturnsResponsive";
 import Coupons from "../components/ManageAccoutSideBar/Coupons";
 import GiftCards from "../components/ManageAccoutSideBar/GiftCards";
 
@@ -43,8 +41,8 @@ const profileLinksObj = [
     ],
   },
   {
-    title: "Address Book",
-    href: "addressBook",
+    title: "Shipping Address",
+    href: "shippingAddress",
     element: <AddressBook />,
   },
   {
@@ -56,6 +54,11 @@ const profileLinksObj = [
     title: "Coupons",
     href: "Coupons",
     element: <Coupons />,
+  },
+  {
+    title: "Gift Cards",
+    href: "GiftCards",
+    element: <GiftCards />,
   },
   {
     title: "My Orders",

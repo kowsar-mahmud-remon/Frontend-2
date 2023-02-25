@@ -8,8 +8,8 @@ const profileSidebarLinks = [
     href: "myProfile",
   },
   {
-    title: "Address Book",
-    href: "addressBook",
+    title: "Shipping Address",
+    href: "shippingAddress",
   },
   {
     title: "My Payment Options",
@@ -21,7 +21,7 @@ const profileSidebarLinks = [
   },
   {
     title: "Gift Cards",
-    href: "Coupons",
+    href: "GiftCards",
   },
   {
     title: "My Orders",

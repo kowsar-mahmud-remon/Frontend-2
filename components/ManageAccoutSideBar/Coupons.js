@@ -55,7 +55,7 @@ const Coupons = () => {
                 <h1 className="text-[#FB641B] text-[24px]">Available Coupon</h1>
             </div>
 
-            <div className="lg:shadow-small max-w-[924px] xl:h-[644px] mt-[16px]">
+            <div className="lg:shadow-small max-w-[924px] lg:mr-[20px] rounded-[8px] xl:h-[644px] mt-[16px]">
                 <div className="mx-[16px] pt-[16px]">
                     <div className="grid xl:grid-cols-2 grid-cols-1  gap-[16px]">
                         <div>
