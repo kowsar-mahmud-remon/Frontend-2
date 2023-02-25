@@ -5,9 +5,9 @@ import item from "./faketabledata.json";
 
 const OrderOverview = () => {
   return (
-    <section className="bg-[#FFFFFF] w-full pt-7">
+    <section className="bg-[#FFFFFF] w-full pt-7">  
       <div className="">
-        <div className="">
+        <div className="lg:max-w-[1426px]">       
           <div>
             <div className="text-lg breadcrumbs text-[#686868]">
               <ul>

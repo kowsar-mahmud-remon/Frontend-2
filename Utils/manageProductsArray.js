@@ -10,6 +10,7 @@ import ManageProduct from "../components/ManageProduct/ManageProduct";
 import ManageReview from "../components/ManageReview/ManageReview";
 import ManageReviewList from "../components/ManageReviewList/ManageReviewList";
 import OrderHistory from "../components/orderHistory.js/OrderHistory";
+import OrderNotificationTable from "../components/OrderNotification/OrderNotificationTable";
 import OrderOverview from "../components/OrderOverview";
 import OrderTrackingPage01 from "../components/OrderTrackingPage01/OrderTrackingPage01";
 import AllProduct from "../components/ProductCampaignMain/AllProduct";
@@ -33,6 +34,7 @@ import SellerVerificationPage5 from "../components/SellerVerificationPage5/Selle
 import ProductShipping from "../components/ShippingManagement/ProductShipping";
 import UploadProduct from "../components/UploadProduct/UploadProduct";
 import ManageOrders from "../pages/manageOrders/ManageOrders";
+import OrderNotification from "../pages/OrderNotification/OrderNotification";
 
 export const manageProductsArray = [
   {
@@ -200,5 +202,10 @@ export const manageProductsArray = [
     title: "ReportManagementOne",
     href: "reportManagementOne",
     element: <ReportManagementOne></ReportManagementOne>,
+  },
+  {
+    title: "OrderNotification",
+    href: "orderNotification",
+    element: <OrderNotification></OrderNotification>,
   },
 ];
