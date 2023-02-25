@@ -3,7 +3,7 @@ import img from '../../assets/images/image 7.png'
 import Image from 'next/image'
 import Link from 'next/link';
 import { FaArrowLeft } from 'react-icons/fa';
-import { useRouter } from "next/router";
+import { useRouter } from 'next/router';
 
 const MyReturns = () => {
     const router = useRouter()
@@ -79,83 +79,77 @@ const MyReturns = () => {
 
 
     return (
-        <div className='flex justify-center  pb-[227px]'>
-            <div className='w-[924px]'>
-                <h1 className='text-[24px] text-[#FB641B] font-semibold mt-[24px] mb-[32px] ml-4 md:ml-4 lg:ml-0'>Returns Details</h1>
-                <div className='flex justify-between items-center px-[16px] shadow-md py-[20px] rounded-md mb-[16px] w-full'>
-                    <div>
-                        <p className='text-[16px] font-semibold text-[#001E00]'>Order <span className='text-[#287DF3]'>#12345678998745</span></p>
-                        <p className='text-[14px] text-[#686868] font-semibold'>Placed On 21 Dce 2022 10:21:00</p>
-                    </div>
-                    <p className='text-[16px] font-semibold text-[#686868]'>Total: <span className='text-[#001E00]'>Tk 130</span></p>
-                </div>
-                <div className='shadow-md p-[16px] rounded-md'>
-                    <div className='flex items-center gap-[8px]'>
-                        <Image
-                            className='w-[14px] h-[16px]'
-                            src={img}
+        <div className="mt-[20px]  ">
+            <button onClick={() => router.back()} className='flex items-center md:pl-0 pl-[10px] gap-[13px]'>
+                <FaArrowLeft className='md:hidden'></FaArrowLeft>
+                <h1 className='text-[20px] md:text-[24px] md:mb-[32px]  font-[500] text-[#001E00] md:text-[#FB641B]'>My Returns</h1>
+            </button>
+
+            {
+                datas.map(data => {
+                    return (
+                        <div key={data.id} className="mt-[16px]  ">
+                            <div className="md:w-[90%] w-[100%] h-auto rounded-[8px] bg-[#FFFFFF] shadow-lg">
+                                <div className="flex md:items-center ">
+                                    <div className="ml-[12px] md:mt-[16px] mt-[16px] md:w-[36%] w-[100%]">
+                                        <p className='text-[11px] hidden md:block md:text-[14px] text-[#686868] '>{data.orderDate}</p>
+
+                                        <p>
+                                            <span className="md:text-[1.3vw] text-[14px] font-bold text-black">Order</span>{" "}
+                                            <span className="md:text-[#287DF3] text-[14px] md:text-[1.3vw] ">#{data.orderId}</span>
+                                        </p>
+                                        <p className='text-[11px] md:hidden block md:text-[14px] text-[#686868] '>{data.orderDate}</p>
+                                        <p className='text-[11px] md:hidden block md:text-[14px] text-[#686868] '>   Returns To Banglar BigStore</p>
+
+
+                                    </div>
+                                    <div className='mt-[16px] md:mt-[-16px] w-[74%] md:flex  md:px-[10px]'>
+                                        <Link
+                                            href={`/profile/myOrderDetails`}
+                                            className="text-[#287DF3] md:text-[1.3vw] hidden text-[14px] "
+                                        >
+                                            <span className='md:text-[1.3vw] text-[#686868]'>Return to Banglar Big Store</span>
+                                        </Link>
+                                        <div className='md:hidden '>
+                                            <p>
+                                                <Link
+                                                    href={`/profile/myOrderDetails`}
+                                                    className="text-[#287DF3] md:text-[1.3vw]  text-[14px] mr-[10px] flex justify-end "
+                                                >
+                                                    <span className='md:text-[1.3vw] text-[#686868]'>View More</span>
+                                                </Link>
+                                            </p>
+                                            <p className=" md:hidden mt-[16px]  mr-[4px] w-[120px] h-[32px]  rounded-[54px] px-[5px] text-center  md:text-[#FB641B] text-[#686868] text-[10px]  bg-[#F2F3F7]  mb-[14px]">
+                                                {data.status}
+                                            </p>
 
                                         </div>
 
-                </div>
-            </div>
-            <hr className="border-[1px] mt-[16px] hidden md:block border-[#686868]" />
-            <div className="flex justify-between md:text-[1.3vw]">
-                <div className="flex md:items-center md:mt-[16px] md:mb-[16px] gap-[16px]">
-                    <Image className='w-[44px] h-[36px] md:w-[57px] md:h-[46px] ml-[12px]' src={data.image} width="57" height="46" alt=""></Image>
-                    <div>
-                        <p className='text-[12px]  md:text-[1.3vw]  text-[#001E00]'>{data.peoductName}</p>
-                        <p className=" md:hidden block text-[12px] text-[#686868]  mb-[30px]">Qty: <span className='text-[#001E00]'>{data.qty}</span></p>
-                    </div>
-                </div>
-                <p className=" hidden md:block mt-[31px] mb-[30px]">Qty: {data.qty}</p>
-                <p className=" hidden md:block mt-[33px] lg:mt-[33px] xl:mt-[36px] w-[186px] h-[41px] bg-[#F2F3F7] text-[#686868] rounded-[54px] text-[0.8rem] text-center mb-[30px]">
-                    {data.status}
-                </p>
-                <p className=" hidden  text-[#287DF3] md:block mt-[31px] mb-[30px] mr-[19px]">
-                    {data.deliveredDate}
-                </p>
-            </div>
-        </div>
-                        </div >
-    {/* mobile */ }
-
-    < div className = ' w-[70%] mt-4 hidden md:block ' >
-    {
-        vegs.map(veg => {
-            return (
-                <div key={veg.id} className='flex justify-between items-center mb-[32px]'>
-                    <div className='flex items-center'>
-                        <Image
-                            className='w-[73px] h-[58px] md:w-[57px] md:h-[46px] mr-[16px]'
-                            src={veg.img}
-
-                            alt='Image' />
-                        <div className='md:hidden w-full '>
-                            <p className='text-[14px] text-[#001E00]'>{veg.title}</p>
-                            <p className='text-[#686868] text-[14px]'>Tk {veg.tk}</p>
-                            <p className='text-[#686868] text-[14px]'>Qty:<span className='text-[#001E00]'>{veg.qty}</span></p>
+                                    </div>
+                                </div>
+                                <hr className="border-[1px] mt-[16px] hidden md:block border-[#686868]" />
+                                <div className="flex justify-between md:text-[1.3vw]">
+                                    <div className="flex md:items-center md:mt-[16px] md:mb-[16px] gap-[16px]">
+                                        <Image className='w-[44px] h-[36px] md:w-[57px] md:h-[46px] ml-[12px]' src={data.image} width="57" height="46" alt=""></Image>
+                                        <div>
+                                            <p className='text-[12px]  md:text-[1.3vw]  text-[#001E00]'>{data.peoductName}</p>
+                                            <p className=" md:hidden block text-[12px] text-[#686868]  mb-[30px]">Qty: <span className='text-[#001E00]'>{data.qty}</span></p>
+                                        </div>
+                                    </div>
+                                    <p className=" hidden md:block mt-[31px] mb-[30px]">Qty: {data.qty}</p>
+                                    <p className=" hidden md:block mt-[33px] lg:mt-[33px] xl:mt-[36px] w-[186px] h-[41px] bg-[#F2F3F7] text-[#686868] rounded-[54px] text-[0.8rem] text-center mb-[30px]">
+                                        {data.status}
+                                    </p>
+                                    <p className=" hidden  text-[#287DF3] md:block mt-[31px] mb-[30px] mr-[19px]">
+                                        {data.deliveredDate}
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <p className='text-[16px] text-[#001E00] hidden md:block'>{veg.title}</p>
-
-
-                    </div>
-                    <div className='md:block hidden'><p className='text-[#686868] text-[16px]'>Tk {veg.tk}</p></div>
-                    <div className='md:block hidden'><p className='text-[#686868] text-[16px]'>Qty:<span className='text-[#001E00]'>{veg.qty}</span></p></div>
-                </div>
-            )
-        })
-    }
-
-
-                        </div >
-
-                    </div >
-                </div >
-
-
-            </div >
-        </div >
+                    )
+                })
+            }
+        </div>
     );
 };
 

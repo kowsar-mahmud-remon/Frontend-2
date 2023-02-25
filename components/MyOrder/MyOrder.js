@@ -3,8 +3,11 @@ import OrdersProduct from "../OrdersProduct/OrdersProduct";
 import ToPay from "../ToPay/ToPay";
 import ToShip from "../ToShip/ToShip";
 import ToReceive from "../ToReceive/ToReceive";
+import { useRouter } from 'next/router'
+import { FaArrowLeft } from "react-icons/fa";
 
 const MyOrder = () => {
+  const router = useRouter()
   const datas = [
     {
       id: "1",
@@ -151,7 +154,10 @@ const MyOrder = () => {
   return (
     <div className=" md:px-[24px] px-[10px]">
       <div className="w-[100%]">
-        <h1 className="text-[#FB641B] text-[24px] font-semibold">My Orders</h1>
+        <button onClick={() => router.back()} className='flex items-center  gap-[13px]'>
+          <FaArrowLeft className='md:hidden'></FaArrowLeft>
+          <h1 className='text-[20px] md:text-[24px] md:mb-[32px]  font-[500] text-[#001E00] md:text-[#FB641B]'>My Orders</h1>
+        </button>
       </div>
       <div className="mt-[32px] md:w-[92%]">
         <div className="md:w-[70%]">
