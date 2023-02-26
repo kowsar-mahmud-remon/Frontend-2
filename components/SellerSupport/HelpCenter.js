@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import img from '../../assets/images/center.png';
 import { BsArrowRight } from 'react-icons/bs';
+import { AiOutlineMinus } from 'react-icons/ai';
 import styles from "../../styles/campaignManagementTwo.module.css";
 
 
@@ -32,38 +33,46 @@ const HelpCenter = () => {
 
       </div>
 
-      <div tabIndex={0} className={`collapse collapse-plus rounded-box lg:max-w-[913px] mx-auto mt-8 text-[#001E00]`}>
-        <div className="collapse-title text-xl font-medium p-0">
-          <p className={`text-xl font-medium px-[16px] py-[18px] ${styles.inputShadow}`}>1. How do I send my products to Banglar Big Bazar?</p>
+      <div tabIndex={0} className={`collapse rounded-box lg:max-w-[913px] mx-auto mt-8 text-[#001E00] ${styles.inputShadow} group`}>
+        <div className="collapse-title text-xl font-medium p-0 flex justify-between items-center">
+          <p className={`text-xl font-medium px-[16px] py-[18px] `}>1. How do I send my products to Banglar Big Bazar?</p>
+          <BsArrowRight className='text-2xl mr-4 group-focus:hidden'></BsArrowRight>
+          <AiOutlineMinus className='text-2xl mr-4 hidden group-focus:block'></AiOutlineMinus>
         </div>
         <div className="collapse-content">
-          <div className={`p-4 ${styles.inputShadow}`}>
-            <p className='text-base font-medium pr-10 mb-3'>1 How do I send my products to Banglar Big Bazar?</p>
+          <div className={`p-4`}>
+            <p className='text-base font-medium pr-10 mb-3'>1. How do I send my products to Banglar Big Bazar?</p>
             <p className='text-base font-medium pr-10 mb-3'>2 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its
               layout. The point of using</p>
             <p className='text-base font-medium pr-10 mb-3'>3 How do I send my products to Banglar Big Bazar?</p>
           </div>
         </div>
       </div>
-      <div tabIndex={0} className={`collapse collapse-plus rounded-box lg:max-w-[913px] mx-auto mt-4 text-[#001E00]`}>
-        <div className="collapse-title text-xl font-medium p-0">
-          <p className={`text-xl font-medium px-[16px] py-[18px] ${styles.inputShadow}`}>2. Can I change my bank account details?</p>
+
+      <div tabIndex={0} className={`collapse rounded-box lg:max-w-[913px] mx-auto mt-4 text-[#001E00] ${styles.inputShadow} group`}>
+        <div className="collapse-title text-xl font-medium p-0 flex justify-between items-center">
+          <p className={`text-xl font-medium px-[16px] py-[18px] `}>2. Can I change my bank account details?</p>
+          <BsArrowRight className='text-2xl mr-4 group-focus:hidden'></BsArrowRight>
+          <AiOutlineMinus className='text-2xl mr-4 hidden group-focus:block'></AiOutlineMinus>
         </div>
         <div className="collapse-content">
-          <div className={`p-4 ${styles.inputShadow}`}>
-            <p className='text-base font-medium pr-10 mb-3'>1 How do I send my products to Banglar Big Bazar?</p>
+          <div className={`p-4`}>
+            <p className='text-base font-medium pr-10 mb-3'> 3. How can a seller get his returned product?</p>
             <p className='text-base font-medium pr-10 mb-3'>2 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its
               layout. The point of using</p>
             <p className='text-base font-medium pr-10 mb-3'>3 How do I send my products to Banglar Big Bazar?</p>
           </div>
         </div>
       </div>
-      <div tabIndex={0} className={`collapse collapse-plus rounded-box lg:max-w-[913px] mx-auto mt-4 text-[#001E00]`}>
-        <div className="collapse-title text-xl font-medium p-0">
-          <p className={`text-xl font-medium px-[16px] py-[18px] ${styles.inputShadow}`}>3. How can a seller get his returned product?</p>
+
+      <div tabIndex={0} className={`collapse rounded-box lg:max-w-[913px] mx-auto mt-4 text-[#001E00] ${styles.inputShadow} group`}>
+        <div className="collapse-title text-xl font-medium p-0 flex justify-between items-center">
+          <p className={`text-xl font-medium px-[16px] py-[18px] `}>1. How do I send my products to Banglar Big Bazar?</p>
+          <BsArrowRight className='text-2xl mr-4 group-focus:hidden'></BsArrowRight>
+          <AiOutlineMinus className='text-2xl mr-4 hidden group-focus:block'></AiOutlineMinus>
         </div>
         <div className="collapse-content">
-          <div className={`p-4 ${styles.inputShadow}`}>
+          <div className={`p-4`}>
             <p className='text-base font-medium pr-10 mb-3'>1 How do I send my products to Banglar Big Bazar?</p>
             <p className='text-base font-medium pr-10 mb-3'>2 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its
               layout. The point of using</p>
