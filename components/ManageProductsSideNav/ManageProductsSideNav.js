@@ -83,7 +83,7 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Campaign Management",
-          href: "campaignManagement"
+          href: "campaignManagementOne"
         },
         {
           name: "Learn About Ads",
