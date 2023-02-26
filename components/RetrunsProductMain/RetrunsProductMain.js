@@ -4,25 +4,9 @@ import OrderHistoryTable from "./OrderHistoryTable";
 import allProduct from "./fakedb.json";
 import OrderHistoryDate from "../OrderHistoryDate/OrderHistoryDate";
 
-const OrderHistory = () => {
+const RetrunsProductMain = () => {
   const [item, setItem] = useState(allProduct);
-
-  const data = [
-    { text: "Select" },
-    { text: "Canceled" },
-    { text: "Delivered" },
-  ];
-
-  const handleOption = (e) => {
-    if (e === "Select") {
-      setItem(allProduct);
-      return;
-    }
-
-    const allItems = allProduct.filter((food) => food.status === e);
-
-    setItem(allItems);
-  };
+ 
 
   return (
     <section className="bg-[#FFFFFF] min-h-screen pt-7 mb-80 max-w-[1426px]">
@@ -37,29 +21,18 @@ const OrderHistory = () => {
                 <li>
                   <a>Orders & Reviews</a>
                 </li>
-                <li className="text-[#001E00] font-medium">Order History</li>
+                <li className="text-[#001E00] font-medium">Returns Product</li>
               </ul>
             </div>
             <div className="">
-              <h1 className="text-[#FB641B] font-semibold text-2xl">
-                Order History
-              </h1>
             </div>
           </div>
-          <div className="flex justify-between flex-wrap gap-2 z-10 mt-8 ">
+          <div className="flex justify-between flex-wrap gap-2">
             <div className="flex">
               <div className="mr-4 pt-1">
-                <h3 className="text-[#001E00] font-medium text-lg">Filter:</h3>
-              </div>
-              <div>
-                <select
-                  onChange={(e) => handleOption(e.target.value)}
-                  className="w-[138px] h-[40px] bg-[#ffffff] border border-[#B7B7B7] px-2 text-[#001E00] font-medium text-lg rounded"
-                >
-                  {data.map((product, i) => {
-                    return <option key={i}>{product.text}</option>;
-                  })}
-                </select>
+              <h1 className="text-[#FB641B] font-semibold text-2xl">
+              All Returns History
+              </h1>
               </div>
             </div>
             <div className="relative">
@@ -68,7 +41,7 @@ const OrderHistory = () => {
               </div>
             </div>
           </div>
-          <div className="mt-4">
+          <div className="mt-6">
             <div>
               <div
                 className={`rounded-lg  pb-[300px] ${style.boxshaddow} bg-[#FFFFFF]`}
@@ -104,7 +77,7 @@ const OrderHistory = () => {
                               scope="col"
                               className=" py-3 font-medium text-[#001E00] text-base"
                             >
-                              <p className="border-r px-2 border-[#B7B7B7]">
+                              <p className="border-r px-2 whitespace-nowrap border-[#B7B7B7]">
                                 Order Number
                               </p>
                             </th>
@@ -172,4 +145,4 @@ const OrderHistory = () => {
   );
 };
 
-export default OrderHistory;
+export default RetrunsProductMain;
