@@ -39,7 +39,7 @@ const OrderNotificationTable = ({ product }) => {
   return (
     <>
       <tr className="bg-white border-b text-sm border-[#B7B7B7] text-[#001E00]">
-        <td className="px-6 py-4 border-r border-l border-[#B7B7B7]">
+        <td className="p-1 border-r border-l border-[#B7B7B7]">
           <Image className="w-[76px] h-[61px]" width={76} height={61} src={image} alt="" />
         </td>
         <th scope="row" className="px-6 py-4 font-medium border-r border-[#B7B7B7] text-base whitespace-nowrap">
@@ -50,11 +50,11 @@ const OrderNotificationTable = ({ product }) => {
             KS515JKO
           </label>
         </td>
-        <td className="px-6 py-4 font-medium border-r border-[#B7B7B7] text-base">{variation}</td>
+        <td className="px-6 whitespace-nowrap py-4 font-medium border-r border-[#B7B7B7] text-base">{variation}</td>
         <td className="px-6 py-4 font-medium border-r border-[#B7B7B7] text-base">TK {price}</td>
         <td className="px-6 py-4 font-medium border-r border-[#B7B7B7] text-base"> {quantity}</td>
-        <td className="px-6 py-4 font-medium border-r border-[#B7B7B7] text-base">{delivery}</td>
-        <td className="px-6 py-4 font-medium border-r border-[#B7B7B7] text-base">{deliveryDate}</td>
+        <td className="px-6 whitespace-nowrap py-4 font-medium border-r border-[#B7B7B7] text-base">{delivery}</td>
+        <td className="px-6 py-4 font-medium whitespace-nowrap border-r border-[#B7B7B7] text-base">{deliveryDate} <br></br>to {date}</td>
         <td className="px-6 py-4 font-medium border-r border-[#B7B7B7]">
           <button className="link text-[#287DF3]"> Invoice</button>
         </td>
