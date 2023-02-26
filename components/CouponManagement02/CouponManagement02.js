@@ -78,7 +78,7 @@ const CouponManagement02 = () => {
 
                             </div>
                             <div className='flex items-center  text-[#001E00] mb-[16px]'>
-                                <h2 className='mr-[1vw] w-[42%]  text-[1.4vw]  font-semibold text-[#001E00]'>Product Name:</h2>
+                                <h2 className='mr-[1vw] w-[42%]  text-[1.4vw]  font-semibold text-[#001E00]'>Product SKU:</h2>
                                 <div className=''>
                                     <select className='border border-[#B7B7B7] text-[1.3vw] w-[23vw] h-[2.5vw] text-[#001E00] rounded-md px-[10px]'>
 
