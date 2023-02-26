@@ -14,7 +14,7 @@ const AddressBook = () => {
       <AddressBookModal></AddressBookModal>
       <AddNewAddress></AddNewAddress>
       <EditAddress></EditAddress>
-      <div className=" max-w-[924px] lg:mr-[20px]">
+      <div className=" max-w-[924px] mx-[24px] lg:mx-[0px]  lg:mr-[20px]">
         <div className="flex justify-between mb-8">
           <div className="flex items-center">
             <button className="flex items-center lg:hidden" onClick={() => router.back()}>
@@ -49,7 +49,7 @@ const AddressBook = () => {
           </div>
         </div>
         <div
-          className={`p-6 w-full grid  lg:justify-items-center xl:grid-cols-2 grid-cols-1 pb-72 rounded-lg h-[479px] bg-[#FFFFFF] ${style.boxshaddow}`}
+          className={`p-6 w-full grid  lg:justify-items-center xl:grid-cols-2 grid-cols-1 pb-72 rounded-lg lg:h-[479px] bg-[#FFFFFF] ${style.boxshaddow}`}
         >
           <div className="p-4 mb-2 rounded-lg border-[#707070] border address-card mr-4 max-w-[428px]">
             <div className="flex justify-between items-center">
@@ -108,7 +108,7 @@ const AddressBook = () => {
             </div>
           </div>
         </div>
-        <div className="flex items-center lg:invisible md:invisible visible">
+        <div className="flex items-center mt-[24px] lg:mt-[0px] lg:invisible md:invisible visible">
           <Image className="w-[14px] mr-2" src={plus} alt="" />
           <button className="text-base text-[#686868] font-medium">
             <label htmlFor="my-modal-2" className="cursor-pointer">

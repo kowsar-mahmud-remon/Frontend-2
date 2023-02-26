@@ -150,6 +150,7 @@ const MyOrder = () => {
 
   return (
     <div className=" md:px-[24px] px-[10px]">
+      
       <div className="w-[100%]">
         <h1 className="text-[#FB641B] text-[24px] font-semibold">My Orders</h1>
       </div>
