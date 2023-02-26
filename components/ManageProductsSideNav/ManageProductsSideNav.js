@@ -106,14 +106,6 @@ const ManageProductsSideNav = () => {
           href: "manageOrders"
         },
         {
-          name: "Manage Orders",
-          href: "manageOrders"
-        },
-        // {
-        //   name: "Manage Reviews",
-        //   href: "manageReview"
-        // },
-        {
           name: "Order History",
           href: "orderHistory"
         },

@@ -49,7 +49,7 @@ const ManageOrderTable = ({ product, selectedOption, setSelectedOption , modalIs
             className="w-[76px]"
             width={76}
             height={61}
-            src={img}
+            src={image}
             alt=""
           />
         </td>
