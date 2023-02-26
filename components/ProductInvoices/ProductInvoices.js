@@ -47,9 +47,9 @@ const ProductInvoices = () => {
         <div className=" flex items-center mb-2">
           <p className='mr-1'>Home</p>
           <p className='mr-1'>{">"} Products</p>
-          <p className='text-[#001E00] font-medium'>{">"} Product Invoices</p>
+          <p className='text-[#001E00] font-medium'>{">"} Product List</p>
         </div>
-        <p className=' text-2xl text-[#FB641B] font-medium'>Product Invoices</p>
+        <p className=' text-2xl text-[#FB641B] font-medium'>Product List</p>
       </div>
 
       <div className="rounded shadow-xl p-6 min-h-screen mt-8">
@@ -59,12 +59,18 @@ const ProductInvoices = () => {
               <div className="w-[183px] p-2 shadow-xl rounded-lg">
                 <Image src={data.img} alt="" />
                 <h3 className="font-[500] text-center text-base mt-4">{data.name}</h3>
-                <div className="flex justify-center pb-4 mt-4">
-                  <Link
-                    href="productInvoiceDetails"
+                <div className="flex flex-col justify-center pb-4 mt-4">
+                  <p
+                    
                     className=" bg-[#EAF2FE] text-[#287DF3] rounded text-[13px] text-center"
                   >
-                    <button className="py-1 px-[13px]">View Invoices</button>
+                    <button className="py-1"> Active</button>
+                  </p>
+                  <Link
+                    href="productInvoiceDetails"
+                    className="border mt-2 rounded text-[13px] text-center"
+                  >
+                    <button className="py-1"> View Details</button>
                   </Link>
                 </div>
               </div>
