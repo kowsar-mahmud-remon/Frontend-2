@@ -7,7 +7,7 @@ import { profileLinksObj } from "../../Utils/updatedmyProfileLinks";
 const Profile = () => {
   const router = useRouter();
   
-  // console.log(router?.query?.slug?.[0]);
+  console.log(router?.query?.slug);
   return (
     <ManageAccountLayout slug={router?.query?.slug?.[0]}>
       <div className="">

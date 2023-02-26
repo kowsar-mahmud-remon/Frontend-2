@@ -99,6 +99,10 @@ const ManageProductsSideNav = () => {
       subcata: [
         {
           name: "Order Notifications",
+          href: "orderNotification"
+        },
+        {
+          name: "Manage Orders",
           href: "manageOrders"
         },
         {

@@ -31,7 +31,7 @@ const WriteReview = () => {
   };
   return (
     <div>
-      <div className="lg:block hidden">
+      <div className="lg:block hidden lg:mr-[20px]">
         <div className="mt-[66px] ml-[20px] md:hidden">
           <div>
             <button

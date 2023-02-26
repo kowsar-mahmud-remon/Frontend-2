@@ -36,7 +36,7 @@ const GiftCards = () => {
         <div>
             <div>
                 <h1 className="text-[#FB641B] text-[24px]">Available Gift Card</h1>
-                <div className="lg:mx-[10px]">
+                <div className="lg:mr-[20px]">
                     <div className="lg:shadow-small max-w-[924px]    rounded-[8px] h-[530px] mt-[16px]">
                         <div className="mx-[16px] pt-[16px]">
                             <div className="grid grid-cols-2   gap-[16px] ">

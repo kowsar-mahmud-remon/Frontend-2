@@ -86,7 +86,7 @@ const MyWishList = () => {
   ];
   return (
     <div>
-      <div className="lg:block hidden">
+      <div className="lg:block hidden lg:mr-[20px]">
         <div>
           <p className="text-[24px] font-[400] text-[#FB641B]">My Wishlist</p>
         </div>
@@ -256,7 +256,7 @@ const MyWishList = () => {
               Just For You
             </h1>
             <div className="mt-[16px]">
-              <div className="grid grid-cols-2 gap-[16px]">
+              <div className="grid grid-cols-2  gap-[16px]">
                 {wishlistData.slice(0, 4).map((data) => (
                   <>
                     <div className="wishlistcard w-full h-full">
