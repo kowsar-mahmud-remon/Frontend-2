@@ -235,7 +235,7 @@ const ManageProductsSideNav = () => {
       subcata: [
         {
           name: "Coupon Management",
-          href: "couponmanagement02",
+          href: "couponmanagement",
         },
         {
           name: "Commission Management",

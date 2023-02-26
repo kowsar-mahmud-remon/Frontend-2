@@ -29,7 +29,7 @@ const CoupoManagement = () => {
                 </div>
 
                 <div className="mt-[32px] ">
-                    <Link href=''>
+                    <Link href='availablecoupon'>
                         <button className="bg-[#FB641B]  flex rounded-[8px] justify-center gap-[8px] w-[200px] h-[48px] items-center">
                             <FaPlusCircle className="text-white bg-[#FB641B]"></FaPlusCircle>
                             <p className="text-[#FFFFFF] font-[500] text-[16px]">Add New Coupon</p>
