@@ -84,16 +84,6 @@ const EditProductsTwo = () => {
               width={500}
               height={500}
             />
-            <div className="lg:flex mt-5">
-              <button
-                className="w-full flex justify-center items-center gap-3 lg:btn-md lg:max:w-[240px] h-[53px] bg-[#FF9F00] font-medium text-white rounded-md lg:mr-5 mb-2"
-              >Add to Cart <FaShoppingCart className="text-white text-lg mb-1" />
-              </button>
-              <button
-                className="w-full flex justify-center items-center gap-3 lg:btn-md lg:max:w-[240px] h-[53px] bg-[#FB641B] font-medium text-white rounded-md mb-2"
-              >Buy Now <HiShoppingBag className="text-white text-lg mb-1" />
-              </button>
-            </div>
           </div>
           <div className="lg:mr-6 mb-5 lg:w-[96px] p-2  flex flex-wrap">
             <FaAngleUp className='mt-2 mb-4 w-full hidden lg:block'></FaAngleUp>
@@ -142,8 +132,8 @@ const EditProductsTwo = () => {
           </div>
 
           <div className="mt-[18px] flex">
-            <p className='text-base text-[#001E00] mr-4'>Brand: <span className='text-[#686868]'>No Brand</span></p>
-            <p className='text-base text-[#001E00]'>Color: <span className='text-[#686868]'>Red Color</span></p>
+            <p className='text-base text-[#001E00] font-medium mr-4'>Brand: <span className='text-[#686868]'>No Brand</span></p>
+            <p className='text-base text-[#001E00] font-medium'>Color: <span className='text-[#686868]'>Red Color</span></p>
           </div>
 
           <div className="mt-[18px] flex">
@@ -168,13 +158,13 @@ const EditProductsTwo = () => {
               </div>
             </div>
 
-            <div className="flex items-center mt-[18px]">
-              <button className="btn btn-ghost text-4xl w-[34px] h-[34px] pt-0 font-bold text-[#686868] mr-5 ">-</button>
+            <div className="flex items-center mt-4">
+              <button className="btn btn-ghost text-4xl w-[34px] h-[34px] pt-0 font-bold text-[#001E00] mr-5 ">-</button>
               <p className='text-2xl mr-5 text-[#FB641B]'>1</p>
-              <button className='btn btn-ghost text-4xl w-[34px] h-[34px] pt-0 font-bold text-[#686868]'>+</button>
+              <button className='btn btn-ghost text-4xl w-[34px] h-[34px] pt-0 font-bold text-[#001E00]'>+</button>
             </div>
 
-            <div className="lg:flex items-center mt-[18px]">
+            <div className="lg:flex items-center mt-4">
               <div className="flex items-center lg:mr-6 mb-2">
                 <Image
                   className='w-[28px] h-[28px] mr-3'
