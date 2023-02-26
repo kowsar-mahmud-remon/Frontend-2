@@ -38,6 +38,7 @@ import ProductShipping from "../components/ShippingManagement/ProductShipping";
 import UploadProduct from "../components/UploadProduct/UploadProduct";
 import ManageOrders from "../pages/manageOrders/ManageOrders";
 import OrderNotification from "../pages/OrderNotification/OrderNotification";
+import RetrunsProductMain from "../components/RetrunsProductMain/RetrunsProductMain";
 
 export const manageProductsArray = [
   {
@@ -164,6 +165,11 @@ export const manageProductsArray = [
   {
     title: "returnProducts",
     href: "returnProduct",
+    element: <RetrunsProductMain></RetrunsProductMain>,
+  },
+  {
+    title: "returnProducts",
+    href: "returnProductId",
     element: <ReturnProducts></ReturnProducts>,
   },
   {

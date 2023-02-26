@@ -6,9 +6,9 @@ import vector from "../../assets/images/Vector1.png";
 
 const ReturnProducts = () => {
   return (
-    <section className="bg-[#FFFFFF] min-h-screen pt-10 mb-80 max-w-[1426px]">
-      <div className="">
-        <div className="">
+    <section className="bg-[#FFFFFF] min-h-screen pt-10 mb-80 w-full">
+      <div className="w-full">
+        <div className="w-full">
           <div>
             <div className="text-lg text-[#686868] breadcrumbs">
               <ul>
@@ -44,32 +44,32 @@ const ReturnProducts = () => {
                   </div>
                   <div>  
                     <div className="flex items-center mb-4 lg:mt-0 md:mt-0 mt-14">
-                      <h2 className="text-lg mr-4 font-semibold w-[150px] text-end text-[#001E00] ">Local Title :</h2>
+                      <h2 className="text-lg mr-4 font-semibold text-[#001E00] ">Local Title:</h2>
                       <p className=" text-lg text-[#001E00]">Potol (Pointed Gourd) 500 ±30 gm</p>
                     </div>
                     <div className="flex items-center mb-4">
-                      <h2 className="text-lg mr-4 w-[150px] text-end font-semibold text-[#001E00]">Order Number :</h2>
+                      <h2 className="text-lg mr-4 font-semibold text-[#001E00]">Order Number:</h2>
                       <p>54872</p>
                     </div>
                     <div className="flex items-center mb-4">
-                      <h2 className="text-lg w-[150px] text-end mr-4 font-semibold text-[#001E00]">Category :</h2>
+                      <h2 className="text-lg mr-4 font-semibold text-[#001E00]">Category:</h2>
                       <p>Kacha Bazar</p>
                     </div>
                     <div className="flex items-center mb-4">
-                      <h2 className="text-lg w-[150px] text-end mr-4 font-semibold text-[#001E00]">Price :</h2>
+                      <h2 className="text-lg mr-4 font-semibold text-[#001E00]">Price:</h2>
                       <p>Tk 60</p>
                     </div>
                     <div className="flex items-center mb-4">
-                      <h2 className="text-lg w-[150px] text-end mr-4 font-semibold text-[#001E00]">Quantity :</h2>
+                      <h2 className="text-lg mr-4 font-semibold text-[#001E00]">Quantity:</h2>
                       <p>1 kg</p>
                     </div>
                     <div className="flex items-center">
-                      <h2 className="text-lg w-[150px] text-end mr-4 font-semibold text-[#001E00]">Delivered Date :</h2>
+                      <h2 className="text-lg mr-4 font-semibold text-[#001E00]">Delivered Date:</h2>
                       <p>03 Feb 2023</p>
                     </div>
                   </div>
                   <div className="lg:block hidden">
-                    <div className="border-[2px] border-[#B7B7B7] h-[262px] mx-20">
+                    <div className="border-[2px] border-[#B7B7B7] h-[262px] mx-24">
                       
                     </div>
                   </div>
