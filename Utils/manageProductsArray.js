@@ -2,6 +2,8 @@ import CampaignManagement from "../components/CampaignManagement/CampaignManagem
 import CampaignManagementOne from "../components/CampaignManagement/CampaignManagementOne";
 import CampaignManagementThree from "../components/CampaignManagement/CampaignManagementThree";
 import CampaignManagementTwo from "../components/CampaignManagement/CampaignManagementTwo";
+import AvailableCoupon from "../components/CoupoManagement/AvailableCoupon";
+import CoupoManagement from "../components/CoupoManagement/CoupoManagement";
 import EditProducts from "../components/EditProducts/EditProducts";
 import EditProductsTwo from "../components/EditProducts/EditProductsTwo";
 import ReportManagement from "../components/FeedbackManagement/ReportManagement";
@@ -207,5 +209,10 @@ export const manageProductsArray = [
     title: "OrderNotification",
     href: "orderNotification",
     element: <OrderNotification></OrderNotification>,
+  },
+  {
+    title: "Coupon Management",
+    href: "CoupoManagement",
+    element: <AvailableCoupon></AvailableCoupon>
   },
 ];

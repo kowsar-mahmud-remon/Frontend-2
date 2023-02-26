@@ -389,9 +389,9 @@ const MyReviews = () => {
                           REVIEW
                         </Link>
                       </div>
-                      <div className="flex mt-[16px] gap-[12px]">
+                      <div className="flex mt-[16px] mx-[12px] gap-[12px]">
                         <Image
-                          src="/image 8.png"
+                          src="/image 6.png"
                           width={44}
                           height={36}
                           className="rounded-[4px]"
@@ -419,9 +419,9 @@ const MyReviews = () => {
                     </div>
                     <div className="flex justify-center mx-[12px]">
                       <div className="historyInside w-full  h-[96px] mt-[8px] ">
-                        <div className="flex pt-[12px]  gap-[8px] items-center">
+                        <div className="flex pt-[12px] mx-[12px]  gap-[8px] items-center">
                           <Image
-                            src="/image 8.png"
+                            src="/image 6.png"
                             width={44}
                             height={36}
                             className="rounded-[4px]"
@@ -454,11 +454,11 @@ const MyReviews = () => {
                         simply dummy text of the printing and typesetting
                       </p>
                     </div>
-                    <div className="mt-[8px] flex gap-[8px]">
+                    <div className="mt-[8px] flex mx-[12px] gap-[8px]">
                       {datas.slice(0, 3).map((data) => (
                         <>
                           <Image
-                            src="/image 8.png"
+                            src="/image 6.png"
                             width={68}
                             height={56}
                             alt=""
@@ -481,7 +481,7 @@ const MyReviews = () => {
                       <p className="font-[500] text-[16px] ml-[12px] text-[#001E00]">
                         Rate your Rider:
                       </p>
-                      <div className="ml-[12px]">
+                      <div className="ml-[12px] py-[10px]">
                         <ReactStars
                           count={5}
                           onChange={ratingChanged}

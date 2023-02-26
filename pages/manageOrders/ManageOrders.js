@@ -18,7 +18,7 @@ const ManageOrders = () => {
     <section className="bg-[#FFFFFF] w-full pt-7">
       <ManageOrderModal></ManageOrderModal>
       <CustomModal modalIsOpen={modalIsOpen} setIsOpen={setIsOpen}></CustomModal>
-      <div className="">
+      <div className="max-w-[1426px]">
         <div className="">
           <div>
             <div className="text-lg breadcrumbs text-[#686868]">
@@ -43,7 +43,7 @@ const ManageOrders = () => {
             <div className={`${style.boxshaddow} p-6 rounded-lg`}>
               <p className="text-[#001E00] font-semibold">All Open Oderes</p>
 
-              <div className="mt-4">
+              <div className="mt-4 pb-[300px]">
                 <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
                   <table className="w-full text-base text-left text-[#001E00]">
                     <thead className="text-base text-[#001E00] font-normal bg-[#F2F3F7]">
@@ -52,7 +52,7 @@ const ManageOrders = () => {
                           scope="col"
                           className=" py-2 font-medium text-[#001E00] text-base"
                         >
-                          <p className="border-r px-3 border-[#B7B7B7]">
+                          <p className="border-r px-2 border-[#B7B7B7]">
                             Product
                           </p>
                         </th>
@@ -60,7 +60,7 @@ const ManageOrders = () => {
                           scope="col"
                           className=" py-3 font-medium text-[#001E00] text-base"
                         >
-                          <p className="border-r px-3 border-[#B7B7B7]">
+                          <p className="border-r px-2 border-[#B7B7B7]">
                             Local Title
                           </p>
                         </th>
@@ -68,7 +68,7 @@ const ManageOrders = () => {
                           scope="col"
                           className=" py-3 font-medium text-[#001E00] text-base"
                         >
-                          <p className="border-r px-3 border-[#B7B7B7]">
+                          <p className="border-r px-2 border-[#B7B7B7]">
                             Product SKU
                           </p>
                         </th>
@@ -76,7 +76,7 @@ const ManageOrders = () => {
                           scope="col"
                           className=" py-3 font-medium text-[#001E00] text-base"
                         >
-                          <p className="border-r px-3 border-[#B7B7B7]">
+                          <p className="border-r px-2 border-[#B7B7B7]">
                             Category
                           </p>
                         </th>
@@ -84,7 +84,7 @@ const ManageOrders = () => {
                           scope="col"
                           className=" py-3 font-medium text-[#001E00] text-base"
                         >
-                          <p className="border-r px-3 border-[#B7B7B7]">
+                          <p className="border-r px-2 border-[#B7B7B7]">
                             Price
                           </p>
                         </th>
@@ -92,7 +92,7 @@ const ManageOrders = () => {
                           scope="col"
                           className=" py-3 font-medium text-[#001E00] text-base"
                         >
-                          <p className="px-3 border-r border-[#B7B7B7]">
+                          <p className="px-2 border-r border-[#B7B7B7]">
                             Quantity
                           </p>
                         </th>
@@ -100,7 +100,7 @@ const ManageOrders = () => {
                           scope="col"
                           className=" py-3 font-medium text-[#001E00] text-base"
                         >
-                          <p className="px-3 border-r border-[#B7B7B7]">
+                          <p className="px-2 border-r border-[#B7B7B7]">
                             Payment Status
                           </p>
                         </th>
@@ -108,7 +108,7 @@ const ManageOrders = () => {
                           scope="col"
                           className=" py-3 font-medium text-[#001E00] text-base"
                         >
-                          <p className="px-3 border-r border-[#B7B7B7]">
+                          <p className="px-2 border-r border-[#B7B7B7]">
                             Delivery Date
                           </p>
                         </th>
@@ -116,14 +116,14 @@ const ManageOrders = () => {
                           scope="col"
                           className=" py-3 font-medium text-[#001E00] text-base"
                         >
-                          <p className="px-3 border-r border-[#B7B7B7]">
+                          <p className="px-2 border-r border-[#B7B7B7]">
                             Details
                           </p>
                         </th>
 
                         <th
                           scope="col"
-                          className="px-3 py-3 font-medium text-[#001E00] text-base"
+                          className="px-2 py-3 font-medium text-[#001E00] text-base"
                         >
                           Status
                         </th>
