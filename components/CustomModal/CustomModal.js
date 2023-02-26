@@ -8,6 +8,7 @@ const CustomModal = ({modalIsOpen, setIsOpen}) => {
           top: '50%',
           left: '50%',
           right: 'auto',
+          borderRadius: "8px",
           bottom: 'auto',
           border: "1px solid #F2F2F2",
           marginRight: '-50%',
