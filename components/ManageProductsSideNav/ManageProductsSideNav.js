@@ -235,7 +235,7 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Commission Management",
-          href: "editProduct"
+          href: "commissionManagement"
         },
         {
           name: "Tax Management",

@@ -39,6 +39,7 @@ import UploadProduct from "../components/UploadProduct/UploadProduct";
 import ManageOrders from "../pages/manageOrders/ManageOrders";
 import OrderNotification from "../pages/OrderNotification/OrderNotification";
 import RetrunsProductMain from "../components/RetrunsProductMain/RetrunsProductMain";
+import CommissionManagement from "../components/Tax&Offers/CommissionManagement";
 
 export const manageProductsArray = [
   {
@@ -238,5 +239,10 @@ export const manageProductsArray = [
     title: "ProductShipping",
     href: "productShipping",
     element: <ProductShipping></ProductShipping>,
+  },
+  {
+    title: "CommissionManagement",
+    href: "commissionManagement",
+    element: <CommissionManagement></CommissionManagement>,
   },
 ];
