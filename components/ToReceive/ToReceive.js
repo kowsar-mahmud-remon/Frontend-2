@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 const ToReceive = ({ data }) => {
     return (
         <div className='md:w-[92%]'>
@@ -11,7 +12,7 @@ const ToReceive = ({ data }) => {
                             <p className='md:hidden  text-[#686868]'>Delivered by:{data.Delivered}</p>
 
                         </div>
-                        <p className="text-[#287DF3] hidden md:block text-[18px] mr-[19px]">View More Details</p>
+                        <Link href={`myOrders/myOrderDetails`}>  <p className="text-[#287DF3] hidden md:block text-[18px] mr-[19px]">View More Details</p></Link>
                     </div>
                     <hr className='hidden md:block border-[1px] mt-[16px] border-[#686868]' />
                     <div>
@@ -32,7 +33,8 @@ const ToReceive = ({ data }) => {
 
                             </div>
                         </div>
-                        <p className="text-[#287DF3]  md:hidden mt-[-13px] flex justify-end   text-[3vw] pb-[12px] mr-[19px]">View More Details</p>
+
+                        <Link href={`myOrders/myOrderDetails`}> <p className="text-[#287DF3]  md:hidden mt-[-13px] flex justify-end   text-[3vw] pb-[12px] mr-[19px]">View More Details</p></Link>
                     </div>
                 </div>
             </div>
