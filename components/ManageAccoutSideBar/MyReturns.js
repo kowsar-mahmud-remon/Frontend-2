@@ -113,10 +113,10 @@ const MyReturns = () => {
                                         <div className='md:hidden '>
                                             <p>
                                                 <Link
-                                                    href={`/profile/myOrderDetails`}
+                                                    href={`myOrders/myOrderDetails`}
                                                     className="text-[#287DF3] md:text-[1.3vw]  text-[14px] mr-[10px] flex justify-end "
                                                 >
-                                                    <span className='md:text-[1.3vw] text-[#686868]'>View More</span>
+                                                    <span className='md:text-[1.3vw] text-[#287DF3] '>View More</span>
                                                 </Link>
                                             </p>
                                             <p className=" md:hidden mt-[16px]  mr-[4px] w-[120px] h-[32px]  rounded-[54px] px-[5px] text-center  md:text-[#FB641B] text-[#686868] text-[10px]  bg-[#F2F3F7]  mb-[14px]">

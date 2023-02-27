@@ -70,7 +70,7 @@ const MyCancelation = () => {
                             <div className='flex justify-between items-center md:py-[20px]  md:mb-[16px] w-full px-[16px]'>
                                 <div>
                                     <p className='md:text-[16px] text-[3.5vw] font-semibold text-[#001E00]'>Order <span className='text-[#287DF3]'>#12345678998745</span></p>
-                                    <p className='text-[3.5vw] text-[#686868] md:font-semibold'>Placed On {cancel.time}</p>
+                                    <p className='text-[3.5vw] md:text-[14px] text-[#686868] md:font-semibold'>Placed On {cancel.time}</p>
                                 </div>
                                 <p className='text-[16px] font-semibold text-[#287DF3] md:block hidden'>View More Details</p>
                                 <p className='text-[3.5vw] font-semibold text-[#287DF3] block md:hidden mt-[-16px]'>View More </p>

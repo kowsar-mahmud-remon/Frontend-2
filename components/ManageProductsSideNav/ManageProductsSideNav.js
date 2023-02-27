@@ -83,7 +83,7 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Campaign Management",
-          href: "campaignManagement"
+          href: "campaignManagementOne"
         },
         {
           name: "Learn About Ads",
@@ -151,7 +151,7 @@ const ManageProductsSideNav = () => {
       subcata: [
         {
           name: "Account Statement",
-          href: "editProduct"
+          href: "accountStatement"
         },
         {
           name: "NID Card",
