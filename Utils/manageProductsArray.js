@@ -234,4 +234,9 @@ export const manageProductsArray = [
     href: "couponmanagement02",
     element: <CouponManagement02></CouponManagement02>,
   },
+  {
+    title: "ProductShipping",
+    href: "productShipping",
+    element: <ProductShipping></ProductShipping>,
+  },
 ];
