@@ -260,7 +260,7 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Live Chat",
-          href: "liveChatTwo"
+          href: "liveChat"
         },
         {
           name: "Phone Support",

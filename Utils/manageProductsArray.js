@@ -40,6 +40,8 @@ import ManageOrders from "../pages/manageOrders/ManageOrders";
 import OrderNotification from "../pages/OrderNotification/OrderNotification";
 import RetrunsProductMain from "../components/RetrunsProductMain/RetrunsProductMain";
 import CommissionManagement from "../components/Tax&Offers/CommissionManagement";
+import LiveChat from "../components/SellerSupport/LiveChat";
+import LiveChatOne from "../components/SellerSupport/LiveChatOne";
 
 export const manageProductsArray = [
   {
@@ -244,5 +246,15 @@ export const manageProductsArray = [
     title: "CommissionManagement",
     href: "commissionManagement",
     element: <CommissionManagement></CommissionManagement>,
+  },
+  {
+    title: "LiveChat",
+    href: "liveChat",
+    element: <LiveChat></LiveChat>,
+  },
+  {
+    title: "LiveChatOne",
+    href: "liveChatOne",
+    element: <LiveChatOne></LiveChatOne>,
   },
 ];
