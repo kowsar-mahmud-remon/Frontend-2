@@ -235,7 +235,7 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Commission Management",
-          href: "editProduct"
+          href: "commissionManagement"
         },
         {
           name: "Tax Management",
@@ -260,7 +260,7 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Live Chat",
-          href: "liveChatTwo"
+          href: "liveChat"
         },
         {
           name: "Phone Support",

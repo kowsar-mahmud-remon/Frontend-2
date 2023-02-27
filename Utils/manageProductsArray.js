@@ -39,6 +39,9 @@ import UploadProduct from "../components/UploadProduct/UploadProduct";
 import ManageOrders from "../pages/manageOrders/ManageOrders";
 import OrderNotification from "../pages/OrderNotification/OrderNotification";
 import RetrunsProductMain from "../components/RetrunsProductMain/RetrunsProductMain";
+import CommissionManagement from "../components/Tax&Offers/CommissionManagement";
+import LiveChat from "../components/SellerSupport/LiveChat";
+import LiveChatOne from "../components/SellerSupport/LiveChatOne";
 import SalesOverviewItems from "../components/SalesOverviewItems/SalesOverviewItems";
 import SalesOverview from "../components/SalesOverview/SalesOverview";
 import CouponManagement03 from "../components/CouponManagement03/CouponManagement03";
@@ -239,6 +242,24 @@ export const manageProductsArray = [
     element: <CouponManagement02></CouponManagement02>,
   },
   {
+    title: "ProductShipping",
+    href: "productShipping",
+    element: <ProductShipping></ProductShipping>,
+  },
+  {
+    title: "CommissionManagement",
+    href: "commissionManagement",
+    element: <CommissionManagement></CommissionManagement>,
+  },
+  {
+    title: "LiveChat",
+    href: "liveChat",
+    element: <LiveChat></LiveChat>,
+  },
+  {
+    title: "LiveChatOne",
+    href: "liveChatOne",
+    element: <LiveChatOne></LiveChatOne>,
     title: "SalesOverview",
     href: "salesOverview",
     element: <SalesOverview></SalesOverview>,
