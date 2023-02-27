@@ -275,7 +275,7 @@ const SalesOverview = () => {
                                     {" "}
                                     {item.quantity} kg
                                   </p> 
-                                </div>
+                                </div>  
                               </div>
                             </div>
                           </>
