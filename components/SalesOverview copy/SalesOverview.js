@@ -9,7 +9,6 @@ import potol from "../../assets/images/image 88.png";
 import clock from "../../assets/images/image 9.png";
 import lebu from "../../assets/images/image 4.png";
 import tomato from "../../assets/images/image 66.png";
-
 import {
   LineChart,
   Line,
@@ -23,8 +22,6 @@ import {
 import SalesOverviewTable from "./SalesOverviewTable";
 import products from "./fakedb.json"
 import SalesChart from "./SalesChart";
-import Link from "next/link";
-import NewChart from "./NewChart";
 
 const SalesOverview = () => {
   const data = [
@@ -48,7 +45,7 @@ const SalesOverview = () => {
     { img: lebu, name: "Lebo (Lemon) 250 ±15 gm", quantity: 1000 },
     { img: tomato, name: "Tomato (Local) 500 ±30 gm", quantity: 500 },
   ];
-  
+
   const charts = [
     {
       name: "Jan 1",
@@ -283,9 +280,9 @@ const SalesOverview = () => {
                       })}
 
                       <div className="flex justify-end pr-4">
-                        <Link className="text-[#287DF3] font-medium" href="salesOverviewItems">
+                        <a className="text-[#287DF3] font-medium" href="">
                           More View
-                        </Link>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -320,8 +317,7 @@ const SalesOverview = () => {
                           <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
                         </LineChart>
                       </ResponsiveContainer> */}
-                      <SalesChart></SalesChart>
-                      {/* <NewChart></NewChart> */}
+                      {/* <SalesChart></SalesChart> */} hll
                     </div>
                   </div>
                 </div>

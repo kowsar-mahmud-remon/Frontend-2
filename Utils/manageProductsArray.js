@@ -39,6 +39,8 @@ import UploadProduct from "../components/UploadProduct/UploadProduct";
 import ManageOrders from "../pages/manageOrders/ManageOrders";
 import OrderNotification from "../pages/OrderNotification/OrderNotification";
 import RetrunsProductMain from "../components/RetrunsProductMain/RetrunsProductMain";
+import SalesOverviewItems from "../components/SalesOverviewItems/SalesOverviewItems";
+import SalesOverview from "../components/SalesOverview/SalesOverview";
 import CouponManagement03 from "../components/CouponManagement03/CouponManagement03";
 import CouponPayNow from "../components/CouponPayNow/CouponPayNow";
 
@@ -237,6 +239,15 @@ export const manageProductsArray = [
     element: <CouponManagement02></CouponManagement02>,
   },
   {
+    title: "SalesOverview",
+    href: "salesOverview",
+    element: <SalesOverview></SalesOverview>
+  },
+  {
+    title: "SalesOverviewItems",
+    href: "salesOverviewItems",
+    element: <SalesOverviewItems></SalesOverviewItems>,
+  },
     title: "Coupon Management03",
     href: "couponmanagement03",
     element: <CouponManagement03 ></CouponManagement03>,
