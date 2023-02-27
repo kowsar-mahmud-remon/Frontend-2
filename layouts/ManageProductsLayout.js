@@ -8,7 +8,7 @@ import SellerRightNav from "../components/SellerRightNav/SellerRightNav";
 const ManageProductsLayout = ({ children, slug }) => {
   return (
     <div
-      className="md:flex w-full"
+      className="md:flex"
       // className='flex my-8 justify-center mx-5 gap-[40px] xl:mx-4'
     >
       <SellerRightNav />
