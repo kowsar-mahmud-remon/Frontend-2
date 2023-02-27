@@ -15,7 +15,7 @@ const HelpCenter = () => {
         <div className=" flex items-center mb-2">
           <p className='mr-1'>Home</p>
           <p className='mr-1'>{">"} Promotions</p>
-          <p className='text-[#001E00] font-medium'>{">"} Help Center</p>
+          <p className='text-[#001E00] font-medium'>{">"} FAQ</p>
         </div>
         <p className=' text-2xl text-[#FB641B] font-medium'>Help Center</p>
       </div>
