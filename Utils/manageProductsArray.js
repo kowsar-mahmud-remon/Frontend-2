@@ -39,6 +39,7 @@ import UploadProduct from "../components/UploadProduct/UploadProduct";
 import ManageOrders from "../pages/manageOrders/ManageOrders";
 import OrderNotification from "../pages/OrderNotification/OrderNotification";
 import RetrunsProductMain from "../components/RetrunsProductMain/RetrunsProductMain";
+import AccountStatement from "../components/AccountStatement/AccountStatement";
 
 export const manageProductsArray = [
   {
@@ -234,4 +235,9 @@ export const manageProductsArray = [
     href: "couponmanagement02",
     element: <CouponManagement02></CouponManagement02>,
   },
+  {
+    title: "Account Statement",
+    href: "accountStatement",
+    element: <AccountStatement></AccountStatement>
+  }
 ];
