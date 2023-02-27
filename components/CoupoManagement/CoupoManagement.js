@@ -6,7 +6,7 @@ import { FaPlusCircle } from "react-icons/fa";
 const CoupoManagement = () => {
     return (
         <div>
-            <div className="max-w-[1426px]">
+            <div className="max-w-[1426px] ">
                 <div>
                     <div className="text-lg breadcrumbs text-[#686868]">
                         <ul>
@@ -37,8 +37,10 @@ const CoupoManagement = () => {
 
                 </div>
 
-                <div className="mt-[16px]">
-                    <div className="rounded-[4px] shadow-small grid lg:grid-cols-10  md:grid-cols-5 grid-cols-3  justify-center  items-center  h-[48px] bg-[#FFFFFF] max-w-[1426px]">
+                <div className="mt-[16px] overflow-x-auto">
+                 
+
+                        <div className="rounded-[4px] shadow-small grid lg:grid-cols-10  md:grid-cols-5 grid-cols-3  justify-center  items-center  h-[48px] bg-[#FFFFFF] max-w-[1426px]">
 
 
                         <div className="relative" >
@@ -138,9 +140,9 @@ const CoupoManagement = () => {
                             <p className=" font-medium xl:text-[16px] lg:text-[1vw] whitespace-nowrap">25 May 2023</p>
                             <p className=" font-medium xl:text-[16px] lg:text-[1vw] whitespace-nowrap text-[#0BD838]">Active</p>
 
-                            <div className="flex justify-center gap-[5px] items-center">
-                                <input type="checkbox" className="toggle toggle-sm" />
-                                <p className="xl:text-[16px] lg:text-[1vw]">off</p>
+                            <div className="flex justify-center gap-[8px] items-center">
+                                <input type="checkbox" className="toggle bg-[#287DF3] toggle-sm" />
+                                <p className="xl:text-[16px] lg:text-[1vw]">OFF</p>
                             </div>
 
 
