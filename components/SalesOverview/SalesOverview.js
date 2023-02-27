@@ -274,7 +274,7 @@ const SalesOverview = () => {
                                   <p className=" pl-2 text-[#686868]">
                                     {" "}
                                     {item.quantity} kg
-                                  </p>
+                                  </p> 
                                 </div>
                               </div>
                             </div>
