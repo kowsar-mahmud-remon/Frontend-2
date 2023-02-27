@@ -42,6 +42,10 @@ import RetrunsProductMain from "../components/RetrunsProductMain/RetrunsProductM
 import CommissionManagement from "../components/Tax&Offers/CommissionManagement";
 import LiveChat from "../components/SellerSupport/LiveChat";
 import LiveChatOne from "../components/SellerSupport/LiveChatOne";
+import SalesOverviewItems from "../components/SalesOverviewItems/SalesOverviewItems";
+import SalesOverview from "../components/SalesOverview/SalesOverview";
+import CouponManagement03 from "../components/CouponManagement03/CouponManagement03";
+import CouponPayNow from "../components/CouponPayNow/CouponPayNow";
 
 export const manageProductsArray = [
   {
@@ -95,9 +99,9 @@ export const manageProductsArray = [
     element: <ProductInvoicesDetails></ProductInvoicesDetails>,
   },
   {
-    title: 'Feedback',
-    href: 'feedback',
-    element: <ManageReview></ManageReview>
+    title: "Feedback",
+    href: "feedback",
+    element: <ManageReview></ManageReview>,
   },
   {
     title: "AllProduct",
@@ -152,13 +156,13 @@ export const manageProductsArray = [
   {
     title: "ManageReview",
     href: "manageReview",
-    element: <ManageReviewList></ManageReviewList>
+    element: <ManageReviewList></ManageReviewList>,
     // element: <QuestionAndAnswer></QuestionAndAnswer>
   },
   {
     title: "Question and Answer",
     href: "questionanswer",
-    element: <QuestionAndAnswer></QuestionAndAnswer>
+    element: <QuestionAndAnswer></QuestionAndAnswer>,
   },
   {
     title: "OrderHistory",
@@ -223,13 +227,13 @@ export const manageProductsArray = [
   {
     title: "Coupon Management",
     href: "couponmanagement",
-    element: <CoupoManagement></CoupoManagement>
+    element: <CoupoManagement></CoupoManagement>,
     // element: <CouponManagement02></CouponManagement02>,
   },
   {
     title: "Available Coupon",
     href: "availablecoupon",
-    element: <AvailableCoupon></AvailableCoupon>
+    element: <AvailableCoupon></AvailableCoupon>,
     // element: <CouponManagement02></CouponManagement02>,
   },
   {
@@ -256,5 +260,23 @@ export const manageProductsArray = [
     title: "LiveChatOne",
     href: "liveChatOne",
     element: <LiveChatOne></LiveChatOne>,
+    title: "SalesOverview",
+    href: "salesOverview",
+    element: <SalesOverview></SalesOverview>,
+  },
+  {
+    title: "SalesOverviewItems",
+    href: "salesOverviewItems",
+    element: <SalesOverviewItems></SalesOverviewItems>,
+  },
+  {
+    title: "Coupon Management03",
+    href: "couponmanagement03",
+    element: <CouponManagement03></CouponManagement03>,
+  },
+  {
+    title: "Coupon Pay",
+    href: "couponpay",
+    element: <CouponPayNow></CouponPayNow>,
   },
 ];
