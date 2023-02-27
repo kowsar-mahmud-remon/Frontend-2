@@ -41,6 +41,8 @@ import OrderNotification from "../pages/OrderNotification/OrderNotification";
 import RetrunsProductMain from "../components/RetrunsProductMain/RetrunsProductMain";
 import SalesOverviewItems from "../components/SalesOverviewItems/SalesOverviewItems";
 import SalesOverview from "../components/SalesOverview/SalesOverview";
+import CouponManagement03 from "../components/CouponManagement03/CouponManagement03";
+import CouponPayNow from "../components/CouponPayNow/CouponPayNow";
 
 export const manageProductsArray = [
   {
@@ -246,7 +248,13 @@ export const manageProductsArray = [
     href: "salesOverviewItems",
     element: <SalesOverviewItems></SalesOverviewItems>,
   },
-
-
-
+    title: "Coupon Management03",
+    href: "couponmanagement03",
+    element: <CouponManagement03 ></CouponManagement03>,
+  },
+  {
+    title: "Coupon Pay",
+    href: "couponpay",
+    element: <CouponPayNow></CouponPayNow>,
+  },
 ];

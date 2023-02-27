@@ -66,7 +66,7 @@ const AvailableCoupon = () => {
                         availableCoupons.map(coupon => <>
                             <Link href='couponmanagement02'>
                                 <div className="shadow-small rounded-[8px] max-w-[333px]  h-full mb-[16px]  ">
-                                    <div className="flex justify-center xl:mx-[16px] pt-[16px]">
+                                    <div className="flex justify-center lg:mx-[16px] xl:mx-[16px] pt-[16px]">
                                         <Image className="" width={301} height={270} src={coupon.image} alt=""></Image>
                                     </div>
                                     <div className="mx-[16px] mt-[9px]">

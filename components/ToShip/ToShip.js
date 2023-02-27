@@ -92,8 +92,8 @@ const ToShip = () => {
                                     </div>
                                     <div className='mt-[16px] md:mt-[0px] w-[30%] md:flex md:justify-end md:px-[10px]'>
                                         <Link
-                                            href={`/profile/myOrderDetails`}
-                                            className="text-[#287DF3] md:text-[16px] text-[14px] "
+                                            href={`myOrders/myOrderDetails`}
+                                            className="text-[#287DF3] md: text-[16px] mr-[8px] md:mr-[15px]"
                                         >
                                             <span>View More</span>
                                         </Link>

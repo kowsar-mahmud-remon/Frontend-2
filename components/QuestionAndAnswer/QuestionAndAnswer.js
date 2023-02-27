@@ -23,16 +23,16 @@ const QuestionAndAnswer = () => {
                     Product Reviews
                 </h1>
             </div>
-            <div className='shadow-lg rounded-md p-[16px]'>
-                <div className='px-[16px] shadow-lg rounded-md'>
-                    <div className="mt-6 flex ">
+            <div className='shadow-small rounded-md p-[16px]'>
+                <div className='px-[16px] shadow-small rounded-md'>
+                    <div className="mt-6 pt-[14px] flex ">
                         <Image
                             className="w-8 h-8 mt-2"
                             src={user}
                             width={32}
                             alt=""
                         ></Image>
-                        <div className="ml-4">
+                        <div className="ml-4 ">
                             <h2 className="text-lg font-medium">Jakariya Sick</h2>
                             <span className="text-[#686868] text-sm">Question on: 21 Dec 2022</span>
                         </div>
@@ -63,8 +63,8 @@ const QuestionAndAnswer = () => {
                         </div>
                     </div>
                 </div>
-                <div className='px-[16px] shadow-lg rounded-md'>
-                    <div className="mt-6 flex ">
+                <div className='px-[16px] shadow-small rounded-md'>
+                    <div className="mt-6 pt-[14px] flex ">
                         <Image
                             className="w-8 h-8 mt-2"
                             src={user}
