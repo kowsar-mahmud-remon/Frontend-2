@@ -304,7 +304,7 @@ const MyWishList = () => {
                         </div>
                         <div className="mx-[20px] mt-[34px] mb-[8px]">
                           <button className="w-full flex items-center justify-center gap-[4px] h-[38px] bg-[#FB641B] rounded-[4px]">
-                            <h1 className="text-[#FFFFFF]  text-[16px] font-[500]">
+                            <h1 className="text-[#FFFFFF]  text-[3vw] whitespace-nowrap font-[500]">
                               Add to Cart
                             </h1>
                             <Image

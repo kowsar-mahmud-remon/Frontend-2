@@ -2,6 +2,9 @@ import CampaignManagement from "../components/CampaignManagement/CampaignManagem
 import CampaignManagementOne from "../components/CampaignManagement/CampaignManagementOne";
 import CampaignManagementThree from "../components/CampaignManagement/CampaignManagementThree";
 import CampaignManagementTwo from "../components/CampaignManagement/CampaignManagementTwo";
+import AvailableCoupon from "../components/CoupoManagement/AvailableCoupon";
+import CoupoManagement from "../components/CoupoManagement/CoupoManagement";
+import CouponManagement02 from "../components/CouponManagement02/CouponManagement02";
 import EditProducts from "../components/EditProducts/EditProducts";
 import EditProductsTwo from "../components/EditProducts/EditProductsTwo";
 import ReportManagement from "../components/FeedbackManagement/ReportManagement";
@@ -35,6 +38,7 @@ import ProductShipping from "../components/ShippingManagement/ProductShipping";
 import UploadProduct from "../components/UploadProduct/UploadProduct";
 import ManageOrders from "../pages/manageOrders/ManageOrders";
 import OrderNotification from "../pages/OrderNotification/OrderNotification";
+import RetrunsProductMain from "../components/RetrunsProductMain/RetrunsProductMain";
 
 export const manageProductsArray = [
   {
@@ -161,6 +165,11 @@ export const manageProductsArray = [
   {
     title: "returnProducts",
     href: "returnProduct",
+    element: <RetrunsProductMain></RetrunsProductMain>,
+  },
+  {
+    title: "returnProducts",
+    href: "returnProductId",
     element: <ReturnProducts></ReturnProducts>,
   },
   {
@@ -207,5 +216,22 @@ export const manageProductsArray = [
     title: "OrderNotification",
     href: "orderNotification",
     element: <OrderNotification></OrderNotification>,
+  },
+  {
+    title: "Coupon Management",
+    href: "couponmanagement",
+    element: <CoupoManagement></CoupoManagement>
+    // element: <CouponManagement02></CouponManagement02>,
+  },
+  {
+    title: "Available Coupon",
+    href: "availablecoupon",
+    element: <AvailableCoupon></AvailableCoupon>
+    // element: <CouponManagement02></CouponManagement02>,
+  },
+  {
+    title: "Coupon Management02",
+    href: "couponmanagement02",
+    element: <CouponManagement02></CouponManagement02>,
   },
 ];

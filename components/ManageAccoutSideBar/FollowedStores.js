@@ -27,19 +27,19 @@ const FollowedStores = () => {
                     <div className="flex justify-between items-center pt-[13px] ml-[12px] mx-[12px] lg:mx-[24px] lg:pt-[24px]">
 
                         <div className="flex items-center gap-[12px] lg:gap-0">
-                            <div className="lg:w-[97px] w-[69px] h-[69px]  lg:h-[97px]   bg-[#F2F2F2] rounded-[4px]">
-                                <Image src={walton} className="lg:m-[14px] lg:w-[68px] lg:h-[68px] w-[47px] h-[47px] m-[10px]" alt=""></Image>
+                            <div className="lg:w-[97px] flex justify-center w-[69px] h-[69px]  lg:h-[97px]   bg-[#F2F2F2] rounded-[4px]">
+                                <Image src={walton} className="lg:m-[14px] lg:w-[68px] lg:h-[68px] w-[47px] h-[47px] mx-[10px] mt-[10px]" alt=""></Image>
                             </div>
                             <div className="lg:ml-[12px] ">
-                                <div className="flex  lg:flex-col gap-[8px] lg:gap-0">
-                                    <p className="lg:text-[24px]  font-[500] text-[#001E00]">Walton Accessories</p>
-                                    <div className="lg:mt-[10px]">
+                                <div className="flex  lg:flex-col items-center lg:items-start gap-[8px] lg:gap-0">
+                                    <p className="lg:text-[24px]  text-[4vw] font-[500] text-[#001E00] whitespace-nowrap">Walton Accessories</p>
+                                    <div className="lg:mt-[10px] ">
                                         <Image src={seller} alt=""></Image>
                                     </div>
                                 </div>
                                 <div className="lg:hidden flex gap-[8px] items-center pt-[12px]">
                                     <FaCheck className="text-[#686868]"></FaCheck>
-                                    <p className="text-[#686868] font-[400]  text-[16px]">FOLLOWING</p>
+                                    <p className="text-[#686868] font-[400]  text-[3vw]">FOLLOWING</p>
                                 </div>
                             </div>
                         </div>
@@ -47,7 +47,7 @@ const FollowedStores = () => {
                             <FaCheck className="text-[#686868] lg:block hidden"></FaCheck>
                             <p className="text-[#686868] font-[400] lg:block hidden text-[16px]">FOLLOWING</p>
                             <p className="text-[#707070] lg:block hidden">|</p>
-                            <p className="text-[#287DF3] text-[16px]">VISIT</p>
+                            <p className="text-[#287DF3] text-[3vw] lg:text-[16px]">VISIT</p>
                         </div>
 
                     </div>

@@ -105,10 +105,6 @@ const ManageProductsSideNav = () => {
           name: "Manage Orders",
           href: "manageOrders"
         },
-        {
-          name: "Manage Orders",
-          href: "manageOrders"
-        },
         // {
         //   name: "Manage Reviews",
         //   href: "manageReview"
@@ -235,7 +231,7 @@ const ManageProductsSideNav = () => {
       subcata: [
         {
           name: "Coupon Management",
-          href: "editProduct"
+          href: "couponmanagement",
         },
         {
           name: "Commission Management",
