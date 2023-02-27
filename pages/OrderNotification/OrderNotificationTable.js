@@ -17,7 +17,7 @@ const OrderNotificationTable = ({ product }) => {
     paymentStatus,
     delivery
   } = product;
-
+console.log(product);
   const [alerts, setAlerts] = useState();
 
   const handleShipped = (id) => {
