@@ -39,6 +39,8 @@ import UploadProduct from "../components/UploadProduct/UploadProduct";
 import ManageOrders from "../pages/manageOrders/ManageOrders";
 import OrderNotification from "../pages/OrderNotification/OrderNotification";
 import RetrunsProductMain from "../components/RetrunsProductMain/RetrunsProductMain";
+import SalesOverviewItems from "../components/SalesOverviewItems/SalesOverviewItems";
+import SalesOverview from "../components/SalesOverview/SalesOverview";
 
 export const manageProductsArray = [
   {
@@ -234,4 +236,17 @@ export const manageProductsArray = [
     href: "couponmanagement02",
     element: <CouponManagement02></CouponManagement02>,
   },
+  {
+    title: "SalesOverview",
+    href: "salesOverview",
+    element: <SalesOverview></SalesOverview>
+  },
+  {
+    title: "SalesOverviewItems",
+    href: "salesOverviewItems",
+    element: <SalesOverviewItems></SalesOverviewItems>,
+  },
+
+
+
 ];

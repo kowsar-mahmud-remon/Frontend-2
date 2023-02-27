@@ -2,7 +2,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import style from "../../styles/componentsStyles/box-shaddow.module.css"
 
-const OrderOverviewTable = ({ product }) => {
+const SalesOverviewTableItems = ({ product }) => {
   const {
     title,
     variation,
@@ -18,6 +18,10 @@ const OrderOverviewTable = ({ product }) => {
     paymentStatus,
     delivery
   } = product;
+
+  const total = parseFloat(price * quantity);
+
+  console.log("amoutn", total, price, quantity);
 
   const [alerts, setAlerts] = useState();
 
@@ -43,26 +47,22 @@ const OrderOverviewTable = ({ product }) => {
         <td className="p-2">
           <Image className={`w-[76px] h-[61px] ${style.boxshaddow} rounded`} width={76} height={61} src={image} alt="" />
         </td>
-        <th scope="row" className="px-6 py-4 font-medium text-base whitespace-nowrap">
+        <th scope="row" className="px-6 py-8 font-medium text-base whitespace-nowrap">
           {title}
         </th>
-        <td className="px-6 py-4 font-medium text-base">
+        <td className="px-6 py-8 font-medium text-base">
           <label htmlFor="my-modal-2" className="cursor-pointer">
             KS515JKO
           </label>
         </td>
-        <td className="px-6 py-4 font-medium text-base">{variation}</td>
-        <td className="px-6 py-4 font-medium text-base">{quantity}</td>
-        <td className="px-6 py-4 font-medium text-base">TK {price}</td>
-        <td className="px-6 py-4 font-medium text-base">{date}</td>
-        <td className="px-6 py-4 font-medium text-base" style={{ 'color': textColor(status)}}>{status}</td>
-        <td className="px-6 py-4 font-medium">
-          {" "}
-          <button className={ delivery === "Paid" ? "w-[135px] h-[31px] rounded bg-[#2ECC71] text-white text-center" : "w-[135px] h-[31px] rounded bg-[#FB641B] text-white text-center" }>{delivery}</button>{" "}
-        </td>
+        <td className="px-6 py-8 font-medium text-base">{variation}</td>
+        <td className="px-6 py-8 font-medium text-base">TK {price}</td>
+        <td className="px-6 py-8 font-medium text-base">{quantity} kg</td>
+        <td className="px-6 py-8 font-medium text-base">{date}</td>
+        <td className="px-6 py-8 font-medium text-base">TK {total}</td>
       </tr>
     </>
   );
 };
 
-export default OrderOverviewTable;
+export default SalesOverviewTableItems;

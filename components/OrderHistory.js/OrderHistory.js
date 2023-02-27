@@ -68,7 +68,7 @@ const OrderHistory = () => {
               </div>
             </div>
           </div>
-          <div className="mt-4">
+          <div className="mt-6">
             <div>
               <div
                 className={`rounded-lg  pb-[300px] ${style.boxshaddow} bg-[#FFFFFF]`}
