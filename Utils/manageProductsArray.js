@@ -12,7 +12,7 @@ import ReportManagementOne from "../components/FeedbackManagement/ReportManageme
 import ManageProduct from "../components/ManageProduct/ManageProduct";
 import ManageReview from "../components/ManageReview/ManageReview";
 import ManageReviewList from "../components/ManageReviewList/ManageReviewList";
-import OrderHistory from "../components/orderHistory.js/OrderHistory";
+
 import OrderOverview from "../components/OrderOverview";
 import OrderTrackingPage01 from "../components/OrderTrackingPage01/OrderTrackingPage01";
 import AllProduct from "../components/ProductCampaignMain/AllProduct";
@@ -46,6 +46,7 @@ import CouponManagement03 from "../components/CouponManagement03/CouponManagemen
 import CouponPayNow from "../components/CouponPayNow/CouponPayNow";
 import AccountStatement from "../components/AccountStatement/AccountStatement";
 import OrderNotification from "../components/OrderNotification/OrderNotification";
+import OrderHistory from "../components/OrderHistory/OrderHistory";
 
 export const manageProductsArray = [
   {
