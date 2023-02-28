@@ -114,7 +114,7 @@ const OrderNotification = () => {
                       </tr>
                     </thead>
                     <tbody>
-                      {item.map((product) => {
+                      {item?.map((product) => {
                         return (
                           <OrderNotificationTable
                             key={product.id}

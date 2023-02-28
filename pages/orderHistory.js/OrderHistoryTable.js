@@ -3,7 +3,7 @@ import React from "react";
 import { useState } from "react";
 
 const OrderHistoryTable = ({ product }) => {
-  const { title,category, status, orderNum, kg, price, image, deliveryDate,} = product;
+  const { title, category, status, orderNum, kg, price, image, deliveryDate, } = product || {};
 
   
 

@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 const AllProductCard = ({ product, setModal }) => {
-  const { name, image } = product;
+  const { name, image } = product || {};
   
 
 
