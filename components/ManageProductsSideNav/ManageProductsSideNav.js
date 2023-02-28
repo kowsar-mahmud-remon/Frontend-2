@@ -151,7 +151,7 @@ const ManageProductsSideNav = () => {
       subcata: [
         {
           name: "Account Statement",
-          href: "editProduct"
+          href: "accountStatement"
         },
         {
           name: "NID Card",

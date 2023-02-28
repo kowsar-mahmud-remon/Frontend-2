@@ -19,9 +19,9 @@ const ManageReviewList = () => {
             </div>
             <h1 className='text-[24px] font-semibold text-[#FB641B] mb-[32px]'>Manage Review List</h1>
 
-            <div className='p-[24px] shadow-lg  rounded-md'>
+            <div className='p-[24px] shadow-small  rounded-md'>
                 {/* div number 1 start */}
-                <div className='shadow-lg p-[16px] rounded-md mb-[16px]'>
+                <div className='shadow-small p-[16px] rounded-md mb-[16px]'>
                     <p className='text-[14px] text-[#686868]'>Delivery on: 21 Dec 2022 10:21:00</p>
                     <div className='flex gap-[16px] mt-[16px]'>
                         <Image className='w-[57px] h-[46px]'
@@ -39,7 +39,7 @@ const ManageReviewList = () => {
                 </div>
                 {/* div number 1 end */}
                 {/* div number 2 start */}
-                <div className='shadow-lg p-[16px] rounded-md mb-[16px]'>
+                <div className='shadow-small p-[16px] rounded-md mb-[16px]'>
                     <p className='text-[14px] text-[#686868]'>Delivery on: 21 Dec 2022 10:21:00</p>
                     <div className='flex gap-[16px] mt-[16px]'>
                         <Image className='w-[57px] h-[46px]'
@@ -57,7 +57,7 @@ const ManageReviewList = () => {
                 </div>
                 {/* div number 2 end */}
                 {/* div number 3 start */}
-                <div className='shadow-lg p-[16px] rounded-md mb-[16px]'>
+                <div className='shadow-small p-[16px] rounded-md mb-[16px]'>
                     <p className='text-[14px] text-[#686868]'>Delivery on: 21 Dec 2022 10:21:00</p>
                     <div className='md:flex gap-[16px] mt-[16px]'>
                         <Image className='w-[57px] h-[46px]'

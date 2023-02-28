@@ -13,6 +13,8 @@
     "@next/font": "13.1.0",
     "@ramonak/react-progress-bar": "^5.0.3",
     "@reduxjs/toolkit": "^1.9.1",
+    "@syncfusion/ej2-react-grids": "^20.4.51", 
+    "canvasjs": "^1.8.3",
     "chart.js": "^4.2.1",
     "daisyui": "^2.46.0",
     "date-fns": "^2.29.3",

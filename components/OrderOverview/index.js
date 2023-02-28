@@ -5,9 +5,9 @@ import item from "./faketabledata.json";
 
 const OrderOverview = () => {
   return (
-    <section className="bg-[#FFFFFF] w-full pt-7">  
+    <section className="bg-[#FFFFFF] max-w-[1426px] pt-7">  
       <div className="">
-        <div className="lg:max-w-[1426px]">       
+        <div className="">       
           <div>
             <div className="text-lg breadcrumbs text-[#686868]">
               <ul>
@@ -32,7 +32,7 @@ const OrderOverview = () => {
               <p className="text-[#001E00] font-semibold text-lg">Top Sales Products</p>
 
               <div className="mt-4">
-                <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+                <div className="relative overflow-x-auto  sm:rounded-lg">
                   <table className="w-full text-base text-left text-[#001E00]">
                     <thead className="text-base text-[#001E00] font-normal bg-[#F2F3F7] h-[48px]">
                     <tr> 
@@ -40,60 +40,60 @@ const OrderOverview = () => {
                           scope="col"
                           className=" py-2 font-medium text-[#001E00] text-base"
                         >
-                          <p className="border-r px-6 border-[#B7B7B7]">Product</p>
+                          <p className="border-r px-3 whitespace-nowrap border-[#B7B7B7]">Product</p>
                         </th>
                         <th
                           scope="col"
                           className=" py-3 font-medium text-[#001E00] text-base"
                         >
-                          <p className="border-r px-6 border-[#B7B7B7]">Local Title</p>
+                          <p className="border-r px-3 whitespace-nowrap border-[#B7B7B7]">Local Title</p>
                           
                         </th>
                         <th
                           scope="col"
                           className=" py-3 font-medium text-[#001E00] text-base"
                         >
-                          <p className="border-r px-6 border-[#B7B7B7]">Order Number</p>
+                          <p className="border-r px-3 whitespace-nowrap border-[#B7B7B7]">Order Number</p>
                          
                         </th>
                         <th
                           scope="col"
                           className=" py-3 font-medium text-[#001E00] text-base"
                         >
-                          <p className="border-r px-6 border-[#B7B7B7]">Category</p>
+                          <p className="border-r px-3 whitespace-nowrap border-[#B7B7B7]">Category</p>
                           
                         </th>
                         <th
                           scope="col"
                           className=" py-3 font-medium text-[#001E00] text-base"
                         >
-                          <p className="border-r px-6 border-[#B7B7B7]">Quantity</p>
+                          <p className="border-r px-3 whitespace-nowrap border-[#B7B7B7]">Quantity</p>
                           
                         </th>
                         <th
                           scope="col"
                           className=" py-3 font-medium text-[#001E00] text-base"
                         >
-                         <p className="px-6 order-r border-[#B7B7B7]">Price</p> 
+                         <p className="px-3 whitespace-nowrap border-r border-[#B7B7B7]">Price</p> 
                           
                         </th>
                         <th
                           scope="col"
                           className=" py-3 font-medium text-[#001E00] text-base"
                         >
-                          <p className="px-6 border-r border-[#B7B7B7]"> Date </p>
+                          <p className="px-3 whitespace-nowrap border-r border-[#B7B7B7]"> Date </p>
                         
                         </th>
                         <th
                           scope="col"
                           className=" py-3 font-medium text-[#001E00] text-base"
                         >
-                          <p className="px-6 border-r border-[#B7B7B7]">Product Status</p>
+                          <p className="px-3 whitespace-nowrap border-r border-[#B7B7B7]">Product Status</p>
                           
                         </th>
                         <th
                           scope="col"
-                          className="px-6 py-3 font-medium text-[#001E00] text-base"
+                          className="px-3 whitespace-nowrap py-3 font-medium text-[#001E00] text-base"
                         >
                           Payment Status
                         </th>

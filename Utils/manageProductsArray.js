@@ -12,8 +12,7 @@ import ReportManagementOne from "../components/FeedbackManagement/ReportManageme
 import ManageProduct from "../components/ManageProduct/ManageProduct";
 import ManageReview from "../components/ManageReview/ManageReview";
 import ManageReviewList from "../components/ManageReviewList/ManageReviewList";
-import OrderHistory from "../components/orderHistory.js/OrderHistory";
-import OrderNotificationTable from "../components/OrderNotification/OrderNotificationTable";
+
 import OrderOverview from "../components/OrderOverview";
 import OrderTrackingPage01 from "../components/OrderTrackingPage01/OrderTrackingPage01";
 import AllProduct from "../components/ProductCampaignMain/AllProduct";
@@ -29,7 +28,6 @@ import ContactUs from "../components/SellerSupport/ContactUs";
 import ContactUsOne from "../components/SellerSupport/ContactUsOne";
 import HelpCenter from "../components/SellerSupport/HelpCenter";
 import LiveChatTwo from "../components/SellerSupport/LiveChatTwo";
-import Sellerverification from "../components/sellerverification/Sellerverification";
 import SellerVerificationPage1 from "../components/SellerVerificationPage1/SellerVerificationPage1";
 import SellerVerificationPage2 from "../components/SellerVerificationPage2/SellerVerificationPage2";
 import SellerVerificationPage3 from "../components/SellerVerificationPage3/SellerVerificationPage3";
@@ -37,11 +35,19 @@ import SellerVerificationPage5 from "../components/SellerVerificationPage5/Selle
 import ProductShipping from "../components/ShippingManagement/ProductShipping";
 import UploadProduct from "../components/UploadProduct/UploadProduct";
 import ManageOrders from "../pages/manageOrders/ManageOrders";
-import OrderNotification from "../pages/OrderNotification/OrderNotification";
+
 import RetrunsProductMain from "../components/RetrunsProductMain/RetrunsProductMain";
 import CommissionManagement from "../components/Tax&Offers/CommissionManagement";
 import LiveChat from "../components/SellerSupport/LiveChat";
 import LiveChatOne from "../components/SellerSupport/LiveChatOne";
+import SalesOverviewItems from "../components/SalesOverviewItems/SalesOverviewItems";
+import SalesOverview from "../components/SalesOverview/SalesOverview";
+import CouponManagement03 from "../components/CouponManagement03/CouponManagement03";
+import CouponPayNow from "../components/CouponPayNow/CouponPayNow";
+import AccountStatement from "../components/AccountStatement/AccountStatement";
+import OrderNotification from "../components/OrderNotification/OrderNotification";
+import OrderHistory from "../components/OrderHistory/OrderHistory";
+
 
 export const manageProductsArray = [
   {
@@ -95,9 +101,9 @@ export const manageProductsArray = [
     element: <ProductInvoicesDetails></ProductInvoicesDetails>,
   },
   {
-    title: 'Feedback',
-    href: 'feedback',
-    element: <ManageReview></ManageReview>
+    title: "Feedback",
+    href: "feedback",
+    element: <ManageReview></ManageReview>,
   },
   {
     title: "AllProduct",
@@ -152,13 +158,13 @@ export const manageProductsArray = [
   {
     title: "ManageReview",
     href: "manageReview",
-    element: <ManageReviewList></ManageReviewList>
+    element: <ManageReviewList></ManageReviewList>,
     // element: <QuestionAndAnswer></QuestionAndAnswer>
   },
   {
     title: "Question and Answer",
     href: "questionanswer",
-    element: <QuestionAndAnswer></QuestionAndAnswer>
+    element: <QuestionAndAnswer></QuestionAndAnswer>,
   },
   {
     title: "OrderHistory",
@@ -223,13 +229,13 @@ export const manageProductsArray = [
   {
     title: "Coupon Management",
     href: "couponmanagement",
-    element: <CoupoManagement></CoupoManagement>
+    element: <CoupoManagement></CoupoManagement>,
     // element: <CouponManagement02></CouponManagement02>,
   },
   {
     title: "Available Coupon",
     href: "availablecoupon",
-    element: <AvailableCoupon></AvailableCoupon>
+    element: <AvailableCoupon></AvailableCoupon>,
     // element: <CouponManagement02></CouponManagement02>,
   },
   {
@@ -256,5 +262,34 @@ export const manageProductsArray = [
     title: "LiveChatOne",
     href: "liveChatOne",
     element: <LiveChatOne></LiveChatOne>,
+    title: "SalesOverview",
+    href: "salesOverview",
+    element: <SalesOverview></SalesOverview>,
   },
+  {
+    title: "SalesOverviewItems",
+    href: "salesOverviewItems",
+    element: <SalesOverviewItems></SalesOverviewItems>,
+  },
+  {
+    title: "Coupon Management03",
+    href: "couponmanagement03",
+    element: <CouponManagement03></CouponManagement03>,
+  },
+  {
+    title: "Coupon Pay",
+    href: "couponpay",
+    element: <CouponPayNow></CouponPayNow>,
+  },
+  {
+    title: "Product Invoices Details",
+    href: "productInvoicesDetails",
+    element: <ProductInvoicesDetails></ProductInvoicesDetails>,
+  },
+  ,
+  {
+    title: "Account Statement",
+    href: "accountStatement",
+    element: <AccountStatement></AccountStatement>
+  }
 ];

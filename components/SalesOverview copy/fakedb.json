@@ -1,16 +1,5 @@
 [
   {
-    "id": 1,
-    "category": "Kacha Bazar",
-    "price": 60,
-    "deliveryDate": "03 Feb 2023",
-    "status": "Delivered",
-    "orderNum": "#54872",
-    "kg": "1 kg",
-    "title": "Potota (Sweet Pumpkin Fali)",
-    "image": "https://freepngimg.com/thumb/potato/7-2-potato-free-download-png.png"
-  },
-  {
     "id": 2,
     "category": "Kacha Bazar",
     "price": 40,
@@ -42,16 +31,5 @@
     "kg": "1 kg",
     "title": "Tomato (Local) 500 ±30 gm",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0DshsOahuBCfD3J0O83XhHepKnaWDswVrYA&usqp=CAU"
-  },
-  {
-    "id": 5,
-    "category": "Kacha Bazar",
-    "price": 80,
-    "deliveryDate": "05 Feb 2023",
-    "status": "Canceled",
-    "orderNum": "#54872",
-    "kg": "1 kg",
-    "title": "Tomato (Local) 500 ±30 gm",
-    "image": "https://freepngimg.com/thumb/potato/7-2-potato-free-download-png.png"
   }
 ]

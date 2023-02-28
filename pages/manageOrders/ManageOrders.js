@@ -52,7 +52,7 @@ const ManageOrders = () => {
                           scope="col"
                           className=" py-2 font-medium text-[#001E00] text-base"
                         >
-                          <p className="border-r px-2 border-[#B7B7B7]">
+                          <p className="border-r px-6 border-[#B7B7B7]">
                             Product
                           </p>
                         </th>

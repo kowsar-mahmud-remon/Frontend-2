@@ -68,7 +68,7 @@ const OrderHistory = () => {
               </div>
             </div>
           </div>
-          <div className="mt-4">
+          <div className="mt-6">
             <div>
               <div
                 className={`rounded-lg  pb-[300px] ${style.boxshaddow} bg-[#FFFFFF]`}
@@ -80,7 +80,7 @@ const OrderHistory = () => {
                     </p>
                   </div>
                   <div className="mt-4">
-                    <div className=" overflow-x-auto shadow-md sm:rounded">
+                    <div className=" overflow-x-auto  sm:rounded">
                       <table className=" text-left text-[#001E00] w-full">
                         <thead className=" text-[#001E00] bg-[#F2F3F7] ">
                           <tr>
