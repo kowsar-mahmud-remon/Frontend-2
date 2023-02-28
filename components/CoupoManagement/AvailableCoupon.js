@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import coupon1 from '../../public/image 374.png'
 
 const AvailableCoupon = () => {
@@ -63,25 +64,27 @@ const AvailableCoupon = () => {
                 <div className="grid xl:grid-cols-4 lg:grid-cols-2 gap-[20px]">
                     {
                         availableCoupons.map(coupon => <>
-                            <div className="shadow-small rounded-[8px] max-w-[333px]  h-full mb-[16px]  ">
-                                <div className="flex justify-center xl:mx-[16px] pt-[16px]">
-                                    <Image className="" width={301} height={270} src={coupon.image} alt=""></Image>
-                                </div>
-                                <div className="mx-[16px] mt-[9px]">
-                                    <div>
-                                        <h1 className="text-[#001E00] font-[500] text-[18px]">50% Discount Product Sell</h1>
-                                        <h2 className="text-[#001E00] mt-[12px] text-[16px] font-[500]">End: 25 May 2023</h2>
+                            <Link href='couponmanagement02'>
+                                <div className="shadow-small rounded-[8px] max-w-[333px]  h-full mb-[16px]  ">
+                                    <div className="flex justify-center lg:mx-[16px] xl:mx-[16px] pt-[16px]">
+                                        <Image className="" width={301} height={270} src={coupon.image} alt=""></Image>
                                     </div>
-                                    <div className="mt-[16px] flex justify-between">
-                                        <h1 className="text-[#FB641B] text-[24px] font-[500]">Tk 2000</h1>
-                                        <h2 className="text-[#FB641B] font-[500] text-[24px]">400 <span className="text-[#686868]">Point</span></h2>
+                                    <div className="mx-[16px] mt-[9px]">
+                                        <div>
+                                            <h1 className="text-[#001E00] font-[500] text-[18px]">50% Discount Product Sell</h1>
+                                            <h2 className="text-[#001E00] mt-[12px] text-[16px] font-[500]">End: 25 May 2023</h2>
+                                        </div>
+                                        <div className="mt-[16px] flex justify-between">
+                                            <h1 className="text-[#FB641B] text-[24px] font-[500]">Tk 2000</h1>
+                                            <h2 className="text-[#FB641B] font-[500] text-[24px]">400 <span className="text-[#686868]">Point</span></h2>
+                                        </div>
+                                        <div className="mt-[24px]  flex justify-center">
+                                            <button className="w-[134px] h-[40px] border-[1px] border-solid rounded-[4px] border-[#FB641B] text-[#FB641B]">Buy Now</button>
+                                        </div>
                                     </div>
-                                    <div className="mt-[24px]  flex justify-center">
-                                        <button className="w-[134px] h-[40px] border-[1px] border-solid rounded-[4px] border-[#FB641B] text-[#FB641B]">Buy Now</button>
-                                    </div>
-                                </div>
 
-                            </div>
+                                </div>
+                            </Link>
 
                         </>)
                     }

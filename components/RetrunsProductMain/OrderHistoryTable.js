@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { useState } from "react";
 
@@ -33,7 +34,7 @@ const OrderHistoryTable = ({ product }) => {
           {deliveryDate}
         </td>
         <td className="px-6 py-4 font-medium text-base text-[#001E00]">
-          {status}
+          <button><Link href="returnProductId" className="text-[#287DF3]">Return View</Link></button>
         </td>
       </tr>
     </>

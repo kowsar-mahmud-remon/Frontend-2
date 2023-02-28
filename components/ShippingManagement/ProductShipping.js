@@ -90,7 +90,7 @@ const ProductShipping = () => {
               <th className='normal-case text-base pb-1 pt-2 text-[#001E00] font-medium p-0 pl-4'><p className='border-r border-[#B7B7B7] pr-2 mb-2'>Payment Status</p></th>
               <th className='normal-case text-base pb-1 pt-2 text-[#001E00] font-medium p-0 pl-4'><p className='border-r border-[#B7B7B7] pr-2 mb-2'>Delivery Date</p></th>
               <th className='normal-case text-base pb-1 pt-2 text-[#001E00] font-medium p-0 pl-4'><p className='border-r border-[#B7B7B7] pr-2 mb-2'>Details</p></th>
-              <th className='normal-case text-base pb-1 pt-2 text-[#001E00] font-medium p-0 pl-4'><p className='border-r border-[#B7B7B7] pr-2 mb-2'>Status</p></th>
+              <th className='normal-case text-base pb-1 pt-2 text-[#001E00] font-medium p-0 pl-4'><p className=' pr-2 mb-2'>Status</p></th>
             </tr>
           </thead>
           <tbody className=''>

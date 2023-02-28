@@ -4,6 +4,7 @@ import CampaignManagementThree from "../components/CampaignManagement/CampaignMa
 import CampaignManagementTwo from "../components/CampaignManagement/CampaignManagementTwo";
 import AvailableCoupon from "../components/CoupoManagement/AvailableCoupon";
 import CoupoManagement from "../components/CoupoManagement/CoupoManagement";
+import CouponManagement02 from "../components/CouponManagement02/CouponManagement02";
 import EditProducts from "../components/EditProducts/EditProducts";
 import EditProductsTwo from "../components/EditProducts/EditProductsTwo";
 import ReportManagement from "../components/FeedbackManagement/ReportManagement";
@@ -37,6 +38,15 @@ import ProductShipping from "../components/ShippingManagement/ProductShipping";
 import UploadProduct from "../components/UploadProduct/UploadProduct";
 import ManageOrders from "../pages/manageOrders/ManageOrders";
 import OrderNotification from "../pages/OrderNotification/OrderNotification";
+import RetrunsProductMain from "../components/RetrunsProductMain/RetrunsProductMain";
+import CommissionManagement from "../components/Tax&Offers/CommissionManagement";
+import LiveChat from "../components/SellerSupport/LiveChat";
+import LiveChatOne from "../components/SellerSupport/LiveChatOne";
+import SalesOverviewItems from "../components/SalesOverviewItems/SalesOverviewItems";
+import SalesOverview from "../components/SalesOverview/SalesOverview";
+import CouponManagement03 from "../components/CouponManagement03/CouponManagement03";
+import CouponPayNow from "../components/CouponPayNow/CouponPayNow";
+import AccountStatement from "../components/AccountStatement/AccountStatement";
 
 export const manageProductsArray = [
   {
@@ -90,9 +100,9 @@ export const manageProductsArray = [
     element: <ProductInvoicesDetails></ProductInvoicesDetails>,
   },
   {
-    title: 'Feedback',
-    href: 'feedback',
-    element: <ManageReview></ManageReview>
+    title: "Feedback",
+    href: "feedback",
+    element: <ManageReview></ManageReview>,
   },
   {
     title: "AllProduct",
@@ -147,13 +157,13 @@ export const manageProductsArray = [
   {
     title: "ManageReview",
     href: "manageReview",
-    element: <ManageReviewList></ManageReviewList>
+    element: <ManageReviewList></ManageReviewList>,
     // element: <QuestionAndAnswer></QuestionAndAnswer>
   },
   {
     title: "Question and Answer",
     href: "questionanswer",
-    element: <QuestionAndAnswer></QuestionAndAnswer>
+    element: <QuestionAndAnswer></QuestionAndAnswer>,
   },
   {
     title: "OrderHistory",
@@ -163,6 +173,11 @@ export const manageProductsArray = [
   {
     title: "returnProducts",
     href: "returnProduct",
+    element: <RetrunsProductMain></RetrunsProductMain>,
+  },
+  {
+    title: "returnProducts",
+    href: "returnProductId",
     element: <ReturnProducts></ReturnProducts>,
   },
   {
@@ -212,7 +227,63 @@ export const manageProductsArray = [
   },
   {
     title: "Coupon Management",
-    href: "CoupoManagement",
-    element: <AvailableCoupon></AvailableCoupon>
+    href: "couponmanagement",
+    element: <CoupoManagement></CoupoManagement>,
+    // element: <CouponManagement02></CouponManagement02>,
   },
+  {
+    title: "Available Coupon",
+    href: "availablecoupon",
+    element: <AvailableCoupon></AvailableCoupon>,
+    // element: <CouponManagement02></CouponManagement02>,
+  },
+  {
+    title: "Coupon Management02",
+    href: "couponmanagement02",
+    element: <CouponManagement02></CouponManagement02>,
+  },
+  {
+    title: "ProductShipping",
+    href: "productShipping",
+    element: <ProductShipping></ProductShipping>,
+  },
+  {
+    title: "CommissionManagement",
+    href: "commissionManagement",
+    element: <CommissionManagement></CommissionManagement>,
+  },
+  {
+    title: "LiveChat",
+    href: "liveChat",
+    element: <LiveChat></LiveChat>,
+  },
+  {
+    title: "LiveChatOne",
+    href: "liveChatOne",
+    element: <LiveChatOne></LiveChatOne>,
+    title: "SalesOverview",
+    href: "salesOverview",
+    element: <SalesOverview></SalesOverview>,
+  },
+  {
+    title: "SalesOverviewItems",
+    href: "salesOverviewItems",
+    element: <SalesOverviewItems></SalesOverviewItems>,
+  },
+  {
+    title: "Coupon Management03",
+    href: "couponmanagement03",
+    element: <CouponManagement03></CouponManagement03>,
+  },
+  {
+    title: "Coupon Pay",
+    href: "couponpay",
+    element: <CouponPayNow></CouponPayNow>,
+  },
+  ,
+  {
+    title: "Account Statement",
+    href: "accountStatement",
+    element: <AccountStatement></AccountStatement>
+  }
 ];

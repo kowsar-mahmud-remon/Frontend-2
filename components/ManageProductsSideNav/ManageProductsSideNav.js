@@ -83,7 +83,7 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Campaign Management",
-          href: "campaignManagement"
+          href: "campaignManagementOne"
         },
         {
           name: "Learn About Ads",
@@ -105,6 +105,10 @@ const ManageProductsSideNav = () => {
           name: "Manage Orders",
           href: "manageOrders"
         },
+        // {
+        //   name: "Manage Reviews",
+        //   href: "manageReview"
+        // },
         {
           name: "Order History",
           href: "orderHistory"
@@ -147,7 +151,7 @@ const ManageProductsSideNav = () => {
       subcata: [
         {
           name: "Account Statement",
-          href: "editProduct"
+          href: "accountStatement"
         },
         {
           name: "NID Card",
@@ -227,11 +231,11 @@ const ManageProductsSideNav = () => {
       subcata: [
         {
           name: "Coupon Management",
-          href: "CoupoManagement"
+          href: "couponmanagement",
         },
         {
           name: "Commission Management",
-          href: "editProduct"
+          href: "commissionManagement"
         },
         {
           name: "Tax Management",
@@ -256,7 +260,7 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Live Chat",
-          href: "liveChatTwo"
+          href: "liveChat"
         },
         {
           name: "Phone Support",

@@ -1,14 +1,14 @@
-import Image from "next/image";
-import React from "react";
-import { useState } from "react";
+import Image from 'next/image';
+import React from 'react';
 
-const OrderHistoryTable = ({ product }) => {
-  const { title, category, status, orderNum, kg, price, image, deliveryDate } = product;
+const SalesOverviewTable = ({product}) => {
 
-  return (
-    <>
+    const { title, category, status, orderNum, kg, price, image, deliveryDate } = product;
+
+    return (
+        <>
       <tr className="bg-white border-b border-[#B7B7B7] text-[#001E00]">
-        <td className="p-2">
+        <td className="px-6 py-4">
           <Image className="w-[76px] h-[61px]" width={76} height={61} src={image} alt="" />
         </td>
         <th
@@ -22,14 +22,14 @@ const OrderHistoryTable = ({ product }) => {
             {orderNum}
           </label>
         </td>
-        <td className="px-6 py-4 font-medium text-base whitespace-nowrap text-[#001E00]">
+        <td className="px-6 py-4 font-medium text-base text-[#001E00]">
           {category}
         </td>
-        <td className="px-6 py-4 font-medium whitespace-nowrap text-base text-[#001E00]">
+        <td className="px-6 py-4 font-medium text-base text-[#001E00]">
           TK {price}
         </td>
         <td className="px-6 py-4 font-medium text-base text-[#001E00]">{kg}</td>
-        <td className="px-6 py-4 whitespace-nowrap font-medium text-base text-[#001E00]">
+        <td className="px-6 py-4 font-medium text-base text-[#001E00]">
           {deliveryDate}
         </td>
         <td className="px-6 py-4 font-medium text-base text-[#001E00]">
@@ -37,7 +37,7 @@ const OrderHistoryTable = ({ product }) => {
         </td>
       </tr>
     </>
-  );
+    );
 };
 
-export default OrderHistoryTable;
+export default SalesOverviewTable;
