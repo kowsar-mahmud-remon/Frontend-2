@@ -11,11 +11,12 @@ import MyOrderCancelation from "../components/MyOrderCancelation/MyOrderCancelat
 import AddressBook from "../components/AddressBook/AddressBook";
 import EditProfile from "../components/ManageAccoutSideBar/EditProfile";
 import ChangesPassword from "../components/ManageAccoutSideBar/ChangesPassword";
-import MyPaymentOption from "../components/ManageAccoutSideBar/myPaymentOption";
+
 import MyReturns from "../components/ManageAccoutSideBar/MyReturns";
 import MyCancelation from "../components/ManageAccoutSideBar/MyCancelation";
 import Coupons from "../components/ManageAccoutSideBar/Coupons";
 import GiftCards from "../components/ManageAccoutSideBar/GiftCards";
+import MyPaymentOption from "../components/ManageAccoutSideBar/myPaymentOption";
 
 const profileLinksObj = [
   {
