@@ -46,6 +46,7 @@ import SalesOverviewItems from "../components/SalesOverviewItems/SalesOverviewIt
 import SalesOverview from "../components/SalesOverview/SalesOverview";
 import CouponManagement03 from "../components/CouponManagement03/CouponManagement03";
 import CouponPayNow from "../components/CouponPayNow/CouponPayNow";
+import AccountStatement from "../components/AccountStatement/AccountStatement";
 
 export const manageProductsArray = [
   {
@@ -279,4 +280,10 @@ export const manageProductsArray = [
     href: "couponpay",
     element: <CouponPayNow></CouponPayNow>,
   },
+  ,
+  {
+    title: "Account Statement",
+    href: "accountStatement",
+    element: <AccountStatement></AccountStatement>
+  }
 ];
