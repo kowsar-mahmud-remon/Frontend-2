@@ -73,7 +73,7 @@ const OrderNotification = () => {
                           scope="col"
                           className=" py-3 font-medium text-[#001E00] text-base"
                         >
-                          <p className="border-r px-6 border-[#B7B7B7]">Price</p>
+                          <p className="border-r px-6 whitespace-nowrap border-[#B7B7B7]">Price</p>
                           
                         </th>
                         <th

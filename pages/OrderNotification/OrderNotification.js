@@ -38,7 +38,7 @@ const OrderNotification = () => {
             <p className="text-[#001E00] font-semibold">All Open Oderes</p>
 
               <div className="mt-4 pb-[300px]">
-                <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+                <div className="relative overflow-x-auto sm:rounded-lg">
                   <table className="w-full text-base text-left text-[#001E00]">
                     <thead className="text-base text-[#001E00] font-normal bg-[#F2F3F7] h-[48px]">
                     <tr> 
