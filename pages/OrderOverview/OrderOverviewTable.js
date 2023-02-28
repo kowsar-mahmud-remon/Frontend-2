@@ -16,7 +16,7 @@ const OrderOverviewTable = ({ product }) => {
     deliveryDate,
     paymentStatus,
     delivery
-  } = product;
+  } = product || {};
 
   const [alerts, setAlerts] = useState();
 
