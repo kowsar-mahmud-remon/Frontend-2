@@ -116,7 +116,7 @@ const AccountStatement = () => {
                                             <p className='text-[#707070] text-[13px]'>Es. <span className='ml-[8px]'>{accountStatement.Es1}</span></p>
                                             <Image className='h-[20px] w-[20px] '
                                                 src={vt6}
-                                                alt='Upload Image'
+                                                alt=''
                                             />
                                         </div>
                                     </div>
