@@ -17,7 +17,7 @@ const OrderOverviewTable = ({ product }) => {
     deliveryDate,
     paymentStatus,
     delivery
-  } = product;
+  } = product || {};
 
   const [alerts, setAlerts] = useState();
 
@@ -39,7 +39,7 @@ const OrderOverviewTable = ({ product }) => {
 
   return (
     <>
-      <tr className="bg-white border-b text-base border-[#B7B7B7] text-[#001E00]">
+      <tr className="bg-white border-b last:border-b-0 text-base border-[#B7B7B7] text-[#001E00]">
         <td className="p-2">
           <Image className={`w-[76px] h-[61px] ${style.boxshaddow} rounded`} width={76} height={61} src={image} alt="" />
         </td>
@@ -53,7 +53,7 @@ const OrderOverviewTable = ({ product }) => {
         </td>
         <td className="px-6 py-4 font-medium text-base">{variation}</td>
         <td className="px-6 py-4 font-medium text-base">{quantity}</td>
-        <td className="px-6 py-4 font-medium text-base">TK {price}</td>
+        <td className="px-6 py-4 whitespace-nowrap font-medium text-base">TK {price}</td>
         <td className="px-6 py-4 font-medium text-base">{date}</td>
         <td className="px-6 py-4 font-medium text-base" style={{ 'color': textColor(status)}}>{status}</td>
         <td className="px-6 py-4 font-medium">

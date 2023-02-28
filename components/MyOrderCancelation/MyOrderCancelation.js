@@ -159,7 +159,7 @@ const MyOrderCancelation = () => {
 
   return (
     // cancellation page
-    <div className="w-full md:pl-5 mb-10 md:mx-0 mx-3">
+    <div className="max-w-[924px] md:pl-5 mb-10 md:mx-0 mx-3">
       <div className="md:hidden ">
         <button
           onClick={() => router.back()}
