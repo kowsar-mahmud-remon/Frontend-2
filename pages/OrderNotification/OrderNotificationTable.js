@@ -16,7 +16,7 @@ const OrderNotificationTable = ({ product }) => {
     deliveryDate,
     paymentStatus,
     delivery
-  } = product;
+  } = product || {};
 console.log(product);
   const [alerts, setAlerts] = useState();
 
