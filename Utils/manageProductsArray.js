@@ -248,6 +248,7 @@ export const manageProductsArray = [
     href: "salesOverviewItems",
     element: <SalesOverviewItems></SalesOverviewItems>,
   },
+  {
     title: "Coupon Management03",
     href: "couponmanagement03",
     element: <CouponManagement03 ></CouponManagement03>,
@@ -256,5 +257,10 @@ export const manageProductsArray = [
     title: "Coupon Pay",
     href: "couponpay",
     element: <CouponPayNow></CouponPayNow>,
+  },
+  {
+    title: "Product Invoices Details",
+    href: "productInvoicesDetails",
+    element: <ProductInvoicesDetails></ProductInvoicesDetails>,
   },
 ];
