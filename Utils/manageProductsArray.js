@@ -47,6 +47,9 @@ import SalesOverview from "../components/SalesOverview/SalesOverview";
 import CouponManagement03 from "../components/CouponManagement03/CouponManagement03";
 import CouponPayNow from "../components/CouponPayNow/CouponPayNow";
 import AccountStatement from "../components/AccountStatement/AccountStatement";
+import UpdateStatement from "../components/AccountStatement/UpdateStatement";
+import NidCard from "../components/AccountStatement/NidCard";
+import BankStatement from "../components/AccountStatement/BankStatement";
 
 export const manageProductsArray = [
   {
@@ -285,5 +288,20 @@ export const manageProductsArray = [
     title: "Account Statement",
     href: "accountStatement",
     element: <AccountStatement></AccountStatement>
+  },
+  {
+    title: "Update Statement",
+    href: "UpdateStatement",
+    element: <UpdateStatement></UpdateStatement>
+  }, 
+  {
+    title: "NID Card",
+    href: "nidCard",
+    element: <NidCard></NidCard>
+  },{
+   
+    title: "Bank Statement",
+    href: "BankStatement",
+    element: <BankStatement></BankStatement>
   }
 ];

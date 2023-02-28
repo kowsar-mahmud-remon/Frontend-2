@@ -155,11 +155,11 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "NID Card",
-          href: "editProduct"
+          href: "nidCard"
         },
         {
           name: "Bank Statement",
-          href: "editProduct"
+          href: "BankStatement"
         }
       ],
     },
