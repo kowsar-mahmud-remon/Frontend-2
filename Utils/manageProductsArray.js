@@ -46,7 +46,7 @@ import CouponManagement03 from "../components/CouponManagement03/CouponManagemen
 import CouponPayNow from "../components/CouponPayNow/CouponPayNow";
 import AccountStatement from "../components/AccountStatement/AccountStatement";
 import OrderNotification from "../components/OrderNotification/OrderNotification";
-import OrderHistory from "../components/OrderHistory/OrderHistory";
+import OrderHistory from "../components/OrderHistory.js/OrderHistory";
 
 export const manageProductsArray = [
   {
