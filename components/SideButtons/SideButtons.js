@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import img1 from "../../assets/images/Sidebutton/Chat-logo.png";
-import img2 from "../../assets/images/Sidebutton/vector.png";
+import img2 from "../../assets/images/Sidebutton/Vector.png";
 import img3 from "../../assets/images/Sidebutton/Group 2436.png";
 import img4 from "../../assets/images/Sidebutton/Vector (9).png";
 import img5 from "../../assets/images/Sidebutton/Vector (10).png";
