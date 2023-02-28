@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import Select from "react-select";
 import ManageOrderModal from "../ManageOrderModal/ManageOrderModal";
 import img from "../../assets/images/image 66.png"
+import Link from "next/link";
+import style from "../../styles/componentsStyles/box-shaddow.module.css"
 
 const ManageOrderTable = ({ product, selectedOption, setSelectedOption , modalIsOpen, setIsOpen}) => {
   const {
@@ -19,7 +21,7 @@ const ManageOrderTable = ({ product, selectedOption, setSelectedOption , modalIs
     deliveryDate,
     paymentStatus,
     delivery,
-  } = product;
+  } = product || {};
 
   const [alerts, setAlerts] = useState();
 
@@ -46,7 +48,7 @@ const ManageOrderTable = ({ product, selectedOption, setSelectedOption , modalIs
       <tr className="bg-white border-b text-sm border-[#B7B7B7] text-[#001E00]">
         <td className="p-1 border-r border-l border-[#B7B7B7]">
           <Image
-            className="w-[76px]"
+            className={`w-[76px] h-[61px] ${style.boxshaddow} rounded mx-auto`}
             width={76}
             height={61}
             src={image}
@@ -81,7 +83,7 @@ const ManageOrderTable = ({ product, selectedOption, setSelectedOption , modalIs
           {deliveryDate} <br></br> to {date}
         </td>
         <td className="px-6 py-4 font-medium border-r border-[#B7B7B7]">
-          <button className="link text-[#287DF3]"> Invoice</button>
+          <button className="text-[#287DF3]"><Link href="productInvoicesDetails">Invoice</Link></button>
         </td>
         <td className="px-6 py-4 border-r border-[#B7B7B7]">
           <select className="w-[138px] h-10 rounded px-2 border border-[#B7B7B7]" onChange={(e)=>handleSelect(e.target.value)}>

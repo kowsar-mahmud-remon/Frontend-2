@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React, { useState } from "react";
-import style from "../../styles/componentsStyles/box-shaddow.module.css"
 
 const OrderOverviewTable = ({ product }) => {
   const {
@@ -39,9 +38,9 @@ const OrderOverviewTable = ({ product }) => {
 
   return (
     <>
-      <tr className="bg-white border-b last:border-b-0 text-base border-[#B7B7B7] text-[#001E00]">
-        <td className="p-2">
-          <Image className={`w-[76px] h-[61px] ${style.boxshaddow} rounded`} width={76} height={61} src={image} alt="" />
+      <tr className="bg-white last:border-b-0 border-b text-sm border-[#B7B7B7] text-[#001E00]">
+        <td className="px-6 py-4">
+          <Image className="w-[76px] h-[61px]" width={76} height={61} src={image} alt="" />
         </td>
         <th scope="row" className="px-6 py-4 font-medium text-base whitespace-nowrap">
           {title}
@@ -53,7 +52,7 @@ const OrderOverviewTable = ({ product }) => {
         </td>
         <td className="px-6 py-4 font-medium text-base">{variation}</td>
         <td className="px-6 py-4 font-medium text-base">{quantity}</td>
-        <td className="px-6 py-4 whitespace-nowrap font-medium text-base">TK {price}</td>
+        <td className="px-6 py-4 font-medium text-base">TK {price}</td>
         <td className="px-6 py-4 font-medium text-base">{date}</td>
         <td className="px-6 py-4 font-medium text-base" style={{ 'color': textColor(status)}}>{status}</td>
         <td className="px-6 py-4 font-medium">

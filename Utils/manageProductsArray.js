@@ -280,6 +280,11 @@ export const manageProductsArray = [
     href: "couponpay",
     element: <CouponPayNow></CouponPayNow>,
   },
+  {
+    title: "Product Invoices Details",
+    href: "productInvoicesDetails",
+    element: <ProductInvoicesDetails></ProductInvoicesDetails>,
+  },
   ,
   {
     title: "Account Statement",

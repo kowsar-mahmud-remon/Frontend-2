@@ -1,24 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
+import OrderOverviewTable from "./OrderOverviewTable";
 import style from "../../styles/componentsStyles/box-shaddow.module.css";
 import item from "./faketabledata.json";
 
-import ManageOrderTable from "../../components/ManageOrderTable/ManageOrderTable";
-import ManageOrderModal from "../../components/ManageOrderModal/ManageOrderModal";
-import CustomModal from "../../components/CustomModal/CustomModal";
-
-const ManageOrders = () => {
-  const [selectedOption, setSelectedOption] = useState({});
-  const [modalIsOpen, setIsOpen] = useState(false);
-
-  if(selectedOption.value == "Shipped"){
-    setIsOpen(true)
-  }
-
+const OrderOverview = () => {
   return (
     <section className="bg-[#FFFFFF] w-full pt-7">
-      <ManageOrderModal></ManageOrderModal>
-      <CustomModal modalIsOpen={modalIsOpen} setIsOpen={setIsOpen}></CustomModal>
-      <div className="max-w-[1426px]">
+      <div className="">
         <div className="">
           <div>
             <div className="text-lg breadcrumbs text-[#686868]">
@@ -27,119 +15,98 @@ const ManageOrders = () => {
                   <a>Home</a>
                 </li>
                 <li>
-                  <a>Orders & Reviews</a>
+                  <a>Finance</a>
                 </li>
-                <li className="font-medium text-[#001E00]">Manage Orders</li>
+                <li className="font-medium text-[#001E00]">Order Overview</li>
               </ul>
             </div>
             <div>
               <h1 className="text-[#FB641B] font-semibold text-2xl">
-                Manage Orders
+              Order Overview
               </h1>
             </div>
           </div>
 
           <div className="bg-[#FFFFFF] rounded mt-[30px]">
             <div className={`${style.boxshaddow} p-6 rounded-lg`}>
-              <p className="text-[#001E00] font-semibold">All Open Oderes</p>
+              <p className="text-[#001E00] font-semibold text-lg">Top Sales Products</p>
 
-              <div className="mt-4 pb-[300px]">
-                <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+              <div className="mt-4">
+                <div className="relative overflow-x-auto  sm:rounded-lg">
                   <table className="w-full text-base text-left text-[#001E00]">
-                    <thead className="text-base text-[#001E00] font-normal bg-[#F2F3F7]">
+                    <thead className="text-base text-[#001E00] font-normal bg-[#F2F3F7] h-[48px]">
                       <tr>
                         <th
                           scope="col"
                           className=" py-2 font-medium text-[#001E00] text-base"
                         >
-                          <p className="border-r px-6 border-[#B7B7B7]">
-                            Product
-                          </p>
+                          <p className="border-r px-6 border-[#B7B7B7]">Product</p>
                         </th>
                         <th
                           scope="col"
                           className=" py-3 font-medium text-[#001E00] text-base"
                         >
-                          <p className="border-r px-2 border-[#B7B7B7]">
-                            Local Title
-                          </p>
+                          <p className="border-r px-6 border-[#B7B7B7]">Local Title</p>
+                          
                         </th>
                         <th
                           scope="col"
                           className=" py-3 font-medium text-[#001E00] text-base"
                         >
-                          <p className="border-r px-2 border-[#B7B7B7]">
-                            Product SKU
-                          </p>
+                          <p className="border-r px-6 border-[#B7B7B7]">Order Number</p>
+                         
                         </th>
                         <th
                           scope="col"
                           className=" py-3 font-medium text-[#001E00] text-base"
                         >
-                          <p className="border-r px-2 border-[#B7B7B7]">
-                            Category
-                          </p>
+                          <p className="border-r px-6 border-[#B7B7B7]">Category</p>
+                          
                         </th>
                         <th
                           scope="col"
                           className=" py-3 font-medium text-[#001E00] text-base"
                         >
-                          <p className="border-r px-2 border-[#B7B7B7]">
-                            Price
-                          </p>
+                          <p className="border-r px-6 border-[#B7B7B7]">Quantity</p>
+                          
                         </th>
                         <th
                           scope="col"
                           className=" py-3 font-medium text-[#001E00] text-base"
                         >
-                          <p className="px-2 border-r border-[#B7B7B7]">
-                            Quantity
-                          </p>
+                         <p className="px-6 order-r border-[#B7B7B7]">Price</p> 
+                          
                         </th>
                         <th
                           scope="col"
                           className=" py-3 font-medium text-[#001E00] text-base"
                         >
-                          <p className="px-2 border-r border-[#B7B7B7]">
-                            Payment Status
-                          </p>
+                          <p className="px-6 border-r border-[#B7B7B7]"> Date </p>
+                        
                         </th>
                         <th
                           scope="col"
                           className=" py-3 font-medium text-[#001E00] text-base"
                         >
-                          <p className="px-2 border-r border-[#B7B7B7]">
-                            Delivery Date
-                          </p>
+                          <p className="px-6 border-r border-[#B7B7B7]">Product Status</p>
+                          
                         </th>
                         <th
                           scope="col"
                           className=" py-3 font-medium text-[#001E00] text-base"
                         >
-                          <p className="px-2 border-r border-[#B7B7B7]">
-                            Details
-                          </p>
-                        </th>
-
-                        <th
-                          scope="col"
-                          className="px-2 py-3 font-medium text-[#001E00] text-base"
-                        >
-                          Status
+                          Payment Status
                         </th>
                       </tr>
                     </thead>
                     <tbody>
                       {item.map((product) => {
                         return (
-                          <ManageOrderTable
+                          <OrderOverviewTable
                             key={product.id}
                             product={product}
                             item={item}
-                            setSelectedOption={setSelectedOption}
-                            selectedOption={selectedOption}
-                            modalIsOpen={modalIsOpen} setIsOpen={setIsOpen}
-                          ></ManageOrderTable>
+                          ></OrderOverviewTable>
                         );
                       })}
                     </tbody>
@@ -154,4 +121,4 @@ const ManageOrders = () => {
   );
 };
 
-export default ManageOrders;
+export default OrderOverview;
