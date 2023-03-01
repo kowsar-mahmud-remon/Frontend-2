@@ -321,7 +321,7 @@ export const manageProductsArray = [
   }
   ,{
 
-    title: "UpdateBankStatement",
+    title: "UpdateBank Statement",
     href: "UpdateBankStatement",
     element: <UpdateBankStatement></UpdateBankStatement>
   }
