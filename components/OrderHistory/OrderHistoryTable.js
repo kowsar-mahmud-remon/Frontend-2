@@ -1,15 +1,16 @@
 import Image from "next/image";
 import React from "react";
 import { useState } from "react";
+import style from "../../styles/componentsStyles/box-shaddow.module.css"
 
 const OrderHistoryTable = ({ product }) => {
-  const { title, category, status, orderNum, kg, price, image, deliveryDate } = product;
+  const { title, category, status, orderNum, kg, price, image, deliveryDate } = product || {};
 
   return (
     <>
-      <tr className="bg-white border-b border-[#B7B7B7] text-[#001E00]">
+      <tr className="bg-white last:border-b-0 border-b border-[#B7B7B7] text-[#001E00]">
         <td className="p-2">
-          <Image className="w-[76px] h-[61px]" width={76} height={61} src={image} alt="" />
+          <Image className={`w-[76px] h-[61px] ${style.boxshaddow} rounded`} width={76} height={61} src={image} alt="" />
         </td>
         <th
           scope="row"

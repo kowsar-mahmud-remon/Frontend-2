@@ -7,7 +7,7 @@ const SalesOverviewTable = ({product}) => {
 
     return (
         <>
-      <tr className="bg-white border-b border-[#B7B7B7] text-[#001E00]">
+      <tr className="bg-white last:border-b-0 border-b border-[#B7B7B7] text-[#001E00]">
         <td className="px-6 py-4">
           <Image className="w-[76px] h-[61px]" width={76} height={61} src={image} alt="" />
         </td>
