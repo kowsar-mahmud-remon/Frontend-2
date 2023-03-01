@@ -47,6 +47,7 @@ import CouponPayNow from "../components/CouponPayNow/CouponPayNow";
 import AccountStatement from "../components/AccountStatement/AccountStatement";
 import OrderNotification from "../components/OrderNotification/OrderNotification";
 import OrderHistory from "../components/OrderHistory/OrderHistory";
+import PhoneSupport from "../components/SellerSupport/PhoneSupport";
 
 
 export const manageProductsArray = [
@@ -286,10 +287,14 @@ export const manageProductsArray = [
     href: "productInvoicesDetails",
     element: <ProductInvoicesDetails></ProductInvoicesDetails>,
   },
-  ,
   {
     title: "Account Statement",
     href: "accountStatement",
     element: <AccountStatement></AccountStatement>
+  },
+  {
+    title: "PhoneSupport",
+    href: "phoneSupport",
+    element: <PhoneSupport></PhoneSupport>
   }
 ];
