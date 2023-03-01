@@ -300,10 +300,13 @@ export const manageProductsArray = [
     title: "PhoneSupport",
     href: "phoneSupport",
     element: <PhoneSupport></PhoneSupport>
+  },
+  {
     title: "Total Earning",
     href: "totalearning",
-    element: <TotalEarning></TotalEarning>}
-    {
+    element: <TotalEarning></TotalEarning>
+  },
+  {
     title: "Account Settings",
     href: "accountsetting",
     element: <AccountSetting></AccountSetting>
@@ -311,12 +314,12 @@ export const manageProductsArray = [
     title: "Update Statement",
     href: "UpdateStatement",
     element: <UpdateStatement></UpdateStatement>
-  }, 
+  },
   {
     title: "NID Card",
     href: "nidCard",
     element: <NidCard></NidCard>
-  },{
+  }, {
 
     title: "Bank Statement",
     href: "BankStatement",
