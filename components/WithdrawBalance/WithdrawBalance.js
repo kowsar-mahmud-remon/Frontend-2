@@ -110,7 +110,7 @@ const WithdrawBalance = () => {
                       value="Dhaka"
                       disabled
                       id=""
-                    />
+                    /> 
                   </div>
                   
                   <div className="flex justify-center items-center mb-11">
