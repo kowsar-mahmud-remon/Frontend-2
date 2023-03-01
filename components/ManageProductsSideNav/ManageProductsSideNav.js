@@ -139,7 +139,7 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Total Earning",
-          href: "editProduct"
+          href: "totalearning"
         }
       ],
     },

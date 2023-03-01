@@ -47,6 +47,7 @@ import SalesOverview from "../components/SalesOverview/SalesOverview";
 import CouponManagement03 from "../components/CouponManagement03/CouponManagement03";
 import CouponPayNow from "../components/CouponPayNow/CouponPayNow";
 import AccountStatement from "../components/AccountStatement/AccountStatement";
+import TotalEarning from "../components/TotalEarning/TotalEarning";
 
 export const manageProductsArray = [
   {
@@ -290,5 +291,10 @@ export const manageProductsArray = [
     title: "Account Statement",
     href: "accountStatement",
     element: <AccountStatement></AccountStatement>
+  },
+  {
+    title: "Total Earning",
+    href: "totalearning",
+    element: <TotalEarning></TotalEarning>
   }
 ];
