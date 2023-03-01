@@ -48,6 +48,11 @@ import AccountStatement from "../components/AccountStatement/AccountStatement";
 import TotalEarning from "../components/TotalEarning/TotalEarning";
 import WithdrawBalance from "../components/WithdrawBalance/WithdrawBalance";
 import TransactionPending from "../components/WithdrawBalance/TransactionPending";
+import NidCard from "../components/AccountStatement/NidCard"
+import BankStatement from "../components/AccountStatement/BankStatement"
+import UpdateBankStatement from "../components/AccountStatement/UpdateBankStatement"
+import Subscription from "../components/AccountSetting/Subscription"
+import UpdateStatement from "../components/AccountStatement/UpdateStatement";
 
 export const manageProductsArray = [
   {
@@ -291,6 +296,11 @@ export const manageProductsArray = [
     href: "accountStatement",
     element: <AccountStatement></AccountStatement>
   },
+  {
+    title: "Update Statement",
+    href: "UpdateStatement",
+    element: <UpdateStatement></UpdateStatement>
+  },
   // {
   //   title: "PhoneSupport",
   //   href: "phoneSupport",
@@ -302,13 +312,24 @@ export const manageProductsArray = [
     element: <TotalEarning></TotalEarning>
   },
   {
-    title: "Withdraw Balance",
-    href: "withdrawBalance",
-    element: <WithdrawBalance></WithdrawBalance>
-  },
-  {
-    title: "Transaction Pending",
-    href: "transactionPending",
-    element: <TransactionPending></TransactionPending>
+    title: "NID Card",
+    href: "nidCard",
+    element: <NidCard></NidCard>
+  },{
+
+    title: "Bank Statement",
+    href: "BankStatement",
+    element: <BankStatement></BankStatement>
+  }
+  ,{
+
+    title: "UpdateBank Statement",
+    href: "UpdateBankStatement",
+    element: <UpdateBankStatement></UpdateBankStatement>
+  }
+  ,{
+    title: "Subscription",
+    href: "Subscription",
+    element: <Subscription></Subscription>
   }
 ];
