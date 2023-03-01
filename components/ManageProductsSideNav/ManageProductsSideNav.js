@@ -139,7 +139,7 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Total Earning",
-          href: "editProduct"
+          href: "totalearning"
         }
       ],
     },
@@ -264,7 +264,7 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Phone Support",
-          href: "liveChatTwo"
+          href: "phoneSupport"
         }
       ],
     },
