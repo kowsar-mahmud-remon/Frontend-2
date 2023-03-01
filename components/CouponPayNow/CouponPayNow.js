@@ -30,7 +30,7 @@ const CouponPayNow = () => {
                 <div>
                     <form>
                         <div className='flex items-center'>
-                            <input type="radio" id="1" name="fav_language" value="HTML" className='w-[18px] h-[18px]' />
+                            <input type='radio' id="1" name="fav_language" value="HTML1" className='w-[18px] h-[18px]  ' />
                             <label for="1">
                                 <div className='flex items-center ml-[13px]'>
                                     <Image
@@ -43,7 +43,7 @@ const CouponPayNow = () => {
                             </label><br />
                         </div>
                         <div className='flex items-center'>
-                            <input type="radio" id="2" name="fav_language" value="HTML" className='w-[18px] h-[18px]' />
+                            <input type="radio" id="2" name="fav_language" value="HTML2" className='w-[18px] h-[18px]' />
                             <label for="2">
                                 <div className='flex items-center ml-[13px]'>
                                     <Image
@@ -56,7 +56,7 @@ const CouponPayNow = () => {
                             </label><br />
                         </div>
                         <div className='flex items-center'>
-                            <input type="radio" id="3" name="fav_language" value="HTML" className='w-[18px] h-[18px]' />
+                            <input type="radio" id="3" name="fav_language" value="HTML3" className='w-[18px] h-[18px]' />
                             <label for="3">
                                 <div className='flex items-center ml-[13px]'>
                                     <Image
@@ -69,7 +69,7 @@ const CouponPayNow = () => {
                             </label><br />
                         </div>
                         <div className='flex items-center'>
-                            <input type="radio" id="4" name="fav_language" value="HTML" className='w-[18px] h-[18px]' />
+                            <input type="radio" id="4" name="fav_language" value="HTML4" className='w-[18px] h-[18px]' />
                             <label for="4">
                                 <div className='flex items-center ml-[13px]'>
                                     <Image
@@ -82,7 +82,7 @@ const CouponPayNow = () => {
                             </label><br />
                         </div>
                         <div className='flex items-center'>
-                            <input type="radio" id="5" name="fav_language" value="HTML" className='w-[18px] h-[18px]' />
+                            <input type="radio" id="5" name="fav_language" value="HTML5" className='w-[18px] h-[18px]' />
                             <label for="5">
                                 <div className='flex items-center ml-[13px]'>
                                     <Image

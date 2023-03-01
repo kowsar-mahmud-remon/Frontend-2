@@ -45,10 +45,14 @@ import SalesOverview from "../components/SalesOverview/SalesOverview";
 import CouponManagement03 from "../components/CouponManagement03/CouponManagement03";
 import CouponPayNow from "../components/CouponPayNow/CouponPayNow";
 import AccountStatement from "../components/AccountStatement/AccountStatement";
+import TotalEarning from "../components/TotalEarning/TotalEarning";
+import AccountSetting from "../components/AccountSetting/AccountSetting";
+import UpdateStatement from "../components/AccountStatement/UpdateStatement";
+import NidCard from "../components/AccountStatement/NidCard";
+import BankStatement from "../components/AccountStatement/BankStatement";
 import OrderNotification from "../components/OrderNotification/OrderNotification";
 import OrderHistory from "../components/OrderHistory/OrderHistory";
 import PhoneSupport from "../components/SellerSupport/PhoneSupport";
-
 
 export const manageProductsArray = [
   {
@@ -296,5 +300,26 @@ export const manageProductsArray = [
     title: "PhoneSupport",
     href: "phoneSupport",
     element: <PhoneSupport></PhoneSupport>
+    title: "Total Earning",
+    href: "totalearning",
+    element: <TotalEarning></TotalEarning>}
+    {
+    title: "Account Settings",
+    href: "accountsetting",
+    element: <AccountSetting></AccountSetting>
+  }, {
+    title: "Update Statement",
+    href: "UpdateStatement",
+    element: <UpdateStatement></UpdateStatement>
+  }, 
+  {
+    title: "NID Card",
+    href: "nidCard",
+    element: <NidCard></NidCard>
+  },{
+
+    title: "Bank Statement",
+    href: "BankStatement",
+    element: <BankStatement></BankStatement>
   }
 ];

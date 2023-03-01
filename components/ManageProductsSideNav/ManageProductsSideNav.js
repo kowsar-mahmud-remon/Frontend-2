@@ -139,7 +139,7 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Total Earning",
-          href: "editProduct"
+          href: "totalearning"
         }
       ],
     },
@@ -155,11 +155,11 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "NID Card",
-          href: "editProduct"
+          href: "nidCard"
         },
         {
           name: "Bank Statement",
-          href: "editProduct"
+          href: "BankStatement"
         }
       ],
     },
@@ -281,7 +281,7 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Account Settings",
-          href: "editProduct"
+          href: "accountsetting"
         },
         {
           name: "Subscription",
