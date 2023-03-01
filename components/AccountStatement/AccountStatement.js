@@ -2,10 +2,11 @@
 import Image from 'next/image';
 import tradelicense from '../../assets/images/Trade License.png'
 import vt6 from '../../assets/images/sellercalender.png'
+import Link from 'next/link';
 const AccountStatement = () => {
     const accountStatements = [
 
-        {
+        {   "id":1,
             "title": "Trade License*",
             "No1": "No.",
             "image": "/Trade License.png",
@@ -14,7 +15,7 @@ const AccountStatement = () => {
             "Es2": "12 Dec 2022"
 
         },
-        {
+        {    "id":2,
             "title": "TIN Certificate*",
             "image": "/TIN Certificate.png",
             "No1": "TIN.",
@@ -23,7 +24,7 @@ const AccountStatement = () => {
             "Es2": "12 Dec 2022"
 
         },
-        {
+        {   "id":3,
             "title": "Vat Certificate",
             "image": "/Vat Certificate.png",
             "No1": "BIN.",
@@ -31,7 +32,7 @@ const AccountStatement = () => {
             "Es1": "12 Dec 2022",
             "Es2": "12 Dec 2022"
 
-        }, {
+        }, {"id":4,
             "title": " IRC Certificate",
             "image": "/IRC Certificate.png",
             "No1": "RFC.",
@@ -40,7 +41,7 @@ const AccountStatement = () => {
             "Es2": "12 Dec 2022"
 
         }
-        , {
+        , { "id":5,
             "title": "ERC Certificate",
             "image": "/ERC Certificate.png",
             "No1": "ERC.",
@@ -49,7 +50,7 @@ const AccountStatement = () => {
             "Es2": "12 Dec 2022"
 
         },
-        {
+        {   "id":6,
             "title": "Any Association Certificate",
             "image": "/Any Association.png",
             "No1": "No.",
@@ -85,14 +86,14 @@ const AccountStatement = () => {
                 <div className="max-w-[1426px] h-[1236px] bg-[#FFFFFF] shadow-small rounded-[8px]">
                     <div className="pt-[16px] mx-[16px] grid xl:grid-cols-2 grid-cols-1 gap-[16px]">
                         {
-                            accountStatements.map((accountStatement) => <>
+                            accountStatements.map((accountStatement,id) => <>
                                 <div>
                                     <div className="flex items-center gap-[8px]">
 
                                         <h1 className="text-[#001E00] font-[400] text-[16px]">{accountStatement.title}</h1>
 
                                         <div className="w-[55px] h-[18px] bg-[#F2F3F7] rounded-[4px] flex justify-center items-center">
-                                            <h1 className="text-[#287DF3] text-[12px]">Update</h1>
+                                           <Link href="UpdateStatement"> <h1 className="text-[#287DF3] text-[12px]">Update</h1></Link>
                                         </div>
                                     </div>
 
@@ -123,41 +124,7 @@ const AccountStatement = () => {
                                 </div></>)
                         }
 
-                        {/* <div>
-                            <div className="flex items-center gap-[8px]">
-
-                                <h1 className="text-[#001E00] text-[16px]">Trade License*</h1>
-
-                                <div className="w-[55px] h-[18px] bg-[#F2F3F7] rounded-[4px] flex justify-center items-center">
-                                    <h1 className="text-[#287DF3] text-[12px]">Update</h1>
-                                </div>
-                            </div>
-
-                            <div className="max-w-[689px] mt-[16px] h-[277px] rounded-[8px] shadow-small border-[1px] border-solid border-[#B7B7B7] bg-[#FFFFFF]">
-                                <div className='flex justify-center pt-[16px] '>
-                                    <Image src={tradelicense} alt=""></Image>
-                                </div>
-
-                            </div>
-
-                            <div class="grid grid-cols-3 divide-x divide-[#B7B7B7] max-w-[689px] border-[1px] border-solid h-[52px] mt-[16px] rounded-md border-[#B7B7B7]">
-                                <div className='flex items-center ml-[16px]'><p className='text-[#707070] text-[13px]'>No. 0469793</p></div>
-                                <div className='flex justify-between items-center px-[16px]'>
-                                    <p className='text-[#707070] text-[13px]'>Es. 12 Dec 2022</p>
-                                    <Image className='h-[20px] w-[20px] '
-                                        src={vt6}
-                                        alt='Upload Image'
-                                    />
-                                </div>
-                                <div className='flex justify-between items-center px-[16px]'>
-                                    <p className='text-[#707070] text-[13px]'>Es. 12 Dec 2024</p>
-                                    <Image className='h-[20px] w-[20px] '
-                                        src={vt6}
-                                        alt='Upload Image'
-                                    />
-                                </div>
-                            </div>
-                        </div> */}
+                     
                     </div>
 
                 </div>
