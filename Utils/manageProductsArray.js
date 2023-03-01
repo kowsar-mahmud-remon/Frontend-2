@@ -53,6 +53,8 @@ import BankStatement from "../components/AccountStatement/BankStatement";
 
 import OrderNotification from "../components/OrderNotification/OrderNotification";
 import OrderHistory from "../components/OrderHistory/OrderHistory";
+import UpdateBankStatement from "../components/AccountStatement/UpdateBankStatement";
+import Subscription from "../components/AccountSetting/Subscription";
 
 
 export const manageProductsArray = [
@@ -316,5 +318,16 @@ export const manageProductsArray = [
     title: "Bank Statement",
     href: "BankStatement",
     element: <BankStatement></BankStatement>
+  }
+  ,{
+
+    title: "UpdateBankStatement",
+    href: "UpdateBankStatement",
+    element: <UpdateBankStatement></UpdateBankStatement>
+  }
+  ,{
+    title: "Subscription",
+    href: "Subscription",
+    element: <Subscription></Subscription>
   }
 ];

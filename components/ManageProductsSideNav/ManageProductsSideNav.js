@@ -285,7 +285,7 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Subscription",
-          href: "editProduct"
+          href: "Subscription"
         }
       ],
     },
