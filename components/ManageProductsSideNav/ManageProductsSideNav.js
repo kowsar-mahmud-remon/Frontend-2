@@ -155,11 +155,11 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "NID Card",
-          href: "editProduct"
+          href: "nidCard"
         },
         {
           name: "Bank Statement",
-          href: "editProduct"
+          href: "BankStatement"
         }
       ],
     },
@@ -264,7 +264,7 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Phone Support",
-          href: "liveChatTwo"
+          href: "phoneSupport"
         }
       ],
     },
@@ -281,11 +281,11 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Account Settings",
-          href: "editProduct"
+          href: "accountsetting"
         },
         {
           name: "Subscription",
-          href: "editProduct"
+          href: "Subscription"
         }
       ],
     },

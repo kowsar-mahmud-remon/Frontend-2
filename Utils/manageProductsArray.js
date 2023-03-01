@@ -12,8 +12,7 @@ import ReportManagementOne from "../components/FeedbackManagement/ReportManageme
 import ManageProduct from "../components/ManageProduct/ManageProduct";
 import ManageReview from "../components/ManageReview/ManageReview";
 import ManageReviewList from "../components/ManageReviewList/ManageReviewList";
-import OrderHistory from "../components/orderHistory.js/OrderHistory";
-import OrderNotificationTable from "../components/OrderNotification/OrderNotificationTable";
+
 import OrderOverview from "../components/OrderOverview";
 import OrderTrackingPage01 from "../components/OrderTrackingPage01/OrderTrackingPage01";
 import AllProduct from "../components/ProductCampaignMain/AllProduct";
@@ -29,7 +28,6 @@ import ContactUs from "../components/SellerSupport/ContactUs";
 import ContactUsOne from "../components/SellerSupport/ContactUsOne";
 import HelpCenter from "../components/SellerSupport/HelpCenter";
 import LiveChatTwo from "../components/SellerSupport/LiveChatTwo";
-import Sellerverification from "../components/sellerverification/Sellerverification";
 import SellerVerificationPage1 from "../components/SellerVerificationPage1/SellerVerificationPage1";
 import SellerVerificationPage2 from "../components/SellerVerificationPage2/SellerVerificationPage2";
 import SellerVerificationPage3 from "../components/SellerVerificationPage3/SellerVerificationPage3";
@@ -37,7 +35,7 @@ import SellerVerificationPage5 from "../components/SellerVerificationPage5/Selle
 import ProductShipping from "../components/ShippingManagement/ProductShipping";
 import UploadProduct from "../components/UploadProduct/UploadProduct";
 import ManageOrders from "../pages/manageOrders/ManageOrders";
-import OrderNotification from "../pages/OrderNotification/OrderNotification";
+
 import RetrunsProductMain from "../components/RetrunsProductMain/RetrunsProductMain";
 import CommissionManagement from "../components/Tax&Offers/CommissionManagement";
 import LiveChat from "../components/SellerSupport/LiveChat";
@@ -168,11 +166,11 @@ export const manageProductsArray = [
     href: "questionanswer",
     element: <QuestionAndAnswer></QuestionAndAnswer>,
   },
-  {
-    title: "OrderHistory",
-    href: "orderHistory",
-    element: <OrderHistory></OrderHistory>,
-  },
+  // {
+  //   title: "OrderHistory",
+  //   href: "orderHistory",
+  //   element: <OrderHistory></OrderHistory>,
+  // },
   {
     title: "returnProducts",
     href: "returnProduct",
@@ -223,11 +221,11 @@ export const manageProductsArray = [
     href: "reportManagementOne",
     element: <ReportManagementOne></ReportManagementOne>,
   },
-  {
-    title: "OrderNotification",
-    href: "orderNotification",
-    element: <OrderNotification></OrderNotification>,
-  },
+  // {
+  //   title: "OrderNotification",
+  //   href: "orderNotification",
+  //   element: <OrderNotification></OrderNotification>,
+  // },
   {
     title: "Coupon Management",
     href: "couponmanagement",
@@ -288,12 +286,16 @@ export const manageProductsArray = [
     href: "productInvoicesDetails",
     element: <ProductInvoicesDetails></ProductInvoicesDetails>,
   },
-  ,
   {
     title: "Account Statement",
     href: "accountStatement",
     element: <AccountStatement></AccountStatement>
   },
+  // {
+  //   title: "PhoneSupport",
+  //   href: "phoneSupport",
+  //   element: <PhoneSupport></PhoneSupport>
+  // },
   {
     title: "Total Earning",
     href: "totalearning",

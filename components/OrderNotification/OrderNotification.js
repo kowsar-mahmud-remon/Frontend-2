@@ -7,10 +7,9 @@ import ManageOrderModal from "../../components/ManageOrderModal/ManageOrderModal
 import OrderNotificationTable from "./OrderNotificationTable";
 
 const OrderNotification = () => {
-
   return (
     <section className="bg-[#FFFFFF] w-full pt-7">
-        <ManageOrderModal></ManageOrderModal>
+      <ManageOrderModal></ManageOrderModal>
       <div className="">
         <div className="">
           <div>
@@ -22,87 +21,98 @@ const OrderNotification = () => {
                 <li>
                   <a>Orders Management</a>
                 </li>
-                <li className="font-medium text-[#001E00]">Order Notifications</li>
+                <li className="font-medium text-[#001E00]">
+                  Order Notifications
+                </li>
               </ul>
             </div>
             <div>
               <h1 className="text-[#FB641B] font-semibold text-2xl">
-              Order Notifications
+                Order Notifications
               </h1>
             </div>
           </div>
 
           <div className="bg-[#FFFFFF] rounded mt-[30px]">
             <div className={`${style.boxshaddow} p-6 rounded-lg`}>
-            
-            <p className="text-[#001E00] font-semibold">All Open Oderes</p>
+              <p className="text-[#001E00] font-semibold">All Open Oderes</p>
 
               <div className="mt-4">
                 <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
                   <table className="w-full text-base text-left text-[#001E00]">
                     <thead className="text-base text-[#001E00] font-normal bg-[#F2F3F7] h-[48px]">
-                    <tr> 
+                      <tr>
                         <th
                           scope="col"
                           className=" py-2 font-medium text-[#001E00] text-base"
                         >
-                          <p className="border-r px-6 border-[#B7B7B7]">Product</p>
+                          <p className="border-r px-6 border-[#B7B7B7]">
+                            Product
+                          </p>
                         </th>
                         <th
                           scope="col"
                           className=" py-3 font-medium text-[#001E00] text-base"
                         >
-                          <p className="border-r px-6 border-[#B7B7B7]">Local Title</p>
-                          
+                          <p className="border-r px-6 border-[#B7B7B7]">
+                            Local Title
+                          </p>
                         </th>
                         <th
                           scope="col"
                           className=" py-3 font-medium text-[#001E00] text-base"
                         >
-                          <p className="border-r px-6 border-[#B7B7B7]">Order Number</p>
-                         
+                          <p className="border-r px-6 border-[#B7B7B7]">
+                            Order Number
+                          </p>
                         </th>
                         <th
                           scope="col"
                           className=" py-3 font-medium text-[#001E00] text-base"
                         >
-                          <p className="border-r px-6 border-[#B7B7B7]">Category</p>
-                          
+                          <p className="border-r px-6 border-[#B7B7B7]">
+                            Category
+                          </p>
                         </th>
                         <th
                           scope="col"
                           className=" py-3 font-medium text-[#001E00] text-base"
                         >
-                          <p className="border-r px-6 whitespace-nowrap border-[#B7B7B7]">Price</p>
-                          
+                          <p className="border-r px-6 whitespace-nowrap border-[#B7B7B7]">
+                            Price
+                          </p>
                         </th>
                         <th
                           scope="col"
                           className=" py-3 font-medium text-[#001E00] text-base"
                         >
-                         <p className="px-6 border-r border-[#B7B7B7]">Quantity</p> 
-                          
+                          <p className="px-6 border-r border-[#B7B7B7]">
+                            Quantity
+                          </p>
                         </th>
                         <th
                           scope="col"
                           className=" py-3 font-medium text-[#001E00] text-base"
                         >
-                          <p className="px-6 border-r border-[#B7B7B7]">Payment Status</p>
-                        
+                          <p className="px-6 border-r border-[#B7B7B7]">
+                            Payment Status
+                          </p>
                         </th>
                         <th
                           scope="col"
                           className=" py-3 font-medium text-[#001E00] text-base"
                         >
-                          <p className="px-6 border-r border-[#B7B7B7]">Delivery Date</p>
-                          
+                          <p className="px-6 border-r border-[#B7B7B7]">
+                            Delivery Date
+                          </p>
                         </th>
                         <th
                           scope="col"
                           className=" py-3 font-medium text-[#001E00] text-base"
                         >
-                          <p className="px-6 border-r border-[#B7B7B7]">Details</p>
-                          
+                          <p className="px-6 border-r border-[#B7B7B7]">
+                            Details
+                          </p>
                         </th>
 
                         <th
@@ -123,7 +133,7 @@ const OrderNotification = () => {
                           ></OrderNotificationTable>
                         );
                       })}
-                    </tbody> 
+                    </tbody>
                   </table>
                 </div>
               </div>
