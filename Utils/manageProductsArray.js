@@ -46,19 +46,8 @@ import CouponManagement03 from "../components/CouponManagement03/CouponManagemen
 import CouponPayNow from "../components/CouponPayNow/CouponPayNow";
 import AccountStatement from "../components/AccountStatement/AccountStatement";
 import TotalEarning from "../components/TotalEarning/TotalEarning";
-import AccountSetting from "../components/AccountSetting/AccountSetting";
-import UpdateStatement from "../components/AccountStatement/UpdateStatement";
-import NidCard from "../components/AccountStatement/NidCard";
-import BankStatement from "../components/AccountStatement/BankStatement";
-import OrderNotification from "../components/OrderNotification/OrderNotification";
-import OrderHistory from "../components/OrderHistory/OrderHistory";
-
-import UpdateBankStatement from "../components/AccountStatement/UpdateBankStatement";
-import Subscription from "../components/AccountSetting/Subscription";
-
-
-import PhoneSupport from "../components/SellerSupport/PhoneSupport";
-
+import WithdrawBalance from "../components/WithdrawBalance/WithdrawBalance";
+import TransactionPending from "../components/WithdrawBalance/TransactionPending";
 
 export const manageProductsArray = [
   {
@@ -177,11 +166,11 @@ export const manageProductsArray = [
     href: "questionanswer",
     element: <QuestionAndAnswer></QuestionAndAnswer>,
   },
-  {
-    title: "OrderHistory",
-    href: "orderHistory",
-    element: <OrderHistory></OrderHistory>,
-  },
+  // {
+  //   title: "OrderHistory",
+  //   href: "orderHistory",
+  //   element: <OrderHistory></OrderHistory>,
+  // },
   {
     title: "returnProducts",
     href: "returnProduct",
@@ -232,11 +221,11 @@ export const manageProductsArray = [
     href: "reportManagementOne",
     element: <ReportManagementOne></ReportManagementOne>,
   },
-  {
-    title: "OrderNotification",
-    href: "orderNotification",
-    element: <OrderNotification></OrderNotification>,
-  },
+  // {
+  //   title: "OrderNotification",
+  //   href: "orderNotification",
+  //   element: <OrderNotification></OrderNotification>,
+  // },
   {
     title: "Coupon Management",
     href: "couponmanagement",
@@ -302,44 +291,24 @@ export const manageProductsArray = [
     href: "accountStatement",
     element: <AccountStatement></AccountStatement>
   },
-  {
-    title: "PhoneSupport",
-    href: "phoneSupport",
-    element: <PhoneSupport></PhoneSupport>
-  },
+  // {
+  //   title: "PhoneSupport",
+  //   href: "phoneSupport",
+  //   element: <PhoneSupport></PhoneSupport>
+  // },
   {
     title: "Total Earning",
     href: "totalearning",
     element: <TotalEarning></TotalEarning>
   },
   {
-    title: "Account Settings",
-    href: "accountsetting",
-    element: <AccountSetting></AccountSetting>
-  }, {
-    title: "Update Statement",
-    href: "UpdateStatement",
-    element: <UpdateStatement></UpdateStatement>
+    title: "Withdraw Balance",
+    href: "withdrawBalance",
+    element: <WithdrawBalance></WithdrawBalance>
   },
   {
-    title: "NID Card",
-    href: "nidCard",
-    element: <NidCard></NidCard>
-  }, {
-
-    title: "Bank Statement",
-    href: "BankStatement",
-    element: <BankStatement></BankStatement>
-  }
-  ,{
-
-    title: "UpdateBankStatement",
-    href: "UpdateBankStatement",
-    element: <UpdateBankStatement></UpdateBankStatement>
-  }
-  ,{
-    title: "Subscription",
-    href: "Subscription",
-    element: <Subscription></Subscription>
+    title: "Transaction Pending",
+    href: "transactionPending",
+    element: <TransactionPending></TransactionPending>
   }
 ];
