@@ -31,7 +31,7 @@ const BankStatement = () => {
                         <div className="flex items-center gap-[8px]">
                             <h1 className="text-[#001E00] text-[16px] font-[400]">Bank Statement</h1>
                             <div className="w-[55px] h-[18px] bg-[#F2F3F7] rounded-[4px] flex justify-center items-center">
-                                <Link href="#"> <h1 className="text-[#287DF3] text-[12px]">Update</h1></Link>
+                                <Link href="UpdateBankStatement"> <h1 className="text-[#287DF3] text-[12px]">Update</h1></Link>
                             </div>
                         </div>
                         <div className="flex justify-center">
@@ -43,12 +43,12 @@ const BankStatement = () => {
                         </div>
                         <div className="mt-[23px] flex justify-center items-center">
                             <div className="grid grid-cols-2 gap-[16px]">
-                                <div className="text-center">
+                                <div className="text-right">
                                     <h1 className="text-[#686868]  text-[16px]">Account Holder Name:</h1>
-                                    <h1 className="text-[#686868] mt-[24px]  text-[16px] ml-[35px]">Account Number: </h1>
-                                    <h1 className="text-[#686868]  text-[16px]  ml-[35px] mt-[24px]">Routing Number: </h1>
-                                    <h1 className="text-[#686868] text-[16px]  ml-[73px] mt-[24px]">Bank Name:</h1>
-                                    <h1 className="text-[#686868] text-[16px] ml-[59px]  mt-[24px] ">Branch Name:</h1>
+                                    <h1 className="text-[#686868] mt-[24px]  text-[16px] ">Account Number: </h1>
+                                    <h1 className="text-[#686868]  text-[16px]   mt-[24px]">Routing Number: </h1>
+                                    <h1 className="text-[#686868] text-[16px]   mt-[24px]">Bank Name:</h1>
+                                    <h1 className="text-[#686868] text-[16px]   mt-[24px] ">Branch Name:</h1>
                                 </div>
                                 <div>
                                     <h1 className="text-[#001E00] text-[16px]font-[400]">Roy Ang</h1>
