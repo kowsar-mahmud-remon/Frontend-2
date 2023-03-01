@@ -48,6 +48,8 @@ import CouponManagement03 from "../components/CouponManagement03/CouponManagemen
 import CouponPayNow from "../components/CouponPayNow/CouponPayNow";
 import AccountStatement from "../components/AccountStatement/AccountStatement";
 import TotalEarning from "../components/TotalEarning/TotalEarning";
+import WithdrawBalance from "../components/WithdrawBalance/WithdrawBalance";
+import TransactionPending from "../components/WithdrawBalance/TransactionPending";
 
 export const manageProductsArray = [
   {
@@ -296,5 +298,15 @@ export const manageProductsArray = [
     title: "Total Earning",
     href: "totalearning",
     element: <TotalEarning></TotalEarning>
+  },
+  {
+    title: "Withdraw Balance",
+    href: "withdrawBalance",
+    element: <WithdrawBalance></WithdrawBalance>
+  },
+  {
+    title: "Transaction Pending",
+    href: "transactionPending",
+    element: <TransactionPending></TransactionPending>
   }
 ];
