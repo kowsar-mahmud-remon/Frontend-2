@@ -5,7 +5,7 @@ import { useState } from "react";
 import style from "../../styles/componentsStyles/box-shaddow.module.css"
 
 const OrderHistoryTable = ({ product }) => {
-  const { title, category, status, orderNum, kg, price, image, deliveryDate } = product;
+  const { title, category, status, orderNum, kg, price, image, deliveryDate } = product || {};
 
   return (
     <>
