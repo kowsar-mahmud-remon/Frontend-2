@@ -302,5 +302,19 @@ export const manageProductsArray = [
     title: "Account Settings",
     href: "accountsetting",
     element: <AccountSetting></AccountSetting>
+  }, {
+    title: "Update Statement",
+    href: "UpdateStatement",
+    element: <UpdateStatement></UpdateStatement>
+  }, 
+  {
+    title: "NID Card",
+    href: "nidCard",
+    element: <NidCard></NidCard>
+  },{
+
+    title: "Bank Statement",
+    href: "BankStatement",
+    element: <BankStatement></BankStatement>
   }
 ];
