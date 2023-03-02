@@ -3,8 +3,8 @@ import React from "react";
 import style from "../../styles/componentsStyles/box-shaddow.module.css";
 import money from "../../assets/images/money-growth.png";
 import TotalEarningTable from "./TotalEarningTable";
-import item from "./fakedb.json"
-
+import item from "./fakedb.json";
+import Link from "next/link";
 
 const TotalEarning = () => {
   return (
@@ -25,7 +25,7 @@ const TotalEarning = () => {
             </div>
             <div>
               <h1 className="text-[#FB641B] font-semibold text-2xl">
-              Total Earning
+                Total Earning
               </h1>
             </div>
           </div>
@@ -42,21 +42,39 @@ const TotalEarning = () => {
                     <span className="font-semibold text-[44px]">15,420 Tk</span>
                   </p>
                   <div className="flex items-center mt-8">
-                    <Image src={money} className='w-5' width={20} height={20} alt=""></Image>
+                    <Image
+                      src={money}
+                      className="w-5"
+                      width={20}
+                      height={20}
+                      alt=""
+                    ></Image>
                     <p className="ml-4 font-medium">Today so far</p>
                   </div>
                 </div>
                 <div
                   className={`w-[449px] h-[250px] ${style.boxbuttonshadow} rounded-lg p-6`}
                 >
-                  <h1 className="text-2xl font-semibold ">Earning This Month</h1>
+                  <h1 className="text-2xl font-semibold ">
+                    Earning This Month
+                  </h1>
                   <p className="mt-8 text-2xl font-medium">
                     Total:{" "}
-                    <span className="font-semibold text-[44px]">1,05,420 Tk</span>
+                    <span className="font-semibold text-[44px]">
+                      1,05,420 Tk
+                    </span>
                   </p>
                   <div className="flex items-center mt-8">
-                    <Image src={money} className='w-5' width={20} height={20} alt=""></Image>
-                    <p className="ml-4 font-medium">This month so far vs. same day last month</p>
+                    <Image
+                      src={money}
+                      className="w-5"
+                      width={20}
+                      height={20}
+                      alt=""
+                    ></Image>
+                    <p className="ml-4 font-medium">
+                      This month so far vs. same day last month
+                    </p>
                   </div>
                 </div>
                 <div
@@ -65,10 +83,14 @@ const TotalEarning = () => {
                   <h1 className="text-2xl font-semibold ">Today Earning</h1>
                   <p className="mt-8 text-2xl font-medium">
                     Total:{" "}
-                    <span className="font-semibold text-[44px]">1,05,420 Tk</span>
+                    <span className="font-semibold text-[44px]">
+                      1,05,420 Tk
+                    </span>
                   </p>
                   <div className="flex justify-center mt-8">
-                    <button className="w-[183px] text-white text-base h-[48px] bg-[#FB641B] rounded text-center">Withdraw Balance</button>
+                    <button className="w-[183px] text-white text-base h-[48px] bg-[#FB641B] rounded text-center">
+                      <Link href="withdrawBalance">Withdraw Balance</Link>{" "}
+                    </button>
                   </div>
                 </div>
               </div>
@@ -78,17 +100,18 @@ const TotalEarning = () => {
               </div>
 
               <div className="mt-[28px] pb-[150px]">
-                <div className={`relative overflow-x-auto rounded border-t border-l border-r border-[#B7B7B7] `}>
+                <div
+                  className={`relative overflow-x-auto rounded border-t border-l border-r border-[#B7B7B7] `}
+                >
                   <table className="w-full text-base text-left text-[#001E00]">
                     <thead className="text-base text-[#001E00] font-normal bg-[#F2F3F7] h-[48px]">
                       <tr>
-                      
                         <th
                           scope="col"
                           className=" py-3 text-[#001E00] text-base"
                         >
                           <p className=" px-6 font-semibold whitespace-nowrap border-[#B7B7B7]">
-                          Withdraw Date
+                            Withdraw Date
                           </p>
                         </th>
                         <th
@@ -96,7 +119,7 @@ const TotalEarning = () => {
                           className=" py-3 text-[#001E00] text-base"
                         >
                           <p className=" px-6 font-semibold whitespace-nowrap border-[#B7B7B7]">
-                          Instrument No
+                            Instrument No
                           </p>
                         </th>
                         <th
@@ -104,7 +127,7 @@ const TotalEarning = () => {
                           className=" py-3 text-[#001E00] text-base"
                         >
                           <p className=" px-6 font-semibold whitespace-nowrap border-[#B7B7B7]">
-                          Bank Name
+                            Bank Name
                           </p>
                         </th>
                         <th
@@ -112,7 +135,7 @@ const TotalEarning = () => {
                           className=" py-3 text-[#001E00] text-base"
                         >
                           <p className=" px-6 font-semibold whitespace-nowrap border-[#B7B7B7]">
-                          Amount
+                            Amount
                           </p>
                         </th>
                         <th
@@ -120,10 +143,9 @@ const TotalEarning = () => {
                           className=" py-3 text-[#001E00] text-base"
                         >
                           <p className=" px-6 font-semibold whitespace-nowrap border-[#B7B7B7]">
-                          Payment Status
+                            Payment Status
                           </p>
                         </th>
-    
                       </tr>
                     </thead>
                     <tbody className="">
