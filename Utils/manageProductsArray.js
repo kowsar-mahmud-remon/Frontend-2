@@ -7,6 +7,7 @@ import EditProductsTwo from "../components/EditProducts/EditProductsTwo";
 import ReportManagement from "../components/FeedbackManagement/ReportManagement";
 import ReportManagementOne from "../components/FeedbackManagement/ReportManagementOne";
 import ManageProduct from "../components/ManageProduct/ManageProduct";
+import ManageProductUpdated from "../components/ManageProduct/ManageProductUpdated";
 import ManageReview from "../components/ManageReview/ManageReview";
 import ManageReviewList from "../components/ManageReviewList/ManageReviewList";
 import OrderHistory from "../components/orderHistory.js/OrderHistory";
@@ -70,7 +71,8 @@ export const manageProductsArray = [
   {
     title: "ManageProducts",
     href: "manageproducts",
-    element: <ManageProduct></ManageProduct>,
+    // element: <ManageProduct></ManageProduct>,
+    element: <ManageProductUpdated></ManageProductUpdated>,
   },
   {
     title: "ProductInvoices",
