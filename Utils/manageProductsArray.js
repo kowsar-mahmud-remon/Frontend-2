@@ -53,6 +53,12 @@ import BankStatement from "../components/AccountStatement/BankStatement"
 import UpdateBankStatement from "../components/AccountStatement/UpdateBankStatement"
 import Subscription from "../components/AccountSetting/Subscription"
 import UpdateStatement from "../components/AccountStatement/UpdateStatement";
+import NidCard from "../components/AccountStatement/NidCard";
+import BankStatement from "../components/AccountStatement/BankStatement";
+import OrderNotification from "../components/OrderNotification/OrderNotification";
+import OrderHistory from "../components/OrderHistory/OrderHistory";
+import PhoneSupport from "../components/SellerSupport/PhoneSupport";
+import TaxManagement from "../components/Tax&Offers/TaxManagement";
 
 export const manageProductsArray = [
   {
@@ -267,6 +273,8 @@ export const manageProductsArray = [
     title: "LiveChatOne",
     href: "liveChatOne",
     element: <LiveChatOne></LiveChatOne>,
+  },
+  {
     title: "SalesOverview",
     href: "salesOverview",
     element: <SalesOverview></SalesOverview>,
@@ -315,11 +323,18 @@ export const manageProductsArray = [
     title: "NID Card",
     href: "nidCard",
     element: <NidCard></NidCard>
-  },{
+  },
+{
 
     title: "Bank Statement",
     href: "BankStatement",
     element: <BankStatement></BankStatement>
+  },
+  {
+
+    title: "TaxManagement",
+    href: "taxManagement",
+    element: <TaxManagement></TaxManagement>
   }
   ,{
 

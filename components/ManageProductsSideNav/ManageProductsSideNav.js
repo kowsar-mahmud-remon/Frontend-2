@@ -239,7 +239,7 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Tax Management",
-          href: "editProduct"
+          href: "taxManagement"
         }
       ],
     },
