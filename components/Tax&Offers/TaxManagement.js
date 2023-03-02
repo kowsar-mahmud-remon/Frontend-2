@@ -38,6 +38,7 @@ const TaxManagement = () => {
             <div className="mt-6">
               <div className="flex justify-center">
                 <div className="w-[275px] flex justify-center">
+                  <div className=" text-lg text-[#001E00] font-medium absolute mt-[75px]">Taka</div>
                   <CircularProgressbar
                     className="font-semibold flex justify-center w-full"
                     value={percentage}
