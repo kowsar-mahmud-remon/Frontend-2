@@ -1,5 +1,5 @@
 import React from "react";
-import ManageProductsSideNav from "../components/manageproductsSideNav/manageproductsSideNav";
+import ManageProductsSideNav from "../components/ManageProductsSideNav/ManageProductsSideNav";
 import SellerRightNav from "../components/SellerRightNav/SellerRightNav";
 
 

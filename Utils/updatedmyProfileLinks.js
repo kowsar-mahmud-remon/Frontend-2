@@ -16,7 +16,7 @@ import MyReturns from "../components/ManageAccoutSideBar/MyReturns";
 import MyCancelation from "../components/ManageAccoutSideBar/MyCancelation";
 import Coupons from "../components/ManageAccoutSideBar/Coupons";
 import GiftCards from "../components/ManageAccoutSideBar/GiftCards";
-import MyPaymentOption from "../components/ManageAccoutSideBar/myPaymentOption";
+import MyPaymentOption from "../components/ManageAccoutSideBar/MyPaymentOption";
 
 const profileLinksObj = [
   {
