@@ -49,8 +49,7 @@ import AccountStatement from "../components/AccountStatement/AccountStatement";
 import TotalEarning from "../components/TotalEarning/TotalEarning";
 import WithdrawBalance from "../components/WithdrawBalance/WithdrawBalance";
 import TransactionPending from "../components/WithdrawBalance/TransactionPending";
-import NidCard from "../components/AccountStatement/NidCard"
-import BankStatement from "../components/AccountStatement/BankStatement"
+
 import UpdateBankStatement from "../components/AccountStatement/UpdateBankStatement"
 import Subscription from "../components/AccountSetting/Subscription"
 import UpdateStatement from "../components/AccountStatement/UpdateStatement";
@@ -179,11 +178,11 @@ export const manageProductsArray = [
     href: "questionanswer",
     element: <QuestionAndAnswer></QuestionAndAnswer>,
   },
-  // {
-  //   title: "OrderHistory",
-  //   href: "orderHistory",
-  //   element: <OrderHistory></OrderHistory>,
-  // },
+  {
+    title: "OrderHistory",
+    href: "orderHistory",
+    element: <OrderHistory></OrderHistory>,
+  },
   {
     title: "returnProducts",
     href: "returnProduct",
@@ -234,11 +233,11 @@ export const manageProductsArray = [
     href: "reportManagementOne",
     element: <ReportManagementOne></ReportManagementOne>,
   },
-  // {
-  //   title: "OrderNotification",
-  //   href: "orderNotification",
-  //   element: <OrderNotification></OrderNotification>,
-  // },
+  {
+    title: "OrderNotification",
+    href: "orderNotification",
+    element: <OrderNotification></OrderNotification>,
+  },
   {
     title: "Coupon Management",
     href: "couponmanagement",
