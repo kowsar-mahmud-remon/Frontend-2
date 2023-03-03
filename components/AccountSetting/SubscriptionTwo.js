@@ -1,12 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
-import img1 from '../../assets/images/credit-card 1.png';
-import img2 from '../../assets/images/unnamed.png';
-import img3 from '../../assets/images/DBBL.png';
-import img4 from '../../assets/images/rocket.png';
 import BKASH from '../../assets/images/BKASH.png';
 import styles from "../../styles/campaignManagementTwo.module.css";
-import { TbCurrencyTaka } from 'react-icons/tb';
 
 
 const SubscriptionTwo = () => {
