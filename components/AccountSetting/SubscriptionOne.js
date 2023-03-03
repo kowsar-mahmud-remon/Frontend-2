@@ -24,7 +24,7 @@ const SubscriptionOne = () => {
         <p className=' text-2xl text-[#FB641B] font-medium'>Subscription</p>
       </div>
 
-      <div className="mt-[34px] lg:block xl:flex gap-6 lg:max-w-[1426px]">
+      <div className="mt-[34px] lg:block xl:flex gap-6">
 
         <div className="lg:w-[100%] xl-w-[60%] mb-10">
           <div className={`lg:w-full px-[49px] pt-[34px] pb-[97px] ${styles.campaignManagement}`}>
@@ -104,8 +104,8 @@ const SubscriptionOne = () => {
           </div>
 
           <div className='flex justify-center gap-4 pb-[16px] mt-8'>
-            <button className='btn btn-outline btn-[#707070] text-[#707070] text-2xl normal-case font-medium w-[264px] h-[72px]'>Cancel</button>
-            <button className='btn bg-[#FB641B] text-white w-[264px] text-2xl normal-case font-medium h-[72px]'>Continue</button>
+            <button className='btn btn-outline btn-[#686868] text-[#686868] text-2xl normal-case font-medium w-[264px] h-[72px] rounded'>Cancel</button>
+            <button className='btn bg-[#FB641B] text-white w-[264px] text-2xl normal-case font-medium h-[72px] rounded'>Continue</button>
           </div>
 
 

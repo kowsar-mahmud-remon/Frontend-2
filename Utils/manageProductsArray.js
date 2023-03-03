@@ -59,6 +59,7 @@ import OrderHistory from "../components/OrderHistory/OrderHistory";
 import PhoneSupport from "../components/SellerSupport/PhoneSupport";
 import TaxManagement from "../components/Tax&Offers/TaxManagement";
 import SubscriptionOne from "../components/AccountSetting/SubscriptionOne";
+import SubscriptionTwo from "../components/AccountSetting/SubscriptionTwo";
 
 export const manageProductsArray = [
   {
@@ -352,5 +353,10 @@ export const manageProductsArray = [
     title: "SubscriptionOne",
     href: "subscriptionOne",
     element: <SubscriptionOne></SubscriptionOne>
+  },
+  {
+    title: "SubscriptionTwo",
+    href: "subscriptionTwo",
+    element: <SubscriptionTwo></SubscriptionTwo>
   }
 ];
