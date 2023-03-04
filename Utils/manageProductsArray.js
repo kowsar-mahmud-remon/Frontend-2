@@ -55,10 +55,15 @@ import Subscription from "../components/AccountSetting/Subscription"
 import UpdateStatement from "../components/AccountStatement/UpdateStatement";
 import NidCard from "../components/AccountStatement/NidCard";
 import BankStatement from "../components/AccountStatement/BankStatement";
+import UpdateBankStatement from "../components/AccountStatement/UpdateBankStatement";
+import Subscription from "../components/AccountSetting/Subscription";
+import UpdateStatement from "../components/AccountStatement/UpdateStatement";
 import OrderNotification from "../components/OrderNotification/OrderNotification";
 import OrderHistory from "../components/OrderHistory/OrderHistory";
 import PhoneSupport from "../components/SellerSupport/PhoneSupport";
 import TaxManagement from "../components/Tax&Offers/TaxManagement";
+import SubscriptionOne from "../components/AccountSetting/SubscriptionOne";
+import SubscriptionTwo from "../components/AccountSetting/SubscriptionTwo";
 
 export const manageProductsArray = [
   {
@@ -325,7 +330,7 @@ export const manageProductsArray = [
     href: "nidCard",
     element: <NidCard></NidCard>
   },
-{
+  {
 
     title: "Bank Statement",
     href: "BankStatement",
@@ -336,16 +341,26 @@ export const manageProductsArray = [
     title: "TaxManagement",
     href: "taxManagement",
     element: <TaxManagement></TaxManagement>
-  }
-  ,{
+  },
+  {
 
     title: "UpdateBank Statement",
     href: "UpdateBankStatement",
     element: <UpdateBankStatement></UpdateBankStatement>
-  }
-  ,{
+  },
+  {
     title: "Subscription",
     href: "Subscription",
     element: <Subscription></Subscription>
+  },
+  {
+    title: "SubscriptionOne",
+    href: "subscriptionOne",
+    element: <SubscriptionOne></SubscriptionOne>
+  },
+  {
+    title: "SubscriptionTwo",
+    href: "subscriptionTwo",
+    element: <SubscriptionTwo></SubscriptionTwo>
   }
 ];

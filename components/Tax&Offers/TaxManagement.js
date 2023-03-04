@@ -35,9 +35,11 @@ const TaxManagement = () => {
               <p className="text-base text-[#001E00] mb-4 font-bold">Yearly Profit</p>
               <p className="text-base text-[#001E00] mb-4 font-bold">January - December</p>
             </div>
+
             <div className="mt-6">
               <div className="flex justify-center">
                 <div className="w-[275px] flex justify-center">
+                  <div className=" text-lg text-[#001E00] font-medium absolute mt-[75px]">Taka</div>
                   <CircularProgressbar
                     className="font-semibold flex justify-center w-full"
                     value={percentage}
