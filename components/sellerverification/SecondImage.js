@@ -16,7 +16,7 @@ const SecondImage = () => {
     return (
         <div className=" h-[170px] border-2 grid grid-cols-3  items-center  rounded-lg shadow-xl">
             {bankInfo ? <div className='flex justify-center items-center border-2 p-4  rounded-l-xl bg-[#F2F3F7] text-start col-span-1 w-full h-full'>
-                <Image src={URL.createObjectURL(bankInfo)} alt="Preview" width="200" height="200" />
+                <Image className='object-cover' src={URL.createObjectURL(bankInfo)} alt="Preview" width="150" height="150" />
                 
             </div> :
                 <div className=" max-h-200 border border-5 p-4 md:ml-10 rounded-lg text-sm md:text-md">Upload a Cheque Copy</div>
