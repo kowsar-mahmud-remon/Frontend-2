@@ -62,6 +62,8 @@ import TaxManagement from "../components/Tax&Offers/TaxManagement";
 import SubscriptionOne from "../components/AccountSetting/SubscriptionOne";
 import SubscriptionTwo from "../components/AccountSetting/SubscriptionTwo";
 import SubscriptionThree from "../components/AccountSetting/SubscriptionThree";
+import AccountType from "../components/AccountType/AccountType";
+import SubscriptionPage from "../components/SubscriptionPage/SubscriptionPage";
 
 export const manageProductsArray = [
   {
@@ -365,5 +367,15 @@ export const manageProductsArray = [
     title: "SubscriptionThree",
     href: "subscriptionThree",
     element: <SubscriptionThree></SubscriptionThree>
-  }
+  },
+  {
+    title: "SubscriptionPage",
+    href: "subscriptionPage",
+    element: <SubscriptionPage></SubscriptionPage>
+  },
+  {
+    title: "AccountType",
+    href: "accountType",
+    element: <AccountType></AccountType>
+  },
 ];

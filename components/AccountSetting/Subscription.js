@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 
 const Subscription = () => {
@@ -75,7 +76,7 @@ const Subscription = () => {
 
 
         }
-    ]
+    ];
     return (
         <div>
             <div>
@@ -131,7 +132,9 @@ const Subscription = () => {
                                     <div className={data.type === "Free" ? "mt-[255px]" : "mt-[155px]"}>
 
                                         <div className="flex justify-center">
-                                            <button className="w-[412px]  h-[56px] font-[500] text-[18px] border-[2px] border-solid border-[#686868] rounded-[8px] text-[#686868]">Select starter store</button>
+                                            <Link href="subscriptionOne">
+                                                <button className="w-[412px]  h-[56px] font-[500] text-[18px] border-[2px] border-solid border-[#686868] rounded-[8px] text-[#686868]">Select starter store</button>
+                                            </Link>
                                         </div>
 
                                     </div>

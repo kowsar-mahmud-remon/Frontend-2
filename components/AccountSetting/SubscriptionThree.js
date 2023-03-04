@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import img from '../../assets/images/VectorOk.png';
 import styles from "../../styles/campaignManagementTwo.module.css";
@@ -46,7 +47,10 @@ const SubscriptionThree = () => {
 
         <p className='text-[34px] text-[#287DF3] font-bold mt-[152px]'>Thank You!</p>
 
-        <button className='btn bg-[#FB641B] text-white w-[202px] text-2xl normal-case font-medium h-[56px] rounded mt-[138px]'>Got it</button>
+        <Link href="subscriptionPage">
+          <button className='btn bg-[#FB641B] text-white w-[202px] text-2xl normal-case font-medium h-[56px] rounded mt-[138px]'>Got it</button>
+        </Link>
+
 
       </div>
 
