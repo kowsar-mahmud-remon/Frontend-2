@@ -7,6 +7,7 @@ import img4 from '../../assets/images/rocket.png';
 import img5 from '../../assets/images/BKASH.png';
 import styles from "../../styles/campaignManagementTwo.module.css";
 import { TbCurrencyTaka } from 'react-icons/tb';
+import Link from 'next/link';
 
 
 
@@ -105,7 +106,9 @@ const SubscriptionOne = () => {
 
           <div className='flex justify-center gap-4 pb-[16px] mt-8'>
             <button className='btn btn-outline btn-[#686868] text-[#686868] text-2xl normal-case font-medium w-[264px] h-[72px] rounded'>Cancel</button>
-            <button className='btn bg-[#FB641B] text-white w-[264px] text-2xl normal-case font-medium h-[72px] rounded'>Continue</button>
+            <Link href="subscriptionTwo">
+              <button className='btn bg-[#FB641B] text-white w-[264px] text-2xl normal-case font-medium h-[72px] rounded'>Continue</button>
+            </Link>
           </div>
 
 

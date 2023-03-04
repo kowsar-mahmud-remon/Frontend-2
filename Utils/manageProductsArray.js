@@ -50,6 +50,11 @@ import TotalEarning from "../components/TotalEarning/TotalEarning";
 import WithdrawBalance from "../components/WithdrawBalance/WithdrawBalance";
 import TransactionPending from "../components/WithdrawBalance/TransactionPending";
 
+import UpdateBankStatement from "../components/AccountStatement/UpdateBankStatement";
+import Subscription from "../components/AccountSetting/Subscription";
+import UpdateStatement from "../components/AccountStatement/UpdateStatement";
+import NidCard from "../components/AccountStatement/NidCard";
+import BankStatement from "../components/AccountStatement/BankStatement";
 import UpdateBankStatement from "../components/AccountStatement/UpdateBankStatement"
 import Subscription from "../components/AccountSetting/Subscription"
 import UpdateStatement from "../components/AccountStatement/UpdateStatement";
@@ -62,6 +67,9 @@ import PhoneSupport from "../components/SellerSupport/PhoneSupport";
 import TaxManagement from "../components/Tax&Offers/TaxManagement";
 import SubscriptionOne from "../components/AccountSetting/SubscriptionOne";
 import SubscriptionTwo from "../components/AccountSetting/SubscriptionTwo";
+import SubscriptionThree from "../components/AccountSetting/SubscriptionThree";
+import AccountType from "../components/AccountType/AccountType";
+import SubscriptionPage from "../components/SubscriptionPage/SubscriptionPage";
 
 export const manageProductsArray = [
   {
@@ -360,5 +368,20 @@ export const manageProductsArray = [
     title: "SubscriptionTwo",
     href: "subscriptionTwo",
     element: <SubscriptionTwo></SubscriptionTwo>
-  }
+  },
+  {
+    title: "SubscriptionThree",
+    href: "subscriptionThree",
+    element: <SubscriptionThree></SubscriptionThree>
+  },
+  {
+    title: "SubscriptionPage",
+    href: "subscriptionPage",
+    element: <SubscriptionPage></SubscriptionPage>
+  },
+  {
+    title: "AccountType",
+    href: "accountType",
+    element: <AccountType></AccountType>
+  },
 ];
