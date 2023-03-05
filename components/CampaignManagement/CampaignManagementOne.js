@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import { FaAngleRight } from 'react-icons/fa';
 import img from '../../assets/images/image 7.png';
@@ -123,7 +124,9 @@ const CampaignManagementOne = () => {
                 <td className="py-6 border-b border-[#B7B7B7] text-xs">
                   <button className='text-[#287DF3] px-[39px] py-[5px] bg-[#EAF2FE] rounded'>Edit</button>
                   <br />
-                  <button className='text-[#B7B7B7] px-[19px] py-[5px] mt-2 rounded border border-[#B7B7B7]'>View Detail</button>
+                  <Link href="campaignManagementTwo">
+                    <button className='text-[#B7B7B7] px-[19px] py-[5px] mt-2 rounded border border-[#B7B7B7]'>View Detail</button>
+                  </Link>
                 </td>
 
               </tr>)

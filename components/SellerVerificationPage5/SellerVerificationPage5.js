@@ -1,7 +1,7 @@
 import React from 'react';
-import Image from 'next/image'
-import upimg from '../../assets/images/Vector (5).png'
-import vt6 from '../../assets/images/Vector (6).png'
+import Image from 'next/image';
+import upimg from '../../assets/images/Vector (5).png';
+import vt6 from '../../assets/images/Vector (6).png';
 
 const SellerVerificationPage5 = () => {
     return (
