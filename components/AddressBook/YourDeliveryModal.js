@@ -8,6 +8,7 @@ import CustomModalAddNew from "./CustomModalAddNew/CustomModalAddNew";
 import EditYourDelivery from "./CustomModalAddNew/EditYourDelivery";
 const YourDeliveryModal = () => {
   const [modalIsOpen, setIsOpen] = useState(false);
+  const [addNew, setAddNew] = useState(false);
 
   const items = [
     {
@@ -41,8 +42,8 @@ const YourDeliveryModal = () => {
     setActive(item);
   };
 
-  const openModal = () => {
-    setIsOpen(true);
+  const handleAddNew = () => {
+    setAddNew(true);
   };
   const openModals = () => {
     setIsOpen(true);
@@ -51,8 +52,8 @@ const YourDeliveryModal = () => {
   return (
     <div className="text-[#686868]">
       <CustomModalAddNew
-        modalIsOpen={modalIsOpen}
-        setIsOpen={setIsOpen}
+        addNew={addNew}
+        setAddNew={setAddNew}
       ></CustomModalAddNew>
       <EditYourDelivery
         modalIsOpen={modalIsOpen}
@@ -160,7 +161,7 @@ const YourDeliveryModal = () => {
             <div className="flex items-center">
               <Image className="w-[14px] mr-2" src={plus} alt="" />
               <button
-                onClick={openModal}
+                onClick={handleAddNew}
                 className="text-base text-[#686868]  font-medium"
               >
                 <label htmlFor="your-delivary" className="cursor-pointer">
