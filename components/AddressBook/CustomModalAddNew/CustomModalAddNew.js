@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Modal from "react-modal";
 import style from "../../../styles/componentsStyles/box-shaddow.module.css";
 
-const CustomModalAddNew = ({ modalIsOpen, setIsOpen }) => {
+const CustomModalAddNew = ({ addNew, setAddNew }) => {
   const [active, setActive] = useState(false);
   const [active2, setActive2] = useState(false);
 
@@ -24,11 +24,11 @@ const CustomModalAddNew = ({ modalIsOpen, setIsOpen }) => {
   };
 
   function openModal() {
-    setIsOpen(true);
+    setAddNew(true);
   }
 
   function closeModal() {
-    setIsOpen(false);
+    setAddNew(false);
   }
 
   const lists = [
@@ -45,7 +45,7 @@ const CustomModalAddNew = ({ modalIsOpen, setIsOpen }) => {
   return (
     <div>
       <Modal
-        isOpen={modalIsOpen}
+        isOpen={addNew}
         onRequestClose={closeModal}
         style={customStyles}
         contentLabel="Example Modal"
