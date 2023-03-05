@@ -5,9 +5,9 @@ import plus from "/assets/images/plus.png";
 import selected from "../../assets/images/selet.jpg";
 import AddNewAddress from "./AddNewAddress";
 import CustomModalAddNew from "./CustomModalAddNew/CustomModalAddNew";
+import EditYourDelivery from "./CustomModalAddNew/EditYourDelivery";
 const YourDeliveryModal = () => {
   const [modalIsOpen, setIsOpen] = useState(false);
-
 
   const items = [
     {
@@ -16,8 +16,11 @@ const YourDeliveryModal = () => {
       number: "+88 012 342 450 45",
       address: "Ramgonj Tower-16/14, Giridhara, Matuail, Kodomtali, Dhaka-1362",
       home: "Home",
-      shiping: "Default Shipping Address" 
-      
+      shiping: "Default Shipping Address",
+      landmark: "Besite mohila madrash",
+      province: "Dhaka",
+      area: "Bashundhara",
+      city: "Dhaka",
     },
     {
       name: "second",
@@ -25,17 +28,23 @@ const YourDeliveryModal = () => {
       number: "+88 012 342 450 45",
       address: "Ramgonj Tower-16/14, Giridhara, Matuail, Kodomtali, Dhaka-1362",
       home: "Office",
-      
+      landmark: "Besite mohila madrash",
+      province: "Dhaka",
+      area: "Bashundhara",
+      city: "Dhaka",
     },
   ];
 
-  const [active, setActive] = useState({name: "first"});
+  const [active, setActive] = useState({ name: "first" });
 
-  const handleActive = (item)=>{
-    setActive(item)
-  }
+  const handleActive = (item) => {
+    setActive(item);
+  };
 
   const openModal = () => {
+    setIsOpen(true);
+  };
+  const openModals = () => {
     setIsOpen(true);
   };
 
@@ -45,6 +54,10 @@ const YourDeliveryModal = () => {
         modalIsOpen={modalIsOpen}
         setIsOpen={setIsOpen}
       ></CustomModalAddNew>
+      <EditYourDelivery
+        modalIsOpen={modalIsOpen}
+        setIsOpen={setIsOpen}
+      ></EditYourDelivery>
       <input type="checkbox" id="your-delivary" className="modal-toggle" />
       <div className={`modal ${style.modalBackground}`}>
         <div className="modal-box relative  max-w-[780px] scrollbar-hide m-0 p-0">
@@ -64,24 +77,43 @@ const YourDeliveryModal = () => {
             </button>
           </div>
 
-
           <div className="">
             <div className={`px-5 py-3 flex flex-wrap gap-5`}>
               {items.map((item, i) => {
                 return (
                   <>
-                    <div key={i} onClick={()=> handleActive(item)} className={`${item?.name === active.name? "rounded-lg border-[#026C51] border w-[360px] h-[217px]" : "rounded-lg border-[#686868] border w-[360px] h-[217px] pt-3" }`}>
+                  
+                    <div
+                      key={i}
+                      onClick={() => handleActive(item)}
+                      className={`${
+                        item?.name === active.name
+                          ? "rounded-lg border-[#026C51] border w-[360px] h-[217px]"
+                          : "rounded-lg border-[#686868] border w-[360px] h-[217px] pt-3"
+                      }`}
+                    >
                       <div className="flex justify-between items-center ">
                         <div>
-                        {item?.name === active.name? <Image src={selected} alt="" width={45}></Image> : ""}
-                          
+                          {item?.name === active.name ? (
+                            <Image src={selected} alt="" width={45}></Image>
+                          ) : (
+                            ""
+                          )}
                         </div>
                         <div className="">
-                          <button className="text-[#287DF3] bg-[#F2F3F7] text-[12px] px-2 rounded cursor-pointer mr-4">
-                            <label htmlFor="my-modal-1" className="">
+                          {
+                            item && <button
+                            onClick={()=>openModals(item)}
+                            className="text-[#287DF3] bg-[#F2F3F7] text-[12px] px-2 rounded cursor-pointer mr-4"
+                          >
+                            <label
+                              htmlFor="your-delivary"
+                              className="cursor-pointer"
+                            >
                               Edit
                             </label>
                           </button>
+                          }
                         </div>
                       </div>
                       <div className="px-[22px] address-card -mt-4">
@@ -101,14 +133,18 @@ const YourDeliveryModal = () => {
                           <p className="text-[#287DF3] bg-[#F2F3F7] text-[14px] px-2 rounded cursor-pointer">
                             {item.home}
                           </p>
-                          {
-                            item.shiping? <><p className="text-[#707070] bg-[#F2F3F7]  text-[14px]  px-2 rounded">
-                            {item.shiping}
-                          </p>
-                          <p className="text-[#707070] text-[14px] bg-[#F2F3F7] px-2 rounded">
-                            {item.shiping}
-                          </p></> : ""
-                          }
+                          {item.shiping ? (
+                            <>
+                              <p className="text-[#707070] bg-[#F2F3F7]  text-[14px]  px-2 rounded">
+                                {item.shiping}
+                              </p>
+                              <p className="text-[#707070] text-[14px] bg-[#F2F3F7] px-2 rounded">
+                                {item.shiping}
+                              </p>
+                            </>
+                          ) : (
+                            ""
+                          )}
                         </div>
                       </div>
                     </div>
@@ -117,8 +153,6 @@ const YourDeliveryModal = () => {
               })}
             </div>
           </div>
-
-
 
           <div
             className={`modal-action flex justify-between items-center ${style.modalShaddow} mt-48 p-6`}
