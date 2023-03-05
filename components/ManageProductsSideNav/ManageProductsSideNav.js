@@ -294,6 +294,12 @@ const ManageProductsSideNav = () => {
       name: "Account Type",
       href: "accountType",
       img: account,
+      subcata: [
+        {
+          name: "Account Type",
+          href: "accountType"
+        }
+      ],
     }
   ];
 
