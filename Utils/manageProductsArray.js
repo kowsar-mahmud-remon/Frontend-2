@@ -50,8 +50,8 @@ import TotalEarning from "../components/TotalEarning/TotalEarning";
 import WithdrawBalance from "../components/WithdrawBalance/WithdrawBalance";
 import TransactionPending from "../components/WithdrawBalance/TransactionPending";
 
-import UpdateBankStatement from "../components/AccountStatement/UpdateBankStatement"
-import Subscription from "../components/AccountSetting/Subscription"
+import UpdateBankStatement from "../components/AccountStatement/UpdateBankStatement";
+import Subscription from "../components/AccountSetting/Subscription";
 import UpdateStatement from "../components/AccountStatement/UpdateStatement";
 import NidCard from "../components/AccountStatement/NidCard";
 import BankStatement from "../components/AccountStatement/BankStatement";
@@ -59,6 +59,11 @@ import OrderNotification from "../components/OrderNotification/OrderNotification
 import OrderHistory from "../components/OrderHistory/OrderHistory";
 import PhoneSupport from "../components/SellerSupport/PhoneSupport";
 import TaxManagement from "../components/Tax&Offers/TaxManagement";
+import SubscriptionOne from "../components/AccountSetting/SubscriptionOne";
+import SubscriptionTwo from "../components/AccountSetting/SubscriptionTwo";
+import SubscriptionThree from "../components/AccountSetting/SubscriptionThree";
+import AccountType from "../components/AccountType/AccountType";
+import SubscriptionPage from "../components/SubscriptionPage/SubscriptionPage";
 
 export const manageProductsArray = [
   {
@@ -325,7 +330,7 @@ export const manageProductsArray = [
     href: "nidCard",
     element: <NidCard></NidCard>
   },
-{
+  {
 
     title: "Bank Statement",
     href: "BankStatement",
@@ -336,16 +341,41 @@ export const manageProductsArray = [
     title: "TaxManagement",
     href: "taxManagement",
     element: <TaxManagement></TaxManagement>
-  }
-  ,{
+  },
+  {
 
     title: "UpdateBank Statement",
     href: "UpdateBankStatement",
     element: <UpdateBankStatement></UpdateBankStatement>
-  }
-  ,{
+  },
+  {
     title: "Subscription",
     href: "Subscription",
     element: <Subscription></Subscription>
-  }
+  },
+  {
+    title: "SubscriptionOne",
+    href: "subscriptionOne",
+    element: <SubscriptionOne></SubscriptionOne>
+  },
+  {
+    title: "SubscriptionTwo",
+    href: "subscriptionTwo",
+    element: <SubscriptionTwo></SubscriptionTwo>
+  },
+  {
+    title: "SubscriptionThree",
+    href: "subscriptionThree",
+    element: <SubscriptionThree></SubscriptionThree>
+  },
+  {
+    title: "SubscriptionPage",
+    href: "subscriptionPage",
+    element: <SubscriptionPage></SubscriptionPage>
+  },
+  {
+    title: "AccountType",
+    href: "accountType",
+    element: <AccountType></AccountType>
+  },
 ];
