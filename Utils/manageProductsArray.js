@@ -55,6 +55,12 @@ import Subscription from "../components/AccountSetting/Subscription";
 import UpdateStatement from "../components/AccountStatement/UpdateStatement";
 import NidCard from "../components/AccountStatement/NidCard";
 import BankStatement from "../components/AccountStatement/BankStatement";
+import UpdateBankStatement from "../components/AccountStatement/UpdateBankStatement"
+import Subscription from "../components/AccountSetting/Subscription"
+import UpdateStatement from "../components/AccountStatement/UpdateStatement";
+import NidCard from "../components/AccountStatement/NidCard";
+import BankStatement from "../components/AccountStatement/BankStatement";
+
 import OrderNotification from "../components/OrderNotification/OrderNotification";
 import OrderHistory from "../components/OrderHistory/OrderHistory";
 import PhoneSupport from "../components/SellerSupport/PhoneSupport";

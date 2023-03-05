@@ -7,7 +7,7 @@ const AddNewAddress = () => {
 
   return (
     <div className="text-[#686868]">
-      <input type="checkbox" id="my-modal-2" className="modal-toggle" />
+      <input type="checkbox" id="add-new-address" className="modal-toggle" />
       <div className={`modal ${style.modalBackground}`}>
         <div className="modal-box relative w-11/12  max-w-[780px] scrollbar-hide m-0 p-0">
           <div className={`p-6 bg-[#FFFFFF] flex justify-between items-center ${style.modalShaddow}`}>
@@ -16,7 +16,7 @@ const AddNewAddress = () => {
             </p>
             <button type="">
               <label
-                htmlFor="my-modal-2"
+                htmlFor="add-new-address"
                 className="cursor-pointer btn-sm btn-circle"
               >
                 ✕
@@ -189,7 +189,7 @@ const AddNewAddress = () => {
             <div className=""></div>
             <button type="">
               <label
-                htmlFor="my-modal-2"
+                htmlFor="add-new-address"
                 className="bg-[#FB641B] hover:bg-[#fc5907]  rounded-md  cursor-pointer text-white px-14 py-3"
               >
                 Save
