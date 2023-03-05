@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import BKASH from '../../assets/images/BKASH.png';
 import styles from "../../styles/campaignManagementTwo.module.css";
@@ -43,7 +44,9 @@ const SubscriptionTwo = () => {
 
           <div className='flex justify-center gap-4 pb-[16px] mt-8'>
             <button className='btn btn-outline btn-[#686868] text-[#686868] text-2xl normal-case font-medium w-[264px] h-[72px] rounded'>Cancel</button>
-            <button className='btn bg-[#FB641B] text-white w-[264px] text-2xl normal-case font-medium h-[72px] rounded'>Pay Now</button>
+            <Link href="subscriptionThree">
+              <button className='btn bg-[#FB641B] text-white w-[264px] text-2xl normal-case font-medium h-[72px] rounded'>Pay Now</button>
+            </Link>
           </div>
 
 
