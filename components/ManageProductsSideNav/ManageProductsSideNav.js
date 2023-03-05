@@ -46,7 +46,7 @@ const ManageProductsSideNav = () => {
     {
       id: 1,
       name: "Inventory Management",
-      // href: "editProductsTwo",
+      href: "editProductsTwo",
       img: exclusives,
       subcata: [
         {
@@ -74,7 +74,7 @@ const ManageProductsSideNav = () => {
     {
       id: 2,
       name: "Promotions",
-      // href: "editProductsTwo",
+      href: "editProductsTwo",
       img: sweet,
       subcata: [
         {
@@ -94,7 +94,7 @@ const ManageProductsSideNav = () => {
     {
       id: 3,
       name: "Orders Management",
-      // href: "editProductsTwo",
+      href: "editProductsTwo",
       img: clipboard,
       subcata: [
         {
@@ -122,7 +122,7 @@ const ManageProductsSideNav = () => {
     {
       id: 4,
       name: "Finance",
-      // href: "editProductsTwo",
+      href: "editProductsTwo",
       img: spice,
       subcata: [
         {
@@ -146,7 +146,7 @@ const ManageProductsSideNav = () => {
     {
       id: 5,
       name: "Seller Documents",
-      // href: "editProductsTwo",
+      href: "editProductsTwo",
       img: bakerySnacks,
       subcata: [
         {
@@ -166,7 +166,7 @@ const ManageProductsSideNav = () => {
     {
       id: 6,
       name: "Shipping Management",
-      // href: "editProductsTwo",
+      href: "editProductsTwo",
       img: shipped,
       subcata: [
         {
@@ -182,7 +182,7 @@ const ManageProductsSideNav = () => {
     {
       id: 7,
       name: "Feedback Management",
-      // href: "editProductsTwo",
+      href: "editProductsTwo",
       img: review,
       subcata: [
         {
@@ -202,7 +202,7 @@ const ManageProductsSideNav = () => {
     {
       id: 8,
       name: "Seller Guideline",
-      // href: "editProductsTwo",
+      href: "editProductsTwo",
       img: dairy,
       subcata: [
         {
@@ -226,7 +226,7 @@ const ManageProductsSideNav = () => {
     {
       id: 9,
       name: "Tax & Offers",
-      // href: "editProductsTwo",
+      href: "editProductsTwo",
       img: tax,
       subcata: [
         {
@@ -247,7 +247,7 @@ const ManageProductsSideNav = () => {
     {
       id: 10,
       name: "Help & Support",
-      // href: "editProductsTwo",
+      href: "editProductsTwo",
       img: teaCoffee,
       subcata: [
         {
@@ -272,7 +272,7 @@ const ManageProductsSideNav = () => {
     {
       id: 11,
       name: "Account & Settings",
-      // href: "editProductsTwo",
+      href: "editProductsTwo",
       img: frozenFoods,
       subcata: [
         {
@@ -328,8 +328,8 @@ const ManageProductsSideNav = () => {
                     }
                   >
                     <Link
-                      // href={router?.query?.slug ? router?.query?.slug : c?.href}
-                      href={c?.href ? c?.href : router?.query?.slug}
+                      href={router?.query?.slug ? router?.query?.slug : c?.href}
+                    // href={c?.href ? c?.href : router?.query?.slug}
                     >
                       <Image
                         // loader={() => c.img}
