@@ -6,18 +6,36 @@ import AddressBookModal from "../../components/AddressBook/AddressBookModal";
 import EditAddress from "../../components/AddressBook/EditAddress";
 import AddNewAddress from "../../components/AddressBook/AddNewAddress";
 import { useRouter } from "next/router";
+import YourDeliveryModal from "./YourDeliveryModal";
+import EditYourDelivery from "./CustomModalAddNew/EditYourDelivery";
+import { useState } from "react";
 
 const AddressBook = () => {
-  const router = useRouter()
+  const router = useRouter();
+
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  const handleModal =()=>{
+    setIsOpen(true)
+  }
+
   return (
     <>
       <AddressBookModal></AddressBookModal>
       <AddNewAddress></AddNewAddress>
-      <EditAddress></EditAddress>
+      <EditYourDelivery
+        modalIsOpen={modalIsOpen}
+        setIsOpen={setIsOpen}
+      ></EditYourDelivery>
+      {/* <EditAddress></EditAddress> */}
+      <YourDeliveryModal></YourDeliveryModal>
       <div className=" max-w-[924px] mx-[24px] lg:mx-[0px]  lg:mr-[20px]">
         <div className="flex justify-between mb-8">
           <div className="flex items-center">
-            <button className="flex items-center lg:hidden" onClick={() => router.back()}>
+            <button
+              className="flex items-center lg:hidden"
+              onClick={() => router.back()}
+            >
               <Image
                 className="w-4 lg:-mr-4 md:-mr-4 mr-3 lg:ml-0 md:ml-0 ml-2 lg:invisible md:invisible visible"
                 src={arrow}
@@ -42,27 +60,29 @@ const AddressBook = () => {
           <div className="flex items-center lg:visible md:visible invisible">
             <Image className="w-[14px] mr-2" src={plus} alt="" />
             <button className="text-base text-[#686868] font-medium">
-              <label htmlFor="my-modal-2" className="cursor-pointer">
+              <label htmlFor="your-delivary" className="cursor-pointer">
                 Add New Address
               </label>
             </button>
           </div>
         </div>
         <div
-          className={`p-6 w-full grid  lg:justify-items-center xl:grid-cols-2 grid-cols-1 pb-72 rounded-lg lg:h-[479px] bg-[#FFFFFF] ${style.boxshaddow}`}
+          className={`p-6  rounded-lg flex flex-wrap pb-72 gap-5 bg-[#FFFFFF] ${style.boxshaddow}`}
         >
-          <div className="p-4 mb-2 rounded-lg border-[#707070] border address-card mr-4 max-w-[428px]">
+          <div className="p-4 rounded-lg border-[#707070] border address-card  w-[428px]">
             <div className="flex justify-between items-center">
               <h1 className="font-medium text-base text-[#001E00] ">
                 Abdul Korim
               </h1>
               <div>
-                <label
-                  htmlFor="my-modal-1"
-                  className="text-[#287DF3] bg-[#F2F3F7] text-[12px] px-2 rounded cursor-pointer"
-                >
-                  Edit
-                </label>
+                <button onClick={handleModal}>
+                  <label
+                    htmlFor="my-modal-1"
+                    className="text-[#287DF3] bg-[#F2F3F7] text-[12px] px-2 rounded cursor-pointer"
+                  >
+                    Edit
+                  </label>
+                </button>
               </div>
             </div>
             <p className="py-3 text-[#686868]">++88 012 342 450 45</p>
@@ -82,18 +102,20 @@ const AddressBook = () => {
               </p>
             </div>
           </div>
-          <div className="p-4 mb-2 rounded-lg border-[#707070] border address-card mr-4 max-w-[428px] ">
+          <div className="p-4 rounded-lg border-[#707070] border address-card  w-[428px] ">
             <div className="flex justify-between items-center">
               <h1 className="font-medium text-base text-[#001E00] ">
                 Abdul Korim
               </h1>
               <div>
+                <button onClick={handleModal}>
                 <label
                   htmlFor="my-modal-1"
                   className="text-[#287DF3] bg-[#F2F3F7] text-[12px] px-2 rounded cursor-pointer"
                 >
                   Edit
                 </label>
+                </button>
               </div>
             </div>
             <p className="py-3 text-[#686868]">++88 012 342 450 45</p>

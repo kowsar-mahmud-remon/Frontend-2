@@ -79,7 +79,7 @@ const ManageProductsSideNav = () => {
       subcata: [
         {
           name: "Product Campaign",
-          href: "allProduct"
+          href: "productCampaign"
         },
         {
           name: "Campaign Management",
@@ -175,7 +175,7 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Orders Tracking",
-          href: "editProduct"
+          href: "ordersTracking"
         }
       ],
     },
@@ -239,7 +239,7 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Tax Management",
-          href: "editProduct"
+          href: "taxManagement"
         }
       ],
     },
@@ -281,36 +281,24 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Account Settings",
-          href: "accountsetting"
+          href: "accountSetting"
         },
         {
           name: "Subscription",
-          href: "editProduct"
+          href: "Subscription"
         }
       ],
     },
     {
       id: 12,
       name: "Account Type",
-      href: "editProductsTwo",
+      href: "accountType",
       img: account,
       subcata: [
         {
-          name: "Add Product",
-          href: "editProduct"
-        },
-        {
-          name: "New Media Center",
-          href: "editProduct"
-        },
-        {
-          name: "Fullfillment",
-          href: "editProduct"
-        },
-        {
-          name: "Edit Product",
-          href: "editProduct"
-        },
+          name: "Account Type",
+          href: "accountType"
+        }
       ],
     }
   ];
@@ -345,7 +333,10 @@ const ManageProductsSideNav = () => {
                         : ""
                     }
                   >
-                    <Link href={router?.query?.slug ? router?.query?.slug : c?.href}>
+                    <Link
+                      href={router?.query?.slug ? router?.query?.slug : c?.href}
+                    // href={c?.href ? c?.href : router?.query?.slug}
+                    >
                       <Image
                         // loader={() => c.img}
                         src={c.img}
@@ -357,7 +348,7 @@ const ManageProductsSideNav = () => {
                       <MdArrowBackIos />
                     </Link>
                     <ul>
-                      {c.subcata.map((s, index) => {
+                      {c?.subcata?.map((s, index) => {
                         return (
                           <li
                             onClick={() =>

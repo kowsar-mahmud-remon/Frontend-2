@@ -25,65 +25,81 @@ const ProductCampaignFive = () => {
       <div className={`lg:w-[642px] mx-auto ${styles.campaignManagement}`}>
         <div className="ml-[49px] mt-[68px] mb-11">
 
-          <div className="flex items-center mb-4 ">
-            <input type="radio" name="radio-5" className="radio radio-success mr-[13px] w-[18px] h-[18px] border-2 border-[#026C51]" checked />
-            <Image
-              className='w-[68px] h-[68px] mr-5'
-              src={credit}
-              alt="Picture of the author"
-              width={68}
-              height={68}
-            />
-            <p className=' text-xs font-bold text-[#001E00]'>Credit/Debit Card</p>
-          </div>
+          <form>
 
-          <div className="flex items-center mb-4 ">
-            <input type="radio" name="radio-5" className="radio radio-success mr-[13px] w-[18px] h-[18px] border-2 border-[#026C51]" />
-            <Image
-              className='w-[68px] h-[68px] mr-5'
-              src={unnamed}
-              alt="Picture of the author"
-              width={68}
-              height={68}
-            />
-            <p className=' text-xs font-bold text-[#686868]'>IBBL Cell fin</p>
-          </div>
+            <div className='flex items-center mb-4'>
+              <input type='radio' checked id="1" name="fav_language" value="HTML1" className='radio w-[18px] h-[18px] border-2 border-[#026C51] radio-success	  ' />
+              <label for="1">
+                <div className='flex items-center ml-[13px]'>
+                  <Image
+                    className='w-[68px] h-[68px] mr-[20px]'
+                    src={credit}
+                    alt='image'
+                  />
+                  <p className='text-[12px] font-medium text-[#001E00]'>Credit/Debit Card</p>
+                </div>
+              </label><br />
+            </div>
 
-          <div className="flex items-center mb-4 ">
-            <input type="radio" name="radio-5" className="radio radio-success mr-[13px] w-[18px] h-[18px] border-2 border-[#026C51]" />
-            <Image
-              className='w-[68px] h-[68px] mr-5'
-              src={DBBL}
-              alt="Picture of the author"
-              width={68}
-              height={68}
-            />
-            <p className=' text-xs font-bold text-[#686868]'>DBBL Nexus Card</p>
-          </div>
+            <div className='flex items-center mb-4'>
+              <input type="radio" id="2" name="fav_language" value="HTML2" className='radio w-[18px] h-[18px] border-2 border-[#026C51] radio-success	' />
+              <label for="2">
+                <div className='flex items-center ml-[13px]'>
+                  <Image
+                    className='w-[68px] h-[68px] mr-[20px]'
+                    src={unnamed}
+                    alt='image'
+                  />
+                  <p className='text-[12px] font-medium text-[#686868]'>IBBL Cell fin</p>
+                </div>
+              </label><br />
+            </div>
 
-          <div className="flex items-center mb-4 ">
-            <input type="radio" name="radio-5" className="radio radio-success mr-[13px] w-[18px] h-[18px] border-2 border-[#026C51]" />
-            <Image
-              className='w-[68px] h-[68px] mr-5'
-              src={rocket}
-              alt="Picture of the author"
-              width={68}
-              height={68}
-            />
-            <p className=' text-xs font-bold text-[#686868]'>Rocket</p>
-          </div>
+            <div className='flex items-center mb-4'>
+              <input type="radio" id="3" name="fav_language" value="HTML3" className='radio w-[18px] h-[18px] border-2 border-[#026C51] radio-success	' />
+              <label for="3">
+                <div className='flex items-center ml-[13px]'>
+                  <Image
+                    className='w-[68px] h-[68px] mr-[20px]'
+                    src={DBBL}
+                    alt='image'
+                  />
+                  <p className='text-[12px] font-medium text-[#686868]'>DBBL Nexus Card</p>
+                </div>
+              </label><br />
+            </div>
 
-          <div className="flex items-center mb-4 ">
-            <input type="radio" name="radio-5" className="radio radio-success mr-[13px] w-[18px] h-[18px] border-2 border-[#026C51]" />
-            <Image
-              className='w-[68px] h-[68px] mr-5'
-              src={BKASH}
-              alt="Picture of the author"
-              width={68}
-              height={68}
-            />
-            <p className=' text-xs font-bold text-[#686868]'>bKash Account</p>
-          </div>
+            <div className='flex items-center mb-4'>
+              <input type="radio" id="4" name="fav_language" value="HTML4" className='radio w-[18px] h-[18px] border-2 border-[#026C51] radio-success	' />
+              <label for="4">
+                <div className='flex items-center ml-[13px]'>
+                  <Image
+                    className='w-[68px] h-[68px] mr-[20px]'
+                    src={rocket}
+                    alt='image'
+                  />
+                  <p className='text-[12px] font-medium text-[#686868]'>Rocket</p>
+                </div>
+              </label><br />
+            </div>
+
+            <div className='flex items-center mb-4'>
+              <input type="radio" id="5" name="fav_language" value="HTML5" className='radio w-[18px] h-[18px] border-2 border-[#026C51] radio-success	' />
+              <label for="5">
+                <div className='flex items-center ml-[13px]'>
+                  <Image
+                    className='w-[68px] h-[68px] mr-[20px]'
+                    src={BKASH}
+                    alt='image'
+                  />
+                  <p className='text-[12px] font-medium text-[#686868]'>bKash Account</p>
+                </div>
+              </label><br />
+            </div>
+
+          </form>
+
+
         </div>
 
         <div className='border-b border-[#B7B7B7] mx-6'></div>
