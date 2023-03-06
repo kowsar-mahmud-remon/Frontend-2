@@ -1,7 +1,12 @@
 import Image from "next/image";
 import vt6 from '../../assets/images/sellercalender.png'
+import { useState } from 'react';
 
 const UpdateStatement = () => {
+    const [bankInfo, setBankInfo] = useState(null)
+    function handleUpdateStatement(event) {
+        setBankInfo(event.target.files[0])
+    }
     return (
         <div>
             <div>
@@ -36,7 +41,7 @@ const UpdateStatement = () => {
 
                         <div className="max-w-[689px] xl:w-[689px] mt-[16px] h-[277px] rounded-[8px] shadow-small border-[1px] border-solid border-[#B7B7B7] bg-[#FFFFFF]">
                             <div className='flex justify-center pt-[16px] '>
-                                <Image src='/Trade License.png' width={178} height={245} alt=""></Image>
+                            <Image src='/Trade License.png' width={178} height={245} alt=""></Image>
                             </div>
                             <label>
                                 <div className="max-w-[687px] xl:w-[687px] flex justify-center relative bottom-[45px] h-[60px] uploadStatenment">
@@ -46,8 +51,9 @@ const UpdateStatement = () => {
                                     </div>
                                     <input
                                         type="file"
-                                        accept="application/pdf"
+                                    
                                         className="hidden"
+                                        onChange={handleUpdateStatement}
                                     />
                                 </div>
                             </label>

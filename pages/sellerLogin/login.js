@@ -28,7 +28,7 @@ const Login = () => {
                     <div className='  max-w-[1500px] mt-[32px]  h-[652px] shadow-small '>
                         <div className='flex  justify-center  gap-[49px]'>
                             <div className='mt-[143px]'>
-                                <Image alt="" className='xl:h-[366px] xl:w-[453px] w-[250px] h-[300px]' src={loginImg} />
+                                <Image alt="" className='xl:h-[366px] xl:w-[453px] w-[300px] h-[300px]' src={loginImg} />
                             </div>
                             <div className=' '>
                                 <div className='mt-[68px]'>

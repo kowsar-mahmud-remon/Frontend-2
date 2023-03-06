@@ -83,8 +83,8 @@ const AccountStatement = () => {
                 </div>
             </div>
             <div className="mt-[32px]">
-                <div className="max-w-[1426px] h-[1236px] bg-[#FFFFFF] shadow-small rounded-[8px]">
-                    <div className="pt-[16px] mx-[16px] grid xl:grid-cols-2 grid-cols-1 gap-[16px]">
+                <div className="max-w-[1426px] xl:h-[1236px] h-full  bg-[#FFFFFF] shadow-small overflow-auto rounded-[8px]">
+                    <div className="pt-[16px] mx-[16px] grid xl:grid-cols-2 grid-cols-1  gap-[16px]">
                         {
                             accountStatements.map((accountStatement,id) => <>
                                 <div>
@@ -104,7 +104,7 @@ const AccountStatement = () => {
 
                                     </div>
 
-                                    <div class="grid grid-cols-3 divide-x divide-[#B7B7B7] max-w-[689px] border-[1px] border-solid h-[52px] mt-[16px] rounded-md border-[#B7B7B7]">
+                                    <div class="grid grid-cols-3 divide-x mb-[20px] xl:mb-[0px] divide-[#B7B7B7] max-w-[689px] border-[1px] border-solid h-[52px] mt-[16px] rounded-md border-[#B7B7B7]">
                                         <div className='flex items-center ml-[16px]'><p className='text-[#707070] text-[13px]'>{accountStatement.No1} <span className='ml-[8px]'>{accountStatement.No}</span></p></div>
                                         <div className='flex justify-between items-center px-[16px]'>
                                             <p className='text-[#707070] text-[13px]'>Es.<span className='ml-[8px]'>{accountStatement.Es1}</span></p>
