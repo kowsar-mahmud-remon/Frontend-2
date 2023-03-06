@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import productPlus from "../../assets/images/productPlus.png";
 import style from "../../styles/componentsStyles/box-shaddow.module.css";
@@ -38,9 +39,11 @@ const ProductCampaign = () => {
                   <div className="flex justify-center">
                     <Image width={50} src={productPlus} alt=""></Image>
                   </div>
-                  <p className="font-medium text-[14px] pt-5 text-[#001E00]">
-                    Add New Campaign
-                  </p>
+                  <Link href="allProduct">
+                    <p className="font-medium text-[14px] pt-5 text-[#001E00]">
+                      Add New Campaign
+                    </p>
+                  </Link>
                 </div>
               </div>
             </div>

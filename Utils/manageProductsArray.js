@@ -58,12 +58,18 @@ import BankStatement from "../components/AccountStatement/BankStatement";
 import OrderNotification from "../components/OrderNotification/OrderNotification";
 import OrderHistory from "../components/OrderHistory/OrderHistory";
 import PhoneSupport from "../components/SellerSupport/PhoneSupport";
+import PerformanceReport from "../components/PerformanceReport/PerformanceReport";
+import Chart from '../components/PerformanceReport/Chart/Chart.js'
 import TaxManagement from "../components/Tax&Offers/TaxManagement";
 import SubscriptionOne from "../components/AccountSetting/SubscriptionOne";
 import SubscriptionTwo from "../components/AccountSetting/SubscriptionTwo";
 import SubscriptionThree from "../components/AccountSetting/SubscriptionThree";
 import AccountType from "../components/AccountType/AccountType";
 import SubscriptionPage from "../components/SubscriptionPage/SubscriptionPage";
+import ProductCampaign from "../components/ProductCampaignMain/ProductCampaign";
+import OrdersTracking from "../components/ShippingManagement/OrdersTracking";
+import AccountSetting from "../components/AccountSetting/AccountSetting";
+import SellerProductUpload from "../components/SellerProductUpload/SellerProductUpload";
 
 export const manageProductsArray = [
   {
@@ -126,6 +132,11 @@ export const manageProductsArray = [
     title: "AllProduct",
     href: "allProduct",
     element: <AllProduct></AllProduct>,
+  },
+  {
+    title: "ProductCampaign",
+    href: "productCampaign",
+    element: <ProductCampaign></ProductCampaign>,
   },
   {
     title: "ProductCampaignThree",
@@ -315,11 +326,11 @@ export const manageProductsArray = [
     href: "UpdateStatement",
     element: <UpdateStatement></UpdateStatement>
   },
-  // {
-  //   title: "PhoneSupport",
-  //   href: "phoneSupport",
-  //   element: <PhoneSupport></PhoneSupport>
-  // },
+  {
+    title: "PhoneSupport",
+    href: "phoneSupport",
+    element: <PhoneSupport></PhoneSupport>
+  },
   {
     title: "Total Earning",
     href: "totalearning",
@@ -337,45 +348,9 @@ export const manageProductsArray = [
     element: <BankStatement></BankStatement>
   },
   {
+    title: "Performance Report",
+    href: "performancereport",
+    element: <PerformanceReport></PerformanceReport>
+  },
 
-    title: "TaxManagement",
-    href: "taxManagement",
-    element: <TaxManagement></TaxManagement>
-  },
-  {
-
-    title: "UpdateBank Statement",
-    href: "UpdateBankStatement",
-    element: <UpdateBankStatement></UpdateBankStatement>
-  },
-  {
-    title: "Subscription",
-    href: "Subscription",
-    element: <Subscription></Subscription>
-  },
-  {
-    title: "SubscriptionOne",
-    href: "subscriptionOne",
-    element: <SubscriptionOne></SubscriptionOne>
-  },
-  {
-    title: "SubscriptionTwo",
-    href: "subscriptionTwo",
-    element: <SubscriptionTwo></SubscriptionTwo>
-  },
-  {
-    title: "SubscriptionThree",
-    href: "subscriptionThree",
-    element: <SubscriptionThree></SubscriptionThree>
-  },
-  {
-    title: "SubscriptionPage",
-    href: "subscriptionPage",
-    element: <SubscriptionPage></SubscriptionPage>
-  },
-  {
-    title: "AccountType",
-    href: "accountType",
-    element: <AccountType></AccountType>
-  },
 ];

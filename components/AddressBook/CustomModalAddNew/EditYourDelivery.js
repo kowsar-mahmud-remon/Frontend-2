@@ -1,10 +1,28 @@
+import Image from "next/image";
 import React, { useState } from "react";
 import Modal from "react-modal";
 import style from "../../../styles/componentsStyles/box-shaddow.module.css";
+import trash from "../../../assets/images/trash.png";
+import selected from "../../../assets/images/selet.jpg";
 
-const CustomModalAddNew = ({ addNew, setAddNew }) => {
+const EditYourDelivery = ({ modalIsOpen, setIsOpen, item }) => {
   const [active, setActive] = useState(false);
   const [active2, setActive2] = useState(false);
+  const [deleted, setDeleted] = useState(false)
+
+  const {
+    text,
+    number,
+    address,
+    home,
+    shiping,
+    landmark,
+    province,
+    area,
+    city,
+  } = item || {};
+
+  console.log(item, "lajlgfdjasfkljhoai");
 
   const customStyles = {
     content: {
@@ -24,11 +42,11 @@ const CustomModalAddNew = ({ addNew, setAddNew }) => {
   };
 
   function openModal() {
-    setAddNew(true);
+    setIsOpen(true);
   }
 
   function closeModal() {
-    setAddNew(false);
+    setIsOpen(false);
   }
 
   const lists = [
@@ -38,14 +56,25 @@ const CustomModalAddNew = ({ addNew, setAddNew }) => {
 
   const [select, setSelect] = useState({ text: "Home" });
 
+
   const handleSelected = (list) => {
     setSelect(list);
   };
 
+  const handleDelete = () =>{
+    setDeleted(true)
+  }
+  const handleConfirm = () =>{
+    setDeleted(false)
+  }
+  const handleCancel = () =>{
+    setDeleted(false)
+  }
+
   return (
     <div>
       <Modal
-        isOpen={addNew}
+        isOpen={modalIsOpen}
         onRequestClose={closeModal}
         style={customStyles}
         contentLabel="Example Modal"
@@ -55,7 +84,7 @@ const CustomModalAddNew = ({ addNew, setAddNew }) => {
             className={`h-[67px] ${style.modalShaddow} flex justify-between items-center px-[22px]`}
           >
             <p className=" text-[#001E00] font-medium text-base">
-              Add New Delivery Address
+              Your Delivery Address
             </p>
             <button onClick={closeModal}>✕</button>
           </div>
@@ -66,23 +95,25 @@ const CustomModalAddNew = ({ addNew, setAddNew }) => {
                   Full Name
                 </label>
                 <input
-                  className="border border-[#686868] text-[#686868] px-[22px] rounded w-[360px] h-[40px] mt-2"
+                  className="border border-[#686868] text-[#686868] px-4 rounded w-[360px] h-[40px] mt-2"
                   type="text"
                   name=""
                   placeholder="Input full name"
                   id=""
+                  defaultValue="Abdul Korim"
                 />
               </div>
               <div className="w-[360px]">
                 <label htmlFor="" className="text-[#001E00]">
-                  Full Name
+                  Address
                 </label>
                 <input
-                  className="border border-[#686868] text-[#686868] px-[22px] rounded w-[360px] h-[40px] mt-2"
+                  className="border border-[#686868] text-[#686868] px-4 rounded w-[360px] h-[40px] mt-2"
                   type="text"
                   name=""
                   placeholder="Input full name"
                   id=""
+                  defaultValue="Ramgonj Tower-16/14, Giridhara, Matuail, Kodomtali, Dhaka-1362"
                 />
               </div>
             </div>
@@ -92,11 +123,12 @@ const CustomModalAddNew = ({ addNew, setAddNew }) => {
                   Mobile Number
                 </label>
                 <input
-                  className="border border-[#686868] text-[#686868] px-[22px] rounded w-[360px] h-[40px] mt-2"
+                  className="border border-[#686868] text-[#686868] px-4 rounded w-[360px] h-[40px] mt-2"
                   type="text"
                   name=""
                   placeholder="Input Mobile Number"
                   id=""
+                  defaultValue="+88 012 342 450 45"
                 />
               </div>
               <div className="w-[360px]">
@@ -104,11 +136,12 @@ const CustomModalAddNew = ({ addNew, setAddNew }) => {
                   Landmark
                 </label>
                 <input
-                  className="border border-[#686868] text-[#686868] px-[22px] rounded w-[360px] h-[40px] mt-2"
+                  className="border border-[#686868] text-[#686868] px-4 rounded w-[360px] h-[40px] mt-2"
                   type="text"
                   name=""
                   placeholder="E.g. Beside train station"
                   id=""
+                  defaultValue="Besite mohila madrash"
                 />
               </div>
             </div>
@@ -118,10 +151,11 @@ const CustomModalAddNew = ({ addNew, setAddNew }) => {
                   Province
                 </label>
                 <select
+                  defaultValue=""
                   id="countries"
-                  className="border border-[#686868] text-[#686868] px-[22px] rounded w-[360px] h-[40px] mt-2"
+                  className="border border-[#686868] text-[#686868] px-4 rounded w-[360px] h-[40px] mt-2"
                 >
-                  <option selected>Please choose your provice</option>
+                  <option selected>Dhaka</option>
                   <option value="US">United States</option>
                   <option value="CA">Canada</option>
                   <option value="FR">France</option>
@@ -133,21 +167,36 @@ const CustomModalAddNew = ({ addNew, setAddNew }) => {
                   Select a label for effective delivery:
                 </label>
                 <div className="flex justify-between text-[#686868] rounded w-[360px] h-[40px] gap-4 mt-2">
-        
                   {lists.map((list, i) => {
                     return (
                       <>
-                        <button
+                        <div
                           key={i}
                           onClick={() => handleSelected(list)}
-                          className={`${list.text === select.text? `w-[172px] text-[#686868] rounded border-[#026C51] border ${
-                            style.boxbuttonshadow
-                          }` : `w-[172px] text-[#686868] rounded ${
-                            style.boxbuttonshadow
-                          }`}`}
+                          className={`${
+                            list.text === select.text
+                              ? `w-[172px] text-[#686868] rounded border-[#026C51] border ${style.boxbuttonshadow} inline-block`
+                              : `w-[172px] text-[#686868] rounded ${style.boxbuttonshadow}`
+                          }`}
                         >
-                          {list.text}
-                        </button>
+                          <div className="w-6 h-4">
+                            {list.text === select.text ? (
+                              <Image
+                                className="w-6 h-4"
+                                src={selected}
+                                alt=""
+                                width={23}
+                                height={16}
+                              ></Image>
+                            ) : (
+                              ""
+                            )}
+                          </div>
+
+                          <div className="flex justify-center -m-[9px]">
+                            <p className="text-center ">{list.text}</p>
+                          </div>
+                        </div>
                       </>
                     );
                   })}
@@ -160,10 +209,11 @@ const CustomModalAddNew = ({ addNew, setAddNew }) => {
                   City
                 </label>
                 <select
+                  defaultValue="Dhaka"
                   id="countries"
-                  className="border border-[#686868] text-[#686868] px-[22px] rounded w-[360px] h-[40px] mt-2"
+                  className="border border-[#686868] text-[#686868] px-4 rounded w-[360px] h-[40px] mt-2"
                 >
-                  <option selected>Please choose your city/municipality</option>
+                  <option selected>Dhaka</option>
                   <option value="US">United States</option>
                   <option value="CA">Canada</option>
                   <option value="FR">France</option>
@@ -199,9 +249,10 @@ const CustomModalAddNew = ({ addNew, setAddNew }) => {
                 </label>
                 <select
                   id="countries"
-                  className="border border-[#686868] text-[#686868] px-[22px] rounded w-[360px] h-[40px] mt-2"
+                  defaultValue="Bashundara"
+                  className="border border-[#686868] text-[#686868] px-4 rounded w-[360px] h-[40px] mt-2"
                 >
-                  <option selected>Please choose your Area</option>
+                  <option selected>Bashundara</option>
                   <option value="US">United States</option>
                   <option value="CA">Canada</option>
                   <option value="FR">France</option>
@@ -209,11 +260,42 @@ const CustomModalAddNew = ({ addNew, setAddNew }) => {
                 </select>
               </div>
             </div>
-            <div
-              className={`modal-action flex justify-between items-center ${style.modalShaddow} h-[80px] px-[22px] mt-28`}
+
+            {
+              deleted === true? <div
+              className={`w-[316px] h-[138px] rounded-lg ${style.boxshaddow} absolute z-10 left-9 bg-[#FFFFFF]`}
             >
-              <div></div>
-              <button onClick={closeModal} className="bg-[#FB641B] w-[172px] h-[48px] text-white rounded-lg">
+              <p className="font-semibold text-sm text-center pt-5 text-[#686868]">
+                Are you sure you want to delete this address?
+              </p>
+              <div className="flex justify-end px-4 mt-12 ">
+                <button onClick={handleCancel}
+                  className={`w-[87px] h-[32px] mr-4 rounded text-[#686868] ${style.boxbuttonshadow}`}
+                >
+                  Cancel
+                </button>
+                <button onClick={handleConfirm}
+                  className={`w-[87px] h-[32px] rounded text-[#F4253F] ${style.boxbuttonshadow}`}
+                >
+                  Delete
+                </button>
+              </div>
+            </div> : ""
+            }
+
+            <div
+              className={`modal-action flex justify-between items-center ${style.modalShaddow} h-[80px] px-[22px] mt-28 relative`}
+            >
+              <div className="flex items-center">
+                <Image className="w-5" src={trash} alt=""></Image>
+                <button onClick={handleDelete} className="ml-2 font-medium text-sm">
+                  Delete Address
+                </button>
+              </div>
+              <button
+                onClick={closeModal}
+                className="bg-[#FB641B] w-[172px] h-[48px] text-white rounded-lg"
+              >
                 Save
               </button>
             </div>
@@ -224,4 +306,4 @@ const CustomModalAddNew = ({ addNew, setAddNew }) => {
   );
 };
 
-export default CustomModalAddNew;
+export default EditYourDelivery;

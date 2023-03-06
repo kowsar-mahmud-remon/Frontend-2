@@ -79,7 +79,7 @@ const ManageProductsSideNav = () => {
       subcata: [
         {
           name: "Product Campaign",
-          href: "allProduct"
+          href: "productCampaign"
         },
         {
           name: "Campaign Management",
@@ -135,7 +135,7 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Performance Report",
-          href: "editProduct"
+          href: "performancereport"
         },
         {
           name: "Total Earning",
@@ -175,7 +175,7 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Orders Tracking",
-          href: "editProduct"
+          href: "ordersTracking"
         }
       ],
     },
@@ -281,7 +281,7 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Account Settings",
-          href: "accountsetting"
+          href: "accountSetting"
         },
         {
           name: "Subscription",

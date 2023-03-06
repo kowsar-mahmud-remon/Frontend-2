@@ -10,7 +10,7 @@ function SellerVerificationPage3(props) {
   return (
     <div className="mt-[45px] flex">
 
-      <div className="w-full  pb-40 px-5 md:pl-10">
+      <div className="w-full  pb-40 px-5">
         <div className="">
           <h4 className="text-[24px] text-[#001E00] font-semibold">
             New Seller Verification
@@ -151,9 +151,11 @@ function SellerVerificationPage3(props) {
           </div>
 
           <div className="flex justify-end  my-5">
-            <button className="md:w-1/5 btn text-md bg-[#FB641B] text-white ">
-              Submit
-            </button>
+            <Link href="sellerVerificationPage5">
+              <button className="w-[369px] h-[72px] btn text-md bg-[#FB641B] text-white ">
+                Submit
+              </button>
+            </Link>
           </div>
         </div>
       </div>
