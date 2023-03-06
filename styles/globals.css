@@ -538,3 +538,10 @@ top: 453px; */
   background: rgba(0, 0, 0, 0.6);
   border-radius: 0px 0px 7px 7px;
 }
+
+input[type="radio"] {
+  accent-color: #026C51;
+}
+input[type="checkbox"] {
+  accent-color: #026C51;
+}
