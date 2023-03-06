@@ -58,6 +58,8 @@ import BankStatement from "../components/AccountStatement/BankStatement";
 import OrderNotification from "../components/OrderNotification/OrderNotification";
 import OrderHistory from "../components/OrderHistory/OrderHistory";
 import PhoneSupport from "../components/SellerSupport/PhoneSupport";
+import PerformanceReport from "../components/PerformanceReport/PerformanceReport";
+import Chart from '../components/PerformanceReport/Chart/Chart.js'
 import TaxManagement from "../components/Tax&Offers/TaxManagement";
 import SubscriptionOne from "../components/AccountSetting/SubscriptionOne";
 import SubscriptionTwo from "../components/AccountSetting/SubscriptionTwo";
@@ -346,70 +348,9 @@ export const manageProductsArray = [
     element: <BankStatement></BankStatement>
   },
   {
+    title: "Performance Report",
+    href: "performancereport",
+    element: <PerformanceReport></PerformanceReport>
+  },
 
-    title: "TaxManagement",
-    href: "taxManagement",
-    element: <TaxManagement></TaxManagement>
-  },
-  {
-
-    title: "UpdateBank Statement",
-    href: "UpdateBankStatement",
-    element: <UpdateBankStatement></UpdateBankStatement>
-  },
-  {
-    title: "Subscription",
-    href: "Subscription",
-    element: <Subscription></Subscription>
-  },
-  {
-    title: "SubscriptionOne",
-    href: "subscriptionOne",
-    element: <SubscriptionOne></SubscriptionOne>
-  },
-  {
-    title: "SubscriptionTwo",
-    href: "subscriptionTwo",
-    element: <SubscriptionTwo></SubscriptionTwo>
-  },
-  {
-    title: "SubscriptionThree",
-    href: "subscriptionThree",
-    element: <SubscriptionThree></SubscriptionThree>
-  },
-  {
-    title: "SubscriptionPage",
-    href: "subscriptionPage",
-    element: <SubscriptionPage></SubscriptionPage>
-  },
-  {
-    title: "AccountType",
-    href: "accountType",
-    element: <AccountType></AccountType>
-  },
-  {
-    title: "WithdrawBalance",
-    href: "withdrawBalance",
-    element: <WithdrawBalance></WithdrawBalance>
-  },
-  {
-    title: "TransactionPending",
-    href: "transactionPending",
-    element: <TransactionPending></TransactionPending>
-  },
-  {
-    title: "OrdersTracking",
-    href: "ordersTracking",
-    element: <OrdersTracking></OrdersTracking>
-  },
-  {
-    title: "AccountSetting",
-    href: "accountSetting",
-    element: <AccountSetting></AccountSetting>
-  },
-  {
-    title: "SellerProductUpload",
-    href: "sellerProductUpload",
-    element: <SellerProductUpload></SellerProductUpload>
-  },
 ];

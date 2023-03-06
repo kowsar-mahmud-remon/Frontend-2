@@ -6,7 +6,7 @@ const SubscriptionPage = () => {
             <p className='text-[1.3vw] font-semibold text-[#686868]'>Home {'>'} Account & Setting {'>'}  <span className='text-[#001E00]'>Subscription</span></p>
             <h1 className='text-[24px] mb-[32px] text-[#FB641B] mt-[8px] font-semibold'>Subscription</h1>
             <div className='grid grid-cols-3 w-full gap-[2vw]'>
-                <div className=' shadow-small relative h-[15vw] rounded-md '>
+                <div className=' shadow-small border border-[#B7B7B7] relative h-[15vw] rounded-md '>
                     <p className='text-center py-[12px] text-[#001E00] text-[1.3vw] font-semibold'>Product Upload</p>
                     <div className='divide-y bg-[#B7B7B7] h-[1px]'></div>
                     <div className='flex justify-center mt-[2.1vw] gap-[10px] items-center'>
@@ -18,7 +18,7 @@ const SubscriptionPage = () => {
                         <div className='h-[0.9vw] rounded-[20px]   absolute w-[30%]  bg-[#287DF3]'></div>
                     </div>
                 </div>
-                <div className=' shadow-small relative h-[15vw] rounded-md '>
+                <div className=' shadow-small relative h-[15vw] border border-[#B7B7B7] rounded-md '>
                     <p className='text-center py-[12px] text-[#001E00] text-[1.3vw] font-semibold'>Active Time</p>
                     <div className='divide-y bg-[#B7B7B7] h-[1px]'></div>
                     <div className='flex justify-center mt-[2.1vw] gap-[10px] items-center'>
@@ -29,7 +29,7 @@ const SubscriptionPage = () => {
                     </div>
 
                 </div>
-                <div className=' shadow-small relative h-[15vw] rounded-md '>
+                <div className=' shadow-small relative h-[15vw] border border-[#B7B7B7] rounded-md '>
                     <p className='text-center py-[12px] text-[#001E00] text-[1.3vw] font-semibold'>End Time</p>
                     <div className='divide-y bg-[#B7B7B7] h-[1px]'></div>
                     <div className='flex justify-center mt-[2.1vw] gap-[10px] items-center'>
@@ -78,7 +78,7 @@ const SubscriptionPage = () => {
                         <p className='text-[0.9vw] text-[#686868]'>250/mo<br />
                             Free auction listings in select categories<br />
                             15Tk insertion fee for additional listing</p>
-                        <div className='w-[80%] border border-[#686868] mx-auto mt-[10vw] rounded-md'>
+                        <div className='w-[80%] border hover:border-[#287DF3] border-[#686868] mx-auto mt-[10vw] rounded-md'>
                             <h1 className='text-[#686868] text-[0.9vw] font-semibold text-center py-[0.6vw]'>Select starter store</h1>
                         </div>
                     </div>
@@ -103,7 +103,7 @@ const SubscriptionPage = () => {
                                 Free fixed-price listings<br />
                                 30Tk insertion fee for additional listing</p>
 
-                            <div className='w-[80%] border border-[#686868] mx-auto mt-[15.6vw] rounded-md'>
+                            <div className='w-[80%] border hover:border-[#287DF3] border-[#686868] mx-auto mt-[15.6vw] rounded-md'>
                                 <h1 className='text-[#686868] text-[0.9vw] font-semibold text-center py-[0.6vw]'>Select starter store</h1>
                             </div>
                         </div>
@@ -123,7 +123,7 @@ const SubscriptionPage = () => {
                             <p className='text-[0.9vw] text-[#686868]'>150/mo<br />
                                 Free auction listings in select categories<br />
                                 20Tk insertion fee for additional listing</p>
-                            <div className='w-[80%] border border-[#686868] mx-auto mt-[8.7vw] rounded-md'>
+                            <div className='w-[80%] hover:border-[#287DF3] border border-[#686868] mx-auto mt-[8.7vw] rounded-md'>
                                 <h1 className='text-[#686868] text-[0.9vw] font-semibold text-center py-[0.6vw]'>Select starter store</h1>
                             </div>
                         </div>
@@ -143,7 +143,7 @@ const SubscriptionPage = () => {
                             <p className='text-[0.9vw] text-[#686868]'>250/mo<br />
                                 Free auction listings in select categories<br />
                                 18Tk insertion fee for additional listing</p>
-                            <div className='w-[80%] border border-[#686868] mx-auto mt-[8.7vw] rounded-md'>
+                            <div className='w-[80%] hover:border-[#287DF3] border border-[#686868] mx-auto mt-[8.7vw] rounded-md'>
                                 <h1 className='text-[#686868] text-[0.9vw] font-semibold text-center py-[0.6vw]'>Select starter store</h1>
                             </div>
                         </div>

@@ -135,7 +135,7 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Performance Report",
-          href: "editProduct"
+          href: "performancereport"
         },
         {
           name: "Total Earning",
