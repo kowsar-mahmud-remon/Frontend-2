@@ -17,9 +17,11 @@ const CustomModalAddNew = ({ addNew, setAddNew }) => {
       borderRadius: "8px",
       padding: 0,
       margin: 0,
+      zIndex: 100,
     },
     overlay: {
       background: "rgba(0, 0, 0, 0.6)",
+      zIndex: 1000,
     },
   };
 
@@ -133,18 +135,17 @@ const CustomModalAddNew = ({ addNew, setAddNew }) => {
                   Select a label for effective delivery:
                 </label>
                 <div className="flex justify-between text-[#686868] rounded w-[360px] h-[40px] gap-4 mt-2">
-        
                   {lists.map((list, i) => {
                     return (
                       <>
                         <button
                           key={i}
                           onClick={() => handleSelected(list)}
-                          className={`${list.text === select.text? `w-[172px] text-[#686868] rounded border-[#026C51] border ${
-                            style.boxbuttonshadow
-                          }` : `w-[172px] text-[#686868] rounded ${
-                            style.boxbuttonshadow
-                          }`}`}
+                          className={`${
+                            list.text === select.text
+                              ? `w-[172px] text-[#686868] rounded border-[#026C51] border ${style.boxbuttonshadow}`
+                              : `w-[172px] text-[#686868] rounded ${style.boxbuttonshadow}`
+                          }`}
                         >
                           {list.text}
                         </button>
@@ -213,7 +214,10 @@ const CustomModalAddNew = ({ addNew, setAddNew }) => {
               className={`modal-action flex justify-between items-center ${style.modalShaddow} h-[80px] px-[22px] mt-28`}
             >
               <div></div>
-              <button onClick={closeModal} className="bg-[#FB641B] w-[172px] h-[48px] text-white rounded-lg">
+              <button
+                onClick={closeModal}
+                className="bg-[#FB641B] w-[172px] h-[48px] text-white rounded-lg"
+              >
                 Save
               </button>
             </div>
