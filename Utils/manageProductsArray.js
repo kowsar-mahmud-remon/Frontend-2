@@ -53,6 +53,8 @@ import BankStatement from "../components/AccountStatement/BankStatement";
 import OrderNotification from "../components/OrderNotification/OrderNotification";
 import OrderHistory from "../components/OrderHistory/OrderHistory";
 import PhoneSupport from "../components/SellerSupport/PhoneSupport";
+import PerformanceReport from "../components/PerformanceReport/PerformanceReport";
+import Chart from '../components/PerformanceReport/Chart/Chart.js'
 
 export const manageProductsArray = [
   {
@@ -319,10 +321,17 @@ export const manageProductsArray = [
     title: "NID Card",
     href: "nidCard",
     element: <NidCard></NidCard>
-  }, {
+  },
+  {
 
     title: "Bank Statement",
     href: "BankStatement",
     element: <BankStatement></BankStatement>
-  }
+  },
+  {
+    title: "Performance Report",
+    href: "performancereport",
+    element: <PerformanceReport></PerformanceReport>
+  },
+
 ];
