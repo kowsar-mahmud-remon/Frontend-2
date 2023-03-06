@@ -28,7 +28,7 @@ const Login = () => {
                     <div className='  max-w-[1500px] mt-[32px]  h-[652px] shadow-small '>
                         <div className='flex  justify-center  gap-[49px]'>
                             <div className='mt-[143px]'>
-                                <Image alt="" className='h-[366px] w-[453px]' src={loginImg} />
+                                <Image alt="" className='xl:h-[366px] xl:w-[453px] w-[250px] h-[300px]' src={loginImg} />
                             </div>
                             <div className=' '>
                                 <div className='mt-[68px]'>
@@ -57,7 +57,7 @@ const Login = () => {
 
 
                                     <Link href="/sellerLogin/sellerOtp">
-                                        <button className='btn bg-[#FB641B] text-[18px] md:h-[72px]  text-white md:mt-[25px]'>Login</button>
+                                        <button className='btn hover:bg-[#FB641B] bg-[#FB641B] text-[18px] md:h-[72px]  text-white md:mt-[25px]'>Login</button>
                                     </Link>
                                     <div className='flex justify-center'>
                                         <span className='mx-auto text-[#FB641B] md:mt-[8px] text-[24px]  mt-[20px]'>Or</span>
