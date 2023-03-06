@@ -1,7 +1,13 @@
 import Image from "next/image";
+import { useState } from "react";
 import vt6 from '../../assets/images/sellercalender.png'
 
 const UpdateBankStatement = () => {
+    const [updateStatementInfo, setUpdateStatementInfo] = useState(null)
+    function handleUpdateStatement(event) {
+        console.log(event.target.files[0]);
+        setUpdateStatementInfo(event.target.files[0])
+    }
     return (
         <div>
             <div>
@@ -35,20 +41,25 @@ const UpdateBankStatement = () => {
                             </div>
 
                             <div className="flex justify-center mt-[44px]">
-                                <div className="max-w-[477px] xl:w-[477px] mt-[16px] h-[170px] rounded-[8px] shadow-small border-[1px] border-solid border-[#B7B7B7] bg-[#FFFFFF]">
-                                    <div className='flex justify-center pt-[16px] '>
-                                        <Image src='/updateBankStatement.png' width={303} height={138} alt=""></Image>
-                                    </div>
-                                    <label>
-                                        <div className="max-w-[475px] xl:w-[475px] flex justify-center relative bottom-[45px] h-[60px] uploadStatenment">
+                                <div className="max-w-[477px] relative xl:w-[477px] mt-[16px] h-[170px] rounded-[8px] shadow-small border-[1px] border-solid border-[#B7B7B7] bg-[#FFFFFF]">
+
+                                    {
+                                        updateStatementInfo ? <div className='flex justify-center pt-[16px] '>
+                                            <Image src={URL.createObjectURL(updateStatementInfo)} width={303} height={138} alt=""></Image>
+                                        </div> : <div className=" "></div>
+                                    }
+
+                                    <label className="absolute bottom-0">
+                                        <div className="max-w-[475px] xl:w-[475px] flex justify-center relative  h-[60px] uploadStatenment">
                                             <div className="flex justify-center items-center gap-[11px]">
                                                 <Image src='/upload.png' width={27} height={18} alt=""></Image>
                                                 <p className="text-[#FFFFFF] text-[16px]">Upload New Bank Statement</p>
                                             </div>
                                             <input
                                                 type="file"
-                                                accept="application/pdf"
+
                                                 className="hidden"
+                                                onChange={handleUpdateStatement}
                                             />
                                         </div>
                                     </label>
@@ -68,7 +79,7 @@ const UpdateBankStatement = () => {
                                         <input type="text" className="max-w-[233px] h-[40px] border-[1px] border-solid rounded-[4px] border-[#686868]" />
                                         <input type="text" className="max-w-[233px] h-[40px] border-[1px] border-solid rounded-[4px] border-[#686868]" />
                                         <input type="text" className="max-w-[233px] h-[40px] border-[1px] border-solid rounded-[4px] border-[#686868]" />
-                                        <input type="text" className="max-w-[233px] h-[40px] border-[1px] border-solid rounded-[4px] border-[#686868]" />                                        
+                                        <input type="text" className="max-w-[233px] h-[40px] border-[1px] border-solid rounded-[4px] border-[#686868]" />
 
                                     </div>
                                 </div>

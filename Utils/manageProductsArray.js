@@ -349,6 +349,12 @@ export const manageProductsArray = [
     element: <BankStatement></BankStatement>
   },
   {
+
+    title: "UpdateBank Statement",
+    href: "UpdateBankStatement",
+    element: <UpdateBankStatement></UpdateBankStatement>
+  },
+  {
     title: "Performance Report",
     href: "performancereport",
     element: <PerformanceReport></PerformanceReport>
