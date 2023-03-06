@@ -38,6 +38,7 @@ const EditYourDelivery = ({ modalIsOpen, setIsOpen, item }) => {
     },
     overlay: {
       background: "rgba(0, 0, 0, 0.6)",
+      zIndex: 1000
     },
   };
 
@@ -194,7 +195,7 @@ const EditYourDelivery = ({ modalIsOpen, setIsOpen, item }) => {
                           </div>
 
                           <div className="flex justify-center -m-[9px]">
-                            <p className="text-center ">{list.text}</p>
+                            <p className="text-center cursor-pointer">{list.text}</p>
                           </div>
                         </div>
                       </>
