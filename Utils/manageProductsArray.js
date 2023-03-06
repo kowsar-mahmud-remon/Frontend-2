@@ -65,6 +65,10 @@ import SubscriptionTwo from "../components/AccountSetting/SubscriptionTwo";
 import SubscriptionThree from "../components/AccountSetting/SubscriptionThree";
 import AccountType from "../components/AccountType/AccountType";
 import SubscriptionPage from "../components/SubscriptionPage/SubscriptionPage";
+import ProductCampaign from "../components/ProductCampaignMain/ProductCampaign";
+import OrdersTracking from "../components/ShippingManagement/OrdersTracking";
+import AccountSetting from "../components/AccountSetting/AccountSetting";
+import SellerProductUpload from "../components/SellerProductUpload/SellerProductUpload";
 
 export const manageProductsArray = [
   {
@@ -127,6 +131,11 @@ export const manageProductsArray = [
     title: "AllProduct",
     href: "allProduct",
     element: <AllProduct></AllProduct>,
+  },
+  {
+    title: "ProductCampaign",
+    href: "productCampaign",
+    element: <ProductCampaign></ProductCampaign>,
   },
   {
     title: "ProductCampaignThree",
@@ -316,11 +325,11 @@ export const manageProductsArray = [
     href: "UpdateStatement",
     element: <UpdateStatement></UpdateStatement>
   },
-  // {
-  //   title: "PhoneSupport",
-  //   href: "phoneSupport",
-  //   element: <PhoneSupport></PhoneSupport>
-  // },
+  {
+    title: "PhoneSupport",
+    href: "phoneSupport",
+    element: <PhoneSupport></PhoneSupport>
+  },
   {
     title: "Total Earning",
     href: "totalearning",
@@ -378,5 +387,30 @@ export const manageProductsArray = [
     title: "AccountType",
     href: "accountType",
     element: <AccountType></AccountType>
+  },
+  {
+    title: "WithdrawBalance",
+    href: "withdrawBalance",
+    element: <WithdrawBalance></WithdrawBalance>
+  },
+  {
+    title: "TransactionPending",
+    href: "transactionPending",
+    element: <TransactionPending></TransactionPending>
+  },
+  {
+    title: "OrdersTracking",
+    href: "ordersTracking",
+    element: <OrdersTracking></OrdersTracking>
+  },
+  {
+    title: "AccountSetting",
+    href: "accountSetting",
+    element: <AccountSetting></AccountSetting>
+  },
+  {
+    title: "SellerProductUpload",
+    href: "sellerProductUpload",
+    element: <SellerProductUpload></SellerProductUpload>
   },
 ];
