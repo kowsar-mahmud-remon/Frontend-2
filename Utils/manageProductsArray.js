@@ -64,6 +64,7 @@ import SubscriptionTwo from "../components/AccountSetting/SubscriptionTwo";
 import SubscriptionThree from "../components/AccountSetting/SubscriptionThree";
 import AccountType from "../components/AccountType/AccountType";
 import SubscriptionPage from "../components/SubscriptionPage/SubscriptionPage";
+import SellerProfileAdmin from "../components/Sellerprofileadmin/SellerProfileAdmin";
 
 export const manageProductsArray = [
   {
@@ -377,5 +378,10 @@ export const manageProductsArray = [
     title: "AccountType",
     href: "accountType",
     element: <AccountType></AccountType>
+  },
+  {
+    title: "Profile",
+    href: "sellerprofileadmin",
+    element: <SellerProfileAdmin></SellerProfileAdmin>
   },
 ];
