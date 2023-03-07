@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { FaAngleRight } from 'react-icons/fa';
-import img from '../../assets/images/image 7.png';
+import img from '../../assets/images/image 6.png';
 import styles from "../../styles/campaignManagementTwo.module.css";
 
 
@@ -59,8 +59,8 @@ const CampaignManagementOne = () => {
       </div>
 
 
-      <div className={`overflow-x-auto ${styles.tableShadow} lg:max-w-[1426px] pb-20 px-2 pt-3`}>
-        <table className="table ">
+      <div className={` ${styles.tableShadow}  pb-20 px-2 pt-3 lg:max-w-[406px]`}>
+        <table className="table overflow-x-auto w-full  block">
 
           <thead className={``}>
             <tr className=''>
