@@ -65,7 +65,7 @@ const ManageReview = () => {
                   </div>
 
                 </div>
-                <div className="mt-4 lg:pr-[173px] max-w-[1204px]">
+                <div className="mt-4 lg:ml-[47px] lg:pr-[53px] max-w-[1204px]">
                   <div className="flex mt-2 mb-[16px]  ">
                     <AiFillStar className="text-[#FB641B] w-[28px] h-[28px]"></AiFillStar>
                     <AiFillStar className="text-[#FB641B] w-[28px] h-[28px]"></AiFillStar>
@@ -112,7 +112,7 @@ const ManageReview = () => {
                 </div>
 
                 <div>
-                  <h1 className="text-[#001E00] text-[18px] my-[16px]">Review Reply</h1>
+                  <h1 className="text-[#001E00] font-semibold text-[18px] my-[16px]">Review Reply</h1>
                   <div>
                     <textarea placeholder="Type review" className="textarea text-[#686868] text-[16px] textarea-bordered textarea-lg w-full max-w-[775px] border-[#B7B7B7]" ></textarea>
                   </div>
