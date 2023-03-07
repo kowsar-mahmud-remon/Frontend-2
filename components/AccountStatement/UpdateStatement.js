@@ -46,8 +46,8 @@ const UpdateStatement = () => {
                                     <Image src={URL.createObjectURL(updateStatementInfo)} width="178" height="245" alt=""></Image>
                                 </div> : <div className=" "></div>
                             }
-                            <label className="absolute bottom-0">
-                                <div className="max-w-[687px] lg:w-[428px] xl:w-[687px] flex justify-center  h-[60px] uploadStatenment">
+                            <label className="absolute w-full bottom-0">
+                                <div className=" flex justify-center  h-[60px] uploadStatenment">
                                     <div className="flex justify-center items-center gap-[11px]">
                                         <Image src='/upload.png' width={27} height={18} alt=""></Image>
                                         <p className="text-[#FFFFFF] text-[16px]">Upload New Trade License</p>

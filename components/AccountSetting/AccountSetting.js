@@ -173,8 +173,8 @@ const AccountSetting = () => {
                 </form>
             </div>
             <div className='flex justify-end gap-4 pb-[16px] mt-[1.6vw]'>
-                <button className='btn btn-outline btn-[#707070] text-[#707070] text-[16px] w-[134px] h-[40px]'>Cancel</button>
-                <button className='btn bg-[#FB641B] text-white w-[134px] text-[16px] h-[40px]'>update</button>
+                <button className=' font-normal border border-[#707070]  rounded-[4px]  text-[#707070] text-[16px] w-[134px] h-[40px]'>Cancel</button>
+                <button className=' font-normal border border-[#FB641B] bg-[#FB641B] rounded-[4px]  text-white text-[16px] w-[134px] h-[40px]'>Update</button>
             </div>
         </div>
     );
