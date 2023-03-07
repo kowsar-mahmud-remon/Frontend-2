@@ -1,16 +1,16 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import React from 'react';
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 import productPlus from "../../assets/images/productPlus.png";
 import style from "../../styles/componentsStyles/box-shaddow.module.css";
 
 const ProductCampaign = () => {
   return (
-    <section className="bg-[#FFFFFF] py-7">
-      <div className="px-10 mx-auto">
-        <div className="Lg:w-9/12 md:w-9/12 w-full">
+    <section className="bg-[#FFFFFF] py-7 ">
+      <div className="mx-auto">
+        <div className="lg:max-w-[1426px] w-full">
           <div>
-            <div className="text-sm breadcrumbs">
+            <div className="text-lg breadcrumbs text-[#686868]">
               <ul>
                 <li>
                   <a>Home</a>
@@ -18,7 +18,7 @@ const ProductCampaign = () => {
                 <li>
                   <a>Promotions</a>
                 </li>
-                <li>Product Campaign</li>
+                <li className="text-[#001E00] font-medium">Product Campaign</li>
               </ul>
             </div>
             <div>
@@ -32,20 +32,22 @@ const ProductCampaign = () => {
             className={`rounded-lg mt-8 min-h-screen ${style.boxshaddow} bg-[#FFFFFF]`}
           >
             <div className="p-6">
-              <Link  href="allProduct">
-              <div
-                className={`w-[183px] h-[235px] flex justify-center items-center rounded-lg bg-[#FFFFFF] ${style.boxshaddow}`}
-              >
-                <div className="text-center w-full">
-                  <div className="flex justify-center">
-                    <Image width={50} src={productPlus} alt=""></Image>
+              <div className="flex">
+                <Link  href="allProduct">
+                <div
+                  className={`w-[183px] h-[235px] flex justify-center items-center rounded-lg bg-[#FFFFFF] ${style.boxshaddow}`}
+                >
+                  <div className="text-center w-full">
+                    <div className="flex justify-center">
+                      <Image width={50} src={productPlus} alt=""></Image>
+                    </div>
+                      <p className="font-medium text-[14px] pt-5 text-[#001E00]">
+                        Add New Campaign
+                      </p>
                   </div>
-                    <p className="font-medium text-[14px] pt-5 text-[#001E00]">
-                      Add New Campaign
-                    </p>
                 </div>
+                </Link>
               </div>
-              </Link>
             </div>
           </div>
         </div>
