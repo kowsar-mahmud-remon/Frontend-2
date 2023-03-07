@@ -52,7 +52,7 @@ const GiftCards = () => {
                                                         <h2 className="text-[14px] font-[500]  mb-[5px] text-[#001E00]">End: <span className="text-[14px] ml-[8px] font-[400] text-[#001E00]">{giftCard.End}</span> </h2>
                                                     </div>
                                                     <div className="col-span-1">
-                                                        <button className="text-[#FB641B] xl:ml-[40px] w-full xl:w-[88px] h-[32px] text-[14px] font-[400] border-[1px] rounded-[4px] border-solid border-[#FB641B]">Buy Now</button>
+                                                        <button className="text-[#FB641B] xl:ml-[40px] w-full xl:w-[88px] h-[32px] text-[10px] xl:text-[14px] font-[400] border-[1px] rounded-[4px] border-solid border-[#FB641B]">Buy Now</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -71,7 +71,7 @@ const GiftCards = () => {
                                                         <h2 className="text-[14px] font-[500]  mb-[5px] text-[#001E00]">End: <span className="text-[14px] ml-[8px] font-[400] text-[#001E00]">{giftCard.End}</span> </h2>
                                                     </div>
                                                     <div className="col-span-1">
-                                                        <button className="text-[#FB641B] xl:ml-[40px] w-full xl:w-[88px] h-[32px] text-[14px] font-[400] border-[1px] rounded-[4px] border-solid border-[#FB641B]">Buy Now</button>
+                                                        <button className="text-[#FB641B] xl:ml-[40px] w-full xl:w-[88px] h-[32px] text-[10px] xl:text-[14px] font-[400] border-[1px] rounded-[4px] border-solid border-[#FB641B]">Buy Now</button>
                                                     </div>
                                                 </div>
                                             </div>

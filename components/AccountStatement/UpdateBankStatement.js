@@ -40,8 +40,8 @@ const UpdateBankStatement = () => {
                                 <h1 className="text-[#001E00] text-[16px]">Bank Statement</h1>
                             </div>
 
-                            <div className="flex justify-center mt-[44px]">
-                                <div className="max-w-[477px] lg:w-[477px] relative xl:w-[477px] mt-[16px] h-[170px] rounded-[8px] shadow-small border-[1px] border-solid border-[#B7B7B7] bg-[#FFFFFF]">
+                            <div className="flex justify-center mt-[44px] xl:mx-[120px]">
+                                <div className="w-full relative  mt-[16px] h-[170px] rounded-[8px] shadow-small border-[1px] border-solid border-[#B7B7B7] bg-[#FFFFFF]">
 
                                     {
                                         updateStatementInfo ? <div className='flex justify-center pt-[16px] '>
@@ -49,8 +49,8 @@ const UpdateBankStatement = () => {
                                         </div> : <div className=" "></div>
                                     }
 
-                                    <label className="absolute bottom-0">
-                                        <div className="max-w-[475px] w-[475px] xl:w-[475px] flex justify-center relative  h-[60px] uploadStatenment">
+                                    <label className="absolute w-full bottom-0">
+                                        <div className=" flex justify-center relative  h-[60px] uploadStatenment">
                                             <div className="flex justify-center items-center gap-[11px]">
                                                 <Image src='/upload.png' width={27} height={18} alt=""></Image>
                                                 <p className="text-[#FFFFFF] text-[16px]">Upload New Bank Statement</p>
