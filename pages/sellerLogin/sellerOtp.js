@@ -66,7 +66,7 @@ const sellerOtp = () => {
                                         <h1 className='text-[#707070] text-[16px] font-[400]'>Don’t Receive the OTP? <span className='text-[#287DF3]'>RESEND</span></h1>
                                     </div>
                                     <Link href="#">
-                                        <button className='btn xxl:w-[614px]  bg-[#FB641B] text-[18px] md:h-[72px]  text-white md:mt-[25px]'>Verify</button>
+                                        <button className='btn xxl:w-[614px]  bg-[#FB641B] hover:bg-[#FB641B] text-[18px] md:h-[72px]  text-white md:mt-[25px]'>Verify</button>
                                     </Link>
                                 </form>
 
