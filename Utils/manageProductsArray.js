@@ -50,8 +50,8 @@ import TotalEarning from "../components/TotalEarning/TotalEarning";
 import WithdrawBalance from "../components/WithdrawBalance/WithdrawBalance";
 import TransactionPending from "../components/WithdrawBalance/TransactionPending";
 
-import UpdateBankStatement from "../components/AccountStatement/UpdateBankStatement"
-import Subscription from "../components/AccountSetting/Subscription"
+import UpdateBankStatement from "../components/AccountStatement/UpdateBankStatement";
+import Subscription from "../components/AccountSetting/Subscription";
 import UpdateStatement from "../components/AccountStatement/UpdateStatement";
 import NidCard from "../components/AccountStatement/NidCard";
 import BankStatement from "../components/AccountStatement/BankStatement";
@@ -60,7 +60,7 @@ import OrderNotification from "../components/OrderNotification/OrderNotification
 import OrderHistory from "../components/OrderHistory/OrderHistory";
 import PhoneSupport from "../components/SellerSupport/PhoneSupport";
 import PerformanceReport from "../components/PerformanceReport/PerformanceReport";
-import Chart from '../components/PerformanceReport/Chart/Chart.js'
+import Chart from '../components/PerformanceReport/Chart/Chart.js';
 import TaxManagement from "../components/Tax&Offers/TaxManagement";
 import SubscriptionOne from "../components/AccountSetting/SubscriptionOne";
 import SubscriptionTwo from "../components/AccountSetting/SubscriptionTwo";
@@ -362,6 +362,11 @@ export const manageProductsArray = [
     title: "Transaction Pending",
     href: "transactionPending",
     element: <TransactionPending></TransactionPending>
+  },
+  {
+    title: "OrdersTracking",
+    href: "ordersTracking",
+    element: <OrdersTracking></OrdersTracking>
   },
 
 

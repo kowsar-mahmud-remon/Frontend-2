@@ -133,12 +133,15 @@ const OrdersTracking = () => {
                   <p className='text-base text-[#001E00] font-medium'>{details.deliveryDate}</p>
                 </td>
                 <td className="py-6 border-b border-[#B7B7B7]">
-                  <Link href="orderTrackingPage01">
+                  <Link href="productInvoicesDetails">
                     <p className='text-base text-[#287DF3] font-medium'>{details.Details}</p>
                   </Link>
                 </td>
                 <td className="py-6 border-b border-[#B7B7B7]">
-                  <p className='text-base text-[#287DF3] font-medium'>{details.Status}</p>
+                  <Link href="orderTrackingPage01">
+                    <p className='text-base text-[#287DF3] font-medium'>{details.Status}</p>
+                  </Link>
+
                 </td>
 
               </tr>)
