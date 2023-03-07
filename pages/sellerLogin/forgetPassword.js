@@ -18,7 +18,7 @@ const forgetPassword = () => {
                         <div className='  max-w-[1500px] mt-[32px]  h-[498px] shadow-small '>
                             <div className='flex  justify-center items-center pt-[66px]  gap-[49px]'>
                                 <div className=''>
-                                    <Image alt="" className='h-[366px] w-[453px]' src={loginImg} />
+                                    <Image alt="" className='xl:h-[366px] xl:w-[453px] w-[300px] h-[300px]' src={loginImg} />
                                 </div>
                                 <div className=' '>
                                     <div className=''>
@@ -32,7 +32,7 @@ const forgetPassword = () => {
                                                 className='xxl:w-[614px]   w-full border-solid focus:outline-none border-[#287DF3] border-[1px] hover:shadow-small rounded-[8px] h-[72px] px-[25px] placeholder:text-[1vw] placeholder:text-[#707070]' type="text" placeholder='Enter Your Phone Number or Email' />
                                         </div>
                                         <Link href="/sellerLogin/sellerOtp">
-                                            <button className='btn bg-[#FB641B] text-[18px] md:h-[72px]  text-white md:mt-[25px]'>Forgot Password</button>
+                                            <button className='btn bg-[#FB641B] hover:bg-[#FB641B] text-[18px] md:h-[72px]  text-white md:mt-[25px]'>Forgot Password</button>
                                         </Link>
 
 
