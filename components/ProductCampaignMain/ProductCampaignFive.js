@@ -108,14 +108,8 @@ const ProductCampaignFive = () => {
           <p className='text-2xl text-[#001E00] font-bold'>Payment Summary</p>
 
           <div className="border-b border-[#B7B7B7]">
-            <div className="lg:w-[501px] flex lg:justify-end items-center mb-4 mt-6">
-              <p className='text-[#001E00] mr-4 text-base font-medium'>Campaign for Pay:</p>
-              <div className="flex w-[172px] text-[#707070]">
-                <p className=''>Tk 100 Daily</p>
-              </div>
-            </div>
 
-            <div className="lg:w-[501px] flex lg:justify-end items-center mb-4">
+            <div className="lg:w-[501px] flex lg:justify-end items-center mb-4 mt-6">
               <p className='text-[#001E00] mr-4 text-base font-medium'>Campaign Will Be Promoted:</p>
               <div className="flex w-[172px]">
                 <p className=' text-[#001E00] text-base font-medium'>3 <span className='text-[#707070]'>Days</span></p>
@@ -123,7 +117,14 @@ const ProductCampaignFive = () => {
             </div>
 
             <div className="lg:w-[501px] flex lg:justify-end items-center mb-4">
-              <p className='text-[#001E00] mr-4 text-base font-medium'>Campaign Bid Strategy:</p>
+              <p className='text-[#001E00] mr-4 text-base font-medium'>Campaign for Pay:</p>
+              <div className="flex w-[172px] font-medium">
+                <p className='text-[#001E00]'>Tk 100 <span className='text-[#707070]'>Daily</span></p>
+              </div>
+            </div>
+
+            <div className="lg:w-[501px] flex lg:justify-end items-center mb-4">
+              <p className='text-[#001E00] mr-4 text-base font-medium'>Campaign Objective:</p>
               <div className="flex w-[172px]">
                 <p className=' text-[#001E00] font-medium '>Social</p>
               </div>

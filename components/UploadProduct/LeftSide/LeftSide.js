@@ -10,6 +10,7 @@ import img2 from "../../../assets/images/uploadproducts/Vector.png";
 import vector from "../../../assets/images/product_page/Vector.png";
 import { imageSettings, imgSettingsMobile } from "../../../Utils/sliderConfig";
 import { useRef } from "react";
+import { useState } from "react";
 const LeftSide = () => {
   const datas = [
     {
@@ -58,21 +59,42 @@ const LeftSide = () => {
     },
   ];
   const slideRef = useRef(null);
+
+  const [image, setImage] = useState(null);
+
+
+  function handleChange(event) {
+    setImage(event.target.files[0]);
+  }
+ 
   return (
     <div>
       <div className="grid grid-cols-4 w-full gap-3">
         <div className="col-span-3 border-dashed border-2 rounded-lg flex justify-center items-center">
           <label htmlFor="thumb-btn">
-            <div className="  flex flex-col items-center">
-              <Image src={img2} alt="" />
-              <p>Thumbnail Image </p>
-            </div>
+            {image ? (
+              <div className="">
+                <Image
+                  className=""
+                  src={URL.createObjectURL(image)}
+                  alt="Preview"
+                  width="150"
+                  height="150"
+                />
+              </div>
+            ) : (
+              <div className="  flex flex-col items-center">
+                <Image src={img2} alt="" />
+                <p>Thumbnail Image </p>
+              </div>
+            )}
           </label>
           <input
             type="file"
             id="thumb-btn"
             className="hidden"
             accept="image/*"
+            onChange={handleChange}
           />
         </div>
 

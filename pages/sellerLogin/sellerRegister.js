@@ -49,7 +49,7 @@ const sellerRegister = () => {
                                             <p className='text-[#686868]  text-[16px]'>Show Passwords</p>
                                         </div>
                                     </div>
-                                    <button className='btn bg-[#FB641B]  text-[18px] md:h-[72px]  text-white md:mt-[25px]'>Create an Account</button>
+                                    <button className='btn hover:bg-[#FB641B] bg-[#FB641B]  text-[18px] md:h-[72px]  text-white md:mt-[25px]'>Create an Account</button>
                                 </form>
                             </div>
                         </div>

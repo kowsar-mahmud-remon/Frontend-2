@@ -18,7 +18,7 @@ const AllProduct = () => {
       price: 60,
       disprice: 70,
       name: "Tomato (Local) 500 ±30 gm",
-      image: tomato,
+      image: potol,
     },
     {
       id: 2,
@@ -27,7 +27,7 @@ const AllProduct = () => {
       price: 80,
       disprice: 90,
       name: "Misti Kumra Fali (Sweet Pumpkin Fali)",
-      image: mistykumra,
+      image: derosh,
     },
     {
       id: 3,
@@ -54,7 +54,7 @@ const AllProduct = () => {
       price: 40,
       disprice: 50,
       name: "Tomato (Local) 500 ±30 gm",
-      image: tomato,
+      image: derosh,
     },
     {
       id: 6,
