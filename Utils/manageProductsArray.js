@@ -70,6 +70,8 @@ import ProductCampaign from "../components/ProductCampaignMain/ProductCampaign";
 import OrdersTracking from "../components/ShippingManagement/OrdersTracking";
 import AccountSetting from "../components/AccountSetting/AccountSetting";
 import SellerProductUpload from "../components/SellerProductUpload/SellerProductUpload";
+import CouponActive from "../components/CouponActive/CouponActive";
+import QuestionAndAnswer01 from "../components/QuestionAndAnswer01/QuestionAndAnswer01";
 
 export const manageProductsArray = [
   {
@@ -352,5 +354,15 @@ export const manageProductsArray = [
     href: "performancereport",
     element: <PerformanceReport></PerformanceReport>
   },
+  {
+    title: "Coupon Active",
+    href: "couponactive",
+    element: <CouponActive></CouponActive>
+  },
+  {
+    title: "Question and Answer01",
+    href: "questionandanswer01",
+    element: <QuestionAndAnswer01></QuestionAndAnswer01>
+  }
 
 ];
