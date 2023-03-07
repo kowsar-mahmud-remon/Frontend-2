@@ -32,6 +32,7 @@ const ProductCampaign = () => {
             className={`rounded-lg mt-8 min-h-screen ${style.boxshaddow} bg-[#FFFFFF]`}
           >
             <div className="p-6">
+              <Link  href="allProduct">
               <div
                 className={`w-[183px] h-[235px] flex justify-center items-center rounded-lg bg-[#FFFFFF] ${style.boxshaddow}`}
               >
@@ -39,13 +40,12 @@ const ProductCampaign = () => {
                   <div className="flex justify-center">
                     <Image width={50} src={productPlus} alt=""></Image>
                   </div>
-                  <Link href="allProduct">
                     <p className="font-medium text-[14px] pt-5 text-[#001E00]">
                       Add New Campaign
                     </p>
-                  </Link>
                 </div>
               </div>
+              </Link>
             </div>
           </div>
         </div>
