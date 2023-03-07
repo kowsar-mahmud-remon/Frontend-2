@@ -3,6 +3,7 @@ import Image from 'next/image';
 import img from '../../assets/images/image 7.png'
 import del from '../../assets/images/Vector (9).png'
 import user from '../../assets/images/image 346.png'
+import Link from 'next/link';
 
 const QuestionAndAnswer = () => {
     return (
@@ -50,8 +51,8 @@ const QuestionAndAnswer = () => {
                                     <p className='text-[16px] text-[#686868] w-[80%]'>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here{','}, making it look like readable <span className='text-[#287DF3]'>Read More...</span></p>
 
                                     <div>
-                                        <h1 className='text-[#FB641B] text-[16px] border border-[#FB641B] cursor-pointer w-[121px] text-center h-[32px] px-[5px] mb-[16px]'>Answer</h1>
-                                        <h1 className='text-[#F4253F] flex text-[16px] border border-[#F4253F] cursor-pointer w-[121px] text-center h-[32px] px-[5px]'> <span><Image
+                                        <Link href='questionandanswer01'>  <h1 className='text-[#FB641B] rounded-[4px] text-[16px] border border-[#FB641B] cursor-pointer w-[121px] text-center h-[32px] px-[5px] mb-[16px]'>Answer</h1></Link>
+                                        <h1 className='text-[#F4253F] rounded-[4px] flex text-[16px] border border-[#F4253F] cursor-pointer w-[121px] text-center h-[32px] px-[5px]'> <span><Image
                                             className="w-[16px] ml-[17px] h-[19px] mt-[5px]"
                                             src={del}
 
@@ -89,8 +90,8 @@ const QuestionAndAnswer = () => {
                                     <p className='text-[16px] text-[#686868] w-[80%]'>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here{','}, making it look like readable <span className='text-[#287DF3]'>Read More...</span></p>
 
                                     <div>
-                                        <h1 className='text-[#FB641B] text-[16px] border border-[#FB641B] cursor-pointer w-[121px] text-center h-[32px] px-[5px] mb-[16px]'>Answer</h1>
-                                        <h1 className='text-[#F4253F] flex text-[16px] border border-[#F4253F] cursor-pointer w-[121px] text-center h-[32px] px-[5px]'> <span><Image
+                                        <Link href='questionandanswer01'>  <h1 className='text-[#FB641B] rounded-[4px] text-[16px] border border-[#FB641B] cursor-pointer w-[121px] text-center h-[32px] px-[5px] mb-[16px]'>Answer</h1></Link>
+                                        <h1 className='text-[#F4253F] rounded-[4px] flex text-[16px] border border-[#F4253F] cursor-pointer w-[121px] text-center h-[32px] px-[5px]'> <span><Image
                                             className="w-[16px] ml-[17px] h-[19px] mt-[5px]"
                                             src={del}
 
