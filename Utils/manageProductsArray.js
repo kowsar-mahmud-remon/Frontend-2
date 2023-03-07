@@ -359,5 +359,16 @@ export const manageProductsArray = [
     href: "performancereport",
     element: <PerformanceReport></PerformanceReport>
   },
+  {
+    title: "Withdraw Balance",
+    href: "withdrawBalance",
+    element: <WithdrawBalance></WithdrawBalance>
+  },
+  {
+    title: "Transaction Pending",
+    href: "transactionPending",
+    element: <TransactionPending></TransactionPending>
+  },
+
 
 ];
