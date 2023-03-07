@@ -59,7 +59,7 @@ const CampaignManagementOne = () => {
       </div>
 
 
-      <div className={`overflow-x-auto ${styles.tableShadow} lg:max-w-[1426px] pb-20 px-2`}>
+      <div className={`overflow-x-auto ${styles.tableShadow} lg:max-w-[1426px] pb-20 px-2 pt-3`}>
         <table className="table ">
 
           <thead className={``}>
@@ -82,7 +82,7 @@ const CampaignManagementOne = () => {
                 <td className="py-6 border-b border-[#B7B7B7] pl-6">
                   <div className="">
                     <Image
-                      className='w-[76px] h-[61px] mx-auto'
+                      className={`w-[76px] h-[61px] mx-auto object-fill ${styles.imgDropShadow}`}
                       src={details.img}
                       alt="Picture of the author"
                       width={76}
