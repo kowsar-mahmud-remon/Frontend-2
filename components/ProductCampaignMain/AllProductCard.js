@@ -17,7 +17,7 @@ const AllProductCard = ({ product, setModal }) => {
           className="cursor-pointer"
         >
           <Image
-            className="rounded-md mx-auto h-[130px]"
+            className="rounded-md mx-auto h-[126px] w-[167px] object-cover"
             width={167}
             height={126}
             src={image}
