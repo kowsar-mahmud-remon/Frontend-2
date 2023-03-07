@@ -44,10 +44,10 @@ const UpdateStatement = () => {
                             {
                                 updateStatementInfo ? <div className='flex justify-center pt-[16px]  '>
                                     <Image src={URL.createObjectURL(updateStatementInfo)} width="178" height="245" alt=""></Image>
-                                </div> : <div className=" ">Upload a Cheque Copy</div>
+                                </div> : <div className=" "></div>
                             }
                             <label className="absolute bottom-0">
-                                <div className="max-w-[687px] xl:w-[687px] flex justify-center  bottom-[0px] h-[60px] uploadStatenment">
+                                <div className="max-w-[687px] lg:w-[428px] xl:w-[687px] flex justify-center  h-[60px] uploadStatenment">
                                     <div className="flex justify-center items-center gap-[11px]">
                                         <Image src='/upload.png' width={27} height={18} alt=""></Image>
                                         <p className="text-[#FFFFFF] text-[16px]">Upload New Trade License</p>
