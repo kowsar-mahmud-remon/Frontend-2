@@ -386,6 +386,11 @@ export const manageProductsArray = [
     href: "ordersTracking",
     element: <OrdersTracking></OrdersTracking>
   },
+  {
+    title: "AccountSetting",
+    href: "accountsetting",
+    element: <AccountSetting></AccountSetting>
+  },
 
 
 ];
