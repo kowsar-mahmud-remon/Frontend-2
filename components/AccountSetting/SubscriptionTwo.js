@@ -1,8 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import BKASH from '../../assets/images/Bkash new.png';
+import BKASH from '../../assets/images/BkashNew.png';
+
 import styles from "../../styles/campaignManagementTwo.module.css";
+
 
 
 const SubscriptionTwo = () => {
