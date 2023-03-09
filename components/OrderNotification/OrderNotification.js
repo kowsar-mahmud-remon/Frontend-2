@@ -44,80 +44,80 @@ const OrderNotification = () => {
                       <tr>
                         <th
                           scope="col"
-                          className=" py-2 font-medium text-[#001E00] text-base"
+                          className=" whitespace-nowrap font-medium text-[#001E00] text-base"
                         >
-                          <p className="border-r px-6 border-[#B7B7B7]">
+                          <p className="border-r px-2 border-[#B7B7B7]">
                             Product
                           </p>
                         </th>
                         <th
                           scope="col"
-                          className=" py-3 font-medium text-[#001E00] text-base"
+                          className=" whitespace-nowrap font-medium text-[#001E00] text-base"
                         >
-                          <p className="border-r px-6 border-[#B7B7B7]">
+                          <p className="border-r px-2 border-[#B7B7B7]">
                             Local Title
                           </p>
                         </th>
                         <th
                           scope="col"
-                          className=" py-3 font-medium text-[#001E00] text-base"
+                          className=" whitespace-nowrap font-medium text-[#001E00] text-base"
                         >
-                          <p className="border-r px-6 border-[#B7B7B7]">
+                          <p className="border-r px-2 border-[#B7B7B7]">
                             Order Number
                           </p>
                         </th>
                         <th
                           scope="col"
-                          className=" py-3 font-medium text-[#001E00] text-base"
+                          className=" whitespace-nowrap font-medium text-[#001E00] text-base"
                         >
-                          <p className="border-r px-6 border-[#B7B7B7]">
+                          <p className="border-r px-2 border-[#B7B7B7]">
                             Category
                           </p>
                         </th>
                         <th
                           scope="col"
-                          className=" py-3 font-medium text-[#001E00] text-base"
+                          className=" whitespace-nowrap font-medium text-[#001E00] text-base"
                         >
-                          <p className="border-r px-6 whitespace-nowrap border-[#B7B7B7]">
+                          <p className="border-r px-2 whitespace-nowrap border-[#B7B7B7]">
                             Price
                           </p>
                         </th>
                         <th
                           scope="col"
-                          className=" py-3 font-medium text-[#001E00] text-base"
+                          className=" whitespace-nowrap font-medium text-[#001E00] text-base"
                         >
-                          <p className="px-6 border-r border-[#B7B7B7]">
+                          <p className="px-2 border-r border-[#B7B7B7]">
                             Quantity
                           </p>
                         </th>
                         <th
                           scope="col"
-                          className=" py-3 font-medium text-[#001E00] text-base"
+                          className=" whitespace-nowrap font-medium text-[#001E00] text-base"
                         >
-                          <p className="px-6 border-r border-[#B7B7B7]">
+                          <p className="px-2 border-r border-[#B7B7B7]">
                             Payment Status
                           </p>
                         </th>
                         <th
                           scope="col"
-                          className=" py-3 font-medium text-[#001E00] text-base"
+                          className=" whitespace-nowrap font-medium text-[#001E00] text-base"
                         >
-                          <p className="px-6 border-r border-[#B7B7B7]">
+                          <p className="px-2 border-r border-[#B7B7B7]">
                             Delivery Date
                           </p>
                         </th>
                         <th
                           scope="col"
-                          className=" py-3 font-medium text-[#001E00] text-base"
+                          className=" whitespace-nowrap font-medium text-[#001E00] text-base"
                         >
-                          <p className="px-6 border-r border-[#B7B7B7]">
+                          <p className="px-2 border-r border-[#B7B7B7]">
                             Details
                           </p>
                         </th>
 
                         <th
                           scope="col"
-                          className="px-6 py-3 font-medium text-[#001E00] text-base"
+                          className="px-2 whitespace-nowrap font-medium text-[#001E00] text-base"
                         >
                           Status
                         </th>
