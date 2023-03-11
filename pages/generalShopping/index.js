@@ -1,12 +1,16 @@
-import React from 'react';
+import JustForYou from "../../components/JustForYou/JustForYou"
+import NewArrival from "../../components/NewArrival/NewArrival"
 import TopSection from '../../components/GeneralShopping/TopSection';
 
-const generalShopping = () => {
+function generalShopping() {
     return (
         <div>
             <TopSection />
-        </div>
-    );
-};
+            <NewArrival></NewArrival>
+            <JustForYou></JustForYou>
 
-export default generalShopping;
+        </div>
+
+    )
+}
+export default generalShopping
