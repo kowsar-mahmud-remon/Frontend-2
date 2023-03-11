@@ -9,8 +9,6 @@ import img6 from "../../assets/images/Personal Protective img 6.jpg";
 import styles from "../../styles/campaignManagementTwo.module.css";
 
 
-
-
 const PersonalProtectiveEquipment = () => {
   const productDetails =
     [
@@ -53,7 +51,7 @@ const PersonalProtectiveEquipment = () => {
     ];
 
   return (
-    <div className='lg:max-w-[1426px] mx-auto'>
+    <div className='lg:max-w-[1426px] mx-auto my-4 px-2 lg:px-0'>
 
       <div className="flex flex-wrap gap-5">
         <div className="lg:w-[460px] mb-2">
