@@ -11,8 +11,8 @@ const MarchExpo = () => {
     backgroundSize: "cover",
   };
 
-  const butoon = "See what's new"
-  const descrip = "Source 2023's latest product trends"
+  const butoon = "See what's new";
+  const descrip = "Source 2023's latest product trends";
 
   const cards = [
     {
@@ -29,7 +29,7 @@ const MarchExpo = () => {
       name: "Featured suppliers",
       des: "with the highest sales volumes",
       img: tyre,
-    },  
+    },
   ];
 
   return (
@@ -37,14 +37,14 @@ const MarchExpo = () => {
       <div className="px-8 flex flex-wrap items-center justify-between">
         <div>
           <h1 className="font-bold text-[28px] text-white mb-3">
-            March Expo 2023  
+            March Expo 2023
           </h1>
           <h1 className="text-lg text-white mb-6">
             {descrip}
           </h1>
           <div>
             <button className="px-6 py-2 rounded-[22px] text-[#000] bg-[#f4f4f4] text-lg">
-             {butoon}
+              {butoon}
             </button>
           </div>
         </div>
