@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { FaHeart, FaStar } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
+import { CiMenuBurger } from "react-icons/ci";
 
 const SellerProductCard = ({ product, img1 }) => {
   const { img, price, pName, rating, sellerVerify, productOff, OriginalPrice } =
@@ -13,14 +14,8 @@ const SellerProductCard = ({ product, img1 }) => {
       <div className="card  h-full bg-base-100 shadow-xl">
         {/* <Image className="w-full" src={img} width="220" height="154" alt="Shoes" /> */}
         <label className="flex ">
-          <Image
-            className="w-full"
-            src="/image 6.png"
-            width={220}
-            height={154}
-            alt=""
-          ></Image>
-          <div className="sellerloveButton absolute  right-[10%] mt-[10%] w-[28px] h-[28px] flex items-center justify-center rounded-full">
+          <Image src="/image 6.png" width={220} height={154} alt=""></Image>
+          <div className="wishlistloveButton absolute  xl:ml-[181px] lg:ml-[170px] mt-[13px] w-[28px] h-[28px] flex items-center justify-center rounded-full cursor-pointer">
             <FaHeart className=" text-[#F2F2F2]  w-[17px] h-[16px] hover:fill-[#FB641B]  "></FaHeart>
           </div>
         </label>

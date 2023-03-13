@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-undef */
 import CampaignManagement from "../components/CampaignManagement/CampaignManagement";
 import CampaignManagementOne from "../components/CampaignManagement/CampaignManagementOne";
 import CampaignManagementThree from "../components/CampaignManagement/CampaignManagementThree";
@@ -71,6 +72,7 @@ import ProductCampaign from "../components/ProductCampaignMain/ProductCampaign";
 import OrdersTracking from "../components/ShippingManagement/OrdersTracking";
 import AccountSetting from "../components/AccountSetting/AccountSetting";
 import SellerProductUpload from "../components/SellerProductUpload/SellerProductUpload";
+import SellerProfileAdmin from "../components/Sellerprofileadmin/SellerProfileAdmin";
 import CouponActive from "../components/CouponActive/CouponActive";
 import QuestionAndAnswer01 from "../components/QuestionAndAnswer01/QuestionAndAnswer01";
 
@@ -139,7 +141,7 @@ export const manageProductsArray = [
   {
     title: "ProductCampaign",
     href: "productCampaign",
-    element: <ProductCampaign></ProductCampaign>,
+    element: <ProductCampaignSix></ProductCampaignSix>,
   },
   {
     title: "ProductCampaignThree",
@@ -372,6 +374,15 @@ export const manageProductsArray = [
     element: <QuestionAndAnswer01></QuestionAndAnswer01>
   },
   {
+    title: "SubscriptionThree",
+    href: "subscriptionThree",
+    element: <SubscriptionThree></SubscriptionThree>
+  },
+  {
+    title: "SubscriptionPage",
+    href: "subscriptionPage",
+    element: <SubscriptionPage></SubscriptionPage>},
+    {
     title: "Withdraw Balance",
     href: "withdrawBalance",
     element: <WithdrawBalance></WithdrawBalance>
@@ -392,6 +403,10 @@ export const manageProductsArray = [
     element: <AccountType></AccountType>
   },
   {
+    title: "Profile",
+    href: "sellerprofileadmin",
+    element: <SellerProfileAdmin></SellerProfileAdmin>},
+    {
     title: "AccountSetting",
     href: "accountsetting",
     element: <AccountSetting></AccountSetting>

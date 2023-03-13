@@ -277,7 +277,7 @@ const ManageProductsSideNav = () => {
       subcata: [
         {
           name: "Profile",
-          href: "editProduct"
+          href: "sellerprofileadmin"
         },
         {
           name: "Account Settings",
