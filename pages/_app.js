@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Toaster } from 'react-hot-toast';
 import { Provider, useDispatch } from 'react-redux';
 import MobileNavBar from '../components/MobileNavBar/MobileNavBar';
 import Navication from '../components/Navication/Navication';
@@ -25,6 +26,7 @@ export default function App({ Component, pageProps }) {
         <div className='hidden lg:block'>
           <Footer />
         </div>
+        <Toaster   position="top-center" />
       </Provider>
     </div>
   );

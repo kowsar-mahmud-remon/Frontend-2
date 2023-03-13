@@ -5,9 +5,12 @@ import img from '../../assets/images/image 346.png';
 import img2 from '../../assets/images/image 88.png';
 import styles from "../../styles/campaignManagementTwo.module.css";
 import { AiFillExclamationCircle } from 'react-icons/ai';
+import { useState } from 'react';
 
 
 const ReportManagementOne = () => {
+  const [show1, setShow1] = useState(false);
+  const para = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here, making it look like readable";
   return (
     <div className='mt-7 lg:p-0 mb-10'>
 
@@ -38,7 +41,16 @@ const ReportManagementOne = () => {
 
         <div className="flex mt-[25px] ml-[50px]">
           <p className='text-base font-bold text-[#F4253F] mr-3'>Report Product:</p>
-          <p className='text-base text-[#686868] lg:w-3/4'>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a  <span className='text-[#287DF3]'>Read More...</span></p>
+          {/* <p className='text-base text-[#686868] lg:w-3/4'>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a  <span className='text-[#287DF3]'>Read More...</span></p> */}
+          {
+            show1 ? <>
+              <p className='text-[16px] text-[#686868] w-[70%]'>{para} </p>
+            </>
+              :
+              <>
+                <p className='text-[16px] text-[#686868] w-[70%]'>{para.slice(0, 250)} <span onClick={() => setShow1(true)} className='text-[#287DF3] cursor-pointer'>Read More...</span></p>
+              </>
+          }
         </div>
         <div className="flex items-center mt-4 ml-[177px]">
           <Image

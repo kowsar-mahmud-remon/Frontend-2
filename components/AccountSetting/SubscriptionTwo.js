@@ -1,8 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import BKASH from '../../assets/images/BKASH.png';
+import BKASH from '../../assets/images/BkashNew.png';
+
 import styles from "../../styles/campaignManagementTwo.module.css";
+
 
 
 const SubscriptionTwo = () => {
@@ -21,11 +23,11 @@ const SubscriptionTwo = () => {
       <div className="mt-[34px] lg:block xl:flex gap-6">
 
         <div className="lg:w-[100%] xl-w-[60%] mb-10">
-          <div className={`lg:w-full px-[49px] pt-[34px] pb-[398px] ${styles.campaignManagement}`}>
+          <div className={`lg:w-full px-6 pt-6 pb-[398px] ${styles.campaignManagement}`}>
             <div className=" flex justify-between items-center">
               <p className='text-2xl text-[#001E00] font-medium'>Pay with bKash</p>
               <Image
-                className='w-[129px] h-[53px] mr-5 object-cover'
+                className='w-[129px] h-[53px] object-cover'
                 src={BKASH}
                 alt="Picture of the author"
                 width={129}

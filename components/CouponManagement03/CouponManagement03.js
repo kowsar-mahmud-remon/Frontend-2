@@ -96,9 +96,10 @@ const CouponManagement03 = () => {
                         </div>
                     </div>
                 </div>
+
                 <div className='flex justify-center gap-4 pb-[16px]'>
-                    <button className='btn btn-outline btn-[#707070] text-[#707070] text-[16px] w-[134px] h-[40px]'>Cancel</button>
-                    <Link href='couponpay' ><button className='btn bg-[#FB641B] text-white w-[134px] text-[16px] h-[40px]'>Pay Now</button></Link>
+                    <button className=' font-normal border border-[#686868]  rounded-[4px]  text-[#707070] text-[16px] w-[134px] h-[40px]'>Cancel</button>
+                    <Link href='couponpay' >   <button className=' font-normal border border-[#FB641B] bg-[#FB641B] rounded-[4px]  text-white text-[16px] w-[134px] h-[40px]'>Pay Now</button></Link>
                 </div>
             </div>
         </div>

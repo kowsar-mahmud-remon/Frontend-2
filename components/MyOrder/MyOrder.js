@@ -13,101 +13,161 @@ const MyOrder = () => {
       id: "1",
       orderId: "121312323213432",
       orderDate: "Placed On 21 Dec 2022 10:21:00",
-      image: "/image 8.png",
-      peoductName: "Tomato(Local) 500+30 gm",
-      qty: "1",
+
       status: "Delivered",
       deliveredDate: "Delivered on 21 Dec 2022",
+      againAddProduct: [
+        {
+          image: "/image 6.png",
+          peoductName: "Tomato(Local) 500+30 gm",
+          qty: "1",
+        },
+        {
+          image: "/image 6.png",
+          peoductName: "Tomato(Local) 500+30 gm",
+          qty: "1",
+        }
+      ]
     },
     {
       id: "2",
       orderId: "121312323213432",
       orderDate: "Placed On 21 Dec 2022 10:21:00",
-      image: "/image 8.png",
-      peoductName: "Tomato(Local) 500+30 gm",
-      qty: "1",
+
       status: "Payment",
       deliveredDate: "Delivered on 21 Dec 2022",
+      againAddProduct: [
+        {
+          image: "/image 6.png",
+          peoductName: "Tomato(Local) 500+30 gm",
+          qty: "1",
+        }
+        ,
+        {
+          image: "/image 6.png",
+          peoductName: "Tomato(Local) 500+30 gm",
+          qty: "1",
+        }
+      ]
     },
     {
       id: "3",
       orderId: "121312323213432",
       orderDate: "Placed On 21 Dec 2022 10:21:00",
-      image: "/image 8.png",
-      peoductName: "Tomato(Local) 500+30 gm",
-      qty: "1",
       status: "Payment",
       deliveredDate: "Delivered on 21 Dec 2022",
+      againAddProduct: [
+        {
+          image: "/image 6.png",
+          peoductName: "Tomato(Local) 500+30 gm",
+          qty: "1",
+        }
+      ]
     },
     {
       id: "4",
       orderId: "121312323213432",
       orderDate: "Placed On 21 Dec 2022 10:21:00",
-      image: "/image 8.png",
-      peoductName: "Tomato(Local) 500+30 gm",
-      qty: "1",
       status: "Payment",
       deliveredDate: "Delivered on 21 Dec 2022",
+      againAddProduct: [
+        {
+
+          image: "/image 6.png",
+          peoductName: "Tomato(Local) 500+30 gm",
+          qty: "1",
+        }
+      ]
     },
     {
       id: "5",
       orderId: "121312323213432",
       orderDate: "Placed On 21 Dec 2022 10:21:00",
-      image: "/image 8.png",
-      peoductName: "Tomato(Local) 500+30 gm",
-      qty: "1",
       status: "Delivered",
       deliveredDate: "Delivered on 21 Dec 2022",
+      againAddProduct: [
+        {
+
+          image: "/image 6.png",
+          peoductName: "Tomato(Local) 500+30 gm",
+          qty: "1",
+        }
+      ]
     },
     {
       id: "6",
       orderId: "121312323213432",
       orderDate: "Placed On 21 Dec 2022 10:21:00",
-      image: "/image 8.png",
-      peoductName: "Tomato(Local) 500+30 gm",
-      qty: "1",
       status: "Delivered",
       deliveredDate: "Delivered on 21 Dec 2022",
+      againAddProduct: [
+        {
+
+          image: "/image 6.png",
+          peoductName: "Tomato(Local) 500+30 gm",
+          qty: "1",
+        }
+      ]
     },
     {
       id: "7",
       orderId: "121312323213432",
       orderDate: "Placed On 21 Dec 2022 10:21:00",
-      image: "/image 8.png",
-      peoductName: "Tomato(Local) 500+30 gm",
-      qty: "1",
+
       status: "Delivered",
       deliveredDate: "Delivered on 21 Dec 2022",
+      againAddProduct: [
+        {
+          image: "/image 6.png",
+          peoductName: "Tomato(Local) 500+30 gm",
+          qty: "1",
+        }
+      ]
     },
     {
       id: "8",
       orderId: "121312323213432",
       orderDate: "Placed On 21 Dec 2022 10:21:00",
-      image: "/image 8.png",
-      peoductName: "Tomato(Local) 500+30 gm",
-      qty: "1",
+
       status: "Delivered",
       deliveredDate: "Delivered on 21 Dec 2022",
+      againAddProduct: [
+        {
+          image: "/image 6.png",
+          peoductName: "Tomato(Local) 500+30 gm",
+          qty: "1",
+        }
+      ]
     },
     {
       id: "9",
       orderId: "121312323213432",
       orderDate: "Placed On 21 Dec 2022 10:21:00",
-      image: "/image 8.png",
-      peoductName: "Tomato(Local) 500+30 gm",
-      qty: "1",
+
       status: "Processing",
       deliveredDate: "Delivered on 21 Dec 2022",
+      againAddProduct: [
+        {
+          image: "/image 6.png",
+          peoductName: "Tomato(Local) 500+30 gm",
+          qty: "1",
+        }
+      ]
     },
     {
       id: "10",
       orderId: "121312323213432",
       orderDate: "Placed On 21 Dec 2022 10:21:00",
-      image: "/image 8.png",
-      peoductName: "Tomato(Local) 500+30 gm",
-      qty: "1",
+    
       status: "Processing",
       deliveredDate: "Delivered on 21 Dec 2022",
+      againAddProduct: [
+           {
+            image: "/image 6.png",
+            peoductName: "Tomato(Local) 500+30 gm",
+            qty: "1",
+           }
+      ]
     },
   ];
   const receiveDatas = [
@@ -118,6 +178,9 @@ const MyOrder = () => {
       image: "/image 8.png",
       peoductName: "Tomato(Local) 500+30 gm",
       status: "Delivered",
+      againAddProduct: [
+
+      ]
     },
     {
       id: "1",
@@ -134,6 +197,9 @@ const MyOrder = () => {
       image: "/image 8.png",
       peoductName: "Tomato(Local) 500+30 gm",
       status: "Delivered",
+      againAddProduct: [
+
+      ]
     },
   ];
 
@@ -153,7 +219,7 @@ const MyOrder = () => {
 
   return (
     <div className=" md:px-[24px] px-[10px]">
-      
+
       <div className="w-[100%]">
         <button onClick={() => router.back()} className='flex items-center  gap-[13px]'>
           <FaArrowLeft className='md:hidden'></FaArrowLeft>

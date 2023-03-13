@@ -85,7 +85,7 @@ const TotalEarning = () => {
                     Total:{" "}
                     <span className="font-semibold text-[44px]">
                       1,05,420 Tk
-                    </span>
+                    </span>  
                   </p>
                   <div className="flex justify-center mt-8">
                     <button className="w-[183px] text-white text-base h-[48px] bg-[#FB641B] rounded text-center">

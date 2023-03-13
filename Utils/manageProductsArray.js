@@ -56,9 +56,12 @@ import Subscription from "../components/AccountSetting/Subscription";
 import UpdateStatement from "../components/AccountStatement/UpdateStatement";
 import NidCard from "../components/AccountStatement/NidCard";
 import BankStatement from "../components/AccountStatement/BankStatement";
+
 import OrderNotification from "../components/OrderNotification/OrderNotification";
 import OrderHistory from "../components/OrderHistory/OrderHistory";
 import PhoneSupport from "../components/SellerSupport/PhoneSupport";
+import PerformanceReport from "../components/PerformanceReport/PerformanceReport";
+import Chart from '../components/PerformanceReport/Chart/Chart.js';
 import TaxManagement from "../components/Tax&Offers/TaxManagement";
 import SubscriptionOne from "../components/AccountSetting/SubscriptionOne";
 import SubscriptionTwo from "../components/AccountSetting/SubscriptionTwo";
@@ -70,6 +73,8 @@ import OrdersTracking from "../components/ShippingManagement/OrdersTracking";
 import AccountSetting from "../components/AccountSetting/AccountSetting";
 import SellerProductUpload from "../components/SellerProductUpload/SellerProductUpload";
 import SellerProfileAdmin from "../components/Sellerprofileadmin/SellerProfileAdmin";
+import CouponActive from "../components/CouponActive/CouponActive";
+import QuestionAndAnswer01 from "../components/QuestionAndAnswer01/QuestionAndAnswer01";
 
 export const manageProductsArray = [
   {
@@ -349,30 +354,24 @@ export const manageProductsArray = [
   },
   {
 
-    title: "TaxManagement",
-    href: "taxManagement",
-    element: <TaxManagement></TaxManagement>
-  },
-  {
-
     title: "UpdateBank Statement",
     href: "UpdateBankStatement",
     element: <UpdateBankStatement></UpdateBankStatement>
   },
   {
-    title: "Subscription",
-    href: "Subscription",
-    element: <Subscription></Subscription>
+    title: "Performance Report",
+    href: "performancereport",
+    element: <PerformanceReport></PerformanceReport>
   },
   {
-    title: "SubscriptionOne",
-    href: "subscriptionOne",
-    element: <SubscriptionOne></SubscriptionOne>
+    title: "Coupon Active",
+    href: "couponactive",
+    element: <CouponActive></CouponActive>
   },
   {
-    title: "SubscriptionTwo",
-    href: "subscriptionTwo",
-    element: <SubscriptionTwo></SubscriptionTwo>
+    title: "Question and Answer01",
+    href: "questionandanswer01",
+    element: <QuestionAndAnswer01></QuestionAndAnswer01>
   },
   {
     title: "SubscriptionThree",
@@ -382,7 +381,21 @@ export const manageProductsArray = [
   {
     title: "SubscriptionPage",
     href: "subscriptionPage",
-    element: <SubscriptionPage></SubscriptionPage>
+    element: <SubscriptionPage></SubscriptionPage>},
+    {
+    title: "Withdraw Balance",
+    href: "withdrawBalance",
+    element: <WithdrawBalance></WithdrawBalance>
+  },
+  {
+    title: "Transaction Pending",
+    href: "transactionPending",
+    element: <TransactionPending></TransactionPending>
+  },
+  {
+    title: "OrdersTracking",
+    href: "ordersTracking",
+    element: <OrdersTracking></OrdersTracking>
   },
   {
     title: "AccountType",
@@ -392,6 +405,12 @@ export const manageProductsArray = [
   {
     title: "Profile",
     href: "sellerprofileadmin",
-    element: <SellerProfileAdmin></SellerProfileAdmin>
+    element: <SellerProfileAdmin></SellerProfileAdmin>},
+    {
+    title: "AccountSetting",
+    href: "accountsetting",
+    element: <AccountSetting></AccountSetting>
   },
+
+
 ];

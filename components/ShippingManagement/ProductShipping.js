@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import img from '../../assets/images/image 7.png';
 import styles from "../../styles/campaignManagementTwo.module.css";
@@ -132,7 +133,9 @@ const ProductShipping = () => {
                   <p className='text-base text-[#001E00] font-medium'>{details.deliveryDate}</p>
                 </td>
                 <td className="py-6 border-b border-[#B7B7B7]">
-                  <p className='text-base text-[#287DF3] font-medium'>{details.Details}</p>
+                  <Link href="productInvoicesDetails">
+                    <p className='text-base text-[#287DF3] font-medium cursor-pointer'>{details.Details}</p>
+                  </Link>
                 </td>
                 <td className="py-6 border-b border-[#B7B7B7]">
                   <p className='text-base text-[#001E00] font-medium'>{details.Status}</p>

@@ -13,6 +13,7 @@ const Sellerverification = () => {
   function handleBackChange(event) {
     setNidBack(event.target.files[0]);
   }
+  console.log(nidFront,nidBack)
 
   return (
     <div className="grid lg:grid-cols-2 mobile:grid-cols-1 gap-6">
@@ -29,8 +30,8 @@ const Sellerverification = () => {
                   className=""
                   src={URL.createObjectURL(nidFront)}
                   alt="Preview"
-                  width="292"
-                  height="124"
+                  width="150"
+                  height="150"
                 />
               </div>
             ) : (
@@ -41,14 +42,16 @@ const Sellerverification = () => {
 
             <div className="col-span-2 flex justify-center">
               <label htmlFor="frontimg">
-              <Image
+                <Image
                   className=""
                   src={cloud}
                   alt="Preview"
                   width="60"
                   height="40"
                 />
-                <p className="md:-ml-3 text-sm md:text-md text-[#686868]">upload photo</p>
+                <p className="md:-ml-3 text-sm md:text-md text-[#686868]">
+                  upload photo
+                </p>
               </label>
               <input
                 id="frontimg"
@@ -71,36 +74,38 @@ const Sellerverification = () => {
       {/* for id back part */}
       <div className="my-4">
         <p className="text-sm md:text-md font-semibold my-2 text-[#707070]">
-        Upload ID Card Back Part
+          Upload ID Card Back Part
         </p>
         <div className="border shadow-xl p-[16px] rounded-lg">
           <div className=" h-[170px] border-5 grid grid-cols-3 items-center border rounded-lg">
-            {nidFront ? (
-              <div className="flex items-center border-2 p-4  rounded-l-xl bg-[#F2F3F7] text-start col-span-1 w-full h-full">
+            {nidBack ? (
+              <div className="flex items-center border-0  rounded-l-xl p-4 bg-[#F2F3F7] text-start col-span-1 w-full h-full">
                 <Image
-                  className="w-full"
+                  className=""
                   src={URL.createObjectURL(nidBack)}
                   alt="Preview"
-                  width="200"
-                  height="200"
+                  width="150"
+                  height="150"
                 />
               </div>
             ) : (
               <div className="md:ml-10 w-200 h-200 border border-5 p-4 rounded-lg text-sm md:text-md">
-                NID Front Photo
+                NID Back Photo
               </div>
             )}
 
             <div className="col-span-2 flex justify-center">
               <label htmlFor="backimg">
-              <Image
+                <Image
                   className=""
                   src={cloud}
                   alt="Preview"
                   width="60"
                   height="40"
                 />
-                <p className="md:-ml-3 text-sm md:text-md text-[#686868]">upload photo</p>
+                <p className="md:-ml-3 text-sm md:text-md text-[#686868]">
+                  upload photo
+                </p>
               </label>
               <input
                 id="backimg"

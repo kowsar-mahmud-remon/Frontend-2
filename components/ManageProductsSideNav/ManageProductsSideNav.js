@@ -135,7 +135,7 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Performance Report",
-          href: "editProduct"
+          href: "performancereport"
         },
         {
           name: "Total Earning",
@@ -175,7 +175,7 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Orders Tracking",
-          href: "ordersTracking"
+          href: "orderTrackingPage01"
         }
       ],
     },
@@ -281,7 +281,7 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Account Settings",
-          href: "accountSetting"
+          href: "accountsetting"
         },
         {
           name: "Subscription",

@@ -2,16 +2,50 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import { FaAngleRight } from 'react-icons/fa';
 import img from '../../assets/images/image 66.png';
+import img2 from '../../assets/images/statistics 1 (1).png';
+import img3 from '../../assets/images/analysis 1.png';
+import img4 from '../../assets/images/VectorImg2.png';
 import delivery from '../../assets/images/fast-delivery 1.png';
 import delivery2 from '../../assets/images/cash-on-delivery 2.png';
 import styles from "../../styles/campaignManagementTwo.module.css";
 import CampaignManagementThree from './CampaignManagementThree';
+import Select from 'react-select';
+
 
 
 
 const CampaignManagementTwo = () => {
   const [hidden, setHidden] = useState(false);
   console.log("styles", styles);
+
+  const options = [
+    { id: "1", value: "Social", img: img2, label: "Social", checked: "checked" },
+    { id: "2", value: "Top View", img: img3, label: "Top View", checked: "checked" },
+    { id: "3", value: "Spotlight", img: img4, label: "Spotlight", checked: "checked" }
+  ];
+  const formatOptionLabel = ({ id, value, img, label, checked }) => (
+    <div style={{ display: "flex", height: "51px", marginLeft: "5px" }}>
+
+      <div className='flex items-center'>
+        <input type='radio' id={id} checked={checked} name="fav_language" value="HTML1" className='radio w-[18px] h-[18px] border-2 border-[#026C51] radio-success	  ' />
+        <label for={id}>
+          <div className='flex items-center ml-4'>
+            <Image
+              className='w-[16px] h-[16px] mr-2'
+              src={img}
+              alt='image'
+            />
+            <p className='text-base font-medium text-[#001E00]'>{value}</p>
+          </div>
+        </label><br />
+      </div>
+
+      {/* <div>{label}</div> */}
+      {/* <div style={{ marginLeft: "10px", color: "#ccc" }}>
+        {customAbbreviation}
+      </div> */}
+    </div>
+  );
   return (
     <div className='mt-7 p-4 lg:p-0'>
 
@@ -95,25 +129,25 @@ const CampaignManagementTwo = () => {
 
         <div className="lg:w-[474px] flex lg:justify-end items-center mb-4">
           <p className='text-[#001E00] mr-4 text-base font-medium'>Choose a Campaign Objective:</p>
-          <div className="flex w-[172px] border border-[#B7B7B7] justify-between rounded">
-            <select className="select w-full text-sm text-[#001E00]">
-              {/* <option disabled selected>Social</option> */}
-              <option className='flex'>
-                <input type="radio" name="radio-5" className="radio radio-success" checked />
-                <Image
-                  className='w-[16px] h-[16px]'
-                  src={img}
-                  alt="Picture of the author"
-                  width={16}
-                  height={16}
-                />
-                Category 01
-              </option>
-              <option>
-                <input type="radio" name="radio-5" className="radio radio-success" />
-                Category 02
-              </option>
-            </select>
+          <div className="flex w-[172px] h-[51px] justify-between rounded">
+
+
+            <Select
+              styles={{
+                indicatorSeparator: () => { }, // removes the "stick"
+                dropdownIndicator: defaultStyles => ({
+                  ...defaultStyles,
+                  '& svg': { display: 'none' }
+                })
+              }}
+              className='w-full h-full'
+              defaultValue={options[0]}
+              closeMenuOnSelect={false}
+              formatOptionLabel={formatOptionLabel}
+              options={options}
+            />
+
+
           </div>
         </div>
 
