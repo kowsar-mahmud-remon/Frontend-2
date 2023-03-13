@@ -1,13 +1,12 @@
 import React from "react";
 
-import BannerAndLogo from "../../components/SellerProfile/BannerAndLogo";
-import NameAndAbout from "../../components/SellerProfile/NameAndAbout";
-import ShareOption from "../../components/SellerProfile/ShareOption";
-import AboutSection from "../../components/SellerProfile/AboutSection";
-import ProductStore from "../../components/SellerProfile/ProductStore";
-
 import ProfileBreadcrumb from "./ProfileBreadcrumb";
 import BackButton from "./BackButton";
+import BannerAndLogo from "./BannerAndLogo";
+import NameAndAbout from "./NameAndAbout";
+
+import AboutSection from "./AboutSection";
+import ProductStore from "./ProductStore";
 
 function SellerProfileAdmin(props) {
   return (
@@ -23,9 +22,8 @@ function SellerProfileAdmin(props) {
             name="Banglar Big Store"
             isVerified="true"
           ></NameAndAbout>
-          {/* share options */}
-          <ShareOption></ShareOption>
-          <hr className="text-[#686868] border-t-2 mt-[26px]  mb-[32px] max-w-[1090px] mobile:hidden md:block mx-auto" />
+
+          <hr className="text-[#686868] border-t-2 mt-[26px]  mb-[32px] max-w-[1294px] mobile:hidden md:block mx-auto" />
 
           {/* about section */}
           <AboutSection></AboutSection>
