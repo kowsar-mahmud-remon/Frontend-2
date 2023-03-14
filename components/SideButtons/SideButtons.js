@@ -10,8 +10,8 @@ const SideButtons = () => {
   const [active, setActive] = useState(false);
   console.log(active);
   return (
-    <div className="relative hidden md:block">
-      <div className="fixed top-1/2 right-0 z-50 h-screen">
+    <div className="relative hidden md:block ">
+      <div className=" fixed top-1/2 right-0 transform -translate-y-1/2 mx-[10px]">
         <div>
           <Link href="/cart">
             <div className="p-2 flex flex-col items-center shadow-lg rounded-xl bg-white mb-2">
@@ -21,13 +21,22 @@ const SideButtons = () => {
               <p className="text-[#FB641B]">TK. 100</p>
             </div>
           </Link>
-          <div onClick={()=>{setActive(!active)}} className="p-2  flex flex-col items-center shadow-lg rounded-xl bg-white cursor-pointer">
+          <div
+            onClick={() => {
+              setActive(!active);
+            }}
+            className="p-2  flex flex-col items-center shadow-lg rounded-xl bg-white cursor-pointer"
+          >
             <Image src={img1} alt="" />
             <p className="text-[#026C51]">Live Chat</p>
           </div>
         </div>
       </div>
-      <div className={`fixed  right-24 z-50 h-screen ${active?'block':'hidden'}`}>
+      <div
+        className={`fixed  right-24 z-50 h-screen ${
+          active ? "block" : "hidden"
+        }`}
+      >
         <div className="flex items-center h-full ">
           <div className="relative h-[510px] w-[440px] rounded-lg bg-white shadow-xl">
             <div className="flex justify-between items-center px-6 py-5 shadow-lg">
