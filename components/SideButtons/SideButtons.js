@@ -6,9 +6,13 @@ import img2 from "../../assets/images/Sidebutton/Vector.png";
 import img3 from "../../assets/images/Sidebutton/Group 2436.png";
 import img4 from "../../assets/images/Sidebutton/Vector (9).png";
 import img5 from "../../assets/images/Sidebutton/Vector (10).png";
+import img6 from "../../assets/images/Sidebutton/Group 1981.png";
 const SideButtons = () => {
   const [active, setActive] = useState(false);
   console.log(active);
+  const handleScrollToTop = () => {
+     window.scrollTo({ top: 0, behavior: "smooth" });
+  }
   return (
     <div className="relative hidden md:block ">
       <div className=" fixed top-1/2 right-0 transform -translate-y-1/2 mx-[10px]">
@@ -65,6 +69,9 @@ const SideButtons = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className=" fixed bottom-10 right-8">
+        <Image src={img6} alt="" onClick={handleScrollToTop}/>
       </div>
     </div>
   );
