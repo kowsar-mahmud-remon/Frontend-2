@@ -17,11 +17,14 @@ import verified from "../../assets/images/verified.png";
 import { useState } from "react";
 import style from "../../styles/componentsStyles/Search.module.css";
 import { CiStar } from "react-icons/ci";
+import hearts from "../../assets/images/hearts.png";
+import hearted from "../../assets/images/herted.png";
 
 const SearchDesktop = () => {
   const [show, setShow] = useState(true);
   const [leftWidth, setLeftWidth] = useState("w-[310px]");
   const [rightWidth, setRightWidth] = useState("w-full");
+  const [index, setDropdown] = useState(false);
   const [bghide, setBgHide] = useState("");
   const minValue = 0;
   const [filters, setFilters] = useState([]);
@@ -284,16 +287,19 @@ const SearchDesktop = () => {
     }
   };
 
-  const ratingColor =(statuss)=> {
-    if (statuss <3) {
-        return '#F4253F';
+  const ratingColor = (statuss) => {
+    if (statuss < 3) {
+      return "#F4253F";
     }
-    if (statuss <4 ) {
-        return '#FB641B';
+    if (statuss < 4) {
+      return "#FB641B";
     }
-    return '#026C51';
-}
+    return "#026C51";
+  };
 
+  const clickHandler = (index) => {
+    setDropdown(index)
+  }
   return (
     <div className=" flex lg:px-[94px]  md:px-[94px]  mt-2">
       <div onClick={() => handleClose(1)} className={``}>
@@ -379,7 +385,7 @@ const SearchDesktop = () => {
             <div className="">
               <ul>
                 <li className="flex justify-between">
-                  <p className="font-semibold text-[18px] text-[#001E00] ">
+                  <p className="font-semibold text-[18px] pb-4 text-[#001E00] ">
                     All Collecction
                   </p>
                   <Image className="h-2 mt-2 " src={v2} alt="img" />
@@ -447,13 +453,13 @@ const SearchDesktop = () => {
               <div>
                 <div
                   id="filter"
-                  className=" grid grid-cols-3 mb-[16px] gap-[4px] "
+                  className="flex flex-wrap gap-2 mb-4"
                 >
                   <p
-                    className={`bg-[#F2F3F7] w-[80px] text-[#686868] text-[11px] h-[21px] py-[-2px] px-2 mr-2 `}
+                    className={`bg-[#F2F3F7] px-2 py-1 text-[14px] text-[#686868]`}
                   >
                     {" "}
-                    <span className="mr-1 cursor-pointer">X</span>
+                    <span className="mr-1 cursor-pointer ">X</span>
                     <span>{maxValue}</span>{" "}
                   </p>
                   {filters &&
@@ -461,7 +467,7 @@ const SearchDesktop = () => {
                       return (
                         <div key={filter.id}>
                           <p
-                            className={`bg-[#F2F3F7] mb-[3px] w-[83px] text-[#686868] text-[11px] h-[21px] py-[-2px] px-1  `}
+                            className={`bg-[#F2F3F7] px-2 py-1 text-[14px] text-[#686868]`}
                           >
                             {" "}
                             <span
@@ -641,7 +647,7 @@ const SearchDesktop = () => {
             <hr className="mb-[16px] border border-[#CDCDCD]" />
 
             <div>
-              <div className="flex justify-between">
+              <div className="flex justify-between pb-4">
                 <h3>Discount</h3>
                 <Image className="h-2 mt-2" src={v2} alt="img" />
               </div>
@@ -882,7 +888,7 @@ const SearchDesktop = () => {
                 <p className="font-semibold mb-[16px] text-[#001E00]">Brands</p>
                 <Image className="h-2 mt-2" src={v2} alt="img" />
               </div>
-              <div className="border  rounded-md w-[136px]  ">
+              <div className="border border-[#CDCDCD] rounded h-[32px] w-[98px] flex items-center justify-between px-2">
                 <input
                   type="checkbox"
                   id="vehicle1"
@@ -892,9 +898,9 @@ const SearchDesktop = () => {
                 />
                 <label
                   for="vehicle1"
-                  className="text-[14px] font-semibold  ml-2 mt-[1px]"
+                  className="text-[14px] font-semibold text-[#001E00] pt-1"
                 >
-                  No Brands
+                  No Brand
                 </label>
                 <br />
               </div>
@@ -952,7 +958,7 @@ const SearchDesktop = () => {
                   key={product.id}
                   className={`${style.collectionCard} w-[222px]`}
                 >
-                  <div className="">
+                  <div className="relative">
                     <div className="flex justify-center">
                       <Image
                         className="object-cover w-[220px] h-[154px]"
@@ -961,8 +967,23 @@ const SearchDesktop = () => {
                         height={154}
                         alt="Shoes"
                       />
-                    </div>  
-
+                    </div>
+                    <div
+                      onClick={() => clickHandler(product.id)}
+                      className={`w-7 h-7 flex justify-center items-center rounded-full ${style.love} absolute right-3 top-3`}
+                    >
+                        {
+                          index === product.id? <Image
+                          className="p-1 w-[26px] h-[26px] mt-1 cursor-pointer"
+                          src={hearted}
+                          alt=""
+                        ></Image> : <Image
+                        className="p-1 w-[26px] h-[26px] mt-1 cursor-pointer"
+                        src={hearts}
+                        alt=""
+                      ></Image>
+                        }
+                    </div>
                     <div className="p-4">
                       <div className="flex flex-wrap items-center">
                         <h2 className="text-[#FB641B] text-[20px] font-semibold mr-1">
@@ -979,7 +1000,12 @@ const SearchDesktop = () => {
                         {product.pName}
                       </p>
                       <div className="flex items-center mb-[10px]">
-                        <div style={{ 'backgroundColor': ratingColor(product.rating)}} className="rounded-[2px] px-[2] w-[35px] h-[16px] flex items-center justify-between mr-2">
+                        <div
+                          style={{
+                            backgroundColor: ratingColor(product.rating),
+                          }}
+                          className="rounded-[2px] px-[2] w-[35px] h-[16px] flex items-center justify-between mr-2"
+                        >
                           <p className="text-xs text-white">{product.rating}</p>
                           <div className="">
                             <Image
@@ -1007,8 +1033,7 @@ const SearchDesktop = () => {
                         ) : (
                           <div className="h-6">
                             <p className="pr-2"></p>
-                            
-                          </div>  
+                          </div>
                         )}
                       </div>
                       <div className="">
