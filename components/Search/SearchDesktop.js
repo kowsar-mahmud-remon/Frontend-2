@@ -1008,7 +1008,7 @@ const SearchDesktop = () => {
                           <div className="h-6">
                             <p className="pr-2"></p>
                             
-                          </div>
+                          </div>  
                         )}
                       </div>
                       <div className="">
