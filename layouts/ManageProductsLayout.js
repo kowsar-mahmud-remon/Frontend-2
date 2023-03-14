@@ -2,12 +2,9 @@ import React from "react";
 import ManageProductsSideNav from "../components/ManageProductsSideNav/ManageProductsSideNav";
 import SellerRightNav from "../components/SellerRightNav/SellerRightNav";
 
-
 const ManageProductsLayout = ({ children, slug }) => {
   return (
-    <div
-      className="md:flex w-full"
-    >
+    <div className="md:flex w-full">
       <SellerRightNav />
       <div className="hidden lg:block ">
         <ManageProductsSideNav />

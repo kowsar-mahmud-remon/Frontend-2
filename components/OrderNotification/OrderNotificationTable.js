@@ -51,38 +51,38 @@ const OrderNotificationTable = ({ product }) => {
         </td>
         <th
           scope="row"
-          className="px-6 py-4 font-medium border-r border-[#B7B7B7] text-base whitespace-nowrap"
+          className="px-6 font-medium border-r border-[#B7B7B7] text-base whitespace-nowrap"
         >
           {title}
         </th>
-        <td className="px-6 py-4 font-medium border-r border-[#B7B7B7] text-base">
+        <td className="px-6 font-medium border-r border-[#B7B7B7] text-base">
           <label htmlFor="my-modal-2" className="cursor-pointer">
             KS515JKO
           </label>
         </td>
-        <td className="px-6 py-4 font-medium border-r border-[#B7B7B7] text-base">
+        <td className="px-6 font-medium border-r border-[#B7B7B7] text-base">
           {variation}
         </td>
-        <td className="px-6 py-4 whitespace-nowrap font-medium border-r border-[#B7B7B7] text-base">
+        <td className="px-6 whitespace-nowrap font-medium border-r border-[#B7B7B7] text-base">
           TK {price}
         </td>
-        <td className="px-6 py-4 whitespace-nowrap font-medium border-r border-[#B7B7B7] text-base">
+        <td className="px-6 whitespace-nowrap font-medium border-r border-[#B7B7B7] text-base">
           {" "}
           {quantity}
         </td>
-        <td className="px-6 py-4 font-medium border-r border-[#B7B7B7] text-base">
+        <td className="px-6 font-medium border-r border-[#B7B7B7] text-base">
           {delivery}
         </td>
-        <td className="px-6 py-4 font-medium border-r border-[#B7B7B7] text-base">
+        <td className="px-6 font-medium border-r border-[#B7B7B7] text-base">
           {deliveryDate}
         </td>
-        <td className="px-6 py-4 font-medium border-r border-[#B7B7B7]">
+        <td className="px-6 font-medium border-r border-[#B7B7B7]">
           <button className="text-[#287DF3]">
             {" "}
             <Link href="productInvoicesDetails">Invoice</Link>
           </button>
         </td>
-        <td className="px-6 py-4 border-r border-[#B7B7B7]">
+        <td className="px-6 border-r border-[#B7B7B7]">
           <button className="w-[135px] h-[31px] bg-[#2ECC71] rounded text-white text-base">
             {" "}
             Accept Order
