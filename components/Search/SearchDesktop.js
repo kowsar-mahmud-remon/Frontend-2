@@ -961,7 +961,7 @@ const SearchDesktop = () => {
                         height={154}
                         alt="Shoes"
                       />
-                    </div>
+                    </div>  
 
                     <div className="p-4">
                       <div className="flex flex-wrap items-center">
