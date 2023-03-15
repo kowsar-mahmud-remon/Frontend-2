@@ -19,6 +19,7 @@ import style from "../../styles/componentsStyles/Search.module.css";
 import { CiStar } from "react-icons/ci";
 import hearts from "../../assets/images/hearts.png";
 import hearted from "../../assets/images/herted.png";
+import shoping from "../../assets/images/cart.png";
 
 const SearchBox = () => {
   const [show, setShow] = useState(true);
@@ -288,7 +289,6 @@ const SearchBox = () => {
       id: 7,
       name: "Atta/Maida (1016)",
     },
-    
   ];
   const options = [
     { value: "chocolate", label: "Chocolate" },
@@ -324,7 +324,7 @@ const SearchBox = () => {
     setDropdown(index);
   };
   const handleBtn = (text) => {
-    setText(text)
+    setText(text);
     console.log(text);
   };
 
@@ -1072,7 +1072,12 @@ const SearchBox = () => {
                       <div className="">
                         <button className="w-[186px] h-[38px] bg-[#FB641B] text-white flex justify-center items-center rounded-lg">
                           <p className="pr-1">Add to Cart</p>
-                          <FaShoppingCart className="text-white h-[20px] w-[17px]"></FaShoppingCart>
+                          <Image
+                            src={shoping}
+                            width={24}
+                            height={20}
+                            alt=""
+                          ></Image>
                         </button>
                       </div>
                     </div>

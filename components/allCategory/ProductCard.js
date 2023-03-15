@@ -12,6 +12,7 @@ import { useRouter } from "next/router";
 import style from "../../styles/componentsStyles/Search.module.css";
 import { FaShoppingCart } from "react-icons/fa";
 import isVerify from "../../assets/images/verified.png";
+import shoping from '../../assets/images/cart.png'
 
 const ProductCard = ({ product }) => {
   const router = useRouter();
@@ -225,7 +226,7 @@ const ProductCard = ({ product }) => {
             <div className="">
               <button className="w-[186px] h-[38px] bg-[#FB641B] text-white flex justify-center items-center rounded-lg">
                 <p className="pr-1">Add to Cart</p>
-                <FaShoppingCart className="text-white h-[20px] w-[17px]"></FaShoppingCart>
+                <Image src={shoping} width={24} height={20} alt=""></Image>
               </button>
             </div>
           </div>
