@@ -49,7 +49,7 @@ const SideNavigationNavBar = () => {
             <p className="ml-3 text-[18px] font-[660]">Categories</p>
           </button>
         </div>
-        <div className="ml-5 w-full flex xl:flex-wrap ">
+        <div className="ml-5 w-full flex flex-wrap justify-between">
           {options.map((option, index) => (
             <div key={index} className="xl:mr-6 xl:mb-3 lg:mr-4 lg:mb-2 md:mr-2 md:mb-2">
               <button className="lg:px-[25px] md:px-[10px] lg:py-3 md:py-2 rounded-full btn-shadow">
