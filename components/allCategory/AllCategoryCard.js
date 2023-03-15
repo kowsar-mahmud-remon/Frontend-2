@@ -1,10 +1,10 @@
 import React, { useRef } from 'react';
-import img from '../../assets/CategoryImages/KachabazarIcon/shopping-bag 1.png'
-import img2 from '../../assets/CategoryImages/ProductsImg/lemon.png'
-import cart from '../../assets/CategoryImages/ProductsImg/Vector (2).png'
-import love from '../../assets/CategoryImages/ProductsImg/love.png'
-import logo from '../../assets/CategoryImages/ProductsImg/logo.jpg'
-import styles from './category.module.css'
+import img from '../../assets/CategoryImages/KachabazarIcon/shopping-bag 1.png';
+import img2 from '../../assets/CategoryImages/ProductsImg/lemon.png';
+import cart from '../../assets/CategoryImages/ProductsImg/Vector (2).png';
+import love from '../../assets/CategoryImages/ProductsImg/love.png';
+import logo from '../../assets/CategoryImages/ProductsImg/logo.jpg';
+import styles from './category.module.css';
 // Import css files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -18,14 +18,14 @@ import { settings } from '../../Utils/sliderConfig';
 
 const AllCategoryCard = ({ result, products }) => {
 
-    const slideRef = useRef(null)
-    
+    const slideRef = useRef(null);
+
     return (
         <>
             {
                 products ? <div
 
-                    className=' overflow-x-hidden my-16 md:px-0 px-3'>
+                    className=' overflow-x-hidden my-9 md:px-0 px-3'>
 
                     {/* slider header  */}
                     <div className='flex gap-4 items-center justify-between'>
@@ -50,8 +50,8 @@ const AllCategoryCard = ({ result, products }) => {
                         >
                             {
                                 products?.map((n, index) => <ProductCard
-                                key={index}
-                                product={n}
+                                    key={index}
+                                    product={n}
                                 />)
                             }
                         </Slider>
