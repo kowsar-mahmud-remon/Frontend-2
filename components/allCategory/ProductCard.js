@@ -1,25 +1,25 @@
 import Image from 'next/image';
 import React from 'react';
 import { AiTwotoneStar } from 'react-icons/ai';
-import styles from './category.module.css'
-import logo from '../../assets/CategoryImages/ProductsImg/logo.jpg'
-import cart from '../../assets/CategoryImages/ProductsImg/Vector (2).png'
-import img2 from '../../assets/CategoryImages/ProductsImg/lemon.png'
-import love from '../../assets/CategoryImages/ProductsImg/love.png'
+import styles from './category.module.css';
+import logo from '../../assets/CategoryImages/ProductsImg/logo.jpg';
+import cart from '../../assets/CategoryImages/ProductsImg/Vector (2).png';
+import img2 from '../../assets/CategoryImages/ProductsImg/lemon.png';
+import love from '../../assets/CategoryImages/ProductsImg/love.png';
 import { useRouter } from 'next/router';
 const ProductCard = ({ product }) => {
-    const router=useRouter()
-    const { regularPrice, productName, quantity, productTitle, discount, productPictures,_id,subCategory, slug, category} = product || {}
-   
+    const router = useRouter();
+    const { regularPrice, productName, quantity, productTitle, discount, productPictures, _id, subCategory, slug, category } = product || {};
+
     return (
         <div>
             <div
-                onClick={()=>router.push(`/productpage/${slug}/${_id}?categoryId=${category}&subCategoryId=${subCategory}`)}
+                onClick={() => router.push(`/productpage/${slug}/${_id}?categoryId=${category}&subCategoryId=${subCategory}`)}
                 className={` w-[180px] md:w-[240px] h-auto cursor-pointer rounded-md pb-4 ${styles.cardCategory} duration-[.3s] rounded-md`}>
                 <div className=''>
                     <div className='relative '>
                         <Image
-                        className='h-[154px] object-cover'
+                            className='h-[154px] object-cover'
                             loader={() => productPictures[4].img}
                             loading='lazy'
                             src={productPictures[4].img}

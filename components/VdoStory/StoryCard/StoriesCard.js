@@ -10,11 +10,12 @@ import threedot from "../../../assets/images/storyVdo/carbon.png";
 import ReactPlayer from "react-player/youtube";
 import { useEffect } from "react";
 import { useState } from "react";
+import { hide } from "dom7";
 
 
 const StoriesCard = ({ story }) => {
   const router = useRouter();
-  const [render,setRender]=useState(undefined)
+  const [render, setRender] = useState(undefined);
   const {
     regularPrice,
     productName,
@@ -27,17 +28,17 @@ const StoriesCard = ({ story }) => {
     slug,
     category,
   } = story || {};
-  useEffect(()=>{
-    setRender(true)
-  },[])
+  useEffect(() => {
+    setRender(true);
+  }, []);
   // console.log(vdo);
-  if(!render) return;
+  if (!render) return;
   return (
     <div className="w-[332px]">
-      <div className="rounded-lg shadow-xl ">
-        <div className="relative">
-          
-          <ReactPlayer className='rounded-t-lg' width={'100%'} url="https://youtube.com/shorts/3l4B26DzMo8" />
+      <div className="rounded-lg shadow-xl h-[200px]">
+        <div className="relative ">
+
+          <ReactPlayer className='rounded-t-lg' width={'100%'} height={"270px"} text={hide} url="https://youtube.com/shorts/3l4B26DzMo8" />
 
           <div className="absolute top-3 w-full px-1 text-white">
             <div className="flex justify-between items-center">
