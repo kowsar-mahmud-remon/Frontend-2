@@ -25,6 +25,7 @@ const SearchDesktop = () => {
   const [leftWidth, setLeftWidth] = useState("w-[310px]");
   const [rightWidth, setRightWidth] = useState("w-full");
   const [index, setDropdown] = useState(false);
+  const [text, setText] = useState(false);
   const [bghide, setBgHide] = useState("");
   const minValue = 0;
   const [filters, setFilters] = useState([]);
@@ -298,8 +299,13 @@ const SearchDesktop = () => {
   };
 
   const clickHandler = (index) => {
-    setDropdown(index)
-  }
+    setDropdown(index);
+  };
+  const handleBtn = (text) => {
+    setText(text)
+    console.log(text);
+  };
+
   return (
     <div className=" flex lg:px-[94px]  md:px-[94px]  mt-2">
       <div onClick={() => handleClose(1)} className={``}>
@@ -396,7 +402,12 @@ const SearchDesktop = () => {
                       .map((vproduct, i) => {
                         return (
                           <li
-                            className="mb-[16px] text-[14px] font-semibold text-[#001E00]"
+                            onClick={() => handleBtn(vproduct)}
+                            className={` ${
+                              i === true
+                                ? "mb-[16px] text-2xl font-semibold text-[#026C51] cursor-pointer"
+                                : "mb-[16px] text-[14px] font-semibold cursor-pointer"
+                            } `}
                             key={i}
                           >
                             {vproduct}
@@ -409,7 +420,12 @@ const SearchDesktop = () => {
                     vegProducts.map((vproduct, i) => {
                       return (
                         <li
-                          className="mb-[16px] text-[14px] font-semibold"
+                          onClick={() => handleBtn(vproduct)}
+                          className={` ${
+                            i === true
+                              ? "mb-[16px] text-[14px] font-semibold text-[#026C51] cursor-pointer"
+                              : "mb-[16px] text-[14px] font-semibold cursor-pointer"
+                          } `}
                           key={i}
                         >
                           {vproduct}
@@ -434,7 +450,7 @@ const SearchDesktop = () => {
                 )}
               </ul>
             </div>
-            <hr className="mb-[16px]" />
+            <hr className="mb-[16px] border border-[#CDCDCD]" />
 
             {/*---------- filter section----------- */}
 
@@ -451,10 +467,7 @@ const SearchDesktop = () => {
                 </p>
               </div>
               <div>
-                <div
-                  id="filter"
-                  className="flex flex-wrap gap-2 mb-4"
-                >
+                <div id="filter" className="flex flex-wrap gap-2 mb-4">
                   <p
                     className={`bg-[#F2F3F7] px-2 py-1 text-[14px] text-[#686868]`}
                   >
@@ -503,7 +516,7 @@ const SearchDesktop = () => {
                 </div>
               </div>
             </div>
-            <hr className="mb-[16px]" />
+            <hr className="mb-[16px] border border-[#CDCDCD]" />
 
             <div>
               <div className="flex justify-between">
@@ -525,18 +538,16 @@ const SearchDesktop = () => {
                 </form>
               </div>
               <div className="flex justify-between mb-[16px]">
-                <select className="w-[50px] border border-gray-400 rounded-md">
-                  <option disabled selected>
-                    {minValue}
-                  </option>
+                <select className=" border border-[#CDCDCD] h-[32px] px-2 rounded">
+                  <option selected>Min</option>
                 </select>
                 <p1 className="mx-2">To</p1>
-                <select className="w-[76px] border border-gray-400 rounded-md">
+                <select className=" border border-[#CDCDCD] h-[32px] px-2 rounded">
                   <option selected>{maxValue}</option>
                 </select>
               </div>
             </div>
-            <hr className="mb-[16px]" />
+            <hr className="mb-[16px] border border-[#CDCDCD]" />
 
             {/* --------------brand section start----------------- */}
 
@@ -665,13 +676,11 @@ const SearchDesktop = () => {
                   </form>
                 </div>
                 <div className="flex justify-between mb-[16px]">
-                  <select className="w-[50px] border border-gray-400 rounded-md">
-                    <option disabled selected>
-                      {minValue}
-                    </option>
+                  <select className=" border border-[#CDCDCD] h-[32px] px-2 rounded">
+                    <option selected>Min</option>
                   </select>
                   <p1 className="mx-2">To</p1>
-                  <select className="w-[76px] border border-gray-400 rounded-md">
+                  <select className=" border border-[#CDCDCD] h-[32px] px-2 rounded">
                     <option selected>{maxValue}</option>
                   </select>
                 </div>
@@ -881,7 +890,7 @@ const SearchDesktop = () => {
                 </form>
               </div>
             </div>
-            <hr className="mb-[16px]" />
+            <hr className="mb-[16px] border border-[#CDCDCD]" />
             {/* ------------brand------------- */}
             <div className="lg:mb-[16px] md:mb-[16px]  lg:block md:block hidden lg:pb-4 md:pb-4 ">
               <div className="flex justify-between">
@@ -956,7 +965,7 @@ const SearchDesktop = () => {
               return (
                 <div
                   key={product.id}
-                  className={`${style.collectionCard} w-[222px]`}
+                  className={`${style.collectionCard} w-[222px] rounded`}
                 >
                   <div className="relative">
                     <div className="flex justify-center">
@@ -972,17 +981,19 @@ const SearchDesktop = () => {
                       onClick={() => clickHandler(product.id)}
                       className={`w-7 h-7 flex justify-center items-center rounded-full ${style.love} absolute right-3 top-3`}
                     >
-                        {
-                          index === product.id? <Image
+                      {index === product.id ? (
+                        <Image
                           className="p-1 w-[26px] h-[26px] mt-1 cursor-pointer"
                           src={hearted}
                           alt=""
-                        ></Image> : <Image
-                        className="p-1 w-[26px] h-[26px] mt-1 cursor-pointer"
-                        src={hearts}
-                        alt=""
-                      ></Image>
-                        }
+                        ></Image>
+                      ) : (
+                        <Image
+                          className="p-1 w-[26px] h-[26px] mt-1 cursor-pointer"
+                          src={hearts}
+                          alt=""
+                        ></Image>
+                      )}
                     </div>
                     <div className="p-4">
                       <div className="flex flex-wrap items-center">
