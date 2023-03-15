@@ -50,62 +50,62 @@ const Login = () => {
 
     return (
         <NavicationLayout>
-            <div className='  md:mb-[214px] flex  justify-center'>
-                <div>
+            <div className='md:mb-[214px] flex  justify-center '>
+                <div className='w-[80%]'>
                     <div className='hidden md:block'>
 
-                        <p className='text-[#FB641B] font-semibold text-[16px] md:text-[24px] md:mt-[147px] md:mb-[64px]'>Login Your Banglar Big Bazar Account</p>
+                        <p className='text-[#FB641B] font-semibold text-[16px] md:text-[24px] md:mt-[147px] md:mb-[3vw]'>Login Your Banglar Big Bazar Account</p>
                     </div>
-                    <div className='  max-w-[1500px] md:flex  shadow-2xl rounded-2xl bg-white mt-10'>
-                        <div className='px-[28px] md:px-[0px] md:w-[45%] h-auto w-full rounded-md'>
-                            <Image alt="" className='md:h-[784px] md:w-[701px]' src={loginImg} />
+                    <div className='  max-w-[1500px] md:flex  shadow-small rounded-2xl bg-white mt-10'>
+                        <div className='px-[28px] md:px-[0px] md:w-[45%] h-auto w-full rounded-md '>
+                            <Image alt="" className='md:h-[46vw] md:w-[36.6vw]' src={loginImg} />
                         </div>
                         <div className=' md:px-[86px] px-[28px] md:w-[55%] w-full '>
-                            <div className='md:mt-[58px] md:block hidden'>
+                            <div className='md:mt-[3vw] md:block hidden'>
                                 <Image alt="" src={logo} />
 
                             </div>
                             <form
                                 onSubmit={handleForm}
-                                className=' flex flex-col md:mt-[32px]'>
+                                className=' flex flex-col '>
                                 <label className='text-[24px] text-[#FB641B] md:mb-[12px] mt-[20px] font-semibold'>Login</label>
                                 <p className='block  md:hidden sm:hidden mt-[24px] mb-2 text-[14px] text-[#001E00]'>Email Or Phone Number*</p>
                                 <input
                                     name='email'
-                                    className='input border border-[#707070] md:mb-[32px] mb-[20px] bg-white h-[48px]  md:h-[72px] md:text-[16px]' type="text" placeholder='Enter Your Phone Number or Email' />
+                                    className='input border border-[#707070] focus:outline-none md:mb-[1.4vw] mb-[20px] bg-white h-[48px]  md:h-[3.7vw] md:text-[16px]' type="text" placeholder='Enter Your Phone Number or Email' />
                                 {
                                     formError && <p className='text-red-500 text-[15px] '>{formError}</p>
                                 }
                                 <p className='block  md:hidden sm:hidden mt-[20px] mb-2 text-[14px]  text-[#001E00]'>Password*</p>
                                 <input
                                     name='pass'
-                                    className='input border border-[#707070]  md:h-[72px] md:text-[16px]' type={check ? 'text' : 'password'} placeholder='Minimum 6 Characters' />
-                                <div className='flex justify-between mt-[12px] mb-[20px]'>
+                                    className='input border border-[#707070] focus:outline-none  md:h-[3.7vw] md:text-[16px]' type={check ? 'text' : 'password'} placeholder='Minimum 6 Characters' />
+                                <div className='flex justify-between mt-[12px]  mb-[1vw]'>
                                     <div className='flex gap-[12px] '>
                                         <input className='h[19px] w-[19px] border border-[#686868]' onChange={e => setCheck(e.target.checked)} type="checkbox" />
                                         <p className='text-[#686868] font-semibold text-[16px]'>Show Passwords</p>
                                     </div>
-                                    <p className='text-[#287DF3] text-[16px] font font-semibold '>Forgot Password?</p>
+                                    <Link href='/sellerLogin/forgetPassword'> <p className='text-[#287DF3] text-[16px] font font-semibold '>Forgot Password?</p></Link>
                                 </div>
 
                                 {
                                     error?.data?.message && <p className='text-red-500 text-[19px] mb-2 text-center '>{error?.data?.message}</p>
                                 }
 
-                                <button className='btn bg-[#FB641B] text-[18px] md:h-[72px]  text-white md:mt-[25px]'>Login</button>
+                                <button className='btn bg-[#FB641B] hover:bg-[#FB641B]  text-[18px] md:h-[3.7vw]  text-white md:mt-[1vw]'>Login</button>
                                 <span className='mx-auto text-[#FB641B] md:mt-[8px] text-[24px] mt-[20px]'>Or</span>
 
                             </form>
 
                             <div className='w-full flex  items-center gap-4 mt-[16px] mb-[40px]'>
                                 <div className='w-1/2'>
-                                    <button className='btn bg-[#3B5998] text-white md:text-[18px]  text-[15px]  md:h-[72px] h-[48px] flex-nowrap'>
+                                    <button className='btn hover:bg-[#3B5998] bg-[#3B5998] text-white md:text-[18px]  text-[15px]  md:h-[3.7vw] h-[48px] flex-nowrap'>
                                         <Image className='h-[27px] w-[28px]' alt="" src={fbLogo} />
                                         Facebook
                                     </button>
                                 </div>
                                 <div className='w-1/2'>
-                                    <button className='btn bg-[#D34836] text-white md:text-[18px] md:h-[72px]  text-[15px] h-[48px]  flex-nowrap'>
+                                    <button className='btn  bg-[#D34836]  hover:bg-[#D34836] text-white md:text-[18px] md:h-[3.7vw]  text-[15px] h-[48px]  flex-nowrap'>
                                         <Image className='h-[27px] w-[28px] ' alt="" src={googleLogo} />
                                         Google
                                     </button>

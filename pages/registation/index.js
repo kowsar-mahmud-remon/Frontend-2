@@ -84,18 +84,18 @@ const Registation = () => {
     return (
         <NavicationLayout>
             <div className=' flex  justify-center '>
-                <div className=''>
+                <div className='w-[80%]'>
                     <div className='md:mt-[130px] '>
                         <p className='text-[#FB641B] font-semibold md:text-[24px] mb-[32px] text-[18px] mt-[72px] ml-6 md:ml-0'>Register Your Banglar Big Store Account</p>
                     </div>
-                    <div className=' mt-10 shadow-2xl rounded-2xl bg-white  max-w-[1500px]'>
-                        <form onSubmit={(e) => handleSubmit(onSubmit)(e)} className='flex  py-10 flex-col md:flex-row mx-7 md:mx-7 lg:mx-10  xl:mx-20 md:gap-14 lg:gap-20 xl:gap-40 '>
+                    <div className=' mt-10 shadow-small rounded-2xl bg-white  max-w-[1500px]'>
+                        <form onSubmit={(e) => handleSubmit(onSubmit)(e)} className='flex  py-10 flex-col md:flex-row mx-7 md:mx-7 lg:mx-10  xl:mx-20 md:gap-14 lg:gap-20  '>
                             <div className='flex flex-col gap-6 md:w-[50%] '>
                                 <div className='flex flex-col gap-2'>
                                     <label className='text-[#001E00] text-[16px] mb-2'>Email Or Phone Number*</label>
                                     <input
                                         autoComplete="off"
-                                        className='input border border-[#686868] text-[#686868] text-[16px] '
+                                        className='input border border-[#686868] text-[#686868] text-[1vw] focus:outline-none '
                                         type="text"
                                         name="email/phone"
                                         placeholder='Email Or Phone Number'
@@ -143,7 +143,7 @@ const Registation = () => {
                                     <div className='relative w-[100%]'>
                                         <input
                                             autoComplete="off"
-                                            className='input pr-[50px] w-[100%]  border border-[#686868] text-[#686868] text-[16px]'
+                                            className='input pr-[50px] w-[100%]  border border-[#686868] focus:outline-none text-[#686868] text-[1vw]'
                                             type={showPassword ? "text" : "password"}
                                             placeholder='Minimum 6 Characters with a number And a letter'
                                             {...register("password", {
@@ -177,7 +177,7 @@ const Registation = () => {
                                     <div className='relative w-[100%]'>
                                         <input
                                             autoComplete="off"
-                                            className='input pr-[50px] w-[100%] border border-[#686868] text-[#686868] text-[16px]'
+                                            className='input pr-[50px] w-[100%] border focus:outline-none border-[#686868] text-[#686868] text-[1vw]'
                                             type={showPassword ? "text" : "password"}
                                             placeholder='Minimum 6 Characters with a number And a letter'
                                             {...register("confirm_password", {
@@ -210,7 +210,7 @@ const Registation = () => {
                                                 required: 'First Name is Required',
 
                                             })}
-                                            className='input border border-[#686868] text-[#686868] text-[16px] w-full mt-[8px]' type="text" placeholder='First Name' />
+                                            className='input border focus:outline-none border-[#686868] text-[#686868] text-[1vw] w-full mt-[8px]' type="text" placeholder='First Name' />
                                         {
                                             errors?.firstName?.message && <p className='text-red-700/100'>{errors?.firstName?.message}</p>
                                         }
@@ -224,7 +224,7 @@ const Registation = () => {
 
 
                                             })}
-                                            className='input border border-[#686868] text-[#686868] text-[16px] w-full mt-[8px]' type="text" placeholder='Last Name' />
+                                            className='input border focus:outline-none border-[#686868] text-[#686868] text-[1vw] w-full mt-[8px]' type="text" placeholder='Last Name' />
                                         {
                                             errors?.lastName?.message && <p className='text-red-700/100'>{errors?.lastName?.message}</p>
                                         }
@@ -259,21 +259,21 @@ const Registation = () => {
                                 </div>
                                 <button
                                     disabled={isLoading}
-                                    type='submit' className='btn bg-[#FB641B] h-[48px] md:h-[72px] text-white mt-10'>
+                                    type='submit' className='btn bg-[#FB641B] hover:bg-[#FB641B]  text-[18px] md:h-[3.7vw]  text-white md:mt-[1vw]'>
                                     {
                                         isLoading ? 'Please Wait.....' : 'Register'
                                     }
                                 </button>
                                 <span className='mx-auto text-[#FB641B]'>Or</span>
-                                <div className='w-full flex  items-center gap-4 mt-[16px] mb-[40px]'>
+                                <div className='w-full flex  items-center gap-4 mt-[16px] mb-[1vw]'>
                                     <div className='w-1/2'>
-                                        <button className='btn bg-[#3B5998] text-white md:text-[18px]  text-[15px]  md:h-[72px] h-[48px] flex-nowrap'>
+                                        <button className='btn bg-[#3B5998] hover:bg-[#3B5998] text-white md:text-[18px]  text-[15px]  md:h-[3.7vw] h-[48px] flex-nowrap'>
                                             <Image className='h-[27px] w-[28px]' alt="" src={fbLogo} />
                                             Facebook
                                         </button>
                                     </div>
                                     <div className='w-1/2'>
-                                        <button className='btn bg-[#D34836] text-white md:text-[18px] md:h-[72px]  text-[15px] h-[48px]  flex-nowrap'>
+                                        <button className='btn bg-[#D34836] hover:bg-[#D34836] text-white md:text-[18px] md:h-[3.7vw]  text-[15px] h-[48px]  flex-nowrap'>
                                             <Image className='h-[27px] w-[28px] ' alt="" src={googleLogo} />
                                             Google
                                         </button>
