@@ -85,7 +85,7 @@ const Login = () => {
                                         <input className='h[19px] w-[19px] border border-[#686868]' onChange={e => setCheck(e.target.checked)} type="checkbox" />
                                         <p className='text-[#686868] font-semibold text-[16px]'>Show Passwords</p>
                                     </div>
-                                    <Link href='/sellerLogin/forgetPassword'> <p className='text-[#287DF3] text-[16px] font font-semibold '>Forgot Password?</p></Link>
+                                    <Link href='/customerLogin/forgetPassword'> <p className='text-[#287DF3] text-[16px] font font-semibold '>Forgot Password?</p></Link>
                                 </div>
 
                                 {

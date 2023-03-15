@@ -4,7 +4,7 @@ import small from "../../assets/images/sellerProfile/smallLogo.png";
 
 function NameAndAbout({ name, isVerified }) {
   return (
-    <div className="lg:mt-20 mobile:mt-[62px] mobile:mb-[18px] w-full mx-auto mobile:text-[22px] mobile:px-[24px]">
+    <div className="lg:mt-20 mobile:mt-[62px] mobile:mb-[18px] w-full mx-auto mobile:text-[22px] mobile:px-[24px] ">
       <div className="text-center mt-[16px]">
         <span className="text-[24px] font-semibold">{name}</span>
         {isVerified && (

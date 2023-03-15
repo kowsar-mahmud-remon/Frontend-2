@@ -16,17 +16,15 @@ const BannerAndLogo = () => {
         alt="banner image"
       />
 
-      
-        <Image
-          className="absolute top-50 left-[50%] transform -translate-y-1/2 -translate-x-1/2 w-32"
-          src={logo}
-          width="150"
-          height="150"
-          imageSizes
-          deviceSizes
-          alt="logo image"
-        />
-      
+      <Image
+        className="absolute top-50 left-[50%] transform -translate-y-1/2 -translate-x-1/2"
+        src={logo}
+        width="170"
+        height="170"
+        imageSizes
+        deviceSizes
+        alt="logo image"
+      />
     </div>
   );
 };

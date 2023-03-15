@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-undef */
 import CampaignManagement from "../components/CampaignManagement/CampaignManagement";
 import CampaignManagementOne from "../components/CampaignManagement/CampaignManagementOne";
 import CampaignManagementThree from "../components/CampaignManagement/CampaignManagementThree";
@@ -13,7 +14,7 @@ import ManageProduct from "../components/ManageProduct/ManageProduct";
 import ManageProductUpdated from "../components/ManageProduct/ManageProductUpdated";
 import ManageReview from "../components/ManageReview/ManageReview";
 import ManageReviewList from "../components/ManageReviewList/ManageReviewList";
-
+import SubscriptionPage from "../components/SubscriptionPage/SubscriptionPage"
 import OrderOverview from "../components/OrderOverview";
 import OrderTrackingPage01 from "../components/OrderTrackingPage01/OrderTrackingPage01";
 import AllProduct from "../components/ProductCampaignMain/AllProduct";
@@ -60,17 +61,18 @@ import OrderNotification from "../components/OrderNotification/OrderNotification
 import OrderHistory from "../components/OrderHistory/OrderHistory";
 import PhoneSupport from "../components/SellerSupport/PhoneSupport";
 import PerformanceReport from "../components/PerformanceReport/PerformanceReport";
-import Chart from '../components/PerformanceReport/Chart/Chart.js';
+import Chart from "../components/PerformanceReport/Chart/Chart.js";
 import TaxManagement from "../components/Tax&Offers/TaxManagement";
 import SubscriptionOne from "../components/AccountSetting/SubscriptionOne";
 import SubscriptionTwo from "../components/AccountSetting/SubscriptionTwo";
 import SubscriptionThree from "../components/AccountSetting/SubscriptionThree";
 import AccountType from "../components/AccountType/AccountType";
-import SubscriptionPage from "../components/SubscriptionPage/SubscriptionPage";
+
 import ProductCampaign from "../components/ProductCampaignMain/ProductCampaign";
 import OrdersTracking from "../components/ShippingManagement/OrdersTracking";
 import AccountSetting from "../components/AccountSetting/AccountSetting";
 import SellerProductUpload from "../components/SellerProductUpload/SellerProductUpload";
+import SellerProfileAdmin from "../components/Sellerprofileadmin/SellerProfileAdmin";
 import CouponActive from "../components/CouponActive/CouponActive";
 import QuestionAndAnswer01 from "../components/QuestionAndAnswer01/QuestionAndAnswer01";
 
@@ -139,7 +141,7 @@ export const manageProductsArray = [
   {
     title: "ProductCampaign",
     href: "productCampaign",
-    element: <ProductCampaign></ProductCampaign>,
+    element: <ProductCampaignSix></ProductCampaignSix>,
   },
   {
     title: "ProductCampaignThree",
@@ -322,80 +324,91 @@ export const manageProductsArray = [
   {
     title: "Account Statement",
     href: "accountStatement",
-    element: <AccountStatement></AccountStatement>
+    element: <AccountStatement></AccountStatement>,
   },
   {
     title: "Update Statement",
     href: "UpdateStatement",
-    element: <UpdateStatement></UpdateStatement>
+    element: <UpdateStatement></UpdateStatement>,
   },
   {
     title: "PhoneSupport",
     href: "phoneSupport",
-    element: <PhoneSupport></PhoneSupport>
+    element: <PhoneSupport></PhoneSupport>,
   },
   {
     title: "Total Earning",
     href: "totalearning",
-    element: <TotalEarning></TotalEarning>
+    element: <TotalEarning></TotalEarning>,
   },
   {
     title: "NID Card",
     href: "nidCard",
-    element: <NidCard></NidCard>
+    element: <NidCard></NidCard>,
   },
   {
-
     title: "Bank Statement",
     href: "BankStatement",
-    element: <BankStatement></BankStatement>
+    element: <BankStatement></BankStatement>,
   },
   {
-
     title: "UpdateBank Statement",
     href: "UpdateBankStatement",
-    element: <UpdateBankStatement></UpdateBankStatement>
+    element: <UpdateBankStatement></UpdateBankStatement>,
   },
   {
     title: "Performance Report",
     href: "performancereport",
-    element: <PerformanceReport></PerformanceReport>
+    element: <PerformanceReport></PerformanceReport>,
   },
   {
     title: "Coupon Active",
     href: "couponactive",
-    element: <CouponActive></CouponActive>
+    element: <CouponActive></CouponActive>,
   },
   {
     title: "Question and Answer01",
     href: "questionandanswer01",
-    element: <QuestionAndAnswer01></QuestionAndAnswer01>
+    element: <QuestionAndAnswer01></QuestionAndAnswer01>,
+  },
+  {
+    title: "SubscriptionThree",
+    href: "subscriptionThree",
+    element: <SubscriptionThree></SubscriptionThree>,
+  },
+  {
+    title: "SubscriptionPage",
+    href: "subscriptionPage",
+    element: <SubscriptionPage></SubscriptionPage>,
   },
   {
     title: "Withdraw Balance",
     href: "withdrawBalance",
-    element: <WithdrawBalance></WithdrawBalance>
+    element: <WithdrawBalance></WithdrawBalance>,
   },
   {
     title: "Transaction Pending",
     href: "transactionPending",
-    element: <TransactionPending></TransactionPending>
+    element: <TransactionPending></TransactionPending>,
   },
   {
     title: "OrdersTracking",
     href: "ordersTracking",
-    element: <OrdersTracking></OrdersTracking>
+    element: <OrdersTracking></OrdersTracking>,
   },
   {
     title: "AccountType",
     href: "accountType",
-    element: <AccountType></AccountType>
+    element: <AccountType></AccountType>,
+  },
+  {
+    title: "Profile",
+    href: "sellerprofileadmin",
+    element: <SellerProfileAdmin></SellerProfileAdmin>,
   },
   {
     title: "AccountSetting",
     href: "accountsetting",
-    element: <AccountSetting></AccountSetting>
+    element: <AccountSetting></AccountSetting>,
   },
-
-
 ];

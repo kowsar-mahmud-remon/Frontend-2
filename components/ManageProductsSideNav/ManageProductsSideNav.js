@@ -1,21 +1,21 @@
-import React from 'react';
+import React from "react";
 import exclaimation from "../../assets/images/exclamation.png";
 import Image from "next/image";
 
-import exclusives from '../../assets/images/Seller_Verification_page/packaging 1.png';
-import sweet from '../../assets/images/Seller_Verification_page/promotion 1.png';
-import kachaBazar from '../../assets/images/Seller_Verification_page/rating 1.png';
-import spice from '../../assets/images/Seller_Verification_page/financial-profit 1.png';
-import dairy from '../../assets/images/Seller_Verification_page/graduation 1.png';
-import teaCoffee from '../../assets/images/Seller_Verification_page/customer-service 1.png';
-import laptop from '../../assets/images/Seller_Verification_page/laptop 1.png';
-import bakerySnacks from '../../assets/images/Seller_Verification_page/folder 1.png';
-import frozenFoods from '../../assets/images/Seller_Verification_page/settings 1.png';
-import shipped from '../../assets/images/Seller_Verification_page/shipped 1.png';
-import review from '../../assets/images/Seller_Verification_page/review 1.png';
-import clipboard from '../../assets/images/Seller_Verification_page/clipboard 1.png';
-import tax from '../../assets/images/Seller_Verification_page/tax 1.png';
-import account from '../../assets/images/Seller_Verification_page/account 1.png';
+import exclusives from "../../assets/images/Seller_Verification_page/packaging 1.png";
+import sweet from "../../assets/images/Seller_Verification_page/promotion 1.png";
+import kachaBazar from "../../assets/images/Seller_Verification_page/rating 1.png";
+import spice from "../../assets/images/Seller_Verification_page/financial-profit 1.png";
+import dairy from "../../assets/images/Seller_Verification_page/graduation 1.png";
+import teaCoffee from "../../assets/images/Seller_Verification_page/customer-service 1.png";
+import laptop from "../../assets/images/Seller_Verification_page/laptop 1.png";
+import bakerySnacks from "../../assets/images/Seller_Verification_page/folder 1.png";
+import frozenFoods from "../../assets/images/Seller_Verification_page/settings 1.png";
+import shipped from "../../assets/images/Seller_Verification_page/shipped 1.png";
+import review from "../../assets/images/Seller_Verification_page/review 1.png";
+import clipboard from "../../assets/images/Seller_Verification_page/clipboard 1.png";
+import tax from "../../assets/images/Seller_Verification_page/tax 1.png";
+import account from "../../assets/images/Seller_Verification_page/account 1.png";
 
 import DataTable from "react-data-table-component";
 // import Managelist from "./Managelist";
@@ -30,10 +30,9 @@ import {
 import { useRouter } from "next/router";
 import style from "/styles/componentsStyles/box-shaddow.module.css";
 import { useEffect } from "react";
-import { useState } from 'react';
+import { useState } from "react";
 
 const ManageProductsSideNav = () => {
-
   const [active, setActive] = useState({ text: "All", href: "" });
   const router = useRouter();
   const { asPath } = router;
@@ -51,15 +50,15 @@ const ManageProductsSideNav = () => {
       subcata: [
         {
           name: "Upload Product",
-          href: "uploadProducts"
+          href: "uploadProducts",
         },
         {
           name: "Manage Products",
-          href: "manageproducts"
+          href: "manageproducts",
         },
         {
           name: "Edit Product",
-          href: "editProduct"
+          href: "editProduct",
         },
         // {
         //   name: "Product Invoice",
@@ -67,7 +66,7 @@ const ManageProductsSideNav = () => {
         // },
         {
           name: "Products List",
-          href: "productInvoices"
+          href: "productInvoices",
         },
       ],
     },
@@ -79,16 +78,16 @@ const ManageProductsSideNav = () => {
       subcata: [
         {
           name: "Product Campaign",
-          href: "productCampaign"
+          href: "productCampaign",
         },
         {
           name: "Campaign Management",
-          href: "campaignManagementOne"
+          href: "campaignManagementOne",
         },
         {
           name: "Learn About Ads",
-          href: "editProduct"
-        }
+          href: "editProduct",
+        },
       ],
     },
     {
@@ -99,11 +98,11 @@ const ManageProductsSideNav = () => {
       subcata: [
         {
           name: "Order Notifications",
-          href: "orderNotification"
+          href: "orderNotification",
         },
         {
           name: "Manage Orders",
-          href: "manageOrders"
+          href: "manageOrders",
         },
         // {
         //   name: "Manage Reviews",
@@ -111,11 +110,11 @@ const ManageProductsSideNav = () => {
         // },
         {
           name: "Order History",
-          href: "orderHistory"
+          href: "orderHistory",
         },
         {
           name: "Returns Product",
-          href: "returnProduct"
+          href: "returnProduct",
         },
       ],
     },
@@ -127,20 +126,20 @@ const ManageProductsSideNav = () => {
       subcata: [
         {
           name: "Sales Overview",
-          href: "salesOverview"
+          href: "salesOverview",
         },
         {
           name: "Order Overview",
-          href: "orderOverview"
+          href: "orderOverview",
         },
         {
           name: "Performance Report",
-          href: "performancereport"
+          href: "performancereport",
         },
         {
           name: "Total Earning",
-          href: "totalearning"
-        }
+          href: "totalearning",
+        },
       ],
     },
     {
@@ -151,16 +150,16 @@ const ManageProductsSideNav = () => {
       subcata: [
         {
           name: "Account Statement",
-          href: "accountStatement"
+          href: "accountStatement",
         },
         {
           name: "NID Card",
-          href: "nidCard"
+          href: "nidCard",
         },
         {
           name: "Bank Statement",
-          href: "BankStatement"
-        }
+          href: "BankStatement",
+        },
       ],
     },
     {
@@ -171,12 +170,12 @@ const ManageProductsSideNav = () => {
       subcata: [
         {
           name: "Product Shipping",
-          href: "productShipping"
+          href: "productShipping",
         },
         {
           name: "Orders Tracking",
-          href: "orderTrackingPage01"
-        }
+          href: "orderTrackingPage01",
+        },
       ],
     },
     {
@@ -195,8 +194,8 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Report Management",
-          href: "reportManagement"
-        }
+          href: "reportManagement",
+        },
       ],
     },
     {
@@ -207,19 +206,19 @@ const ManageProductsSideNav = () => {
       subcata: [
         {
           name: "Add Product",
-          href: "editProduct"
+          href: "editProduct",
         },
         {
           name: "New Media Center",
-          href: "editProduct"
+          href: "editProduct",
         },
         {
           name: "Fullfillment",
-          href: "editProduct"
+          href: "editProduct",
         },
         {
           name: "Edit Product",
-          href: "editProduct"
+          href: "editProduct",
         },
       ],
     },
@@ -235,12 +234,12 @@ const ManageProductsSideNav = () => {
         },
         {
           name: "Commission Management",
-          href: "commissionManagement"
+          href: "commissionManagement",
         },
         {
           name: "Tax Management",
-          href: "taxManagement"
-        }
+          href: "taxManagement",
+        },
       ],
     },
 
@@ -252,20 +251,20 @@ const ManageProductsSideNav = () => {
       subcata: [
         {
           name: "FAQ",
-          href: "helpCenter"
+          href: "helpCenter",
         },
         {
           name: "Email Support",
-          href: "contactUs"
+          href: "contactUs",
         },
         {
           name: "Live Chat",
-          href: "liveChat"
+          href: "liveChat",
         },
         {
           name: "Phone Support",
-          href: "phoneSupport"
-        }
+          href: "phoneSupport",
+        },
       ],
     },
 
@@ -277,16 +276,16 @@ const ManageProductsSideNav = () => {
       subcata: [
         {
           name: "Profile",
-          href: "editProduct"
+          href: "sellerprofileadmin",
         },
         {
           name: "Account Settings",
-          href: "accountsetting"
+          href: "accountsetting",
         },
         {
           name: "Subscription",
-          href: "Subscription"
-        }
+          href: "Subscription",
+        },
       ],
     },
     {
@@ -297,21 +296,20 @@ const ManageProductsSideNav = () => {
       subcata: [
         {
           name: "Account Type",
-          href: "accountType"
-        }
+          href: "accountType",
+        },
       ],
-    }
+    },
   ];
-
 
   return (
     <section className="bg-[#FFFFFF] pb-6 sticky top-0">
       <div className="pl-6 mx-auto flex">
-
         <div className="">
           <section
-            className={`${styles.sideNav} w-[285px] ${isActiveCategory ? "left-[-400px]" : ""
-              } p-2 bg-[#ffffff] shawdow-black shadow-2xl delay-700 sideNavTransition`}
+            className={`${styles.sideNav} w-[285px] ${
+              isActiveCategory ? "left-[-400px]" : ""
+            } p-2 bg-[#ffffff] shawdow-black shadow-2xl delay-700 sideNavTransition`}
             id="sidNav"
           >
             <ul>
@@ -335,7 +333,7 @@ const ManageProductsSideNav = () => {
                   >
                     <Link
                       href={router?.query?.slug ? router?.query?.slug : c?.href}
-                    // href={c?.href ? c?.href : router?.query?.slug}
+                      // href={c?.href ? c?.href : router?.query?.slug}
                     >
                       <Image
                         // loader={() => c.img}
@@ -358,9 +356,13 @@ const ManageProductsSideNav = () => {
                             }
                             key={index}
                           >
-                            <p onClick={() => router.push(s?.href ? s?.href : "")}
-                              className={`${activeBtn == s.name ? styles.activeSubLink : ""
-                                }  cursor-pointer text-[#686868]`}
+                            <p
+                              onClick={() =>
+                                router.push(s?.href ? s?.href : "")
+                              }
+                              className={`${
+                                activeBtn == s.name ? styles.activeSubLink : ""
+                              }  cursor-pointer text-[#686868]`}
                             >
                               {s.name}
                             </p>
@@ -373,10 +375,9 @@ const ManageProductsSideNav = () => {
               })}
             </ul>
           </section>
-        </div >
-
-      </div >
-    </section >
+        </div>
+      </div>
+    </section>
   );
 };
 

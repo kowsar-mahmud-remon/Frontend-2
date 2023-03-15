@@ -14,9 +14,6 @@ import { useCookies } from 'react-cookie';
 import { useRouter } from 'next/router';
 
 const forgetPassword = () => {
-
-
-
     const handleForm = (e) => {
 
         e.preventDefault();
@@ -78,5 +75,3 @@ const forgetPassword = () => {
         </div>
     );
 };
-
-export default forgetPassword;

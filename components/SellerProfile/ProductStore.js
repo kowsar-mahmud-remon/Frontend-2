@@ -25,7 +25,7 @@ const products = [
     id: 2,
     img: img2,
     price: "160",
-    pName: "Tomato (Local) 500 ±30 gm",
+    pName: "paka Tomato (Local) 500 ±30 gm",
     rating: "1.9",
     sellerVerify: verified,
     productOff: "(20% off)",

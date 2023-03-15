@@ -9,10 +9,6 @@ import Link from 'next/link';
 
 const sellerOtp = () => {
 
-    ;
-
-
-
     return (
         <NavicationLayout>
             <div className='md:mb-[214px] flex  justify-center  '>

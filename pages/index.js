@@ -24,12 +24,13 @@ import AllCategory from '../components/allCategory/AllCategory';
 import VdoStory from '../components/VdoStory/VdoStory';
 
 import React, { useEffect, useState } from "react";
+import HomePageSignIn from '../components/CustomerHomePage/HomePageSignIn';
 
 
 
 
 export const getStaticProps = async () => {
-  
+
   try {
     const res = await fetch("https://banglar-big-store.onrender.com/api/slides/slides");
     const data = await res.json();
@@ -97,11 +98,12 @@ export default function Home({ items }) {
           </div>
         </div>
         <div>
-          
+
           <VdoStory />
         </div>
         <div>
           <AllCategory />
+          <HomePageSignIn></HomePageSignIn>
         </div>
       </NavicationWithSideNavLayout>
     </>

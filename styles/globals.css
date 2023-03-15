@@ -134,15 +134,15 @@
   transition: 0.4s;
 }
 
-input:checked+.slider {
+input:checked + .slider {
   background-color: #fb641b;
 }
 
-input:focus+.slider {
+input:focus + .slider {
   box-shadow: 0 0 1px #fb641b;
 }
 
-input:checked+.slider:before {
+input:checked + .slider:before {
   -webkit-transform: translateX(18px);
   -ms-transform: translateX(18px);
   transform: translateX(18px);
@@ -294,6 +294,10 @@ top: 453px; */
   background: #ffffff;
   box-shadow: 0px 7.96364px 39.8182px 2.65455px rgba(0, 0, 0, 0.18);
 }
+.sellerloveButton {
+  background: #ffffff;
+  box-shadow: 0px 7.96364px 39.8182px 2.65455px rgba(0, 0, 0, 0.18);
+}
 
 .continueButton {
   box-sizing: border-box;
@@ -382,12 +386,12 @@ top: 453px; */
 .carosel .swiper-button-next::after,
 .carosel .swiper-button-prev::after {
   font-size: 1rem;
-  font-weight: 1000;
+  font-weight: 900;
   color: #b7b7b7;
 }
 
 .swiper-button-prev {
-  left: 10px;
+  margin-left: 5px;
   right: auto;
   background: #f2f2f2;
   border-radius: 50%;
@@ -404,8 +408,7 @@ top: 453px; */
 }
 
 .swiper-button-next {
-  left: 10px;
-  right: auto;
+  margin-right: 5px;
   background: #f2f2f2;
   border-radius: 50%;
   width: 38px !important;
@@ -540,8 +543,8 @@ top: 453px; */
 }
 
 input[type="radio"] {
-  accent-color: #026C51;
+  accent-color: #026c51;
 }
 input[type="checkbox"] {
-  accent-color: #026C51;
+  accent-color: #026c51;
 }
