@@ -1,7 +1,7 @@
 import NavicationWithSideNavLayout from "../../layouts/NavicationWithSideNavLayout";
 import Image from "next/image";
 import vector from "../../assets/images/product_page/Vector.png";
-import { FaShoppingCart } from "react-icons/fa";
+import { FaHeart, FaShoppingCart } from "react-icons/fa";
 import {
   BsFillBagCheckFill,
   BsFillStarFill,
@@ -137,6 +137,7 @@ const ProductPage = () => {
   } = useGetProductRatingQuery(_id && _id, {
     skip: callApi,
   });
+  console.log(ratingData)
 
   // oroduct details api
   const {
@@ -199,8 +200,20 @@ const ProductPage = () => {
   console.log(slideRef);
   return (
     <div className="">
+      {/* ksdlj */}
+
       <NavicationWithSideNavLayout>
-        <div className="flex flex-col lg:flex-row gap-9 ">
+        <p className="hidden md:block mb-[16px]">
+          <Link href="/">Home</Link> /
+          <span className="cursor-pointer" onClick={() => router.back()}>
+            KachaBazar
+          </span>{" "}
+          /
+          <span className="text-[#287DF3] ml-[4px]" href="#">
+            {productName}
+          </span>
+        </p>
+        <div className="flex flex-col lg:flex-row gap-[14px] ">
           <div className="flex flex-col md:flex-row ">
             <div className="hidden md:w-[96px] h-auto md:h-[560px] border md:flex flex-col p-[8px] bg-[#F2F3F7] gap-[8px] rounded-md">
               <div className="">
@@ -235,13 +248,19 @@ const ProductPage = () => {
 
             <div className="md:mx-10 px-4 lg:px-0">
               <div className="relative ">
-                <Image
-                  className="shadow-lg product-img rounded-md mb-[20px] w-full md:h-[500px]  md:flex object-contain"
-                  src={img ? img : productPictures?.[0]?.img}
-                  width="500"
-                  height="500"
-                  alt="tomato_img"
-                ></Image>
+                <label className="flex">
+                  <Image
+                    className="shadow-lg product-img rounded-md mb-[20px] w-full md:h-[500px]  md:flex object-contain "
+                    src={img ? img : productPictures?.[0]?.img}
+                    width="500"
+                    height="500"
+                    alt="tomato_img"
+                  ></Image>
+                  {/* love  */}
+                  <div className="sellerloveButton absolute  right-[24px] top-[11px] mt-[10px] w-[48px] h-[48px] flex items-center justify-center rounded-full">
+                    <FaHeart className=" text-[#F2F2F2]  w-[26px] h-[24px] hover:fill-[#FB641B]  "></FaHeart>
+                  </div>
+                </label>
                 <div className="flex w-full md:hidden gap-5 justify-center mb-[31px] absolute bottom-0 ">
                   <div className="text-md w-[34px] h-[34px] bg-[#F2F3F7] flex justify-center items-center cursor-pointer rounded-xl ">
                     <HiMinusSm className="w-full" />
@@ -259,13 +278,16 @@ const ProductPage = () => {
                   <BiChevronLeft className="text-2xl" />
                 </div>
                 {
-                  <div className="h-[100px] w-full">
+                  <div className="h-[100px] w-full relative">
                     <Slider {...imgSettings} className=" " ref={slideRef}>
                       {productPictures?.map((n, index) => (
-                        <div key={index} className="'w-[40px] h-[56px] ">
+                        <div
+                          key={index}
+                          className="'w-[40px] h-[56px] relative"
+                        >
                           <Image
                             onMouseOver={(e) => setImg(e?.currentTarget?.src)}
-                            className="border rounded-md cursor-pointer"
+                            className="border rounded-md cursor-pointer "
                             src={n?.img}
                             width="80"
                             height="80"
@@ -300,16 +322,6 @@ const ProductPage = () => {
           </div>
           <div className="px-4 lg:px-0 pl-4">
             <div className="">
-              <p className="hidden md:block">
-                <Link href="/">Home</Link> /
-                <span className="cursor-pointer" onClick={() => router.back()}>
-                  KachaBazar
-                </span>{" "}
-                /
-                <span className="text-[#287DF3]" href="#">
-                  Tomato (local) 500gm
-                </span>
-              </p>
               <h3 className="sm:text-sm md:text-lg lg:text-3xl font-bold text-[#001E00] mt-[8px]">
                 {productName}
               </h3>
@@ -388,14 +400,18 @@ const ProductPage = () => {
                   />
                 </div>
               </div>
-              <div className="mt-9 md:flex gap-2">
-                <div className="flex gap-2 text-[14px] text-[#686868] items-center md:mb-0 mb-2">
-                  <Image src={img7} alt="" />
-                  <p>24 Hours To 72 Hours Delivery Time</p>
+              <div className="mt-9 md:flex gap-[24px]">
+                <div className="flex text-[14px] text-[#686868] items-center md:mb-0 mb-2">
+                  <Image width={28} height={28} src={img8} alt="" />
+                  <p className="whitespace-nowrap text-[13px] mr-[24px] ml-[12px]">
+                    24 Hours To 72 Hours Delivery Time
+                  </p>
                 </div>
-                <div className="flex gap-2 text-[14px] text-[#686868] items-center">
-                  <Image src={img8} alt="" />
-                  <p>Cash on Delivery Available</p>
+                <div className="flex  text-[14px] text-[#686868] items-center">
+                  <Image width={28} height={28} src={img7} alt="" />
+                  <p className="whitespace-nowrap text-[13px]">
+                    Cash on Delivery Available
+                  </p>
                 </div>
               </div>
               <div className="mt-9">
@@ -427,6 +443,7 @@ const ProductPage = () => {
             <h5 className="text-[24px] font-bold">
               Customer Product Ratings & Reviews
             </h5>
+            
             <div className="grid grid-cols-1 md:flex md:justify-start items-center gap-20">
               <div className="">
                 <p className="text-[84px] text-center md:text-left text-[#001E00] font-bold">
@@ -475,18 +492,24 @@ const ProductPage = () => {
                           />
                         ))}
                       </div>
+                      <div className="">
+                      
                       <progress
                         className={`progress progress-${color} bg-green-500 w-56`}
                         value={total / d._id}
                         max="100"
                       ></progress>
                       <span>({d._id})</span>
+                      <p>hiiii</p>
+                      </div>
+                      
                     </div>
                   );
                 })}
               </div>
             </div>
           </div>
+          
           {reviewData?.result.length > 0 && (
             <>
               <div className="divider text-[#686868] text-lg"></div>
