@@ -17,7 +17,6 @@ import ProductCard from "./ProductCard";
 import { settings } from "../../Utils/sliderConfig";
 
 const AllCategoryCard = ({ result, products }) => {
-  console.log(products, "hellkopi");
 
   const slideRef = useRef(null);
 
