@@ -13,7 +13,7 @@ import Image from "next/image";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { AiTwotoneStar } from "react-icons/ai";
 import Slider from "react-slick";
-import ProductCard from "./ProductCard";
+import ProductCard from "./ProductCard"; 
 import { settings } from "../../Utils/sliderConfig";
 
 const AllCategoryCard = ({ result, products }) => {
