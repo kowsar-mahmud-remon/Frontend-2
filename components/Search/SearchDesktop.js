@@ -260,13 +260,35 @@ const SearchDesktop = () => {
     },
   ];
   const vegProducts = [
-    "Kacha Bazar (172)",
-    "Vegetables  (151)",
-    "Daal / Chal (199)",
-    "Atta/Maida (1016)",
-    "Salt & Sugar (116)",
-    "Salt & Sugar (116)",
-    "Salt & Sugar (116)",
+    {
+      id: 1,
+      name: "Kacha Bazar (172)",
+    },
+    {
+      id: 2,
+      name: "Vegetables  (151)",
+    },
+    {
+      id: 3,
+      name: "Daal / Chal (199)",
+    },
+    {
+      id: 4,
+      name: "Atta/Maida (1016)",
+    },
+    {
+      id: 5,
+      name: "Salt & Sugar (116)",
+    },
+    {
+      id: 6,
+      name: "Salt & Sugar (116)",
+    },
+    {
+      id: 7,
+      name: "Atta/Maida (1016)",
+    },
+    
   ];
   const options = [
     { value: "chocolate", label: "Chocolate" },
@@ -307,7 +329,7 @@ const SearchDesktop = () => {
   };
 
   return (
-    <div className=" flex lg:px-[94px]  md:px-[94px]  mt-2">
+    <div className=" flex pl-[94px] pr-4  mt-2">
       <div onClick={() => handleClose(1)} className={``}>
         <div onClick={() => handleClose(1)} className={``}></div>
 
@@ -399,36 +421,36 @@ const SearchDesktop = () => {
                 {show
                   ? vegProducts &&
                     vegProducts
-                      .map((vproduct, i) => {
+                      .map((vproduct) => {
                         return (
                           <li
-                            onClick={() => handleBtn(vproduct)}
+                            onClick={() => handleBtn(vproduct.id)}
                             className={` ${
-                              i === true
+                              text === true
                                 ? "mb-[16px] text-2xl font-semibold text-[#026C51] cursor-pointer"
                                 : "mb-[16px] text-[14px] font-semibold cursor-pointer"
                             } `}
-                            key={i}
+                            key={vproduct.id}
                           >
-                            {vproduct}
+                            {vproduct.name}
                           </li>
                         );
                       })
                       .slice(0, 5)
                   : vegProducts &&
                     show === false &&
-                    vegProducts.map((vproduct, i) => {
+                    vegProducts.map((vproduct) => {
                       return (
                         <li
-                          onClick={() => handleBtn(vproduct)}
+                          onClick={() => handleBtn(vproduct.id)}
                           className={` ${
-                            i === true
+                            text === true
                               ? "mb-[16px] text-[14px] font-semibold text-[#026C51] cursor-pointer"
                               : "mb-[16px] text-[14px] font-semibold cursor-pointer"
                           } `}
-                          key={i}
+                          key={vproduct.id}
                         >
-                          {vproduct}
+                          {vproduct.name}
                         </li>
                       );
                     })}
