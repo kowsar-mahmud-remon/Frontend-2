@@ -8,99 +8,101 @@ import { settings, storySettings } from '../../Utils/sliderConfig';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import img from "../../assets/CategoryImages/KachabazarIcon/shopping-bag 1.png";
+import instagram from "../../assets/images/instagram-stories 1.png";
 
 import StoriesCard from "./StoryCard/StoriesCard";
+import Link from 'next/link';
 const VdoStory = () => {
-    const slideRef = useRef(null);
-    const stories = [
-        {
-            vdo: "",
-            taka: "222",
-            title: "T-shirt For Unisex T-shirt For Unisex",
-            rate:'4.9'
-        },
-        {
-            vdo: "",
-            taka: "222",
-            title: "T-shirt For Unisex T-shirt For Unisex",
-            rate:'4.9'
-        },
-    ]
+  const slideRef = useRef(null);
+  const stories = [
+    {
+      vdo: "",
+      taka: "222",
+      title: "T-shirt For Unisex T-shirt For Unisex",
+      rate: '4.9'
+    },
+    {
+      vdo: "",
+      taka: "222",
+      title: "T-shirt For Unisex T-shirt For Unisex",
+      rate: '4.9'
+    },
+  ];
 
-   const products = [
-       {
-           regularPrice: '200',
-           productName: 'alu ptoroed',
-           quantity: '20',
-           productTitle: 'blabal',
-           discount: '30%',
-           productPictures: img,
-           _id: 'sdlfslkdfs',
-           subCategory: 'sdfsdf',
-           slug: 'sdfsd',
-           category:'sdfsdf',
-     },
-       {
-           regularPrice: '200',
-           productName: 'alu ptoroed',
-           quantity: '20',
-           productTitle: 'blabal',
-           discount: '30%',
-           productPictures: img,
-           _id: 'sdlfslkdfs',
-           subCategory: 'sdfsdf',
-           slug: 'sdfsd',
-           category:'sdfsdf',
-     },
-       {
-           regularPrice: '200',
-           productName: 'alu ptoroed',
-           quantity: '20',
-           productTitle: 'blabal',
-           discount: '30%',
-           productPictures: img,
-           _id: 'sdlfslkdfs',
-           subCategory: 'sdfsdf',
-           slug: 'sdfsd',
-           category:'sdfsdf',
-     },
-       {
-           regularPrice: '200',
-           productName: 'alu ptoroed',
-           quantity: '20',
-           productTitle: 'blabal',
-           discount: '30%',
-           productPictures: img,
-           _id: 'sdlfslkdfs',
-           subCategory: 'sdfsdf',
-           slug: 'sdfsd',
-           category:'sdfsdf',
-     },
-       {
-           regularPrice: '200',
-           productName: 'alu ptoroed',
-           quantity: '20',
-           productTitle: 'blabal',
-           discount: '30%',
-           productPictures: img,
-           _id: 'sdlfslkdfs',
-           subCategory: 'sdfsdf',
-           slug: 'sdfsd',
-           category:'sdfsdf',
-     },
-       {
-           regularPrice: '200',
-           productName: 'alu ptoroed',
-           quantity: '20',
-           productTitle: 'blabal',
-           discount: '30%',
-           productPictures: img,
-           _id: 'sdlfslkdfs',
-           subCategory: 'sdfsdf',
-           slug: 'sdfsd',
-           category:'sdfsdf',
-     },
-   ];
+  const products = [
+    {
+      regularPrice: '200',
+      productName: 'alu ptoroed',
+      quantity: '20',
+      productTitle: 'blabal',
+      discount: '30%',
+      productPictures: img,
+      _id: 'sdlfslkdfs',
+      subCategory: 'sdfsdf',
+      slug: 'sdfsd',
+      category: 'sdfsdf',
+    },
+    {
+      regularPrice: '200',
+      productName: 'alu ptoroed',
+      quantity: '20',
+      productTitle: 'blabal',
+      discount: '30%',
+      productPictures: img,
+      _id: 'sdlfslkdfs',
+      subCategory: 'sdfsdf',
+      slug: 'sdfsd',
+      category: 'sdfsdf',
+    },
+    {
+      regularPrice: '200',
+      productName: 'alu ptoroed',
+      quantity: '20',
+      productTitle: 'blabal',
+      discount: '30%',
+      productPictures: img,
+      _id: 'sdlfslkdfs',
+      subCategory: 'sdfsdf',
+      slug: 'sdfsd',
+      category: 'sdfsdf',
+    },
+    {
+      regularPrice: '200',
+      productName: 'alu ptoroed',
+      quantity: '20',
+      productTitle: 'blabal',
+      discount: '30%',
+      productPictures: img,
+      _id: 'sdlfslkdfs',
+      subCategory: 'sdfsdf',
+      slug: 'sdfsd',
+      category: 'sdfsdf',
+    },
+    {
+      regularPrice: '200',
+      productName: 'alu ptoroed',
+      quantity: '20',
+      productTitle: 'blabal',
+      discount: '30%',
+      productPictures: img,
+      _id: 'sdlfslkdfs',
+      subCategory: 'sdfsdf',
+      slug: 'sdfsd',
+      category: 'sdfsdf',
+    },
+    {
+      regularPrice: '200',
+      productName: 'alu ptoroed',
+      quantity: '20',
+      productTitle: 'blabal',
+      discount: '30%',
+      productPictures: img,
+      _id: 'sdlfslkdfs',
+      subCategory: 'sdfsdf',
+      slug: 'sdfsd',
+      category: 'sdfsdf',
+    },
+  ];
 
   return (
     <>
@@ -108,15 +110,15 @@ const VdoStory = () => {
         <div className=" overflow-x-hidden my-16 md:px-0 px-3">
           {/* slider header  */}
           <div className="flex gap-4 items-center justify-between">
-            <div className="flex items-center gap-2 ">
-              <Image src={img} alt="img" width={28} height={28} />
+            <div className="flex items-center gap-3">
+              <Image className=' cursor-pointer' src={instagram} alt="img" width={28} height={28} />
               <div className="text-[15px] lg:text-[24px] text-[#FB641B] font-bold mr-6 md:mr-4">
-                Story
+                Stories
               </div>
             </div>
             <div className="bg-[#FB641B] md:w-[75%] w-[80%] h-[2px] md:h-[3px]"></div>
             <div className="text-[12px] lg:text-[14px] text-[#FB641B] w-[70px] font-[500] cursor-pointer">
-              All View{" "}
+              <Link href="#">All View</Link>{" "}
             </div>
             <div className="  gap-3 hidden md:flex">
               <div
