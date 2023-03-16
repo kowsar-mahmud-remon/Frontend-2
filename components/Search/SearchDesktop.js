@@ -250,7 +250,7 @@ const SearchDesktop = () => {
 
 
     return (
-        <div className=" flex lg:px-[94px]  md:px-[94px]  mt-2">
+        <div className=" flex pl-[94px] pr-4  mt-2 bg-white">
             <div
                 onClick={() => handleClose(1)}
                 className={`flex z-20  fixed md:static  h-[100vh] top-0 right-0 md:left-0  w-full lg:w-[482px] overflow-auto lg:h-auto  abs-bg ${bghide} mt-[-8px] justify-between md:justify-start scrollbar-hide mt-0 lg:mt-4`}>
@@ -270,7 +270,7 @@ const SearchDesktop = () => {
                         </div>
 
                     </div>
-                    <div className={`${style.search_left}  bg-white mr-0 md:mr-[21px] scrollbar-hide `}>
+                    <div className={`${style.collectionsBoxSideBarShaddow}  bg-white mr-0 md:mr-[21px] scrollbar-hide `}>
                         {/* ---------------------filters start---------------- */}
                         <div className='px-4 lg:hidden md:hidden pt-10 pb-20'>
                             <div className='flex justify-between mb-[16px] '>
@@ -312,7 +312,7 @@ const SearchDesktop = () => {
 
                         <div className='px-4'>
                             <ul>
-                                <li className='flex justify-between'><p className='font-semibold text-[18px] my-[16px] text-[#001E00] '>All Collecction</p>
+                                <li className='flex justify-between items-center'><p className='font-semibold text-[18px] my-[16px] text-[#001E00] '>All Collecction</p>
                                     <Image className='h-2 mt-2 '
                                         src={v2}
                                         alt='img'
@@ -347,7 +347,7 @@ const SearchDesktop = () => {
 
 
                         </div>
-                        <hr className='mb-[16px]' />
+                        <hr className="mb-[16px] border border-[#CDCDCD]" />
 
                         {/*---------- filter section----------- */}
 
@@ -385,7 +385,7 @@ const SearchDesktop = () => {
                                 </div>
                             </div>
                         </div>
-                        <hr className='mb-[16px]' />
+                        <hr className="mb-[16px] border border-[#CDCDCD]" />
 
                         <div>
                             <div className='flex justify-between px-4'>
@@ -412,7 +412,7 @@ const SearchDesktop = () => {
                                 </select>
                             </div>
                         </div>
-                        <hr className='mb-[16px]' />
+                        <hr className="mb-[16px] border border-[#CDCDCD]" />
 
                         {/* --------------brand section start----------------- */}
 
@@ -460,7 +460,7 @@ const SearchDesktop = () => {
                             </div>
                         </div>
 
-                        <hr className='mb-[16px]' />
+                        <hr className="mb-[16px] border border-[#CDCDCD]" />
 
                         <div>
                             <div className='flex justify-between px-[16px]'>
@@ -542,7 +542,7 @@ const SearchDesktop = () => {
                                 </form>
                             </div>
                         </div>
-                        <hr className='mb-[16px]' />
+                        <hr className="mb-[16px] border border-[#CDCDCD]" />
                         {/* ------------brand------------- */}
                         <div className="lg:mb-[16px] md:mb-[16px]  lg:block md:block hidden lg:pb-4 md:pb-4 ">
                             <div className='flex justify-between px-[16px]'>
