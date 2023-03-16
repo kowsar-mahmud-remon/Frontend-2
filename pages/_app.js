@@ -26,7 +26,7 @@ export default function App({ Component, pageProps }) {
         <div className='hidden lg:block'>
           <Footer />
         </div>
-        <Toaster   position="top-center" />
+        <Toaster position="top-center" />
       </Provider>
     </div>
   );
