@@ -9,8 +9,8 @@ const index = () => {
         <div>
             <PrivateRoute>
                 {/* <DontSelectProductCheckout /> */}
-                <CheckoutPageOrderPageTwoProductInOneShop></CheckoutPageOrderPageTwoProductInOneShop>
-                {/* <CheckPickUpPointsSelectPickUpPointsPage></CheckPickUpPointsSelectPickUpPointsPage> */}
+                {/* <CheckoutPageOrderPageTwoProductInOneShop></CheckoutPageOrderPageTwoProductInOneShop> */}
+                <CheckPickUpPointsSelectPickUpPointsPage></CheckPickUpPointsSelectPickUpPointsPage>
             </PrivateRoute>
         </div>
     );
