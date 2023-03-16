@@ -20,6 +20,7 @@ const MyOrderDetails = () => {
     total: "120",
     subtotal: "100",
     deliveryFee: "20",
+    paymentOption: "Cash On Deliver"
   };
   const shippingAdd = {
     name: "Abdul Korim",
@@ -34,7 +35,7 @@ const MyOrderDetails = () => {
 
   return (
     <div className="max-w-[924px] md:px-0 px-3">
-      <div className='md:hidden'>
+      <div className="md:hidden">
         <button
           onClick={() => router.back()}
           className="flex items-center gap-[13px]"
@@ -91,7 +92,10 @@ const MyOrderDetails = () => {
             </div>
           </div>
           <div className="md:mt-10 mt-5">
-            <Timeline status={data.status}></Timeline>
+            <Timeline
+              status={data.status}
+              payOption={data.paymentOption}
+            ></Timeline>
           </div>
           {/* table */}
           <div className="md:block hidden">
