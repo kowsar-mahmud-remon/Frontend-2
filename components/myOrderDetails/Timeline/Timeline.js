@@ -3,7 +3,7 @@ const Timeline = ({ status, payOption }) => {
   if (status === "Processing") {
     return (
       <div>
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           {payOption === "Cash On Delivery" ? (
             <div className="flex justify-center items-center relative">
               <div className="w-3 h-3 rounded-full border-2 border-[#026C51] bg-[#026C51]"></div>
@@ -48,7 +48,7 @@ const Timeline = ({ status, payOption }) => {
           </div>
         </div>
         {/* mobile */}
-        <div className="md:hidden flex h-[260px]">
+        <div className="lg:hidden flex h-[260px]">
           <div className="flex flex-col justify-center items-center  my-1">
             <div className="h-full w-1 my-1">
               <div className="w-full h-full bg-[#F2F2F2] "></div>
@@ -94,7 +94,7 @@ const Timeline = ({ status, payOption }) => {
   if (status === "Shipped") {
     return (
       <div>
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           {payOption === "Cash On Delivery" ? (
             <div className="flex justify-center items-center relative">
               <div className="w-3 h-3 rounded-full border-2 border-[#026C51] bg-[#026C51]"></div>
@@ -141,7 +141,7 @@ const Timeline = ({ status, payOption }) => {
           </div>
         </div>
         {/* mobile */}
-        <div className="md:hidden flex h-[260px]">
+        <div className="lg:hidden flex h-[260px]">
           <div className="flex flex-col justify-center items-center  my-1">
             <div className="h-full w-1 my-1 bg-[#F2F2F2]">
               <div className="w-full h-1/2 bg-[#026C51] "></div>
@@ -187,7 +187,7 @@ const Timeline = ({ status, payOption }) => {
   if (status === "Delivered") {
     return (
       <div>
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           {payOption === "Cash On Delivery" ? (
             <div className="flex justify-center items-center relative">
               <div className="w-3 h-3 rounded-full border-2 border-[#026C51] bg-[#026C51]"></div>
@@ -235,7 +235,7 @@ const Timeline = ({ status, payOption }) => {
         </div>
 
         {/* mobile */}
-        <div className="md:hidden flex h-[260px]">
+        <div className="lg:hidden flex h-[260px]">
           <div className="flex flex-col justify-center items-center  my-1">
             <div className="h-full w-1 my-1">
               <div className="w-full h-full bg-[#026C51] "></div>
