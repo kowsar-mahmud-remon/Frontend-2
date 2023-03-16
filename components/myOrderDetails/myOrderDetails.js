@@ -15,7 +15,7 @@ const MyOrderDetails = () => {
     image: "/image 8.png",
     productName: "Tomato(Local) 500+30 gm",
     qty: "1",
-    status: "Processing",
+    status: "Delivered",
     deliveredDate: "Delivered on 21 Dec 2022",
     total: "120",
     subtotal: "100",
