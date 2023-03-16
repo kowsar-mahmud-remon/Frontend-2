@@ -3,6 +3,7 @@ import img from '../../assets/images/image 6.png';
 import img2 from '../../assets/images/Group.png';
 import img3 from '../../assets/images/Group 1913.png';
 import img4 from '../../assets/images/image 9.png';
+import deleteImg from '../../assets/images/deleteImg.png';
 import Image from 'next/image';
 import { FaAngleRight } from 'react-icons/fa';
 import style from "../../styles/campaignManagementTwo.module.css";
@@ -67,33 +68,137 @@ const CheckoutPageOrderPageTwoProductInOneShop = () => {
           </div>
         </div>
 
-        <div className={`mt-8 p-4 lg:max-w-[788px]  ${style.campaignManagementWithoutBorder}`}>
+        <div className={`mt-4 p-4 lg:max-w-[788px]  ${style.campaignManagementWithoutBorder}`}>
           <p className="text-base lg:text-[#707070] text-[#001E00] font-medium lg:font-normal">Banglar Big Store</p>
 
           <div className="border-b border-[#B7B7B7] pb-4">
             {
               products.map(product => <div
                 key={product._id}
-                className="flex mt-4">
-                <Image
-                  className=' mr-4 w-10 h-10'
-                  src={product.img}
-                  alt=""
-                  width={40}
-                  height={40}
-                />
-                <div className="lg:flex lg:justify-between items-center w-full">
+                className="lg:flex mt-4 w-full">
+                <div className="flex lg:mr-10 lg:w-[40%]">
+                  <Image
+                    className=' mr-4 w-[40px] h-[40px]'
+                    src={product.img}
+                    alt=""
+                    width={40}
+                    height={40}
+                  />
                   <div className="mb-2">
                     <p className="text-base font-medium text-[#001E00]">{product.name}</p>
                     <p className="text-xs text-[#707070]">{product.subTitle}</p>
                   </div>
+                </div>
+                <div className="pl-[56px] lg:pl-0 flex lg:justify-between items-center lg:w-[60%] ">
 
-                  <p className="text-base font-medium inline sm:mr-14 text-[#686868]">Qty: {product.Qty}</p>
-                  <div className="sm:inline lg:flex items-center">
-                    <p className="sm:inline mr-4 text-[10px] text-[#707070] line-through">Tk {product.previousPrice}</p>
-                    <p className="sm:inline mr-4 text-[10px] text-[#707070]">({product.discount}% off)</p>
-                    <p className="sm:inline text-base font-medium text-[#FB641B]">Tk {product.price}</p>
+
+                  <div className="flex lg:flex-row-reverse justify-between w-full">
+
+                    <div className=" items-center flex lg:justify-end flex-row-reverse lg:flex-row lg:w-[60%]">
+                      <div className="flex">
+                        <p className=" mr-4 text-[10px] text-[#707070] line-through">Tk {product.previousPrice}</p>
+                        <p className=" mr-4 text-[10px] text-[#707070]">({product.discount}% off)</p>
+                      </div>
+                      <div className="mr-2 lg:mr-0">
+                        <p className=" text-base font-medium text-[#FB641B]">Tk {product.price}</p>
+                      </div>
+                    </div>
+
+                    <div className="flex lg:justify-between lg:w-[40%]">
+                      <p className="text-base font-medium inline sm:mr-4 text-[#686868]">Qty: {product.Qty}</p>
+
+                      <Image
+                        className=' w-[18px] h-[21px] cursor-pointer hidden lg:block'
+                        src={deleteImg}
+                        alt=""
+                        width={18}
+                        height={21}
+                      />
+
+                    </div>
+
                   </div>
+
+                </div>
+              </div>)
+            }
+          </div>
+
+          <div className="border border-[#026C51] w-[220px] mt-4 rounded-md">
+            <div className=" ml-[-1.3px] mt-[-1.3px]">
+              <Image
+                className='w-[13px] h-[7px] absolute ml-[6px] mt-[5px]'
+                src={vectorImg2}
+                alt=""
+                width={13}
+                height={7}
+              />
+              <Image
+                className='w-[33px] h-[25px]'
+                src={vectorImg}
+                alt=""
+                width={33}
+                height={25}
+              />
+            </div>
+            <div className=" p-3 pt-0 mt-[-10px] ml-2">
+              <p className=" text-sm text-[#026C51] font-medium">Standard Delivery TK. 30 <br />
+                <span className="text-[#707070]">Receive by 25 Dec - 28 Dec</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div className={`mt-4 p-4 lg:max-w-[788px]  ${style.campaignManagementWithoutBorder}`}>
+          <p className="text-base lg:text-[#707070] text-[#001E00] font-medium lg:font-normal">Family Bazar</p>
+
+          <div className="border-b border-[#B7B7B7] pb-4">
+            {
+              products.map(product => <div
+                key={product._id}
+                className="lg:flex mt-4 w-full">
+                <div className="flex lg:mr-10 lg:w-[40%]">
+                  <Image
+                    className=' mr-4 w-[40px] h-[40px]'
+                    src={product.img}
+                    alt=""
+                    width={40}
+                    height={40}
+                  />
+                  <div className="mb-2">
+                    <p className="text-base font-medium text-[#001E00]">{product.name}</p>
+                    <p className="text-xs text-[#707070]">{product.subTitle}</p>
+                  </div>
+                </div>
+                <div className="pl-[56px] lg:pl-0 flex lg:justify-between items-center lg:w-[60%] ">
+
+
+                  <div className="flex lg:flex-row-reverse justify-between w-full">
+
+                    <div className=" items-center flex lg:justify-end flex-row-reverse lg:flex-row lg:w-[60%]">
+                      <div className="flex">
+                        <p className=" mr-4 text-[10px] text-[#707070] line-through">Tk {product.previousPrice}</p>
+                        <p className=" mr-4 text-[10px] text-[#707070]">({product.discount}% off)</p>
+                      </div>
+                      <div className="mr-2 lg:mr-0">
+                        <p className=" text-base font-medium text-[#FB641B]">Tk {product.price}</p>
+                      </div>
+                    </div>
+
+                    <div className="flex lg:justify-between lg:w-[40%]">
+                      <p className="text-base font-medium inline sm:mr-4 text-[#686868]">Qty: {product.Qty}</p>
+
+                      <Image
+                        className=' w-[18px] h-[21px] cursor-pointer hidden lg:block'
+                        src={deleteImg}
+                        alt=""
+                        width={18}
+                        height={21}
+                      />
+
+                    </div>
+
+                  </div>
+
                 </div>
               </div>)
             }
