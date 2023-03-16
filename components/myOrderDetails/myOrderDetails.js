@@ -15,12 +15,12 @@ const MyOrderDetails = () => {
     image: "/image 8.png",
     productName: "Tomato(Local) 500+30 gm",
     qty: "1",
-    status: "Delivered",
+    status: "Processing",
     deliveredDate: "Delivered on 21 Dec 2022",
     total: "120",
     subtotal: "100",
     deliveryFee: "20",
-    paymentOption: "Cash On Deliver"
+    paymentOption: "Cash On Deliver",
   };
   const shippingAdd = {
     name: "Abdul Korim",

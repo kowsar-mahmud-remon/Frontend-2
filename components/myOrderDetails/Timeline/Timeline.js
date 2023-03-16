@@ -4,14 +4,30 @@ const Timeline = ({ status, payOption }) => {
     return (
       <div>
         <div className="hidden md:block">
-          <div className="flex justify-center items-center relative">
-            <div className="w-3 h-3 rounded-full border-2 border-[#026C51] bg-[#026C51]"></div>
-            <div className="h-1 w-4/5 bg-[#F2F2F2]"></div>
-            <div className="w-3 h-3 rounded-full border-2 absolute left-2/4 z-10 bg-[#F2F2F2]"></div>
-            <div className="w-3 h-3 rounded-full border-2 bg-[#F2F2F2]"></div>
-          </div>
+          {payOption === "Cash On Delivery" ? (
+            <div className="flex justify-center items-center relative">
+              <div className="w-3 h-3 rounded-full border-2 border-[#026C51] bg-[#026C51]"></div>
+              <div className="h-1 w-4/5 bg-[#F2F2F2]"></div>
+              <div className="w-3 h-3 rounded-full border-2 absolute left-2/4 z-10 bg-[#F2F2F2]"></div>
+              <div className="w-3 h-3 rounded-full border-2 bg-[#F2F2F2]"></div>
+            </div>
+          ) : (
+            <div className="flex justify-center">
+              <div className="flex justify-center items-center relative w-3/5">
+                <div className="w-3 h-3 rounded-full border-2 border-[#026C51] bg-[#026C51]"></div>
+                <div className="h-1 w-full bg-[#F2F2F2] relative">
+                  <div className="w-[38%] h-full bg-[#026C51]"></div>
+                </div>
+                <div className="w-3 h-3 rounded-full border-2 absolute left-[38%]  z-10 bg-[#026C51] border-[#026C51] "></div>
+                <div className="w-3 h-3 rounded-full border-2 absolute left-[70%]  z-10 bg-[#F2F2F2] border-[#F2F2F2] "></div>
+                <div className="w-3 h-3 rounded-full border-2 bg-[#F2F2F2] border-[#F2F2F2]"></div>
+              </div>
+            </div>
+          )}
+
           <div className="flex justify-center items-center ">
             <div className="flex justify-between items-center w-[70%]">
+              {payOption !== "Cash On Delivery" && <p>Payment Success</p>}
               <p>Processing</p>
               <p>Shipping</p>
               <p>Delivered</p>
@@ -79,16 +95,32 @@ const Timeline = ({ status, payOption }) => {
     return (
       <div>
         <div className="hidden md:block">
-          <div className="flex justify-center items-center relative">
-            <div className="w-3 h-3 rounded-full border-2 border-[#026C51] bg-[#026C51]"></div>
-            <div className="h-1 w-4/5 bg-[#F2F2F2]">
-              <div className="w-1/2 h-full bg-[#026C51]"></div>
+          {payOption === "Cash On Delivery" ? (
+            <div className="flex justify-center items-center relative">
+              <div className="w-3 h-3 rounded-full border-2 border-[#026C51] bg-[#026C51]"></div>
+              <div className="h-1 w-4/5 bg-[#F2F2F2]">
+                <div className="w-1/2 h-full bg-[#026C51]"></div>
+              </div>
+              <div className="w-3 h-3 rounded-full border-2 absolute left-2/4 z-10 bg-[#026C51] border-[#026C51]"></div>
+              <div className="w-3 h-3 rounded-full border-2 bg-[#F2F2F2]"></div>
             </div>
-            <div className="w-3 h-3 rounded-full border-2 absolute left-2/4 z-10 bg-[#026C51] border-[#026C51]"></div>
-            <div className="w-3 h-3 rounded-full border-2 bg-[#F2F2F2]"></div>
-          </div>
+          ) : (
+            <div className="flex justify-center">
+              <div className="flex justify-center items-center relative w-3/5">
+                <div className="w-3 h-3 rounded-full border-2 border-[#026C51] bg-[#026C51]"></div>
+                <div className="h-1 w-full bg-[#F2F2F2] relative">
+                  <div className="w-[72%] h-full bg-[#026C51]"></div>
+                </div>
+                <div className="w-3 h-3 rounded-full border-2 absolute left-[38%]  z-10 bg-[#026C51] border-[#026C51] "></div>
+                <div className="w-3 h-3 rounded-full border-2 absolute left-[70%]  z-10 bg-[#026C51] border-[#026C51] "></div>
+                <div className="w-3 h-3 rounded-full border-2 bg-[#F2F2F2] border-[#F2F2F2]"></div>
+              </div>
+            </div>
+          )}
+
           <div className="flex justify-center items-center ">
             <div className="flex justify-between items-center w-[70%]">
+              {payOption !== "Cash On Delivery" && <p>Payment Success</p>}
               <p>Processing</p>
               <p>Shipping</p>
               <p>Delivered</p>
