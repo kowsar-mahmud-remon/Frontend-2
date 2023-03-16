@@ -15,7 +15,7 @@ const DontSelectProductCheckout = () => {
 
 
   // get all cart for the user 
-  const { data, isLoading, error } = useGetAllCartQuery()
+  const { data, isLoading, error } = useGetAllCartQuery();
 
   const { cartItems, cartProduct } = useSelector(state => state.cart);
   const [priceAmount, setPriceAmount] = useState(0);
@@ -40,10 +40,10 @@ const DontSelectProductCheckout = () => {
   useEffect(() => {
 
     if (data) {
-      dispatch(setProductToCart(data?.result))
+      dispatch(setProductToCart(data?.result));
     }
 
-  }, [data, dispatch])
+  }, [data, dispatch]);
 
   useEffect(() => {
     dispatch(getTotals());
@@ -102,14 +102,14 @@ const DontSelectProductCheckout = () => {
 
 
   return (
-    <div className=' mt-8 mb-28 md:mb-72 lg:w-[1200px] mx-auto'>
+    <div className=' mt-8 mb-28 md:mb-72 lg:max-w-[1200px] mx-auto'>
       <div className="m-4 lg:m-0">
         <p className=' text-base text-[#686868] mb-2'>Home / Add to Cart / <span className='text-[#287DF3]'>Checkout</span></p>
         <h4 className='text-[20px] lg:text-2xl font-medium text-[#FB641B]'>Ready to Checkout!</h4>
       </div>
 
       <div className=" flex-col flex  lg:flex-row m-6 lg:m-0 justify-center items-center md:items-start ">
-        <div className="lg:w-[788px] md:mr-6 mb-28">
+        <div className="lg:w-[788px] md:mr-6 w-full mb-28">
           <div className="text-[#686868] flex justify-between item-center px-6 py-[18px] rounded-xl shadow-xl mt-4">
             <div className="flex rounded items-center">
 
@@ -206,8 +206,16 @@ const DontSelectProductCheckout = () => {
 
         </div>
 
-        <div className="w-full  md:w-[388px]  p-4 mt-2 shadow-2xl md:h-[398px]">
-          <p className=" text-lg font-medium text-[#FB641B]">Order Summary</p>
+        <div className="w-full  md:w-[388px]  p-4 mt-2 shadow-2xl">
+          <p className='text-base text-[#001E00] font-medium'>Discount and Payment</p>
+          <p className='text-base text-[#001E00] font-medium mt-[91px]'>Coupon Cord</p>
+
+          <div className="flex mt-[15px] border rounded border-[#FB641B] w-full h-[50px]">
+            <input type="text" className="input w-full h-full" />
+            <button className=' w-[150px] h-full bg-[#FB641B] text-base text-white'>Apply</button>
+          </div>
+
+          <p className=" text-lg mt-4 font-medium text-[#FB641B]">Order Summary</p>
           <div className="flex justify-between mt-4 text-[#686868]">
             <p className="text-base">Subtotal ({cart.cartTotalQuantity} items)</p>
             <p className="text-base font-medium">Tk {cart.cartTotalAmount}</p>
@@ -216,11 +224,14 @@ const DontSelectProductCheckout = () => {
             <input type="text" placeholder="Enter Promo Code" className="input input-bordered w-full max-w-xs mr-4" />
             <button className="btn bg-[#FB641B] w-20 h-9 rounded-md text-white">APPLY</button>
           </div>
-          <div className="flex justify-between mt-4 mb-10 lg:mb-52">
+          <div className="flex justify-between mt-4">
             <p className=" text-base text-[#001E00]">Total: </p>
             <p className=" text-base font-medium text-[#FB641B]">Tk {cart.cartTotalAmount}</p>
           </div>
-          <button className="btn bg-[#FB641B] w-full h-12 rounded-md text-white">PROCEED TO CHECKOUT ({cart.cartTotalAmount})</button>
+          <div className="flex justify-end mt-4">
+            <p className='text-xs text-[#686868]'>VAT included, where applicable</p>
+          </div>
+          <button className="btn mt-8 bg-[#FB641B] w-full h-12 rounded-md text-white">PROCEED TO CHECKOUT ({cart.cartTotalAmount})</button>
         </div>
       </div>
     </div>

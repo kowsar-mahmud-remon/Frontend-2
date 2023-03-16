@@ -20,13 +20,13 @@ export default function App({ Component, pageProps }) {
         <div className='lg:block hidden'>
           <Navication />
         </div>
-        <div className='md:mb-0 mb-20 mr-[70px]'>
+        <div className='md:mb-0 mb-20 '>
           <Component {...pageProps} />
         </div>
         <div className='hidden lg:block'>
           <Footer />
         </div>
-        <Toaster   position="top-center" />
+        <Toaster position="top-center" />
       </Provider>
     </div>
   );
