@@ -75,6 +75,7 @@ import SellerProductUpload from "../components/SellerProductUpload/SellerProduct
 import SellerProfileAdmin from "../components/Sellerprofileadmin/SellerProfileAdmin";
 import CouponActive from "../components/CouponActive/CouponActive";
 import QuestionAndAnswer01 from "../components/QuestionAndAnswer01/QuestionAndAnswer01";
+import MyReturns01 from "../components/ManageAccoutSideBar/MyReturns01";
 
 export const manageProductsArray = [
   {
@@ -411,4 +412,10 @@ export const manageProductsArray = [
     href: "accountsetting",
     element: <AccountSetting></AccountSetting>,
   },
+  {
+    title: 'My Returns',
+    href: 'myreturns01',
+    element: <MyReturns01></MyReturns01>
+  }
+
 ];

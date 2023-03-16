@@ -13,6 +13,7 @@ import { useState } from 'react';
 const Debit = () => {
     const [cashOn, setCashOn] = useState('hidden')
     const [bground, setBGround] = useState('bg-[#F2F2F2]')
+    const [hide, setHide] = useState('block')
 
     const handlecash = () => {
         setCashOn('block')
@@ -22,15 +23,15 @@ const Debit = () => {
         <div className='flex justify-center mb-[.2vw]'>
             <div className='w-[90%]'>
                 <div className="flex justify-center mt-[24px] mb-[24px]">
-                    <h1 className="text-[#FB641B] flex items-center justify-center w-[46%] h-[56px] text-center bg-[#FFDDCC]  text-[1vw] font-normal"> <Image className='w-[28px] h-[28px] mr-[16px]' src={icon} alt='image'></Image>Collect your Prepayment Voucher & Enjoy Extra Savings on Selected Cards</h1>
+                    <h1 className="text-[#FB641B] flex items-center px-[3vw] justify-center w-full  md:w-[46%] h-[56px] text-center bg-[#FFDDCC] text-[3.7vw] md:text-[1vw] font-normal"> <Image className='w-[28px] h-[28px] mr-[16px]' src={icon} alt='image'></Image>Collect your Prepayment Voucher & Enjoy Extra Savings on Selected Cards</h1>
                 </div>
-                <div className='flex  justify-center'>
-                    <div>
-                        <h1 className='text-[24px] text-[#FB641B] '>Select Payment Method</h1>
-                        <div className='mt-[32px] flex gap-x-[20px]'>
-                            <div>
-                                <div className='flex gap-x-[10px] mb-[16px]'>
-                                    <div className='w-[9vw] h-[9vw] bg-[#F2F2F2] rounded-[4px] flex items-center'>
+                <div className='md:flex  md:justify-center'>
+                    <div className=''>
+                        <h1 className='text-[24px] text-[#FB641B] hidden md:block '>Select Payment Method</h1>
+                        <div className='mt-[32px] md:flex md:gap-x-[20px]'>
+                            <div className=''>
+                                <div className='grid grid-cols-2 md:grid-cols-6 gap-[16px] md:mb-[16px] '>
+                                    <div className={` md:w-[9vw] md:h-[9vw] w-[43vw] h-[43vw] bg-[#F2F2F2] rounded-[4px] flex items-center`}>
                                         <div className='mx-auto'>
                                             <div className='flex justify-center mb-[.2vw]'>
                                                 <Image
@@ -38,10 +39,10 @@ const Debit = () => {
                                                     src={debit}
                                                     alt='image' />
                                             </div>
-                                            <h1 className='text-[.8vw] text-[#001E00] text-center'>Credit/Debit Card</h1>
+                                            <h1 className='md:text-[.8vw] text-[4vw] text-[#001E00] text-center'>Credit/Debit Card</h1>
                                         </div>
                                     </div>
-                                    <div className='w-[9vw] h-[9vw] bg-[#F2F2F2] rounded-[4px] flex items-center '>
+                                    <div className={`md:w-[9vw] md:h-[9vw] w-[43vw] h-[43vw] bg-[#F2F2F2] rounded-[4px] flex items-center`}>
                                         <div className='mx-auto'>
                                             <div className='flex justify-center mb-[.2vw]'>
                                                 <Image
@@ -49,10 +50,10 @@ const Debit = () => {
                                                     src={cell}
                                                     alt='image' />
                                             </div>
-                                            <h1 className='text-[.8vw] text-[#001E00] text-center'>IBBL Cell fin</h1>
+                                            <h1 className='md:text-[.8vw] text-[4vw] text-[#001E00] text-center'>IBBL Cell fin</h1>
                                         </div>
                                     </div>
-                                    <div className='w-[9vw] h-[9vw] bg-[#F2F2F2] rounded-[4px] flex items-center'>
+                                    <div className={`md:w-[9vw] md:h-[9vw] w-[43vw] h-[43vw] bg-[#F2F2F2] rounded-[4px] flex items-center`}>
                                         <div className='mx-auto'>
                                             <div className='flex justify-center mb-[.2vw]'>
                                                 <Image
@@ -60,10 +61,10 @@ const Debit = () => {
                                                     src={dbbl}
                                                     alt='image' />
                                             </div>
-                                            <h1 className='text-[.8vw] text-[#001E00] text-center'>DBBL Nexus Card</h1>
+                                            <h1 className='md:text-[.8vw] text-[4vw] text-[#001E00] text-center'>DBBL Nexus Card</h1>
                                         </div>
                                     </div>
-                                    <div className='w-[9vw] h-[9vw] bg-[#F2F2F2] rounded-[4px] flex items-center'>
+                                    <div className={`md:w-[9vw] md:h-[9vw] w-[43vw] h-[43vw] bg-[#F2F2F2] rounded-[4px] flex items-center`}>
                                         <div className='mx-auto'>
                                             <div className='flex justify-center mb-[.2vw]'>
                                                 <Image
@@ -71,10 +72,10 @@ const Debit = () => {
                                                     src={rocket}
                                                     alt='image' />
                                             </div>
-                                            <h1 className='text-[.8vw] text-[#001E00] text-center'>Rocket</h1>
+                                            <h1 className='md:text-[.8vw] text-[4vw] text-[#001E00] text-center'>Rocket</h1>
                                         </div>
                                     </div>
-                                    <div className='w-[9vw] h-[9vw] bg-[#F2F2F2] rounded-[4px] flex items-center'>
+                                    <div className={`md:w-[9vw] md:h-[9vw] w-[43vw] h-[43vw] bg-[#F2F2F2] rounded-[4px] flex items-center`}>
                                         <div className='mx-auto'>
                                             <div className='flex justify-center mb-[.2vw]'>
                                                 <Image
@@ -82,10 +83,10 @@ const Debit = () => {
                                                     src={bkash}
                                                     alt='image' />
                                             </div>
-                                            <h1 className='text-[.8vw] text-[#001E00] text-center'>Save bKash Account</h1>
+                                            <h1 className='md:text-[.8vw] text-[4vw] text-[#001E00] text-center'>Save bKash Account</h1>
                                         </div>
                                     </div>
-                                    <div onClick={() => { handlecash() }} className={`w-[9vw] h-[9vw] ${bground} rounded-[4px] flex items-center`}>
+                                    <div onClick={() => { handlecash() }} className={`md:w-[9vw] md:h-[9vw] w-[43vw] h-[43vw] ${bground} rounded-[4px] flex items-center`}>
                                         <div className='mx-auto'>
                                             <div className='flex justify-center mb-[.2vw]'>
                                                 <Image
@@ -93,7 +94,7 @@ const Debit = () => {
                                                     src={cash}
                                                     alt='image' />
                                             </div>
-                                            <h1 className='text-[.8vw] text-[#001E00] text-center'>Cash On Delivery</h1>
+                                            <h1 className='md:text-[.8vw] text-[4vw]  text-[#001E00] text-center'>Cash On Delivery</h1>
                                         </div>
                                     </div>
                                 </div>
@@ -106,14 +107,14 @@ const Debit = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className='w-[22vw] h-[12vw] px-[.9vw] flex items-center  shadow-small rounded-[8px]'>
-                                <div className='w-[22vw]'>
-                                    <h1 className='text-[1.3vw]  font-[500] text-[#001E00]'>Order Summary</h1>
-                                    <div className='flex justify-between text-[.8vw] text-[#686868] my-[.7vw] '>
+                            <div className='md:w-[22vw] mt-[5vw] md:mt-[0] w-[90vw] md:h-[12vw] h-[24vw] px-[3vw] md:px-[.9vw] flex items-center  shadow-small rounded-[8px]'>
+                                <div className='w-[88vw] md:w-[22vw]'>
+                                    <h1 className='md:text-[1.3vw] text-[3.3vw]  font-[500] text-[#001E00]'>Order Summary</h1>
+                                    <div className='flex justify-between md:text-[.8vw] text-[3vw] text-[#686868] my-[.7vw] '>
                                         <h1 >Subtotal (2 Items and shipping fee included)</h1>
                                         <h1>Tk 130</h1>
                                     </div>
-                                    <div className='flex justify-between font-[500] text-[1.2vw] text-[#686868]'>
+                                    <div className='flex justify-between font-[500] text-[3.2vw] md:text-[1.2vw] text-[#686868]'>
                                         <h1 className='text-[#001E00]'>Total Amount:</h1>
                                         <h1 className='text-[#FB641B]'>Tk 130</h1>
                                     </div>
