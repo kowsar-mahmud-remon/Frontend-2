@@ -1,5 +1,35 @@
+import { useState } from "react";
+
 const Timeline = ({ status, payOption }) => {
+  const [show, setShow] = useState(false);
   // const stat='Delivered'
+  const details = [
+    {
+      id: 1,
+      info: "Your package has been handed over to BD-RedX-API.",
+      time: "02 Jan 2023 - 16:52 ",
+    },
+    {
+      id: 2,
+      info: "Your package has been packed and is being handed over to a logistics partner.",
+      time: "02 Jan 2023 - 16:52 ",
+    },
+    {
+      id: 3,
+      info: "Your order has been successfully verified",
+      time: "02 Jan 2023 - 16:52 ",
+    },
+  ];
+  const [timelineDetails, setTimeLineDetails] = useState(details.slice(0, 1));
+  const handleClick=() => {
+    if (!show) {
+      setTimeLineDetails(details)
+    }else{
+      setTimeLineDetails(details.slice(0,1))
+    }
+    setShow(!show)
+  }
+  
   if (status === "Processing") {
     return (
       <div>
@@ -36,14 +66,19 @@ const Timeline = ({ status, payOption }) => {
           <div className="flex justify-center items-center">
             <div className="w-4/5 p-7 bg-[#F2F3F7] rounded mt-3 relative">
               <div className="w-5 h-5 bg-[#F2F3F7] absolute -top-2 left-16 rotate-45"></div>
-              {/* eta dynamic hobe */}
-              <p>
-                31 Dec 2022 - 16:52{" "}
-                <span className="font-[500]">
-                  Your order has been successfully verified
+              {timelineDetails?.map((data) => (
+                <>
+                  <p>
+                    {data.time} <span className="font-[500]">{data.info}</span>
+                  </p>
+                </>
+              ))}
+
+              <p className="text-[#287DF3] text-center">
+                <span onClick={handleClick} className=" cursor-pointer">
+                  {!show ? "View More" : "View Less"}
                 </span>
               </p>
-              <p className="text-[#287DF3] text-center">View More</p>
             </div>
           </div>
         </div>
@@ -65,14 +100,19 @@ const Timeline = ({ status, payOption }) => {
                   <div className="">
                     <div className=" h-[96px] p-2 bg-[#F2F3F7] rounded mt-3 relative text-[12px] ml-6 ">
                       <div className="w-3 h-3 bg-[#F2F3F7] absolute -top-1 -z-10 left-4 rotate-45"></div>
-                      {/* eta dynamic hobe */}
-                      <p>
-                        31 Dec 2022 - 16:52{" "}
-                        <span className="font-[500]">
-                          Your order has been successfully verified
+                      {timelineDetails?.map((data) => (
+                        <>
+                          <p>
+                            {data.time}{" "}
+                            <span className="font-[500]">{data.info}</span>
+                          </p>
+                        </>
+                      ))}
+                      <p className="text-[#287DF3] text-center">
+                        <span onClick={handleClick} className=" cursor-pointer">
+                          {!show ? "View More" : "View Less"}
                         </span>
                       </p>
-                      <p className="text-[#287DF3] ">View More</p>
                     </div>
                     <div className="flex items-center">
                       <div className="w-3 h-3 rounded-full border-2 border-[#F2F2F2] bg-[#F2F2F2]"></div>
@@ -103,16 +143,21 @@ const Timeline = ({ status, payOption }) => {
                     <p className="ml-2">Payment Success</p>
                   </div>
                   <div className="">
-                    <div className=" h-[96px] p-2 bg-[#F2F3F7] rounded mt-3 relative text-[12px] ml-6 ">
+                    <div className=" h-[96px] p-2 bg-[#F2F3F7] rounded mt-3 relative text-[12px] ml-6 overflow-y-scroll">
                       <div className="w-3 h-3 bg-[#F2F3F7] absolute -top-1 -z-10 left-4 rotate-45"></div>
-                      {/* eta dynamic hobe */}
-                      <p>
-                        31 Dec 2022 - 16:52{" "}
-                        <span className="font-[500]">
-                          Your order has been successfully verified
+                      {timelineDetails?.map((data) => (
+                        <>
+                          <p>
+                            {data.time}{" "}
+                            <span className="font-[500]">{data.info}</span>
+                          </p>
+                        </>
+                      ))}
+                      <p className="text-[#287DF3] ">
+                        <span onClick={handleClick} className=" cursor-pointer">
+                          {!show ? "View More" : "View Less"}
                         </span>
                       </p>
-                      <p className="text-[#287DF3] ">View More</p>
                     </div>
                     <div className="flex items-center">
                       <div className="w-3 h-3 rounded-full border-2 border-[#026C51] bg-[#026C51]"></div>
