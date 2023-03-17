@@ -1,4 +1,4 @@
-import delte from '../../assets/images/delete.png'
+import dlt from '../../assets/images/delete.png'
 import tomato from '../../assets/images/tomato.png'
 import heart from '../../assets/images/heart.png'
 import Image from 'next/image'
@@ -27,7 +27,7 @@ const Checkout = () => {
                         </div>
                         <div className='flex items-center'>
                             <Image
-                                src={delte}
+                                src={dlt}
                                 alt="delte product"
                                 width="18"
                                 height="21"

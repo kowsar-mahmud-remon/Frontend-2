@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import NavicationWithSideNavLayout from "../../layouts/NavicationWithSideNavLayout";
 import Image from "next/image";
 import vector from "../../assets/images/product_page/Vector.png";
@@ -59,8 +60,50 @@ import img5 from "../../assets/images/payOption/5.png";
 import img6 from "../../assets/images/payOption/6.png";
 import img7 from "../../assets/images/payOption/7.png";
 import img8 from "../../assets/images/payOption/8.png";
+import CouponCard from "../../components/ManageAccoutSideBar/CouponCard";
+
+const coupons = [
+  {
+    ShopName: "FamilyBazar",
+    Discount: "50% Discount Product Sell",
+    Coupon: "SAVE50",
+    End: "25 May 2023",
+    Image: "/image 369.png",
+  },
+  {
+    ShopName: "FamilyBazar",
+    Discount: "Free Delivery Promo",
+    Coupon: "SAVE50",
+    End: "25 May 2023",
+    Image: "/image 371.png",
+  },
+];
+const giftCards = [
+  {
+    image: "/image 379.png",
+    Discount: "10% Cashback",
+    End: "25 Mar 2023",
+    payment: "Islamic Bank",
+  },
+  {
+    image: "/image 379.png",
+    Discount: "10% Cashback",
+    End: "25 Mar 2023",
+    payment: "bKash",
+  },
+];
 
 const ProductPage = () => {
+  // for coupone
+  const [showDiv, setShowDiv] = useState(false);
+
+  // for coupone and gift card
+  const [isActive, setActive] = useState("StoreCoupon");
+
+  const handleButtonClick = () => {
+    setShowDiv(!showDiv);
+  };
+
   const [img, setImg] = useState(null);
   const router = useRouter();
   const { slug, subCategoryId } = router.query;
@@ -137,7 +180,7 @@ const ProductPage = () => {
   } = useGetProductRatingQuery(_id && _id, {
     skip: callApi,
   });
-  console.log(ratingData)
+  console.log(ratingData);
 
   // oroduct details api
   const {
@@ -303,19 +346,17 @@ const ProductPage = () => {
                 </div>
               </div>
 
-              <div className="flex gap-7 justify-between ">
+              <div className="flex gap-[8px] md:gap-7 justify-between ">
                 <label
                   htmlFor="my-modal-4"
                   onClick={addToCartDb}
                   className="w-full flex justify-center items-center gap-3 md:btn-md md:w-[240px] h-[53px] bg-[#FF9F00] font-semibold text-white rounded-md cursor-pointer"
                 >
-                  Add to Cart{" "}
-                  <FaShoppingCart className="text-white text-lg mb-1" />
+                  Add to Cart <FaShoppingCart className="text-white text-lg " />
                 </label>
 
-                <button className="w-full flex justify-center items-center gap-3 btn-sm md:btn-md md:w-[240px] h-[53px] bg-[#FB641B] font-semibold text-white rounded-md">
-                  Buy Now{" "}
-                  <BsFillBagCheckFill className="text-white text-lg mb-2" />
+                <button className="w-full flex justify-center items-center gap-3  md:btn-md md:w-[210px] h-[53px] bg-[#FB641B] font-semibold text-white rounded-md">
+                  Buy Now <BsFillBagCheckFill className="text-white text-lg " />
                 </button>
               </div>
             </div>
@@ -414,6 +455,117 @@ const ProductPage = () => {
                   </p>
                 </div>
               </div>
+              {/* for coupone */}
+              <div className="relative mt-[24px]">
+                <>
+                  <span className="mr-[12px] ">Coupon:</span>
+                  <button
+                    className="bg-[#FB641B] rounded-[4px]  text-white px-[12px] py-[6px] "
+                    onClick={handleButtonClick}
+                  >
+                    Collect Coupon
+                    <Image
+                      className="inline ml-[8px]"
+                      width={9}
+                      height={16}
+                      src="/bottomarrow.png"
+                      alt=""
+                    />
+                  </button>
+                  {showDiv && (
+                    <div className="bg-white shadow-small p-[16px] max-w-[476px] h-[448px]">
+                      <div className="grid grid-cols-2 ">
+                        <button
+                          onClick={() => setActive("StoreCoupon")}
+                          className={
+                            isActive === "StoreCoupon"
+                              ? "text-[#FB641B]  text-[16px] h-[48px] border-b-[2px] border-b-[#FB641B] "
+                              : "  text-[16px]"
+                          }
+                        >
+                          <p className="">Store Coupon</p>
+                        </button>
+                        <button
+                          onClick={() => setActive("GiftCard")}
+                          className={
+                            isActive === "GiftCard"
+                              ? "text-[#FB641B] border-b-[2px] border-[#FB641B] text-[16px] h-[48px] "
+                              : "  text-[16px]"
+                          }
+                        >
+                          <p className="">Gift Card</p>
+                        </button>
+                      </div>
+                      {isActive === "StoreCoupon" && (
+                        <div>
+                          {coupons.map((coupon) => {
+                            if (coupon.ShopName === "FamilyBazar") {
+                              return <CouponCard coupon={coupon}></CouponCard>;
+                            }
+                          })}
+                          <div className="flex justify-center items-end h-[120px]">
+                            <Link
+                              className="text-[#287DF3]  justify-between"
+                              href="#"
+                            >
+                              See All Store Coupon
+                            </Link>
+                          </div>
+                        </div>
+                      )}
+                      {isActive === "GiftCard" && (
+                        <div>
+                          {giftCards.slice(0, 2).map((giftCard) => (
+                            <>
+                              <div className="couponBoxInside w-full h-[104px] my-[16px] ">
+                                <div className="grid grid-cols-5 xl:grid-cols-3 items-center mx-[12px] py-[12px]">
+                                  <Image
+                                    className="xl:col-span-1 col-span-1 mr-[12px]"
+                                    src={giftCard.image}
+                                    alt=""
+                                    width={110}
+                                    height={80}
+                                  ></Image>
+                                  <div className="xl:col-span-1 col-span-3  xl:ml-[0px] ml-[10px]">
+                                    <h1 className="text-[#001E00] text-[16px] font-[500] whitespace-nowrap  mb-[5px]">
+                                      {giftCard.Discount}
+                                    </h1>
+                                    <h2 className="text-[14px] whitespace-nowrap font-[500] mb-[5px] text-[#001E00]">
+                                      Payment:{" "}
+                                      <span className="text-[14px] ml-[8px] font-[400] text-[#001E00] ">
+                                        {giftCard.payment}
+                                      </span>{" "}
+                                    </h2>
+                                    <h2 className="text-[14px] font-[500]  mb-[5px] text-[#001E00]">
+                                      End:{" "}
+                                      <span className="text-[14px] ml-[8px] font-[400] text-[#001E00]">
+                                        {giftCard.End}
+                                      </span>{" "}
+                                    </h2>
+                                  </div>
+                                  <div className="col-span-1 flex md:items-center items-end h-full">
+                                    <button className="text-[#FB641B] xl:ml-[40px] w-full xl:w-[88px] h-[32px] text-[10px] xl:text-[14px] font-[400] border-[1px] rounded-[4px] border-solid border-[#FB641B] ">
+                                      Buy Now
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </>
+                          ))}
+                          <div className="flex justify-center items-end h-[120px]">
+                            <Link
+                              className="text-[#287DF3]  justify-between"
+                              href="#"
+                            >
+                              See All Gift Card
+                            </Link>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  )}
+                </>
+              </div>
               <div className="mt-9">
                 <h2 className="text-2xl font-[500]">Description</h2>
                 <p className="sm:mt-[14px] text-[16px] leading-[128%] lg:mt-[23px] mt-3 text-[#686868] ">
@@ -443,7 +595,7 @@ const ProductPage = () => {
             <h5 className="text-[24px] font-bold">
               Customer Product Ratings & Reviews
             </h5>
-            
+
             <div className="grid grid-cols-1 md:flex md:justify-start items-center gap-20">
               <div className="">
                 <p className="text-[84px] text-center md:text-left text-[#001E00] font-bold">
@@ -493,23 +645,21 @@ const ProductPage = () => {
                         ))}
                       </div>
                       <div className="">
-                      
-                      <progress
-                        className={`progress progress-${color} bg-green-500 w-56`}
-                        value={total / d._id}
-                        max="100"
-                      ></progress>
-                      <span>({d._id})</span>
-                      <p>hiiii</p>
+                        <progress
+                          className={`progress progress-${color} bg-green-500 w-56`}
+                          value={total / d._id}
+                          max="100"
+                        ></progress>
+                        <span>({d._id})</span>
+                        <p>hiiii</p>
                       </div>
-                      
                     </div>
                   );
                 })}
               </div>
             </div>
           </div>
-          
+
           {reviewData?.result.length > 0 && (
             <>
               <div className="divider text-[#686868] text-lg"></div>
