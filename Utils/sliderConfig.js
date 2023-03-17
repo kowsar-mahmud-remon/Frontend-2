@@ -156,3 +156,11 @@ export const imgSettings = {
     cssEase: "linear",
     arrows: true,
 };
+
+export const moreViewSetting ={
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    cssEase: "linear",
+    arrows: true,
+}
