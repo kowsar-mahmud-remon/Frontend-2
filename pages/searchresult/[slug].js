@@ -3,8 +3,8 @@ import SearchResultLayout from "../../layouts/SearchResultLayout";
 import { searchCollections } from "../../Utils/searchCollections";
 
 
-const searchResult = () => {
-  const router = useRouter();
+const SearchResult = () => { 
+  const router = useRouter(); 
 
   return (
     <div>
@@ -20,4 +20,4 @@ const searchResult = () => {
   );
 };
 
-export default searchResult;
+export default SearchResult;
