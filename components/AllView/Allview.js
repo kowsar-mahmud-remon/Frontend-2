@@ -209,9 +209,9 @@ const Allview = () => {
 
   ]
 
-  const [products, setProducts] = useState([]);
-  return (
-    <div className="lg:mx-[245px]">
+  const [products, setProducts] = useState(false);
+  return ( 
+    <div className="mx-[70px] xxl:w-[80%] xxl:mx-auto  ">
       <div className="mt-[24px]">
         <div className="flex items-center ">
           <div className="">
@@ -231,21 +231,34 @@ const Allview = () => {
         </div>
 
         <div className="mt-[29px]">
-          <div className="grid xxl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-[20px] ">
+          <div className="grid xxl:grid-cols-4 xl:grid-cols-4 lg:grid-cols-3 grid-cols-1 gap-[20px] ">
             {
+              !products &&
+
               allProducts?.slice(0, 12).map((data, index) => (
                 <AllviewCard data={data} key={index}></AllviewCard>))
+
             }
+
+            {
+              products &&
+
+              allProducts?.map((data, index) => (
+                <AllviewCard data={data} key={index}></AllviewCard>))
+
+            }
+
+
           </div>
 
 
         </div>
         <div className="mt-[24px]">
           <div className="flex justify-center">
-            <button className="text-[#FB641B] text-[14px] lg:text-[24px] font-[500] lg:w-[235px] w-[100px] lg:h-[72px] h-[40px] border-[2px] border-solid border-[#FB641B] ">Load More</button>
+            <button onClick={() => setProducts(true)} className="text-[#FB641B] text-[14px] lg:text-[24px] font-[500] lg:w-[235px] w-[100px] lg:h-[72px] h-[40px] border-[2px] border-solid border-[#FB641B]  ">Load More</button>
           </div>
         </div>
-       
+
       </div>
     </div>
   );

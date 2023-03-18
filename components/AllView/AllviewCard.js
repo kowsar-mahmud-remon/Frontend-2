@@ -42,11 +42,11 @@ const AllviewCard = ({ data }) => {
                         <div className="absolute top-3 w-full px-1 text-white">
                             <div className="flex justify-between items-center">
                                 <Image src={profile} alt="img" />
-                                <p>Banglar Big...</p>
-                                <p>Follow 100k+</p>
+                                <p className="text-[12px]">Banglar Big...</p>
+                                <p className="text-[12px]">Follow 100k+</p>
                                 <div className="flex items-center">
                                     <Image src={eye} alt="img" />
-                                    <p>250</p>
+                                    <p className="text-[12px]">250</p>
                                 </div>
                                 <Image src={sound} alt="img" />
                                 <Image src={threedot} alt="img" />
