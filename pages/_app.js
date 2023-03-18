@@ -7,7 +7,8 @@ import Footer from "../components/ProductPage/Footer";
 import SideButtons from '../components/SideButtons/SideButtons';
 import { store } from '../store/store';
 import '../styles/globals.css';
-
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 export default function App({ Component, pageProps }) {
 

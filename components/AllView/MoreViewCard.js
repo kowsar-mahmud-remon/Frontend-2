@@ -29,7 +29,30 @@ const MoreViewCard = ({ data }) => {
     if (!render) return;
     return (
         <div>
-           
+            <div className="w-full h-[740px]">
+                <div className="relative  ">
+
+                    <div>
+                        <ReactPlayer className='rounded-t-[8px]' height={740} text={hide} url="https://youtube.com/shorts/3l4B26DzMo8" />
+                    </div>
+
+
+
+                    <div className="absolute top-3 w-full px-1 text-white">
+                        <div className="flex justify-between items-center">
+                            <Image src={profile} alt="img" />
+                            <p className="text-[12px]">Banglar Big...</p>
+                            <p className="text-[12px]">Follow 100k+</p>
+                            <div className="flex items-center">
+                                <Image src={eye} alt="img" />
+                                <p className="text-[12px]">250</p>
+                            </div>
+                            <Image src={sound} alt="img" />
+                            <Image src={threedot} alt="img" />
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
         </div>

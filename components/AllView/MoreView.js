@@ -7,7 +7,7 @@ import { moreViewSetting } from "../../Utils/sliderConfig";
 import MoreViewCard from "./MoreViewCard";
 
 const MoreView = () => {
-    const slideRef = useRef(null);
+    const slideRef = useRef();
     const allProducts = [
 
         {
@@ -210,18 +210,56 @@ const MoreView = () => {
         },
 
     ]
-  const moreViewSetting ={
-        speed: 500,
+    const moreViewSetting = {
+        arrows: true,
+        infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        cssEase: "linear",
-        arrows: true,
+        vertical: true,
+        verticalSwiping: true,
+        beforeChange: function (currentSlide, nextSlide) {
+            console.log("before change", currentSlide, nextSlide);
+        },
+        afterChange: function (currentSlide) {
+            console.log("after change", currentSlide);
+        },
+
     }
+
+
     return (
-        <div className=" grid grid-cols-2">
+        <div className="flex justify-center mt-[24px] gap-[16px]">
 
 
-           
+
+
+            <div className="grid grid-cols-1  overflow-auto gap-[24px]">
+
+                {
+                    allProducts.map((data, index) => (
+                        <MoreViewCard data={data} key={index}></MoreViewCard>
+                    ))
+                }
+
+            </div>
+
+
+
+
+            <div className="  gap-3 flex flex-col justify-between">
+                <div
+                    // onClick={() => slideRef.current.slickNext()}
+                    className="bg-white w-[38px] h-[38px] rounded-full shadow-xl flex justify-center items-center cursor-pointer"
+                >
+                    <FiChevronUp className="text-[26px]" />
+                </div>
+                <div
+                    // onClick={() => slideRef.current.slickPrev()}
+                    className="bg-white w-[38px] h-[38px] rounded-full shadow-xl flex justify-center items-center cursor-pointer"
+                >
+                    <FiChevronDown className="text-[26px]" />
+                </div>
+            </div>
         </div>
     );
 };
