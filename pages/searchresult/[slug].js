@@ -4,7 +4,7 @@ import { searchCollections } from "../../Utils/searchCollections";
 
 
 const SearchResult = () => { 
-  const router = useRouter();
+  const router = useRouter(); 
 
   return (
     <div>

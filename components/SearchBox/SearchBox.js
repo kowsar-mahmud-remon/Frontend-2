@@ -631,8 +631,8 @@ const SearchBox = () => {
               <div className="flex justify-between ">
                 <p className="font-semibold mb-[16px] text-lg text-[#001E00]">Seller</p>
                 <Image className="h-2 mt-2" src={v2} alt="img" />
-              </div>
-
+              </div> 
+ 
               <div className="mb-[16px]">
                 <form className="">
                   <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center px-2">
