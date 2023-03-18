@@ -21,12 +21,13 @@ export default function App({ Component, pageProps }) {
           <Navication />
         </div>
         <div className='md:mb-0 mb-20 lg:mr-[70px] md:mr-[70px]'>
+        <div className='md:mb-0 mb-20 lg:mr-[80px]'>
           <Component {...pageProps} />
         </div>
         <div className='hidden lg:block'>
           <Footer />
         </div>
-        <Toaster   position="top-center" />
+        <Toaster position="top-center" />
       </Provider>
     </div>
   );
