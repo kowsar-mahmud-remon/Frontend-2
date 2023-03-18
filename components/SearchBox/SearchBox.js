@@ -455,7 +455,7 @@ const SearchBox = () => {
                             className={` ${
                               text === true
                                 ? "mb-[16px] text-2xl font-semibold text-[#026C51] cursor-pointer"
-                                : "mb-[16px] text-[14px] font-semibold cursor-pointer"
+                                : "mb-[16px] text-[14px] lg:text-sm md:text-sm text-xs font-semibold cursor-pointer"
                             } `}
                             key={vproduct.id}
                           >
@@ -472,8 +472,8 @@ const SearchBox = () => {
                           onClick={() => handleBtn(vproduct.id)}
                           className={` ${
                             text === true
-                              ? "mb-[16px] text-[14px] font-semibold text-[#026C51] cursor-pointer"
-                              : "mb-[16px] text-[14px] font-semibold cursor-pointer"
+                              ? "mb-[16px] text-[14px] lg:text-sm md:text-sm text-xs font-semibold text-[#026C51] cursor-pointer"
+                              : "mb-[16px] text-[14px] lg:text-sm md:text-sm text-xs font-semibold cursor-pointer"
                           } `}
                           key={vproduct.id}
                         >
@@ -506,7 +506,7 @@ const SearchBox = () => {
             <div className="px-4">
               <div className=" lg:block md:block hidden">
                 <div className="flex items-center justify-between mb-[16px]">
-                  <p className="font-semibold text-[#001E00]">Filters</p>
+                  <p className="font-semibold text-lg text-[#001E00]">Filters</p>
                   <p
                     className="text-[#287DF3] font-medium cursor-pointer"
                     onClick={handleclearAll}
@@ -568,7 +568,7 @@ const SearchBox = () => {
 
             <div className="px-4">
               <div className="flex justify-between">
-                <p className="font-semibold mb-[16px] text-[#001E00] ">
+                <p className="font-semibold text-lg mb-[16px] text-[#001E00] ">
                   Prices
                 </p>
                 <Image className="h-2 mt-2" src={v2} alt="img" />
@@ -602,7 +602,7 @@ const SearchBox = () => {
             <div className="">
               <div className="mb-[16px] lg:hidden md:hidden block">
                 <div className="flex justify-between">
-                  <p className="font-semibold mb-[16px] text-[#001E00]">
+                  <p className="font-semibold text-lg mb-[16px] text-[#001E00]">
                     Brands
                   </p>
                   <Image className="h-2 mt-2" src={v2} alt="img" />
@@ -629,10 +629,10 @@ const SearchBox = () => {
             {/* --------------brand section end----------------- */}
             <div className="px-4">
               <div className="flex justify-between ">
-                <p className="font-semibold mb-[16px] text-[#001E00]">Seller</p>
+                <p className="font-semibold mb-[16px] text-lg text-[#001E00]">Seller</p>
                 <Image className="h-2 mt-2" src={v2} alt="img" />
-              </div>
-
+              </div> 
+ 
               <div className="mb-[16px]">
                 <form className="">
                   <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center px-2">
@@ -711,7 +711,7 @@ const SearchBox = () => {
 
             <div className="px-4">
               <div className="flex justify-between pb-4">
-                <h3>Discount</h3>
+                <h3 className="font-semibold text-lg text-[#001E00]">Discount</h3>
                 <Image className="h-2 mt-2" src={v2} alt="img" />
               </div>
               <div>
@@ -743,7 +743,7 @@ const SearchBox = () => {
 
             <div className="px-4">
               <div className="flex justify-between ">
-                <p className="font-semibold mb-[16px] text-[#001E00]">
+                <p className="font-semibold mb-[16px] text-lg text-[#001E00]">
                   Location
                 </p>
                 <Image className="h-2 mt-2" src={v2} alt="img" />
@@ -947,7 +947,7 @@ const SearchBox = () => {
             <div className="px-4">
               <div className="lg:mb-[16px] md:mb-[16px]  lg:block md:block hidden lg:pb-4 md:pb-4 ">
                 <div className="flex justify-between">
-                  <p className="font-semibold mb-[16px] text-[#001E00]">
+                  <p className="font-semibold mb-[16px] text-lg text-[#001E00]">
                     Brands
                   </p>
                   <Image className="h-2 mt-2" src={v2} alt="img" />
@@ -1133,7 +1133,7 @@ const SearchBox = () => {
                                     className={` ${
                                       text === true
                                         ? "mb-2 text-2xl font-semibold text-[#026C51] cursor-pointer"
-                                        : "mb-2 text-xs font-medium cursor-pointer"
+                                        : "mb-2 lg:text-sm md:text-sm text-xs font-medium cursor-pointer"
                                     } `}
                                     key={vproduct.id}
                                   >
@@ -1150,8 +1150,8 @@ const SearchBox = () => {
                                   onClick={() => handleBtn(vproduct.id)}
                                   className={` ${
                                     text === true
-                                      ? "mb-2 text-xs font-medium text-[#026C51] cursor-pointer"
-                                      : "mb-2 text-xs font-medium cursor-pointer"
+                                      ? "mb-2 lg:text-sm md:text-sm text-xs font-medium text-[#026C51] cursor-pointer"
+                                      : "mb-2 lg:text-sm md:text-sm text-xs font-medium cursor-pointer"
                                   } `}
                                   key={vproduct.id}
                                 >
@@ -1540,7 +1540,7 @@ const SearchBox = () => {
                   </div>
                 </div>
               </Drawer>
-            </div>
+            </div>  
           </div>
         </div>
         <div className="flex flex-wrap items-center gap-5 px-5">
