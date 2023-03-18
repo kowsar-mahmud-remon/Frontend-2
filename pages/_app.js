@@ -20,6 +20,7 @@ export default function App({ Component, pageProps }) {
         <div className='lg:block hidden'>
           <Navication />
         </div>
+        <div className='md:mb-0 mb-20 lg:mr-[70px] md:mr-[70px]'>
         <div className='md:mb-0 mb-20 lg:mr-[80px]'>
           <Component {...pageProps} />
         </div>
