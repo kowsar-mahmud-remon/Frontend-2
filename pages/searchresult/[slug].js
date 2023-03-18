@@ -3,7 +3,7 @@ import SearchResultLayout from "../../layouts/SearchResultLayout";
 import { searchCollections } from "../../Utils/searchCollections";
 
 
-const SearchResult = () => {
+const SearchResult = () => { 
   const router = useRouter();
 
   return (
