@@ -14,7 +14,7 @@ const SideButtons = () => {
      window.scrollTo({ top: 0, behavior: "smooth" });
   }
   return (
-    <div className="relative hidden md:block ">
+    <div className="relative hidden lg:block ">
       <div className=" fixed top-1/2 right-0 transform -translate-y-1/2 mx-[10px]">
         <div>
           <Link href="/cart">

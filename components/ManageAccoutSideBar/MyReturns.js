@@ -141,7 +141,7 @@ const MyReturns = () => {
                                         {data.status}
                                     </p>
                                     <p className=" hidden  text-[#287DF3] md:block mt-[31px] mb-[30px] mr-[19px]">
-                                        {data.deliveredDate}
+                                        <Link href={`myReturns/myreturns01`}>{data.deliveredDate}</Link>
                                     </p>
                                 </div>
                             </div>
