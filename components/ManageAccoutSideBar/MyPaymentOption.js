@@ -118,13 +118,13 @@ const MyPaymentOption = () => {
                 <div className="flex items-center pt-[15px] gap-[27px]">
                   <Image className="w-[44px]" src={visa} alt="" />
                   <div>
-                    <h1 className="text-[#001E00] text-[16px]">425120******1452</h1>
-                    <h2 className="text-[#686868] text-[12px]">Expires 02/27</h2>
+                    <h1 className="text-[#001E00] text-[3.8vw] md:text-[16px]">425120******1452</h1>
+                    <h2 className="text-[#686868] text-[3.4vw] md:text-[12px]">Expires 02/27</h2>
                   </div>
                 </div>
                 <div>
                   <label htmlFor="delete-modal-3">
-                    <h1 className="text-[#287DF3] text-[14px] pt-[15px]">Delete</h1>
+                    <h1 className="text-[#287DF3] text-[3.6vw] pt-[15px] md:text-[14px]">Delete</h1>
                   </label>
                 </div>
               </div>
@@ -137,11 +137,11 @@ const MyPaymentOption = () => {
               <div className="flex items-center justify-between mx-[16px]">
                 <div className="flex items-center pt-[15px] gap-[27px]">
                   <Image className="w-[56px]" src={bkash} alt="" />
-                  <h1 className="text-[#001E00] text-[16px]">014*******452</h1>
+                  <h1 className="text-[#001E00] text-[3.8vw] md:text-[16px]">014*******452</h1>
                 </div>
                 <div>
                   <label htmlFor="">
-                    <h1 className="text-[#287DF3] text-[14px] pt-[15px]">Delete</h1>
+                    <h1 className="text-[#287DF3] text-[3.6vw] pt-[15px] md:text-[14px]">Delete</h1>
                   </label>
                 </div>
               </div>

@@ -1,58 +1,72 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { FaArrowLeft } from "react-icons/fa";
 
 const ManageAccount = () => {
     const router = useRouter();
     return (
-        <div className="max-w-[924px] md:mr-5">
-            <div className="lg:block hidden">
+        <div className=" md:mr-5 mx-[24px] md:mx-[0px]">
+            <div className="">
                 <div className=" ">
-                    <div>
+                    <div className="lg:block hidden">
                         <h1 className="text-[#FB641B] text-[24px] font-semibold">
                             Manage My Account
                         </h1>
                     </div>
-                    <div className="grid grid-cols-8 gap-6 py-8">
-                        <div className="manageAccountBox col-span-3 w-full    bg-base-100 shadow-lg">
+
+                    <div className="md:hidden block ">
+                        <button
+                            onClick={() => router.back()}
+                            className="flex items-center gap-[13px]"
+                        >
+                            <FaArrowLeft className=""></FaArrowLeft>
+                            <h1 className="text-[20px]  font-[500] text-[#001E00]">
+                                Manage My Profile
+                            </h1>
+                        </button>
+                    </div>
+                    <div className="grid lg:grid-cols-8 mt-[16px] lg:mt-[0px] grid-rows-1 gap-6 lg:py-8">
+                        <div className="manageAccountBox lg:col-span-3 w-full  h-[148px] md:h-full  bg-base-100 shadow-small">
                             <div className=" px-4 py-4">
-                                <h1 className="font-bold whitespace-nowrap text-[18px]">
+                                <h1 className=" font-[500] whitespace-nowrap text-[16px] lg:text-[1.5vw] xl:text-[18px]">
                                     Personal Profile |{" "}
-                                    <span className="text-[#287DF3] font-[400] text-[16px]">Edit</span>
+                                    <Link href="#" ><span className="text-[#287DF3] font-[400] text-[14px] lg:text-[1.5vw] xl:text-[16px]">Edit</span></Link>
                                 </h1>
-                                <ul className="text-[16px]">
+                                <ul className="lg:text-[1.3vw] text-[16px] xl:text-[16px]">
                                     <li>Abdul Karim</li>
                                     <li>abdulkorim@gmail.com</li>
                                     <li className="text-[#287DF3] whitespace-nowrap">Subscribe to outer Newsletter</li>
                                 </ul>
                             </div>
                         </div>
-                        <div className="manageAccountBox  col-span-5  w-full   bg-base-100 shadow-lg">
-                            <div className="grid grid-cols-9 ">
-                                <div className=" p-[16px] col-span-4 ">
-                                    <h1 className="font-bold  text-[18px] mb-2">
+                        <div className="manageAccountBox  lg:col-span-5  w-full h-[391px] lg:h-full   bg-base-100 shadow-small">
+                            <div className="grid lg:grid-cols-9  grid-rows-1">
+                                <div className=" lg:p-[16px]  lg:col-span-4  mx-[16px] lg:mx-[0px]">
+                                    <h1 className=" font-[500] lg:text-[1.5vw] text-[16px]  xl:text-[18px] lg:mb-2 my-[10px]">
                                         Address Book |{" "}
-                                        <span className="text-[#287DF3] font-[400] text-[16px]">Edit</span>
+                                        <Link href="#"><span className="text-[#287DF3] font-[400] text-[14px] lg:text-[1.5vw] xl:text-[16px]">Edit</span></Link>
                                     </h1>
-                                    <p className="mb-2 whitespace-nowrap text-[14px] text-[#686868]">
+                                    <p className="lg:mb-2 whitespace-nowrap text-[16px] lg:text-[1.2vw] xl:text-[14px] text-[#686868]">
                                         DEFAULT SHIPPING ADDRESS
                                     </p>
-                                    <p className="font-bold text-[16px] mb-2">Abdul Karim</p>
-                                    <ul className="text-[16px]">
+                                    <p className=" text-[#001E00] text-[16px] lg:text-[1.5vw] xl:text-[16px] font-[500] lg:mb-2 mt-[10px]">Abdul Karim</p>
+                                    <ul className="xl:text-[16px] text-[16px] lg:text-[1.2vw]">
                                         <li>Ramgonj Tower 16/14,</li>
                                         <li>Giridhara,Matuil,Kodomtali</li>
                                         <li>Dhaka-1362</li>
                                         <li>+88 012 342 450 45</li>
                                     </ul>
                                 </div>
-                            
-                                <div class=" col-span-1  text-center mx-auto w-0.5 h-[190px] mt-[15px] bg-[#707070] border-solid"></div>
-                                <div className="col-span-4    mt-[52px] ">
-                                    <p className="mb-2 whitespace-nowrap overflow-hidden text-[14px] text-[#686868]">
+
+                                <div className=" lg:col-span-1 lg:block hidden text-center mx-auto w-0.5 h-[190px] mt-[15px] bg-[#707070] border-solid"></div>
+                                <p className=" h-[0px] left-[24px] mt-[10px] lg:hidden block  border-[1px] border-solid  border-[#F2F2F2] w-full  "></p>
+                                <div className="lg:col-span-4  mx-[16px] lg:mx-[0px]  xl:mt-[52px] lg:mt-[45px] mt-[16px]">
+                                    <p className="mb-2 whitespace-nowrap text-[16px]  xl:text-[14px] lg:text-[1.2vw]  text-[#686868]">
                                         DEFAULT SHIPPING ADDRESS
                                     </p>
-                                    <p className="font-bold text-[16px] ">Abdul Karim</p>
-                                    <ul className="text-[16px] mt-[8px]">
+                                    <p className=" text-[#001E00] font-[500] text-[16px] lg:text-[1.5vw] xl:text-[16px] ">Abdul Karim</p>
+                                    <ul className="xl:text-[16px] text-[16px] lg:text-[1.2vw] mt-[8px]">
                                         <li className="whitespace-nowrap overflow-hidden">Bashundhara City Shopping</li>
                                         <li>Complex 3 No Tejturi Bazar</li>
                                         <li>West</li>
@@ -62,7 +76,7 @@ const ManageAccount = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="">
+                    <div className="lg:block hidden">
                         <div className="card w-full  shadow-lg rounded-lg">
                             <p className="font-bold text-[16px] py-4 px-4">Resent Orders</p>
                             <table className="table w-full text-[16px] ">
@@ -98,7 +112,7 @@ const ManageAccount = () => {
                 <div></div>
             </div>
 
-            <div className="lg:hidden block">
+            {/* <div className="lg:hidden block">
                 <div className="mt-[66px] m-[24px]">
                     <div>
                         <button
@@ -166,7 +180,7 @@ const ManageAccount = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 };

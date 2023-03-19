@@ -239,7 +239,7 @@ top: 453px; */
 
 .manageAccountBox {
   background: #ffffff;
-  /* Effect 16 */
+
 
   box-shadow: 0px 6px 28px rgba(0, 0, 0, 0.16);
   border-radius: 8px;
@@ -550,4 +550,10 @@ input[type="checkbox"] {
 }
 
 
+.react-player {
 
+
+  border-radius: 8px !important;
+
+
+}
