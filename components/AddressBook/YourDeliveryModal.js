@@ -6,9 +6,13 @@ import selected from "../../assets/images/selet.jpg";
 import AddNewAddress from "./AddNewAddress";
 import CustomModalAddNew from "./CustomModalAddNew/CustomModalAddNew";
 import EditYourDelivery from "./CustomModalAddNew/EditYourDelivery";
+import AddNewUserModal from "./RawCusotomModal/AddNewUserModal";
 const YourDeliveryModal = () => {
   const [modalIsOpen, setIsOpen] = useState(false);
   const [addNew, setAddNew] = useState(false);
+  const [modal, setModal] = useState(false);
+
+  const [active, setActive] = useState({ name: "first" });
 
   const items = [
     {
@@ -36,7 +40,10 @@ const YourDeliveryModal = () => {
     },
   ];
 
-  const [active, setActive] = useState({ name: "first" });
+
+  const handleClose = ()=>{
+    setModal(false)
+  }
 
   const handleActive = (item) => {
     setActive(item);
@@ -59,6 +66,7 @@ const YourDeliveryModal = () => {
         modalIsOpen={modalIsOpen}
         setIsOpen={setIsOpen}
       ></EditYourDelivery>
+      <AddNewUserModal handleClose={handleClose} modal={modal}></AddNewUserModal>
       <input type="checkbox" id="your-delivary" className="modal-toggle" />
       <div className={`modal ${style.modalBackground}`}>
         <div className="modal-box relative  max-w-[780px] scrollbar-hide m-0 p-0">
@@ -83,7 +91,6 @@ const YourDeliveryModal = () => {
               {items.map((item, i) => {
                 return (
                   <>
-                  
                     <div
                       key={i}
                       onClick={() => handleActive(item)}
@@ -102,19 +109,19 @@ const YourDeliveryModal = () => {
                           )}
                         </div>
                         <div className="">
-                          {
-                            item && <button
-                            onClick={()=>openModals(item)}
-                            className="text-[#287DF3] bg-[#F2F3F7] text-[12px] px-2 rounded cursor-pointer mr-4"
-                          >
-                            <label
-                              htmlFor="your-delivary"
-                              className="cursor-pointer"
+                          {item && (
+                            <button
+                              onClick={() => openModals(item)}
+                              className="text-[#287DF3] bg-[#F2F3F7] text-[12px] px-2 rounded cursor-pointer mr-4"
                             >
-                              Edit
-                            </label>
-                          </button>
-                          }
+                              <label
+                                htmlFor="your-delivary"
+                                className="cursor-pointer"
+                              >
+                                Edit
+                              </label>
+                            </button>
+                          )}
                         </div>
                       </div>
                       <div className="px-[22px] address-card -mt-4">
@@ -154,14 +161,11 @@ const YourDeliveryModal = () => {
               })}
             </div>
           </div>
-
-          <div
-            className={`modal-action flex justify-between items-center ${style.modalShaddow} mt-48 p-6`}
-          >
+          <div className="flex justify-center mt-10 lg:hidden md:hidden">
             <div className="flex items-center">
               <Image className="w-[14px] mr-2" src={plus} alt="" />
               <button
-                onClick={handleAddNew}
+                onClick={()=> setModal(true)}
                 className="text-base text-[#686868]  font-medium"
               >
                 <label htmlFor="your-delivary" className="cursor-pointer">
@@ -169,9 +173,26 @@ const YourDeliveryModal = () => {
                 </label>
               </button>
             </div>
+          </div>
+          <div
+            className={`modal-action flex lg:justify-between md:justify-between justify-center items-center ${style.modalShaddow} lg:mt-40 md:mt-40  p-6`}
+          >
+            <div className="lg:block md:block hidden">
+              <div className="flex items-center">
+                <Image className="w-[14px] mr-2" src={plus} alt="" />
+                <button
+                  onClick={()=> setModal(true)}
+                  className="text-base text-[#686868]  font-medium"
+                >
+                  <label htmlFor="your-delivary" className="cursor-pointer">
+                    Add New Address
+                  </label>
+                </button>
+              </div>
+            </div>
             <button
               type=""
-              className="w-[172px] h-[48px] bg-[#FB641B] hover:bg-[#fc5907] rounded-lg text-base  cursor-pointer text-white "
+              className="w-[172px] h-[48px] bg-[#FB641B] hover:bg-[#d84901] rounded-lg text-base text-center cursor-pointer text-white "
             >
               <label htmlFor="your-delivary" className="">
                 Confirm
