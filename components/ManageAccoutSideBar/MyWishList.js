@@ -204,36 +204,36 @@ const MyWishList = () => {
           <div className="mt-[16px]">
             <div className="w-full h-full wishlistResponsiveBox">
               <div className="mx-[12px] ">
-                <h1 className="text-[#686868] pt-[12px] text-[14px]">
+                <h1 className="text-[#686868] pt-[12px] text-[3.6vw] md:text-[14px]">
                   Purchased on: 21 Dce 2022 10:21:00
                 </h1>
                 <div className="flex items-center  justify-between gap-[15px]">
                   <div className="flex">
                     <Image
-                      src="/image 8.png"
+                      src="/image 6.png"
                       width={79}
                       height={63}
                       alt=""
                     ></Image>
-                    <div>
-                      <h1 className="text-[16px] text-[#001E00]">
+                    <div className="ml-[12px]">
+                      <h1 className="md:text-[16px] text-[3.8vw]  text-[#001E00]">
                         Tomato (Local) 500...
                       </h1>
-                      <h1 className="text-[#FB641B] text-[16px] font-[500]">
+                      <h1 className="text-[#FB641B] text-[3.8vw] md:text-[16px] font-[500]">
                         Tk. 60
                       </h1>
                       <div className="flex gap-[8px] mt-[4px]">
-                        <p className="text-[#707070] text-[10px] font-[500] line-through">
+                        <p className="text-[#707070] text-[2.5vw] md:text-[10px] font-[500] line-through">
                           Tk. 80
                         </p>
-                        <p className="text-[#707070] text-[10px] font-[400]">
+                        <p className="text-[#707070] text-[2.5vw] md:text-[10px] font-[400]">
                           (20% off)
                         </p>
                       </div>
                     </div>
                   </div>
                   <div className="mb-[10px]">
-                    <div className="w-[66px] flex items-center h-[28px] mt-[10px]  bg-[#FB641B] rounded-[26px]">
+                    <div className="md:w-[66px] w-full   flex items-center h-[28px] mt-[10px]  bg-[#FB641B] rounded-[26px]">
                       <Image
                         src="/shopingcart.png"
                         className=" ml-[24px]"
@@ -259,42 +259,42 @@ const MyWishList = () => {
               <div className="grid grid-cols-2  gap-[16px]">
                 {wishlistData.slice(0, 4).map((data) => (
                   <>
-                    <div className="wishlistcard w-full h-full">
+                    <div className="wishlistcard w-full  h-full">
                       <div>
                         <label className="flex ">
                           <Image
-                            src="/image 8.png"
+                            src="/image 6.png"
                             width={180}
                             height={126}
                             alt=""
                           ></Image>
-                          <div className="relative right-[50px]">
+                          <div className="relative right-[40px] md:right-[50px]">
                             <div className="wishlistloveButton absolute  mt-[13px] w-[28px] h-[28px] flex items-center justify-center rounded-full">
                               <FaHeart className=" text-[#F2F2F2]  w-[17px] h-[16px] hover:fill-[#FB641B]  "></FaHeart>
                             </div>
                           </div>
                         </label>
                       </div>
-                      <div className="ml-[16px]">
-                        <p className="text-[#FB641B] font-[500] text-[18px]">
+                      <div className="mx-[8px]">
+                        <p className="text-[#FB641B] font-[500] text-[4vw] md:text-[18px]">
                           Tk 1024
                         </p>
-                        <p className="text-[#001E00] text-[14px] font-[400] w-full">
+                        <p className="text-[#001E00] text-[3.6vw] md:text-[14px] font-[400] w-full">
                           Misti Kumra Fali (Sweet Pumpkin Fali)
                         </p>
                         <div className="mt-[10px] flex gap-[8px] items-center">
                           <div className="flex gap-[4px] items-center w-[35px] h-[16px] bg-[#026C51] rounded-[2px]">
-                            <p className="text-[12px] ml-[2px] font-normal text-white">
+                            <p className="md:text-[12px] text-[2.9vw] ml-[2px] font-normal text-white">
                               4.9
                             </p>
                             <FaStar className="w-[12px] h-[12px] text-white "></FaStar>
                           </div>
-                          <p className="text-[#686868] text-[10px] font-[400]">
+                          <p className="text-[#686868] text-[2.7vw] md:text-[10px] font-[400]">
                             24 Ratings & 5 Reviews
                           </p>
                         </div>
                         <div className="mt-[4px] flex gap-[8px]">
-                          <p className="text-[#686868] text-[14px]">Seller: </p>
+                          <p className="text-[#686868] text-[3.6vw] md:text-[14px]">Seller: </p>
                           <Image
                             src="/seller.png"
                             width={50}
@@ -302,9 +302,9 @@ const MyWishList = () => {
                             alt=""
                           ></Image>
                         </div>
-                        <div className="mx-[20px] mt-[34px] mb-[8px]">
-                          <button className="w-full flex items-center justify-center gap-[4px] h-[38px] bg-[#FB641B] rounded-[4px]">
-                            <h1 className="text-[#FFFFFF]  text-[3vw] whitespace-nowrap font-[500]">
+                        <div className="mx-auto mt-[34px] md:hidden mb-[8px]">
+                          <button className="w-full flex items-center justify-center gap-[4px] h-full p-[2.5vw] bg-[#FB641B] rounded-[4px]">
+                            <h1 className="text-[#FFFFFF]  text-[3.8vw] whitespace-nowrap font-[500]">
                               Add to Cart
                             </h1>
                             <Image

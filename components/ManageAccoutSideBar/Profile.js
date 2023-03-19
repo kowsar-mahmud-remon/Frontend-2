@@ -214,7 +214,7 @@ return (
             <div className="">
               <input
                 placeholder="Abdul Korim"
-                className="text-[#686868]  pl-[16px] text-[16px] font-[400] w-full mt-[12px] h-[48px] bg-[#FFFFFF] rounded-[4px] profileBox placeholder:text-[#686868]"
+                className="text-[#686868]  pl-[16px] text-[3.5vw] md:text-[16px] font-[400] w-full mt-[12px] h-[48px] bg-[#FFFFFF] rounded-[4px] profileBox placeholder:text-[#686868]"
               ></input>
             </div>
           </div>
@@ -223,14 +223,14 @@ return (
               Email Address
             </h1>
             <div className="w-full mt-[12px] h-[48px] bg-[#FFFFFF] rounded-[4px] profileBox">
-              <div className="flex full items-center justify-between mx-[16px] pt-[13px]">
-                <h1 className="text-[#686868]   text-[16px] font-[400]">
+              <div className="flex  items-center justify-between mx-[16px] pt-[13px]">
+                <h1 className="text-[#686868]   text-[3.8vw] md:text-[16px] font-[400]">
                   abdulkorim@gmail.com
                 </h1>
 
                 <label htmlFor="Email-responsive-modal-3">
                   <div className="flex items-center gap-[5.5px]">
-                    <h1 className="text-[#287DF3] text-[14px]">Change</h1>
+                    <h1 className="text-[#287DF3] text-[3.8vw] md:text-[14px]">Change</h1>
                     <FaEdit></FaEdit>
                   </div>
                 </label>
@@ -241,12 +241,12 @@ return (
             <h1 className="text-[#686868] text-[14px] font-normal">Mobile</h1>
             <div className="w-full mt-[12px] h-[48px] bg-[#FFFFFF] rounded-[4px] profileBox">
               <div className="flex items-center justify-between mx-[16px] pt-[13px] ">
-                <h1 className="text-[#686868]   text-[16px] font-[400]">
+                <h1 className="text-[#686868] md:text-[16px]  text-[3.8vw] font-[400]">
                   +880 123******154
                 </h1>
                 <label htmlFor="Mobile-responsive-modal-3">
                   <div className="flex items-center gap-[5.5px]">
-                    <h1 className="text-[#287DF3] text-[14px]">Change</h1>
+                    <h1 className="text-[#287DF3] text-[3.8vw] md:text-[14px]">Change</h1>
                     <FaEdit></FaEdit>
                   </div>
                 </label>
@@ -259,7 +259,7 @@ return (
             </h1>
             <input
               placeholder="2000-02-21"
-              className="text-[#686868]  w-full mt-[12px] h-[48px] bg-[#FFFFFF] rounded-[4px] profileBox  pl-[16px] text-[16px] font-[400]"
+              className="text-[#686868]  w-full mt-[12px] h-[48px] bg-[#FFFFFF] rounded-[4px] profileBox  pl-[16px] focus:outline-none text-[3.8vw] md:text-[16px] font-[400]"
             ></input>
           </div>
           <div className="mt-[20px] w-full">
@@ -267,7 +267,7 @@ return (
             <div className="">
               <input
                 placeholder="Male"
-                className="text-[#686868]  w-full mt-[12px] h-[48px] bg-[#FFFFFF] rounded-[4px] profileBox  pl-[16px] text-[16px] font-[400]"
+                className="text-[#686868]  w-full mt-[12px] h-[48px] bg-[#FFFFFF] rounded-[4px] profileBox  pl-[16px] text-[3.8vw]  md:text-[16px] focus:outline-none font-[400]"
               ></input>
             </div>
           </div>
@@ -280,21 +280,23 @@ return (
           </div>
           <div className="flex justify-between gap-[20px] mt-[200px] w-full">
             <Link
-              className="text-[#FFFFFF] bg-[#FB641B] w-full h-[48px] rounded-[8px] font-[500]text-[16px]"
+              className="text-[#FFFFFF] bg-[#FB641B] w-full h-[48px] rounded-[8px] font-[500]"
               href="myProfile/editProfile"
             >
               {" "}
-              <button className="text-[#FFFFFF] bg-[#FB641B] w-full h-[48px] rounded-[8px] font-[500]text-[16px]">
+              <button className="text-[#FFFFFF] bg-[#FB641B] w-full h-[48px] rounded-[8px] font-[500] 
+              text-[3.8vw] md:text-[16px]">
                 Edit Profile{" "}
               </button>
             </Link>
 
             <Link
-              className="text-[#FFFFFF] bg-[#FB641B] w-full h-[48px] rounded-[8px] font-[500]text-[16px]"
+              className="text-[#FFFFFF] bg-[#FB641B] w-full h-[48px] rounded-[8px] font-[500]"
               href="myProfile/changesPassword"
             >
               {" "}
-              <button className="text-[#FFFFFF] bg-[#FB641B] w-full h-[48px] rounded-[8px] font-[500]text-[16px]">
+              <button className="text-[#FFFFFF] bg-[#FB641B] w-full h-[48px] rounded-[8px] font-[500]
+              text-[3.8vw] md:text-[16px]">
                 Change Password
               </button>
             </Link>
@@ -387,7 +389,7 @@ return (
             ✕
           </label>
           <div className=" mt-[16px] ">
-            <h3 className="text-[#001E00] text-[20px] font-[400] ml-[16px]">
+            <h3 className="text-[#001E00] text-[5vw] font-[400] ml-[16px]">
               Newsletter Subscription
             </h3>
             <div className="mt-[16px]">

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { FaArrowLeft } from "react-icons/fa";
 
@@ -18,7 +19,7 @@ const ManageAccount = () => {
                             <div className=" px-4 py-4">
                                 <h1 className="font-bold whitespace-nowrap text-[18px]">
                                     Personal Profile |{" "}
-                                    <span className="text-[#287DF3] font-[400] text-[16px]">Edit</span>
+                                    <Link href="#" ><span className="text-[#287DF3] font-[400] text-[16px]">Edit</span></Link>
                                 </h1>
                                 <ul className="text-[16px]">
                                     <li>Abdul Karim</li>
@@ -32,7 +33,7 @@ const ManageAccount = () => {
                                 <div className=" p-[16px] col-span-4 ">
                                     <h1 className="font-bold  text-[18px] mb-2">
                                         Address Book |{" "}
-                                        <span className="text-[#287DF3] font-[400] text-[16px]">Edit</span>
+                                       <Link href="#"><span className="text-[#287DF3] font-[400] text-[16px]">Edit</span></Link>
                                     </h1>
                                     <p className="mb-2 whitespace-nowrap text-[14px] text-[#686868]">
                                         DEFAULT SHIPPING ADDRESS
