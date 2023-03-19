@@ -7,7 +7,8 @@ import Footer from "../components/ProductPage/Footer";
 import SideButtons from '../components/SideButtons/SideButtons';
 import { store } from '../store/store';
 import '../styles/globals.css';
-
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 export default function App({ Component, pageProps }) {
 
@@ -20,7 +21,7 @@ export default function App({ Component, pageProps }) {
         <div className=' '>
           <Navication />
         </div>
-        <div className='md:mb-0 mb-20 lg:mr-[80px]'>
+        <div className='md:mb-0 mb-20 lg:mr-[70px] md:mr-[70px]'>
           <Component {...pageProps} />
         </div>
         <div className=''>

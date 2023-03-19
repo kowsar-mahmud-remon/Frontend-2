@@ -156,3 +156,5 @@ export const imgSettings = {
     cssEase: "linear",
     arrows: true,
 };
+
+

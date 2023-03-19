@@ -118,7 +118,7 @@ const VdoStory = () => {
             </div>
             <div className="bg-[#FB641B] w-[50%] md:w-[75%] h-[2px] md:h-[3px]"></div>
             <div className="text-[12px] lg:text-[14px] text-[#FB641B] w-[70px] font-[500] cursor-pointer">
-              <Link href="#">All View</Link>{" "}
+              <Link href="allview">All View</Link>{" "}
             </div>
             <div className="  gap-3 hidden md:flex">
               <div
