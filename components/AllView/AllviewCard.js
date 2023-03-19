@@ -33,8 +33,11 @@ const AllviewCard = ({ data }) => {
                 <div className="   ">
                     <div className="relative  w-full h-[461px]">
 
-                        <div>
+                        <div className="lg:block hidden">
                             <ReactPlayer className='rounded-t-[8px]' width={'100%'} height={"461px"} text={hide} url="https://youtube.com/shorts/3l4B26DzMo8" />
+                        </div>
+                        <div className="lg:hidden block">
+                            <ReactPlayer className='rounded-t-[8px]' width={'100%'} height={"163px"} text={hide} url="https://youtube.com/shorts/3l4B26DzMo8" />
                         </div>
 
                      

@@ -210,28 +210,30 @@ const Allview = () => {
   ]
 
   const [products, setProducts] = useState(false);
-  return ( 
+  return (
     <div className="mx-[70px] xxl:w-[80%] xxl:mx-auto  ">
       <div className="mt-[24px]">
-        <div className="flex items-center ">
-          <div className="">
-            <Image className='' src={instagram} alt="img" width={28} height={28} />
+        <div className="lg:block hidden">
+          <div className="flex items-center ">
+            <div className="">
+              <Image className='' src={instagram} alt="img" width={28} height={28} />
 
-          </div>
-          <div className="text-[24px] ml-[4px] text-[#FB641B] font-[500] ">
-            <h1>Stories</h1>
-          </div>
-          <div className="bg-[#FB641B]  w-full h-[2px] ml-[8px] md:h-[3px]"></div>
-          <div className="text-[16px] ml-[8px] whitespace-nowrap  text-[#FB641B]  font-[500] cursor-pointer">
-            <Link href="allview/moreview">More View</Link>{" "}
-          </div>
-          <div className="ml-[8px]">
-            <FaArrowRight className="text-[#FB641B] w-[22px]"></FaArrowRight>
+            </div>
+            <div className="text-[24px] ml-[4px] text-[#FB641B] font-[500] ">
+              <h1>Stories</h1>
+            </div>
+            <div className="bg-[#FB641B]  w-full h-[2px] ml-[8px] md:h-[3px]"></div>
+            <div className="text-[16px] ml-[8px] whitespace-nowrap  text-[#FB641B]  font-[500] cursor-pointer">
+              <Link href="allview/moreview">More View</Link>{" "}
+            </div>
+            <div className="ml-[8px]">
+              <FaArrowRight className="text-[#FB641B] w-[22px]"></FaArrowRight>
+            </div>
           </div>
         </div>
 
         <div className="mt-[29px]">
-          <div className="grid xxl:grid-cols-4 xl:grid-cols-4 lg:grid-cols-3 grid-cols-1 gap-[20px] ">
+          <div className="grid xxl:grid-cols-4 xl:grid-cols-4 lg:grid-cols-3 grid-cols-3 gap-[20px] ">
             {
               !products &&
 
