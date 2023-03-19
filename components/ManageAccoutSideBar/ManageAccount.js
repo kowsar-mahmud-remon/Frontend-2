@@ -29,7 +29,7 @@ const ManageAccount = () => {
                     <div className="grid lg:grid-cols-8 mt-[16px] lg:mt-[0px] grid-rows-1 gap-6 lg:py-8">
                         <div className="manageAccountBox lg:col-span-3 w-full  h-[148px] md:h-full  bg-base-100 shadow-small">
                             <div className=" px-4 py-4">
-                                <h1 className="lg:font-bold font-[500] whitespace-nowrap text-[16px] lg:text-[1.5vw] xl:text-[18px]">
+                                <h1 className=" font-[500] whitespace-nowrap text-[16px] lg:text-[1.5vw] xl:text-[18px]">
                                     Personal Profile |{" "}
                                     <Link href="#" ><span className="text-[#287DF3] font-[400] text-[14px] lg:text-[1.5vw] xl:text-[16px]">Edit</span></Link>
                                 </h1>
@@ -43,14 +43,14 @@ const ManageAccount = () => {
                         <div className="manageAccountBox  lg:col-span-5  w-full h-[391px] lg:h-full   bg-base-100 shadow-small">
                             <div className="grid lg:grid-cols-9  grid-rows-1">
                                 <div className=" lg:p-[16px]  lg:col-span-4  mx-[16px] lg:mx-[0px]">
-                                    <h1 className="lg:font-bold font-[500] lg:text-[1.5vw] text-[16px]  xl:text-[18px] lg:mb-2 my-[10px]">
+                                    <h1 className=" font-[500] lg:text-[1.5vw] text-[16px]  xl:text-[18px] lg:mb-2 my-[10px]">
                                         Address Book |{" "}
                                         <Link href="#"><span className="text-[#287DF3] font-[400] text-[14px] lg:text-[1.5vw] xl:text-[16px]">Edit</span></Link>
                                     </h1>
                                     <p className="lg:mb-2 whitespace-nowrap text-[16px] lg:text-[1.2vw] xl:text-[14px] text-[#686868]">
                                         DEFAULT SHIPPING ADDRESS
                                     </p>
-                                    <p className="lg:font-bold text-[#001E00] text-[16px] lg:text-[1.5vw] xl:text-[16px] font-[500] lg:mb-2 mt-[10px]">Abdul Karim</p>
+                                    <p className=" text-[#001E00] text-[16px] lg:text-[1.5vw] xl:text-[16px] font-[500] lg:mb-2 mt-[10px]">Abdul Karim</p>
                                     <ul className="xl:text-[16px] text-[16px] lg:text-[1.2vw]">
                                         <li>Ramgonj Tower 16/14,</li>
                                         <li>Giridhara,Matuil,Kodomtali</li>
@@ -65,7 +65,7 @@ const ManageAccount = () => {
                                     <p className="mb-2 whitespace-nowrap text-[16px]  xl:text-[14px] lg:text-[1.2vw]  text-[#686868]">
                                         DEFAULT SHIPPING ADDRESS
                                     </p>
-                                    <p className="lg:font-bold text-[#001E00] font-[500] text-[16px] lg:text-[1.5vw] xl:text-[16px] ">Abdul Karim</p>
+                                    <p className=" text-[#001E00] font-[500] text-[16px] lg:text-[1.5vw] xl:text-[16px] ">Abdul Karim</p>
                                     <ul className="xl:text-[16px] text-[16px] lg:text-[1.2vw] mt-[8px]">
                                         <li className="whitespace-nowrap overflow-hidden">Bashundhara City Shopping</li>
                                         <li>Complex 3 No Tejturi Bazar</li>
