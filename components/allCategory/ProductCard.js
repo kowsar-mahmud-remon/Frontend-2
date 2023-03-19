@@ -12,7 +12,7 @@ import { useRouter } from "next/router";
 import style from "../../styles/componentsStyles/Search.module.css";
 import { FaShoppingCart } from "react-icons/fa";
 import isVerify from "../../assets/images/verified.png";
-import shoping from '../../assets/images/cart.png'
+import shoping from '../../assets/images/cart.png';
 
 const ProductCard = ({ product }) => {
   const router = useRouter();
@@ -146,12 +146,12 @@ const ProductCard = ({ product }) => {
           )
         }
         key={product.id}
-        className={`${style.collectionCard} w-[222px] rounded my-6`}
+        className={`${style.collectionCard} mr-1 lg:mr-0 sm:w-[200px] lg:w-[222px]  rounded my-6`}
       >
         <div className="relative">
           <div className="flex justify-center">
             <Image
-              className="object-cover w-[220px] h-[154px]"
+              className="object-cover w-full lg:w-[220px] h-full lg:h-[154px]"
               loader={() => productPictures[4].img}
               loading="lazy"
               src={productPictures[2].img}
@@ -174,26 +174,28 @@ const ProductCard = ({ product }) => {
             <div className="">
               <div className="">
                 <div>
-                  <div className="flex gap-2 items-center">
-                    <span className="text-[#FB641B] font-bold text-[20px]">
+                  <div className="lg:flex gap-2 items-center">
+                    <div className="text-[#FB641B] font-bold text-[20px]">
                       Tk{" "}
                       {discount
                         ? (
-                            regularPrice -
-                            (regularPrice * discount) / 100
-                          ).toFixed(0)
+                          regularPrice -
+                          (regularPrice * discount) / 100
+                        ).toFixed(0)
                         : regularPrice}
-                    </span>
-                    {discount && (
-                      <>
-                        <span className="text-[#707070] text-[12px] line-through font-[500]">
-                          TK {regularPrice}
-                        </span>
-                        <span className="text-[#707070] text-[12px] ">
-                          ({discount}% off)
-                        </span>
-                      </>
-                    )}
+                    </div>
+                    <div className="">
+                      {discount && (
+                        <>
+                          <span className="text-[#707070] text-[12px] line-through font-[500]">
+                            TK {regularPrice}
+                          </span>
+                          <span className="text-[#707070] text-[12px] ">
+                            ({discount}% off)
+                          </span>
+                        </>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -224,7 +226,7 @@ const ProductCard = ({ product }) => {
               </div>
             </div>
             <div className="">
-              <button className="w-[186px] h-[38px] bg-[#FB641B] text-white flex justify-center items-center rounded-lg">
+              <button className="w-full h-[38px] bg-[#FB641B] text-white flex justify-center items-center rounded-lg">
                 <p className="pr-1">Add to Cart</p>
                 <Image src={shoping} width={24} height={20} alt=""></Image>
               </button>

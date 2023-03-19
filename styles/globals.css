@@ -421,6 +421,10 @@ top: 453px; */
 }
 
 @media screen and (max-width: 768px) {
+  .slick-list {
+    height: 425px !important;
+  }
+
   .btn-cart {
     width: 18px;
     height: 18px;

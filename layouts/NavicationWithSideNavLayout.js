@@ -13,7 +13,7 @@ const NavicationWithSideNavLayout = ({ children }) => {
   } = useSelector((state) => state || {});
   const dispatch = useDispatch();
 
-  
+
   return (
     <main>
       <section
@@ -22,9 +22,8 @@ const NavicationWithSideNavLayout = ({ children }) => {
         <SideNavigationNavBar />
         <SideNav />
         <div
-          className={`${
-            isActiveCategory ? "deactive-page-body" : "active-page-body"
-          } w-[100%-300px]`}
+          className={`${isActiveCategory ? "deactive-page-body" : "active-page-body"
+            } w-[100%-300px]`}
           id="page-body"
         >
           {children}

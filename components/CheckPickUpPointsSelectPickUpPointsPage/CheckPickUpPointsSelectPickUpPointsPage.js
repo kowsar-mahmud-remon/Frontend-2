@@ -5,6 +5,8 @@ import { AiFillQuestionCircle } from 'react-icons/ai';
 import Image from 'next/image';
 import vectorImg from '../../assets/images/Vector 3.png';
 import vectorImg2 from '../../assets/images/Vector.png';
+import style from "../../styles/campaignManagementTwo.module.css";
+
 
 
 const CheckPickUpPointsSelectPickUpPointsPage = () => {
@@ -74,7 +76,7 @@ const CheckPickUpPointsSelectPickUpPointsPage = () => {
                     </div>
 
                     {
-                      isQuestion ? <div className="w-[307px] lg:w-[391px] p-4 lg:mt-[50px] absolute lg:relative mt-[-270px] bg-white">
+                      isQuestion ? <div className={`w-[307px] lg:w-[391px] p-4 lg:mt-[50px] absolute lg:relative mt-[-270px] bg-white ${style.inputShadowWithOutBorder}`}>
                         <p className='text-base text-[#001E00] font-medium'>What is Banlar Big Store Pick-up Point?</p>
                         <p className='px-[5px] pt-3 text-xs text-[#686868]'>Banglar Big Store Pick-up Point is a convenient collection service that allows you to collect your parcels at a location close to you without having to pay for the delivery.
                           How Banglar Big Store Pick-up Point works: - Select ‘pick-up point’ as the delivery option during checkout - Choose one of the many pick-up locations available and pay for your order via a pre-payment method - Wait to be notified via SMS and collect your parcel at your convenience
@@ -83,8 +85,6 @@ const CheckPickUpPointsSelectPickUpPointsPage = () => {
                         :
                         ""
                     }
-
-
 
 
                     <div className={`modal-action block lg:flex lg:flex-row-reverse justify-between items-center text-center mb-2 ${isQuestion ? "mt-0" : "lg:mt-[250px]"}`}>
