@@ -37,6 +37,13 @@ const SearchBox = () => {
   const [maxValue, setMaxValue] = useState(10000);
   const [disValue, setDisValue] = useState(10000);
   const [location, setLocation] = useState([]);
+  const [close, setClose] = useState(true);
+  const [hide, setHide] = useState(true);
+  const [hideprice, setHideprice] = useState(true);
+  const [hideseller, setHideseller] = useState(true);
+  const [hidediscount, setHidediscount] = useState(true);
+  const [hidelocation, setHidelocation] = useState(true);
+  const [hidebrand, setHidebrand] = useState(true);
 
   const handleRange = (val) => {
     console.log(val);
@@ -48,6 +55,7 @@ const SearchBox = () => {
   };
 
   const handleCloseSeller = (id) => {
+    setClose(false);
     const rest = filters && filters.filter((fil) => fil.id !== id);
     setFilters(rest);
     // set_is_checked(false)
@@ -58,8 +66,8 @@ const SearchBox = () => {
   };
 
   const handleclearAll = () => {
-    setFilters("");
-    setLocation("");
+    setFilters([]);
+    setLocation([]);
   };
 
   const handleSeller = (check, val) => {
@@ -335,6 +343,15 @@ const SearchBox = () => {
     console.log(text);
   };
 
+  const getIfChecked = (id) => {
+    const exits = filters?.find((f) => f.id == id);
+    return exits ? true : false;
+  };
+  const getIfLocation = (id) => {
+    const exits = location?.find((f) => f.id == id);
+    return exits ? true : false;
+  };
+
   const customStyles = {
     content: {
       top: "50%",
@@ -437,67 +454,143 @@ const SearchBox = () => {
             </div>
             {/* ---------------------filters end---------------- */}
 
-            <div className="px-4 pt-4">
-              <ul>
+            <div className="pt-4">
+              <div className="px-4">
                 <li className="flex justify-between">
                   <p className="font-semibold text-[18px] pb-4 text-[#001E00] ">
                     All Collecction
                   </p>
-                  <Image className="h-2 mt-2 " src={v2} alt="img" />
+                  <Image
+                    onClick={() => setHide(!hide)}
+                    className={`${
+                      hide === true
+                        ? "h-2 mt-2 cursor-pointer rotate-0 transition-all"
+                        : "h-2 mt-2 cursor-pointer rotate-180 transition-all"
+                    } `}
+                    src={v2}
+                    alt="img"
+                  />
                 </li>
-                {show
-                  ? vegProducts &&
-                    vegProducts
-                      .map((vproduct) => {
-                        return (
-                          <li
-                            onClick={() => handleBtn(vproduct.id)}
-                            className={` ${
-                              text === true
-                                ? "mb-[16px] text-2xl font-semibold text-[#026C51] cursor-pointer"
-                                : "mb-[16px] text-[14px] lg:text-sm md:text-sm text-xs font-semibold cursor-pointer"
-                            } `}
-                            key={vproduct.id}
-                          >
-                            {vproduct.name}
-                          </li>
-                        );
-                      })
-                      .slice(0, 5)
-                  : vegProducts &&
-                    show === false &&
-                    vegProducts.map((vproduct) => {
-                      return (
-                        <li
-                          onClick={() => handleBtn(vproduct.id)}
-                          className={` ${
-                            text === true
-                              ? "mb-[16px] text-[14px] lg:text-sm md:text-sm text-xs font-semibold text-[#026C51] cursor-pointer"
-                              : "mb-[16px] text-[14px] lg:text-sm md:text-sm text-xs font-semibold cursor-pointer"
-                          } `}
-                          key={vproduct.id}
-                        >
-                          {vproduct.name}
-                        </li>
-                      );
-                    })}
+              </div>
+              {hide && hide === true ? (
+                <div className="block transition-all">
+                  <div className="px-4">
+                    <ul>
+                      {show
+                        ? vegProducts &&
+                          vegProducts
+                            .map((vproduct) => {
+                              return (
+                                <li
+                                  onClick={() => handleBtn(vproduct.id)}
+                                  className={` ${
+                                    text === true
+                                      ? "mb-[16px] text-2xl font-semibold text-[#026C51] cursor-pointer"
+                                      : "mb-[16px] text-[14px] lg:text-sm md:text-sm text-xs font-semibold cursor-pointer"
+                                  } `}
+                                  key={vproduct.id}
+                                >
+                                  {vproduct.name}
+                                </li>
+                              );
+                            })
+                            .slice(0, 5)
+                        : vegProducts &&
+                          show === false &&
+                          vegProducts.map((vproduct) => {
+                            return (
+                              <li
+                                onClick={() => handleBtn(vproduct.id)}
+                                className={` ${
+                                  text === true
+                                    ? "mb-[16px] text-[14px] lg:text-sm md:text-sm text-xs font-semibold text-[#026C51] cursor-pointer"
+                                    : "mb-[16px] text-[14px] lg:text-sm md:text-sm text-xs font-semibold cursor-pointer"
+                                } `}
+                                key={vproduct.id}
+                              >
+                                {vproduct.name}
+                              </li>
+                            );
+                          })}
 
-                {show ? (
-                  <li
-                    className=" text-[14px] font-semibold mb-[16px] text-[#287DF3] cursor-pointer"
-                    onClick={() => setShow(false)}
-                  >
-                    {vegProducts.length - 5} more...
-                  </li>
-                ) : (
-                  <li
-                    className="cursor-pointer text-[#287DF3] font-semibold text-[14px] mb-[16px]"
-                    onClick={() => setShow(true)}
-                  >
-                    show less
-                  </li>
-                )}
-              </ul>
+                      {show ? (
+                        <li
+                          className=" text-[14px] font-semibold mb-[16px] text-[#287DF3] cursor-pointer"
+                          onClick={() => setShow(false)}
+                        >
+                          {vegProducts.length - 5} more...
+                        </li>
+                      ) : (
+                        <li
+                          className="cursor-pointer text-[#287DF3] font-semibold text-[14px] mb-[16px]"
+                          onClick={() => setShow(true)}
+                        >
+                          show less
+                        </li>
+                      )}
+                    </ul>
+                  </div>
+                </div>
+              ) : (
+                <div className="hidden transition-all">
+                  <div className="px-4">
+                    <ul>
+                      {show
+                        ? vegProducts &&
+                          vegProducts
+                            .map((vproduct) => {
+                              return (
+                                <li
+                                  onClick={() => handleBtn(vproduct.id)}
+                                  className={` ${
+                                    text === true
+                                      ? "mb-[16px] text-2xl font-semibold text-[#026C51] cursor-pointer"
+                                      : "mb-[16px] text-[14px] lg:text-sm md:text-sm text-xs font-semibold cursor-pointer"
+                                  } `}
+                                  key={vproduct.id}
+                                >
+                                  {vproduct.name}
+                                </li>
+                              );
+                            })
+                            .slice(0, 5)
+                        : vegProducts &&
+                          show === false &&
+                          vegProducts.map((vproduct) => {
+                            return (
+                              <li
+                                onClick={() => handleBtn(vproduct.id)}
+                                className={` ${
+                                  text === true
+                                    ? "mb-[16px] text-[14px] lg:text-sm md:text-sm text-xs font-semibold text-[#026C51] cursor-pointer"
+                                    : "mb-[16px] text-[14px] lg:text-sm md:text-sm text-xs font-semibold cursor-pointer"
+                                } `}
+                                key={vproduct.id}
+                              >
+                                {vproduct.name}
+                              </li>
+                            );
+                          })}
+
+                      {show ? (
+                        <li
+                          className=" text-[14px] font-semibold mb-[16px] text-[#287DF3] cursor-pointer"
+                          onClick={() => setShow(false)}
+                        >
+                          {vegProducts.length - 5} more...
+                        </li>
+                      ) : (
+                        <li
+                          className="cursor-pointer text-[#287DF3] font-semibold text-[14px] mb-[16px]"
+                          onClick={() => setShow(true)}
+                        >
+                          show less
+                        </li>
+                      )}
+                    </ul>
+                  </div>
+                </div>
+              )}
             </div>
             <hr className="mb-[16px] border border-[#CDCDCD]" />
 
@@ -506,7 +599,9 @@ const SearchBox = () => {
             <div className="px-4">
               <div className=" lg:block md:block hidden">
                 <div className="flex items-center justify-between mb-[16px]">
-                  <p className="font-semibold text-lg text-[#001E00]">Filters</p>
+                  <p className="font-semibold text-lg text-[#001E00]">
+                    Filters
+                  </p>
                   <p
                     className="text-[#287DF3] font-medium cursor-pointer"
                     onClick={handleclearAll}
@@ -523,7 +618,16 @@ const SearchBox = () => {
                       >
                         <RxCross2></RxCross2>
                       </span>
-                      <span>{maxValue}</span>{" "}
+                      <span>BDT-{maxValue}</span>{" "}
+                    </div>
+                    <div className="flex bg-[#F2F3F7] px-2 py-1 text-[14px] text-[#686868] items-center rounded">
+                      <span
+                        className="mr-1 cursor-pointer"
+                        onClick={() => handleCloseSeller(filter.id)}
+                      >
+                        <RxCross2></RxCross2>
+                      </span>
+                      <span>BDT-{disValue}</span>{" "}
                     </div>
                     {filters &&
                       filters.map((filter) => {
@@ -545,18 +649,15 @@ const SearchBox = () => {
                       location.map((loc) => {
                         return (
                           <div key={loc.id}>
-                            <p
-                              className={`bg-[#F2F3F7] mb-[3px] w-[90px] text-[#686868] text-[11px] h-[21px] py-[-2px] px-2 mr-2 `}
-                            >
-                              {" "}
+                            <div className="flex bg-[#F2F3F7] px-2 py-1 text-[14px] text-[#686868] items-center rounded">
                               <span
                                 className="mr-1 cursor-pointer"
                                 onClick={() => handleCloseLocation(loc.id)}
                               >
-                                X
+                                <RxCross2></RxCross2>
                               </span>
                               <span>{loc.place}</span>{" "}
-                            </p>
+                            </div>
                           </div>
                         );
                       })}
@@ -566,34 +667,73 @@ const SearchBox = () => {
             </div>
             <hr className="mb-[16px] border border-[#CDCDCD]" />
 
-            <div className="px-4">
-              <div className="flex justify-between">
-                <p className="font-semibold text-lg mb-[16px] text-[#001E00] ">
-                  Prices
-                </p>
-                <Image className="h-2 mt-2" src={v2} alt="img" />
-              </div>
-              <div className="container mb-[16px] range">
-                <form>
-                  <input
-                    className="w-[250px]  accent-[#026C51]"
-                    type="range"
-                    id="range"
-                    step={100}
-                    max={100000}
-                    onChange={(e) => handleRange(e.target.value)}
+            <div>
+              <div className="px-4">
+                <div className="flex justify-between">
+                  <p className="font-semibold text-lg mb-[16px] text-[#001E00] ">
+                    Prices
+                  </p>
+                  <Image
+                    onClick={() => setHideprice(!hideprice)}
+                    className={`${
+                      hideprice === true
+                        ? "h-2 mt-2 cursor-pointer rotate-0 transition-all"
+                        : "h-2 mt-2 cursor-pointer rotate-180 transition-all"
+                    } `}
+                    src={v2}
+                    alt="img"
                   />
-                </form>
+                </div>
               </div>
-              <div className="flex justify-between mb-[16px]">
-                <select className=" border border-[#CDCDCD] h-[32px] px-2 rounded">
-                  <option selected>Min</option>
-                </select>
-                <p1 className="mx-2">To</p1>
-                <select className=" border border-[#CDCDCD] h-[32px] px-2 rounded">
-                  <option selected>{maxValue}</option>
-                </select>
-              </div>
+              {hideprice && hideprice === true ? (
+                <div className="px-4 block transition-all">
+                  <div className="container mb-[16px] range">
+                    <form>
+                      <input
+                        className="w-[250px]  accent-[#026C51]"
+                        type="range"
+                        id="range"
+                        step={100}
+                        max={100000}
+                        onChange={(e) => handleRange(e.target.value)}
+                      />
+                    </form>
+                  </div>
+                  <div className="flex justify-between mb-[16px]">
+                    <select className=" border border-[#CDCDCD] h-[32px] px-2 rounded">
+                      <option selected>Min</option>
+                    </select>
+                    <p1 className="mx-2">To</p1>
+                    <select className=" border border-[#CDCDCD] h-[32px] px-2 rounded">
+                      <option selected>{maxValue}</option>
+                    </select>
+                  </div>
+                </div>
+              ) : (
+                <div className="px-4 hidden transition-all">
+                  <div className="container mb-[16px] range">
+                    <form>
+                      <input
+                        className="w-[250px]  accent-[#026C51]"
+                        type="range"
+                        id="range"
+                        step={100}
+                        max={100000}
+                        onChange={(e) => handleRange(e.target.value)}
+                      />
+                    </form>
+                  </div>
+                  <div className="flex justify-between mb-[16px]">
+                    <select className=" border border-[#CDCDCD] h-[32px] px-2 rounded">
+                      <option selected>Min</option>
+                    </select>
+                    <p1 className="mx-2">To</p1>
+                    <select className=" border border-[#CDCDCD] h-[32px] px-2 rounded">
+                      <option selected>{maxValue}</option>
+                    </select>
+                  </div>
+                </div>
+              )}
             </div>
             <hr className="mb-[16px] border border-[#CDCDCD]" />
 
@@ -612,8 +752,14 @@ const SearchBox = () => {
                     type="checkbox"
                     id="vehicle1"
                     name="vehicle1"
-                    value="Bike"
+                    value="No Brand"
                     className="bg-[#026C51]"
+                    onClick={(e) =>
+                      handleSeller(e.target.checked, {
+                        id: 15,
+                        value: "noBrand",
+                      })
+                    }
                   />
                   <label
                     for="vehicle1"
@@ -629,114 +775,242 @@ const SearchBox = () => {
             {/* --------------brand section end----------------- */}
             <div className="px-4">
               <div className="flex justify-between ">
-                <p className="font-semibold mb-[16px] text-lg text-[#001E00]">Seller</p>
-                <Image className="h-2 mt-2" src={v2} alt="img" />
-              </div> 
- 
-              <div className="mb-[16px]">
-                <form className="">
-                  <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center px-2">
-                    <input
-                      type="checkbox"
-                      className="accent-[#026C51]"
-                      id="seller"
-                      name="vehicle1"
-                      onClick={(e) =>
-                        handleSeller(e.target.checked, {
-                          id: 1,
-                          value: "NewSeller",
-                        })
-                      }
-                      value="New Seller"
-                    />
-                    <label
-                      for="vehicle1 "
-                      className="text-[14px] ml-2 text-[#001E00] font-medium"
-                    >
-                      {" "}
-                      New Seller
-                    </label>
-                    <br />
-                  </div>
-                  <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center px-2 my-4">
-                    <input
-                      type="checkbox"
-                      className="accent-[#026C51]"
-                      id="verifiedSeller"
-                      name="vehicle2"
-                      onClick={(e) =>
-                        handleSeller(e.target.checked, {
-                          id: 2,
-                          value: "VarifiedSeller",
-                        })
-                      }
-                      value="Verified Seller"
-                    />
-                    <label
-                      for="vehicle2"
-                      className="text-[14px] ml-2  text-[#001E00]  font-medium"
-                    >
-                      {" "}
-                      Verified Seller
-                    </label>
-                    <br />
-                  </div>
-                  <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center px-2">
-                    <input
-                      type="checkbox"
-                      className="accent-[#026C51]"
-                      id="AssuredSeller"
-                      name="vehicle3"
-                      onClick={(e) =>
-                        handleSeller(e.target.checked, {
-                          id: 3,
-                          value: "AssuredSeller",
-                        })
-                      }
-                      value="Assured Seller"
-                    />
-                    <label
-                      for="vehicle3"
-                      className="text-[14px] ml-2 text-[#001E00]  font-medium"
-                    >
-                      {" "}
-                      Assured Seller
-                    </label>
-                    <br />
-                  </div>
-                </form>
+                <p className="font-semibold mb-[16px] text-lg text-[#001E00]">
+                  Seller
+                </p>
+                <Image
+                  onClick={() => setHideseller(!hideseller)}
+                  className={`${
+                    hideseller === true
+                      ? "h-2 mt-2 cursor-pointer rotate-0 transition-all"
+                      : "h-2 mt-2 cursor-pointer rotate-180 transition-all"
+                  } `}
+                  src={v2}
+                  alt="img"
+                />
               </div>
+
+              {hideseller && hideseller === true ? (
+                <div className="mb-[16px] block transition-all">
+                  <form className="">
+                    <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center px-2">
+                      <input
+                        type="checkbox"
+                        className="accent-[#026C51] cursor-pointer"
+                        id="seller"
+                        name="vehicle1"
+                        checked={getIfChecked(1)}
+                        onClick={(e) =>
+                          handleSeller(e.target.checked, {
+                            id: 1,
+                            value: "NewSeller",
+                          })
+                        }
+                        value="New Seller"
+                      />
+                      <label
+                        for="vehicle1 "
+                        className="text-[14px] ml-2 text-[#001E00] font-medium"
+                      >
+                        {" "}
+                        New Seller
+                      </label>
+                      <br />
+                    </div>
+                    <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center px-2 my-4">
+                      <input
+                        type="checkbox"
+                        className="accent-[#026C51] cursor-pointer"
+                        id="verifiedSeller"
+                        checked={getIfChecked(2)}
+                        name="vehicle2"
+                        onClick={(e) =>
+                          handleSeller(e.target.checked, {
+                            id: 2,
+                            value: "VarifiedSeller",
+                          })
+                        }
+                        value="Verified Seller"
+                      />
+                      <label
+                        for="vehicle2"
+                        className="text-[14px] ml-2  text-[#001E00]  font-medium"
+                      >
+                        {" "}
+                        Verified Seller
+                      </label>
+                      <br />
+                    </div>
+                    <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center px-2">
+                      <input
+                        type="checkbox"
+                        className="accent-[#026C51] cursor-pointer"
+                        id="AssuredSeller"
+                        name="vehicle3"
+                        checked={getIfChecked(3)}
+                        onClick={(e) =>
+                          handleSeller(e.target.checked, {
+                            id: 3,
+                            value: "AssuredSeller",
+                          })
+                        }
+                        value="Assured Seller"
+                      />
+                      <label
+                        for="vehicle3"
+                        className="text-[14px] ml-2 text-[#001E00]  font-medium"
+                      >
+                        {" "}
+                        Assured Seller
+                      </label>
+                      <br />
+                    </div>
+                  </form>
+                </div>
+              ) : (
+                <div className="mb-[16px] hidden transition-all">
+                  <form className="">
+                    <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center px-2">
+                      <input
+                        type="checkbox"
+                        className="accent-[#026C51] cursor-pointer"
+                        id="seller"
+                        name="vehicle1"
+                        onClick={(e) =>
+                          handleSeller(e.target.checked, {
+                            id: 1,
+                            value: "NewSeller",
+                          })
+                        }
+                        value="New Seller"
+                      />
+                      <label
+                        for="vehicle1 "
+                        className="text-[14px] ml-2 text-[#001E00] font-medium"
+                      >
+                        {" "}
+                        New Seller
+                      </label>
+                      <br />
+                    </div>
+                    <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center px-2 my-4">
+                      <input
+                        type="checkbox"
+                        className="accent-[#026C51] cursor-pointer"
+                        id="verifiedSeller"
+                        name="vehicle2"
+                        onClick={(e) =>
+                          handleSeller(e.target.checked, {
+                            id: 2,
+                            value: "VarifiedSeller",
+                          })
+                        }
+                        value="Verified Seller"
+                      />
+                      <label
+                        for="vehicle2"
+                        className="text-[14px] ml-2  text-[#001E00]  font-medium"
+                      >
+                        {" "}
+                        Verified Seller
+                      </label>
+                      <br />
+                    </div>
+                    <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center px-2">
+                      <input
+                        type="checkbox"
+                        className="accent-[#026C51] cursor-pointer"
+                        id="AssuredSeller"
+                        name="vehicle3"
+                        onClick={(e) =>
+                          handleSeller(e.target.checked, {
+                            id: 3,
+                            value: "AssuredSeller",
+                          })
+                        }
+                        value="Assured Seller"
+                      />
+                      <label
+                        for="vehicle3"
+                        className="text-[14px] ml-2 text-[#001E00]  font-medium"
+                      >
+                        {" "}
+                        Assured Seller
+                      </label>
+                      <br />
+                    </div>
+                  </form>
+                </div>
+              )}
             </div>
             <hr className="mb-[16px] border border-[#CDCDCD]" />
 
             <div className="px-4">
               <div className="flex justify-between pb-4">
-                <h3 className="font-semibold text-lg text-[#001E00]">Discount</h3>
-                <Image className="h-2 mt-2" src={v2} alt="img" />
+                <h3 className="font-semibold text-lg text-[#001E00]">
+                  Discount
+                </h3>
+                <Image
+                  onClick={() => setHidediscount(!hidediscount)}
+                  className={`${
+                    hidediscount === true
+                      ? "h-2 mt-2 cursor-pointer rotate-0 transition-all"
+                      : "h-2 mt-2 cursor-pointer rotate-180 transition-all"
+                  } `}
+                  src={v2}
+                  alt="img"
+                />
               </div>
-              <div>
-                <div className="container mb-[16px] range">
-                  <form>
-                    <input
-                      className="w-[250px]  accent-[#026C51]"
-                      type="range"
-                      id="range"
-                      step={100}
-                      max={100000}
-                      onChange={(e) => discountRange(e.target.value)}
-                    />
-                  </form>
+              {hidediscount && hidediscount === true ? (
+                <div className="block transition-all">
+                  <div className="container mb-[16px] range">
+                    <form>
+                      <input
+                        className="w-[250px]  accent-[#026C51]"
+                        type="range"
+                        id="range"
+                        step={100}
+                        max={100000}
+                        onChange={(e) => discountRange(e.target.value)}
+                      />
+                    </form>
+                  </div>
+
+                  <div className="flex justify-between mb-[16px]">
+                    <select className=" border border-[#CDCDCD] h-[32px] px-2 rounded">
+                      <option selected>Min</option>
+                    </select>
+                    <p1 className="mx-2">To</p1>
+                    <select className=" border border-[#CDCDCD] h-[32px] px-2 rounded">
+                      <option selected>{disValue}</option>
+                    </select>
+                  </div>
                 </div>
-                <div className="flex justify-between mb-[16px]">
-                  <select className=" border border-[#CDCDCD] h-[32px] px-2 rounded">
-                    <option selected>Min</option>
-                  </select>
-                  <p1 className="mx-2">To</p1>
-                  <select className=" border border-[#CDCDCD] h-[32px] px-2 rounded">
-                    <option selected>{maxValue}</option>
-                  </select>
+              ) : (
+                <div className="hidden transition-all">
+                  <div className="container mb-[16px] range">
+                    <form>
+                      <input
+                        className="w-[250px]  accent-[#026C51]"
+                        type="range"
+                        id="range"
+                        step={100}
+                        max={100000}
+                        onChange={(e) => discountRange(e.target.value)}
+                      />
+                    </form>
+                  </div>
+                  <div className="flex justify-between mb-[16px]">
+                    <select className=" border border-[#CDCDCD] h-[32px] px-2 rounded">
+                      <option selected>Min</option>
+                    </select>
+                    <p1 className="mx-2">To</p1>
+                    <select className=" border border-[#CDCDCD] h-[32px] px-2 rounded">
+                      <option selected>{disValue}</option>
+                    </select>
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
 
             <hr className="mb-[16px] border border-[#CDCDCD]" />
@@ -746,200 +1020,422 @@ const SearchBox = () => {
                 <p className="font-semibold mb-[16px] text-lg text-[#001E00]">
                   Location
                 </p>
-                <Image className="h-2 mt-2" src={v2} alt="img" />
+                <Image
+                  onClick={() => setHidelocation(!hidelocation)}
+                  className={`${
+                    hidelocation === true
+                      ? "h-2 mt-2 cursor-pointer rotate-0 transition-all"
+                      : "h-2 mt-2 cursor-pointer rotate-180 transition-all"
+                  } `}
+                  src={v2}
+                  alt="img"
+                />
               </div>
 
-              <div className="mb-[16px]">
-                <form>
-                  <div className="flex justify-between mb-4">
-                    <div className="border border-[#CDCDCD] rounded h-[32px] w-[98px] flex items-center justify-between px-2">
-                      <input
-                        type="checkbox"
-                        id="vehicle1"
-                        name="vehicle1"
-                        value="Bike"
-                        className="accent-[#026C51] w-[12px] border border-[#CDCDCD] rounded"
-                        onClick={(e) =>
-                          handleLocation(e.target.checked, {
-                            id: 1,
-                            place: "Dhaka",
-                          })
-                        }
-                      />
-                      <label
-                        for="vehicle1"
-                        className="text-[14px] font-semibold text-[#001E00]"
-                      >
-                        {" "}
-                        Dhaka
-                      </label>
-                      <Image className="" src={v3} alt="img" />
-                    </div>
-                    <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center justify-between px-2">
-                      <input
-                        type="checkbox"
-                        id="vehicle1"
-                        name="vehicle1"
-                        value="Bike"
-                        className="accent-[#026C51] "
-                        onClick={(e) =>
-                          handleLocation(e.target.checked, {
-                            id: 2,
-                            place: "Chittagong",
-                          })
-                        }
-                      />
-                      <label
-                        for="vehicle1"
-                        className="text-[14px] font-semibold text-[#001E00]"
-                      >
-                        Chittagong
-                      </label>
-                      <Image className="" src={v3} alt="img" />
-                    </div>
+              <div>
+                {hidelocation && hidelocation === true ? (
+                  <div className="block transition-all">
+                    <form>
+                      <div className="flex justify-between mb-4">
+                        <div className="border border-[#CDCDCD] rounded h-[32px] w-[98px] flex items-center justify-between px-2">
+                          <input
+                            type="checkbox"
+                            id="vehicle1"
+                            name="vehicle1"
+                            checked={getIfLocation(20)}
+                            value="Bike"
+                            className="accent-[#026C51] cursor-pointer w-[12px] border border-[#CDCDCD] rounded"
+                            onClick={(e) =>
+                              handleLocation(e.target.checked, {
+                                id: 20,
+                                place: "Dhaka",
+                              })
+                            }
+                          />
+                          <label
+                            for="vehicle1"
+                            className="text-[14px] font-semibold text-[#001E00]"
+                          >
+                            {" "}
+                            Dhaka
+                          </label>
+                          <Image className="" src={v3} alt="img" />
+                        </div>
+                        <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center justify-between px-2">
+                          <input
+                            type="checkbox"
+                            id="vehicle1"
+                            name="vehicle1"
+                            checked={getIfLocation(21)}
+                            value="Bike"
+                            className="accent-[#026C51] cursor-pointer "
+                            onClick={(e) =>
+                              handleLocation(e.target.checked, {
+                                id: 21,
+                                place: "Chittagong",
+                              })
+                            }
+                          />
+                          <label
+                            for="vehicle1"
+                            className="text-[14px] font-semibold text-[#001E00]"
+                          >
+                            Chittagong
+                          </label>
+                          <Image className="" src={v3} alt="img" />
+                        </div>
+                      </div>
+                      <div className="flex justify-between mb-4">
+                        <div className="border border-[#CDCDCD] rounded h-[32px] w-[98px] flex items-center justify-between px-2">
+                          <input
+                            type="checkbox"
+                            id="vehicle1"
+                            checked={getIfLocation(22)}
+                            name="vehicle1"
+                            value="Bike"
+                            className="accent-[#026C51] cursor-pointer w-[12px] border border-[#CDCDCD] rounded"
+                            onClick={(e) =>
+                              handleLocation(e.target.checked, {
+                                id: 22,
+                                place: "Barisal",
+                              })
+                            }
+                          />
+                          <label
+                            for="vehicle1"
+                            className="text-[14px] font-semibold text-[#001E00]"
+                          >
+                            {" "}
+                            Barisal
+                          </label>
+                          <Image className="" src={v3} alt="img" />
+                        </div>
+                        <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center justify-between px-2">
+                          <input
+                            type="checkbox"
+                            id="vehicle1"
+                            checked={getIfLocation(23)}
+                            name="vehicle1"
+                            value="Bike"
+                            className="accent-[#026C51] cursor-pointer "
+                            onClick={(e) =>
+                              handleLocation(e.target.checked, {
+                                id: 23,
+                                place: "Rajshahi",
+                              })
+                            }
+                          />
+                          <label
+                            for="vehicle1"
+                            className="text-[14px] -ml-4 font-semibold text-[#001E00]"
+                          >
+                            Rajshahi
+                          </label>
+                          <Image className="" src={v3} alt="img" />
+                        </div>
+                      </div>
+                      <div className="flex justify-between mb-4">
+                        <div className="border border-[#CDCDCD] rounded h-[32px] w-[98px] flex items-center justify-between px-2">
+                          <input
+                            type="checkbox"
+                            id="vehicle1"
+                            name="vehicle1"
+                            checked={getIfLocation(24)}
+                            value="Bike"
+                            className="accent-[#026C51] cursor-pointer w-[12px] border border-[#CDCDCD] rounded"
+                            onClick={(e) =>
+                              handleLocation(e.target.checked, {
+                                id: 24,
+                                place: "Khulna",
+                              })
+                            }
+                          />
+                          <label
+                            for="vehicle1"
+                            className="text-[14px] font-semibold text-[#001E00]"
+                          >
+                            {" "}
+                            Khulna
+                          </label>
+                          <Image className="" src={v3} alt="img" />
+                        </div>
+                        <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center justify-between px-2">
+                          <input
+                            type="checkbox"
+                            checked={getIfLocation(25)}
+                            id="vehicle1"
+                            name="vehicle1"
+                            value="Bike"
+                            className="accent-[#026C51] cursor-pointer "
+                            onClick={(e) =>
+                              handleLocation(e.target.checked, {
+                                id: 25,
+                                place: "Rangpur",
+                              })
+                            }
+                          />
+                          <label
+                            for="vehicle1"
+                            className="text-[14px] -ml-4 font-semibold text-[#001E00]"
+                          >
+                            Rangpur
+                          </label>
+                          <Image className="" src={v3} alt="img" />
+                        </div>
+                      </div>
+                      <div className="flex justify-between mb-4">
+                        <div className="border border-[#CDCDCD] rounded h-[32px] w-[98px] flex items-center justify-between px-2">
+                          <input
+                            type="checkbox"
+                            id="vehicle1"
+                            name="vehicle1"
+                            checked={getIfLocation(26)}
+                            value="Bike"
+                            className="accent-[#026C51] cursor-pointer w-[12px] border border-[#CDCDCD] rounded"
+                            onClick={(e) =>
+                              handleLocation(e.target.checked, {
+                                id: 26,
+                                place: "Sylhet",
+                              })
+                            }
+                          />
+                          <label
+                            for="vehicle1"
+                            className="text-[14px] font-semibold text-[#001E00]"
+                          >
+                            {" "}
+                            Sylhet
+                          </label>
+                          <Image className="" src={v3} alt="img" />
+                        </div>
+                        <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center justify-between px-2">
+                          <input
+                            type="checkbox"
+                            id="vehicle1"
+                            name="vehicle1"
+                            checked={getIfLocation(27)}
+                            value="Bike"
+                            className="accent-[#026C51] cursor-pointer "
+                            onClick={(e) =>
+                              handleLocation(e.target.checked, {
+                                id: 27,
+                                place: "Mymensingh",
+                              })
+                            }
+                          />
+                          <label
+                            for="vehicle1"
+                            className="text-[14px] font-semibold text-[#001E00]"
+                          >
+                            Mymensingh
+                          </label>
+                          <Image className="" src={v3} alt="img" />
+                        </div>
+                      </div>
+                    </form>
                   </div>
-                  <div className="flex justify-between mb-4">
-                    <div className="border border-[#CDCDCD] rounded h-[32px] w-[98px] flex items-center justify-between px-2">
-                      <input
-                        type="checkbox"
-                        id="vehicle1"
-                        name="vehicle1"
-                        value="Bike"
-                        className="accent-[#026C51] w-[12px] border border-[#CDCDCD] rounded"
-                        onClick={(e) =>
-                          handleLocation(e.target.checked, {
-                            id: 1,
-                            place: "Barisal",
-                          })
-                        }
-                      />
-                      <label
-                        for="vehicle1"
-                        className="text-[14px] font-semibold text-[#001E00]"
-                      >
-                        {" "}
-                        Barisal
-                      </label>
-                      <Image className="" src={v3} alt="img" />
-                    </div>
-                    <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center justify-between px-2">
-                      <input
-                        type="checkbox"
-                        id="vehicle1"
-                        name="vehicle1"
-                        value="Bike"
-                        className="accent-[#026C51] "
-                        onClick={(e) =>
-                          handleLocation(e.target.checked, {
-                            id: 2,
-                            place: "Rajshahi",
-                          })
-                        }
-                      />
-                      <label
-                        for="vehicle1"
-                        className="text-[14px] -ml-4 font-semibold text-[#001E00]"
-                      >
-                        Rajshahi
-                      </label>
-                      <Image className="" src={v3} alt="img" />
-                    </div>
+                ) : (
+                  <div className="hidden transition-all">
+                    <form>
+                      <div className="flex justify-between mb-4">
+                        <div className="border border-[#CDCDCD] rounded h-[32px] w-[98px] flex items-center justify-between px-2">
+                          <input
+                            type="checkbox"
+                            id="vehicle1"
+                            name="vehicle1"
+                            checked={getIfLocation(20)}
+                            value="Bike"
+                            className="accent-[#026C51] cursor-pointer w-[12px] border border-[#CDCDCD] rounded"
+                            onClick={(e) =>
+                              handleLocation(e.target.checked, {
+                                id: 20,
+                                place: "Dhaka",
+                              })
+                            }
+                          />
+                          <label
+                            for="vehicle1"
+                            className="text-[14px] font-semibold text-[#001E00]"
+                          >
+                            {" "}
+                            Dhaka
+                          </label>
+                          <Image className="" src={v3} alt="img" />
+                        </div>
+                        <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center justify-between px-2">
+                          <input
+                            type="checkbox"
+                            id="vehicle1"
+                            name="vehicle1"
+                            checked={getIfLocation(21)}
+                            value="Bike"
+                            className="accent-[#026C51] cursor-pointer "
+                            onClick={(e) =>
+                              handleLocation(e.target.checked, {
+                                id: 21,
+                                place: "Chittagong",
+                              })
+                            }
+                          />
+                          <label
+                            for="vehicle1"
+                            className="text-[14px] font-semibold text-[#001E00]"
+                          >
+                            Chittagong
+                          </label>
+                          <Image className="" src={v3} alt="img" />
+                        </div>
+                      </div>
+                      <div className="flex justify-between mb-4">
+                        <div className="border border-[#CDCDCD] rounded h-[32px] w-[98px] flex items-center justify-between px-2">
+                          <input
+                            type="checkbox"
+                            id="vehicle1"
+                            name="vehicle1"
+                            checked={getIfLocation(22)}
+                            value="Bike"
+                            className="accent-[#026C51] cursor-pointer w-[12px] border border-[#CDCDCD] rounded"
+                            onClick={(e) =>
+                              handleLocation(e.target.checked, {
+                                id: 22,
+                                place: "Barisal",
+                              })
+                            }
+                          />
+                          <label
+                            for="vehicle1"
+                            className="text-[14px] font-semibold text-[#001E00]"
+                          >
+                            {" "}
+                            Barisal
+                          </label>
+                          <Image className="" src={v3} alt="img" />
+                        </div>
+                        <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center justify-between px-2">
+                          <input
+                            type="checkbox"
+                            id="vehicle1"
+                            checked={getIfLocation(23)}
+                            name="vehicle1"
+                            value="Bike"
+                            className="accent-[#026C51] cursor-pointer "
+                            onClick={(e) =>
+                              handleLocation(e.target.checked, {
+                                id: 23,
+                                place: "Rajshahi",
+                              })
+                            }
+                          />
+                          <label
+                            for="vehicle1"
+                            className="text-[14px] -ml-4 font-semibold text-[#001E00]"
+                          >
+                            Rajshahi
+                          </label>
+                          <Image className="" src={v3} alt="img" />
+                        </div>
+                      </div>
+                      <div className="flex justify-between mb-4">
+                        <div className="border border-[#CDCDCD] rounded h-[32px] w-[98px] flex items-center justify-between px-2">
+                          <input
+                            type="checkbox"
+                            id="vehicle1"
+                            name="vehicle1"
+                            checked={getIfLocation(24)}
+                            value="Bike"
+                            className="accent-[#026C51] cursor-pointer w-[12px] border border-[#CDCDCD] rounded"
+                            onClick={(e) =>
+                              handleLocation(e.target.checked, {
+                                id: 24,
+                                place: "Khulna",
+                              })
+                            }
+                          />
+                          <label
+                            for="vehicle1"
+                            className="text-[14px] font-semibold text-[#001E00]"
+                          >
+                            {" "}
+                            Khulna
+                          </label>
+                          <Image className="" src={v3} alt="img" />
+                        </div>
+                        <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center justify-between px-2">
+                          <input
+                            type="checkbox"
+                            id="vehicle1"
+                            name="vehicle1"
+                            checked={getIfLocation(25)}
+                            value="Bike"
+                            className="accent-[#026C51] cursor-pointer "
+                            onClick={(e) =>
+                              handleLocation(e.target.checked, {
+                                id: 25,
+                                place: "Rangpur",
+                              })
+                            }
+                          />
+                          <label
+                            for="vehicle1"
+                            className="text-[14px] -ml-4 font-semibold text-[#001E00]"
+                          >
+                            Rangpur
+                          </label>
+                          <Image className="" src={v3} alt="img" />
+                        </div>
+                      </div>
+                      <div className="flex justify-between mb-4">
+                        <div className="border border-[#CDCDCD] rounded h-[32px] w-[98px] flex items-center justify-between px-2">
+                          <input
+                            type="checkbox"
+                            id="vehicle1"
+                            checked={getIfLocation(26)}
+                            name="vehicle1"
+                            value="Bike"
+                            className="accent-[#026C51] cursor-pointer w-[12px] border border-[#CDCDCD] rounded"
+                            onClick={(e) =>
+                              handleLocation(e.target.checked, {
+                                id: 26,
+                                place: "Sylhet",
+                              })
+                            }
+                          />
+                          <label
+                            for="vehicle1"
+                            className="text-[14px] font-semibold text-[#001E00]"
+                          >
+                            {" "}
+                            Sylhet
+                          </label>
+                          <Image className="" src={v3} alt="img" />
+                        </div>
+                        <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center justify-between px-2">
+                          <input
+                            type="checkbox"
+                            id="vehicle1"
+                            name="vehicle1"
+                            checked={getIfLocation(27)}
+                            value="Bike"
+                            className="accent-[#026C51] cursor-pointer "
+                            onClick={(e) =>
+                              handleLocation(e.target.checked, {
+                                id: 27,
+                                place: "Mymensingh",
+                              })
+                            }
+                          />
+                          <label
+                            for="vehicle1"
+                            className="text-[14px] font-semibold text-[#001E00]"
+                          >
+                            Mymensingh
+                          </label>
+                          <Image className="" src={v3} alt="img" />
+                        </div>
+                      </div>
+                    </form>
                   </div>
-                  <div className="flex justify-between mb-4">
-                    <div className="border border-[#CDCDCD] rounded h-[32px] w-[98px] flex items-center justify-between px-2">
-                      <input
-                        type="checkbox"
-                        id="vehicle1"
-                        name="vehicle1"
-                        value="Bike"
-                        className="accent-[#026C51] w-[12px] border border-[#CDCDCD] rounded"
-                        onClick={(e) =>
-                          handleLocation(e.target.checked, {
-                            id: 1,
-                            place: "Khulna",
-                          })
-                        }
-                      />
-                      <label
-                        for="vehicle1"
-                        className="text-[14px] font-semibold text-[#001E00]"
-                      >
-                        {" "}
-                        Khulna
-                      </label>
-                      <Image className="" src={v3} alt="img" />
-                    </div>
-                    <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center justify-between px-2">
-                      <input
-                        type="checkbox"
-                        id="vehicle1"
-                        name="vehicle1"
-                        value="Bike"
-                        className="accent-[#026C51] "
-                        onClick={(e) =>
-                          handleLocation(e.target.checked, {
-                            id: 2,
-                            place: "Rangpur",
-                          })
-                        }
-                      />
-                      <label
-                        for="vehicle1"
-                        className="text-[14px] -ml-4 font-semibold text-[#001E00]"
-                      >
-                        Rangpur
-                      </label>
-                      <Image className="" src={v3} alt="img" />
-                    </div>
-                  </div>
-                  <div className="flex justify-between mb-4">
-                    <div className="border border-[#CDCDCD] rounded h-[32px] w-[98px] flex items-center justify-between px-2">
-                      <input
-                        type="checkbox"
-                        id="vehicle1"
-                        name="vehicle1"
-                        value="Bike"
-                        className="accent-[#026C51] w-[12px] border border-[#CDCDCD] rounded"
-                        onClick={(e) =>
-                          handleLocation(e.target.checked, {
-                            id: 1,
-                            place: "Sylhet",
-                          })
-                        }
-                      />
-                      <label
-                        for="vehicle1"
-                        className="text-[14px] font-semibold text-[#001E00]"
-                      >
-                        {" "}
-                        Sylhet
-                      </label>
-                      <Image className="" src={v3} alt="img" />
-                    </div>
-                    <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center justify-between px-2">
-                      <input
-                        type="checkbox"
-                        id="vehicle1"
-                        name="vehicle1"
-                        value="Bike"
-                        className="accent-[#026C51] "
-                        onClick={(e) =>
-                          handleLocation(e.target.checked, {
-                            id: 2,
-                            place: "Mymensingh",
-                          })
-                        }
-                      />
-                      <label
-                        for="vehicle1"
-                        className="text-[14px] font-semibold text-[#001E00]"
-                      >
-                        Mymensingh
-                      </label>
-                      <Image className="" src={v3} alt="img" />
-                    </div>
-                  </div>
-                </form>
+                )}
               </div>
             </div>
             <hr className="mb-[16px] border border-[#CDCDCD]" />
@@ -950,24 +1446,63 @@ const SearchBox = () => {
                   <p className="font-semibold mb-[16px] text-lg text-[#001E00]">
                     Brands
                   </p>
-                  <Image className="h-2 mt-2" src={v2} alt="img" />
-                </div>
-                <div className="border border-[#CDCDCD] rounded h-[32px] w-[98px] flex items-center justify-between px-2">
-                  <input
-                    type="checkbox"
-                    id="vehicle1"
-                    name="vehicle1"
-                    value="Bike"
-                    className="accent-[#026C51]"
+                  <Image
+                    onClick={() => setHidebrand(!hidebrand)}
+                    className={`${
+                      hidebrand === true
+                        ? "h-2 mt-2 cursor-pointer rotate-0 transition-all"
+                        : "h-2 mt-2 cursor-pointer rotate-180 transition-all"
+                    } `}
+                    src={v2}
+                    alt="img"
                   />
-                  <label
-                    for="vehicle1"
-                    className="text-[14px] font-semibold text-[#001E00] "
-                  >
-                    No Brand
-                  </label>
-                  <br />
                 </div>
+                {hidebrand && hidebrand === true ? (
+                  <div className="block transition-all">
+                    <div className="border border-[#CDCDCD] rounded h-[32px] w-[98px] flex items-center justify-between px-2">
+                      <input
+                        type="checkbox"
+                        className="accent-[#026C51] cursor-pointer"
+                        id="verifiedSeller"
+                        name="vehicle2"
+                        checked={getIfChecked(15)}
+                        onClick={(e) =>
+                          handleSeller(e.target.checked, {
+                            id: 15,
+                            value: "No Brand",
+                          })
+                        }
+                        value="No Brand"
+                      />
+                      <label
+                        for="vehicle1"
+                        className="text-[14px] font-semibold text-[#001E00] "
+                      >
+                        No Brand
+                      </label>
+                      <br />
+                    </div>
+                  </div>
+                ) : (
+                  <div className="hidden transition-all">
+                    <div className="border border-[#CDCDCD] rounded h-[32px] w-[98px] flex items-center justify-between px-2">
+                      <input
+                        type="checkbox"
+                        id="vehicle1"
+                        name="vehicle1"
+                        value="Bike"
+                        className="accent-[#026C51] cursor-pointer"
+                      />
+                      <label
+                        for="vehicle1"
+                        className="text-[14px] font-semibold text-[#001E00] "
+                      >
+                        No Brand
+                      </label>
+                      <br />
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
             {/* -------------button-------------------- */}
@@ -1067,7 +1602,7 @@ const SearchBox = () => {
                             >
                               <RxCross2></RxCross2>
                             </span>
-                            <span>{maxValue}</span>{" "}
+                            <span>BDT- {maxValue}</span>{" "}
                           </p>
                           {filters &&
                             filters.map((filter) => {
@@ -1091,20 +1626,17 @@ const SearchBox = () => {
                             location.map((loc) => {
                               return (
                                 <div key={loc.id}>
-                                  <p
-                                    className={`bg-[#F2F3F7] mb-[3px] w-[90px] text-[#686868] text-[11px] h-[21px] py-[-2px] px-2 mr-2 `}
-                                  >
-                                    {" "}
+                                  <div className="flex bg-[#F2F3F7] px-2 py-1 text-[14px] text-[#686868] items-center rounded">
                                     <span
                                       className="mr-1 cursor-pointer"
                                       onClick={() =>
                                         handleCloseLocation(loc.id)
                                       }
                                     >
-                                      X
+                                      <RxCross2></RxCross2>
                                     </span>
                                     <span>{loc.place}</span>{" "}
-                                  </p>
+                                  </div>
                                 </div>
                               );
                             })}
@@ -1116,66 +1648,136 @@ const SearchBox = () => {
 
                   <div>
                     <div className="px-4">
-                      <ul>
-                        <li className="flex justify-between">
-                          <p className="font-semibold text-base pb-2 text-[#001E00] ">
-                            All Collecction
-                          </p>
-                          <Image className="h-2 mt-2 " src={v2} alt="img" />
-                        </li>
-                        {show
-                          ? vegProducts &&
-                            vegProducts
-                              .map((vproduct) => {
-                                return (
-                                  <li
-                                    onClick={() => handleBtn(vproduct.id)}
-                                    className={` ${
-                                      text === true
-                                        ? "mb-2 text-2xl font-semibold text-[#026C51] cursor-pointer"
-                                        : "mb-2 lg:text-sm md:text-sm text-xs font-medium cursor-pointer"
-                                    } `}
-                                    key={vproduct.id}
-                                  >
-                                    {vproduct.name}
-                                  </li>
-                                );
-                              })
-                              .slice(0, 5)
-                          : vegProducts &&
-                            show === false &&
-                            vegProducts.map((vproduct) => {
-                              return (
-                                <li
-                                  onClick={() => handleBtn(vproduct.id)}
-                                  className={` ${
-                                    text === true
-                                      ? "mb-2 lg:text-sm md:text-sm text-xs font-medium text-[#026C51] cursor-pointer"
-                                      : "mb-2 lg:text-sm md:text-sm text-xs font-medium cursor-pointer"
-                                  } `}
-                                  key={vproduct.id}
-                                >
-                                  {vproduct.name}
-                                </li>
-                              );
-                            })}
+                      <li className="flex justify-between">
+                        <p className="font-semibold text-base pb-2 text-[#001E00] ">
+                          All Collecction
+                        </p>
+                        <Image
+                          onClick={() => setHide(!hide)}
+                          className={`${
+                            hide === true
+                              ? "h-2 mt-2 cursor-pointer rotate-0 transition-all"
+                              : "h-2 mt-2 cursor-pointer rotate-180 transition-all"
+                          } `}
+                          src={v2}
+                          alt="img"
+                        />
+                      </li>
+                      {hide && hide === true ? (
+                        <div className="block transition-all">
+                          <ul>
+                            {show
+                              ? vegProducts &&
+                                vegProducts
+                                  .map((vproduct) => {
+                                    return (
+                                      <li
+                                        onClick={() => handleBtn(vproduct.id)}
+                                        className={` ${
+                                          text === true
+                                            ? "mb-2 text-2xl font-semibold text-[#026C51] cursor-pointer"
+                                            : "mb-2 lg:text-sm md:text-sm text-xs font-medium cursor-pointer"
+                                        } `}
+                                        key={vproduct.id}
+                                      >
+                                        {vproduct.name}
+                                      </li>
+                                    );
+                                  })
+                                  .slice(0, 5)
+                              : vegProducts &&
+                                show === false &&
+                                vegProducts.map((vproduct) => {
+                                  return (
+                                    <li
+                                      onClick={() => handleBtn(vproduct.id)}
+                                      className={` ${
+                                        text === true
+                                          ? "mb-2 lg:text-sm md:text-sm text-xs font-medium text-[#026C51] cursor-pointer"
+                                          : "mb-2 lg:text-sm md:text-sm text-xs font-medium cursor-pointer"
+                                      } `}
+                                      key={vproduct.id}
+                                    >
+                                      {vproduct.name}
+                                    </li>
+                                  );
+                                })}
 
-                        {show ? (
-                          <li
-                            className=" text-xs font-medium mb-2 text-[#287DF3] cursor-pointer"
-                            onClick={() => setShow(false)}
-                          >
-                            {vegProducts.length - 5} more...
-                          </li>
-                        ) : (
-                          <li
-                            className="cursor-pointer text-[#287DF3] font-semibold text-[14px] mb-2"
-                            onClick={() => setShow(true)}
-                          >
-                            show less
-                          </li>
-                        )}
-                      </ul>
+                            {show ? (
+                              <li
+                                className=" text-xs font-medium mb-2 text-[#287DF3] cursor-pointer"
+                                onClick={() => setShow(false)}
+                              >
+                                {vegProducts.length - 5} more...
+                              </li>
+                            ) : (
+                              <li
+                                className="cursor-pointer text-[#287DF3] font-semibold text-[14px] mb-2"
+                                onClick={() => setShow(true)}
+                              >
+                                show less
+                              </li>
+                            )}
+                          </ul>
+                        </div>
+                      ) : (
+                        <div className="hidden transition-all">
+                          <ul>
+                            {show
+                              ? vegProducts &&
+                                vegProducts
+                                  .map((vproduct) => {
+                                    return (
+                                      <li
+                                        onClick={() => handleBtn(vproduct.id)}
+                                        className={` ${
+                                          text === true
+                                            ? "mb-2 text-2xl font-semibold text-[#026C51] cursor-pointer"
+                                            : "mb-2 lg:text-sm md:text-sm text-xs font-medium cursor-pointer"
+                                        } `}
+                                        key={vproduct.id}
+                                      >
+                                        {vproduct.name}
+                                      </li>
+                                    );
+                                  })
+                                  .slice(0, 5)
+                              : vegProducts &&
+                                show === false &&
+                                vegProducts.map((vproduct) => {
+                                  return (
+                                    <li
+                                      onClick={() => handleBtn(vproduct.id)}
+                                      className={` ${
+                                        text === true
+                                          ? "mb-2 lg:text-sm md:text-sm text-xs font-medium text-[#026C51] cursor-pointer"
+                                          : "mb-2 lg:text-sm md:text-sm text-xs font-medium cursor-pointer"
+                                      } `}
+                                      key={vproduct.id}
+                                    >
+                                      {vproduct.name}
+                                    </li>
+                                  );
+                                })}
+
+                            {show ? (
+                              <li
+                                className=" text-xs font-medium mb-2 text-[#287DF3] cursor-pointer"
+                                onClick={() => setShow(false)}
+                              >
+                                {vegProducts.length - 5} more...
+                              </li>
+                            ) : (
+                              <li
+                                className="cursor-pointer text-[#287DF3] font-semibold text-[14px] mb-2"
+                                onClick={() => setShow(true)}
+                              >
+                                show less
+                              </li>
+                            )}
+                          </ul>
+                        </div>
+                      )}
                     </div>
                   </div>
                   <hr className="mb-4 border-[#B7B7B7]" />
@@ -1184,30 +1786,67 @@ const SearchBox = () => {
                       <p className="font-semibold mb-2 text-[#001E00] ">
                         Prices
                       </p>
-                      <Image className="h-2 mt-2" src={v2} alt="img" />
-                    </div>
-                    <div className="container mb-2 range">
-                      <form>
-                        <input
-                          className="w-[250px]  accent-[#026C51]"
-                          type="range"
-                          id="range"
-                          step={100}
-                          max={100000}
-                          onChange={(e) => handleRange(e.target.value)}
-                        />
-                      </form>
-                    </div>
-                    <div className="flex justify-between mb-4">
-                      <select className=" border border-[#B7B7B7] w-[53px] h-[24px] px-1 rounded text-xs">
-                        <option selected>Min</option>
-                      </select>
-                      <p1 className="mx-2">To</p1>
-                      <select className="border border-[#B7B7B7] w-[83px] h-[24px] px-1 rounded text-xs">
-                        <option selected>{maxValue}</option>
-                      </select>
+                      <Image
+                        onClick={() => setHideprice(!hideprice)}
+                        className={`${
+                          hideprice === true
+                            ? "h-2 mt-2 cursor-pointer rotate-0 transition-all"
+                            : "h-2 mt-2 cursor-pointer rotate-180 transition-all"
+                        } `}
+                        src={v2}
+                        alt="img"
+                      />
                     </div>
                   </div>
+                  {hideprice && hideprice === true ? (
+                    <div className="px-4 block transition-all">
+                      <div className="container mb-2 range">
+                        <form>
+                          <input
+                            className="w-full  accent-[#026C51]"
+                            type="range"
+                            id="range"
+                            step={100}
+                            max={100000}
+                            onChange={(e) => handleRange(e.target.value)}
+                          />
+                        </form>
+                      </div>
+                      <div className="flex justify-between mb-4">
+                        <select className=" border border-[#B7B7B7] w-[53px] h-[24px] px-1 rounded text-xs">
+                          <option selected>Min</option>
+                        </select>
+                        <p1 className="mx-2">To</p1>
+                        <select className="border border-[#B7B7B7] w-[83px] h-[24px] px-1 rounded text-xs">
+                          <option selected>{maxValue}</option>
+                        </select>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="px-4 hidden transition-all">
+                      <div className="container mb-2 range">
+                        <form>
+                          <input
+                            className="w-full  accent-[#026C51]"
+                            type="range"
+                            id="range"
+                            step={100}
+                            max={100000}
+                            onChange={(e) => handleRange(e.target.value)}
+                          />
+                        </form>
+                      </div>
+                      <div className="flex justify-between mb-4">
+                        <select className=" border border-[#B7B7B7] w-[53px] h-[24px] px-1 rounded text-xs">
+                          <option selected>Min</option>
+                        </select>
+                        <p1 className="mx-2">To</p1>
+                        <select className="border border-[#B7B7B7] w-[83px] h-[24px] px-1 rounded text-xs">
+                          <option selected>{maxValue}</option>
+                        </select>
+                      </div>
+                    </div>
+                  )}
                   <hr className="mb-4 border-[#B7B7B7]" />
 
                   <div className="px-4">
@@ -1216,31 +1855,72 @@ const SearchBox = () => {
                         <p className="font-semibold mb-[16px] text-base text-[#001E00]">
                           Brands
                         </p>
-                        <Image className="h-2 mt-2" src={v2} alt="img" />
-                      </div>
-                      <div className="border border-[#CDCDCD] rounded h-[32px] w-[106px] flex items-center px-2">
-                        <input
-                          type="checkbox"
-                          className="accent-[#026C51]"
-                          id="seller"
-                          name="vehicle1"
-                          onClick={(e) =>
-                            handleSeller(e.target.checked, {
-                              id: 1,
-                              value: "NewSeller",
-                            })
-                          }
-                          value="New Seller"
+                        <Image
+                          onClick={() => setHidebrand(!hidebrand)}
+                          className={`${
+                            hidebrand === true
+                              ? "h-2 mt-2 cursor-pointer rotate-0 transition-all"
+                              : "h-2 mt-2 cursor-pointer rotate-180 transition-all"
+                          } `}
+                          src={v2}
+                          alt="img"
                         />
-                        <label
-                          for="vehicle1 "
-                          className="text-xs ml-2 text-[#001E00] font-medium"
-                        >
-                          {" "}
-                          New Seller
-                        </label>
-                        <br />
                       </div>
+                      {hidebrand && hidebrand === true ? (
+                        <div className="block transition-all">
+                          <div className="border border-[#CDCDCD] rounded h-[32px] w-[106px] flex items-center px-2">
+                            <input
+                              type="checkbox"
+                              id="vehicle1"
+                              name="vehicle1"
+                              checked={getIfChecked(15)}
+                              value="No Brand"
+                              className="bg-[#026C51]"
+                              onClick={(e) =>
+                                handleSeller(e.target.checked, {
+                                  id: 15,
+                                  value: "No Brand",
+                                })
+                              }
+                            />
+                            <label
+                              for="vehicle1 "
+                              className="text-xs ml-2 text-[#001E00] font-medium"
+                            >
+                              {" "}
+                              No Brand
+                            </label>
+                            <br />
+                          </div>
+                        </div>
+                      ) : (
+                        <div className="hidden transition-all">
+                          <div className="border border-[#CDCDCD] rounded h-[32px] w-[106px] flex items-center px-2">
+                            <input
+                              type="checkbox"
+                              id="vehicle1"
+                              name="vehicle1"
+                              checked={getIfChecked(15)}
+                              value="No Brand"
+                              className="bg-[#026C51]"
+                              onClick={(e) =>
+                                handleSeller(e.target.checked, {
+                                  id: 15,
+                                  value: "No Brand",
+                                })
+                              }
+                            />
+                            <label
+                              for="vehicle1 "
+                              className="text-xs ml-2 text-[#001E00] font-medium"
+                            >
+                              {" "}
+                              No Brand
+                            </label>
+                            <br />
+                          </div>
+                        </div>
+                      )}
                     </div>
                   </div>
                   <hr className="mb-4 border-[#B7B7B7]" />
@@ -1249,17 +1929,28 @@ const SearchBox = () => {
                       <p className="font-semibold mb-[16px] text-[#001E00]">
                         Seller
                       </p>
-                      <Image className="h-2 mt-2" src={v2} alt="img" />
+                      <Image
+                          onClick={() => setHideseller(!hideseller)}
+                          className={`${
+                            hideseller === true
+                              ? "h-2 mt-2 cursor-pointer rotate-0 transition-all"
+                              : "h-2 mt-2 cursor-pointer rotate-180 transition-all"
+                          } `}
+                          src={v2}
+                          alt="img"
+                        />
                     </div>
 
-                    <div className="mb-[16px]">
+                    {
+                      hideseller && hideseller === true? <div className="mb-[16px] block transition-all">
                       <form className="">
                         <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center px-2">
                           <input
                             type="checkbox"
-                            className="accent-[#026C51]"
+                            className="accent-[#026C51] cursor-pointer"
                             id="seller"
                             name="vehicle1"
+                            checked={getIfChecked(1)}
                             onClick={(e) =>
                               handleSeller(e.target.checked, {
                                 id: 1,
@@ -1280,9 +1971,10 @@ const SearchBox = () => {
                         <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center px-2 my-4">
                           <input
                             type="checkbox"
-                            className="accent-[#026C51]"
+                            className="accent-[#026C51] cursor-pointer"
                             id="verifiedSeller"
                             name="vehicle2"
+                            checked={getIfChecked(2)}
                             onClick={(e) =>
                               handleSeller(e.target.checked, {
                                 id: 2,
@@ -1303,8 +1995,84 @@ const SearchBox = () => {
                         <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center px-2">
                           <input
                             type="checkbox"
-                            className="accent-[#026C51]"
+                            className="accent-[#026C51] cursor-pointer"
                             id="AssuredSeller"
+                            checked={getIfChecked(3)}
+                            name="vehicle3"
+                            onClick={(e) =>
+                              handleSeller(e.target.checked, {
+                                id: 3,
+                                value: "AssuredSeller",
+                              })
+                            }
+                            value="Assured Seller"
+                          />
+                          <label
+                            for="vehicle3"
+                            className="text-xs ml-2 text-[#001E00]  font-medium"
+                          >
+                            {" "}
+                            Assured Seller
+                          </label>
+                          <br />
+                        </div>
+                      </form>
+                    </div> : <div className="mb-[16px] hidden transition-all">
+                      <form className="">
+                        <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center px-2">
+                          <input
+                            type="checkbox"
+                            className="accent-[#026C51] cursor-pointer"
+                            id="seller"
+                            name="vehicle1"
+                            checked={getIfChecked(1)}
+                            onClick={(e) =>
+                              handleSeller(e.target.checked, {
+                                id: 1,
+                                value: "NewSeller",
+                              })
+                            }
+                            value="New Seller"
+                          />
+                          <label
+                            for="vehicle1 "
+                            className="text-xs ml-2 text-[#001E00] font-medium"
+                          >
+                            {" "}
+                            New Seller
+                          </label>
+                          <br />
+                        </div>
+                        <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center px-2 my-4">
+                          <input
+                            type="checkbox"
+                            className="accent-[#026C51] cursor-pointer"
+                            id="verifiedSeller"
+                            name="vehicle2"
+                            checked={getIfChecked(2)}
+                            onClick={(e) =>
+                              handleSeller(e.target.checked, {
+                                id: 2,
+                                value: "VarifiedSeller",
+                              })
+                            }
+                            value="Verified Seller"
+                          />
+                          <label
+                            for="vehicle2"
+                            className="text-xs ml-2  text-[#001E00]  font-medium"
+                          >
+                            {" "}
+                            Verified Seller
+                          </label>
+                          <br />
+                        </div>
+                        <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center px-2">
+                          <input
+                            type="checkbox"
+                            className="accent-[#026C51] cursor-pointer"
+                            id="AssuredSeller"
+                            checked={getIfChecked(3)}
                             name="vehicle3"
                             onClick={(e) =>
                               handleSeller(e.target.checked, {
@@ -1325,6 +2093,7 @@ const SearchBox = () => {
                         </div>
                       </form>
                     </div>
+                    }
                   </div>
                   <hr className="mb-4 border-[#B7B7B7]" />
 
@@ -1344,11 +2113,12 @@ const SearchBox = () => {
                               type="checkbox"
                               id="vehicle1"
                               name="vehicle1"
+                              checked={getIfLocation(20)}
                               value="Bike"
-                              className="accent-[#026C51] w-[12px] border border-[#CDCDCD] rounded"
+                              className="accent-[#026C51] cursor-pointer w-[12px] border border-[#CDCDCD] rounded"
                               onClick={(e) =>
                                 handleLocation(e.target.checked, {
-                                  id: 1,
+                                  id: 20,
                                   place: "Dhaka",
                                 })
                               }
@@ -1366,12 +2136,13 @@ const SearchBox = () => {
                             <input
                               type="checkbox"
                               id="vehicle1"
+                              checked={getIfLocation(21)}
                               name="vehicle1"
                               value="Bike"
-                              className="accent-[#026C51] "
+                              className="accent-[#026C51] cursor-pointer "
                               onClick={(e) =>
                                 handleLocation(e.target.checked, {
-                                  id: 2,
+                                  id: 21,
                                   place: "Chittagong",
                                 })
                               }
@@ -1390,12 +2161,13 @@ const SearchBox = () => {
                             <input
                               type="checkbox"
                               id="vehicle1"
+                              checked={getIfLocation(22)}
                               name="vehicle1"
                               value="Bike"
-                              className="accent-[#026C51] w-[12px] border border-[#CDCDCD] rounded"
+                              className="accent-[#026C51] cursor-pointer w-[12px] border border-[#CDCDCD] rounded"
                               onClick={(e) =>
                                 handleLocation(e.target.checked, {
-                                  id: 1,
+                                  id: 22,
                                   place: "Barisal",
                                 })
                               }
@@ -1413,12 +2185,13 @@ const SearchBox = () => {
                             <input
                               type="checkbox"
                               id="vehicle1"
+                              checked={getIfLocation(23)}
                               name="vehicle1"
                               value="Bike"
-                              className="accent-[#026C51] "
+                              className="accent-[#026C51] cursor-pointer "
                               onClick={(e) =>
                                 handleLocation(e.target.checked, {
-                                  id: 2,
+                                  id: 23,
                                   place: "Rajshahi",
                                 })
                               }
@@ -1437,12 +2210,13 @@ const SearchBox = () => {
                             <input
                               type="checkbox"
                               id="vehicle1"
+                              checked={getIfLocation(24)}
                               name="vehicle1"
                               value="Bike"
-                              className="accent-[#026C51] w-[12px] border border-[#CDCDCD] rounded"
+                              className="accent-[#026C51] cursor-pointer w-[12px] border border-[#CDCDCD] rounded"
                               onClick={(e) =>
                                 handleLocation(e.target.checked, {
-                                  id: 1,
+                                  id: 24,
                                   place: "Khulna",
                                 })
                               }
@@ -1460,12 +2234,13 @@ const SearchBox = () => {
                             <input
                               type="checkbox"
                               id="vehicle1"
+                              checked={getIfLocation(25)}
                               name="vehicle1"
                               value="Bike"
-                              className="accent-[#026C51] "
+                              className="accent-[#026C51] cursor-pointer "
                               onClick={(e) =>
                                 handleLocation(e.target.checked, {
-                                  id: 2,
+                                  id: 25,
                                   place: "Rangpur",
                                 })
                               }
@@ -1484,12 +2259,13 @@ const SearchBox = () => {
                             <input
                               type="checkbox"
                               id="vehicle1"
+                              checked={getIfLocation(26)}
                               name="vehicle1"
                               value="Bike"
-                              className="accent-[#026C51] w-[12px] border border-[#CDCDCD] rounded"
+                              className="accent-[#026C51] cursor-pointer w-[12px] border border-[#CDCDCD] rounded"
                               onClick={(e) =>
                                 handleLocation(e.target.checked, {
-                                  id: 1,
+                                  id: 26,
                                   place: "Sylhet",
                                 })
                               }
@@ -1507,12 +2283,13 @@ const SearchBox = () => {
                             <input
                               type="checkbox"
                               id="vehicle1"
+                              checked={getIfLocation(27)}
                               name="vehicle1"
                               value="Bike"
-                              className="accent-[#026C51] "
+                              className="accent-[#026C51] cursor-pointer "
                               onClick={(e) =>
                                 handleLocation(e.target.checked, {
-                                  id: 2,
+                                  id: 7,
                                   place: "Mymensingh",
                                 })
                               }
@@ -1540,7 +2317,7 @@ const SearchBox = () => {
                   </div>
                 </div>
               </Drawer>
-            </div>  
+            </div>
           </div>
         </div>
         <div className="flex flex-wrap items-center gap-5 px-5">
