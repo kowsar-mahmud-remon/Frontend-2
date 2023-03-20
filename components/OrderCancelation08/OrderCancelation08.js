@@ -47,23 +47,23 @@ const OrderCancelation08 = () => {
                 </div>
 
                 <div className="flex justify-between md:text-[1.3vw]">
-                    <div className="flex md:items-center w-[100%] justify-between md:mt-[16px] md:mb-[16px] gap-[12px]  mt-[16px]">
-                        <div className='flex md:items-center w-[100%] gap-[16px]'>
+                    <div className="flex md:items-center w-[100%] md:w-[33%] justify-between md:mt-[16px] md:mb-[16px] gap-[12px]  mt-[16px]">
+                        <div className='flex md:items-center w-[100%]  gap-[16px]'>
                             <Image className='w-[44px] h-[36px] md:w-[57px] md:h-[46px] ml-[12px]' src={datas.image} width="57" height="46" alt=""></Image>
                             <div className='w-full'>
-                                <p className='text-[4vw]  md:text-[1.3vw]  text-[#001E00]'>{datas.peoductName}</p>
+                                <p className='text-[4vw] md:text-[1.3vw]  text-[#001E00]'>{datas.peoductName}</p>
                                 <div className='flex justify-between w-full'>
-                                    <p className=" md:hidden block text-[4vw] text-[#686868]  mb-[30px]">Qty: <span className='text-[#001E00]'>{datas.qty}</span></p>
+                                    <p className=" md:hidden block text-[4vw]  text-[#686868]  mb-[30px]">Qty: <span className='text-[#001E00]'>{datas.qty}</span></p>
 
                                 </div>
                             </div>
                         </div>
-                        <div className='flex mt-[5vw]  mr-[2vw] text-[#686868] text-[4.5vw] gap-[2px]'>
+                        <div className='flex mt-[5vw] md:hidden md:mt-0  mr-[2vw] text-[#686868] text-[4.5vw] md:text-[16px] gap-[2px]'>
                             <h1 className=''> Tk</h1>
                             <h1>{datas.taka}</h1>
                         </div>
                     </div>
-                    <p className=" hidden md:block mt-[31px] mb-[30px]">Qty: {datas.qty}</p>
+                    <p className=" hidden md:block mt-[31px] md:text-[16px] mb-[30px]">Qty: {datas.qty}</p>
                     <p className=" hidden md:block mt-[33px] lg:mt-[33px] xl:mt-[36px] w-[186px] h-[41px] bg-[#F2F3F7] text-[#686868] rounded-[54px] text-[0.8rem] text-center mb-[30px]">
                         {datas.status}
                     </p>
