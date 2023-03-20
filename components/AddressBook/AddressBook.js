@@ -9,14 +9,20 @@ import { useRouter } from "next/router";
 import YourDeliveryModal from "./YourDeliveryModal";
 import EditYourDelivery from "./CustomModalAddNew/EditYourDelivery";
 import { useState } from "react";
+import DeletedAndEditModal from "./RawCusotomModal/DeletedAndEditModal";
 
 const AddressBook = () => {
+  const [edit, setEdit] = useState(false);
   const router = useRouter();
 
   const [modalIsOpen, setIsOpen] = useState(false);
 
   const handleModal = () => {
     setIsOpen(true);
+  };
+
+  const editClose = () => {
+    setEdit(false);
   };
 
   const addressUser = [
@@ -44,11 +50,10 @@ const AddressBook = () => {
     <>
       <AddressBookModal></AddressBookModal>
       <AddNewAddress></AddNewAddress>
-      <EditYourDelivery
-        modalIsOpen={modalIsOpen}
-        setIsOpen={setIsOpen}
-      ></EditYourDelivery>
-      {/* <EditAddress></EditAddress> */}
+      <DeletedAndEditModal
+        editClose={editClose}
+        edit={edit}
+      ></DeletedAndEditModal>
       <YourDeliveryModal></YourDeliveryModal>
       <div className=" max-w-[924px] mx-[24px] lg:mx-[0px]  lg:mr-[20px]">
         <div className="flex justify-between lg:mb-8  md:mb-8 mb-2">
@@ -111,7 +116,7 @@ const AddressBook = () => {
                         {name}
                       </h1>
                       <div>
-                        <button onClick={handleModal}>
+                        <button onClick={() => setEdit(true)}>
                           <label
                             htmlFor="my-modal-1"
                             className="text-[#287DF3] bg-[#F2F3F7] text-sm px-2 rounded cursor-pointer"
@@ -176,12 +181,12 @@ const AddressBook = () => {
           </div> */}
         </div>
         <div className="flex items-center mt-[24px] lg:mt-[0px] lg:invisible md:invisible visible">
-        <Image className="w-[14px] mr-2" src={plus} alt="" />
-            <button className="text-base text-[#686868] font-medium">
-              <label htmlFor="your-delivary" className="cursor-pointer">
-                Add New Address
-              </label>
-            </button>
+          <Image className="w-[14px] mr-2" src={plus} alt="" />
+          <button className="text-base text-[#686868] font-medium">
+            <label htmlFor="your-delivary" className="cursor-pointer">
+              Add New Address
+            </label>
+          </button>
         </div>
       </div>
     </>

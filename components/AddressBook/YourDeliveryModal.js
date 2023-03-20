@@ -125,7 +125,7 @@ const YourDeliveryModal = () => {
                                 htmlFor="your-delivary"
                                 className="cursor-pointer"
                               >
-                                new Edit
+                                Edit
                               </label>
                             </button>
                           )}
