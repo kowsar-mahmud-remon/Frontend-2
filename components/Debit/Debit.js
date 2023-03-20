@@ -24,7 +24,7 @@ const Debit = () => {
         <div className='flex justify-center mb-[.2vw]'>
             <div className='w-[90%]'>
                 <div className="flex justify-center mt-[24px] mb-[24px]">
-                    <h1 className="text-[#FB641B] flex items-center px-[3vw] justify-center w-full  md:w-[48%] h-[56px] text-left bg-[#FFDDCC] text-[3.7vw] md:text-[1vw] font-normal"> <Image className='w-[28px] h-[28px] mr-[16px]' src={icon} alt='image'></Image>Collect your Prepayment Voucher & Enjoy Extra Savings on Selected Cards</h1>
+                    <h1 className="text-[#FB641B] flex items-center px-[3vw] justify-center w-full  md:w-[50%] h-[56px] text-left bg-[#FFDDCC] text-[3.7vw] md:text-[1vw] font-normal"> <Image className='w-[28px] h-[28px] mr-[16px]' src={icon} alt='image'></Image>Collect your Prepayment Voucher & Enjoy Extra Savings on Selected Cards</h1>
                 </div>
                 <div className='md:flex  md:justify-center'>
                     <div className=''>
