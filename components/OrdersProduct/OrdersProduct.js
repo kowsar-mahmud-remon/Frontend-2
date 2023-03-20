@@ -11,10 +11,10 @@ const OrdersProduct = ({ data }) => {
     <div className="mt-[16px]  ">
       <div className="md:w-[92%] w-[100%] h-auto rounded-[8px] bg-[#FFFFFF] shadow-lg">
         <div className="flex md:items-center pt-[16px] justify-between mx-[16px]">
-          <div className="px-[16px] ">
+          <div className=" ">
             <p>
-              <span className="md:text-[16px] text-[14px] font-bold text-black">Order</span>{" "}
-              <span className="text-[#287DF3] md:text-[16px] text-[14px]">#{data.orderId}</span>
+              <span className="md:text-[16px] text-[4.5vw] font-bold text-black">Order</span>{" "}
+              <span className="text-[#287DF3] md:text-[16px] text-[4.5vw]">#{data.orderId}</span>
             </p>
             <p className='text-[11px] md:text-[14px] text-[#686868] '>{data.orderDate}</p>
             <p className=" md:hidden block text-[11px] text-[#686868]  mr-[19px]">
@@ -25,7 +25,7 @@ const OrdersProduct = ({ data }) => {
           <div className=' md:mt-[0px]'>
             <Link
               href={`myOrders/myOrderDetails`}
-              className="text-[#287DF3] md: text-[16px] mr-[8px] md:mr-[15px]"
+              className="text-[#287DF3] md:text-[16px] text-[4.5vw] mr-[8px] md:mr-[15px]"
             >
               <span>View More</span>
             </Link>
@@ -41,12 +41,12 @@ const OrdersProduct = ({ data }) => {
             {
               orderProducts?.map((data) => <>
                 <div className="flex md:items-center justify-between xl:w-[450px]  ">
-                  <div className='flex items-center gap-[8px]'>
-                    <Image className='' src={data.image} width="57" height="46" alt=""></Image>
+                  <div className='flex items-center gap-[8px] mb-[12px]'>
+                    <Image className='shadow-small rounded-[4px]' src={data.image} width="57" height="46" alt=""></Image>
 
-                    <div>
+                    <div className='mt-[5vw] md:mt-0'>
                       <p className='text-[12px] md:text-[16px] font-[500] text-[#001E00]'>{data.peoductName}</p>
-                      <p className=" md:hidden block text-[12px] text-[#686868]  mb-[30px]">Qty: <span className='text-[#001E00]'>{data.qty}</span></p>
+                      <p className=" md:hidden block text-[12px] text-[#686868]  mb-[16px]">Qty: <span className='text-[#001E00]'>{data.qty}</span></p>
                     </div>
                   </div>
 
