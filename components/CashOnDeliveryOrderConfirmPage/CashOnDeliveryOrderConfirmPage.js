@@ -95,16 +95,16 @@ const CashOnDeliveryOrderConfirmPage = () => {
     <div className="w-full  mb-12 ">
       <div className="py-8 shadow-small mt-[24px] max-w-[1200px] mx-auto p-[10px]">
         <div className="justify-center">
-          <div className="text-[#FB641B] flex justify-center">
+          <div className="text-[#FB641B] flex justify-center items-center">
             <AiFillClockCircle
               className={` text-2xl ${
                 purchased
-                  ? "text-[#026C51] w-8 h-8 mr-3"
-                  : "text-[#FB641B] w-8 h-8 mr-3"
+                  ? "text-[#026C51] lg:w-8 lg:h-8 w-[18px] h-[18px] mr-3"
+                  : "text-[#FB641B] lg:w-8 lg:h-8 w-[18px] h-[18px] mr-3"
               }`}
             ></AiFillClockCircle>
             <p
-              className={` text-2xl ${
+              className={` lg:text-2xl text-[16px] ${
                 purchased ? "text-[#026C51]" : "text-[#FB641B]"
               }`}
             >
@@ -125,7 +125,7 @@ const CashOnDeliveryOrderConfirmPage = () => {
         </div>
 
         <div className="max-w-[938px] mt-8 mx-auto">
-          <h4 className=" text-2xl text-[#001E00]">Your delivery dates</h4>
+          <h4 className=" lg:text-2xl text-[16px] text-[#001E00]">Your delivery dates</h4>
 
           <div className="border-[1px] border-[#686868] mt-3">
             <div className="flex justify-between mt-3 items-center  m-4 pb-4 border-b-[1px] border-[#686868]">
@@ -174,7 +174,7 @@ const CashOnDeliveryOrderConfirmPage = () => {
           </p>
         </div>
 
-        <div className="max-w-[938px] mt-8 mx-auto p-4 flex items-center justify-between bg-[#F2F2F2] rounded-[4px]">
+        <div className="max-w-[938px] mt-8 mx-auto p-4 flex  flex-col items-center justify-between bg-[#F2F2F2] rounded-[4px]">
           <p className="text-2xl font-medium text-[#001E00]">Order Summary</p>
           <h4 className="text-[38px] text-[#FB641B]">Tk 130</h4>
         </div>
@@ -186,9 +186,9 @@ const CashOnDeliveryOrderConfirmPage = () => {
         </div>
       </div>
 
-      <div className="max-w-[960px] mx-auto mt-6 ">
+      <div className="max-w-[960px] mx-auto mt-6 px-[10px]">
         <p className="mb-4 text-2xl font-medium">Just For You</p>
-        <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-[16px] grid-cols-2 lg:grid-cols-4 ">
           {productDetails?.map((details) => (
             <div key={details.id} className="card pb-10">
               <figure>
@@ -204,7 +204,7 @@ const CashOnDeliveryOrderConfirmPage = () => {
                   <FaHeart className=" text-[#F2F2F2]  w-[16px] h-[16px] hover:fill-[#FB641B]  "></FaHeart>
                 </div>
               </figure>
-              <div className="card-body p-4">
+              <div className="card-body p-[6px]">
                 <p className=" text-xl text-[#FB641B] font-medium mb-[10px]">
                   Tk {details.price}
                 </p>
@@ -218,7 +218,7 @@ const CashOnDeliveryOrderConfirmPage = () => {
                       <FaStar className="ml-2 bg-[#026C51] text-white"></FaStar>
                     </p>
                   </div>
-                  <p className="text-[#686868] ml-2">{details.ratingDetails}</p>
+                  <p className="text-[#686868] lg:text-[16px] text-[12px] ml-2">{details.ratingDetails}</p>
                 </div>
                 <div className="flex mb-[10px]">
                   <span className=" text-sm text-[#686868] mr-2">Seller: </span>
@@ -230,7 +230,7 @@ const CashOnDeliveryOrderConfirmPage = () => {
                     height={10}
                   />
                 </div>
-                <button className="btn bg-[#FB641B] h-[38px] text-white normal-case text-xl pt-2">
+                <button className="bg-[#FB641B]  text-white normal-case lg:text-xl flex justify-center items-center px-[16px] py-[10px] text-[14px]  rounded-[4px] font-semibold">
                   Add to Cart
                   <Image
                     className="w-[24px]"
