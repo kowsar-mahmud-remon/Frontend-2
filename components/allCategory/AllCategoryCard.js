@@ -13,7 +13,7 @@ import Image from "next/image";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { AiTwotoneStar } from "react-icons/ai";
 import Slider from "react-slick";
-import ProductCard from "./ProductCard"; 
+import ProductCard from "./ProductCard";
 import { settings } from "../../Utils/sliderConfig";
 
 const AllCategoryCard = ({ result, products }) => {
@@ -28,14 +28,14 @@ const AllCategoryCard = ({ result, products }) => {
           <div className="flex items-center justify-between bg-[#FFFFFF]">
             <div className="flex items-center gap-2 ">
               <Image src={img} alt="img" width={28} height={28} />
-              <div className="text-[15px] lg:text-[24px] text-[#FB641B] font-bold mr-6 md:mr-4">
+              <div className="text-[15px] lg:text-[24px] text-[#FB641B] font-bold mr-2 md:mr-4">
                 Exclusive
               </div>
             </div>
-            <div className="md:w-[75%] w-[80%]">
+            <div className="md:w-[75%] w-[45%]">
               <hr className=" border-2 border-[#FB641B]" />
             </div>
-            <div className="text-[12px] lg:text-[14px] text-[#FB641B] w-[70px] font-[500] cursor-pointer">
+            <div className="ml-2 text-[12px] lg:text-[14px] text-[#FB641B] w-[70px] font-[500] cursor-pointer">
               All View{" "}
             </div>
             <div className="  gap-3 hidden md:flex">
@@ -55,10 +55,10 @@ const AllCategoryCard = ({ result, products }) => {
           </div>
 
           {/* slider card  */}
-          <div className="flex items-center">
+          <div className="flex gap-[100px] items-center">
             <Slider
               {...settings}
-              className="flex items-center w-full "
+              className="flex gap-[100px] items-center w-full "
               ref={slideRef}
             >
               {products?.map((n, index) => (

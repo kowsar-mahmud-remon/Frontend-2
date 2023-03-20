@@ -18,13 +18,13 @@ export default function App({ Component, pageProps }) {
 
         <SideButtons />
         <MobileNavBar />
-        <div className='lg:block hidden'>
+        <div className=' '>
           <Navication />
         </div>
         <div className='md:mb-0 mb-20 lg:mr-[70px] md:mr-[70px]'>
           <Component {...pageProps} />
         </div>
-        <div className='hidden lg:block'>
+        <div className=''>
           <Footer />
         </div>
         <Toaster position="top-center" />
