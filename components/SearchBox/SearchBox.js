@@ -1930,170 +1930,172 @@ const SearchBox = () => {
                         Seller
                       </p>
                       <Image
-                          onClick={() => setHideseller(!hideseller)}
-                          className={`${
-                            hideseller === true
-                              ? "h-2 mt-2 cursor-pointer rotate-0 transition-all"
-                              : "h-2 mt-2 cursor-pointer rotate-180 transition-all"
-                          } `}
-                          src={v2}
-                          alt="img"
-                        />
+                        onClick={() => setHideseller(!hideseller)}
+                        className={`${
+                          hideseller === true
+                            ? "h-2 mt-2 cursor-pointer rotate-0 transition-all"
+                            : "h-2 mt-2 cursor-pointer rotate-180 transition-all"
+                        } `}
+                        src={v2}
+                        alt="img"
+                      />
                     </div>
 
-                    {
-                      hideseller && hideseller === true? <div className="mb-[16px] block transition-all">
-                      <form className="">
-                        <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center px-2">
-                          <input
-                            type="checkbox"
-                            className="accent-[#026C51] cursor-pointer"
-                            id="seller"
-                            name="vehicle1"
-                            checked={getIfChecked(1)}
-                            onClick={(e) =>
-                              handleSeller(e.target.checked, {
-                                id: 1,
-                                value: "NewSeller",
-                              })
-                            }
-                            value="New Seller"
-                          />
-                          <label
-                            for="vehicle1 "
-                            className="text-xs ml-2 text-[#001E00] font-medium"
-                          >
-                            {" "}
-                            New Seller
-                          </label>
-                          <br />
-                        </div>
-                        <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center px-2 my-4">
-                          <input
-                            type="checkbox"
-                            className="accent-[#026C51] cursor-pointer"
-                            id="verifiedSeller"
-                            name="vehicle2"
-                            checked={getIfChecked(2)}
-                            onClick={(e) =>
-                              handleSeller(e.target.checked, {
-                                id: 2,
-                                value: "VarifiedSeller",
-                              })
-                            }
-                            value="Verified Seller"
-                          />
-                          <label
-                            for="vehicle2"
-                            className="text-xs ml-2  text-[#001E00]  font-medium"
-                          >
-                            {" "}
-                            Verified Seller
-                          </label>
-                          <br />
-                        </div>
-                        <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center px-2">
-                          <input
-                            type="checkbox"
-                            className="accent-[#026C51] cursor-pointer"
-                            id="AssuredSeller"
-                            checked={getIfChecked(3)}
-                            name="vehicle3"
-                            onClick={(e) =>
-                              handleSeller(e.target.checked, {
-                                id: 3,
-                                value: "AssuredSeller",
-                              })
-                            }
-                            value="Assured Seller"
-                          />
-                          <label
-                            for="vehicle3"
-                            className="text-xs ml-2 text-[#001E00]  font-medium"
-                          >
-                            {" "}
-                            Assured Seller
-                          </label>
-                          <br />
-                        </div>
-                      </form>
-                    </div> : <div className="mb-[16px] hidden transition-all">
-                      <form className="">
-                        <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center px-2">
-                          <input
-                            type="checkbox"
-                            className="accent-[#026C51] cursor-pointer"
-                            id="seller"
-                            name="vehicle1"
-                            checked={getIfChecked(1)}
-                            onClick={(e) =>
-                              handleSeller(e.target.checked, {
-                                id: 1,
-                                value: "NewSeller",
-                              })
-                            }
-                            value="New Seller"
-                          />
-                          <label
-                            for="vehicle1 "
-                            className="text-xs ml-2 text-[#001E00] font-medium"
-                          >
-                            {" "}
-                            New Seller
-                          </label>
-                          <br />
-                        </div>
-                        <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center px-2 my-4">
-                          <input
-                            type="checkbox"
-                            className="accent-[#026C51] cursor-pointer"
-                            id="verifiedSeller"
-                            name="vehicle2"
-                            checked={getIfChecked(2)}
-                            onClick={(e) =>
-                              handleSeller(e.target.checked, {
-                                id: 2,
-                                value: "VarifiedSeller",
-                              })
-                            }
-                            value="Verified Seller"
-                          />
-                          <label
-                            for="vehicle2"
-                            className="text-xs ml-2  text-[#001E00]  font-medium"
-                          >
-                            {" "}
-                            Verified Seller
-                          </label>
-                          <br />
-                        </div>
-                        <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center px-2">
-                          <input
-                            type="checkbox"
-                            className="accent-[#026C51] cursor-pointer"
-                            id="AssuredSeller"
-                            checked={getIfChecked(3)}
-                            name="vehicle3"
-                            onClick={(e) =>
-                              handleSeller(e.target.checked, {
-                                id: 3,
-                                value: "AssuredSeller",
-                              })
-                            }
-                            value="Assured Seller"
-                          />
-                          <label
-                            for="vehicle3"
-                            className="text-xs ml-2 text-[#001E00]  font-medium"
-                          >
-                            {" "}
-                            Assured Seller
-                          </label>
-                          <br />
-                        </div>
-                      </form>
-                    </div>
-                    }
+                    {hideseller && hideseller === true ? (
+                      <div className="mb-[16px] block transition-all">
+                        <form className="">
+                          <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center px-2">
+                            <input
+                              type="checkbox"
+                              className="accent-[#026C51] cursor-pointer"
+                              id="seller"
+                              name="vehicle1"
+                              checked={getIfChecked(1)}
+                              onClick={(e) =>
+                                handleSeller(e.target.checked, {
+                                  id: 1,
+                                  value: "NewSeller",
+                                })
+                              }
+                              value="New Seller"
+                            />
+                            <label
+                              for="vehicle1 "
+                              className="text-xs ml-2 text-[#001E00] font-medium"
+                            >
+                              {" "}
+                              New Seller
+                            </label>
+                            <br />
+                          </div>
+                          <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center px-2 my-4">
+                            <input
+                              type="checkbox"
+                              className="accent-[#026C51] cursor-pointer"
+                              id="verifiedSeller"
+                              name="vehicle2"
+                              checked={getIfChecked(2)}
+                              onClick={(e) =>
+                                handleSeller(e.target.checked, {
+                                  id: 2,
+                                  value: "VarifiedSeller",
+                                })
+                              }
+                              value="Verified Seller"
+                            />
+                            <label
+                              for="vehicle2"
+                              className="text-xs ml-2  text-[#001E00]  font-medium"
+                            >
+                              {" "}
+                              Verified Seller
+                            </label>
+                            <br />
+                          </div>
+                          <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center px-2">
+                            <input
+                              type="checkbox"
+                              className="accent-[#026C51] cursor-pointer"
+                              id="AssuredSeller"
+                              checked={getIfChecked(3)}
+                              name="vehicle3"
+                              onClick={(e) =>
+                                handleSeller(e.target.checked, {
+                                  id: 3,
+                                  value: "AssuredSeller",
+                                })
+                              }
+                              value="Assured Seller"
+                            />
+                            <label
+                              for="vehicle3"
+                              className="text-xs ml-2 text-[#001E00]  font-medium"
+                            >
+                              {" "}
+                              Assured Seller
+                            </label>
+                            <br />
+                          </div>
+                        </form>
+                      </div>
+                    ) : (
+                      <div className="mb-[16px] hidden transition-all">
+                        <form className="">
+                          <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center px-2">
+                            <input
+                              type="checkbox"
+                              className="accent-[#026C51] cursor-pointer"
+                              id="seller"
+                              name="vehicle1"
+                              checked={getIfChecked(1)}
+                              onClick={(e) =>
+                                handleSeller(e.target.checked, {
+                                  id: 1,
+                                  value: "NewSeller",
+                                })
+                              }
+                              value="New Seller"
+                            />
+                            <label
+                              for="vehicle1 "
+                              className="text-xs ml-2 text-[#001E00] font-medium"
+                            >
+                              {" "}
+                              New Seller
+                            </label>
+                            <br />
+                          </div>
+                          <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center px-2 my-4">
+                            <input
+                              type="checkbox"
+                              className="accent-[#026C51] cursor-pointer"
+                              id="verifiedSeller"
+                              name="vehicle2"
+                              checked={getIfChecked(2)}
+                              onClick={(e) =>
+                                handleSeller(e.target.checked, {
+                                  id: 2,
+                                  value: "VarifiedSeller",
+                                })
+                              }
+                              value="Verified Seller"
+                            />
+                            <label
+                              for="vehicle2"
+                              className="text-xs ml-2  text-[#001E00]  font-medium"
+                            >
+                              {" "}
+                              Verified Seller
+                            </label>
+                            <br />
+                          </div>
+                          <div className="border border-[#CDCDCD] rounded h-[32px] w-[136px] flex items-center px-2">
+                            <input
+                              type="checkbox"
+                              className="accent-[#026C51] cursor-pointer"
+                              id="AssuredSeller"
+                              checked={getIfChecked(3)}
+                              name="vehicle3"
+                              onClick={(e) =>
+                                handleSeller(e.target.checked, {
+                                  id: 3,
+                                  value: "AssuredSeller",
+                                })
+                              }
+                              value="Assured Seller"
+                            />
+                            <label
+                              for="vehicle3"
+                              className="text-xs ml-2 text-[#001E00]  font-medium"
+                            >
+                              {" "}
+                              Assured Seller
+                            </label>
+                            <br />
+                          </div>
+                        </form>
+                      </div>
+                    )}
                   </div>
                   <hr className="mb-4 border-[#B7B7B7]" />
 
@@ -2424,7 +2426,7 @@ const SearchBox = () => {
                   </div>
                 </div>
               );
-            })}
+            })}  
         </div>
         <div className="flex justify-center md:mb-[52px]">
           <button className="btn border-[#FB641B] border-2  bg-white text-[#FB641B] text-[24px] font-semibold  w-[235px] h-[72px] mt-[58px] rounded-none">

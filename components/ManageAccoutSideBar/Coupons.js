@@ -1,9 +1,12 @@
 /* eslint-disable react/jsx-key */
 import Image from "next/image";
+import { useRouter } from "next/router";
+import { FaArrowLeft } from "react-icons/fa";
 import CouponCard from "./CouponCard";
 
 
 const Coupons = () => {
+    const router = useRouter();
     const coupons = [
         {
             'ShopName': 'FamilyBazar',
@@ -51,8 +54,19 @@ const Coupons = () => {
     ]
     return (
         <div>
-            <div>
+            <div className="lg:block hidden">
                 <h1 className="text-[#FB641B] text-[24px]">Available Coupon</h1>
+            </div>
+            <div className="md:hidden block mx-[20px]">
+                <button
+                    onClick={() => router.back()}
+                    className="flex items-center gap-[13px]"
+                >
+                    <FaArrowLeft className=""></FaArrowLeft>
+                    <h1 className="text-[20px]  font-[500] text-[#001E00]">
+                    Available Coupons
+                    </h1>
+                </button>
             </div>
 
             <div className="lg:shadow-small max-w-[924px] lg:mr-[20px] rounded-[8px] xl:h-[644px] mt-[16px]">

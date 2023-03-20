@@ -11,15 +11,15 @@ import img5 from '../../assets/images/image 88.png';
 import sellerImg from '../../assets/images/seller.png';
 import { FaStar } from 'react-icons/fa';
 import { AiFillHeart, AiTwotoneStar } from 'react-icons/ai';
-import styles from '../allCategory/category.module.css'
-import love from '../../assets/CategoryImages/ProductsImg/love.png'
-import logo from '../../assets/CategoryImages/ProductsImg/logo.jpg'
-import cart from '../../assets/CategoryImages/ProductsImg/Vector (2).png'
+import styles from '../allCategory/category.module.css';
+import love from '../../assets/CategoryImages/ProductsImg/love.png';
+import logo from '../../assets/CategoryImages/ProductsImg/logo.jpg';
+import cart from '../../assets/CategoryImages/ProductsImg/Vector (2).png';
 import { useRouter } from 'next/router';
 
 
 const AddToCartPage = ({ hidden, setHidden, categoryData, quantityItems }) => {
-  const router = useRouter()
+  const router = useRouter();
   console.log('hidden', hidden);
   const productDetails =
     [
@@ -109,7 +109,7 @@ const AddToCartPage = ({ hidden, setHidden, categoryData, quantityItems }) => {
 
           <input type="checkbox" id="my-modal-4" className="modal-toggle" />
           <label htmlFor="my-modal-4" className="modal cursor-pointer bg-black bg-opacity-70">
-            <label className="modal-box lg:px-10 p-6 relative w-full lg:max-w-[1225px]" htmlFor="">
+            <label className="modal-box lg:px-10 p-6 relative w-full  max-h-[80%] lg:max-h-[80%] max-w-[1225px] scrollbar-hide" htmlFor="">
               <label htmlFor="my-modal-4" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
               <div className=" lg:mt-[22px] mb-11">
                 <div className="lg:flex justify-between lg:border-b border-[#B7B7B7]">
@@ -168,14 +168,15 @@ const AddToCartPage = ({ hidden, setHidden, categoryData, quantityItems }) => {
                   className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-[28px] mt-10  md:ml-0 lg:ml-0">
                   {
                     categoryData?.result.map(({ productPictures, regularPrice, productName, discount, productTitle, category: { _id: categoryId }, slug, _id, subCategory }, i) => <div
+                      className=' flex justify-center lg:justify-start'
                       key={i}
                     >
                       <div
                         onClick={() => {
-                          router.push(`/productpage/${slug}/${_id}?categoryId=${categoryId}&subCategoryId=${subCategory}`)
-                          setHidden(null)
+                          router.push(`/productpage/${slug}/${_id}?categoryId=${categoryId}&subCategoryId=${subCategory}`);
+                          setHidden(null);
                         }}
-                        className={` w-[180px] md:w-[240px] h-auto cursor-pointer rounded-md pb-4 ${styles.cardCategory} duration-[.3s] rounded-md`}>
+                        className={` w-[240px] h-auto cursor-pointer rounded-md pb-4 ${styles.cardCategory} duration-[.3s] rounded-md`}>
                         <div className=''>
                           <div className='relative '>
                             <Image
