@@ -100,7 +100,7 @@ const AddNewUserModal = ({ modal, handleClose }) => {
                   Province
                 </label>
                 <div className="mt-2">
-                  <Select options={options} />
+                  <Select className="border border-[#686868] text-[#686868] rounded" options={options} />
                 </div>
               </div>
               <div className="lg:w-[360px] w-full">
@@ -134,7 +134,7 @@ const AddNewUserModal = ({ modal, handleClose }) => {
                   City
                 </label>
                 <div className="mt-2">
-                  <Select options={options} />
+                  <Select  className="border border-[#686868] text-[#686868] rounded" options={options} />
                 </div>
               </div>
               <div className="lg:w-[360px] w-full">
@@ -165,7 +165,7 @@ const AddNewUserModal = ({ modal, handleClose }) => {
                   Area
                 </label>
                 <div className="mt-2">
-                  <Select options={options} />
+                  <Select className="border border-[#686868] text-[#686868] rounded" options={options} />
                 </div>
               </div>
             </div>
