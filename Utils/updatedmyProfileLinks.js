@@ -18,6 +18,7 @@ import Coupons from "../components/ManageAccoutSideBar/Coupons";
 import GiftCards from "../components/ManageAccoutSideBar/GiftCards";
 import MyPaymentOption from "../components/ManageAccoutSideBar/MyPaymentOption";
 import MyReturns01 from "../components/ManageAccoutSideBar/MyReturns01";
+import OrderCancelation08 from "../components/OrderCancelation08/OrderCancelation08";
 
 const profileLinksObj = [
   {
@@ -124,6 +125,11 @@ const profileLinksObj = [
     title: "OrderCancelation",
     href: "myOrderCancelation",
     element: <MyOrderCancelation />,
+  },
+  {
+    title: "OrderCancelation08",
+    href: "OrderCancelation08",
+    element: <OrderCancelation08 />,
   },
 ];
 

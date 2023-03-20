@@ -127,13 +127,13 @@ const Navication = () => {
       <TopNavBar />
 
       <div className="flex items-center h-[80px] gap-3 px-[20px] lg:px-[40px] 2xl:px-[50px]  bg-[#ffffff] justify-between text-[#026C51]">
-        <div className="flex justify-center first-line:">
+        <div className="flex justify-center first-line: w-[25%] lg:w-auto ">
           <Link href="/">
             <Image width={180} height={48} src={logo} alt="img" />
           </Link>
         </div>
 
-        <div className={`${styles.navSearch}`}>
+        <div className={`${styles.navSearch} w-[75%] lg:w-[890px] `}>
           <div className="flex items-center w-full justify-between bg-transparent">
             <input
               className="pl-[16px] bg-white outline-none border-0"

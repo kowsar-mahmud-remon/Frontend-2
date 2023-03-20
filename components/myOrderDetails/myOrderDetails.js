@@ -1,13 +1,15 @@
 import Image from "next/image";
 import img1 from "../../assets/images/myOrdersDetails/Vector (3).png";
 import img2 from "../../assets/images/myOrdersDetails/Group 2417.png";
+import icon1 from '../../assets/images/Group 1635.png'
 import Timeline from "./Timeline/Timeline";
 import Link from "next/link";
 import { FaArrowLeft } from "react-icons/fa";
 import { useRouter } from "next/router";
+import JustForYou from "../JustForYou/JustForYou";
 
 const MyOrderDetails = () => {
-  const router  = useRouter()
+  const router = useRouter()
   const data = {
     id: "1",
     orderId: "121312323213432",
@@ -42,14 +44,14 @@ const MyOrderDetails = () => {
         >
           <FaArrowLeft className=""></FaArrowLeft>
           <h1 className="text-[20px]  font-[500] text-[#001E00] my-4">
-            Order Details
+            My Orders
           </h1>
         </button>
       </div>
-      <h2 className="text-[24px] font-[500] text-[#FB641B] mb-4 hidden md:block">
+      <h2 className="text-[24px] font-[500] text-[#FB641B] mb-4  md:block">
         Order Details
       </h2>
-      <div className="flex lg:mr-[20px] justify-between items-center px-4 py-5 shadow-lg rounded-lg">
+      <div className="flex lg:mr-[20px] justify-between items-center px-4 py-5 shadow-small rounded-lg">
         <div className="">
           <h3 className="font-[500]">
             Order{" "}
@@ -137,7 +139,7 @@ const MyOrderDetails = () => {
           {/* mobile table */}
           <div>
             <div className="md:hidden">
-              <div className="overflow-x-auto">
+              <div className="md:overflow-x-auto">
                 <table className="table w-full">
                   <thead>
                     <tr className="hidden">
@@ -159,23 +161,30 @@ const MyOrderDetails = () => {
                             alt=""
                           />
                           <div>
-                            <p className="font-[500] text-[12px]">
+                            <p className="font-[500] text-[4vw]">
                               {data.productName}
                             </p>
-                            <p className=" text-[11px]">Tk {data.subtotal}</p>
-                            <p className="text-[11px]">
+                            <p className=" text-[11px] text-[#686868]">Tk {data.subtotal}</p>
+                            <p className="text-[11px] text-[#686868]">
                               Qty:{" "}
-                              <span className="font-[500]"> {data.qty}</span>
+                              <span className="font-[500] text-[#686868]"> {data.qty}</span>
                             </p>
                           </div>
                         </td>
 
-                        <td>
+                        <td className="px-0">
                           <Link
-                            href="profile/myOrderCancelation"
+                            href="myOrderCancelation"
                             className="text-[#287DF3]"
                           >
-                            Cancel
+                            <div className="flex items-center w-[63px]">
+                              <p className="text-[4.5vw]"> Cancel</p>
+                              <Image
+                                src={icon1}
+                                alt='image'
+                                className="w-[4vw] h-[4vw] ml-[8px]"
+                              />
+                            </div>
                           </Link>
                         </td>
                       </tr>
@@ -248,6 +257,7 @@ const MyOrderDetails = () => {
           </div>
         </div>
       </div>
+      <JustForYou></JustForYou>
     </div>
   );
 };

@@ -38,7 +38,7 @@ const StoriesCard = ({ story }) => {
       <div className="rounded-lg shadow-xl h-[200px]">
         <div className="relative ">
 
-          <ReactPlayer className='rounded-t-lg' width={'100%'} height={"270px"} text={hide} url="https://youtube.com/shorts/3l4B26DzMo8" />
+          <ReactPlayer className='rounded-t-lg' width={'100%'} text={hide} url="https://youtube.com/shorts/3l4B26DzMo8" />
 
           <div className="absolute top-3 w-full px-1 text-white">
             <div className="flex justify-between items-center">

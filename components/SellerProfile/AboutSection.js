@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { FaHome } from "react-icons/fa";
 import { FaThumbsUp } from "react-icons/fa";
@@ -7,6 +8,11 @@ import logo from "../../assets/images/sellerProfile/logo.png";
 import user from "../../assets/images/sellerProfile/sellerImg.png";
 
 function AboutSection(props) {
+  const [showText, setShowText] = useState(false);
+
+  function toggleText() {
+    setShowText(!showText);
+  }
   return (
     <div className="w-full px-[32px]  mobile:mt-[24px]  ">
       <div className="lg:text-[24px] mobile:text-[12px]">
@@ -29,7 +35,10 @@ function AboutSection(props) {
           <FaThumbsUp className="text-[#287DF3] inline mr-3  w-[26px] h-[24px]"></FaThumbsUp>
           <span className="mr-2 ml-[12px] font-bold">Likes</span>{" "}
           <span>Johir, Abdullah and Sonjoy</span>
-          <span className="text-[#287DF3] ml-1">See More</span>
+          <span onClick={toggleText} className="text-[#287DF3] ml-[8px]">See More</span>
+          {
+          showText && <><p>More Names will come here</p><span onClick={toggleText} className="text-[#287DF3] ml-[8px]">Show less</span></>
+          }
         </p>
         <p className="mt-[25px] ">
           <Image
