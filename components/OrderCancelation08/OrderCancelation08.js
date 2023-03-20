@@ -40,6 +40,7 @@ const OrderCancelation08 = () => {
                 />
             </div>
             <h1 className='text-center text-[24px] text-[#0BD838] mt-[8px]'>Your Cancellation Was Successful!</h1>
+            <h1 className='text-center text-[#001E00] text-[4.5vw] mt-[8px]'>Your order number was 636567003339341</h1>
             <div className='shadow-small w-full rounded-[8px] divide-y divide-gray-400 mt-[24px]'>
                 <div className='ml-[12px] mb-[16px]'>
                     <h1 className='text-[#686868] text-[12px] pt-[12px]'>Sold by <span className='text-[#287DF3]'>Banglar Big Store</span></h1>
