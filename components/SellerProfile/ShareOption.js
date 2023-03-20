@@ -51,7 +51,7 @@ function ShareOption(props) {
           id="my-modal"
           className="modal-toggle bg-trasparent border-none"
         />
-        <div className="modal">
+        <div className="modal fixed inset-0   h-screen bg-black  bg-opacity-60 ">
           <div className="modal-box relative">
             <label
               htmlFor="my-modal"
