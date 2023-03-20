@@ -12,16 +12,16 @@ const CustomModalAddNew = ({ addNew, setAddNew }) => {
       left: "50%",
       right: "auto",
       bottom: "auto",
-      marginRight: "-50%",
-      transform: "translate(-50%, -50%)",
       borderRadius: "8px",
-      padding: 0,
-      margin: 0,
-      zIndex: 100,
+      padding: "0px",
+      border: "none",
+      marginRight: "50px",
+      transform: "translate(-50%, -50%)",
     },
     overlay: {
-      background: "rgba(0, 0, 0, 0.6)",
       zIndex: 1000,
+      background: "rgba(0, 0, 0, 0.6)",
+      overflow: "scroll",
     },
   };
 
@@ -52,7 +52,7 @@ const CustomModalAddNew = ({ addNew, setAddNew }) => {
         style={customStyles}
         contentLabel="Example Modal"
       >
-        <div className="lg:w-[780px] ">
+        <div className="lg:w-[780px]">
           <div
             className={`h-[67px] ${style.modalShaddow} flex justify-between items-center px-[22px]`}
           >

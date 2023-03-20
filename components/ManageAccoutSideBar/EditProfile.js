@@ -114,18 +114,18 @@ const EditProfile = () => {
                         <div className="mt-[16px] w-full">
                             <h1 className="text-[#686868] text-[14px] font-normal">Full Name</h1>
                             <div className="">
-                                <input placeholder='Abdul Korim' className="text-[#686868]  pl-[16px] text-[16px] font-[400] w-full mt-[12px] h-[48px] bg-[#FFFFFF] rounded-[4px] profileBox placeholder:text-[#686868]"></input>
+                                <input placeholder='Abdul Korim' className="text-[#686868]  pl-[16px] text-[3.8vw] font-[400] w-full mt-[12px] h-[48px] bg-[#FFFFFF] rounded-[4px] profileBox placeholder:text-[#686868]"></input>
                             </div>
                         </div>
                         <div className="mt-[20px] w-full">
                             <h1 className="text-[#686868] text-[14px] font-normal">Email Address</h1>
                             <div className="w-full mt-[12px] h-[48px] bg-[#FFFFFF] rounded-[4px] profileBox">
                                 <div className="flex full items-center justify-between mx-[16px] pt-[13px]">
-                                    <h1 className="text-[#686868]   text-[16px] font-[400]">abdulkorim@gmail.com</h1>
+                                    <h1 className="text-[#686868]  text-[3.8vw] font-[400]">abdulkorim@gmail.com</h1>
 
                                     <label htmlFor="Email-responsive-modal-3">
                                         <div className="flex items-center gap-[5.5px]">
-                                            <h1 className="text-[#287DF3] text-[14px]">Change</h1>
+                                            <h1 className="text-[#287DF3] text-[3.8vw]">Change</h1>
                                             <FaEdit></FaEdit>
                                         </div>
                                     </label>
@@ -137,10 +137,10 @@ const EditProfile = () => {
                             <h1 className="text-[#686868] text-[14px] font-normal">Mobile</h1>
                             <div className="w-full mt-[12px] h-[48px] bg-[#FFFFFF] rounded-[4px] profileBox">
                                 <div className="flex items-center justify-between mx-[16px] pt-[13px] ">
-                                    <h1 className="text-[#686868]   text-[16px] font-[400]">+880 123******154</h1>
+                                    <h1 className="text-[#686868]   text-[3.8vw] font-[400]">+880 123******154</h1>
                                     <label htmlFor="Mobile-responsive-modal-3">
                                         <div className="flex items-center gap-[5.5px]">
-                                            <h1 className="text-[#287DF3] text-[14px]">Change</h1>
+                                            <h1 className="text-[#287DF3] text-[3.8vw]">Change</h1>
                                             <FaEdit></FaEdit>
                                         </div>
                                     </label>
@@ -151,7 +151,7 @@ const EditProfile = () => {
                         </div>
                         <div className="mt-[20px] w-full">
                             <h1 className="text-[#686868] text-[14px] font-normal">Birthday</h1>
-                            <div className="flex divide-x mt-[12px] bg-[#FFFFFF] rounded-[4px] profileBox  text-[16px] font-[400]">
+                            <div className="flex divide-x mt-[12px] bg-[#FFFFFF] rounded-[4px] profileBox  text-[3.8vw] font-[400]">
 
                                 <input placeholder="05" type='number' min='1' max='31' className='w-full pl-[8px] h-[48px] border-[#B7B7B7] border-[1px] rounded-l-[4px] border-none'></input>
 
@@ -166,8 +166,10 @@ const EditProfile = () => {
                         <div className="mt-[20px] w-full">
                             <h1 className="text-[#686868] text-[14px] font-normal">gender</h1>
                             <div className="">
-                                <select placeholder='Male' className="text-[#686868]  selected w-full mt-[12px] h-[48px] bg-[#FFFFFF] rounded-[4px] profileBox  pl-[16px] text-[16px] font-[400]" name="" id="">
+                                <select placeholder='Male' className="text-[#686868]  selected w-full mt-[12px] h-[48px] bg-[#FFFFFF] rounded-[4px] profileBox  pl-[16px] text-[3.8vw] font-[400]" name="" id="">
                                     <option className="w-[200px]" value="male">Male</option>
+                                    <option className="w-[200px]" value="Female">Female</option>
+                                    <option className="w-[200px]" value="Other">Other</option>
                                 </select>
                             </div>
                         </div>
