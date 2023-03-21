@@ -8,6 +8,7 @@ import rocket from '../../assets/images/rocket.png'
 import bkash from '../../assets/images/BKASH.png'
 import cash from '../../assets/images/cash-on-delivery 1.png'
 import { useState } from 'react';
+import Link from 'next/link';
 
 
 const Debit = () => {
@@ -23,7 +24,7 @@ const Debit = () => {
         <div className='flex justify-center mb-[.2vw]'>
             <div className='w-[90%]'>
                 <div className="flex justify-center mt-[24px] mb-[24px]">
-                    <h1 className="text-[#FB641B] flex items-center px-[3vw] justify-center w-full  md:w-[46%] h-[56px] text-center bg-[#FFDDCC] text-[3.7vw] md:text-[1vw] font-normal"> <Image className='w-[28px] h-[28px] mr-[16px]' src={icon} alt='image'></Image>Collect your Prepayment Voucher & Enjoy Extra Savings on Selected Cards</h1>
+                    <h1 className="text-[#FB641B] flex items-center px-[3vw] justify-center w-full  md:w-[50%] h-[56px] text-left bg-[#FFDDCC] text-[3.7vw] md:text-[1vw] font-normal"> <Image className='w-[28px] h-[28px] mr-[16px]' src={icon} alt='image'></Image>Collect your Prepayment Voucher & Enjoy Extra Savings on Selected Cards</h1>
                 </div>
                 <div className='md:flex  md:justify-center'>
                     <div className=''>
@@ -32,77 +33,103 @@ const Debit = () => {
                             <div className=''>
                                 <div className='grid grid-cols-2 md:grid-cols-6 gap-[16px] md:mb-[16px] '>
                                     <div className={` md:w-[9vw] md:h-[9vw] w-[43vw] h-[43vw] bg-[#F2F2F2] rounded-[4px] flex items-center`}>
-                                        <div className='mx-auto'>
-                                            <div className='flex justify-center mb-[.2vw]'>
-                                                <Image
-                                                    className='w-[68px] h-[68px] '
-                                                    src={debit}
-                                                    alt='image' />
-                                            </div>
-                                            <h1 className='md:text-[.8vw] text-[4vw] text-[#001E00] text-center'>Credit/Debit Card</h1>
-                                        </div>
+                                        <Link href='debitmobile/creditMobile'>
+                                            <div className='mx-auto ml-[6vw] md:ml-[1.2vw]'>
+                                                <div className='flex justify-center mb-[.2vw]'>
+                                                    <Image
+                                                        className='w-[68px] h-[68px] '
+                                                        src={debit}
+                                                        alt='image' />
+                                                </div>
+                                                <h1 className='md:text-[.8vw] text-[4vw] text-[#001E00] text-center'>Credit/Debit Card</h1>
+                                            </div></Link>
                                     </div>
                                     <div className={`md:w-[9vw] md:h-[9vw] w-[43vw] h-[43vw] bg-[#F2F2F2] rounded-[4px] flex items-center`}>
-                                        <div className='mx-auto'>
-                                            <div className='flex justify-center mb-[.2vw]'>
-                                                <Image
-                                                    className='w-[68px] h-[68px] '
-                                                    src={cell}
-                                                    alt='image' />
-                                            </div>
-                                            <h1 className='md:text-[.8vw] text-[4vw] text-[#001E00] text-center'>IBBL Cell fin</h1>
-                                        </div>
+                                        <Link href='debitmobile/creditMobile'>
+                                            <div className='mx-auto ml-[11vw] md:ml-[2vw]'>
+                                                <div className='flex justify-center mb-[.2vw]'>
+                                                    <Image
+                                                        className='w-[68px] h-[68px] '
+                                                        src={cell}
+                                                        alt='image' />
+                                                </div>
+                                                <h1 className='md:text-[.8vw] text-[4vw] text-[#001E00] text-center'>IBBL Cell fin</h1>
+                                            </div></Link>
                                     </div>
                                     <div className={`md:w-[9vw] md:h-[9vw] w-[43vw] h-[43vw] bg-[#F2F2F2] rounded-[4px] flex items-center`}>
-                                        <div className='mx-auto'>
-                                            <div className='flex justify-center mb-[.2vw]'>
-                                                <Image
-                                                    className='w-[68px] h-[68px] '
-                                                    src={dbbl}
-                                                    alt='image' />
-                                            </div>
-                                            <h1 className='md:text-[.8vw] text-[4vw] text-[#001E00] text-center'>DBBL Nexus Card</h1>
-                                        </div>
+                                        <Link href='debitmobile/creditMobile'>
+                                            <div className='mx-auto ml-[6vw] md:ml-[1.5vw]'>
+                                                <div className='flex justify-center mb-[.2vw]'>
+                                                    <Image
+                                                        className='w-[68px] h-[68px] '
+                                                        src={dbbl}
+                                                        alt='image' />
+                                                </div>
+                                                <h1 className='md:text-[.8vw] text-[4vw] text-[#001E00] text-center'>DBBL Nexus Card</h1>
+                                            </div></Link>
                                     </div>
                                     <div className={`md:w-[9vw] md:h-[9vw] w-[43vw] h-[43vw] bg-[#F2F2F2] rounded-[4px] flex items-center`}>
-                                        <div className='mx-auto'>
-                                            <div className='flex justify-center mb-[.2vw]'>
-                                                <Image
-                                                    className='w-[68px] h-[68px] '
-                                                    src={rocket}
-                                                    alt='image' />
+                                        <Link href='debitmobile/creditMobile'>
+                                            <div className='mx-auto ml-[12vw] md:ml-[2vw]'>
+                                                <div className='flex justify-center mb-[.2vw]'>
+                                                    <Image
+                                                        className='w-[68px] h-[68px] '
+                                                        src={rocket}
+                                                        alt='image' />
+                                                </div>
+                                                <h1 className='md:text-[.8vw] text-[4vw] text-[#001E00] text-center'>Rocket</h1>
                                             </div>
-                                            <h1 className='md:text-[.8vw] text-[4vw] text-[#001E00] text-center'>Rocket</h1>
-                                        </div>
+                                        </Link>
                                     </div>
                                     <div className={`md:w-[9vw] md:h-[9vw] w-[43vw] h-[43vw] bg-[#F2F2F2] rounded-[4px] flex items-center`}>
-                                        <div className='mx-auto'>
-                                            <div className='flex justify-center mb-[.2vw]'>
-                                                <Image
-                                                    className='w-[68px] h-[68px] '
-                                                    src={bkash}
-                                                    alt='image' />
+                                        <Link href='debitmobile/creditMobile'>
+                                            <div className='mx-auto ml-[3vw] md:ml-[1vw]'>
+                                                <div className='flex justify-center mb-[.2vw]'>
+                                                    <Image
+                                                        className='w-[68px] h-[68px] '
+                                                        src={bkash}
+                                                        alt='image' />
+                                                </div>
+                                                <h1 className='md:text-[.8vw] text-[4vw] text-[#001E00] text-center'>Save bKash Account</h1>
+                                            </div></Link>
+                                    </div>
+                                    <div onClick={() => { handlecash() }} className={`md:w-[9vw] md:flex hidden  md:h-[9vw] w-[43vw] h-[43vw] ${bground} rounded-[4px] flex items-center`}>
+                                        <div className='mx-auto '>
+                                            <div className=''>
+                                                <div className='flex justify-center items-center mb-[.2vw]'>
+                                                    <Image
+                                                        className='w-[68px] h-[68px] flex item-center'
+                                                        src={cash}
+                                                        alt='image' />
+                                                </div>
+                                                <h1 className='md:text-[.8vw] text-[4vw]  text-[#001E00] text-center'>Cash On Delivery</h1>
                                             </div>
-                                            <h1 className='md:text-[.8vw] text-[4vw] text-[#001E00] text-center'>Save bKash Account</h1>
                                         </div>
                                     </div>
-                                    <div onClick={() => { handlecash() }} className={`md:w-[9vw] md:h-[9vw] w-[43vw] h-[43vw] ${bground} rounded-[4px] flex items-center`}>
-                                        <div className='mx-auto'>
-                                            <div className='flex justify-center mb-[.2vw]'>
-                                                <Image
-                                                    className='w-[68px] h-[68px] '
-                                                    src={cash}
-                                                    alt='image' />
+                                    {/* For mobile */}
+                                    <div className={`md:w-[9vw] block md:hidden  md:h-[9vw] w-[43vw] h-[43vw] ${bground} rounded-[4px] flex items-center`}>
+                                        <Link href='debitmobile'>
+                                            <div className='mx-auto ml-[6vw]'>
+                                                <div className='flex justify-center mb-[.2vw]'>
+                                                    <Image
+                                                        className='w-[68px] h-[68px] flex item-center'
+                                                        src={cash}
+                                                        alt='image' />
+                                                </div>
+                                                <h1 className='md:text-[.8vw] text-[4vw]  text-[#001E00] text-center'>Cash On Delivery</h1>
                                             </div>
-                                            <h1 className='md:text-[.8vw] text-[4vw]  text-[#001E00] text-center'>Cash On Delivery</h1>
-                                        </div>
+                                        </Link>
                                     </div>
+                                    {/* For mobile */}
+
                                 </div>
-                                <div className={`${cashOn}`}>
-                                    <div className='w-full shadow-small rounded-[4px] h-[213px] px-[24px]'>
-                                        <p className='text-[13px] text-[#001E00] pt-[55px]'>You can pay in cash to our courier when you receive the goods at your doorstep.</p>
-                                        <div className='mt-[71px]'>
-                                            <button className='bg-[#FB641B] w-[260px] h-[48px] rounded-[8px] font-[500] text-white'> Confirm Order</button>
+                                <div className={`${cashOn}  `}>
+                                    <div className='hidden md:block'>
+                                        <div className='w-full shadow-small rounded-[4px] h-[213px] px-[24px]'>
+                                            <p className='text-[13px] text-[#001E00] pt-[55px]'>You can pay in cash to our courier when you receive the goods at your doorstep.</p>
+                                            <div className='mt-[71px]'>
+                                                <Link href='democashondelivery'>  <button className='bg-[#FB641B] w-[260px] h-[48px] rounded-[8px] font-[500] text-white'> Confirm Order</button></Link>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

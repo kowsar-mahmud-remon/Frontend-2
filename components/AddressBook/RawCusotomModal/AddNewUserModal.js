@@ -2,6 +2,8 @@ import React from "react";
 import style from "../../../styles/componentsStyles/box-shaddow.module.css";
 import { useState } from "react";
 import Select from "react-select";
+import Image from "next/image";
+import selected from "../../../assets/images/selet.jpg";
 
 const AddNewUserModal = ({ modal, handleClose }) => {
   const [select, setSelect] = useState({ text: "Home" });
@@ -46,7 +48,7 @@ const AddNewUserModal = ({ modal, handleClose }) => {
               <div className="lg:w-[360px] w-full">
                 <label htmlFor="" className="text-[#001E00] ">
                   Full Name
-                </label>
+                </label> 
                 <input
                   className="border border-[#686868] text-[#686868] px-[22px] rounded lg:w-[360px] w-full h-[40px] mt-2 "
                   type="text"
@@ -100,28 +102,46 @@ const AddNewUserModal = ({ modal, handleClose }) => {
                   Province
                 </label>
                 <div className="mt-2">
-                  <Select options={options} />
+                  <Select className="border border-[#686868] text-[#686868] rounded" options={options} />
                 </div>
               </div>
               <div className="lg:w-[360px] w-full">
                 <label htmlFor="" className="text-[#001E00]">
                   Select a label for effective delivery:
                 </label>
-                <div className="flex justify-between text-[#686868]  rounded lg:w-[360px] w-full h-[40px] gap-4 mt-2">
+                <div className="flex justify-between text-[#686868] rounded lg:w-[360px] w-full h-[40px] gap-4 mt-2">
                   {lists.map((list, i) => {
                     return (
                       <>
-                        <button
+                        <div
                           key={i}
                           onClick={() => handleSelected(list)}
                           className={`${
                             list.text === select.text
-                              ? `w-[172px] text-[#686868] rounded border-[#026C51] border ${style.boxbuttonshadow}`
+                              ? `w-[172px] text-[#686868] rounded border-[#026C51] border ${style.boxbuttonshadow} inline-block`
                               : `w-[172px] text-[#686868] rounded ${style.boxbuttonshadow}`
                           }`}
                         >
-                          {list.text}
-                        </button>
+                          <div className="w-6 h-4">
+                            {list.text === select.text ? (
+                              <Image
+                                className="w-6 h-4"
+                                src={selected}
+                                alt=""
+                                width={23}
+                                height={16}
+                              ></Image>
+                            ) : (
+                              ""
+                            )}
+                          </div>
+
+                          <div className="flex justify-center -m-[9px]">
+                            <p className="text-center cursor-pointer">
+                              {list.text}
+                            </p>
+                          </div>
+                        </div>
                       </>
                     );
                   })}
@@ -134,7 +154,7 @@ const AddNewUserModal = ({ modal, handleClose }) => {
                   City
                 </label>
                 <div className="mt-2">
-                  <Select options={options} />
+                  <Select  className="border border-[#686868] text-[#686868] rounded" options={options} />
                 </div>
               </div>
               <div className="lg:w-[360px] w-full">
@@ -165,7 +185,7 @@ const AddNewUserModal = ({ modal, handleClose }) => {
                   Area
                 </label>
                 <div className="mt-2">
-                  <Select options={options} />
+                  <Select className="border border-[#686868] text-[#686868] rounded" options={options} />
                 </div>
               </div>
             </div>

@@ -7,10 +7,12 @@ import AddNewAddress from "./AddNewAddress";
 import CustomModalAddNew from "./CustomModalAddNew/CustomModalAddNew";
 import EditYourDelivery from "./CustomModalAddNew/EditYourDelivery";
 import AddNewUserModal from "./RawCusotomModal/AddNewUserModal";
+import DeletedAndEditModal from "./RawCusotomModal/DeletedAndEditModal";
 const YourDeliveryModal = () => {
   const [modalIsOpen, setIsOpen] = useState(false);
   const [addNew, setAddNew] = useState(false);
   const [modal, setModal] = useState(false);
+  const [edit, setEdit] = useState(false);
 
   const [active, setActive] = useState({ name: "first" });
 
@@ -40,10 +42,12 @@ const YourDeliveryModal = () => {
     },
   ];
 
-
-  const handleClose = ()=>{
-    setModal(false)
-  }
+  const handleClose = () => {
+    setModal(false);
+  };
+  const editClose = () => {
+    setEdit(false);
+  };
 
   const handleActive = (item) => {
     setActive(item);
@@ -62,11 +66,14 @@ const YourDeliveryModal = () => {
         addNew={addNew}
         setAddNew={setAddNew}
       ></CustomModalAddNew>
-      <EditYourDelivery
-        modalIsOpen={modalIsOpen}
-        setIsOpen={setIsOpen}
-      ></EditYourDelivery>
-      <AddNewUserModal handleClose={handleClose} modal={modal}></AddNewUserModal>
+      <AddNewUserModal
+        handleClose={handleClose}
+        modal={modal}
+      ></AddNewUserModal>
+      <DeletedAndEditModal
+        editClose={editClose}
+        edit={edit}
+      ></DeletedAndEditModal>
       <input type="checkbox" id="your-delivary" className="modal-toggle" />
       <div className={`modal ${style.modalBackground}`}>
         <div className="modal-box relative  max-w-[780px] scrollbar-hide m-0 p-0">
@@ -93,7 +100,7 @@ const YourDeliveryModal = () => {
                   <>
                     <div
                       key={i}
-                      onClick={() => handleActive(item)}
+                      onClick={() => setEdit(true)}
                       className={`${
                         item?.name === active.name
                           ? "rounded-lg border-[#026C51] border w-[360px] h-[217px]"
@@ -111,7 +118,7 @@ const YourDeliveryModal = () => {
                         <div className="">
                           {item && (
                             <button
-                              onClick={() => openModals(item)}
+                              onClick={() => setEdit(true)}
                               className="text-[#287DF3] bg-[#F2F3F7] text-[12px] px-2 rounded cursor-pointer mr-4"
                             >
                               <label
@@ -165,7 +172,7 @@ const YourDeliveryModal = () => {
             <div className="flex items-center">
               <Image className="w-[14px] mr-2" src={plus} alt="" />
               <button
-                onClick={()=> setModal(true)}
+                onClick={() => setModal(true)}
                 className="text-base text-[#686868]  font-medium"
               >
                 <label htmlFor="your-delivary" className="cursor-pointer">
@@ -181,7 +188,7 @@ const YourDeliveryModal = () => {
               <div className="flex items-center">
                 <Image className="w-[14px] mr-2" src={plus} alt="" />
                 <button
-                  onClick={()=> setModal(true)}
+                  onClick={() => setModal(true)}
                   className="text-base text-[#686868]  font-medium"
                 >
                   <label htmlFor="your-delivary" className="cursor-pointer">

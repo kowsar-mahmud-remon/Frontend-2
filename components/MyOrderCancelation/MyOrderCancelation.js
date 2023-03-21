@@ -3,8 +3,9 @@ import img2 from "../../assets/images/myOrdersDetails/Group 2417.png";
 import Image from "next/image";
 import { FaArrowLeft, FaCheckCircle } from "react-icons/fa";
 import { useRouter } from "next/router";
+import Link from "next/link";
 const MyOrderCancelation = () => {
-  const router  = useRouter()
+  const router = useRouter()
   const data = {
     id: "1",
     orderId: "121312323213432",
@@ -42,7 +43,7 @@ const MyOrderCancelation = () => {
   ];
   // const cancel = 'canceled';
   const cancel = '';
-  
+
   if (cancel === 'canceled') {
     return (
       // successfully canceled
@@ -159,7 +160,7 @@ const MyOrderCancelation = () => {
 
   return (
     // cancellation page
-    <div className="max-w-[924px] md:pl-5 mb-10 md:mx-0 mx-3">
+    <div className="md:w-[95%] w-[98%] md:pl-5  md:mx-0 px-[14px]">
       <div className="md:hidden ">
         <button
           onClick={() => router.back()}
@@ -167,14 +168,14 @@ const MyOrderCancelation = () => {
         >
           <FaArrowLeft className=""></FaArrowLeft>
           <h1 className="text-[20px]  font-[500] text-[#001E00] my-4">
-            Order Cancelation
+            Cancellation Request
           </h1>
         </button>
       </div>
       <h2 className="text-[24px] font-[500] text-[#FB641B] mb-4 md:block hidden">
         Order Cancellation
       </h2>
-      <div className="shadow-lg rounded-lg mb-4 mt-5 w-full">
+      <div className="shadow-small rounded-lg mb-4 mt-5 w-full">
         <div className=" p-4">
           <div className="flex items-center">
             <div>
@@ -210,7 +211,7 @@ const MyOrderCancelation = () => {
           </div>
         </div>
         {/* mobile table */}
-        <div>
+        <div className="">
           <div className="md:hidden">
             <div className="overflow-x-auto">
               <table className="table w-full">
@@ -289,26 +290,28 @@ const MyOrderCancelation = () => {
             Policy of Banglar Big Bazar
           </p>
           <div className="form-control">
-            <label className="label justify-start cursor-pointer">
+            <label className="label justify-start cursor-pointer accent-[#001E00]">
               <input
                 type="checkbox"
-                className="checkbox border-black"
+                className="checkbox border-[#001E00]"
                 required
               />
-              <span className="ml-2 font-[500]">
+              <span className="ml-2 text-[3.5vw] md:text-[20px] font-[500]">
                 I have read and accepted the Cancellation Policy of Banglar Big
                 Bazar
               </span>
             </label>
           </div>
         </div>
-        <div className="from-control flex justify-end">
+        <div className="from-control md:flex md:justify-end w-full">
           <div>
-            <input
-              type="submit"
-              value="Confirm"
-              className="bg-[#FB641B] py-4 px-12 rounded-xl text-white font-bold cursor-pointer"
-            />
+            <Link href='OrderCancelation08'>
+              <input
+                type="submit"
+                value="Confirm"
+                className="bg-[#FB641B] w-full py-3 px-12 rounded-[8px] text-white font-bold cursor-pointer"
+              />
+            </Link>
           </div>
         </div>
       </form>
