@@ -10,8 +10,10 @@ import style from "../../styles/campaignManagementTwo.module.css";
 import vectorImg from '../../assets/images/Vector 3.png';
 import vectorImg2 from '../../assets/images/Vector.png';
 import arrowLeft from '../../assets/images/arrowLeft.png';
+import { useRouter } from 'next/router';
 
 const CheckoutPageOrderPageTwoProductInOneShop = () => {
+  const router = useRouter();
   const products =
     [
       {
@@ -37,7 +39,7 @@ const CheckoutPageOrderPageTwoProductInOneShop = () => {
     ];
   return (
     <div className="">
-      <div className="flex mx-6 items-center mt-3 md:hidden">
+      <div onClick={() => router.back()} className="flex mx-6 items-center mt-3 md:hidden">
         <Image
           className=' mr-3 w-[20px] h-[14px] cursor-pointer'
           src={arrowLeft}
@@ -45,7 +47,7 @@ const CheckoutPageOrderPageTwoProductInOneShop = () => {
           width={20}
           height={14}
         />
-        <p className='text-xl text-[#001E00] font-medium'>Place Order</p>
+        <p className='text-xl text-[#001E00] font-medium cursor-pointer'>Place Order</p>
       </div>
       <div className="mb-80 lg:flex mx-auto lg:max-w-[1200px]">
         <div className="lg:mr-6 mb-10 mx-6 lg:mx-0">

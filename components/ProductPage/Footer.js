@@ -6,7 +6,7 @@ import style from '../../styles/componentsStyles/Footer.module.css';
 
 const Footer = () => {
     return (
-        <div className={`mt-16 ${style.footer_top}  `}>
+        <div className={`mt-16 mb-16 ${style.footer_top}  `}>
 
             <div className="lg:flex gap-[40px] max-w-screen-xl mx-auto pt-[32px] justify-between">
                 <div className=" ">
@@ -69,7 +69,7 @@ const Footer = () => {
             </div>
 
             <div className="divider text-[#686868] text-lg mb-[16px] hidden lg:block"></div>
-            <p className=" flex justify-center text-[16px] text-[#001E00] font-[400] pb-[16px]">Copyright © 2022 Banglar Big Store All Rights Reserved, Accessibility, User Agreement, Privacy, Cookies, Do not sell my personal information and AdChoice, Developed By Ameliasoft.</p>
+            <p className=" flex justify-center text-[16px] text-[#001E00] font-[400] pb-[16px] px-6">Copyright © 2022 Banglar Big Store All Rights Reserved, Accessibility, User Agreement, Privacy, Cookies, Do not sell my personal information and AdChoice, Developed By Ameliasoft.</p>
         </div>
     );
 };

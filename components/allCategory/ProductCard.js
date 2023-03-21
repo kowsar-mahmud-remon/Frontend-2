@@ -146,7 +146,7 @@ const ProductCard = ({ product }) => {
           )
         }
         key={product.id}
-        className={`${style.collectionCard} mr-1 lg:mr-0 sm:w-[200px] lg:w-[222px]  rounded my-6`}
+        className={`${style.collectionCard} mr-1 lg:mr-0 sm:w-[200px] lg:w-[222px]  rounded my-4 lg:my-6`}
       >
         <div className="relative">
           <div className="flex justify-center">
