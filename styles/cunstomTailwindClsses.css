@@ -1,9 +1,0 @@
-.input {
-    @apply py-3 px-7 border-solid border-[1px] border-[#707070] focus:outline-none   focus:border-[#287DF3] focus:border-[1px] rounded
-}
-.min-input{
-    @apply py-3 px-2 border-solid focus:outline-none w-[100%]   focus:border-[#287DF3] focus:border-[1px]
-}
-.btn {
-    @apply py-3 rounded flex gap-4 items-center justify-center text-lg w-[100%]
-}
